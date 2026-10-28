@@ -1,0 +1,2334 @@
+TITLE: Analysis of scavenge port designs and exhaust valve profiles on the in-cylinder flow and scavenging performance in a two-stroke boosted uniflow scavenged direct injection gasoline engine
+YEAR: 2017
+FILE: 2017_Brunel_Scavenge_Port_Designs_Exhaust_Valve_Profiles.pdf
+PAGES: 49
+EXTRACTED_WITH: PyMuPDF 1.28.2
+
+
+===== page 1 =====
+Title: 
+Analysis of Scavenge Port Designs and Exhaust Valve Profiles on the In-cylinder Flow and 
+Scavenging Performance in a 2-Stroke Boosted Uniflow Scavenged Direct Injection Gasoline 
+(BUSDIG) Engine 
+ 
+Author names and affiliations: 
+Xinyan Wang *, Jun Ma and Hua Zhao 
+Centre for Advanced Powertrain and Fuels, Brunel University London, Uxbridge UB8 3PH, 
+United Kingdom. 
+* Corresponding author: Tel: +44 01895 265903, Email: xinyan.wang@brunel.ac.uk. 
+ 
+Abstract: 
+In this study, effects of intake scavenge port designs and exhaust valve opening profiles were 
+studied on the scavenging process in a newly proposed 2-stroke boosted uniflow scavenged 
+direct injection gasoline (BUSDIG) engine by detailed three dimensional engine simulations. 
+As the most important geometric parameters, the axis inclination angle (AIA) and swirl 
+orientation angle (SOA) of scavenge ports, as shown in Figure 1, were investigated and 
+optimized for best scavenging performances at first. With the optimal AIA of 90⁰ and SOA 
+of 20⁰, various combinations of scavenge port opening (SPO) timing, exhaust valve opening 
+duration (ED) and exhaust valve opening (EVO) timing were then analysed. Four distinct 
+scavenging periods, i.e. early backflow period (EB), backflow scavenging period (BS), main 
+scavenging period (MS) and post backflow period (PB), were identified and their impacts on 
+the in-cylinder flow motions and scavenging performances were investigated. The results 
+show that the optimal scavenging performance can be achieved with a higher delivery ratio 
+(DR), charging efficiency (CE) and scavenging efficiency (SE) when the post backflow is 
+
+===== page 2 =====
+just avoided by tuning the difference between the closing timings of scavenge ports and 
+exhaust valves (∆close) and the overlap between the opening profiles of scavenge ports and 
+exhaust valves (∆overlap) for a specific ED. A longer ED can be used to further improve the 
+scavenging performances. In addition, the difference between the opening timings of 
+scavenge ports and exhaust valves (∆open) can be increased to improve SE. The ∆close also 
+shows strong positive correlation with in-cylinder swirl ratio (SR) and negative correlation 
+with tumble ratio (TR). The results presented in this study provide the fundamental 
+knowledge of the scavenging process in the uniflow scavenged 2-stroke engine and assist the 
+design of scavenge ports and valve strategies to optimize in-cylinder flow motion and 
+scavenge performances in the 2-stroke BUSDIG engine with a variable valve actuation 
+system for exhaust valves. 
+Keywords: computational fluid dynamics, 2-stroke engine, uniflow, scavenging process, 
+variable valve actuation. 
+ 
+
+===== page 3 =====
+1. Introduction 
+The engine down-sizing and down-speeding technologies show great potential to improve the 
+fuel consumption of the automotive engine. Compared to the 4-stroke engine, the compact 2-
+stroke engine doubles the firing frequency and operates at a lower indicated mean effective 
+pressure (IMEP) at the same torque. The adoption of the direct injection after exhaust valve 
+closing avoids the fuel short-circuiting, which in turn lowers the fuel consumption and 
+pollutant emissions dramatically. In addition, the fuel consumption in a 2-stroke engine can 
+be further improved with lean/stratified charge achieved by direct injection [1-4] and 
+advanced combustion concept [5-10], e.g. controlled auto-ignition (CAI), partially premixed 
+combustion (PPC) and reactivity-controlled compression ignition (RCCI). 
+The scavenging process in a 2-stroke engine directly controls the in-cylinder flow motion, 
+charge mixture formation and the subsequent combustion performance. During the 2-stroke 
+scavenging process, the fresh intake charge scavenges the burnt gases out of the cylinder and 
+fills the cylinder for the next cycle. However, the conventional 2-stroke engines suffer from 
+the fuel/air short-circuiting phenomenon, in which some of the intake fresh mixture would 
+flow directly into the exhaust port during the scavenging process [11], due to the large 
+overlapping period of intake and exhaust process. Compared to the cross and loop scavenge 
+engines, the uniflow scavenged 2-stroke engine shows superior scavenging performance [12]. 
+The intake scavenge ports in a uniflow scavenged engine are integrated to the cylinder liner 
+and controlled by the movement of piston top while exhaust valves are placed in the cylinder 
+head. Therefore, the bore distortion caused by uneven thermal loading in the conventional 
+ported 2-stroke engine could be minimized in the uniflow scavenged engine. In addition, this 
+layout enables the application of variable valve actuation (VVA) technology to adjust the 
+exhaust valve timings/durations and hence the scavenging process under different operating 
+conditions.  
+
+===== page 4 =====
+The uniflow scavenged 2-stroke engines have been mostly used in large marine diesel 
+engines [13-15] and recently researched for their potential applications to passenger cars [3, 
+10, 12, 16-19]. They are characterized by the strong swirl flow motion formed by the angled 
+intake scavenge ports at the bottom of cylinder liner [20-22]. The axis inclination angle (AIA) 
+and swirl orientation angle (SOA) are shown to have most impact on the in-cylinder flow 
+motions and the scavenging performances in the uniflow scavenged 2-stroke engine [23]. 
+Tamamidis and Assanis [24] investigated the effect of SOA on in-cylinder flow motions in a 
+2-stroke scavenged engine by computational fluid dynamics (CFD) simulations of one sector 
+of the cylinder (including one inlet port) and found the larger swirl angles of the inlet ports 
+produce higher swirl levels inside the cylinder. Laget et al. [18] performed the CFD 
+simulations to optimize the swirl orientation angle of scavenge ports in a 2-stroke uniflow 
+diesel engine and found the reduction of swirl orientation angle from 17 to 10° produced an 
+acceptable swirl motion intensity and a good scavenging performance. In addition to the 
+scavenge port angles, the opening timing of the scavenge ports, which is determined by the 
+upper edge of scavenge ports, and the exhaust valve lift profile also affect the scavenging 
+process. Ravi and Marathe [25] found that extended intake scavenging process produced by 
+early opening and late closing of the scavenge ports resulted in a higher scavenge ratio and 
+scavenging efficiency but a lower trapping efficiency. It was also found the exhaust valve 
+closing timing had little effect on the scavenging process, as long as the timings of intake and 
+exhaust closing are not far apart. A multi-objective optimization of several design and 
+operation engine parameters was performed for a 2-stroke supercharged uniflow scavenged 
+diesel engine by Carlucci et al. [26]. They found the intake scavenge port opening timings 
+together with the exhaust valves opening and closing timings were significant in determining 
+the trapping and scavenging efficiencies, as well as the engine specific fuel consumption. 
+Laget et al. [18] investigated the scavenging characteristics with different exhaust valve lifts 
+
+===== page 5 =====
+and timings and concluded that reducing the exhaust valve lift decreased the short-circuiting 
+and an optimal valve lift  may exists to achieve a good trade-off between a good scavenging 
+and a reduced short-circuiting. 
+As indicated by the above literature review, the scavenge port designs (port angles and 
+opening timing) and the exhaust valve opening profiles show significant impact on the in-
+cylinder flow motions and scavenge performances which would directly determine the 
+combustion performances of the 2-stroke uniflow scavenged engine. In this study, the three 
+dimensional (3D) computational fluid dynamics (CFD) simulations were performed to 
+understand the effects of scavenge port angles, i.e. axis inclination angle (AIA) and swirl 
+orientation angle (SOA), the scavenge port opening timings and exhaust valve opening 
+profiles on the in-cylinder flow motions and scavenge performances in the proposed boosted 
+uniflow scavenged direct injection gasoline (BUSDIG) engine [27, 28]. The analysis of the 
+scavenging process with different AIA and SOA was carried out at first to determine the 
+optimal scavenge port angles for the BUSDIG engine. Based on the optimal design of 
+scavenge port angles, the simulations with various combinations of scavenge port opening 
+(SPO) timing, exhaust valve opening duration (ED) and exhaust valve opening (EVO) timing 
+were then performed to understand their impacts on in-cylinder flow motions and scavenge 
+performances. The results presented in this study provide the fundamental knowledge of the 
+scavenging process in the uniflow scavenged engine and assist the design of scavenge ports 
+and valve strategies to optimize in-cylinder flow motion and scavenge performances in 2-
+stroke BUSDIG engine equipped with variable valve actuation (VVA) system for exhaust 
+valves. 
+2. Specifications of the BUSDIG engine 
+Based on the initial design of bore/stroke for maximum performance [28], a pent roof 
+cylinder head was incorporated in the BUSDIG engine to accommodate two exhaust valves, a 
+
+===== page 6 =====
+central mounted direct injection (DI) gasoline injector and spark plug. A shallow bowl was 
+included in the centre of piston top to guide the fuel jets from injector and also avoid the 
+interference with the spark plug. Considering the future application to multi-cylinder engines, 
+two groups of scavenge ports (four on each side) were integrated to the cylinder respectively 
+to avoid the interference of the scavenge ports on the adjacent cylinders. A single scavenge 
+port occupies a 20⁰ segment on the cylinder circumference and the interval between two 
+adjacent scavenge ports in each group is fixed at 10⁰. The interval between the two groups of 
+scavenge ports is set at 70⁰. The height of the scavenge ports was fixed at 14 mm. Fig. 1 
+shows schematically the design of the cylinder head and the piston bowl. The other engine 
+specifications are shown in Table 1. 
+ 
+ 
+ Fig. 1. Schematic diagram of the BUSDIG engine design. 
+ 
+Table 1. Engine specifications. 
+Bore 
+80 mm 
+Stroke 
+100 mm 
+Connecting rod 
+180 mm 
+Displacement 
+0.5 L 
+Compression ratio 
+14:1 
+Cylinder head 
+Pent roof / 2 exhaust valves 
+Piston 
+Bowl piston 
+ 
+
+===== page 7 =====
+In order to achieve optimal scavenge performance with current engine cylinder design, two 
+key scavenge port angles, axis inclination angle (AIA) and swirl orientation angle (SOA), as 
+shown in Fig. 1, were investigated and optimized at first. Then, the simulations with the 
+optimal combination of AIA and SOA were performed to understand the effects of scavenge 
+port/exhaust valve opening durations and timings on controlling the scavenging process in the 
+2-stroke BUSDIG engine by adjusting scavenge port opening (SPO) timing, exhaust valve 
+duration (ED) and exhaust valve opening (EVO) timing. The locations and dimensions of 
+scavenge ports on the cylinder liner and the port height were kept constant in this study. As 
+the opening and closure of scavenge ports are symmetrical to the bottom dead centre (BDC), 
+the adjustment of the scavenge port opening (SPO) timing would also change the scavenge 
+port opening duration (SD). 
+3. Numerical models and simulation conditions 
+The commercial CFD software STAR-CD was adopted in this study to perform the 
+simulations. Reynolds-Averaged Navier Stokes (RANS) approach was applied with RNG k-ε 
+turbulence model in the simulations. The heat transfer was implemented through the general 
+form of the enthalpy conservation equation for the fluid mixture. The Angelberger wall 
+function was used for the simulation of the wall heat transfer. The detailed description of the 
+numerical models can be found in Ref. [29]. 
+One dimensional (1D) simulations were performed using 1D engine simulation program 
+WAVE [30] in order to provide the initial and boundary conditions for the 3D CFD 
+simulations, as shown in Table 2. The initial mixture components in the scavenge ports and 
+the components at the inlet boundary of scavenge ports are pure air, i.e. O2 and N2. The initial 
+mixture components in the cylinder are pure burned gas, i.e. CO2, H2O and N2. The boundary 
+conditions, as shown in Table 2, were fixed throughout the simulations in this study. The 
+engine speed was fixed at 2000 rpm. The CFD simulations were carried out from 100 ⁰CA 
+
+===== page 8 =====
+after top dead center (TDC) to 280 ⁰CA, which covers the whole period of the scavenging 
+process. The crank angle used in this paper is referenced to TDC. 
+The ES-ICE software was used to generate the moving mesh for simulations. The arbitrary 
+sliding interface (ASI) was applied between the scavenge ports and the cylinder liner to 
+control the attachment and detachment with the piston movement. The opening and closure of 
+the scavenge ports were determined by the movement of the piston top and the effect of top 
+land was not considered in this study. ASI was also applied to control the connectivity 
+between exhaust domains and cylinder domain with the movement of exhaust valves. The 
+mesh sensitivity study performed in our previous work [28] indicated that the mesh with an 
+average grid size of 1.6 mm was able to reproduce the same results as finer mesh and was 
+adopted in this study. 
+ 
+Table 2. Simulation conditions. 
+Initial conditions @ 100 ºCA 
+Cylinder temperature 
+1665 K 
+Cylinder pressure 
+8.6 bar 
+Intake temperature 
+350 K 
+Intake pressure 
+2 bar 
+Exhaust temperature 
+800 K 
+Exhaust pressure 
+1.06 bar 
+Boundary conditions 
+Intake temperature 
+350 K 
+Intake pressure 
+2 bar 
+Exhaust temperature 
+800 K 
+Exhaust pressure 
+1.06 bar 
+Piston head temperature 
+440 K 
+Cylinder top temperature 
+522 K 
+Cylinder liner temperature 
+384 K 
+ 
+
+===== page 9 =====
+4. Results and discussions 
+4.1 Effect of the axis inclination angle (AIA) on the scavenging process 
+In this section, the axis inclination angle (AIA) was varied from 60⁰ to 90⁰ to investigate its 
+impact on the in-cylinder flow motion and scavenging process. The swirl orientation angle 
+(SOA) was fixed at the baseline value (20⁰). The exhaust valve duration (ED) was fixed at 
+126 ⁰CA and the exhaust valve opening (EVO) timing is fixed at 117 ⁰CA. The scavenge port 
+opening duration (SD) was fixed at 116 ⁰CA with the corresponding scavenge port opening 
+(SPO) timing at 122⁰ CA. Fig. 2 shows the normalized scavenge port opening area (SA’) 
+profile and normalized exhaust valve lift (EL’) profile used in this section. The scavenge port 
+opening area is defined as the total cross section area of scavenge ports opened by the piston 
+top. 
+90
+120
+150
+180
+210
+240
+270
+0.0
+0.3
+0.6
+0.9
+1.2
+EL' [-]
+ 
+SD=116 CA
+EVO=117 CA
+ED=126 CA
+SA' [-]
+Crank angle [CA]
+0.0
+0.3
+0.6
+0.9
+1.2
+ 
+Fig. 2. Schematic diagram of the normalized exhaust valve lift profiles (EL’) and scavenge 
+port opening area (SA’) profiles  
+ 
+Fig. 3 shows the in-cylinder flow field and residual gas fraction (RGF) distribution during the 
+scavenging process with different AIAs. In the case with AIA of 60⁰, the intake flow jets 
+move upward to the cylinder head. With the AIA increased to 90⁰, the intake flow jets travel 
+along the piston top and displace the residual gas in the center of cylinder, leading to much 
+lower RGF in the piston bowl. 
+
+===== page 10 =====
+ 
+Fig. 3 Comparison of the in-cylinder flow field and residual gas fraction (RGF) distribution at 
+160 ⁰CA and 240 ⁰CA for AIA=60⁰ and 90⁰. 
+ 
+In order to quantify the overall flow motions, the swirl ratio (SR) is defined by the following 
+equation [31]:  
+SR(θ) =
+∑
+vi(θ)ri(θ)Vi(θ)ρi(θ)
+m
+i
+2πn
+60 ∑
+ri(θ)2Vi(θ)ρi(θ)
+m
+i
+ 
+(1) 
+where n is engine speed [rpm], θ the crank angle, i the cell number, Vi(θ)  the cell volume, 
+ρi(θ) the cell density, vi(θ) and ri(θ) are the tangential velocity and radius respectively in 
+the cylindrical coordinate with z axis as the swirl axis. 
+Similarly, the tumble ratio (TR) and cross tumble ratio (CTR) are determined by replacing 
+the swirl axis along with the cylindrical coordinate system in Equation (1) with the 
+tumble/cross tumble axis which is parallel to the y/x axis and crosses the central point 
+between maximum and minimum z value of the cylinder. The definitions of SR, TR and CTR 
+are schematically shown in Fig. 1. 
+
+===== page 11 =====
+Fig. 4 shows the effect of AIA on the in-cylinder swirl ratio (SR), tumble ratio (TR) and cross 
+tumble ratio (CTR) at 280 ⁰CA. The SR is very strong and varies between 6 and 7 for 
+different AIA designs. As AIA increases from 60⁰ to 68⁰, the SR becomes slightly lower 
+because of the enhanced interaction of the intake flow jets and the piston top. Further increase 
+in the AIA to 75⁰ and 90⁰ leads to stronger intake flow jets and higher SR because of the 
+dominant effect of the increased effective scavenging area. It should be noted that the 
+scavenge port height was kept constant for different AIAs. 
+Thanks to the current piston top design with a bias ridge and separated distribution of 8 
+scavenge ports at two opposite sides, the strong clockwise tumble flow motion, as shown by 
+the flow field distribution at 240 ⁰CA in Fig. 3, is produced for each AIA design. The 
+increase in AIA leads to enhanced interactions between intake flow jets and piston top, which 
+promotes the formation of the tumble flow and cross tumble flow motion. Further increase of 
+AIA to 90⁰ leads to stronger horizontal flow into the center of the cylinder but weaker 
+organized vertical flow motion in the outer region. This is not conductive to form the tumble 
+and cross tumble motion and leads to lower TR and much reduced CTR at AIA of 90⁰, as 
+shown in Fig. 4.  
+60
+68
+75
+90
+-2
+0
+2
+4
+6
+8
+SD=116 CA, ED=126 CA, EVO=117 CA
+CTR:
+TR:
+SR:
+SR/ TR/ CTR [-]
+Axis inclination angle (AIA) []
+ 
+
+===== page 12 =====
+Fig. 4. Effect of AIA on in-cylinder flow motions (SD=116 ⁰CA, ED=126 ⁰CA, EVO=117 
+⁰CA).  
+In order to quantify the scavenging performance, four scavenge parameters, i.e. delivery ratio 
+(DR), trapping efficiency (TE), scavenging efficiency (SE) and charging efficiency (CE), are 
+defined as following: 
+DR = delivered fresh charge mass
+reference mass
+ 
+(2) 
+TE = mass of delivered fresh charge retained in the cylinder
+total mass of delivered fresh charge
+= CE
+DR 
+(3) 
+SE = mass of delivered fresh charge retained in the cylinder
+total mass of trapped cylinder charge
+ 
+(4) 
+CE = mass of delivered fresh charge retained in the cylinder
+reference mass
+ 
+(5) 
+The reference mass in above equations is calculated by the displaced volume multiplied by 
+the ambient air density. 
+As the bigger AIA leads to larger effective scavenging area, the DR gradually increases with 
+AIA, as shown in Fig. 5. In order to understand the short-circuiting phenomenon, the residual 
+gas fraction (RGF) profiles in the cylinder (x-axis) and exhaust ports (y-axis) are compared in 
+Fig. 6 for different AIA designs. The scavenge process begins from top right corner where 
+RGF in the cylinder and exhaust ports is 1. Then the RGF in the cylinder gradually decreases 
+with the scavenging process because of the introduction of the fresh intake charge. The 
+decrease of RGF in the exhaust ports indicates the occurrence of short-circuiting phenomenon. 
+As shown in Fig. 6, an AIA of 60 ⁰ leads to earlier and stronger short-circuiting as the intake 
+flow jets from scavenge ports go directly towards the exhaust valves, as shown in Fig. 3. The 
+larger AIA weakens the short-circuiting and meanwhile increases CE. Although the bigger 
+AIA leads to larger DR and CE, it also enhances the mixing between fresh intake charge and 
+residual gas in the cylinder center, which increases the residual gas mass retained in the 
+
+===== page 13 =====
+cylinder and limits the increase of SE to some extent. Therefore, the SE remains almost 
+constant as AIA increases. It should be noted that the total mass of in-cylinder charge at the 
+end of scavenging gradually increases from 843 to 869 mg as AIA increases from 60⁰ to 90⁰ 
+because of the reduced short-circuiting, which in turn explains the higher CE with almost 
+constant SE. 
+60
+68
+75
+90
+0.0
+0.5
+1.0
+1.5
+2.0
+2.5
+3.0
+2.37
+2.43
+2.45
+2.48
+0.57
+0.57
+0.56
+0.57
+0.96
+0.97
+0.97
+0.97
+1.34
+1.37
+1.38
+1.4
+SD=116 CA, ED=126 CA, EVO=117 CA
+DR/ TE/ SE/ CE [-]
+Axis inclination angle (AIA) []
+DR:
+CE:
+SE:
+TE:
+ 
+Fig. 5. Effect of AIA on DR, TE, SE and CE (SD=116 ⁰CA, ED=126 ⁰CA, EVO=117 ⁰CA). 
+ 
+0.0
+0.2
+0.4
+0.6
+0.8
+1.0
+0.0
+0.2
+0.4
+0.6
+0.8
+1.0
+Perfect displacement
+Perfect mixing
+Start of scavenging
+RGF @ exhaust ports [-]
+RGF @ cylinder [-]
+ AIA=60 
+ AIA=68 
+ AIA=75 
+ AIA=90 
+End of scavenging
+ 
+Fig. 6. Comparison of RGF profiles in the cylinder and exhaust ports for different AIAs. 
+4.2 Effect of the swirl orientation angle (SOA) on the scavenging process 
+
+===== page 14 =====
+In this section, the effect of SOA on controlling in-cylinder flow motion and scavenging 
+process is investigated with the AIA of 90⁰. As shown in Fig. 7,  in the case of SOA=0⁰, the 
+scavenge flow jets from the eight scavenging ports collide in the cylinder centre and form the 
+strong vertical flow motion from the piston top to the cylinder head. As a result, the fresh 
+charge would be directly pushed to the exhaust ports, as indicated by the flow field and RGF 
+distributions at 180 ⁰CA. This results in earlier and stronger short-circuiting after the opening 
+of scavenge ports but at the expense of weaker later scavenging, which leaves the central 
+region with the highest RGF concentrate at 240 ⁰CA. 
+In comparison, the flow structure is dominated by strong swirl flow motion for SOA of 31.5⁰. 
+The strong swirl flow motion drives the fresh intake charge to the cylinder head along the 
+cylinder wall and results in poor scavenging at the cylinder center, as shown by the RGF 
+distribution at 180 ⁰CA. With the scavenging proceeding, the fresh charge gradually 
+penetrates into the cylinder center and push out the residual gas. The spinning fresh charge 
+behaves like a virtual piston and pushes out the residual gas so that most residual gas ends up 
+at the top of cylinder towards the end of scavenging. 
+At 240 ⁰CA, it is noted that a strong tumble flow motion can be observed in the vertical plane 
+for SOA of 0 and 31.5⁰. This strong tumble motion is mainly formed by the stronger intake 
+charge motion from the scavenge ports at exhaust sides because of the slightly lower edge of 
+piston top at exhaust sides in order to match the asymmetric cylinder head. This can be 
+verified by the flow motion from exhaust sides to the other side at the horizontal plane for 
+SOA of 0⁰. This intake flow motion helps to scavenge the residual gas on the piston top for 
+SOA of 0⁰, but shows limited improvement for a large SOA of 31.5⁰. 
+ 
+
+===== page 15 =====
+ 
+Fig. 7. Comparison of the in-cylinder flow field and residual gas fraction (RGF) distribution 
+at 180 ⁰CA and 240 ⁰CA for SOA=0⁰ and 31.5⁰. 
+ 
+Fig. 8 quantitatively shows the effect of SOA on the SR, TR and CTR at 280 ⁰CA. As SOA 
+increases, the swirl flow motion would be significantly enhanced because of the increased 
+flow velocity at the outer region of the cylinder. This contributes to the strong positive 
+correlation between SR and SOA as shown in the figure. The enhanced swirl flow motion 
+also helps to form the vertical flow motion thanks to the guidance of the piston shape. The 
+TR and CTR are gradually enhanced with increasing SOA. 
+ 
+
+===== page 16 =====
+0
+10
+20
+31.5
+-2
+0
+2
+4
+6
+8
+10
+SD=116 CA, ED=126 CA, EVO=117 CA
+SR/ TR/ CTR [-]
+Swirl orientation angle (SOA) []
+SR
+TR
+CTR
+ 
+Fig. 8. Effect of SOA on in-cylinder swirl ratio (SR), tumble ratio (TR) and cross tumble 
+ratio (CTR) at 280 ⁰CA (SPO=122 ⁰CA, ED=126 ⁰CA, EVO=117 ⁰CA). 
+ 
+Fig. 9 shows the effect of SOA on the scavenging performances. It should be noted that the 
+segment of each scavenge port on the cylinder circumference was kept constant for different 
+SOAs. The delivery ratio (DR) is gradually reduced with SOA because of the reduced 
+effective scavenging area. Although the flow motion is gradually enhanced with increasing 
+SOA, the scavenge efficiency (SE) decreased slightly due to the residual gas trapped near the 
+cylinder head as shown in Fig. 7. The smaller SOA leads to non-organized in-cylinder flow 
+motion and earlier charge short-circuiting, as indicated by the RGF distribution in Fig. 7. This 
+in turn leads to lower CE although the DR is higher for small SOA. This can also be verified 
+from the RGF profiles in the cylinder and exhaust ports in Fig. 10.  As SOA is increased to 
+10⁰ and 20⁰, the moderate swirl flow motion of the intake charge delays the short-circuiting. 
+A further increase of SOA to 31.5⁰ leads to the lower DR and early short-circuiting near the 
+cylinder wall with insufficient scavenging in the cylinder center, as shown in Fig. 7, which 
+explains the lower CE and SE. The TE increases slightly with SOA because of the relatively 
+lower DR. 
+
+===== page 17 =====
+0
+10
+20
+31.5
+0.0
+0.5
+1.0
+1.5
+2.0
+2.5
+3.0
+2.49
+2.5
+2.48
+2.3
+0.55
+0.55
+0.57
+0.58
+0.97
+0.97
+0.97
+0.96
+1.36
+1.38
+1.4
+1.34
+SPO=122 CA, EVO=117 CA
+DR/ TE/ SE/ CE [-]
+Swirl orientation angle (SOA) []
+DR:
+CE:
+SE:
+TE:
+ 
+Fig. 9. Effect of SOA on DR, TE, SE and CE (SD=116 ⁰CA, ED=126 ⁰CA, EVO=117 ⁰CA). 
+0.0
+0.2
+0.4
+0.6
+0.8
+1.0
+0.0
+0.2
+0.4
+0.6
+0.8
+1.0
+Perfect displacement
+Perfect mixing
+RGF @ exhaust ports [-]
+RGF @ cylinder [-]
+ SOA=0 
+ SOA=10 
+ SOA=20 
+ SOA=31.5 
+End of scavenging
+Start of scavenging
+ 
+Fig. 10. Comparison of RGF profiles in the cylinder and exhaust ports for different SOAs. 
+4.3 Effects of scavenge port/exhaust valve opening durations and timings 
+In this section, the simulations with different combinations of scavenge port opening duration 
+(SD), exhaust valve opening duration (ED) and exhaust valve opening (EVO) timing were 
+performed to understand their impacts on the in-cylinder flow motions and scavenging 
+performances in the BUSDIG engine. The normalized scavenge port opening area (SA’) 
+profiles and normalized exhaust valve lift (EL’) profiles are shown in Fig. 11 to demonstrate 
+the scavenge port/exhaust valve opening profiles used in this section. The scavenge port 
+
+===== page 18 =====
+opening (SPO) timing, determined by the upper edge of the scavenge ports, is varied from 
+116 ⁰CA to 128 ⁰CA with SD decreasing from 128 ⁰CA to 104 ⁰CA. The EVO timing is 
+changed from 107 to 141 ⁰CA for the short ED of 98 ⁰CA and from 107 to 127 ⁰CA for the 
+long ED of 126 ⁰CA. The optimal scavenge port angles with AIA of 90⁰ and SOA of 20⁰ 
+were adopted. 
+0.0
+0.2
+0.4
+0.6
+0.8
+1.0
+1.2
+125 CA
+128 CA
+122 CA
+SA  [-]
+SPO=116 CA
+0.0
+0.2
+0.4
+0.6
+0.8
+1.0
+1.2
+ED=98 CA
+141 CA
+131 CA
+121 CA
+117 CA
+EVO=107 CA
+EL   [-]
+90
+120
+150
+180
+210
+240
+270
+0.0
+0.2
+0.4
+0.6
+0.8
+1.0
+1.2
+127 CA
+117 CA
+107 CA
+ED=126 CA
+EL   [-]
+Crank angle [CA]
+EVO=101 CA
+ 
+Fig. 11. Normalized scavenge port opening area (SA’) profiles and exhaust valve lift (EL’) 
+profiles. 
+ 
+In order to facilitate the understanding of the scavenging process in BUSDIG engine, four 
+distinct scavenging periods are proposed and analysed in this study based on the mass flow 
+rate and RGF profiles at the outlets of scavenge ports, as shown in Fig. 12 for a given intake 
+port design and exhaust valve profile. During the first period (I), i.e. the early backflow (EB), 
+the in-cylinder residual gas flows into the scavenge ports immediately after SPO because of 
+the relatively higher pressure in the cylinder. As the in-cylinder pressure decreases, the early 
+backflow slows down. When the in-cylinder pressure drops below the intake pressure, the 
+mixture of residual gas from the early backflow and fresh intake gas starts flowing into the 
+cylinder and scavenges out the in-cylinder residual gas. Because of the involvement of the 
+
+===== page 19 =====
+mixture of early backflow in the scavenging process, this second period (II) is termed as the 
+backflow scavenging (BS) process. In the third period (III), i.e. main scavenging (MS) 
+process, the pure fresh charge flows into the cylinder pushing out the in-cylinder charge. 
+Under some circumstances, especially for the cases with the scavenge port closing (SPC) 
+timing later than exhaust valve closing (EVC) timing, the in-cylinder mixture would flow 
+back into the scavenge ports because of the increased in-cylinder pressure during the 
+compression stroke. This process is defined as the fourth period (IV) of the post backflow 
+(PB). The durations of these four scavenge periods are defined as dEB, dBS, dMS and dPB 
+respectively. 
+90
+120
+150
+180
+210
+240
+270
+-0.8
+-0.6
+-0.4
+-0.2
+0.0
+0.2
+IV. PB
+III. MS
+     SPC
+(244 CA)
+Mass flow rate [kg/s]
+Crank angle [CA]
+     SPO
+(116 CA)
+I. EB
+(RGF=0.001)
+II. BS
+0.0
+0.4
+0.8
+1.2
+1.6
+2.0
+RGF [-]
+ 
+Fig. 12. The total mass flow rate and RGF profile at the outlets of scavenge ports, and the 
+definitions of early backflow (EB), backflow scavenging (BS), main scavenging (MS) and 
+post backflow (PB) periods. (SD=128 ⁰CA, ED=98 ⁰CA and EVO=107 ⁰CA) 
+ 
+The effect of ED and EVO timings on the scavenging process will be discussed in detail for 
+the longest SD of 128 ⁰CA and shortest SD of 104 ⁰CA at first. A comprehensive comparison 
+of the results with different SDs, EDs and EVOs will then be made with respect to their 
+impacts on the in-cylinder flow and scavenging performance. Based on these results, the 
+
+===== page 20 =====
+mechanism of the interactions of scavenge port/exhaust valve opening profiles and their 
+impacts on in-cylinder flow motions and scavenge performances will then be discussed. 
+4.3.1 Effects of EDs and EVO timings on the scavenging process for the longest SD of 
+128 ⁰CA 
+Fig. 13 compares the total mass flow rate profiles at the outlets of scavenge ports for different 
+EVOs with SD of 128 ⁰CA and ED of 98 ⁰CA. The durations for different scavenging 
+periods are given in Table 3. As the delayed EVO timing leads to the shorter blowdown 
+duration, the early backflow duration (dEB) gradually increases and in turn leads to the longer 
+backflow scavenging duration (dBS). However, it is noted that the increases of dEB and dBS 
+become slower after EVO of 117 ⁰CA because the mass flow rate of the backflow is 
+approaching its peak value, as seen in Fig. 13. The delayed EVO timing also leads to later 
+EVC timing and shortens the post backflow duration (dPB). As a result, the main scavenge 
+duration (dMS) is reduced as the EVO timing is retarded from 107 ⁰CA to 117 ⁰CA. As the 
+EVO is further retarded, the post backflow duration (dPB) is reduced more significantly than 
+the early backflow duration (dEB) and backflow scavenging duration (dBS), leading to 
+increased main scavenging duration (dMS). At the latest EVO timing of 141 ⁰CA, the post 
+backflow has disappeared completely although EVC (239 ⁰CA) is still earlier than the 
+scavenge port closing (SPC) timing of 244 ⁰CA, which indicates that the in-cylinder pressure 
+is kept lower than the scavenge port pressure after EVC because of the gas dynamics effect of 
+the exhaust flow. Thus, in order to maximize the scavenging process, the EVC timing can be 
+adjusted to just avoid the post backflow to utilize this post-charging effect at different engine 
+operating conditions for the fixed SPC. 
+
+===== page 21 =====
+90
+120
+150
+180
+210
+240
+270
+-0.6
+-0.4
+-0.2
+0.0
+0.2
+0.4
+EVO=141 CA
+EVO=117 CA
+EVO=131 CA
+EVO=121 CA
+SD=128 CA, ED=98 CA
+Mass flow rate [kg/s]
+Crank angle [CA]
+EVO=107 CA
+ 
+Fig. 13. The total mass flow rate profiles at the outlets of scavenge ports for different EVOs. 
+(SD=128 ⁰CA, ED=98 ⁰CA) 
+ 
+Table 3. Effect of EVO timing on scavenging durations (SD=128 ⁰CA, ED=98 ⁰CA). 
+EVO [⁰CA] 
+dEB [⁰CA] 
+dBS [⁰CA] 
+dMS [⁰CA] 
+dPB [⁰CA] 
+107  
+19.68 
+36.49 
+33.23 
+38.6 
+117 
+34.43 
+38.37 
+27.51 
+27.69 
+121 
+35.3 
+41.49 
+27.79 
+23.42 
+131 
+36.24 
+47.34 
+33.2 
+11.21 
+141 
+37.41 
+50.6 
+39.99 
+0 
+ 
+Fig. 14 shows the impact of EVO timing on SR, TR and CTR at 280 ⁰CA. As shown in Fig. 
+13, the delayed EVO timing leads to delayed main scavenging phasing which is defined by 
+the crank angle with peak mass flow rate during the main scavenging period. The delayed 
+scavenging phasing, on the one hand, facilitates the formation of the in-cylinder flow motion 
+and enhances the interactions between the intake flow jets and the piston top as the piston 
+rises. This leads to enhanced tumble flow motion thanks to the piston top geometry, as shown 
+
+===== page 22 =====
+in Fig. 14.  The swirl and cross tumble are less sensitive to the EVO and the SR and CTR 
+peak at an intermediate EVO around 121 ⁰CA. 
+107
+117
+121
+131
+141
+-2
+0
+2
+4
+6
+8
+SD=128 CA, ED=98 CA
+ SR
+ TR
+ CTR
+SR/ TR/ CTR [-]
+Exhaust Valve Opening (EVO) timing [CA]
+ 
+Fig. 14. Effect of EVO timing on the SR, TR and CTR at 280 ⁰CA (SD=128 ⁰CA, ED=98 
+⁰CA). 
+ 
+Fig. 15 shows the effect of EVO timing on the scavenging process as measured by DR, TE, 
+SE and CE. The DR reduces slightly at EVO of 117 ⁰CA and then increases afterwards, 
+following the same trend as the change of the main scavenge duration (dMS) with EVO shown 
+in Table 3. The gradually reduced post backflow duration (dPB) with the delayed EVO timing 
+also contributes to the increasing trend of DR. Similarly, the CE also increases with the 
+retarded  EVO because of  the reduced post backflow with delayed EVO timing, which would 
+trap more charge in the cylinder although the peak mass is lower, as shown in Fig. 16. 
+However, as the whole scavenging phasing is significantly delayed beyond EVO of 131 ⁰CA, 
+the final mass trapped in the cylinder is lowered slightly because of the increased early 
+backflow and diminished post-charging effect. 
+The scavenging efficiency (SE) is negatively affected by the increased early backflow 
+duration (dEB) when the EVO is delayed from 107 to 117 ⁰CA. It then gradually recovers 
+
+===== page 23 =====
+after 117 ⁰CA because of the increased main scavenging period. As the trapping efficiency 
+(TE) is calculated by the ratio of charging efficiency (CE) to delivery ratio (DR), it peaks at 
+intermediate EVOs. 
+107
+117
+121
+131
+141
+0.0
+0.5
+1.0
+1.5
+2.0
+2.5
+3.0
+1.78
+1.75
+1.77
+1.92
+2.04
+0.66
+0.7
+0.71
+0.72
+0.67
+0.94
+0.91
+0.91
+0.92
+0.94
+1.17
+1.23
+1.26
+1.38
+1.36
+SD=128 CA, ED=98 CA
+DR/ TE/ SE/ CE [-]
+Exhaust Valve Opening (EVO) timing [CA]
+DR:
+CE:
+SE:
+TE:
+ 
+Fig. 15. Effect of EVO timing on DR, TE, SE and CE (SD=128 ⁰CA, ED=98 ⁰CA). 
+90
+120
+150
+180
+210
+240
+270
+100
+300
+500
+700
+900
+1100
+SD=128 CA, ED=98 CA
+Mass @ cylinder [mg]
+Crank angle [CA]
+EVO=117 CA
+EVO=107 CA
+EVO=121 CA
+EVO=141 CA
+EVO=131 CA
+ 
+Fig. 16. Cylinder mass evolutions with different EVOs (SD=128 ⁰CA, ED=98 ⁰CA). 
+ 
+Fig. 17 shows the total mass flow rate profiles at the outlets of scavenge ports for the long ED 
+of 126 ⁰CA and SD of 128 ⁰CA. Table 4 quantitatively compares the durations for different 
+scavenging periods. Overall, the mass flow rate profiles for the longer ED of 126 ⁰CA show 
+
+===== page 24 =====
+similar trends to the short ED of 98 ⁰CA. For the longer ED, the slop of the exhaust valve 
+opening profile is less steep than that of the shorter ED, leading to higher sensitivity of dEB 
+and dBS to the EVO timing. The early backflow duration (dEB) and backflow scavenge 
+duration (dBS) are increased slightly for the longer ED, which can be verified by comparing 
+the scavenging durations for EVOs of 107 ⁰CA and 117 ⁰CA in Tables 3 and 4. 
+As shown in Table 4, when EVO is changed from 101 to 107 ⁰CA, both dEB and dBS increase 
+but dEB is less sensitive to EVO than the dBS because of the lower exhaust valve lift profile 
+during the backflow scavenging period. As EVO is delayed from 107 to 117 ⁰CA, the dEB   
+exhibits much significant increase than the dBS because of the higher exhaust valve lift profile 
+during the backflow scavenge period. Further delay of EVO to 127 ⁰CA leads to little change 
+in dEB but much longer dBS. Both the main scavenging period and post backflow period 
+decrease with EVO delaying. The post backflow is completely avoided with the most 
+retarded EVO. 
+90
+120
+150
+180
+210
+240
+270
+-0.6
+-0.4
+-0.2
+0.0
+0.2
+0.4
+EVO=127 CA
+EVO=107 CA
+EVO=117 CA
+SD=128 CA, ED=126 CA
+mass flow rate [kg/s]
+Crank angle [CA]
+EVO=101 CA
+ 
+Fig. 17. The total mass flow rate profiles at the outlets of scavenge ports for different EVOs. 
+(SD=128 ⁰CA, ED=126 ⁰CA) 
+ 
+ 
+
+===== page 25 =====
+Table 4. Effect of EVO on scavenging durations, SD=128 ⁰CA, ED=126 ⁰CA. 
+EVO [⁰CA] 
+dEB [⁰CA] 
+dBS [⁰CA] 
+dMS [⁰CA] 
+dPB [⁰CA] 
+101  
+17.12 
+30.37 
+57.53 
+22.98 
+107 
+21.71 
+39.62 
+51.13 
+15.54 
+117 
+35.14 
+39.73 
+48.91 
+4.22 
+127 
+36.05 
+46.89 
+45.06 
+0 
+ 
+Fig. 18 compares the SR, TR and CTR at 280 ⁰CA for different EVOs with ED of 126 ⁰CA 
+and SD of 128 ⁰CA. The delayed and prolonged main scavenging period enhances the in-
+cylinder flow motion with the retarded EVO, resulting higher tumble and swirl ratios but 
+slightly lower cross tumble flows due to the strong interaction of the scavenge flow jets and 
+piston top. 
+Compared to the shorter ED of 98⁰CA, a longer ED of 126 ⁰CA leads to better DR and SE, as 
+shown in Fig. 19, due to longer main scavenging duration (dMS). However, the significant 
+improvement in CE can only be achieved at early EVOs for the longer ED. 
+101
+107
+117
+127
+-2
+0
+2
+4
+6
+8
+SD=128 CA, ED=126 CA
+SR/ TR/ CTR [-]
+Exhaust Valve Opening (EVO) timing [CA]
+ SR
+ TR
+ CTR
+ 
+Fig. 18. Effect of EVO on the SR, TR and CTR at 280 ⁰CA (SD=128 ⁰CA, ED=126 ⁰CA). 
+ 
+
+===== page 26 =====
+101
+107
+117
+127
+0.0
+0.5
+1.0
+1.5
+2.0
+2.5
+3.0
+2.73
+2.65
+2.51
+2.35
+0.54
+0.57
+0.58
+0.54
+0.98
+0.98
+0.97
+0.96
+1.49
+1.51
+1.47
+1.28
+SD=128 CA, ED=126 CA
+DR/ TE/ SE/ CE [-]
+Exhaust Valve Opening (EVO) timing [CA]
+DR:
+CE:
+SE:
+TE:
+ 
+Fig. 19. Effect of EVO on DR, TE, SE and CE (SD=128 ⁰CA, ED=126 ⁰CA). 
+ 
+4.3.2 Effects of EDs and EVO timings on the scavenging process for the shortest SD of 
+104 ⁰CA 
+Fig. 20 and 21 show the effect of EVO timing on in-cylinder flow motions and scavenging 
+performances with the shortest SD of 104 ⁰CA and ED of 98 ⁰CA. As shown in Fig 20, the 
+swirl ratio is slightly affected by the EVO and it peaks at an intermediate EVO timing. With a 
+shorter SD, the delayed EVO timing produces higher peak TR due to enhanced intake flow. 
+The delayed EVO timing leads to more delayed scavenging phasing with smaller scavenging 
+area during the main scavenging period. Meanwhile, the later EVO timing also produces 
+quicker pressure drop in the cylinder after the bottom dead center (BDC) due to larger valve 
+lifts during the scavenging. This in turn leads to increased pressure difference between the 
+intake scavenge ports and cylinder and produces higher intake velocity. At the closing of the 
+scavenge ports, the formed strong tumble flow motion would be significantly deteriorated 
+and transfer to cross tumble flow motion under the influence of the swirl flow motion. As a 
+result, the CTR is even higher than TR and shows an increasing trend with EVO delaying, as 
+shown in Fig. 20. 
+
+===== page 27 =====
+107
+117
+121
+131
+141
+-2
+0
+2
+4
+6
+8
+SD=104 CA, ED=98 CA
+SR/ TR/ CTR [-]
+Exhaust Valve Opening (EVO) timing [CA]
+ SR
+ TR
+ CTR
+ 
+Fig. 20. Effect of EVO timing on the SR, TR and CTR at 280 ⁰CA (SD=104 ⁰CA, ED=98 
+⁰CA). 
+107
+117
+121
+131
+141
+0.0
+0.5
+1.0
+1.5
+2.0
+2.5
+3.0
+2.17
+2.08
+1.97
+1.61
+1.23
+0.73
+0.74
+0.74
+0.72
+0.66
+0.97
+0.96
+0.94
+0.9
+0.85
+1.58
+1.55
+1.45
+1.17
+0.81
+SD=104 CA, ED=98 CA
+DR/ TE/ SE/ CE [-]
+Exhaust Valve Opening (EVO) timing [CA]
+DR:
+CE:
+SE:
+TE:
+ 
+Fig. 21. Effect of EVO timing on DR, TE, SE and CE (SD=104 ⁰CA, ED=98 ⁰CA). 
+ 
+Table 5 lists the change of the four scavenging periods as a function of EVO for the shortest 
+SD of 104 ⁰CA and fixed ED of 98 ⁰CA. The delayed EVO timing leads to increased dEB and 
+dBS but reduced dMS and dPB. The disappearance of the post backflow period weakens the 
+post-charging effect and contributes to the decrease of dMS at EVOs of 131 and 141 ⁰CA.  As 
+the main scavenging duration (dMS) is shortened by the retarded EVO, the delivery ratio (DR) 
+
+===== page 28 =====
+and the charging efficiency (CE) are reduced as shown in Fig. 21. The reduction of CE is 
+more significant for the EVO of 127 ⁰CA when the post backflow disappears. The increased 
+early backflow duration (dEB) with the delayed EVO enhances the pre-mixing between 
+residual gas and fresh air and leads to lower scavenging efficiency (SE).  
+ 
+Table 5. Effect of EVO on scavenging durations (SD=104 ⁰CA, ED=98 ⁰CA). 
+EVO [⁰CA] 
+dEB [⁰CA] 
+dBS [⁰CA] 
+dMS [⁰CA] 
+dPB [⁰CA] 
+107  
+9.11 
+12.35 
+59.22 
+23.31 
+117 
+18.9 
+30.95 
+40.59 
+13.56 
+121 
+21.77 
+36.93 
+37.48 
+7.82 
+131 
+33.99 
+39.83 
+30.18 
+0 
+141 
+38.74 
+45.01 
+20.24 
+0 
+ 
+As the ED is changed to 126 ⁰CA, the same effects of the EVO are observed on the durations 
+of each scavenging period, as shown in Table 6. As shown in Fig. 22, with the extended ED 
+of 126 ⁰CA, the delay in EVO has little impact on SR and causes slight increase in TR and 
+CTR. Similar to the shorter ED, both DR and CE decrease with retarded EVO whilst the SE 
+and TE decrease slightly, as shown in Fig. 23. 
+ 
+Table 6. Effect of EVO timing on the durations of different scavenging periods, SD=104 ⁰CA, 
+ED=126 ⁰CA. 
+EVO [⁰CA] 
+dEB [⁰CA] 
+dBS [⁰CA] 
+dMS [⁰CA] 
+dPB [⁰CA] 
+101  
+7.01 
+3.1 
+86.18 
+7.72 
+107 
+12.63 
+18.86 
+72.51 
+0 
+117 
+20.84 
+34.71 
+48.45 
+0 
+127 
+33.56 
+38.08 
+32.36 
+0 
+ 
+
+===== page 29 =====
+101
+107
+117
+127
+-2
+0
+2
+4
+6
+8
+SD=104 CA, ED=126 CA
+SR/ TR/ CTR [-]
+Exhaust Valve Opening (EVO) timing [CA]
+ SR
+ TR
+ CTR
+ 
+Fig. 22. Effect of EVO timing on the SR, TR and CTR at 280 ⁰CA (SD=104 ⁰CA, ED=126 
+⁰CA). 
+101
+107
+117
+127
+0.0
+0.5
+1.0
+1.5
+2.0
+2.5
+3.0
+2.77
+2.71
+2.28
+1.75
+0.59
+0.58
+0.55
+0.51
+0.98
+0.99
+0.97
+0.94
+1.63
+1.57
+1.25
+0.89
+SD=104 CA, ED=126 CA
+DR/ TE/ SE/ CE [-]
+Exhaust Valve Opening (EVO) timing [CA]
+DR:
+CE:
+SE:
+TE:
+ 
+Fig. 23. Effect of EVO timing on DR, TE, SE and CE (SD=104 ⁰CA, ED=126 ⁰CA). 
+ 
+4.3.3 Comparison of the effects of SD, ED and EVO timing on the scavenging process  
+In order to systematically compare the impact of EVO timing on in-cylinder flow motions 
+with all the combinations of SDs and EDs in Fig. 11, the maximum/minimum value and the 
+corresponding changing percentage (δ) of SR, TR and CTR with different EVOs are 
+presented in Table 7. The sensitivity to EVO timing of a parameter is measured by the 
+
+===== page 30 =====
+percentage of change in the parameter, which is defined as the ratio of the difference between 
+the maximum and minimum value to the maximum value. It can be seen that both the 
+maximum and minimum values of SR decrease with SD. The comparison between EDs 
+indicates that a longer ED leads to a slightly lower SR. The SR is most sensitive to the EVO 
+timing at an intermediate SD around 116 ⁰CA for both EDs. 
+The maximum TR peaks at an intermediate SD of 110 ⁰CA for both EDs. A longer ED would 
+increase the TR, especially its minimum value. TR is much more sensitive to the EVO timing, 
+especially for the shorter ED of 98 ⁰CA and a shorter SD. The shortest SD of 104 ⁰CA 
+produces higher maximum CTR for both EDs and the highest maximum CTR of 3.09 with 
+the help of a shorter ED of 98 ⁰CA. 
+ 
+Table 7 Maximum/minimum value and the changing percentage of SR, TR and CTR with 
+different EVOs for different SDs and EDs. 
+  
+ 
+ED=98 ⁰CA 
+  
+ED=126 ⁰CA 
+SD  [⁰CA]  
+SRmax [-] 
+SRmin [-] 
+δ SR [%] 
+SRmax [-] 
+SRmin [-] 
+δ SR [%] 
+128 
+ 
+7.26 
+6.81 
+6 
+  6.94 
+6.55 
+6 
+116 
+ 
+7.27 
+6.57 
+10 
+  6.9 
+6.3 
+9 
+110 
+ 
+6.96 
+6.26 
+10 
+  6.26 
+6.09 
+3 
+104 
+ 
+6.5 
+6.21 
+4 
+  5.84 
+5.65 
+3 
+SD  [⁰CA]  
+TRmax [-] 
+TRmin [-] 
+δ TR [%] 
+TRmax [-] 
+TRmin [-] 
+δ TR [%] 
+128 
+ 
+1.64 
+0.45 
+73 
+  1.83 
+1.09 
+40 
+116 
+ 
+1.62 
+0.22 
+86 
+  2.26 
+1.22 
+46 
+110 
+ 
+2.31 
+0.02 
+99 
+  2.42 
+1.03 
+57 
+104 
+ 
+1.48 
+0.03 
+98 
+  2.02 
+0.96 
+52 
+SD  [⁰CA]  
+CTRmax [-] CTRmin [-] δ CTR [%] 
+CTRmax [-] CTRmin [-] δ CTR [%] 
+128 
+ 
+1.24 
+0.24 
+81 
+  1.27 
+0.36 
+72 
+116 
+ 
+0.88 
+0.61 
+31 
+  0.6 
+0.13 
+78 
+110 
+ 
+1.79 
+1.06 
+41 
+  1.03 
+0.21 
+80 
+104 
+ 
+3.09 
+1.4 
+55 
+  2.3 
+1.69 
+27 
+ 
+
+===== page 31 =====
+Shown in Table 8 are the maximum/minimum value and the corresponding percentage of 
+change in each scavenge parameter with EVOs. For the shorter ED of 98 ⁰CA, the maximum 
+DR and CE show an increasing trend with shorter SD. TE and SE also increase slightly with a 
+shorter SD. As the ED increases to 126 ⁰CA, DR and CE are significantly improved. The SE 
+is also slightly improved but TE is deteriorated. The maximum DR and CE peak at an 
+intermediate SD around 110 ⁰CA. 
+The sensitivity of each scavenging parameter shows an increasing trend with a shorter SD. 
+Overall, a longer ED shows better scavenging performances and lower sensitivity to EVO 
+timing. An intermediate SD around 110 ⁰CA can produce the optimal scavenge performance 
+with the highest maximum DR, SE and CE. A shorter ED produces a higher trapping 
+efficiency, and the scavenging performance can be further improved with a reduced SD. 
+ 
+Table 8 Maximum/minimum value and the changing percentage of each scavenge parameter 
+with different EVOs for different combinations of SD and ED. 
+  
+ 
+ED=98 ⁰CA 
+ 
+ED=126 ⁰CA 
+SD  [⁰CA]  
+DRmax [-] 
+DRmin [-] 
+δ DR [%] 
+ 
+DRmax [-] 
+DRmin [-] 
+δ DR [%] 
+128 
+ 
+2.04 
+1.75 
+14 
+ 
+2.73 
+2.35 
+14 
+116 
+ 
+2.04 
+1.69 
+17 
+ 
+2.87 
+2.09 
+27 
+110 
+ 
+2.14 
+1.46 
+32 
+ 
+2.87 
+1.94 
+32 
+104 
+ 
+2.17 
+1.23 
+43 
+ 
+2.77 
+1.75 
+37 
+SD  [⁰CA]  
+TEmax [-] 
+TEmin [-] 
+δ TE [%] 
+ 
+TEmax [-] 
+TEmin [-] 
+δ TE [%] 
+128 
+ 
+0.72 
+0.66 
+3 
+ 
+0.58 
+0.54 
+2 
+116 
+ 
+0.73 
+0.68 
+5 
+ 
+0.57 
+0.53 
+3 
+110 
+ 
+0.73 
+0.67 
+8 
+ 
+0.57 
+0.51 
+4 
+104 
+ 
+0.74 
+0.66 
+12 
+ 
+0.59 
+0.51 
+4 
+SD  [⁰CA]  
+SEmax [-] 
+SEmin [-] 
+δ SE [%] 
+ 
+SEmax [-] 
+SEmin [-] 
+δ SE [%] 
+128 
+ 
+0.94 
+0.91 
+15 
+ 
+0.98 
+0.96 
+15 
+116 
+ 
+0.97 
+0.92 
+20 
+ 
+0.99 
+0.96 
+32 
+110 
+ 
+0.97 
+0.89 
+36 
+ 
+0.99 
+0.95 
+39 
+104 
+ 
+0.97 
+0.85 
+49 
+ 
+0.98 
+0.94 
+45 
+SD  [⁰CA]  
+CEmax [-] 
+CEmin [-] 
+δ CE [%] 
+ 
+CEmax [-] 
+CEmin [-] 
+δ CE [%] 
+
+===== page 32 =====
+128 
+ 
+1.38 
+1.17 
+8 
+ 
+1.51 
+1.28 
+7 
+116 
+ 
+1.42 
+1.14 
+7 
+ 
+1.62 
+1.1 
+7 
+110 
+ 
+1.52 
+0.98 
+8 
+ 
+1.64 
+1 
+11 
+104 
+ 
+1.58 
+0.81 
+11 
+ 
+1.63 
+0.89 
+14 
+ 
+4.3.4 Mechanism of the effect of scavenge port/exhaust valve opening profiles on the 
+scavenging process 
+In this section, the scavenging process is reviewed at first based on the results shown in the 
+previous sections and the correlations between the key parameters are analyzed. A 
+comprehensive diagram is then drawn to illustrate the mechanism of effect of scavenge 
+port/exhaust valve opening profiles on scavenging process in BUSDIG engine. 
+A longer SD or delayed EVO timing lead to increased early backflow duration (dEB) due to 
+shorter blow-down duration. The increase of dEB is gradually slowed down due to the limit of 
+the maximum early backflow rate. The effective scavenging flow area of the scavenge ports 
+and the exhaust valve lift profile during the early backflow period affect the in-cylinder 
+pressure and shows impact on dEB. Therefore, the dEB is slightly longer with a longer ED or 
+shorter SD due to the lower slop of the opening profile, and also become more sensitive to 
+EVO timing. 
+A longer early backflow period usually leads to a longer subsequent backflow scavenge 
+duration (dBS). But in some cases where the increase of dEB is even longer than the increase of 
+EVO timing, the increase of dBS will be slightly weakened due to the higher exhaust valve lift 
+during the backflow scavenging period. Or, in some other cases where the increase of dEB is 
+significantly shorter than the increase of EVO timing, the increase of dBS will be significantly 
+enhanced compared to the increase of dEB due to smaller exhaust valve lift profile during the 
+backflow scavenging period. 
+The reduction of SD or delaying of EVO monotonously shortens the post backflow duration 
+(dPB). However, with the disappearance of the post backflow, further reduction of SD or 
+
+===== page 33 =====
+delayed EVO timing would directly reduce the main scavenging duration dMS due to 
+diminished post-charging effect. 
+The variations of above three scavenge periods, i.e. dEB, dBS and dPB, would finally determine 
+the value of dMS. As the EVO is delayed, dMS shows initially a decreasing trend at the first 
+stage due to significant increase of dEB and dBS. During the second stage, as the increase of 
+dEB slows down due to the limit of the maximum flow rate of early backflow, dMS increases 
+thanks to the much smaller dPB. In the third stage, with the disappearance of the post 
+backflow period, further delay of EVO would lead to the decrease of dMS. It should be noted 
+that the second stage is absent for some cases in which dEB and dBS are very sensitive to EVO 
+timing. 
+Similarly, the effect of SD on the scavenging process can also be explained. For an early 
+EVO timing (e.g. 107 ⁰CA with ED of 98 ⁰CA), the reduction of SD shortens dEB due to the 
+longer blow-down duration, leading to increased dMS. However, for a later EVO timing (e.g. 
+141 ⁰CA with ED of 98 ⁰CA), the reduction of SD leads to early closing of scavenge ports 
+and reduced post-charging effect, which directly reduces the dMS. 
+The sensitivities of early backflow duration (dEB), backflow scavenge duration (dBS) and post 
+backflow duration (dPB) are mainly controlled by the relationship between the opening 
+profiles of scavenge ports and exhaust valves. The combined sensitivities of dEB, dBS and dPB 
+finally determine the variation of dMS for different combinations of SD, ED and EVO. In 
+order to characterise their impacts on controlling the scavenging process in BUSDIG engine, 
+three parameters, the difference between the opening timings of scavenge ports and exhaust 
+valves (∆open), the difference between the closing timings of scavenge ports and exhaust 
+valves (∆close) and the overlap between the opening profiles of scavenge ports and exhaust 
+valves (∆overlap) are defined as follows and shown in Fig. 24,  
+∆open =SPO-EVO 
+(6) 
+
+===== page 34 =====
+∆close =SPC-EVC 
+(7) 
+∆overlap =Min (SPC,EVC)-Max(SPO, EVO) 
+(8) 
+ 
+90
+120
+150
+180
+210
+240
+270
+0.0
+0.3
+0.6
+0.9
+1.2
+EVO
+SPC
+overlap
+EL' [-]
+ 
+SPO
+SA' [-]
+Crank angle [CA]
+open
+EVC
+0.0
+0.3
+0.6
+0.9
+1.2
+close
+ 
+Fig. 24. Definitions of ∆open, ∆close and ∆overlap. 
+ 
+As shown in Fig. 25, dEB gradually decreases with increasing ∆open, characterised with two 
+linear correlation regions. In the case of the negative values of ∆open, indicating earlier SPO 
+timing compared to EVO timing, dEB is relatively longer but shows lower sensitivity to ∆open. 
+In the cases of positive values of ∆open, indicating a blow-down period before the opening of 
+scavenge ports, dEB shows higher sensitivity to ∆open and decreases rapidly with  increasing 
+∆open. The strong positive correlation between dEB and dBS is shown in Fig. 26, and the two 
+distinct regions of the correlations can still be observed. Overall, the dBS increases with dEB. 
+
+===== page 35 =====
+-30
+-20
+-10
+0
+10
+20
+30
+0
+10
+20
+30
+40
+50
+y=29.23-0.85x
+y=34.75-0.15x
+ SD=128 CA
+ SD=116 CA
+ SD=110 CA
+ SD=104 CA
+Solid
+ED=98 CA
+Hollow ED=126 CA
+dEB [CA]
+open [CA]
+ 
+Fig. 25. Correlation of dEB with ∆open. 
+0
+10
+20
+30
+40
+50
+0
+10
+20
+30
+40
+50
+60
+y=-20.49+1.77x
+y=1.25+1.53x
+dBS [CA]
+dEB [CA]
+ 
+Fig. 26. Correlation of dBS with dEB. 
+ 
+Fig. 27 shows the strong positive correlation between dPB and ∆close. A longer ED leads to an 
+earlier increase of dPB with ∆close because of lower slope of the exhaust valve lift profile with 
+the fixed peak valve lift. For the short ED of 98 ⁰CA, it is noted that the post backflow occurs 
+after ∆close of around 10 ⁰CA instead of 0 ⁰CA, which clearly demonstrates the existence of 
+post-charging effect that the intake charge would still flow into the cylinder after the closing 
+of exhaust valves due to relatively higher intake pressure than the cylinder pressure. 
+
+===== page 36 =====
+-30
+-20
+-10
+0
+10
+20
+30
+40
+50
+-10
+0
+10
+20
+30
+40
+50
+y=-5.76+1.15x
+y=3.04+1.18x
+dPB [CA]
+close [CA]
+ 
+Fig. 27. Correlation of dPB with ∆close. 
+ 
+Fig. 28 shows the complex relationship between dMS and ∆overlap. The square and round 
+symbols indicate the cases with EDs of 98 and 126 ⁰CA respectively. As the post backflow 
+would directly affect the main scavenging period, the solid symbols indicate the cases with 
+post backflow period while hollow symbols indicate cases without post backflow period. In 
+addition, the main scavenging durations of those cases with ∆overlap equal to SD or ED would 
+be more affected by other factors instead of the overlap (∆overlap) itself, and those cases are 
+marked as the blue symbols and neglected for the correlation. 
+For those cases with the post backflow period (solid symbols), the increase in ∆overlap 
+indicates an earlier SPO timing as well as longer early backflow and backflow scavenging 
+periods, leading to negative correlation of dMS with ∆overlap, as shown in Fig. 28. Therefore, in 
+order to achieve a longer main scavenge duration (dMS), ∆overlap should be reduced by 
+adjusting the SD and exhaust valve lift profile. The adoption of a long ED can further 
+increase dMS. For those cases without the post backflow (hollow symbols), the increase in 
+∆overlap would prolong the dMS, as indicated by the correlation curve (grey) in Fig. 28. 
+
+===== page 37 =====
+70
+80
+90
+100
+110
+120
+130
+10
+30
+50
+70
+90
+110
+y=1.94E7*x^(-2.69)
+y=4.21E-5*x^2.93
+ Square: ED=98 CA
+ Round: ED=126 CA
+ Hollow: cases w/o post backflow
+ Blue: cases with overlap=SD/ED
+dMS [CA]
+overlap [CA]
+y=4.25E6*x^(-2.6)
+ 
+Fig. 28. Correlation of dMS with ∆overlap. 
+ 
+The scavenging process directly controls the in-cylinder flow motions and scavenging 
+performances. Although the main scavenging period directly drives the scavenging process in 
+the cylinder, there is no strong correlation between dMS and the flow motions. In comparison, 
+the SR and TR show good correlations with ∆close, as shown in Fig. 29. A larger ∆close leads to 
+higher SR but lower TR. The increase in ∆close leads to more significant post backflow, 
+indicating more in-cylinder gas entering the scavenging ports on the cylinder wall instead of 
+the exhaust ports on the one side of the cylinder top. This would then slow the decay of SR 
+but weaken the tumble flow motion. The CTR is affected by the evolutions of both SR and 
+TR, showing poor correlation with ∆close. 
+
+===== page 38 =====
+4
+5
+6
+7
+8
+9
+y=1.54-0.04x
+y=6.42+0.014x
+-30
+-20
+-10
+0
+10
+20
+30
+40
+50
+-2
+-1
+0
+1
+2
+3
+4
+ TR [-]
+close [CA]
+SR [-]
+ 
+Fig. 29. Correlation of SR and TR with ∆close. 
+ 
+Fig. 30 shows that there are strong positive correlations of SE and CE with DR. The 
+correlation between DR and SE is insensitive to the exhaust valve opening duration (ED) and 
+a larger DR can lead to higher SE. While the correlation between CE and DR is sensitive to 
+the ED. A shorter ED is preferred to achieve a higher CE with same DR. 
+0.8
+0.9
+1.0
+1.1
+y= -0.31+0.69x
+y= -0.17+0.8x
+y=0.8+0.07x
+1.0
+1.4
+1.8
+2.2
+2.6
+3.0
+0.4
+0.8
+1.2
+1.6
+2.0
+ CE [-]
+DR [-]
+ED=126 CA
+ED=98 CA
+SE [-]
+ 
+Fig. 30. Correlation of SE and CE with DR. 
+ 
+The correlation between CE and SE is slightly sensitive to ED, as shown in Fig. 31. As a 
+higher SE indicates less fraction of residual gas in the cylinder, the CE shows positive 
+
+===== page 39 =====
+correlation with SE. Compared to the long ED, a shorter ED leads to stronger post-charging 
+effect and higher in-cylinder total mass, leading to higher CE with the same SE. 
+0.80
+0.85
+0.90
+0.95
+1.00
+1.05
+0.0
+0.4
+0.8
+1.2
+1.6
+2.0
+2.4
+y=-13.25+15.05x
+y=-4.03+5.77x
+CE [-]
+SE [-]
+ED=98 CA
+ED=126 CA
+ 
+Fig. 31. Correlation of CE with SE. 
+ 
+As the most important scavenging period, the main scavenge duration (dMS) shows strong 
+correlations with DR, SE and CE, as shown in Fig. 32. Overall, DR, SE and CE increase with 
+dMS, while the increasing rates become slower with dMS over 60 ⁰CA. 
+1.0
+1.5
+2.0
+2.5
+3.0
+10
+20
+30
+40
+50
+60
+70
+80
+90
+0.2
+0.6
+1.0
+1.4
+1.8
+CE [-]
+dMS [CA]
+0.80
+0.85
+0.90
+0.95
+1.00
+ SE [-]
+y=0.16+0.05x-6.92E-4*x
+2+3.35E-6*x
+3
+y=0.66+0.01x-1.86E-4*x
+2+8.52E-7*x
+3
+y=0.34+0.05x-1.44E-4*x
+2-1.61E-6*x
+3
+ 
+DR [-]
+ 
+Fig. 32. Correlation of DR, SE and CE with dMS. 
+ 
+
+===== page 40 =====
+Fig. 33 and 34 shows the correlations of SE with dEB and ∆open. The longer early backflow 
+period, usually caused by a smaller ∆open, leads to strong pre-mixing between residual gas and 
+fresh charge and finally reduces the scavenging efficiency (SE). Therefore, a larger ∆open is 
+preferred to reduce the early backflow period and increase SE. However, an improved DR is 
+always helpful to improve the SE, as indicated in Fig. 30. 
+0
+10
+20
+30
+40
+50
+0.80
+0.85
+0.90
+0.95
+1.00
+1.05
+1.10
+y=1-2.38E-3*x
+SE [-]
+dEB [CA]
+ 
+Fig. 33. Correlation of SE with dEB. 
+-30
+-20
+-10
+0
+10
+20
+30
+0.80
+0.85
+0.90
+0.95
+1.00
+1.05
+1.10
+y=0.94+1.87E-3*x
+SE [-]
+open [CA]
+ 
+Fig. 34. Correlation of SE with ∆open. 
+ 
+The correlation of CE with ∆close is slightly sensitive to ED, as shown in Fig 35. With the 
+increase in ∆close, CE increases at first but decreases afterwards for both EDs. A negative 
+
+===== page 41 =====
+∆close leads to an early SPC and significantly reduces the main scavenging duration, which 
+shows lower CE. However, with a too late SPC, the enhanced post backflow also reduces the 
+CE. Generally speaking, the ∆close should be controlled at the range between 5 and 25 ⁰CA for 
+the EDs in this study to impose the post-charging effect and improves scavenging 
+performances. 
+-30
+-20
+-10
+0
+10
+20
+30
+40
+50
+0.0
+0.4
+0.8
+1.2
+1.6
+2.0
+y=1.53+1.84E-2*x-9.6E-4*x
+2-1.83E-5*x
+3
+y=1.13+3.42E-2*x-1.02E-3*x
+2+5.24E-6*x
+3
+ED=98 CA
+CE [-]
+close [CA]
+ED=126 CA
+ 
+Fig. 35. Correlation of CE with ∆close. 
+ 
+Fig. 36 summarizes the impact of scavenge port/exhaust valve opening profiles on 
+scavenging periods, in-cylinder flow motions and scavenging performances based on the 
+above analyses. In general, ∆open should be increased to increase SE to maximize the 
+scavenge performances. Both ∆close and ∆overlap should be reduced for the cases with the post 
+backflow and increased for the cases without backflow to improve DR, CE and SE. Therefore, 
+the optimal scavenging performance would be achieved when the post backflow is just 
+avoided by tuning ∆close and ∆overlap for a specific ED. The prolonged ED could then be used 
+to further improve the scavenging performances, as shown in Fig. 28 and 35. 
+
+===== page 42 =====
+ 
+Fig. 36. Mechanism of the effect of scavenge port/exhaust valve opening profiles on 
+scavenging periods, in-cylinder flow motions and scavenging performances. 
+ 
+5. Summary and conclusions 
+In this study, the three dimensional (3D) computational fluid dynamics (CFD) simulations 
+were performed to understand the effect of scavenge port designs and exhaust valve opening 
+profiles on the in-cylinder flow motions and scavenge performances in a 2-stroke boosted 
+uniflow scavenged direct injection gasoline (BUSDIG) engine. Four scavenging periods, i.e. 
+early backflow period (EB), backflow scavenging period (BS), main scavenging period (MS) 
+and post backflow period (PB), are introduced to characterize the scavenging process and 
+their relationships are analysed with different combinations of scavenge port opening 
+duration (SD), exhaust valve opening duration (ED) and timing (EVO). The main findings 
+are summarized as follows: 
+1) The delivery ratio (DR) and charging efficiency (CE) gradually increase with the axis 
+inclination angle (AIA) due to the larger effective scavenging area but weakened 
+short-circuiting. The scavenging efficiency (SE) is almost kept constant as AIA 
+increases. The intermediate AIAs of 68⁰ and 75⁰ produce slightly lower swirl ratio 
+(SR) but higher tumble ratio (TR) and cross tumble ratio (CTR). 
+
+===== page 43 =====
+2) DR is gradually reduced with increasing swirl orientation angle (SOA) due to the 
+reduced effective scavenging area. CE peaks at the intermediate SOAs around 10⁰ and 
+20⁰ due to less short-circuiting. SE reduces with SOA increasing due to reduced DR 
+and poor scavenging in cylinder centre, while the trapping efficiency (TE) increases 
+slightly. The SR, TR and CTR increase with SOA. 
+3) The optimal scavenge port angles with AIA of 90⁰ and SOA of 20⁰ produce the best 
+scavenging performances and good in-cylinder flow motions. 
+4) SR decreases with reduced SD but larger ED, and it is less sensitive to the EVO 
+timing. The intermediate SD (i.e. 110 ⁰CA) and longer ED of 126 ⁰CA produce higher 
+maximum TR. With the decrease of SD and ED, TR shows higher sensitivity to the 
+EVO timing. The shortest SD of 104 ⁰CA generates a higher maximum CTR for both 
+EDs. 
+5) A longer ED shows lower sensitivity to EVO timing and produces highest maximum 
+DR, SE and CE with an intermediate SD around 110 ⁰CA. A shorter ED achieves 
+higher TE, and the scavenging performances can be improved with a reduced SD. 
+6) The increased difference between the opening timings of scavenge ports and exhaust 
+valves (∆open) leads to reduced early backflow duration (dEB) and the subsequent 
+backflow scavenging duration (dBS), which in turn increases the SE. The increased 
+difference between the closing timings of scavenge ports and exhaust valves (∆close) 
+leads to increased post backflow duration (dPB) and should be controlled in the range 
+between 5 and 25 ⁰CA for the EDs in this study to impose the post-charging effect 
+and improves scavenging performances. Meanwhile, ∆close shows strong positive 
+correlation with SR and negative correlation with TR. 
+7) For the cases with the post backflow, the increase in the overlap between the opening 
+profiles of scavenge ports and exhaust valves (∆overlap) leads to a shorter main 
+
+===== page 44 =====
+scavenging duration (dMS). While for those cases without the post backflow, the 
+increased ∆overlap leads to longer dMS. The adoption of a longer ED can further increase 
+dMS. Overall, DR, SE and CE show strong correlations and increase with dMS. 
+8) SE and CE show positive correlations with DR. But the correlation between CE and 
+DR is sensitive to ED. A shorter ED is preferred to achieve a higher CE with the same 
+DR. CE shows a positive correlation with SE and shows higher values for a shorter 
+ED. 
+9) The slopes of the opening profiles of the scavenge ports and the exhaust valve affect 
+both dEB and dBS and the overall scavenging performances. 
+10) The optimal scavenging performance with higher DR, CE and SE can be achieved 
+when the post backflow is just avoided by tuning the ∆close and ∆overlap for a specific 
+ED. A longer ED can be used to further improve the scavenging performances. In 
+addition, ∆open can be increased to improve SE. 
+ 
+Abbreviations 
+3D 
+ 
+three dimensional 
+AIA 
+ 
+axis inclination angle 
+BS 
+ 
+backflow scavenging period 
+BUSDIG 
+boosted uniflow scavenged direct injection gasoline 
+CE 
+ 
+charging efficiency 
+CFD  
+computational fluid dynamics 
+CTR 
+ 
+cross tumble ratio 
+DI 
+ 
+direct injection 
+DR 
+ 
+delivery ratio 
+EB 
+ 
+early backflow period 
+
+===== page 45 =====
+ED 
+ 
+exhaust valve opening duration 
+EL’ 
+ 
+normalized exhaust valve lift 
+EVO  
+exhaust valve opening 
+IMEP  
+indicated mean effective pressure 
+MS 
+ 
+main scavenging period 
+PB 
+ 
+post backflow period 
+RGF  
+residual gas fraction 
+SA’ 
+ 
+normalized scavenge port opening area 
+SD  
+ 
+scavenge port opening duration 
+SE 
+ 
+scavenging efficiency 
+SOA  
+swirl orientation angle 
+SPC 
+ 
+scavenge port closing 
+SPO 
+ 
+scavenge port opening 
+SR 
+ 
+swirl ratio 
+TDC  
+top dead center 
+TE 
+ 
+trapping efficiency 
+TR 
+ 
+tumble ratio 
+VVA  
+variable valve actuation 
+ 
+Notations 
+∆close   
+difference between the closing timings of scavenge ports and exhaust valves 
+∆overlap  
+overlap between the opening profiles of scavenge ports and exhaust valves 
+∆open 
+ 
+difference between the opening timings of scavenge ports and exhaust valves 
+δ  
+ 
+changing percentage 
+d 
+ 
+duration 
+
+===== page 46 =====
+ 
+Funding 
+The authors gratefully acknowledge the financial support by the Engineering and Physical 
+Sciences Research Council (EPSRC). The data of this paper can be accessed from the Brunel 
+University London data archive, figshare at https://doi.org/10.17633/rd.brunel.5195731.v1. 
+ 
+Reference 
+ [1] 
+Mattarelli E, Rinaldini C A. Two-Stroke Gasoline Engines for Small-Medium 
+Passenger Cars. SAE Technical Paper 2015-01-1284. 
+ [2] 
+Zhang Y, Nora M D, Zhao H. Comparison of Performance, Efficiency and Emissions 
+between Gasoline and E85 in a Two-Stroke Poppet Valve Engine with Lean Boost CAI 
+Operation. SAE Technical Paper 2015-01-0827. 
+ [3] 
+Nishida K, Sakuyama H, Kimijima T. Improvement of Fuel Economy Using a New 
+Concept of Two-Stroke Gasoline Engine Applying Stratified-Charge Auto-Ignition. SAE 
+Technical Paper 2009-28-0009. 
+ [4] 
+Johnson J, Den Braven K R. Comparison of Homogeneous, Stratified and High-
+Squish Stratified Combustion in a Direct-Injected Two-Stroke Engine. SAE Technical Paper 
+2008-32-0030. 
+ [5] 
+Osborne R J, Stokes J, Lake T H, Carden P J, Mullineux J D, Helle-Lorentzen R, 
+Evans J C, Heikal M R, Zhu Y, Zhao H, Ma T. Development of a Two-Stroke/Four-Stroke 
+Switching Gasoline Engine - The 2/4SIGHT Concept. SAE Technical Paper 2005-01-1137. 
+ [6] 
+Zhang Y, Zhao H, Ojapah M, Cairns A. 2-Stroke CAI Operation on a Poppet Valve 
+DI Engine Fuelled with Gasoline and its Blends with Ethanol. SAE Technical Paper 2013-01-
+1674. 
+
+===== page 47 =====
+ [7] 
+Benajes J, Martin J, Novella R, De Lima D. Analysis of the Load Effect on the 
+Partially Premixed Combustion Concept in a 2-Stroke HSDI Diesel Engine Fueled with 
+Conventional Gasoline. SAE Technical Paper 2014-01-1291. 
+ [8] 
+Andwari A M, Aziz A A, Said M F M, Latiff Z A. Experimental investigation of the 
+influence of internal and external EGR on the combustion characteristics of a controlled auto-
+ignition two-stroke cycle engine. Applied Energy 2014; 134(0): 1 - 10. 
+ [9] 
+Rocchi S, Rossi R, Musu E, Gentili R, Ghandhi J, Reitz R D. Computational study of 
+a two-stroke direct-injection reactivity-controlled compression ignition engine. Proceedings 
+of the Institution of Mechanical Engineers, Part D: Journal of Automobile Engineering 2014; 
+229(8): 980–991. 
+[10] 
+Benajes J, Novella R, De Lima D, Tribotte P. Investigation on Multiple Injection 
+Strategies for Gasoline PPC Operation in a Newly Designed 2-Stroke HSDI Compression 
+Ignition Engine. SAE Int. J. Engines 2015; 8(2). 
+[11] 
+Zhang Y, Zhao H. Measurement of short-circuiting and its effect on the controlled 
+autoignition or homogeneous charge compression ignition combustion in a two-stroke poppet 
+valve engine. Proceedings of the Institution of Mechanical Engineers, Part D: Journal of 
+Automobile Engineering 2012; 226(8): 1110-1118. 
+[12] 
+Abthoff J, Duvinage F, Hardt T, Krämer M, Paule M. The 2-Stroke DI-Diesel Engine 
+with Common Rail Injection for Passenger Car Application. SAE Technical Paper 981032. 
+[13] 
+Lamas M I, Vidal R, Gervasio C. Computational Fluid Dynamics Analysis of the 
+Scavenging Process in the MAN B&W 7S50MC Two-Stroke Marine Diesel Engine. Journal 
+of Ship Research 2012; 56(3): 154-161(8). 
+[14] 
+Sigurdsson E, Ingvorsen K M, Jensen M V, Mayer S, Matlok S, Walther J H. 
+Numerical analysis of the scavenge flow and convective heat transfer in large two-stroke 
+marine diesel engines. Applied Energy 2014; 123(0): 37 - 46. 
+
+===== page 48 =====
+[15] 
+Andersen F H, Hult J, Nogenmyr K, Mayer S. CFD Analysis of the Scavenging 
+Process in Marine Two-Stroke Diesel Engines. Proceedings of the ASME 2014 Internal 
+Combustion Engine Division Fall Technical Conference, October 19-22, 2014, Columbus, IN, 
+USA. 
+[16] 
+Knoll R. AVL Two-Stroke Diesel Engine. SAE Technical Paper 981038. 
+[17] 
+Cantore G, Mattarelli E. A New Concept for Ultra-Compact Automotive HSDI Diesel 
+Engines. SAE Technical Paper 2007-01-1253. 
+[18] 
+Laget O, Ternel C, Thiriot J, Charmasson S, Tribotté P, Vidal F. Preliminary Design 
+of a Two-Stroke Uniflow Diesel Engine for Passenger Car. SAE Int. J. Engines 2013; 6(1). 
+[19] 
+Mattarelli E, Rinaldini C A, Baldini P. Modeling and Experimental Investigation of a 
+2-Stroke GDI Engine for Range Extender Applications. SAE Technical Paper 2014-01-1672. 
+[20] 
+Ingvorsen K M, Meyer K E, Walther J H, Mayer S. Turbulent swirling flow in a 
+dynamic model of a uniflow-scavenged two-stroke engine. Experiments in Fluids 2014; 55(6). 
+[21] 
+Ingvorsen K M, Meyer K E, Walther J H E, Mayer S. Phase-locked stereoscopic PIV 
+measurements of the turbulent swirling flow in a dynamic model of a uniflow-scavenged 
+two-stroke engine cylinder. 10TH INTERNATIONAL SYMPOSIUM ON PARTICLE 
+IMAGE VELOCIMETRY, Delft, The Netherlands, July 1-3, 2013. 
+[22] 
+Haider S, Schnipper T, Obeidat A, Meyer K E, Okulov V L, Mayer S, Walther J H. 
+PIV study of the effect of piston position on the in-cylinder swirling flow during the 
+scavenging process in large two-stroke marine diesel engines. Journal of Marine Science and 
+Technology 2013; 18(1): 133-143. 
+[23] 
+Hori H. Scavenging Flow Optimization of Two-Stroke Diesel Engine by Use of CFD. 
+SAE Technical Paper 2000-01-0903. 
+[24] 
+Tamamidis P, Assanis D N. Optimization of inlet port design in a uniflow-scavenged 
+engine using a 3-D turbulent flow code. SAE Technical Paper 931181. 
+
+===== page 49 =====
+[25] 
+Ravi M R, Marathe A G. Effect of port sizes and timings on the scavenging 
+characteristics of a uniflow scavenged engine. SAE Technical Paper 920782. 
+[26] 
+Carlucci A P, Ficarella A, Trullo G. Performance optimization of a Two-Stroke 
+supercharged diesel engine for aircraft propulsion. Energy Conversion and Management 2016; 
+122: 279-289. 
+[27] 
+Ma J, Zhao H. The Modeling and Design of a Boosted Uniflow Scavenged Direct 
+Injection Gasoline (BUSDIG) Engine. SAE Technical Paper 2015-01-1970. 
+[28] 
+Wang X, Ma J, Zhao H. Evaluations of Scavenge Port Designs for a Boosted Uniflow 
+Scavenged Direct Injection Gasoline (BUSDIG) Engine by 3D CFD Simulations. SAE 
+Technical Paper 2016-01-1049. 
+[29] 
+Cd-adapco. Methodology, STAR-CD VERSION 4.14, 2010. 
+[30] 
+Ma J, Zhao H, Freeland P, Hawley M, Xia J. Numerical Analysis of a Downsized 2-
+Stroke Uniflow Engine. SAE Technical Paper 2014-01-9051. 
+[31] 
+Wang X, Xie H, Zhao H. Computational study of the influence of in-cylinder flow on 
+spark ignition–controlled auto-ignition hybrid combustion in a gasoline engine. International 
+Journal of Engine Research 2015; 16(5): 795-809. 

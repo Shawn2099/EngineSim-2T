@@ -1,0 +1,1254 @@
+TITLE: A Three-Zone Scavenging Model for Large Two-Stroke Uniflow Marine Engines Using Results from CFD Scavenging Simulations
+YEAR: 2019
+FILE: 2019_Foteinos_Three_Zone_Scavenging_Model_Uniflow.pdf
+PAGES: 20
+EXTRACTED_WITH: PyMuPDF PyMuPDF 1.28.2
+
+
+===== page 1 =====
+
+energies
+Article
+A Three-Zone Scavenging Model for Large
+Two-Stroke Uniﬂow Marine Engines Using
+Results from CFD Scavenging Simulations
+Michael I. Foteinos 1,*
+, Alexandros Papazoglou 1, Nikolaos P. Kyrtatos 1,
+Anastassios Stamatelos 2,*
+, Olympia Zogou 2 and Antiopi-Malvina Stamatellou 2
+1
+Laboratory of Marine Engineering, National Technical University of Athens, GR-15780 Athens, Greece;
+apapazo2006@gmail.com (A.P.); nkyrt@lme.ntua.gr (N.P.K.)
+2
+Laboratory of Thermodynamics & Thermal Engines, University of Thessaly, GR-38334 Volos, Greece;
+olyz@uth.gr (O.Z.); malvinstam@gmail.com (A.-M.S.)
+*
+Correspondence: m.foteinos@lme.ntua.gr (M.I.F.); stam@uth.gr (A.S.)
+Received: 17 April 2019; Accepted: 4 May 2019; Published: 7 May 2019
+
+
+Abstract: The introduction of modern aftertreatment systems in marine diesel engines call for
+accurate prediction of exhaust gas temperature, since it signiﬁcantly aﬀects the performance of the
+aftertreatment system. The scavenging process establishes the initial conditions for combustion,
+directly aﬀecting exhaust gas temperature, fuel economy, and emissions. In this paper, a semi-empirical
+zero-dimensional three zone scavenging model applicable to two-stroke uniﬂow scavenged diesel
+engines is updated using the results of CFD (computational ﬂuid dynamics) simulations. In this 0-D
+model, the engine cylinders are divided in three zones (thermodynamic control volumes) namely, the
+pure air zone, mixing zone, and pure exhaust gas zone. The entrainment of air and exhaust gas in the
+mixing zone is speciﬁed by time varying mixing coeﬃcients. The mixing coeﬃcients were updated
+using results from CFD simulations based on the geometry of a modern 50 cm bore large two-stroke
+marine diesel engine. This increased the model’s accuracy by taking into account 2-D ﬂuid dynamics
+phenomena in the cylinder ports and exhaust valve. Thus, the eﬀect of engine load, inlet port swirl
+angle and partial covering of inlet ports on engine scavenging were investigated. The three-zone
+model was then updated and the ﬁndings of CFD simulations were reﬂected accordingly in the
+updated mixing coeﬃcients of the scavenging model.
+Keywords: two-stroke engine; uniflow scavenging; 0-D modelling; scavenging model; CFD simulations
+1. Introduction
+During the scavenging process, the burnt gas inside the engine cylinders is expelled and new fresh
+air is charged. The scavenging process establishes the initial conditions of the combustion process,
+hence is aﬀecting engine fuel economy and emissions. Commercial vessels, such as tankers, bulk
+carriers, and containerships are, in most cases, propelled by large two-stroke uniﬂow scavenged diesel
+engines. Better propulsion eﬃciency dictates the matching of the engine to a slow turning, large
+diameter propeller. In order to achieve low engine revolutions while maintaining a certain mean piston
+speed the bore to stroke ratio of marine diesel engines was increased. Due to their long stroke, loop
+or cross ﬂow scavenging was unsuitable for these engines and the uniﬂow scavenging system was
+introduced. The air enters the engine cylinders through ports located at the lower part of the liner,
+when the piston is near the bottom dead center (BDC). After exhaust blowdown the incoming air
+expels the exhaust gas through the exhaust valve located on the cylinder head. The driving force of
+the scavenging process is the pressure diﬀerence between the scavenge receiver and the exhaust gas
+Energies 2019, 12, 1719; doi:10.3390/en12091719
+www.mdpi.com/journal/energies
+
+
+===== page 2 =====
+
+Energies 2019, 12, 1719
+2 of 20
+receiver. Inlet ports are usually angled, providing the incoming air with swirl to improve purging of
+the cylinder. A cross sectional view of a typical large uniﬂow scavenged marine diesel engine is shown
+in Figure 1.
+Figure 1. Cross sectional view of a uniﬂow scavenged marine diesel engine [1].
+Before CFD models became widely available the scavenging process was investigated in detail by
+experiments in scaled down engine models. Such works include visualization, pitot tube measurements,
+and hot wire experiments which can be found in [2–4]. The eﬀect of inlet port angle on scavenging
+eﬃciency was investigated in [5,6]. A review of the various models of the scavenging process can be
+found in [7,8].
+Over the past two decades computational cost has declined leading to increased popularity of CFD
+modeling. Sigurdson et al., performed a CFD analysis, on a 12-degree sector, including one scavenge port,
+of the MAN B&W 4T50 test engine (MAN B&W, Copenhagen, Denmark) [9]. Lamas et al. [10] investigated
+the scavenging process in the MAN B&W 7S50-MC engine (MAN B&W, Copenhagen, Denmark) through
+CFD simulations. Andersen et al. performed CFD investigation on full scale engines, examining the effect
+of engine load [11] and variation of in-cylinder swirl [12] on scavenging efficiency. The effect of inlet port
+depth on the swirling flow and scavenging process was investigated by [13]. The effect of piston covering
+half of the inlet ports on the in-cylinder swirling flow was examined by [14].
+As the bore to stroke ratio of marine engines increased, zonal models became preferable for
+accurate engine performance prediction. A three-zone scavenging submodel was originally introduced
+in [15]. Due to the introduction of aftertreatment technologies in marine diesel engines such as selective
+catalytic reduction (SCR) systems, accurate exhaust gas temperature prediction became more essential.
+Hence, the original three-zone scavenging model was updated using results from CFD simulations.
+The updated model can be used in conjunction with a zero-dimensional engine and SCR model, in
+order to investigate the transient response of the engine-SCR system.
+2. The Three-Zone Scavenging Model
+In the original model [15], the cylinder is divided in three zones namely, a pure air zone, a pure
+exhaust gas zone, and a mixing zone as presented in Figure 2.
+Within each zone the temperature is assumed uniform but diﬀers in the three zones. The pressure
+throughout the cylinder is uniform at each computational step. Every zone is treated as an open system
+where the ﬁrst law of thermodynamics may be applied.
+−p
+.
+V +
+X
+sf
+.
+Qsf +
+X
+j
+hj
+.mj = d
+dt(mu)
+(1)
+where p is gas pressure,
+.
+V is the rate of change of gas volume,
+.
+Q is the rate of change of heat, h is
+enthalpy,
+.m is rate of change of mass and u is internal energy of the gas. An important assumption
+
+
+===== page 3 =====
+
+Energies 2019, 12, 1719
+3 of 20
+of this three-zone model is that the mass exchange between the zones takes place only in two ways:
+scavenge air enters the mixing zone and burnt gas enters the mixing zone. Hence the rate of change of
+the mas for each zone is deﬁned as:
+.mI =
+.minp −
+.mI−II
+(2)
+.mII =
+.mI−II +
+.mIII−II
+(3)
+.mIII = −
+.mIII−II −
+.mexv
+(4)
+where
+.mI−II is the air mass ﬂow rate from zone I to zone II,
+.minp is the air mass ﬂow through inlet
+ports,
+.mIII−II is the mass ﬂow rate from zone III to zone II and
+.mexv is the mass ﬂow rate through the
+exhaust valve. The entrainment of air and exhaust gas in the mixing zone is speciﬁed by time varying
+mixing coeﬃcients. The air penetration coeﬃcient is deﬁned as:
+µa =
+.mI−II
+.minp
+(5)
+And the exhaust gas penetration coeﬃcient is deﬁned as:
+µg =
+.mIII−II
+.minp
+.
+(6)
+where
+.mIII−II is the air mass ﬂow rate from zone III to zone II. The postulated variation of the air
+penetration coeﬃcient is shown in Figure 3.
+Figure 2. Schematic representation of the three-zone model on a uniﬂow scavenged engine.
+0
+0.2
+0.4
+0.6
+0.8
+1
+0
+0.2
+0.4
+0.6
+0.8
+1
+Penetration Coefficients [-]
+Normalized scavenging time τ [-]
+μa
+μg
+Figure 3. Variation of µα and µg at the original model.
+
+
+===== page 4 =====
+
+Energies 2019, 12, 1719
+4 of 20
+Initially, µα = 1 since the air entering the engine cylinders is rapidly mixed with exhaust gases.
+As the exhaust gas in the lower part of the cylinder is displaced, the value of the coeﬃcient declines
+exponentially, as Equation (7) shows.
+µα = e−κτ(λτ + 1)
+(7)
+where κ is a model constant and τ is normalized scavenging time deﬁned as:
+τ =
+ϕ −ϕEBF
+ϕIPC −ϕEBF
+(8)
+where ϕ is crank angle, ϕEBF is the crank angle at end of backﬂow and ϕIPC is the crank angle at inlet
+port closing. The assumed variation of µg is divided in two phases and is also presented in Figure 3.
+Initially, µg = 0 and increases parabollicaly, resembling the entrainment of ambient ﬂuid into jets. In
+the second mixing phase, the gas penetration coeﬃcient decreases exponentially. The mathematical
+expression of µg is shown in Equation (9).
+µg =
+
+2 √τ,
+0 < τ < τg∗
+e−k(τ2)
+ξτ2 + µg
+
+τg∗
+,
+0 < τ2 < 1
+(9)
+where ξ and k are model parameters, τg∗is the time when the second mixing phase begins and τ2 is
+normalized scavenging time of the second mixing phase.
+3. Scope of Work
+In this paper, the three-zone scavenging model, originally presented in [15] and applicable to
+two-stroke uniﬂow scavenged marine diesel engines is updated. The model has been used for many
+years, in conjunction with a control volume, zero-dimensional engine simulation code, MOTHER
+(MOtor THERmodynamics) (see Chapter 3). A reliable scavenging model is essential for accurate
+exhaust gas temperature prediction in engine application. This has become even more important due
+to the recent applications of DeNOx systems such as SCR [16], exhaust gas recirculation (EGR) [17],
+and WaCoReG system [18].
+Available data concerning the scavenging process of two-stroke engines are scarce compared to
+four-stroke engines due to the large cost associated with large engine testing and the limited number
+of test facilities for large engines. To update the original zero-dimensional scavenging model, results
+from a CFD simulation of the scavenging process were used as baseline. The engine geometry used for
+this study is from a MAN 50 cm bore size two-stroke marine engine. The speciﬁcations of the engine
+are presented in Table 1.
+Table 1. Engine speciﬁcations.
+Engine Model
+MAN B&W 6S50ME
+Bore
+500
+mm
+Stroke
+2000
+mm
+No. of Cylinders
+6
+-
+PMCR
+7620
+kW
+NMCR
+115
+RPM
+Scavenging
+Uniﬂow
+Ports per cylinder
+30
+CFD results were produced for four steady state load points along a propeller curve namely 25%,
+50%, 75%, and 100%, for two diﬀerent cases. In the ﬁrst case inlet ports were fully uncovered by the
+piston and port angle varied from 0◦to 30◦by 10◦intervals. In the second case port angle was ﬁxed at
+
+
+===== page 5 =====
+
+Energies 2019, 12, 1719
+5 of 20
+20◦and a 5% and 10% covering of the inlet port area by the piston at BDC was investigated. Then, the
+mixing coeﬃcients of the three-zone model were revised using the results from the CFD simulations.
+4. The Zero-Dimensional Engine Simulation Code
+The scavenging model under consideration, is integrated in the NTUA in-house thermodynamic
+engine prediction code MOTHER. The code is based on the control volume principle. A number
+of basic engineering elements such as ﬂow receivers (cylinders, plenums), ﬂow controllers (valves,
+compressors, turbines), and mechanical elements (shafts, gearboxes, clutches and shaft loads) are
+available. A turbocharged engine can be modelled as several ﬂow receiver elements interconnected
+by ﬂow controller elements.
+Flow receivers are treated as open thermodynamic systems and
+the work, heat and mass transfer, which take place through their boundaries, are calculated by
+applying the conservation equations in appropriate form to each control volume. The resulting set
+of diﬀerential equations are numerically solved step-by-step for all volumes. MOTHER includes
+a variety of submodels for the simulation of engine processes such as combustion, heat transfer,
+friction, and scavenging. The MOTHER code has been used for many years in engine performance
+simulations [19–22].
+5. Implementation of the CFD Model
+To update the mixing coeﬃcients of the original three-zone model results from a more detailed
+2D CFD model were used.
+Only the scavenging process (not the combustion) was simulated.
+The simulation is carried out between 76–286 CA degrees, for one typical cylinder. The starting point
+of the simulation (76 crank angle degrees (CAD)) is well before the uncovering of inlet ports by the
+piston which takes place at 135 CAD. This was done in order to include the blowdown period in the
+simulation and be able to validate the CFD model against available pressure diagrams. Convective heat
+transfer in the cooled upper part of the cylinder and the cylinder head is modeled with the assumption
+of a constant wall temperature. Piston and lower cylinder liner part cooling was not taken into account.
+The turbulent ﬂow was simulated by the RANS (Reynolds averaged Navier Stokes) equations [23].
+Gas density was calculated using the ideal gas equation. The turbulent viscosity was modeled by
+the RNG k-ε model [24]. The case is solved in Fluent software as 2-D, axisymmetric with swirl.
+The bending of the exhaust pipe to enter the receiver is not taken into account and inlet ports are
+modeled as a continuous opening in the cylinder wall.
+Mesh generation was carried out in ICEM CFD software (v14.5) [25] (structured mesh). Only the
+cylinder, intake ports, and exhaust duct were meshed. Quad elements were employed in the mesh
+generation. The mesh movement was imposed to the valve and piston surfaces by means of the
+“in-cylinder” dynamic mesh facility existing in Fluent software [26]. Turbulent heat transport was
+modeled using Reynolds analogy. Gas components were computed by a species transport model.
+The number of elements varied from about 17,000 at the starting point of the simulation (76 degrees
+ATDC, about mid-stroke) to 30,000 at bottom dead center. Figure 4 shows a cross-section of the mesh
+at 76 CA degree and 180 CA degree.
+
+
+===== page 6 =====
+
+Energies 2019, 12, 1719
+6 of 20
+ 
+Figure 4. Computational mesh at 76 crank angle degrees (CAD)—180 CAD.
+5.1. Numerical Procedure
+The PISO (Pressure Implicit with Splitting of Operators) algorithm was chosen for pressure-velocity
+coupling [26]. A second order scheme was selected to discretize the continuity, momentum, energy
+and mass fraction equations. The time derivatives were discretized through a ﬁrst order fully implicit
+scheme with a constant time step corresponding to 0.1 degrees crank angle.
+5.2. Initial and Boundary Conditions—Validation
+The ﬂow through the inlet ports was assumed fully axisymmetric, with a radial and a tangential
+component (swirl). A pressure boundary condition was employed at engine inlet. A turbulence
+intensity of 5% was selected. The inlet air temperature and CO2 concentration were set at 313 K and
+0% respectively. A pressure boundary condition was employed at engine outlet. Initial conditions for
+the gas in the cylinder (76◦CA) are shown in Table 2. They were produced using the zero-dimensional,
+engine performance prediction code MOTHER [19]. The engine under consideration was modelled
+under steady conditions using the MOTHER software and validated against available measured data.
+After submodel calibration, the accuracy of MOTHER calculations against measured data is better
+than 3% over the whole operating range of an engine and it has been validated with over 50 engine
+types [27–29].
+Table 2. Initial conditions for the CFD model.
+Engine Load
+100%
+75%
+50%
+25%
+N [RPM]
+115.3
+105
+91.5
+73
+pcyl at 76◦CA [bar]
+14.8
+11.7
+8.81
+5.6
+Tcyl at 76◦CA [K]
+1239
+1186
+1163
+1020
+pscav [bar]
+3.90
+3.15
+2.20
+1.48
+pexh [bar]
+3.80
+3.08
+2.15
+1.45
+CO2 mass fraction
+0.133
+0.129
+0.129
+0.115
+H2O mass fraction
+0.049
+0.0475
+0.0475
+0.0423
+Air mass fraction
+0.358
+0.376
+0.376
+0.444
+
+
+===== page 7 =====
+
+Energies 2019, 12, 1719
+7 of 20
+The comparison of engine indicator diagrams with the average pressure computed by the CFD
+model is a good overall check of the CFD model’s accuracy. In this study the CFD computed pressure
+diagram compares well with the validated 0-D model, for the engine cycle part of the CFD computation
+(76–286 degrees CA) for all four operation points (25–100% load, along the propeller curve). The ﬂow
+through the cylinder is driven by a pressure diﬀerence between the scavenge receiver and the exhaust
+receiver, known as the scavenging gradient or ∆p across engine. Higher dimension CFD models with
+advanced turbulence submodels may require a certain degree of correction of scavenging gradient
+by modiﬁcation of the mass ﬂow-rate [30]. In the present case the exhaust receiver pressure as well
+as the inlet pressure are given as boundary conditions and thus the mass ﬂow-rate is computed.
+Figure 5 shows the eﬀect of the scavenging gradient on some important scavenging parameters, namely,
+trapping eﬃciency (ηtr), charging eﬃciency (ηch), scavenging eﬃciency (ηsc), massﬂow of air entering
+the cylinders (
+.minp), and the mass of delivered air retained (mair,ret). The deﬁnition of each eﬃciency is
+given below:
+ηtr = mair,ret
+mair,del
+(10)
+ηch = mair,ret
+Vref·ρinl
+(11)
+ηsc = mair,ret
+mtr
+(12)
+where mair,del is the mass of delivered air, Vref is the reference cylinder volume, ρinl is the density at
+the engine inlet and mtr is the mass of the total trapped cylinder charge.
+As shown in Figure 5 the CFD model is sensitive to the scavenging gradient and the mass ﬂow-rate
+is computed correctly without any corrections needed. The trapping eﬃciency and the air mass ﬂow
+rate through the inlet ports are the most aﬀected quantities by a change in ∆p. Thus, the selection of
+the simplest possible CFD conﬁguration (2-D axisymmetric with swirl) leads to a good agreement with
+the 0-D mass ﬂow-rate results, succeeding in an eﬃcient hybrid computation.
+ 
+Figure 5. Eﬀect of ∆p on scavenging eﬃciency and mass of air entering the cylinder (100% load).
+As regards validation of the ﬂow and temperature ﬁeld, the amount of validation data for a CFD
+model of a full size operating two-stroke marine engine is limited because of the high cost, size, and
+manpower required for such experiments [30]. Nevertheless, existing data from similar engines have
+been employed for validation, with the necessary adaptations made according to the similarity laws.
+As regards the validation process for the ﬂow ﬁeld, Figure 6 shows a comparison with literature data
+on steady state, cold ﬂow measurements with Particle Image Velocimetry on an engine cylinder with
+D = 190 mm and swirl number Sm = 0.33 [31]. The measurements are presented in [31] as axial and
+tangential (swirl) velocity components Vz and Vθ respectively as functions of radius, normalized
+
+
+===== page 8 =====
+
+Energies 2019, 12, 1719
+8 of 20
+with the bulk ﬂow velocity, Wb, for various axial positions. For comparison, Figure 6 presents the
+CFD model predictions for the normalized Vz and Vθ components at 25% load, 195 degrees CA, at
+the same normalized axial positions. Only one measured axial position is inserted in the graph for
+comparison. The computed variation of the tangential velocity component with cylinder radius have a
+shape similar to a Lamb–Oseen vortex, for z/D < 2 (z = 0 corresponds to the upper end level of intake
+ports). The vortex core is seen as a sharp linear increase from r = 0. The vortex then has a smooth
+transition to a curve proportional to 1/r for larger values of r [32]. Overall, the CFD computations agree
+with the published experimental results on similar engines [31,33].
+Figure 6. The mean tangential velocity component Vθ and the mean axial velocity component Vz at
+various axial distances from the outlet compared with PIV measurement [31].
+5.3. Calculation of Zone Masses Based on CFD Results
+The CFD model employed a species transport equation, which calculated a passive scalar, directly
+correlated to the CO2 mass concentration in the cylinder charge. Computational cells with the
+highest CO2 mass concentration are allocated to zone III and the respective cells with zero CO2 mass
+concentration are allocated to zone I. The remaining volume in the cylinder corresponds to zone II.
+Volumes were subsequently converted to masses by employing the respective densities for air and
+exhaust gas. This procedure was performed at a 5 crank angle degree interval starting from 135 CA
+degrees (beginning of scavenging) until 225 CA degrees (end of scavenging). The mixing coeﬃcients
+of the three-zone model were then revised so that results of the 0-D model would be close to results
+from CFD simulations.
+An example of the CO2 mass fraction evolution during scavenging is shown in Figure 7.
+The resulting evolution of masses for this case is shown in Figure 8.
+Initially, the cylinder is
+ﬁlled with exhaust gas. As scavenging commences, zone III continuously decreases in size, since a part
+of the exhaust gas leaves the cylinder through the exhaust valve and another part is transferred to the
+mixing zone. The mixing zone increases rapidly in the beginning of scavenging, since it receives fresh
+air from the air zone and exhaust gas from the exhaust gas zone. However, when the exhaust gas zone
+disappears, the mixing zone starts to decrease since now a part of it is escaping the cylinder through
+the exhaust valve. The air zone increases slowly at ﬁrst, since most of the incoming air is mixed with
+exhaust gases, but increases faster after 180 CAD and eventually becomes larger than the mixing zone.
+
+
+===== page 9 =====
+
+Energies 2019, 12, 1719
+9 of 20
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+140 
+CAD 
+150 
+CAD 
+160 
+CAD 
+170 
+CAD 
+180 
+CAD 
+190 
+CAD 
+200 
+CAD 
+210 
+CAD 
+220 
+CAD 
+CO2 mass 
+fraction [%] 
+Figure 7. CO2 mass fraction ﬁeld at 10◦intervals between 140–220 CAD (100% load, 10◦port angle).
+0
+0.2
+0.4
+0.6
+0.8
+1
+1.2
+130
+150
+170
+190
+210
+230
+Mass [kg]
+Crank Angle [deg]
+M1
+M2
+M3
+Figure 8. Evolution of the mass of each zone as predicted by the CFD model.
+6. CFD Results
+Results from the 2D CFD model were employed to enhance understanding of the scavenging
+process and update the three-zone model. The scavenging process during the time the inlet ports remain
+open, can be described by two processes: mixing of incoming air with exhaust gas and displacement of
+exhaust gas by the incoming air. The sources of mixing are:
+•
+The jet impingement of air into the cylinder through the inlet ports
+•
+Diﬀusion between exhaust gas and air at the interface between the two zones
+•
+Flow separation at the inlet port’s edges and formation of recirculation zones.
+In this section, the eﬀect of engine load, inlet port angle, and inlet port covering on scavenging
+will be presented.
+6.1. Eﬀect of Engine Load
+Four load points that lie on a typical propeller curve passing from the MCR (maximum continuous
+rating) point were investigated. The propeller demand law obeys the following relation between
+engine speed and produced power:
+P = c·Nβ
+(13)
+where P is engine power, N is engine speed, c is the propeller law coeﬃcient and β usually lies between
+3 and 4. Engine load inﬂuences the scavenging process in two ways. At increased load, the engine
+speed increases which leads to a reduced time that the inlet ports remain open. This is shown in
+Table 3, where scavenging time is normalized with reference to the scavenging time at 25% load.
+
+
+===== page 10 =====
+
+Energies 2019, 12, 1719
+10 of 20
+It is observed that at 50% load scavenging time is reduced by 20%, at 75% it decreases at 70% and
+will further decrease at 63% when reaching 100% load. The second load dependent factor aﬀecting
+scavenging is boost pressure which increases with increased engine load.
+Table 3. Engine operating conditions at diﬀerent load points.
+Engine Load
+100%
+75%
+50%
+25%
+N [RPM]
+115.3
+105
+91.5
+73
+P [kW]
+7620
+5710
+3800
+1900
+pscav [bar]
+3.90
+3.15
+2.20
+1.48
+pexh [bar]
+3.80
+3.08
+2.15
+1.45
+∆p [bar]
+0.1
+0.07
+0.05
+0.03
+ρscav [kg/m3]
+4.34
+3.54
+2.47
+1.66
+Scavenging time with reference to 25% load
+0.63
+0.7
+0.8
+1
+Since, scavenge temperature remains relatively invariable, due to the presence of the scavenge air
+cooler, increased scavenge pressure leads to increased air density. According to [11] mixing of air with
+exhaust gas increases with increased engine load due to the increased diﬀerence in density between
+the two gases. This is also conﬁrmed in Figure 9 for two CA instances, 175 and 210 CAD.
+In both cases mixing between air and exhaust gas is more intense for higher engine load (larger
+green area in Figure 9) and air manages to displace a smaller amount of exhaust gas (blue area ends
+at a lower axial position). A recirculation zone is formed at the cylinder wall above the scavenge
+ports, where pockets of exhaust gas are trapped between zones of fresh air. These pockets increase in
+size with increasing engine load, thus more exhaust gas is mixed with the incoming fresh air with
+increasing engine load in this conﬁguration.
+175 CAD 
+210 CAD 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+25% 
+Load 
+50% 
+Load 
+75% 
+Load 
+100% 
+Load 
+25% 
+Load 
+50% 
+Load 
+75% 
+Load 
+100% 
+Load 
+CO2 mass 
+fraction [%] 
+Figure 9. CO2 mass fraction ﬁeld at 175 and 210 CAD for the four available engine loads (θ = 20◦).
+6.2. Eﬀect of Inlet Port Angle
+Inlet ports are inclined with respect to the local radius, in order to induce a tangential component
+to the ﬂow entering the engine cylinders. This creates turbulence which is beneﬁcial for the mixing of
+fuel with scavenge air. The swirl could also reduce the recirculation zones that are formed near the
+inlet ports due to ﬂow separation. Moreover, the cold scavenge air cools the cylinder liner and the
+exhaust valve. Increased in-cylinder swirl increases the tangential velocity at the cylinder liner and as
+a result increases the convective heat transfer coeﬃcient.
+Four port inclination angles were investigated: θ = 0◦, 10◦, 30◦, and 20◦which is the industry
+standard. The geometric swirl number Ωwas used to quantify the port induced swirl [12].
+
+
+===== page 11 =====
+
+Energies 2019, 12, 1719
+11 of 20
+Ω=
+Acyl
+ninpAinp
+tan(θ)
+(14)
+where Acyl is the cross-sectional area of the cylinder, Ainp is the area of one scavenge port and ninp is
+the number of scavenge ports. Visualization for 25% engine load and various port angles is shown
+in Figure 10. As expected, for θ = 0◦, a jet-like ﬂow develops, which at 175 CAD (40 CAD after the
+beginning of scavenging) has reached the top of the cylinder. The jet is surrounded by a mixing zone
+located near the cylinder liner wall. As the port angle and induced swirl increases, the fresh air front
+moves from the cylinder axis towards the liner walls forming a V-shaped air front.
+175 CAD 
+210 CAD 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+θ = 0° θ = 10° θ = 20° θ = 30° θ = 0° θ = 10° θ = 20° θ = 30° 
+CO2 mass 
+fraction [%] 
+Figure 10. CO2 mass fraction ﬁeld at 175 and 210 CAD for the four investigated port angles (25% load).
+As far as mixing is concerned, it is observed that larger values of port angle favour the mixing
+of air with exhaust gas (air penetration to the mixing zone) but hinder the penetration of exhaust
+gas to the mixing zone. This is in accordance with the ﬁndings of [12]. This is also veriﬁed by the
+masses calculated by the CFD model. As the port angle increases the mass in zone I increases slower
+(see Figure 11), since it loses more air to the mixing zone, while the zone III mass decreases slower,
+since less exhaust gas is transferred to the mixing zone.
+g
+g
+ 
+Figure 11. Evolution of mass of air zone and exhaust gas zone for various port angles at 50% load.
+6.3. Eﬀect of Inlet Port Covering in Part by the Piston Crown
+The covering of the inlet ports by the piston results in an increase of the velocity of the air entering
+the cylinder. As a result, the jet-like nature of incoming ﬂow is enhanced. This results in the formation
+
+
+===== page 12 =====
+
+Energies 2019, 12, 1719
+12 of 20
+of exhaust gas recirculation zones at the sharp edges of the inlet ports, where pockets of exhaust gas
+are trapped within fresh air. Hence, mixing of air with exhaust gas is increased due to port covering.
+On the contrary, increased port covering does not favour the entrainment of exhaust gas to the
+mixing zone. In Figure 12, at 210 CAD the exhaust gas zone (red zone) is slightly larger for increased
+inlet port covering. This is seen also in Figure 13 where the evolution of zones I and III masses is
+presented for the 25% load case and variable inlet port covering. Zone I increases more slowly when
+inlet ports are partly covered by the piston due to increased entrainment of air to the mixing zone.
+On the other hand, the mass of zone III decreases at a slower rate when inlet ports are partly covered
+since in this case mixing is retarded.
+175 CAD 
+210 CAD 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+C = 0 C = 0.05 C = 0.1 C = 0 C = 0.05C = 0.1 CO2 mass fraction [%] 
+Figure 12. CO2 mass fraction ﬁeld at 175 and 210 CAD for the three investigated inlet port coverings
+(25% engine load and 20◦port angle).
+Figure 13. Evolution of mass of air zone and exhaust gas zone for various port coverings at 25% load.
+As Figures 12 and 13 show, no notable diﬀerences between the 5% and 10% covering can be
+identiﬁed for the 25% load case.
+7. The Updated Three-Zone Scavenging Model
+In this section, the expressions for the evolution of the air and gas penetration coeﬃcient for the
+two investigated cases will be presented. The case of varying port angle will be designated as Case I.
+The case of varying inlet port covering by the piston will be designated as Case II.
+
+
+===== page 13 =====
+
+Energies 2019, 12, 1719
+13 of 20
+7.1. Air Penetration Coeﬃcient
+In the three-zone model, it is assumed that scavenging happens in two phases. In the ﬁrst
+phase, when scavenge air rushes in engine cylinders, air is rapidly mixed with exhaust gases and the
+mixing mechanism is dominant. Hence, during the ﬁrst phase the air penetration coeﬃcient, µα has a
+large value which decreases slowly. During the second phase, displacement becomes the dominant
+mechanism of scavenging and µα decreases exponentially. The mathematical expression of the air
+penetration coeﬃcient is shown below:
+µα =
+
+aτ2 + b,
+0 < τ < τ∗
+a
+µα(τ∗
+a) exp
+
+−ln
+
+µα(τ∗a)
+d
+
+(τ1)
+
+,
+0 < τ1 < 1
+(15)
+where τ1 is normalized scavenging time for the second phase of mixing of air, deﬁned as:
+τ1 =
+ϕ −ϕEFP
+ϕIPC −ϕEFP
+(16)
+Also, a, b, and d are model parameters and τ∗
+a. is the time where second mixing phase begins.
+The evolution of the air penetration coeﬃcient as a function of normalized scavenging time τ for
+diﬀerent engine load points is shown in Figure 14.
+0
+0.2
+0.4
+0.6
+0.8
+1
+0
+0.2
+0.4
+0.6
+0.8
+1
+Air Penetration Coef. μα [-]
+Normalized scavenging time τ [-]
+100%
+75%
+50%
+25%
+Figure 14. Air penetration coeﬃcient evolution for diﬀerent engine load points (θ = 20◦and C = 0).
+The mathematical expression of each model parameter is given below. The expressions were
+produced using non-linear regression ﬁtting. The coeﬃcients of each equation were produced using
+iterative least square estimations.
+7.1.1. Parameter a
+This parameter, expresses the rate of decrease of mixing coeﬃcient during the ﬁrst phase of
+scavenging. It increases with increased engine load and port covering and decreases with increased
+port angle. This means that during the ﬁrst phase of scavenging, mixing decreases more rapidly with
+increased port angle and slower for increased engine load and port covering.
+(I) a =
+
+0.03 −0.37
+
+N
+Nmcr
+−2.2,
+θ ∈[10, 30]
+0,
+θ ∈[0, 10]
+(17)
+(II) a = 1.1 −1.42
+ N
+Nmcr
+−0.8
++ 0.5·C0.2
+(18)
+
+
+===== page 14 =====
+
+Energies 2019, 12, 1719
+14 of 20
+7.1.2. Parameter b
+Model parameter b, expresses the initial value of the mixing coeﬃcient during IPO. This parameter
+was found to be increasing with increasing with engine load, port angle and port covering.
+(I) b = 0.8 −0.05
+ N
+Nmcr
+−1.5
++ 0.2·Ω0.8
+(19)
+(II) b = 2.8 −1.9
+ N
+Nmcr
+−0.1
++ 0.5·C
+(20)
+7.1.3. Parameter d
+This parameter, expresses how steep the exponential decline of the air penetration coeﬃcient is. It
+was observed to increase with engine load and port covering and decrease with increased inlet port
+angle. This means that with increased engine load and port covering, µα decreases slower, while as
+inlet port angle increases µα decreases more rapidly.
+(I) d = 0.28 + 0.035
+ N
+Nmcr
+2.5
+−0.29·Ω0.35
+(21)
+(II) d = 0.1
+ N
+Nmcr
+2.2
++ 0.16·C0.1
+(22)
+7.1.4. Parameter τ∗
+a
+Parameter τ∗
+a expresses the time instant when the second mixing phase commences. This parameter
+was found to increase with port angle, and be independent of engine load or inlet port covering.
+(I) τ∗
+a = 0.27 + 0.3·Ω0.7
+(23)
+(II) τ∗
+a = 0.42, ∀C
+(24)
+7.2. Gas Penetration Coeﬃcient
+The model assumes that the entrainment of exhaust gases to the mixing zone is divided in two
+phases. In the ﬁrst phase, the evolution of mixing resembles the one of entrainment of ambient ﬂuid
+into jets and increases parabolically. The initial phase of increasing mixing will be terminated due to jet
+interaction and conﬁnement as well as due to the displacement of the exhaust gas. In the second phase,
+mixing of exhaust gas decreases and µg drops exponentially. The mathematical expression of µg is
+shown in Equation (25), where σ and kg are model parameters and τ2. is normalized scavenging time
+of the second mixing phase.
+µg =
+
+σ
+q τ
+τ∗g ,
+0 < τ < τ∗
+g
+e−kg(τ2)µg
+
+τ∗
+g
+
+(1 + τ2) ,
+0 < τ2 < 1
+(25)
+The duration of the ﬁrst mixing phase τ∗
+g. was estimated at 15–20% of total scavenging time hence,
+τ∗
+g = 0.17. . The evolution of the gas penetration coeﬃcient as a function of normalized scavenging
+time τ for diﬀerent engine load points is shown in Figure 15.
+
+
+===== page 15 =====
+
+Energies 2019, 12, 1719
+15 of 20
+0
+0.2
+0.4
+0.6
+0.8
+1
+0
+0.2
+0.4
+0.6
+0.8
+1
+Gas Penetration Coef. μg [-]
+Normalized scavenging time τ [-]
+100%
+75%
+50%
+25%
+Figure 15. Gas penetration coeﬃcient evolution for diﬀerent engine load points (θ = 20◦and C = 0).
+In reality, the transition from one mixing phase to the next, that takes place in τ∗
+g would be quite
+smoother. However, the presented expression was preferred since it provided a better prediction of the
+evolution of each mass.
+7.2.1. Parameter σ
+This parameter expresses the peak value of the gas penetration coeﬃcient during the ﬁrst phase
+of mixing. Increased values of σ indicate increased mixing of exhaust gas. Since mixing increases with
+load, σ also increases with load. On the other hand, for increased inlet port angle, the recirculation
+zones that are formed act as a barrier towards the entrainment of exhaust gas to the mixing zone [9].
+As a result, σ decreases with increased port angle. As far as port covering by the piston is concerned, σ
+decreases with port covering, since port covering was found to hinder the entrainment of exhaust gas
+to the mixing zone.
+(I) σ = 0.75 + 0.4
+ N
+Nmcr
+5
+−0.7·Ω
+(26)
+(II) σ = 0.45 + 0.4
+ N
+Nmcr
+5
+−0.6·C0.4
+(27)
+7.2.2. Parameter kg
+Model parameter kg expresses how rapidly the entrainment of exhaust gas to the mixing zone
+declines. Increased values of kg indicate decreased mixing. This parameter increased with engine load
+and port angle and decreased with inlet port covering.
+(I) kg = 6.5 + 0.5
+ N
+Nmcr
+3
++ 5·Ω0.5
+(28)
+(II) kg = 10.5 +
+ N
+Nmcr
+4
++ 2·C0.6
+(29)
+8. Validation of the Updated Three-Zone Model Against CFD Results
+The revised zero-dimensional three-zone model was validated against results from CFD
+simulations.
+The predicted masses at each zone using the updated 0-D model were compared
+to the masses predicted by the 2-D CFD model. Validation results are presented in Figures 16 and 17
+where CFD results are presented with solid line and results of the updated 0-D model are presented
+with dashed line. In both cases, the updated model manages to accurately predict the qualitative
+evolution of scavenging, as predicted by the CFD model. In both presented cases the updated 0-D
+
+
+===== page 16 =====
+
+Energies 2019, 12, 1719
+16 of 20
+model slightly overestimates the mass of the air zone and predicts the dissipation of the exhaust gas
+zone slightly faster than the CFD model.
+ 
+Figure 16. Evolution of mass of each zone as predicted by the original 0-D model, the updated 0-D
+model and the CFD model for the 75% load, θ = 20◦, C = 0.1 case.
+Figure 17. Evolution of mass of each zone as predicted by the original 0-D model, the updated 0-D
+model and the CFD model for the 25% load, θ = 30◦, C = 0 case.
+Results of the original 0-D model are also included in the graphs (dotted line) for comparison.
+In both cases, the original model signiﬁcantly overestimates the evolution of zone I. This means that the
+original model predicts that less amount of air is mixed with exhaust gases, than the one predicted by
+the CFD model. Moreover, the original model predicts that the dissipation of zone III takes place about
+20 CAD earlier than the CFD. As far as the mixing zone is concerned, results from the original model are
+close to the ones from CFD simulations until the dissipation of zone III takes place. Once this happens,
+the mixing zone begins to reduce rapidly and the original 0-D model results deviate signiﬁcantly from
+CFD simulation results. The amount of gas that remains in the engine cylinder at the end of scavenging
+(235 CAD) is very close in both cases.
+
+
+===== page 17 =====
+
+Energies 2019, 12, 1719
+17 of 20
+9. Conclusions
+An updated zero-dimensional three-zone model for the simulation of the scavenging process of
+uniﬂow scavenged two-stroke diesel engines was presented. In order to gain insight on the scavenging
+process of the engine and update the model, a CFD model of a large two-stroke marine diesel engine
+was used. The updated model, takes into account the eﬀect of engine load, port angle, and inlet
+port covering on the scavenging process. Each of the three zones of the model (air zone, mixing
+zone and exhaust gas zone), is considered as a control volume. The entrainment of air and exhaust
+gas in the mixing zone is speciﬁed through time varying mixing coeﬃcients. The inﬂuence of the
+diﬀerent scavenging mechanisms was implicitly taken into account by considering the scavenging
+process to constitute two diﬀerent phases. CFD simulations showed that mixing of air with exhaust
+gas increased with increased engine load. Moreover, increasing inlet port-induced swirl and inlet port
+covering were found to increase the entrainment of air to the mixing zone but decrease the entrainment
+of exhaust gases to the mixing zone. These results were compatible with the ﬁndings of previous
+works such as [9,11,12]. The updated three-zone model can be used in conjunction with an engine
+performance prediction code to simulate the performance and especially the transient exhaust gas
+temperature of a modern uniﬂow scavenged two stroke large marine diesel engine. The described
+updating procedure enabled a higher accuracy of the 0-D model, without increasing the computational
+time and the complexity, by taking into account the gas ﬂow in the cylinder through detailed CFD
+simulations. The future objective of this work is to be able to investigate with better accuracy the
+transient response of such a marine engine with a coupled SCR aftertreatment system when driving a
+propeller of a ship in heavy weather.
+Author Contributions: Conceptualization: N.P.K. and A.S.; Data curation: M.I.F., A.P., and O.Z.; Formal analysis:
+M.I.F., A.P., O.Z., and A.-M.S.; Funding acquisition: N.P.K.; Investigation: M.I.F., A.P., A.S., O.Z., and A.-M.S.;
+Methodology: M.I.F., A.P., A.S., and O.Z.; Project administration: N.P.K. and A.S.; Resources: N.P.K. and A.S.;
+Software: M.I.F., A.P., O.Z., and A.-M.S.; Supervision: N.P.K. and A.S.; Validation: A.P. and O.Z.; Visualization:
+O.Z. and A.-M.S.; Writing—original draft: M.I.F.; Writing—review and editing: M.I.F., N.P.K. and A.S.
+Funding: This work has received part funding from the European Union’s Horizon 2020 research and innovation
+program under grant agreement No 634135. The doctoral studies of the ﬁrst author (MIF) are also supported
+through funding from the NTUA Special Account for Research Grants.
+Conﬂicts of Interest: The authors declare that there is no conﬂict of interest.
+Nomenclature
+A
+Area, m2
+a
+Air penetration coeﬃcientarameter
+BDC
+Bottom de center
+b
+Air penetration coeﬃcientarameter
+C
+Percentage of the inlet port area covered by the piston own
+CAD
+Crank ang degrees
+c
+Propeller law coeﬃcient
+d
+Air penetration coeﬃcientarameter
+EGR
+Exhaust gas recirculation
+h
+Speciﬁc enthalpy, J/kg
+IPO
+Inlet port oning
+kg
+Gas penetration coeﬃcient parameter
+.m
+Mass ﬂow rate, kg/sec
+MCR
+Maximum continuous rating, kW
+N
+Engine rotational speed, RPM
+ninp
+Number of inlet ports
+p
+Pressure, r
+
+
+===== page 18 =====
+
+Energies 2019, 12, 1719
+18 of 20
+P
+Power, kW
+Q
+Heat ﬂow, J
+Sm
+Swirl number
+SCR
+Selective catalytic reduction
+T
+Temperature, K
+TDC
+Top dead center
+u
+Speciﬁc energy, J/kg
+V
+Volume, m3
+Vθ
+Tangential velocity component, m/s
+Vz
+Axial velocity component, m/s
+Wb
+Mean velocity at the axial position, m/s
+Greek Characters
+β
+Propeller law exponent
+ηch
+Charging eﬃciency
+ηsc
+Scavenging eﬃciency
+ηtr
+Trapping eﬃciency
+θ
+Inlet port angle, ◦
+κ
+Constant of the original three-zone model
+λ
+Constant of the original three-zone model
+µ
+Mixing coeﬃcient
+ξ
+Constant of the original three-zone model
+ρ
+Density, kg/m3
+σ
+Gas penetration coeﬃcient parameter
+τ
+Dimensionless scavenging time
+τ1
+Normalized scavenging time for second phase of mixing of air
+τ2
+Normalized scavenging time for second phase of mixing of burnt gas
+τ∗a
+End of ﬁrst mixing phase for the air
+τ∗g
+End of ﬁrst mixing phase for the exhaust gas
+ϕ
+Crank angle, ◦
+Ω
+Geometric swirl numr
+Subscripts
+a
+Air
+air, ret
+Airetained
+air, del
+Air delivered
+tr
+Trapped cylinder charge
+cyl
+Cylinder
+EBF
+End of backﬂow
+EFP
+End of ﬁrst mixing phase
+exh
+Exhst receiver
+exv
+Exhaust valve
+g
+Exhaust Gas
+IPC
+Inlet port closing
+j
+Diﬀerent entries to the control volume
+MCR
+Maximum continuous rating, kW
+scav
+Scavenge receiver
+sf
+Surfaces with diﬀerent rates of heat traner
+inp
+Inleports
+References
+1.
+MAN Diesel & Turbo. MAN B&W S50MC-C8.2 Tier II Project Guide; MAN Diesel & Turbo: Copenhagen,
+Denmark, 2014.
+2.
+Ferro, A. Investigation by means of models into the scavenging of the two-stroke internal combustion engines.
+Eng. Dig. 1958, 19, 512–522.
+
+
+===== page 19 =====
+
+Energies 2019, 12, 1719
+19 of 20
+3.
+Percival, W.H. Method of Scavenging Analysis for 2-Stroke-Cycle Diesel Cylinders. SAE Trans. 1995, 63,
+737–751. [CrossRef]
+4.
+Sher, E.; Hossain, I.; Zhang, Q.; Winterbone, D. Calculations and measurements in the cylinder of a two-stroke
+uniﬂow-scavenged engine under steady ﬂow conditions. Exp. Therm. Fluid Sci. 1991, 4, 418–431. [CrossRef]
+5.
+Litke, B. The inﬂuence of inlet angles in inlet ports on the scavenging process in two-stroke uniﬂow-scavenged
+engine. Trans. Built Environ. 1999, 45, 247–252.
+6.
+Wang, X.; Ma, J.; Zhao, H. Analysis of scavenge port designs and exhaust valve proﬁles on the in-cylinder
+ﬂow and scavenging performance in a two-stroke boosted uniﬂow scavenged direct injection gasoline engine.
+Int. J. Engine Res. 2017, 19, 509–527. [CrossRef]
+7.
+Sher, E. Scavenging the two-stroke engine. Prog. Energy Combust. Sci. 1990, 16, 95–124. [CrossRef]
+8.
+Heywood, J.B.; Sher, E. Two-Stroke Cycle Engine: It’s Development, Operation and Design; Taylor & Francis
+Group: New York, NY, USA, 1999.
+9.
+Sigurdsson, E.; Ingvorsen, K.; Jensen, M.; Mayer, S.; Matlok, S.; Walther, J. Numerical analysis of the scavenge
+ﬂow and convective heat transfer in large two-stroke marine diesel engines. Appl. Energy 2014, 123, 37–46.
+[CrossRef]
+10.
+Lamas, M.; Vidal, C.G.R. Computational Fluid Dynamics Analysis of the Scavenging Process in the MAN
+B&W 7S50MC Two-Stroke Marine Diesel Engine. J. Ship Res. 2012, 56, 154–161.
+11.
+Andersen, F.H.; Mayer, S. Parametric Study of the Scavenging Process in Marine Two-Stroke Diesel Engines.
+In Proceedings of the ASME Internal Combustion Engine Division Fall Technical Conference, Houston, TX,
+USA, 8–11 November 2015.
+12.
+Andersen, F.H.; Hult, J.; Nogenmyr, K.-J.; Mayer, S. CFD Analysis of the Scavenging Process in Marine
+Two-Stroke Diesel Engines. In Proceedings of the ASME Internal Combustion Engine Division Fall Technical
+Conference, Columbus, IN, USA, 19–22 October 2014.
+13.
+Sigurdsson, E. Scavenging Flow in a Two-Stroke Diesel Engine. Master’s Thesis, Technical University of
+Denmark, Copenhagen, Denmark, 2011.
+14.
+Obeidat, A.; Schnipper, T.; Ingvorsen, K.M.; Haider, S.; Meyer, K.E.; Mayer, S.; Walther, J.H. Large eddy
+simulations of the inﬂuence of piston position on the swirling ﬂow in a model two-stroke diesel engine. Int. J.
+Numer. Methods Heat Fluid Flow 2014, 24, 325–341. [CrossRef]
+15.
+Kyrtatos, N.P.; Koumbarelis, I. A three-Zone scavenging model for two-stroke uniﬂow engines. J. Eng. Gas
+Turbines Power 1988, 110, 531–537. [CrossRef]
+16.
+Foteinos, M.; Konstantinidis, S.; Kyrtatos, N.; Busk, K.V. Simulation of the transient thermal response of a
+high pressure SCR aftertreatment system for a Tier III two-stroke marine diesel engine ASME. J. Eng. Gas
+Turbines Power 2019, 141. [CrossRef]
+17.
+Llamas, X.; Eriksson, L. Control-oriented modeling of two-stroke diesel engines with EGR for marine
+applications. Proc. Inst. Mech. Eng. Part M J. Eng. Marit. Environ. 2018, 1–24. [CrossRef]
+18.
+Chybowski, L.; Laskowski, R.; Gawdzi´nska, K. An overview of systems supplying water into the combustion
+chamber of diesel engines to decrease the amount of nitrogen oxides in exhaust gas. J. Mar. Sci. Technol.
+2015, 20, 393–405. [CrossRef]
+19.
+Kyrtatos, N.; Koumbarelis, I. Performance prediction of next generation slow speed diesel engines during
+ship manoeuvres. Trans. Inst. Mar. Eng. 1994, 106, 1–26.
+20.
+Livanos, A.; Theotokatos, G.; Kyrtatos, N. Simulation of large marine two-stroke diesel engine operation
+during ﬁre in the scavenging air receiver. J. Mar. Eng. Technol. 2003, A3, 9–16. [CrossRef]
+21.
+Theotokatos, G.; Kyrtatos, N.P. Diesel engine transient operation with turbocharger compressor surging.
+In Proceedings of the SAE 2001 World Congress, Detroit, MI, USA, 5–8 March 2001.
+22.
+Kyrtatos, N.; Theotokatos, G.; Xiros, N.; Marec, K.; Duge, R. Transient operation of large-bore two-stroke
+marine diesel engine powerplants: measurements and simulations. In Proceedings of the 23rd CIMAC
+World Congress, Hamburg, Germany, 7–10 May 2001.
+23.
+Anderson, J.D. Computational Fluid Dynamics; McGraw-Hill: New York, NY, USA, 1995.
+24.
+Ferziger, J.H.; Peric, M. Computarional Methods for Fluid Dynamics; Springer: New York, NY, USA, 2002.
+25.
+ANSYS, Inc. ANSYS Fluent Theory Guide (Release 15.0); ANSYS, Inc.: Canonsburg, PA, USA, 2013.
+26.
+ANSYS, Inc. ANSYS ICEM CFD User’s Manual (Release 17.0); ANSYS Inc.: Canonsburg, PA, USA, 2016.
+
+
+===== page 20 =====
+
+Energies 2019, 12, 1719
+20 of 20
+27.
+Foteinos, M.I.; Tzanos, E.I.; Kyrtatos, N.P. Ship Hull Fouling Estimation Using Shipboard Measurements,
+Models for Resistance Components, and Shaft Torque Calculation Using Engine Model. J. Ship Res. 2017, 61,
+64–74. [CrossRef]
+28.
+Kyrtatos, N.; Tzanos, E.; Coustas, J.; Vastarouhas, D.; Rizos, E. Shipboard engine performance assessment by
+comparing actual measured data to nominal values produced by detailed engine simulations. In Proceedings
+of the CIMAC Congress, Bregen, Norway, 14–17 June 2010.
+29.
+Kyrtatos, N.; Glaros, S.; Tzanos, E.; Hatzigrigoris, S.; Dalmyras, F. Systematic evaluation of performance of
+VLCC engine, comparing service monitored data and thermodynamic model predictions. In Proceedings of
+the 27th CIMAC World Congress on Combustion Engine Technology, Shanghai, China, 13–16 May 2013.
+30.
+Andersen, F.H. Integrated Analysis of the Scavenging Process in Marine Two-Stroke Diesel Engines; DTU Mechanical
+Engineering: Copenhagen, Denmark, 2015.
+31.
+Ingvorsen, K.M.; Meyer, K.E.; Schnipper, T.; Jens, H.; Mayer, S. Swirling ﬂow in model of large two-stroke
+diesel engine. In Proceedings of the 16th International Symposium on Applications of Laser Techniques to
+Fluid Mechanics, Lisbon, Portugal, 9–12 July 2012.
+32.
+Luca-Negro, O.; Doherty, T.O. Vortex breakdown: A review. Prog. Energy Combust. Sci. 2001, 27, 431–481.
+[CrossRef]
+33.
+Haider, S.; Schnipper, T.; Obeidat, A.; Meyer, K.E.; Okulov, V.L.; Mayer, S.; Walther, J.H. PIV study of the
+eﬀect of piston position on the in-cylinder swirling ﬂow during the scavenging process in large two-stroke
+marine diesel engines. J. Mar. Sci. Technol. 2013, 18, 133–143. [CrossRef]
+© 2019 by the authors. Licensee MDPI, Basel, Switzerland. This article is an open access
+article distributed under the terms and conditions of the Creative Commons Attribution
+(CC BY) license (http://creativecommons.org/licenses/by/4.0/).

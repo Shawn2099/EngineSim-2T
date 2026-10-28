@@ -1,0 +1,1871 @@
+
+<<<PAGE 1>>>
+
+<<<PAGE 2>>>
+ 
+ 
+ 
+Pearson New International Edition
+Engineering Fundamentals of the
+Internal Combustion Engine
+Willard W. Pulkrabek
+Second Edition
+
+<<<PAGE 3>>>
+Pearson Education Limited
+Edinburgh Gate
+Harlow
+Essex CM20 2JE
+England and Associated Companies throughout the world
+Visit us on the World Wide Web at: www.pearsoned.co.uk
+© Pearson Education Limited 2014 
+All rights reserved. No part of this publication may be reproduced, stored in a retrieval system, or transmitted 
+in any form or by any means, electronic, mechanical, photocopying, recording or otherwise, without either the 
+prior written permission of the publisher or a licence permitting restricted copying in the United Kingdom 
+issued by the Copyright Licensing Agency Ltd, Saffron House, 6–10 Kirby Street, London EC1N 8TS.
+All trademarks used herein are the property of their respective owners. The use of any trademark 
+in this text does not vest in the author or publisher any trademark ownership rights in such 
+trademarks, nor does the use of such trademarks imply any afﬁ liation with or endorsement of this 
+book by such owners. 
+ISBN 10: 1-269-37450-8
+ISBN 13: 978-1-269-37450-7
+British Library Cataloguing-in-Publication Data
+A catalogue record for this book is available from the British Library
+ Printed in the United States of America
+ISBN 10: 1-292-02729-0
+ISBN 13: 978-1-292-02729-6
+
+<<<PAGE 4>>>
+Table of Contents
+P
+E
+A
+R
+S
+O
+N
+ 
+C
+U
+S
+T
+O
+M
+ 
+L
+I
+B
+R
+A
+R
+Y
+ 
+I
+1. Introduction
+1
+Willard W. Pulkrabek
+2. Operating Characteristics
+39
+Willard W. Pulkrabek
+3. Engine Cycles
+87
+Willard W. Pulkrabek
+4. Thermochemistry and Fuels
+145
+Willard W. Pulkrabek
+5. Air and Fuel Induction
+197
+Willard W. Pulkrabek
+6. Fluid Motion within Combustion Chamber
+259
+Willard W. Pulkrabek
+7. Combustion
+285
+Willard W. Pulkrabek
+8. Exhaust Flow
+327
+Willard W. Pulkrabek
+9. Emissions and Air Pollution
+345
+Willard W. Pulkrabek
+10. Heat Transfer in Engines
+387
+Willard W. Pulkrabek
+11. Friction and Lubrication
+429
+Willard W. Pulkrabek
+References
+465
+Willard W. Pulkrabek
+479
+Index
+
+<<<PAGE 5>>>
+This page intentionally left blank 
+
+<<<PAGE 6>>>
+Introduction to Internal
+Combustion Engine
+“
+the modern high-class automobile is in the main satisfactory
+and can be relied upon if the driver is thoroughly cognizant of its
+workings. It is needless to say that self-propelling vehicles, like
+other machines, will never do as much for one who does not
+understand them as for one who does.”
+The Endurance Test
+The Automobile Magazine (October 1901)
+This chapter introduces and defines the internal combustion engine. It lists ways of
+classifying engines and terminology used in engine technology. Descriptions are given
+of many common engine components and of basic four-stroke and two-stroke cycles
+for both spark ignition and compression ignition engines.
+1
+INTRODUCTION
+The internal combustion (IC) engine is a heat engine that converts chemical energy in
+a fuel into mechanical energy, usually made available on a rotating output shaft. Chem-
+ical energy of the fuel is first converted to thermal energy by means of combustion or
+oxidation with air inside the engine. This thermal energy raises the temperature and
+pressure of the gases within the engine, and the high-pressure gas then expands against
+the mechanical mechanisms of the engine.This expansion is converted by the mechan-
+ical linkages of the engine to a rotating crankshaft, which is the output of the engine.
+The crankshaft, in turn, is connected to a transmission or power train to transmit the
+rotating mechanical energy to the desired final use. For engines, this will often be the
+propulsion of a vehicle (i.e., automobile, truck, locomotive, marine vessel, or airplane).
+Other applications include stationary engines to drive generators or pumps, and
+portable engines for things like chain saws and lawn mowers.
+Á
+From Chapter 1 of Engineering Fundamentals of the Internal Combustion Engine, Second Edition.
+Willard W. Pulkrabek. Copyright © 2004 by Pearson Education, Inc. All rights reserved.
+1
+
+<<<PAGE 7>>>
+Introduction to Internal Combustion Engine
+Most internal combustion engines are reciprocating engines having pistons that
+reciprocate back and forth in cylinders internally within the engine. This text concen-
+trates on the thermodynamic study of this type of engine. Other types of IC engines
+also exist in much fewer numbers, one important one being the rotary engine [104].
+These engines will be given brief coverage. Engine types not covered by this text in-
+clude steam engines and gas turbine engines, which are better classified as external
+combustion engines (i.e., combustion takes place outside the mechanical engine sys-
+tem). Also not included in the text, although they could be classified as internal com-
+bustion engines, are rocket engines, jet engines, and firearms.
+Reciprocating engines can have one cylinder or many cylinders, up to 20 or more.
+The cylinders can be arranged in many different geometric configurations. Sizes range
+from small model airplane engines with power output on the order of 100 watts to large
+multicylinder stationary engines that produce thousands of kilowatts per cylinder.
+There are so many different engine manufacturers, past, present, and future, that
+produce and have produced engines which differ in size, geometry, style, and operating
+characteristics, that no absolute limit can be stated for any range of engine characteris-
+tics (i.e., size, number of cylinders, strokes in a cycle, etc.). This text will work within
+normal characteristic ranges of engine geometries and operating parameters, but there
+can always be exceptions to these.
+Early development of modern internal combustion engines occurred in the latter
+half of the 1800s and coincided with the development of the automobile. History
+records earlier examples of crude internal combustion engines and self-propelled road
+vehicles dating back as far as the 1600s [29]. Most of these early vehicles were steam-
+driven prototypes which never became practical operating vehicles.Technology, roads,
+materials, and fuels were not yet adequately developed. Very early examples of heat
+engines, including both internal combustion and external combustion, used gun pow-
+der and other solid, liquid, and gaseous fuels. Major development of the modern steam
+engine and, consequently, the railroad locomotive occurred in the latter half of the
+1700s and early 1800s. By the 1820s and 1830s, railroads were present in several coun-
+tries around the world.
+HISTORIC—ATMOSPHERIC ENGINES
+Most of the very earliest internal combustion engines of the 17th and 18th centuries can
+be classified as atmospheric engines. These were large engines with a single piston and
+cylinder, the cylinder being open on the end. Combustion was initiated in the open cylin-
+der using any of the various fuels that were available. Gunpowder was often used as the
+fuel. Immediately after combustion, the cylinder would be full of hot exhaust gas at
+atmospheric pressure. At this time, the cylinder end was closed and the trapped gas was
+allowed to cool. As the gas cooled, it created a vacuum within the cylinder. This caused a
+pressure differential across the piston, atmospheric pressure on one side and a vacuum on
+the other. As the piston moved because of this pressure differential, it would do work by
+being connected to an external system, such as raising a weight [29].
+Some early steam engines were also atmospheric engines. Instead of combustion, the
+open cylinder was filled with hot steam. The end was then closed and the steam was
+allowed to cool and condense.This created the necessary vacuum.
+2
+
+<<<PAGE 8>>>
+FIGURE 1
+The Charter Engine made in 1893 at the Beloit works of Fairbanks, Morse & Company was one of the
+first successful gasoline engines offered for sale in the United States. Printed with permission, Fairbanks
+Morse Engine Division, Coltec Industries.
+In addition to a great amount of experimentation and development in Europe
+and the United States during the middle and latter half of the 1800s, two other techno-
+logical occurrences during this time stimulated the emergence of the internal combus-
+tion engine. In 1859, the discovery of crude oil in Pennsylvania finally made available
+the development of reliable fuels that could be used in these newly developed engines.
+Up to this time, the lack of good, consistent fuels was a major drawback in engine de-
+velopment. Fuels like whale oil, coal gas, mineral oils, coal, and gun powder, which were
+available before this time, were less than ideal for engine use and development. It still
+took many years before products of the petroleum industry evolved from the first
+crude oil to gasoline, the automobile fuel of the 20th century. However, improved hy-
+drocarbon products began to appear as early as the 1860s and gasoline, lubricating oils,
+and the internal combustion engine evolved together.
+The second technological invention that stimulated the development of the inter-
+nal combustion engine was the pneumatic rubber tire, which was first marketed by
+John B. Dunlop in 1888 [141]. This invention made the automobile much more practi-
+cal and desirable and thus generated a large market for propulsion systems, including
+the internal combustion engine.
+During the early years of the automobile, the internal combustion engine com-
+peted with electricity and steam engines as the basic means of propulsion. Early in the
+20th century, electricity and steam faded from the automobile picture—electricity be-
+cause of the limited range it provided and steam because of the long start-up time
+Introduction to Internal Combustion Engine
+3
+
+<<<PAGE 9>>>
+Introduction to Internal Combustion Engine
+FIGURE 2
+Cutaway view of Ford four-stroke cycle, spark-ignition,
+(6.0 liter) V12 engine, which was used in
+luxury/sports cars of mid 1990s.The 60° V12 engine was made of aluminum alloy, with electronic fuel
+injection. Maximum brake power was 313 hp at 5350 RPM (233 kW), with maximum torque of 353 lbf-ft
+at 3750 RPM (478 N-m). Courtesy of Ford Motor Company.
+367 in.3
+needed. Thus, the 20th century was the period of the internal combustion engine and
+the automobile powered by the internal combustion engine. Now, at the start of the
+21st century, the internal combustion engine is again being challenged by electricity
+and other forms of propulsion systems for automobiles and other applications. What
+goes around comes around.
+2
+EARLY HISTORY
+During the second half of the 19th century, many different styles of internal combus-
+tion engines were built and tested. Reference [29] is suggested as a good history of this
+period. These engines operated with variable success and dependability using many
+different mechanical systems and engine cycles.
+The first fairly practical engine was invented by J.J.E. Lenoir (1822–1900) and ap-
+peared on the scene about 1860. During the next decade, several hundred of 
+4
+
+<<<PAGE 10>>>
+Introduction to Internal Combustion Engine
+these engines were built with power up to about 4.5 kW (6 hp) and mechanical effi-
+ciency up to 5%. In 1867 the Otto–Langen engine, with efficiency improved to about
+11%, was first introduced, and several thousand of these were produced during the
+next decade.This was a type of atmospheric engine with the power stroke propelled by
+atmospheric pressure acting against a vacuum. Nicolaus A. Otto (1832–1891) and
+Eugen Langen (1833–1895) were two of many engine inventors of this period.
+During this time, engines operating on the same basic four-stroke cycle as the
+modern automobile engine began to evolve as the best design. Although many people
+were working on four-stroke cycle design, Otto was given credit when his prototype
+engine was built in 1876.
+In the 1880s the internal combustion engine first appeared in automobiles [45].
+Also in this decade the two-stroke cycle engine became practical and was manufac-
+tured in large numbers.
+By 1892, Rudolf Diesel (1858–1913) had perfected his compression ignition en-
+gine into basically the same diesel engine known today. This was after years of devel-
+opment work, which included the use of solid fuel in his early experimental engines.
+Early compression ignition engines were noisy, large, slow, single-cylinder engines.
+They were, however, generally more efficient than spark ignition engines. It wasn’t
+until the 1920s that multicylinder compression ignition engines were made small
+enough to be used with automobiles and trucks.
+3
+ENGINE CLASSIFICATIONS
+Internal combustion engines can be classified in a number of different ways:
+1. Types of Ignition
+(a) Spark Ignition (SI). An SI engine starts the combustion process in each
+cycle by use of a spark plug.The spark plug gives a high-voltage electrical dis-
+charge between two electrodes which ignites the air–fuel mixture in the com-
+bustion chamber surrounding the plug. In early engine development, before
+the invention of the electric spark plug, many forms of torch holes were used
+to initiate combustion from an external flame.
+(b) Compression Ignition (CI). The combustion process in a CI engine starts
+when the air–fuel mixture self-ignites due to high temperature in the com-
+bustion chamber caused by high compression.
+2. Engine Cycle
+(a) Four-Stroke Cycle. A four-stroke cycle has four piston movements over two
+engine revolutions for each cycle.
+(b) Two-Stroke Cycle. A two-stroke cycle has two piston movements over one
+revolution for each cycle.
+Three-stroke cycles and six-stroke cycles were also tried in early engine
+development [29].
+5
+
+<<<PAGE 11>>>
+Introduction to Internal Combustion Engine
+FIGURE 3
+Engine of Ford Model A automobile built from 1928 to 1932. Four-cylinder L-head engine had
+displacement of 
+(3.20 L), with 3.875 in. bore (9.84 cm), 4.125 in. stroke (10.48 cm), and 4.22:1
+compression ratio.The water-cooled engine had three main bearings, with brake power rated as 40 hp at
+2200 RPM (29.8 kW), and torque of 128 lbf-ft at 1000 RPM (173 N-m).There was no fuel pump with
+fuel gravity fed to a downdraft carburetor [165, 169]. Figure courtesy of Ford Motor Company.
+195 in.3
+3. Valve Location (see Fig. 4)
+(a) Valves in head (overhead valve), also called I Head engine.
+(b) Valves in block (flat head), also called L Head engine. Some historic engines
+with valves in block had the intake valve on one side of the cylinder and the
+exhaust valve on the other side.These were called T Head engines.
+(c) One valve in head (usually intake) and one in block, also called F Head en-
+gine; this is much less common.
+4. Basic Design
+(a) Reciprocating. Engine has one or more cylinders in which pistons recipro-
+cate back and forth. The combustion chamber is located in the closed end of
+each cylinder. Power is delivered to a rotating output crankshaft by mechan-
+ical linkage with the pistons.
+6
+
+<<<PAGE 12>>>
+Introduction to Internal Combustion Engine
+(a)
+(b)
+(c)
+(d)
+FIGURE 4
+Engine Classification by Valve Location. (a) Valve in block, L head. Older automobiles and
+some small engines. (b) Valve in head, I head. Standard on modern automobiles. (c) One
+valve in head and one valve in block, F head. Older, less common automobiles. (d) Valves in
+block on opposite sides of cylinder,T head. Some historic automobile engines.
+(b) Rotary. Engine is made of a block (stator) built around a large nonconcentric
+rotor and crankshaft.The combustion chambers are built into the nonrotating
+block. A number of experimental engines have been tested using this 
+concept, but the only design that has ever become common in an 
+7
+
+<<<PAGE 13>>>
+Introduction to Internal Combustion Engine
+FIGURE 5
+Sectional view of Willy-Knight sleeve
+valve engine of 1926. Reprinted with
+permission from © 1995 Automotive
+Engineering magazine, SAE
+International.
+automobile is the Wankel engine in several Mazda models. Mazda builds ro-
+tary automobile engines with one, two, and three rotors.
+5. Position and Number of Cylinders of Reciprocating Engines (Fig. 7)
+(a) Single Cylinder. Engine has one cylinder and piston connected to the crank-
+shaft.
+(b) In-Line. Cylinders are positioned in a straight line, one behind the other
+along the length of the crankshaft. They can consist of 2 to 11 cylinders or
+possibly more. In-line four-cylinder engines are very common for automobile
+and other applications. In-line six and eight cylinders are historically com-
+mon automobile engines. In-line engines are sometimes called straight (e.g.,
+straight six or straight eight).
+8
+
+<<<PAGE 14>>>
+Introduction to Internal Combustion Engine
+(a)
+FIGURE 6
+Duesenberg Model J in-line, eight-cylinder, spark-ignition automobile engine of the 1930s; in the author’s opinion, the
+greatest automobile engine relative to its time and competition that there ever was or ever will be (powering
+Duesenbergs, the greatest automobiles ever).The engine was designed by the Duesenberg Company, but was
+manufactured by Lycoming Aircraft Engine Company.The engine had hemispherical combustion chambers with total
+displacement of 
+(6.88 L),
+bore (9.53 cm),
+stroke (12.07 cm), 5.2:1 compression ratio, and
+produced 265 bhp (198 kW) at 4200 RPM.When supercharged as the Model SJ it produced 320 bhp (239 kW) at 4000
+RPM.Twin chain-driven overhead camshafts operated four valves per cylinder. Intake valves had 
+diameter and 0.35 in. (0.89 cm) lift, exhaust valves had 
+diameter and 0.36 in. (0.91 cm) lift.
+Aluminum pistons each had three compression rings and one oil ring.The alloy steel crankshaft had five main
+bearings, was balanced both dynamically and statically, and had a mercury-filled vibration damper.The lubrication
+system consisted of a gear pump in the oil pan, three filters, crankcase ventilation, and a finned aluminum oil pan for
+cooling.The seven gallon cooling system had a water pump, thermostatically controlled radiator shutters, and a belt-
+driven four-bladed fan. Ignition was six volt with Delco Remy coil and distributor.The Model J was equipped with a
+Schebler updraft carburetor, while the Model SJ had a Stromberg downdraft carburetor and a 12 in. centrifugal
+supercharger. In addition to luxurious automobiles, Duesenbergs were also very successful as racing cars in Grand
+Prix and track racing.The Duesenberg Automobile company went out of business in 1937, a victim of the Economic
+Depression.The slang expression “Its a Dusey,” meaning it’s very good, is a reference to the Duesenberg automobile.
+Printed with permission from Auburn–Cord–Duesenberg Museum,Auburn, Indiana, [147].
+1 78 in. 14.76 cm2
+1 12 in. 13.81 cm2
+4 34 in.
+3 34 in.
+420 in.3
+(b)
+9
+
+<<<PAGE 15>>>
+Introduction to Internal Combustion Engine
+(f)
+(d)
+(g)
+(a)
+(c)
+(b)
+(e)
+FIGURE 7
+Engine Classification by Cylinder Arrangement. (a) Single cylinder. (b) In-line, or straight.
+(c) V engine. (d) Opposed cylinder. (e) W engine. (f) Opposed piston. (g) Radial.
+(c) V Engine. Two banks of cylinders at an angle with each other along a single
+crankshaft, allowing for a shorter engine block.The angle between the banks
+of cylinders can be anywhere from 15° to 120°, with 60°–90° being common.
+V engines usually have even numbers of cylinders from 2 to 20 or more. V6s
+and V8s are common automobile engines, with V12s and V16s (historic)
+found in some luxury and high-performance vehicles. Large ship and station-
+ary engines have anywhere from 8 to 20 cylinders. Volkswagen has a V5 on
+the market with two cylinders slightly out of line (15°) with the other three so
+that the cylinders can be moved closer together to shorten the engine block.
+Honda makes a true V5 motorcycle engine.
+10
+
+<<<PAGE 16>>>
+Introduction to Internal Combustion Engine
+(d) Opposed Cylinder Engine. Two banks of cylinders opposite each other on a
+single crankshaft (a V engine with a 180° V).These are common on small air-
+craft and some automobiles with an even number of cylinders from two to
+eight or more.These engines are often called flat engines (e.g., flat four).
+(e) W Engine. Engines of two different cylinder arrangements have been classi-
+fied as W engines in the technical literature. One type is the same as a V engine
+except with three banks of cylinders on the same crankshaft.They are not com-
+mon,but some race cars of the 1930s and some luxury cars of the late 1990s had
+such engines,either with 12 cylinders or 18 cylinders.Another type of W engine
+is the modern 16 cylinder engine made for the Bugatti automobile (W16).This
+engine is essentially two V8 engines connected together on a single crankshaft.
+(f) Opposed Piston Engine. Two pistons in each cylinder with the combustion
+chamber in the center between the pistons.A single combustion process caus-
+es two power strokes at the same time, with each piston being pushed away
+from the center and delivering power to a separate crankshaft at each end of
+the cylinder. Engine output is either on two rotating crankshafts or on one
+crankshaft incorporating a complex mechanical linkage. These engines are
+generally of large displacement, used for powerplants, ships, or submarines.
+(g) Radial Engine. Engine with pistons positioned in a circular plane around a
+central crankshaft.The connecting rods of the pistons are connected to a mas-
+ter rod which, in turn, is connected to the crankshaft (Fig. 12).A bank of cylin-
+ders on a radial engine almost always has an odd number of cylinders ranging
+from 3 to 13 or more. Operating on a four-stroke cycle, every other cylinder
+fires and has a power stroke as the crankshaft rotates, giving a smooth opera-
+tion. Many medium and large size propeller-driven aircraft use radial engines.
+For large aircraft, two or more banks of cylinders are mounted together, one
+behind the other on a single crankshaft, making one powerful smooth engine.
+Very large ship engines exist with up to 54 cylinders, six banks of 9 cylinders
+each. In the early part of the 20th century there were a few experimental radi-
+al aircraft engines that had an even number of cylinders (4 to 12). These en-
+gines operated on a two-stroke cycle and never became standard.
+HISTORIC—RADIAL ENGINES
+There are a few historical examples of radial engines being mounted with the crankshaft
+fastened to the vehicle while the heavy bank of radial cylinders rotated around the station-
+ary crank. This was done to enhance the cooling of the cylinders on these air cooled
+engines.The Sopwith Camel, a very successful World War I fighter aircraft, had the engine
+so mounted with the propeller fastened to the rotating bank of cylinders. The gyroscopic
+forces generated by the large rotating engine mass allowed these planes to do some
+maneuvers that were not possible with other airplanes, and restricted them from some
+other maneuvers. Snoopy has been flying a Sopwith Camel in his battles with the Red
+Baron for many years.
+The little-known early Adams–Farwell automobiles had three- and five-cylinder radial
+engines rotating in a horizontal plane with the stationary crankshaft mounted vertically.The
+gyroscopic effects must have given these automobiles unique steering characteristics [45].
+11
+
+<<<PAGE 17>>>
+Introduction to Internal Combustion Engine
+Air Intake
+FIGURE 8
+Supercharger used to increase inlet air pressure to engine. Compressor is
+driven off engine crankshaft, which gives fast response to speed changes but
+adds parasitic load to engine.
+6. Air Intake Process
+(a) Naturally Aspirated. No intake air pressure boost system.
+(b) Supercharged. Intake air pressure increased with the compressor driven off
+of the engine crankshaft (Fig. 8).
+(c) Turbocharged. Intake air pressure increased with the turbine–compressor
+driven by the engine exhaust gases (Fig. 9).
+(d) Crankcase Compressed. Two-stroke cycle engine which uses the crankcase
+as the intake air compressor. Limited development work has also been done
+on design and construction of four-stroke cycle engines with crankcase
+compression.
+7. Method of Fuel Input for Spark Ignition Engines
+(a) Carbureted.
+(b) Multipoint Port Fuel Injection. One or more injectors at each cylinder
+intake.
+(c) Throttle Body Fuel Injection. Injectors upstream in intake manifold.
+(d) Gasoline Direct Injection. Injectors mounted in combustion chambers with
+injection directly into cylinders.
+8. Method of Fuel Input for Compression Ignition Engines
+(a) Direct Injection. Fuel injected into main combustion chamber.
+(b) Indirect Injection. Fuel injected into secondary combustion chamber.
+(c) Homogeneous Charge Compression Ignition. Some fuel added during intake
+stroke.
+12
+
+<<<PAGE 18>>>
+9. Fuel Used
+(a) Gasoline.
+(b) Diesel Oil or Fuel Oil.
+(c) Gas, Natural Gas, Methane.
+(d) LPG.
+(e) Alcohol—Ethyl, Methyl.
+(f) Dual Fuel. There are a number of engines that use a combination of two or
+more fuels. Some, usually large, CI engines use a combination of natural gas
+and diesel fuel. These are attractive in developing third-world countries be-
+cause of the high cost of diesel fuel. Combined gasoline–alcohol fuels are
+becoming more common as an alternative to straight gasoline automobile
+engine fuel.
+(g) Gasohol. Common fuel consisting of 90% gasoline and 10% alcohol.
+10. Application
+(a) Automobile, Truck, Bus.
+(b) Locomotive.
+(c) Stationary.
+(d) Marine.
+(e) Aircraft.
+(f) Small Portable, Chain Saw, Model Airplane.
+Turbine
+Exhaust
+Compressor
+Air Intake
+Aftercooler
+FIGURE 9
+Turbocharger used to increase inlet air
+pressure to engine.Turbine that drives
+compressor is powered by exhaust flow
+from engine.This adds no load to the
+engine but results in turbo lag, a slower
+response to engine speed changes.
+Introduction to Internal Combustion Engine
+13
+
+<<<PAGE 19>>>
+Introduction to Internal Combustion Engine
+11. Type of Cooling
+(a) Air Cooled.
+(b) Liquid Cooled, Water Cooled.
+Several or all of these classifications can be used at the same time to identify a
+given engine. Thus, a modern engine might be called a turbocharged, reciprocating,
+spark ignition, four-stroke cycle, overhead valve, water-cooled, gasoline, multipoint
+fuel-injected,V8 automobile engine.
+HISTORIC—LARGE UNIQUE ENGINES
+Several large very powerful unique engines were assembled in the early part of the 20th
+century, mostly for experimental tanks and other military vehicles [227]. One type of
+engine, made by the Italian company Bugatti, consisted of two parallel banks of eight
+cylinders each, constituting a U16 engine.The two crankshafts were geared to one central
+shaft output. At least one engine of this type was later used in a Duesenberg race car.
+Bugatti also made an H32 engine by connecting four straight eight engines together, with
+each engine making up one arm of the H (up and down), and one central output crank-
+shaft. A German engine consisted of two inverted V12 engines connected together on a
+single crankshaft (an M24 engine?). None of these engines saw commercial production.
+FIGURE 10
+General Motors 6.6 liter,V8, compression ignition, LB7 “Duramax 6600 Turbo Diesel Engine” used in 
+2002 model trucks.The engine has four overhead valves per cylinder, compression ratio of 17.5:1, bore of
+10.3 cm (4.06 in.), stroke of 9.90 cm (3.90 in.), and a total displacement of 
+High
+pressure injection with common rail is used. Copyright General Motors Corporation, used with permission.
+6599 cm3 1403 in.32.
+14
+
+<<<PAGE 20>>>
+Introduction to Internal Combustion Engine
+4
+TERMINOLOGY AND ABBREVIATIONS
+The following terms and abbreviations are commonly used in engine technology liter-
+ature and will be used throughout this text.
+Internal Combustion (IC)
+Spark Ignition (SI)
+An engine in which the combustion process in each cycle is start-
+ed by use of a spark plug.
+Compression Ignition (CI)
+An engine in which the combustion process starts when
+the air–fuel mixture self-ignites due to high temperature in the combustion chamber
+caused by high compression. CI engines are often called diesel engines, especially in
+the nontechnical community.
+Top-Dead-Center (TDC)
+Position of the piston when it stops at the furthest point
+away from the crankshaft. Top because this position is at the top of most engines (not
+always), and dead because the piston stops at this point. Because in some engines top-
+dead-center is not at the top of the engine (e.g., horizontally opposed engines, radial
+engines, etc.), some sources call this position Head-End-Dead-Center (HEDC). Some
+sources call this position Top-Center (TC). When an occurrence in a cycle happens
+0
+10
+20
+30
+40
+350
+700
+300
+600
+250
+500
+200
+400
+150
+300
+100
+200
+50
+100
+0
+0
+Horsepower
+Torque (lb-ft)
+Engine Speed ( 100)
+520 lb-ft @ 1800 rpm
+300 HP @ 3000 rpm
+LB7
+FIGURE 11
+Power and torque curves of General Motors
+“Duramax 6600 Turbo Diesel” truck engine
+shown in Fig. 10.The engine has a brake
+maximum power rating of 300 hp (224 kW)
+at 3000 RPM, and a maximum torque of 520
+lbf-ft (705 N-m) at 1800 RPM. Maximum
+speed is governed at 3250 RPM. Copyright
+General Motors Corporation, used with
+permission.
+15
+
+<<<PAGE 21>>>
+Introduction to Internal Combustion Engine
+before TDC, it is often abbreviated bTDC or bTC. When the occurrence happens
+after TDC, it will be abbreviated aTDC or aTC. When the piston is at TDC, the vol-
+ume in the cylinder is a minimum called the clearance volume.
+Bottom-Dead-Center (BDC)
+Position of the piston when it stops at the point closest
+to the crankshaft. Some sources call this Crank-End-Dead-Center (CEDC) because it
+is not always at the bottom of the engine. Some sources call this point Bottom-Center
+(BC). During an engine cycle things can happen before bottom-dead-center, bBDC or
+bBC, and after bottom-dead-center, aBDC or aBC.
+Direct Injection (DI)
+Fuel injection into the main combustion chamber of an engine.
+Engines have either one main combustion chamber (open chamber) or a divided combus-
+tion chamber made up of a main chamber and a smaller connected secondary chamber.
+40
+Knuckle Pins
+L2  Stroke of
+Master Rod
+L1  Stroke of
+Articulated Rod
+Top Dead Center
+Top Dead Center
+Bottom Dead Center
+Path of
+Knuckle
+Pin
+Bottom
+Dead Center
+Cylinder Centerline
+Cylinder Centerline
+Path of
+Crankpin
+FIGURE 12
+Connecting rod assembly for a nine-cylinder radial engine.The piston of number one cylinder is
+connected to the crankshaft by a master connecting rod.All other cylinders have connecting rods which
+fasten to the master rod. Printed with permission, Curtiss Wright Corporation.
+16
+
+<<<PAGE 22>>>
+Indirect Injection (IDI)
+Fuel injection into the secondary chamber of an engine with
+a divided combustion chamber.
+Bore
+Diameter of the cylinder or diameter of the piston face, which is the same
+minus a very small clearance.
+Stroke
+Movement distance of the piston from one extreme position to the other:TDC
+to BDC or BDC to TDC.
+Clearance Volume
+Minimum volume in the combustion chamber with piston at TDC.
+Displacement or Displacement Volume
+Volume displaced by the piston as it travels
+through one stroke. Displacement can be given for one cylinder or for the entire en-
+gine (one cylinder times number of cylinders). Some literature calls this swept volume.
+Gasoline Direct Injection (GDI)
+Spark ignition engine with fuel injectors mounted
+in combustion chambers. Gasoline fuel is injected directly into cylinders during com-
+pression stroke.
+Homogeneous Charge Compression Ignition (HCCI)
+Compression-ignition engine
+operating with a homogeneous air–fuel charge instead of the diffusion combustion
+mixture normally used in CI engines.
+Smart Engine
+Engine with computer controls that regulate operating characteristics
+such as air–fuel ratio, ignition timing, valve timing, exhaust control, intake tuning, etc.
+Computer inputs come from electronic, mechanical, thermal, and chemical sensors 
+A
+B
+G
+C
+D
+E
+F
+FIGURE 13
+Poppet valve is spring loaded closed, and pushed
+open by cam action at proper time in cycle. Most
+automobile engines and other reciprocating engines
+use poppet valves. Much less common are sleeve
+valves and rotary valves. Components include:
+(A) valve seat, (B) head, (C) stem, (D) guide,
+(E) spring, (F) camshaft, (G) manifold.
+Introduction to Internal Combustion Engine
+17
+
+<<<PAGE 23>>>
+Introduction to Internal Combustion Engine
+located throughout the engine. Computers in some automobiles are even programmed
+to adjust engine operation for things like valve wear and combustion chamber deposit
+buildup as the engine ages. In automobiles, the same computers are used to make smart
+cars by controlling the steering, brakes, exhaust system, suspension, seats, anti-theft sys-
+tems, sound-entertainment systems, shifting, doors, repair analysis, navigation, noise
+suppression, environment, comfort, etc.
+Engine Management System (EMS)
+Computer and electronics used to control smart
+engines.
+Wide-Open Throttle (WOT)
+Engine operated with throttle valve fully open when
+maximum power and/or speed is desired.
+Ignition Delay (ID)
+Time interval between ignition initiation and the actual start of
+combustion.
+Air–Fuel Ratio (AF)
+Ratio of mass of air to mass of fuel input into engine.
+Fuel–Air Ratio (FA)
+Ratio of mass of fuel to mass of air input into engine.
+Brake Maximum Torque (BMT)
+Speed at which maximum torque occurs.
+Overhead Valve (OHV)
+Valves mounted in engine head.
+Overhead Cam (OHC)
+Camshaft mounted in engine head, giving more direct con-
+trol of valves which are also mounted in engine head.
+Fuel Injected (FI)
+FIGURE 14
+Harley–Davidson two-cylinder, air-cooled,
+overhead valve “Knucklehead” motorcycle engine
+first introduced in 1936.The 45° V engine had
+displacement of 60 cubic inches with 3.3125 inch
+bore and 3.500 inch stroke. Operating on a four-
+stroke cycle with a compression ratio of 7:1 the
+engine was rated at 40 bhp at 4800 RPM. Ignition
+was by Harley–Davidson generator–battery
+system. Photograph courtesy of the
+Harley–Davidson Juneau Avenue Archives.All
+rights reserved. Copyright Harley–Davidson.
+18
+
+<<<PAGE 24>>>
+FIGURE 15
+Harley–Davidson motorcycle of 1936 powered by “Knucklehead” engine shown in Fig. 14.The
+motorcycle had a rated top speed of 90–95 MPH with a fuel economy of 35–50 MPG. Photograph
+courtesy of the Harley–Davidson Juneau Avenue Archives.All rights reserved. Copyright
+Harley–Davidson.
+5
+ENGINE COMPONENTS
+The following is a list of major components found in most reciprocating internal com-
+bustion engines (see Fig. 16).
+Block
+Body of engine containing the cylinders, made of cast iron or aluminum. In
+many older engines, the valves and valve ports were contained in the block. The block
+of water-cooled engines includes a water jacket cast around the cylinders. On air-
+cooled engines, the exterior surface of the block has cooling fins.
+Camshaft
+Rotating shaft used to push open valves at the proper time in the engine
+cycle, either directly or through mechanical or hydraulic linkage (push rods, rocker
+arms, tappets). Most modern automobile engines have one or more camshafts mount-
+ed in the engine head (overhead cam). Most older engines had camshafts in the
+crankcase. Camshafts are generally made of forged steel or cast iron and are driven off
+the crankshaft by means of a belt or chain (timing chain).To reduce weight, some cams
+are made from a hollow shaft with the cam lobes press-fit on. In four-stroke cycle en-
+gines, the camshaft rotates at half engine speed.
+Carburetor
+Venturi flow device that meters the proper amount of fuel into the air
+flow by means of a pressure differential. For many decades it was the basic fuel meter-
+ing system on all automobile (and other) engines. It is still used on low-cost small en-
+gines like lawn mowers, but is uncommon on new automobiles.
+Catalytic converter
+Chamber mounted in exhaust flow containing catalytic material
+that promotes reduction of emissions by chemical reaction.
+Introduction to Internal Combustion Engine
+19
+
+<<<PAGE 25>>>
+Introduction to Internal Combustion Engine
+J
+H
+C
+M
+L
+Q
+D
+A
+F
+E
+K
+G
+B
+O
+P
+I
+N
+FIGURE 16
+Cross-section of four-stroke cycle SI engine showing engine components:
+(A) block, (B) camshaft, (C) combustion chamber, (D) connecting rod,
+(E) crankcase, (F) crankshaft, (G) cylinder, (H) exhaust manifold, (I) head,
+(J) intake manifold, (K) oil pan, (L) piston, (M) piston rings, (N) push rod,
+(O) spark plug, (P) valve, and (Q) water jacket.
+Choke
+Butterfly valve at carburetor intake, used to create rich fuel–air mixture in in-
+take system for cold weather starting.
+Combustion chamber
+The end of the cylinder between the head and the piston face
+where combustion occurs. The size of the combustion chamber continuously changes
+from a minimum volume when the piston is at TDC to a maximum when the piston is at
+BDC. The term “cylinder” is sometimes synonymous with “combustion chamber” (e.g.,
+“the engine was firing on all cylinders”). Some engines have open combustion chambers
+20
+
+<<<PAGE 26>>>
+Introduction to Internal Combustion Engine
+which consist of one chamber for each cylinder. Other engines have divided chambers
+which consist of dual chambers on each cylinder connected by an orifice passage.
+Connecting rod
+Linkage connecting piston with rotating crankshaft, usually made of
+steel, alloy forging, or aluminum.
+Connecting rod bearing
+Bearing where connecting rod fastens to crankshaft.
+Cooling fins
+Metal fins on the outside surfaces of cylinders and head of an air-cooled
+engine.These extended surfaces cool the cylinders by conduction and convection.
+Crankcase
+Part of the engine block surrounding the rotating crankshaft. In many en-
+gines the oil pan makes up part of the crankcase housing. In some high-performance
+engines the crankcase is designed with “windows” between the piston bays to allow
+freer air flow between bays. This is to reduce air pressure buildup on the backside of
+the pistons during power and intake strokes.
+Crankshaft
+Rotating shaft through which engine work output is supplied to external
+systems. The crankshaft is connected to the engine block with the main bearings. It is
+rotated by the reciprocating pistons through connecting rods connected to the crank-
+shaft, offset from the axis of rotation. This offset is sometimes called crank throw or
+crank radius. Most crankshafts are made of forged steel, while some are made of cast
+iron.
+Cylinders
+The circular cylinders in the engine block in which the pistons reciprocate
+back and forth. The walls of the cylinder have highly polished hard surfaces. Cylinders
+may be machined directly in the engine block, or a hard metal (drawn steel) sleeve may
+be pressed into the softer metal block. Sleeves may be dry sleeves, which do not contact
+the liquid in the water jacket, or wet sleeves, which form part of the water jacket. In a
+few engines, the cylinder walls are given a knurled surface to help hold a lubricant film
+on the walls. In some very rare cases, the cross section of the cylinder is not round.
+Exhaust manifold
+Piping system that carries exhaust gases away from the engine
+cylinders, usually made of cast iron.
+Exhaust system
+Flow system for removing exhaust gases from the cylinders, treating
+them, and exhausting them to the surroundings. It consists of an exhaust manifold that
+carries the exhaust gases away from the engine, a thermal or catalytic converter to re-
+duce emissions, a muffler to reduce engine noise, and a tailpipe to carry the exhaust
+gases away from the passenger compartment.
+Fan
+Most engines have an engine-driven fan to increase air flow through the radiator
+and through the engine compartment, which increases waste heat removal from the en-
+gine. Fans can be driven mechanically or electrically, and can run continuously or be
+used only when needed.
+Flywheel
+Rotating mass with a large moment of inertia connected to the crankshaft
+of the engine.The purpose of the flywheel is to store energy and furnish a large angu-
+lar momentum that keeps the engine rotating between power strokes and smooths
+out engine operation.After the electrical systems of automobiles evolve from 12 volts
+to 42 volts in the next decades the engine starter and generator will be built as part of
+a multipurpose flywheel. On some aircraft engines the propeller serves as the flywheel,
+as does the rotating blade on many lawn mowers.
+21
+
+<<<PAGE 27>>>
+Introduction to Internal Combustion Engine
+Fuel injector
+A pressurized nozzle that sprays fuel into the incoming air on SI en-
+gines or into the cylinder on CI engines. On SI engines, fuel injectors are located at the
+intake valve ports on multipoint port injection systems, upstream at the intake mani-
+fold inlet on throttle body injection systems, and in the combustion chambers on direct
+injection systems.
+Fuel pump
+Electrically or mechanically driven pump to supply fuel from the fuel
+tank (reservoir) to the engine. Many modern automobiles have an electric fuel pump
+mounted submerged in the fuel tank. Most small engines and some early automobiles
+had no fuel pump, relying on gravity feed.
+HISTORIC—FUEL PUMPS
+Lacking a fuel pump, it was necessary to back Model T Fords (1909–1927) up steep hills
+because of the location of the fuel tank relative to the engine.
+Glow plug
+Small electrical resistance heater mounted inside the combustion cham-
+ber of many CI engines, used to preheat the chamber so that combustion will occur
+when first starting a cold engine.The glow plug is turned off after the engine is started.
+Head
+The piece that closes the end of the cylinders, usually containing part of the
+clearance volume of the combustion chamber. The head is usually cast iron or alu-
+minum, and bolts to the engine block. In some less common engines, the head is one
+piece with the block. The head contains the spark plugs in SI engines and the fuel in-
+jectors in CI engines and some SI engines. Most modern engines have the valves in the
+head, and many have the camshaft(s) positioned there also (overhead valves and over-
+head cam).
+Head gasket
+Gasket that serves as a sealant between the engine block and the head
+where they bolt together. The gaskets are usually made in sandwich construction of
+metal and composite materials. Some engines use liquid head gaskets.
+Intake manifold
+Piping system that delivers incoming air to the cylinders, usually
+made of cast metal, plastic, or composite material. In most SI engines, fuel is added to
+the air in the intake manifold system either by fuel injectors or with a carburetor. Some
+intake manifolds are heated to enhance fuel evaporation. The individual pipe to a sin-
+gle cylinder is called a runner.
+Jake brake
+System that allows the engine to assist in slowing down a vehicle, usually
+large trucks.Actuation of the exhaust valves is modified so that some kinetic energy of
+the vehicle is absorbed by compressing air in the engine cylinders.
+Main bearing
+The bearings connected to the engine block in which the crankshaft ro-
+tates.The maximum number of main bearings would be equal to the number of pistons
+plus one, or one between each set of pistons plus the two ends. On some less powerful
+engines, the number of main bearings is less than this maximum.
+Oil pan
+Oil reservoir usually bolted to the bottom of the engine block, making up
+part of the crankcase.Acts as the oil sump for most engines.
+22
+
+<<<PAGE 28>>>
+Oil pump
+Pump used to distribute oil from the oil sump to required lubrication
+points.The oil pump can be electrically driven, but is most commonly mechanically dri-
+ven by the engine. Some small engines do not have an oil pump and are lubricated by
+splash distribution.
+Oil sump
+Reservoir for the oil system of the engine, commonly part of the crankcase.
+Some automobile engines with overhead camshafts have a secondary oil sump in the
+engine head to supply the cam and valve mechanism. Some engines (aircraft, race cars,
+etc.) have a separate closed reservoir called a dry sump.
+Piston
+The cylindrically shaped mass that reciprocates back and forth in the cylinder,
+transmitting the pressure forces in the combustion chamber to the rotating crankshaft.
+The top of the piston is called the crown and the sides are called the skirt. The face on
+the crown makes up one wall of the combustion chamber and may be a flat or highly
+contoured surface. Some pistons contain an indented bowl in the crown, which makes
+up a large percent of the clearance volume. Pistons are made of cast iron, steel, or alu-
+minum. Iron and steel pistons can have sharper corners because of their higher
+strength. They also have lower thermal expansion, which allows for tighter tolerances
+and less crevice volume. Aluminum pistons are lighter and have less mass inertia.
+Sometimes synthetic or composite materials are used for the body of the piston, with
+only the crown made of metal. Some pistons have a ceramic coating on the face.
+Piston rings
+Metal rings that fit into circumferential grooves around the piston and
+form a sliding surface against the cylinder walls. Near the top of the piston are usually
+two or more compression rings made with highly polished surfaces. The purpose of
+these rings is to form a seal between the piston and cylinder walls and to restrict the
+high-pressure gases in the combustion chamber from leaking past the piston into the
+crankcase (blowby). Below the compression rings on the piston is at least one oil ring,
+which assists in lubricating the cylinder walls and scrapes away excess oil to reduce oil
+consumption.
+Push rods
+Mechanical linkage between the camshaft and valves on overhead valve
+engines with the camshaft in the crankcase. Many push rods have oil passages through
+their length as part of a pressurized lubrication system.
+Radiator
+Liquid-to-air heat exchanger of honeycomb construction used to remove
+heat from the engine coolant after the engine has been cooled. The radiator is usually
+mounted in front of the engine in the flow of air as the automobile moves forward.An
+engine-driven or electric fan is often used to increase air flow through the radiator.
+Spark plug
+Electrical device used to initiate combustion in an SI engine by creating a
+high-voltage discharge spark across an electrode gap. Spark plugs are usually made of
+metal surrounded with ceramic insulation. Some modern spark plugs have built-in
+pressure sensors that supply one of the inputs into engine control.
+Speed control–cruise control
+Automatic electric–mechanical control system that
+keeps the automobile operating at a constant speed by controlling engine speed.
+Starter
+Several methods are used to start IC engines. Most are started by use of an
+electric motor (starter) geared to the engine flywheel. Energy is supplied from an elec-
+tric battery.When automobiles change to 42-volt electrical systems, the starter and gen-
+erator will become part of the flywheel.
+Introduction to Internal Combustion Engine
+23
+
+<<<PAGE 29>>>
+Introduction to Internal Combustion Engine
+On some very large engines, such as those found in large tractors and construc-
+tion equipment, electric starters have inadequate power, and small IC engines are used
+as starters for the large IC engines. First the small engine is started with the normal
+electric motor, and then the small engine engages gearing on the flywheel of the large
+engine, turning it until the large engine starts.
+Early aircraft engines were often started by hand spinning the propeller, which
+also served as the engine flywheel. Many small engines on lawn mowers and similar
+equipment are hand started by pulling a rope wrapped around a pulley connected to
+the crankshaft.
+Compressed air is used to start some large engines. Cylinder release valves are
+opened, which keeps the pressure from increasing in the compression strokes. Com-
+pressed air is then introduced into the cylinders, which rotates the engine in a free-
+wheeling mode. When rotating inertia is established, the release valves are closed and
+the engine is fired.
+HISTORIC—STARTERS
+Early automobile engines were started with hand cranks that connected with the crankshaft
+of the engine.This was a difficult and dangerous process, sometimes resulting in broken fin-
+gers and arms when the engine would fire and snap back the hand crank. The first electric
+starters appeared on the 1912 Cadillac automobiles, invented by C. Kettering, who was
+motivated when his friend was killed in the process of hand starting an automobile [45].
+Supercharger
+Mechanical compressor powered off of the crankshaft, used to com-
+press incoming air of the engine.
+Throttle
+Butterfly valve mounted at the upstream end of the intake system, used to
+control the amount of air flow into an SI engine. Some small engines and stationary
+constant-speed engines have no throttle.
+Turbocharger
+Turbine-compressor used to compress incoming air into the engine.
+The turbine is powered by the exhaust flow of the engine and thus takes very little use-
+ful work from the engine.
+Valves
+Used to allow flow into and out of the cylinder at the proper time in the cycle.
+Most engines use poppet valves, which are spring loaded closed and pushed open by
+camshaft action (Fig. 13). Valves are mostly made of forged steel. Surfaces against
+which valves close are called valve seats and are made of hardened steel or ceramic.
+Rotary valves and sleeve valves are sometimes used, but are much less common. Many
+two-stroke cycle engines have ports (slots) in the side of the cylinder walls instead of
+mechanical valves.
+Water jacket
+System of liquid flow passages surrounding the cylinders, usually con-
+structed as part of the engine block and head. Engine coolant flows through the
+water jacket and keeps the cylinder walls from overheating. The coolant is usually a
+water–ethylene glycol mixture.
+24
+
+<<<PAGE 30>>>
+Water pump
+Pump used to circulate engine coolant through the engine and radiator.
+It is usually mechanically run off of the engine.
+Wrist pin
+Pin fastening the connecting rod to the piston (also called piston pin).
+6
+BASIC ENGINE CYCLES
+Most internal combustion engines, both spark ignition and compression ignition, oper-
+ate on either a four-stroke cycle or a two-stroke cycle.These basic cycles are fairly stan-
+dard for all engines, with only slight variations found in individual designs.
+Four-Stroke SI Engine Cycle (Fig. 17)
+1. First Stroke: Intake Stroke or Induction
+The piston travels from TDC to BDC
+with the intake valve open and exhaust valve closed.This creates an increasing volume
+in the combustion chamber, which in turn creates a vacuum.The resulting pressure dif-
+ferential through the intake system from atmospheric pressure on the outside to the
+vacuum on the inside causes air to be pushed into the cylinder. As the air passes
+through the intake system, fuel is added to it in the desired amount by means of fuel in-
+jectors or a carburetor.
+2. Second Stroke: Compression Stroke
+When the piston reaches BDC, the in-
+take valve closes and the piston travels back to TDC with all the valves closed. This
+compresses the air–fuel mixture, raising both the pressure and the temperature in the
+cylinder. The finite time required to close the intake valve means that actual compres-
+sion doesn’t start until sometime aBDC. Near the end of the compression stroke, the
+spark plug is fired and combustion is initiated.
+3. Combustion
+Combustion of the air–fuel mixture occurs in a very short but
+finite length of time with the piston near TDC (i.e., nearly constant-volume combus-
+tion). It starts near the end of the compression stroke slightly bTDC and lasts into the
+power stroke slightly aTDC. Combustion changes the composition of the gas mixture
+to that of exhaust products and increases the temperature in the cylinder to a very high
+peak value. This, in turn, raises the pressure in the cylinder to a very high peak value.
+4. Third Stroke: Expansion Stroke or Power Stroke
+With all valves closed, the
+high pressure created by the combustion process pushes the piston away from TDC.
+This is the stroke which produces the work output of the engine cycle. As the piston
+travels from TDC to BDC, cylinder volume is increased, causing pressure and temper-
+ature to drop.
+5. Exhaust Blowdown
+Late in the power stroke, the exhaust valve is opened
+and exhaust blowdown occurs. Pressure and temperature in the cylinder are still high
+relative to the surroundings at this point, and a pressure differential is created through
+the exhaust system which is open to atmospheric pressure. This pressure differential
+causes much of the hot exhaust gas to be pushed out of the cylinder and through the
+exhaust system when the piston is near BDC. This exhaust gas carries away a high
+amount of enthalpy, which lowers the cycle thermal efficiency. Opening the exhaust
+valve before BDC reduces the work obtained during the power stroke but is required
+because of the finite time needed for exhaust blowdown.
+Introduction to Internal Combustion Engine
+25
+
+<<<PAGE 31>>>
+Introduction to Internal Combustion Engine
+(d)
+(e)
+(f)
+(a)
+(b)
+(c)
+TDC
+BDC
+FIGURE 17
+Four-stroke SI engine operating cycle. (a) Intake stroke. Ingress of air–fuel as piston moves from
+TDC to BDC. (b) Compression stroke. Piston moves from BDC to TDC. Spark ignition occurs
+near end of compression stroke. (c) Combustion at almost constant volume near TDC. (d) Power
+or expansion stroke. High cylinder pressure pushes piston from TDC towards BDC. (e) Exhaust
+blowdown when exhaust valve opens near end of expansion stroke. (f) Exhaust stroke. Remaining
+exhaust pushed from cylinder as piston moves from BDC to TDC.
+26
+
+<<<PAGE 32>>>
+Introduction to Internal Combustion Engine
+6. Fourth Stroke: Exhaust Stroke
+By the time the piston reaches BDC, exhaust
+blowdown is complete, but the cylinder is still full of exhaust gases at approximately at-
+mospheric pressure. With the exhaust valve remaining open, the piston now travels
+from BDC to TDC in the exhaust stroke. This pushes most of the remaining exhaust
+gases out of the cylinder into the exhaust system at about atmospheric pressure, leav-
+ing only that trapped in the clearance volume when the piston reaches TDC. Near the
+end of the exhaust stroke bTDC, the intake valve starts to open, so that it is fully open
+by TDC when the new intake stroke starts the next cycle. Near TDC the exhaust valve
+starts to close and finally is fully closed sometime aTDC.This period when both the in-
+take valve and exhaust valve are open is called valve overlap.
+Four-Stroke CI Engine Cycle
+1. First Stroke: Intake Stroke
+The same as the intake stroke in an SI engine with
+one major difference: no fuel is added to the incoming air.
+2. Second Stroke: Compression Stroke
+The same as in an SI engine except that
+only air is compressed and compression is to higher pressures and temperature.
+Late in the compression stroke fuel is injected directly into the combustion
+chamber, where it mixes with the very hot air. This causes the fuel to evaporate
+and self-ignite, causing combustion to start.
+3. Combustion
+Combustion is fully developed by TDC and continues at about
+constant pressure until fuel injection is complete and the piston has started to-
+wards BDC.
+4. Third Stroke: Power Stroke
+The power stroke continues as combustion ends
+and the piston travels towards BDC.
+5. Exhaust Blowdown
+Same as with an SI engine.
+6. Fourth Stroke: Exhaust Stroke
+Same as with an SI engine.
+HISTORIC—DIESEL AIRCRAFT ENGINES
+A number of attempts have been made to develop a CI engine for aircraft [120,227].In 1927
+Detroit Diesel and Stinson Aircraft Companies, working together, built a nine-cylinder
+radial CI diesel engine for a midsize airplane.The engine showed promise, with good fuel
+economy in flight, but failed in becoming a commercial product due mainly to limited
+development priority. The Economic Depression of 1929 ended work on the project. The
+engine is now on display at the Henry Ford Museum in Dearborn, Michigan.
+Two-Stroke SI Engine Cycle (Fig. 18)
+1. Combustion
+With the piston at TDC combustion occurs very quickly, raising
+the temperature and pressure to peak values, almost at constant volume.
+2. First Stroke: Expansion Stroke or Power Stroke
+Very high pressure created by
+the combustion process forces the piston down in the power stroke. The expand-
+ing volume of the combustion chamber causes pressure and temperature to de-
+crease as the piston travels towards BDC.
+27
+
+<<<PAGE 33>>>
+Introduction to Internal Combustion Engine
+(a)
+(b)
+(c)
+(d)
+(e)
+FIGURE 18
+Two-stroke SI engine operating cycle with crankcase compression. (a) Power or
+expansion stroke. High cylinder pressure pushes piston from TDC towards BDC with
+all ports closed.Air in crankcase is compressed by downward motion of piston.
+(b) Exhaust blowdown when exhaust port opens near end of power stroke. (c) Cylinder
+scavenging when intake port opens and airfuel is forced into cylinder under pressure.
+Intake mixture pushes some of the remaining exhaust out the open exhaust port.
+Scavenging lasts until piston passes BDC and closes intake and exhaust ports.
+(d) Compression stroke. Piston moves from BDC to TDC with all ports closed. Intake
+air fills crankcase. Spark ignition occurs near end of compression stroke.
+(e) Combustion at almost constant volume near TDC.
+28
+
+<<<PAGE 34>>>
+Introduction to Internal Combustion Engine
+3. Exhaust Blowdown
+At about 75° bBDC, the exhaust valve opens and blowdown
+occurs.The exhaust valve may be a poppet valve in the cylinder head, or it may be
+a slot in the side of the cylinder which is uncovered as the piston approaches BDC.
+After blowdown the cylinder remains filled with exhaust gas at lower pressure.
+4. Intake and Scavenging
+When blowdown is nearly complete, at about 50° bBDC,
+the intake slot on the side of the cylinder is uncovered and intake air–fuel enters
+under pressure. Fuel is added to the air with either a carburetor or fuel injection.
+This incoming mixture pushes much of the remaining exhaust gases out the open
+exhaust valve and fills the cylinder with a combustible air–fuel mixture, a process
+called scavenging.The piston passes BDC and very quickly covers the intake port
+and then the exhaust port (or the exhaust valve closes). The higher pressure at
+which the air enters the cylinder is established in one of two ways. Large two-
+stroke cycle engines generally have a supercharger, while small engines will in-
+take the air through the crankcase. On these engines the crankcase is designed to
+serve as a compressor in addition to serving its normal function.
+5. Second Stroke: Compression Stroke
+With all valves (or ports) closed, the piston
+travels towards TDC and compresses the air–fuel mixture to a higher pressure and
+temperature. Near the end of the compression stroke, the spark plug is fired; by the
+time the piston gets to TDC, combustion occurs and the next engine cycle begins.
+Two-Stroke CI Engine Cycle
+The two-stroke cycle for a CI engine is similar to that of the SI engine, except for two
+changes. No fuel is added to the incoming air, so that compression is done on air only.
+Instead of a spark plug, a fuel injector is located in the cylinder. Near the end of the
+compression stroke, fuel is injected into the hot compressed air and combustion is ini-
+tiated by self-ignition.
+FIGURE 19
+Ford Motor Company 1999 spark-ignition, four-
+stroke cycle V8 engine. Engine has bore of 9.02 cm
+(3.55 in.), stroke of 9.00 cm (3.54 in.), displacement
+of 4.60 L 
+and compression ratio of
+9.85:1. Maximum brake power is 205 kW at 5750
+RPM (275 hp), with maximum torque of 373 N-m
+at 4750 RPM (275 lbf-ft). Courtesy of Ford Motor
+Company.
+1281 in.32,
+29
+
+<<<PAGE 35>>>
+Introduction to Internal Combustion Engine
+FIGURE 20
+Ford 3.0 liter Vulcan V6, spark ignition, four-
+stroke cycle engine.This was the standard
+engine of the 1996 Ford Taurus and Mercury
+Sable automobiles. It is rated at 108 kW at
+5250 RPM and develops 230 N-m of torque at
+3250 RPM. Courtesy Ford Motor Company.
+7
+HYBRID VEHICLES
+At the beginning of the 21st century a great amount of research and development is
+being put into a new type of vehicle utilizing an internal combustion engine.This is the
+hybrid automobile (or truck), which uses both an electric motor and an internal com-
+bustion engine to provide power for propelling the vehicle.The goals of this type of ve-
+hicle are to provide better fuel economy with fewer emissions.
+Several different methods and motor–engine combinations have been and are
+being tried. The most common scenario is to use the electric motor(s) as the main dri-
+ving force, with the IC engine running in steady-state operation to keep the batteries
+charged.The batteries then supply the electric energy to the one or more motors. Usu-
+ally the combustion engine is connected such that it can also be used to help propel the
+vehicle directly when more power is needed than can be supplied by the motors.
+It is accepted that without a connected IC engine, electric motors and batteries by
+themselves do not provide enough range and power under some conditions (e.g., higher
+speeds or going up a hill). This may change as fuel cell technology improves. On the
+other hand, the combination of an IC engine and an electric motor can produce enough
+power and range, while using less fuel and producing less emissions. A combustion en-
+gine by itself must be large enough to produce maximum power when needed, which is
+many times greater than the average power being used under most conditions. When
+utilized in conjunction with a generator–battery–motor system, a much smaller engine
+can be used and operated at near steady-state conditions. This allows the engine to be
+made smaller and optimized for one operating condition, resulting in a very efficient
+unit. When the batteries are fully charged and the electric motor has enough power to
+supply driving needs, the engine can be turned off, resulting in additional savings.
+A number of different ways of combining an IC engine with an electric motor(s)
+are being tried.Some vehicles have electric drive on the front wheels and the combustion
+30
+
+<<<PAGE 36>>>
+Introduction to Internal Combustion Engine
+engine connected to the rear wheels and generator. Some vehicles incorporate the motor
+and engine connected in series, using one or both as needed.The extreme example of this
+is extending the engine crankshaft such that it also becomes the rotating output shaft of
+the motor. Other vehicles use a parallel connection of the motor and engine, with various
+ways of using one or both under different driving conditions (Fig. 21). Most systems allow
+the vehicle to be driven totally by the motor, totally by the engine, or a combination of
+both.With input from many sensors, the onboard computer determines the most efficient
+way of operation.
+The internal combustion engines in most of the early hybrid automobiles are
+gasoline fueled SI engines with two to four cylinders, and having a displacement of
+about one liter. This probably will evolve to compression-ignition engines because of
+the higher thermal efficiency these offer. This will happen as CI (diesel) engines be-
+come cleaner burning and a more complete fuel distribution system is established. Fu-
+ture advanced hybrids may include fuel cells, gas turbines, Stirling cycle engines, etc.
+In the 1990s the Partnership for a New Generation of Vehicles (PNGV), a coop-
+erative research effort between industry and government, set standards for a supercar,
+the goals of which are shown in Table 1. A hybrid vehicle may be the only practical
+hope of ever meeting these standards.
+Positive characteristics of a hybrid automobile:
+1. Better fuel mileage. With a smaller engine operating at lean-burn steady-state
+conditions, the engine can be optimized for minimum fuel usage. As CI engines
+are phased in, the fuel savings will become even greater because of the higher
+thermal efficiency. Present hybrid automobiles available to the public obtain 50
+to 80 miles per gallon (mpg) with gasoline (Fig 22).
+2. Fewer emissions. Engines that run at one speed steady-state can be optimized to
+run much cleaner. Present available hybrid vehicles meet all present and most fu-
+ture pollution standards.
+3. Combustion engines can be shut off when not needed or when the vehicle is mo-
+mentarily stopped.When the vehicle is then again started, the startup can be very
+smooth with the help of the electric motor. Test automobiles powered totally by
+IC engines have been developed to run on this on–off mode of operation.
+However, without a large electric motor drive to help in startup, these vehicles
+suffer in starting time lapse and probable long-term starter deterioration.
+4. The electric drive motors can be built as dual motor–generator units. This allows
+for some of the kinetic energy of the moving vehicle to be recovered when the ve-
+hicle is slowed down or stopped.The regained energy is used by the generator to
+recharge the battery.
+Negative characteristics of a hybrid automobile:
+1. High cost at present.The combination of many more components and lower sales
+volume make these vehicles much more costly to manufacture.Toyota expects to
+sell about 300,000 hybrid vehicles in year 2005 [218].
+2. Vehicles must carry dual weight of two power units, engine and motor. Often only
+one of these units will be in use, with the other unit adding to the dead weight of
+the vehicle.
+31
+
+<<<PAGE 37>>>
+Introduction to Internal Combustion Engine
+3. Any battery system will have a negative environmental impact when the batter-
+ies are used up and discarded. Better battery technology is needed.
+4. Air conditioning and other auxiliary power requirements are more difficult to
+satisfy with an electrical system.The IC engine could not be turned off when aux-
+iliary power is required.When the engine is turned off the engine coolant system
+would have to be circulated by electrical energy.
+Inverter
+Battery
+Belt-drive
+Motor
+Engine
+Inverter
+Battery
+Belt-drive
+Motor
+Engine
+Inverter
+Battery
+Belt-drive
+Motor
+(1) Start/low speed driving
+Inverter
+Battery
+Belt-drive
+Motor
+Engine
+(6) Power regeneration
+(4) Power generation during driving
+Inverter
+Battery
+Belt-drive
+Motor
+Engine
+(5) Full throttle acceleration
+Inverter
+Battery
+Belt-drive
+Engine
+(3) Propulsion by the engine
+(2) Engine start
+FIGURE 21
+Various operational modes of a hybrid automobile. Reprinted with permission from SAE Paper
+No. 2000-01-0992 © 2000, SAE International, [204].
+32
+
+<<<PAGE 38>>>
+HISTORIC—HYBRID-POWERED AUTOMOBILES
+In 1916–1917 a Woods Dual Power automobile could be purchased for $2650.This vehicle
+had both an IC engine and an electric motor with regenerative braking [139].
+8
+FUEL CELL VEHICLES
+Some hybrid vehicles in the future may replace the IC engine–generator system with a
+fuel cell stack to supply electricity to the batteries. Or, more likely, fuel cells will supply
+electricity directly to the drive motors of the vehicle, without the need for batteries or
+a combustion engine [162, 187, 188, 206]. The use of fuel cells to supply power for pro-
+pelling vehicles is attractive in that it is a more efficient method of converting chemical
+energy of the fuel to useful power output. It also produces far fewer harmful emissions
+than a combustion engine, with water vapor being the major exhaust. Fuel cells gener-
+ate electricity by reversing the electrolysis process of water.This can be done in one of
+several ways, a common type being a proton exchange membrane cell (PEM).With this
+type of fuel cell, the unit is fueled with hydrogen 
+and oxygen 
+(air). As these
+fuels pass through the special membrane of the cell they chemically combine forming
+water vapor and low voltage electricity. The cells are stacked in series to create high
+enough voltage to supply the 60 to 90 kW of power needed to propel an automobile.At
+the beginning of the 21st century several major problem obstacles remain, and must be
+solved before fuel cell technology challenges the dominance of the internal combus-
+tion engine for vehicle propulsion. These problems include weight, heat rejection,
+freezing, cost, safety, startup time, refueling, and fuel storage.
+The greatest technical problem is onboard storage of the hydrogen fuel, and
+the corresponding refueling of the vehicle. Hydrogen can be stored as a cryogenic
+liquid, a compressed gas, or as a solid in a metal hydride compound. None of these
+methods is ideal and major development work is needed before any of these be-
+come practical. To circumvent the fuel storage problem, methods of generating the 
+O2
+H2,
+TABLE 1
+PNGV Standards for Supercar
+1. Up to 80 miles per equivalent gallon of gasoline
+2. Acceleration 0–60 mph in 12 seconds
+3. Family sedan accommodating 5–6 passengers
+4. Exhaust emissions 0.125/1.7/0.2 gm/mile HC/CO/NOx at 100,000 miles
+5. Luggage capacity of 475 liters
+6. Range of at least 380 miles
+7. Ride, handling, noise, vibration, comfort equivalent to 1994 family sedan
+8. Total cost of ownership equivalent to 1994 family sedan (adjusted for economics)
+9. Minimum useful life of 100,000 miles
+10. Meet present and future safety standards
+11. Be at least 80% recyclable
+12. Concept vehicle demonstration by 2001
+13. Production prototype ready by 2004
+Introduction to Internal Combustion Engine
+33
+
+<<<PAGE 39>>>
+Introduction to Internal Combustion Engine
+hydrogen onboard as it is needed seem to be the practical solution. This is done using
+methanol, gasoline, or some other hydrocarbon fuel to supply the needed hydrogen.
+These fuels, which are easily stored and refueled as a liquid, are passed through a cat-
+alytic reformer that converts them to 
+CO, and 
+The 
+is sent to the fuel cell as
+needed, while the CO and 
+are exhausted to the atmosphere after the CO is con-
+verted to 
+Methanol is the best of these fuels and supplies the most hydrogen, but
+there are other problems in using methanol.
+The various components (membrane, reformer, etc.) of a fuel cell operate at dif-
+ferent temperatures, creating unique cooling demands. Many PEM systems operate at
+CO2.
+CO2
+H2
+CO2.
+H2,
+2000
+1000
+1500
+2000
+2500
+3000
+4000
+5000
+6000
+Vehicle Mass (lbm)
+Vehicle Mass (kg)
+0
+10
+20
+30
+40
+50
+60
+70
+80
+Fuel Economy (mpg)
+HONDA INSIGHT WITH MANUAL TRANSMISSION
+2001 PRIUS
+1998 PRIUS
+AUTOMOBILES
+WITH
+MANUAL
+TRANSMISSIONS
+AUTOMOBILES-MOSTLY WITH
+AUTOMATIC TRANSMISSIONS
+FIGURE 22
+Fuel economy as a function of vehicle mass for automobiles powered with
+internal combustion engines.Also shown are data for three hybrid
+automobiles, the Honda Insight and two models of the Toyota Prius.Adapted
+from [228].
+34
+
+<<<PAGE 40>>>
+Introduction to Internal Combustion Engine
+a temperature of about 80°C, while creating a fair amount of excess heat.This requires
+a very large radiator to transfer the excess heat to the surroundings, low temperature
+heat transfer needing a large surface area.The large air supply openings for these radi-
+ators make it difficult to keep vehicle drag coefficients low. In northern climates, freez-
+ing is a problem when the vehicle is turned off. Water is generated in the fuel cell and
+cannot be left to freeze in cold temperatures. When cold, there is a startup time delay
+problem before the fuel cell reaches operating temperature, usually on the order of
+seconds. Some experimental automobiles are equipped with a battery for startup.
+Weight, cost, and safety problems will be improved upon by evolution, additional de-
+velopment, and large quantity manufacturing.
+There are no mechanical components in a reformer–fuel cell system so there are
+no mechanical breakdowns. However, there is chemical cycling and thermal cycling
+wear. Sulfur and other impurities in fuel and air contaminate cell membranes, reform-
+ers, and other components. Evidence and predictions are that, with cleaner fuel and ad-
+equate filtration, fuel cells will last the lifetime of an automobile.
+9
+ENGINE EMISSIONS AND AIR POLLUTION
+The exhaust of automobiles is one of the major contributors to the world’s air pollution
+problem. Recent research and development has made major reductions in engine
+emissions, but a growing population and a greater number of automobiles means that
+the problem will exist for many years to come.
+During the first half of the 1900s, automobile emissions were not recognized as a
+problem, mainly due to the lower number of vehicles. As the number of automobiles
+grew along with more power plants, home furnaces, and the population in general, air
+pollution became an ever-increasing problem. During the 1940s, the problem was first
+seen in the Los Angeles area due to the high density of people and automobiles, as well
+as unique weather conditions. By the 1970s, air pollution was recognized as a major
+problem in most cities of the United States as well as in many large urban areas around
+the world.
+Laws were passed in the United States and in other industrialized countries
+which limit the amount of various exhaust emissions that are allowed.This put a major
+restriction on automobile engine development during the 1980s and 1990s. Although
+harmful emissions produced by engines have been reduced by over 90% since the
+1940s, they are still a major environmental problem.
+Four major emissions produced by internal combustion engines are hydrocarbons
+(HC), carbon monoxide (CO), oxides of nitrogen (NOx), and solid particulates (part).
+Hydrocarbons are fuel and lubrication particles that did not get burned and smaller non-
+equilibrium particles of partially burned fuel. Carbon monoxide occurs when insufficient
+oxygen is present to fully convert all carbon to 
+or when incomplete air–fuel mixing
+occurs due to the very short engine cycle time. Oxides of nitrogen are created in an en-
+gine when high combustion temperatures cause some normally stable 
+to dissociate
+into monatomic nitrogen N, which then combines with reacting oxygen. Particulates are
+solid carbon particles formed in compression ignition engines and are seen as black
+smoke in the exhaust of these engines. Other emissions found in the exhaust of engines
+include aldehydes, sulfur, lead, phosphorus, etc.
+N2
+CO2
+35
+
+<<<PAGE 41>>>
+Introduction to Internal Combustion Engine
+Two methods are used to reduce harmful engine emissions. One is to improve the
+technology of engines and fuels so that better combustion occurs and fewer emissions
+are generated. The second method is aftertreatment of the exhaust gases. This is done
+by using thermal converters or catalytic converters that promote chemical reactions in
+the exhaust flow.These chemical reactions convert the harmful emissions to acceptable
+and 
+PROBLEMS
+1 List five differences between SI engines and CI engines.
+2 A four-stroke cycle engine may or may not have a pressure boost (supercharger, tur-
+bocharger) in the intake system. Why must a two-stroke cycle engine always have an in-
+take pressure boost?
+3 List two advantages of a two-stroke cycle engine over a four-stroke cycle engine. List two
+advantages of a four-stroke cycle engine over a two-stroke cycle engine.
+4 (a) Why do most very small engines operate on a two-stroke cycle?
+(b) Why do most very large engines operate on a two-stroke cycle?
+(c) Why do most automobile engines operate on a four-stroke cycle?
+(d) Why would it be desirable to operate automobile engines on a two-stroke cycle?
+5 A single-cylinder vertical atmospheric engine with a 1.2 m bore and a piston of 2700 kg
+mass is used to lift a weight. Pressure in the cylinder after combustion and cooling is 22
+kPa, while ambient pressure is 98 kPa.Assume piston motion is frictionless.
+Calculate:
+(a) Mass that can be lifted if the vacuum is at the top of the cylinder and the piston moves
+up. [kg]
+(b) Mass that can be lifted if the vacuum is at the bottom of the cylinder and the piston
+moves down. [kg]
+6 An early atmospheric engine has a single horizontal cylinder with a 3.2-ft bore, a 9.0-ft
+stroke, and no clearance volume. After a charge of gunpowder is set off in the open cylin-
+der, the conditions in the cylinder are ambient pressure and a temperature of 540°F. The
+piston is now locked in position and the end of the cylinder is closed.After cooling to am-
+bient temperature, the piston is unlocked and allowed to move.The power stroke is at con-
+stant temperature and lasts until pressure equilibrium is obtained. Assume the gas in the
+cylinder is air and piston motion is frictionless.Ambient conditions are 70°F and 14.7 psia.
+Calculate:
+(a) Possible lifting force at start of power stroke. [lbf]
+(b) Length of effective power stroke. [ft]
+(c) Cylinder volume at end of power stroke.
+7 Two automobile engines have the same total displacement volume and the same total
+power produced within the cylinders.
+List the possible advantages of:
+(a) A V6 over a straight six.
+[ft3]
+N2.
+CO2, H2
+ O,
+36
+
+<<<PAGE 42>>>
+(b) A V8 over a V6.
+(c) A V6 over a V8.
+(d) An opposed cylinder four over a straight four.
+(e) An in-line six over an in-line four.
+8 A nine cylinder, four-stroke cycle, radial SI engine operates at 900 RPM.
+Calculate:
+(a) How often ignition occurs, in degrees of engine rotation.
+(b) How many power strokes per revolution.
+(c) How many power strokes per second.
+9 A family wishes to buy a new midsize automobile.The two options they consider are (a) a
+standard automobile with an SI engine that gets 31 miles per gallon fuel economy (mpg)
+and costs $18,000; and (b) a hybrid automobile that gets 82 mpg and costs $32,000. On av-
+erage, the family drives 16,000 miles each year, and gasoline costs $1.65 per gallon.
+Calculate:
+(a) Amount of gasoline each vehicle would use each year. [gal]
+(b) Gasoline cost savings of hybrid over standard. [$/year]
+(c) Time it would take to make up the difference in vehicle cost, with fuel savings. Disre-
+gard any interest on car loans and time-worth of money. [months]
+DESIGN PROBLEMS
+1D Design a single-cylinder atmospheric engine capable of lifting a mass of 1000 kg to a
+height of three meters. Assume reasonable values of cylinder temperature and pressure
+after combustion. Decide which direction the cylinder will move, and give the bore, piston
+travel distance, mass of piston, piston material, and clearance volume. Give a sketch of the
+mechanical linkage to lift the mass.
+2D Design an alternate fuel engine to be used in a large truck by designating all engine classi-
+fications used in Section 3.
+3D Design a four-stroke cycle for an SI engine using crankcase compression. Draw schematics
+of the six basic processes: intake, compression, combustion, expansion, blowdown, and ex-
+haust. Describe fully the intake of air, fuel, and oil.
+Answers to Selected Review Problems
+5.
+(a) 6062, (b) 11,462
+6.
+(a) 7991, (b) 4.22, (c) 38.41
+8.
+(a) 80, (b) 4.5, (c) 67.5
+Introduction to Internal Combustion Engine
+37
+
+<<<PAGE 43>>>
+This page intentionally left blank 
+
+<<<PAGE 44>>>
+Operating Characteristics
+From Chapter 2 of Engineering Fundamentals of the Internal Combustion Engine, Second Edition.
+Willard W. Pulkrabek. Copyright © 2004 by Pearson Education, Inc. All rights reserved.
+39
+
+<<<PAGE 45>>>
+Operating Characteristics
+“Electric, hydrocarbon, and steam power are already successfully
+established in use. But their specialization is only beginning. Each
+has highways and byways to be explored, theories to test and sift,
+and principles to be demonstrated. This important work falls not
+only to the professional designer and builder, but to all whose
+interest prompts either suggestion or co-operative effort.”
+The Place of the Automobile
+by Robert Bruce (1900)
+This chapter examines the operating characteristics of reciprocating internal combus-
+tion engines. These include the mechanical output parameters of work, torque, and
+power; the input requirements of air, fuel, and combustion; efficiencies; and emission
+measurements of engine exhaust.
+1
+ENGINE PARAMETERS
+For an engine with bore B (see Fig. 1), crank offset a, stroke length S, turning at an en-
+gine speed of N,
+(1)
+The average piston speed is
+(2)
+N is generally given in RPM (revolutions per minute),
+in m/sec (ft/sec), and B,
+a, and S in m or cm (ft or in.).
+The maximum average piston speed for all engines will normally be in the range
+of 5 to 20 m/sec (15 to 65 ft/sec), with large diesel engines on the low end and high-
+performance automobile engines on the high end.There are two reasons why engines
+Up
+Up = 2SN
+S = 2a
+40
+
+<<<PAGE 46>>>
+operate in this range. First, this is about the safe limit that can be tolerated by materi-
+al strength of the engine components. For each revolution of the engine, each piston is
+accelerated twice from stop to maximum speed and back to stop. At a typical engine
+speed of 3000 RPM, each revolution lasts 0.02 sec (0.005 sec at 12,000 RPM). If en-
+gines operated at higher speeds, there would be a danger of material failure in the pis-
+tons and connecting rods as the pistons are accelerated and decelerated during each
+stroke. From Eq. (2), it can be seen that this range of acceptable piston speeds also de-
+fines a range of acceptable engine speeds, depending on engine size. There is a strong
+inverse correlation between engine size and operating speed. Very large engines with
+bore sizes on the order of 0.5 m (1.6 ft) typically operate in the 200 to 400 RPM range,
+while the very smallest engines (model airplane) with bores on the order of 1 cm (0.4
+in.) operate at speeds of 12,000 RPM and higher. Race cars give us an example of en-
+gines being run at speeds above this safe range (e.g., Indianapolis 500 Race). These
+engines are generally operated at piston speeds up to 35 m/sec and engine speeds up-
+wards of 14,000 RPM. Even though these engines receive far better care than the av-
+erage automobile engine, a percentage of them experience failure within a few
+hundred miles. Table 1 gives representative values of engine speeds and operating
+variables for engines of various sizes. Automobile engines usually operate in a speed
+range of 500 to 5000 RPM, with a cruising speed of about 2500 RPM.
+The second reason why maximum average piston speed is limited is because of
+the gas flow into and out of the cylinders. Piston speed determines the instantaneous
+flow rate of air–fuel into the cylinder during intake and exhaust flow out of the cylin-
+der during the exhaust stroke. Higher piston speeds would require larger valves to
+allow for higher flow rates. In most engines, valves are at a maximum size with no room
+for enlargement.
+a
+s
+r
+S
+B
+TDC
+BDC
+Vc
+Vd
+
+FIGURE 1
+Piston and cylinder geometry of reciprocating
+engine.
+rod length;
+offset;
+position;
+angle;
+volume;
+volume.
+Vd = displacement
+Vc = clearance
+u = crank
+s = piston
+a = crank
+B = bore; S = stroke; r = connecting
+Operating Characteristics
+41
+
+<<<PAGE 47>>>
+Operating Characteristics
+Bore sizes of engines range from 0.5 m down to 0.5 cm (20 in. to 0.2 in.).The ratio
+of bore to stroke, B/S, for small engines is usually from 0.8 to 1.2. An engine with
+is often called a square engine. If stroke length is longer than bore diameter the
+engine is under square, and if stroke length is less than bore diameter the engine is over
+square. Very large engines are always under square, with stroke lengths up to four
+times bore diameter.
+The distance between the crank axis and wrist pin axis is given by
+(3)
+where
+which is measured from the cylinder centerline and is zero
+when the piston is at TDC
+When s is differentiated with respect to time, the instantaneous piston speed 
+is
+obtained:
+(4)
+The ratio of instantaneous piston speed divided by the average piston speed can
+then be written as
+(5)
+where
+(6)
+R is the ratio of connecting rod length to crank offset and usually has values of 3
+to 4 for small engines, increasing to 5 to 10 for the largest engines. Figure 2 shows the
+effect of R on piston speed.
+Displacement, or displacement volume,
+is the volume displaced by the piston
+as it travels from BDC to TDC:
+(7)
+Vd = VBDC - VTDC
+Vd,
+R = r>a
+Up>Up = 1p>22 sin u[1 + 1cos u> 2R2 - sin2 u2]
+Up = ds>dt
+Up
+ u = crank angle,
+ r = connecting rod length
+ a = crankshaft offset
+s = a cos u + 2r2 - a2sin2 u
+B = S
+TABLE 1
+Typical Engine Operating Parameters
+Model Airplane 
+Automobile 
+Large Stationary 
+Two-Stroke Cycle
+Four-Stroke Cycle
+Two-Stroke Cycle
+Bore (cm)
+2.00
+9.42
+50.0
+Stroke (cm)
+2.04
+9.89
+161
+Displacement/cyl (L)
+0.0066
+0.69
+316
+Speed (RPM)
+13,000
+5200
+125
+Power/cyl (kW)
+0.72
+35
+311
+Average Piston Speed (m/sec)
+8.84
+17.1
+6.71
+Power/Displacement (kW/L)
+109
+50.7
+0.98
+bmep (kPa)
+503
+1170
+472
+42
+
+<<<PAGE 48>>>
+Operating Characteristics
+0
+0
+30
+60
+90
+120
+150
+180
+0.2
+0.4
+0.6
+0.8
+1
+1.2
+1.4
+1.6
+1.8
+R  3
+R  5
+R  10
+Up/Up
+CRANK ANGLE     (degrees)
+
+FIGURE 2
+Instantaneous piston speed relative to average piston speed as a function of crank angle
+for various R values, where 
+rod length,
+offset.
+a = crankshaft
+R = r>a, r = connecting
+Some books call this swept volume. Displacement can be given for one cylinder
+or for the entire engine. For one cylinder,
+(8)
+For an engine with 
+cylinders,
+(9)
+where
+Engine displacements can be given in 
+and, most commonly, in
+liters (L).
+Typical values for engine displacement range from 
+for small
+model airplanes, to about 8 L 
+for large automobiles, to much larger numbers
+1490 in.32
+0.1 cm3 10.0061 in.32
+1 L = 10-3 m3 = 103 cm3 = 61.2 in.3
+m3, cm3, in.3,
+ Nc = number of engine cylinders
+ S = stroke
+ B = cylinder bore
+Vd = Nc1p>42B2S
+Nc
+Vd = 1p>42B2S
+43
+
+<<<PAGE 49>>>
+Operating Characteristics
+HISTORIC—SMALL HIGH-SPEED ENGINES
+Engines for model airplanes and boats have been built with total displacement volumes as
+low as 
+(
+). Some of these engines, which are commercially available,
+can operate at speeds up to 38,000 RPM and have power output on the order of 0.15 to 1.5
+kW (0.2 to 2.0 hp). It is interesting that the average piston speeds of these engines at high
+speed still fall within the general range of 5 to 20 m/sec.
+0.0046 in.3
+0.075 cm3
+HISTORIC—CHRISTIE RACE CAR
+A 1908 Christie race car had a V4 engine of  
+(46 L) displacement [45].
+2799 in.3
+for large ship engines. The displacement of a modern average automobile engine is
+about 1.5 to 2.5 liters.
+For a given displacement volume, a longer stroke allows for a smaller bore
+(under square), resulting in less surface area in the combustion chamber and corre-
+spondingly less heat loss. This increases thermal efficiency within the combustion
+chamber. However, the longer stroke results in higher piston speed and higher friction
+losses that reduce the output power which can be obtained off the crankshaft. If the
+stroke is shortened, the bore must be increased and the engine will be over square.This
+decreases friction losses but increases heat transfer losses. Most modern automobile
+engines are near square, with some slightly over square and some slightly under square.
+This decision is dictated by design compromises and the technical philosophy of the
+manufacturer. Very large engines have long strokes with stroke-to-bore ratios as high
+as 4:1.
+Minimum cylinder volume occurs when the piston is at TDC and is called the
+clearance volume 
+We have
+(10)
+(11)
+ VBDC = Vc + Vd
+ Vc = VTDC
+Vc.
+The compression ratio of an engine is defined as
+(12)
+Modern spark ignition (SI) engines have compression ratios of 8 to 11, while
+compression ignition (CI) engines have compression ratios in the range 12 to 24.
+Engines with superchargers or turbochargers usually have lower compression ratios
+than naturally aspirated engines. Because of limitations in engine materials, technology,
+and fuel quality, very early engines had low compression ratios, on the order of 2 to 3.
+rc = VBDC>VTDC = 1Vc + Vd2>Vc = vBDC>vTDC
+44

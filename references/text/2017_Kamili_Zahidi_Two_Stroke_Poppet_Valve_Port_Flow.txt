@@ -1,0 +1,608 @@
+TITLE: The two-stroke poppet valve engine. Part 1: Intake and exhaust ports flow experimental assessments
+YEAR: 2017
+FILE: 2017_Kamili_Zahidi_Two_Stroke_Poppet_Valve_Port_Flow.pdf
+PAGES: 9
+EXTRACTED_WITH: PyMuPDF PyMuPDF 1.28.2
+
+
+===== page 1 =====
+
+IOP Conference Series:
+Materials Science and
+Engineering
+     
+PAPER • OPEN ACCESS
+The two-stroke poppet valve engine. Part 1: Intake
+and exhaust ports flow experimental assessments
+To cite this article: M Kamili Zahidi et al 2017 IOP Conf. Ser.: Mater. Sci. Eng. 257 012023
+ 
+View the article online for updates and enhancements.
+You may also like
+Analysis of the interactive effects of
+scavenge parameters on spark ignition
+two-stroke diesel engines
+Tingting Sun, Shangxue Wang, Xuesong
+Zhang et al.
+-
+Application of MAO coatings in a two-
+stroke internal combustion engine for
+thermal protection against burning-through
+of the piston
+R Sakulin, D Rezvanov and T Rezyapov
+-
+Numerical calculation of gas exchange in
+two-stroke engine for aircraft
+I Borisenko, Yu Grishin and V Bakulin
+-
+This content was downloaded from IP address 202.88.229.92 on 28/10/2026 at 16:25
+
+
+===== page 2 =====
+
+1
+Content from this work may be used under the terms of the Creative Commons Attribution 3.0 licence. Any further distribution
+of this work must maintain attribution to the author(s) and the title of the work, journal citation and DOI.
+Published under licence by IOP Publishing Ltd
+1234567890
+4th International Conference on Mechanical Engineering Research (ICMER2017) 
+IOP Publishing
+IOP Conf. Series: Materials Science and Engineering 257 (2017) 012023 doi:10.1088/1757-899X/257/1/012023
+ 
+ 
+ 
+ 
+ 
+ 
+The two-stroke poppet valve engine. Part 1: Intake and 
+exhaust ports flow experimental assessments 
+M Kamili Zahidi1*, M Razali Hanipah1, 2, D Ramasamy1, 2, M M Noor1, 2 , K 
+Kadirgama1, 2, M M Rahman1, 2 
+ 
+1Automotive Engineering Centre (AEC), Universiti Malaysia Pahang, 26600, Pekan, Pahang, 
+Malaysia. 
+2Automotive Engineering Research Group (AERG), Faculty of Mechanical Engineering, 
+Universiti Malaysia Pahang, 26600, Pekan, Pahang, Malaysia. 
+ 
+*Corresponding author: kamili.zahidi@gmail.com 
+Abstract. A two-stroke poppet valve engine is developed to overcome the common problems 
+in conventional two-stroke engine designs. However, replacing piston control port with poppet 
+valve will resulted different flow behaviour. This paper is looking at experimental assessment 
+on a two-stroke poppet valve engine configuration to investigate the port flow performance. 
+The aims are to evaluate the intake and exhaust coefficient of discharge and assess the two-
+stroke capability of the cylinder head. The results has shown comparable coefficient of 
+discharge values as production engine for the intake while the exhaust has higher values which 
+is favourable for the two-stroke cycle operation. 
+1.  Introduction  
+Engine downsizing concept has been adopted by most automotive manufacturers to increase the power 
+to weight ratio [1]. Engine downsizing are done by reducing the weight of the engine using smaller 
+capacity and intake air boosting to increase the power.  
+Two-stroke engine cycle has been known to have higher power to weight ratio. However, the 
+conventional two-stroke engines use piston control port which poses several problems. The first 
+problem is bore distortion caused by an asymmetric temperature of the cylinder liner. Bore distortion 
+is increasing the wear rate or worst case it will lock-up the piston[2]. The second problem is lubricant 
+oil easily enter combustion cylinder via intake port resulting in higher pollutants in the exhaust 
+emission[3]. 
+Two-stroke poppet valve engine has been proposed by several researchers to eliminate the problem 
+and at the same time increase the engine performance [4-7]. Each researcher has experiment different 
+specification and design of two-stroke poppet valve engine. Nakano, et al reported the converted four-
+stroke engine into two-stroke poppet valve engine produce better power than original engine when 
+compare at the same engine speed [8]. While, Sato, et al has design shrouded intake valve to overcome 
+two-stroke poppet valve problem. The problem is short-circuit phenomenon during scavenging process 
+[2, 3, 9]. 
+In this paper, a production four-stroke cycle engine is converted into a two-stroke cycle engine. 
+Then, the port flow performance is investigated by using flow bench.  
+2.  Engine specifications 
+The investigation is conducted on a 65cc four-stroke gasoline engine. The bore of the engine is 50mm 
+and stroke is 33mm while the compression ratio is 9.5:1. In terms of valves specifications, it has 
+
+
+===== page 3 =====
+
+2
+1234567890
+4th International Conference on Mechanical Engineering Research (ICMER2017) 
+IOP Publishing
+IOP Conf. Series: Materials Science and Engineering 257 (2017) 012023 doi:10.1088/1757-899X/257/1/012023
+ 
+ 
+ 
+ 
+ 
+ 
+maximum valve lift of 4 mm, intake valve diameter of 20mm and for exhaust is 18mm. The engine 
+specification is as shown in Table 1. 
+ 
+Table 1. The engine specification. 
+Parameter  
+Value  
+Displacement volume   
+65 cm3 
+Bore  
+50 mm 
+Stroke  
+33 mm 
+Compression ratio 
+9.5:1 
+Maximum valve lift 
+4 mm 
+Intake valve diameter 
+20 mm 
+Exhaust valve diameter 
+18 mm 
+ 
+The head design is shown in Figure 1. The valve design is straight at 90° from the horizontal axis. 
+It has one valve is for intake and another valve is for exhaust. The left valve in Figure 1 is exhaust 
+valve and the right valve is intake valve.  
+ 
+ 
+Figure 1. The engine design. 
+3.  Experimental investigations 
+The experimental investigation is conducted into two phases. First phase involves experimental setup 
+preparation and second is the experimental procedure. The preparation involved is the design and 
+fabrication of adapter to place an engine head on a flow bench. Then, the experiment was run and the 
+data is being calculated to find the coefficient of discharge. There are two types of testing mode; the 
+intake test by setting the flow bench to draw the air from surrounding into flow bench through intake 
+port. Exhaust test is for exhaust by setting the flow bench to blow the air through the exhaust port.  
+Flow bench is an equipment used to measure air flow rate through orifice plate by means of 
+differential pressure. The flow bench is capable of measuring velocity, temperature, and volume flow 
+rate [10] with relevant sensors installed on the equipment during testing. 
+3.1.  Experimental setup preparation 
+There two components need to be fabricated. First is engine the head adapter to mount engine head on 
+SuperFlow SF-1020 flow bench. The flow bench can be used to test a wide range of cylinder bore 
+diameters. Thus, the adapter is necessary to fit engine head with the flow bench standard sized bore. 
+The adapter also to ensure there is no air leakage. The second part is valve pusher to vary the valve lift 
+during the experiment. The experiment setup is shown in Figure 2. In the setup, dial gauge was used to 
+measure the valve lift. 
+Exhaust 
+valve 
+Intake 
+valve 
+Exhaust 
+port 
+Intake 
+port 
+
+
+===== page 4 =====
+
+3
+1234567890
+4th International Conference on Mechanical Engineering Research (ICMER2017) 
+IOP Publishing
+IOP Conf. Series: Materials Science and Engineering 257 (2017) 012023 doi:10.1088/1757-899X/257/1/012023
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Figure 2. Engine head setup on flow bench. 
+3.2.  Experimental procedure 
+In this paper, the engine head was tested without manifold or surge tank. The experiment started with 
+intake port test during which the exhaust valve remains closed and the pump was set into suction 
+mode. The data was recorded at every 0.5mm valve lift from 0mm until the maximum lift of 5mm. 
+Next, the experiment resumed for exhaust port test where blowing mode was selected and the intake 
+valve closed. Data were taken at similar valve lift intervals and the procedures were repeated five 
+times for consistencies. The results are presented in terms of L/D ratio as it is an universal ratio used 
+elsewhere [10]. The formula for L/D ratio is given in equation (1) and the results are shown in Table 2. 
+ 
+𝐿𝐷
+⁄
+𝑟𝑎𝑡𝑖𝑜=
+𝑉𝑎𝑙𝑣𝑒 𝑙𝑖𝑓𝑡 (𝐿)
+𝑉𝑎𝑙𝑣𝑒 𝑑𝑖𝑎𝑚𝑒𝑡𝑒𝑟 (𝐷) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ (1) 
+ 
+Table 2. Intake and Exhaust L/D ratio. 
+Valve Lift (mm) 
+Intake L/D ratio 
+Exhaust L/D ratio 
+0.5 
+0.025 
+0.028 
+1.0 
+0.050 
+0.056 
+1.5 
+0.075 
+0.083 
+2.0 
+0.100 
+0.111 
+2.5 
+0.125 
+0.139 
+3.0 
+0.150 
+0.167 
+3.5 
+0.175 
+0.194 
+4.0 
+0.200 
+0.222 
+4.5 
+0.225 
+0.250 
+5.0. 
+0.250 
+0.278 
+ 
+From the experimental data, the coefficient is calculated in order to assess the efficiency of air flow 
+[11]. The higher the coefficient value results better air flow into the engine. Thus, the coefficients give 
+practical advices to engine designers and tuner on sizing and location of ports and valves[12]. The 
+coefficient of discharge, CD can be calculated by using equation (2). 
+
+
+===== page 5 =====
+
+4
+1234567890
+4th International Conference on Mechanical Engineering Research (ICMER2017) 
+IOP Publishing
+IOP Conf. Series: Materials Science and Engineering 257 (2017) 012023 doi:10.1088/1757-899X/257/1/012023
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+𝐶𝐷=
+ṁ𝑎
+ṁ𝑡  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+(2) 
+ 
+Where ṁa is actual mass flow rate and ṁt is theoretical mass flow rate. The actual mass flow rate can 
+be calculated by using equation (3). 
+ 
+ṁ𝑎= 𝑄
+𝑃
+𝑅𝑇  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+(3) 
+ 
+Where Q is volume flow rate, P is the local pressure, R is a gas constant of air and T is air 
+temperature. While the theoretical mass flow rate can be calculated by using equation (4). 
+ 
+ṁ𝑡= 𝜌𝑠𝐴𝑘𝑉𝑠 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+(4) 
+ 
+Where ρs is the air density, Ak is the valve seat area and Vs is flow velocity. The flow velocity can be 
+calculated by using equation (5). 
+ 
+𝑣𝑠= √2𝛾
+𝛾−1 𝑅𝑇[1 −(
+𝑃2
+𝑃1)
+𝛾−1
+𝛾]   
+ 
+ 
+ 
+ 
+ 
+ 
+(5) 
+ 
+Where P1 is upstream pressure, P2 is downstream pressure and γ is an index of isentropic expansion. 
+As long as the flows remain in the subsonic region no choked flow occurs in the design. 
+ 
+The flow coefficient, Cf has same equation with CD. But, it has different area calculation for ṁt in 
+equation (4). For flow coefficient, the area is at the valve throat area. 
+4.  Results and discussion  
+The result from flow bench experiment is volume flow rate data of intake and exhaust port. Then the 
+experimental result is calculated with theoretical equation of coefficient. The result from coefficient 
+calculation is compared against small block Chevrolet (SB Chevy) engine coefficient. 
+ 
+ 
+Figure 3. Volume flow rate through intake port. 
+0.0
+5.0
+10.0
+15.0
+20.0
+25.0
+30.0
+0.00
+0.05
+0.10
+0.15
+0.20
+0.25
+0.30
+Volume flowrate (cfm) 
+L/D 
+Test 1
+Test 2
+
+
+===== page 6 =====
+
+5
+1234567890
+4th International Conference on Mechanical Engineering Research (ICMER2017) 
+IOP Publishing
+IOP Conf. Series: Materials Science and Engineering 257 (2017) 012023 doi:10.1088/1757-899X/257/1/012023
+ 
+ 
+ 
+ 
+ 
+ 
+Figure 3 shows the two result of the air volume flow rate through the intake port. Both results show 
+a small different value of air volume flow rate. The volume flow rate is 0 cubic feet per minute, CFM 
+at 0 L/D ratio. Then it increases gradually until 25.8 CFM at 0.25 L/D ratio. 
+ 
+ 
+Figure 4. Volume flow rate exhaust port. 
+Figure 4  present the two result of the air volume flow rate through the exhaust port. The both 
+results also have small different value. The volume flow rate at 0 L/D ratio is 0 CFM and increase 
+gradually to 23.8 CFM at 0.278 L/D ratio.  
+ 
+ 
+Figure 5. Flow coefficient of intake port. 
+Figure 5 shows the flow coefficient of intake port two-stroke poppet valve engine and compare 
+with SB Chevy. The figure shows the intake port flow coefficient did not have much different with SB 
+Chevy. The coefficient is 0 at 0 L/D ratio and increases gradually to 0.4 at 0.25 L/D for two-stroke 
+poppet valve engine. While SB Chevy coefficient is 0 at 0 L/D and increases gradually to 0.42 at 0.25 
+L/D ratio. 
+ 
+0.0
+5.0
+10.0
+15.0
+20.0
+25.0
+30.0
+0.00
+0.05
+0.10
+0.15
+0.20
+0.25
+0.30
+Volume flowrate (cfm) 
+L/D 
+Test 1
+Test 2
+0.00
+0.10
+0.20
+0.30
+0.40
+0.50
+0.00
+0.05
+0.10
+0.15
+0.20
+0.25
+0.30
+Coefficient 
+L/D 
+Test 1
+Test 2
+SB chevy
+
+
+===== page 7 =====
+
+6
+1234567890
+4th International Conference on Mechanical Engineering Research (ICMER2017) 
+IOP Publishing
+IOP Conf. Series: Materials Science and Engineering 257 (2017) 012023 doi:10.1088/1757-899X/257/1/012023
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Figure 6. Discharge coefficient of intake port. 
+Figure 6 present discharge coefficient of intake port for both head engine. The result shows SB 
+Chevy has higher coefficient at 0 until 0.05 L/D ratio. At 0 L/D ratio, SB Chevy has 0.55 coefficient 
+and two-stroke poppet valve engine is 0.32 and 0.26 coefficient. Then the coefficient for both engine 
+head have similar values at 0.05, 0.1 and 0.15 L/D ratio with 0.54, 0.61 and 0.57 coefficient 
+respectively. The highest coefficient value is at 0.1 L/D ratio. Then, the values decrease gradually until 
+0.25 L/D ratio with 0.4 coefficients for two-stroke poppet valve and 0.42 coefficients for SB Chevy. 
+The result show the intake port coefficient of two-stroke poppet valve engine is almost same value 
+with SB Chevy. It is show the two-stroke poppet valve intake port is comparable with SB Chevy. 
+ 
+ 
+Figure 7. Flow coefficient of exhaust port. 
+Figure 7 shows flow coefficient result of the exhaust port. It shows two-stroke poppet valve has 
+high coefficient value compare to SB Chevy. Both heads start with 0 coefficients at 0 L/D ratio. But at 
+last or 0.278 L/D ratio, the two-stroke poppet valve has 0.44 coefficients and SB Chevy has 0.27 
+coefficients.  
+0.00
+0.10
+0.20
+0.30
+0.40
+0.50
+0.60
+0.70
+0.00
+0.05
+0.10
+0.15
+0.20
+0.25
+0.30
+Coefficient 
+L/D 
+Test 1
+Test 2
+SB chevy
+0.00
+0.10
+0.20
+0.30
+0.40
+0.50
+0.00
+0.05
+0.10
+0.15
+0.20
+0.25
+0.30
+Coefficient 
+L/D 
+Test 1
+Test 2
+SB chevy
+
+
+===== page 8 =====
+
+7
+1234567890
+4th International Conference on Mechanical Engineering Research (ICMER2017) 
+IOP Publishing
+IOP Conf. Series: Materials Science and Engineering 257 (2017) 012023 doi:10.1088/1757-899X/257/1/012023
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Figure 8. Discharge coefficient of exhaust port. 
+Figure 8 present discharge coefficient of the exhaust port. It also shows the two-stroke poppet valve 
+has higher discharge coefficient compare to SB Chevy. The two-stroke poppet valve engine has 90% 
+higher coefficient between 0 until 0.05 L/D ratio. Then the percentage of coefficient different is 
+reducing gradually until 46% at 0.279 L/D ratio. The result show the coefficient of two-stroke poppet 
+valve engine exhaust port has better coefficient compare to SB Chevy. The higher coefficient show the 
+exhaust gas can release faster at limited time in two-stroke cycle duration. 
+5.  Conclusions  
+The port flow experimental investigation of the two-stroke poppet valve has highlighted the following 
+results: The flow and discharge coefficient of the intake port has similar values for two-stroke poppet 
+valve and SB Chevy. Except at zero L/D ratio of intake CD, the SB Chevy has 89% higher value than 
+the two-stroke poppet valve. The flow and discharge coefficient of the exhaust port for the two-stroke 
+poppet valve has higher values than SB Chevy. Thus, it is possible to operate two-stroke cycle on the 
+head as the flow performance through the exhaust valve is higher at lower lift. Further, the flow is 
+capable of maintaining the subsonic flow without choking as illustrated by the low lift performance 
+trend. 
+Acknowledgement 
+The authors would like to thank Universiti Malaysia Pahang (www.ump.edu.my) for providing 
+laboratory facilities and financial assistance under project no. RDU160313. 
+References 
+[1] 
+Golloch R and Merker G P 2005 Internal combustion engine downsizing MTZ worldwide 66 20-
+2 
+[2] 
+Zhang Y 2014 Experimental investigation of CAI combustion in a two-stroke poppet valve di 
+engine. Brunel University) 
+[3] 
+Nora M D 2015 Experimental and numerical study of a two-stroke poppet valve engine fuelled 
+with gasoline and ethanol. In: Department of Mechanical, Aerospace and Civil Engineering: 
+Brunel University) 
+[4] 
+Stokes J, Hundleby G E, Lake T H and Christie M J 1992 Development Experience of a Poppet-
+Valved Two-Stroke Flagship Engine. SAE International) 
+0.00
+0.10
+0.20
+0.30
+0.40
+0.50
+0.60
+0.70
+0.00
+0.05
+0.10
+0.15
+0.20
+0.25
+0.30
+Coefficient 
+L/D 
+Test 1
+Test 2
+SB chevy
+
+
+===== page 9 =====
+
+8
+1234567890
+4th International Conference on Mechanical Engineering Research (ICMER2017) 
+IOP Publishing
+IOP Conf. Series: Materials Science and Engineering 257 (2017) 012023 doi:10.1088/1757-899X/257/1/012023
+ 
+ 
+ 
+ 
+ 
+ 
+[5] 
+Nomura K and Nakamura N 1993 Development of a new two-stroke engine with poppet-valves 
+Toyota S-2 engine: Editions OPHRYS) 
+[6] 
+Dunn P F N F, AU), Rutherford, Robert Matthew (Nundah, AU) 2003 Two-stroke engine.  
+(United States: Rotec Design Ltd. (Queensland, AU)) 
+[7] 
+Rebhan M and Stokes J 2009 Two-stroke/four-stroke multicylinder gasoline engine for 
+downsizing applications MTZ worldwide 70 40-5 
+[8] 
+Nakano M, Sato K and Ukawa H 1990 A Two-Stroke Cycle Gasoline Engine with Poppet 
+Valves on the Cylinder Head. SAE International) 
+[9] 
+Sato K, Ukawa H and Nakano M 1992 A Two-Stroke Cycle Gasoline Engine with Poppet 
+Valves in the Cylinder Head - Part II. SAE International) 
+[10] Abdul R. Ismail R A B, Semin 2008 An Investigation of Valve Lift Effect on Air Flow and 
+Coefficient of Discharge of Four Stroke Engines Based on Experiment American Journal of 
+Applied Sciences 5 9 
+[11] S.A.Sulaiman, S.H.M.Murad, Ibrahim I and Karim Z A A 2010 Study of flow in air-intake 
+system for a single-cylinder go-kart engine International Journal of Automotive and Mechanical 
+Engineering (IJAME) 1 14 
+[12] Algieri A 2011 An Experimental Analysis of the Fluid Dynamic Efficiency of a Production 
+Spark-Ignition Engine during the Intake and Exhaust Phase ISRN Mechanical Engineering 2011 
+ 

@@ -1,0 +1,20 @@
+=== QUB 400 case A, 3000 rpm WOT SCRE, 5 cycles ===
+published (Fig.5.9): power 12.20 kW, BMEP 6.14 bar, DR 0.854, SE 0.818, TE 0.504
+
+variant                    P[kW]      BMEP      BSFC       DR       SE       TE
+--------------------------------------------------------------------------------------
+repaired                  12.534     6.311     475.8   0.8999   0.8010   0.4915
+as_printed                13.826     6.962     424.9   0.8865   0.8877   0.5439
+--------------------------------------------------------------------------------------
+
+POWER BIAS vs Blair's 12.20 kW
+  repaired   : 12.534 kW  ->  factor 1.0274  (+2.7 %)
+  as-printed : 13.826 kW  ->  factor 1.1333  (+13.3 %)
+  repair effect on QUB 400 power: -9.3 %
+
+Other repaired-vs-published ratios:
+  BMEP 1.0279   BSFC 1.0254   DR 1.0537   SE 0.9792   TE 0.9753
+
+BIAS FACTORS TO USE (repaired code):
+  power  divide by 1.0274
+  bmep   divide by 1.0279

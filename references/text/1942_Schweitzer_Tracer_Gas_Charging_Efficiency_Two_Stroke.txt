@@ -1,0 +1,2925 @@
+TITLE: The Tracer Gas Method of Determining the Charging Efficiency of Two-stroke-cycle Diesel Engines (NACA TN-838)
+YEAR: 1942
+FILE: 1942_Schweitzer_Tracer_Gas_Charging_Efficiency_Two_Stroke.pdf
+PAGES: 24
+EXTRACTED_WITH: PyMuPDF PyMuPDF 1.28.2
+
+
+===== page 1 =====
+
+, 
+, 
+t , 
+\ 
+\ \ 
+--
+J 
+I 
+~. 
+\./ 
+TEcmnCAL HOTES 
+NAT I ONAL ADVISORY CO!·nHTmEE FOR AERO 'TAUTICS 
++: 
+>if 
+THE' T,RACER (}AS METEOD OF DETERIHNIl~G T::E 
+CHARGrNG EF?lCIENCY OF TWO-STROKE-CYCLE DrES~L ENGiNES 
+By P. H. Schweitzer and Frank DeLuc ~ , Jr . 
+School of Engineering 
+The Pennsylvania State Colleg e 
+Wa!1hingt oIJ. 
+January 1942 
+
+
+===== page 2 =====
+
+:1r'L 
+UA'I'IOITAL ADYI SORY COmUTTEE FOR AEROliAUT ICS 
+TSC HN ICAL NOTE liO . 838 
+THE TRACER GAS. ·.tETHOD OF 
+DETER!!I;TUrG THE CH.A.RGETG EFF ICI :EaT"CY 
+OF T~O - STROK! - CY CLE DIESEL ETIGINES 
+By P. E , Sc hw~ itzer and Frank DeLuca, Jr . 
+SUm iARY 
+A conveni ent met ho d has been developed fQr d etermin-
+ing the scavenging efficiency or the charging efficiency 
+of tlro - stroke- cycle engi nes . 
+The method 
+c o ~sists of intro-
+ducing a suitabl e t rac e r ga s 
+i~ to the inl e t ai r of t h e 
+runni ng engine and ceasuri ng che nicall y i ts concentration 
+both i n the inlet and eXhaust gas. 
+;:ononethylac ine 
+CH3 lTEa 
+was found suitable for the purp ose a s i t burns alnost coo-
+pletely during cO Llbustion , whereas the "short - circuited" 
+portion doc s not burn at al l and can Dc dete r n ined ~uan ti ­
+tatively in the exhau st . 
+The 
+~ ethod was teste d b oth on 
+four - stroke and en two - stroke engines and is c onsidered 
+accur ate withi n 1 pe rc ent . 
+I:rTRODUCT I ON 
+The dcvel opnent of two- stroke - cycle engines ~sually 
+ce n ters a round the problce of obt a ining goo d scaveng i ng 
+efficiency (refer en c e 1). 
+The concept 
+II scavengi ng e·ffi -
+ciency" i s , however , rathe r elusive . 
+No generally acce pt-
+ed definiti on exists and attenpts to oea sure the success 
+of scaveng i ng experinentally hav e been unsatisfactory . 
+The object of thi s pape r is first to establish a consist-
+ent teroinology and the n to describe a siople expe ri nental 
+method to oeasure and ·evaluate the succ6ss of scavengi ng 
+and charging a two - stroke- ci cle engine . 
+This work was done in the Engineering Experinent Sta-
+tion of The Pennsylvania State Col l ege unde r the direc-
+tion 6f Professor F . G. He chler who followed the p ~o g ress 
+of and ass i oted i n the work . 
+
+
+===== page 3 =====
+
+2 
+FACA Techni cal Eote lTo. 838 
+The pri~ary phase of the preIioinary 
+investi~ation 
+\1aS done by Dr . Kuo Pin,;;, resea rc h assistant. 
+Ur . W. R. 
+RouSh and Mr. I. Zipkin, senior and graduat e students , 
+helped in the cheoical phase of the work . 
+Valuable advice 
+was given by Dr . C. C. Wright , a ss ociate profes sor of 
+Fuel Te chn ology a~d Dr. J . D. Aston , professor of or ganic 
+cheoistry , The Pen~sylvania State College . 
+Their assist-
+ance is grateful ly a c kno\dedge d. 
+TEP.I·!H!OLOGY 
+In any interna l - c onb us t io ~ engine the output is lar g e-
+l y dete r oined by the nu nbe r of oxygen o olecul es that can be 
+pac ked i nto the cyl i n d e r evo ry oinute . 
+The naxi ou o a n ount 
+of fue l burned wi l l be c ont roll od by the anount of oxygen 
+availab l e and the p ower output wi l l var y in direct rati o to 
+it prov i ded that the theroal effi c i ency and t he ex coss- air 
+fa ctor are constant . 
+I n a four - stroke- cyc l e engi ne burni ng liquid :t:t!cl \lith c.t-
+n o spher i c a ir, the volune t ric effi cien c y cay se r ve a s a 
+ceasur e of t he suc c ess of fill i ng the cylind er \vith oxy-
+gen . 
+Vo l u netr i c effi c iency i s defined as the aoount of 
+fr esh air in the cyl i nder \1he~ the inlet val ve c l oses , ex-
+pre ssed i n u llit s of voluoe at n or na l te.nperatur e - p r essure 
+condi ti ons ( 60 0 F tenpe r atu ~ e and 29 . 92 in . lig pressure) , 
+divided by the d i splac e oent v ol une . 
+Thi s v a l uo i s a lrue 
+index of t h e f ill i nb succes s be c a u se the nu nbe r of oxygen 
+no l o cu l e s t r appod in the cy l inder and a va i lable for coo -
+bustion wi l l bo i n d i roct ratio to t h o volucotr i c offi-
+ciency . 
+I t c an be sh own tha t i n a four - stroke- cy cl e OD-
+gine a linear r e l a t i on oxists between the brake Dean ef -
+f e ctive pro ssure and t h e voluDe t ric effi c i ency as f ol low s ; 
+0 . 4 1 4 . 5 on 
+boep = 1 80 --- ---- 'Ivol 
+f 
+Ar th. 
+. 
+(1) 
+whore 
+Tlvol 
+den oto's ' t he voluDe t r ic or"fic ioncy a s d.e fined , 
+f 
+the spo cif ie f u e l eonsu opti on, pounds pe r b r .ako h orse -
+powor - hour , and 
+A' 
+the oxcess"':air fa c to r, 'v/hicn is t ho 
+ratio betwoen the actual air _ fuel rati o and the theoreti-
+cal, or 
+stoichio ~ etric
+, air- fuel ratio r/rth ' 
+Sinco ~h e 
+a c t u al air- fuel r atio is the ratio betwoen t he we i ght of 
+ai r available for conbustion " ' nure 
+and the woight of 
+f u e l burned , and the stoi chiooetrl c ai r- fue l ratio is 
+r 
+~
+NACA Te chnical Note No . 838 
+3 
+equal to ·the r at io of the weight of the the oret ical aoount 
+of air ,th required t o 
+cODplet~ly burn the san e anount 
+of fuel to the we i ght of fuel, 
+A 
+r 
+rth 
+Vpure 
+Vth 
+For an a vorage Die~el f uel the the er etical air- fu e l 
+r at io is 14 . 5 an d 
+t~ e specific fuel consuopt ion of an av-
+e rage enginc is 0 . 4 p ound per brake horsepower- hour ; for 
+a ~ ave r age euse , 
+cq~ation ( 1 ) can . the refor e , be writt en 
+a s 
+beep 
+180 T1vol 
+A 
+If the specific fuel ponsuopt ion 
+f 
+is expressed a s 
+pounds of fuel per i ndicated horsepower , equation (1) 
+gives th e nenn i ndicat ed pre ssure 
+nip 
+i nstead of b r ~ke 
+ne~n effective pruss u ro . 
+For an engine in ~h ich the cy~inder charge is ' pur e air . 
+equation (1) holds exactly . 
+Even i n four - stroke- cycle ~n­
+gines , h oweve r , there is SOJ;le contaoir.('.tion of t"he char ge 
+by the r'esidual gases of th e p r eceding conbuS"tion and in a 
+h/o- stroke- cycle ·engi ne the eontar.1inat ion is appr~ciab l e . 
+Equation. (1 ) no longer holds in that case because the 
+prake nean' effective pre ssure is ouch affe 'ct ed by an nddi-
+tiona·l fa,ct·or , the scavenging efficiency , \f::'ich . expresses 
+thc degr ee of cpntanination of the cylinder charge . 
+In the ~n g lish literature t~e te r o "scavenging effi-
+ciency" has be en variously defined and frequently used in 
+. un equi vocal Qanner without definition . 
+The value of a 
+cons i stent systeQ of definitions becoees npparent by an 
+analysis of the charging and seavenging processes . 
+Fi gur e 1 is a 
+diugra~Datic r epresentation of the 
+charging p rocess in the engine . 
+The hatched area s repre -
+sent pur e a ir and t he cr os s-hatched a reas , coobustion 
+gases . 
+The widths of th e channels represent the quantity 
+of the gases exprcssed by voluoe at nor ~a l tenperature-
+pressure conditions . 
+In a t \1o-stroke-cycle engi ne , nir is delivered to the 
+cyli nd ers eit he r by a separate blower or by the p i ston of 
+the wo r k i ng cylind er acting a s n blowe r. 
+In either c ase 
+
+
+===== page 4 =====
+
+I 
+4 
+~A C A Te chni cnl 
+~ota : 0. 83 8 
+, rle l 
+is split i nto tw o parts : 
+the a ir 
+the n ir d e l ive r y 
+short - cireui ted 
+"" 
+'I sh ort' 
+wh i ch leave s 
+~h r ou;h the exhaust 
+po r t wi thout r ecn i n i &g 
+i~ the cyli nde r nnd the a ir r eta i ned 
+Vr et , 
+whi ch stny s i n the c yli nder a f te r po r t cl osur e nn d 
+par tic i pat e D i n the sub sequent co nbu st i on . 
+T~e a ir r e -
+tnin e d 
+'re t 
+toset~e r wi th t h e r es i dual ~a s 
+Vr es 
+re~a i n­
+i ~g i n t he cy linder a fter 
+sc aveng in ~ c o ~sti tute s t he c y l -
+i nde r char ge 
+Vch • 
+Thi s cha r s e na y b e 
+~ or e or l e ss tha n 
+t he d i sp l a ce nent v olun e 
+Vdisp 
+depe ndi ng on th e volunetr i c 
+effici e nc y , which is 
+Tlvol 
+Vch 
+disp 
+' ret + '\i r e s 
+V disp 
+( 2) 
+Th e voluDet ric efficienc y is a Deasure of 
+~ h e succe ss in 
+f illi !'. g the cylinde r irrespe c t ive of 
+t ~H) cO ;l:pos i i; i on of 
+t he char Ge. 
+It i s p redo ninan t l y con t roll ed b y tho scav -
+e n ~ i ng p r e s sur e and by the p ort ~e i ~h ts . 
+Du rin g coubu s t ion , par t 
+of the a ir con t ~ ine d in the 
+cyli n d e r c harge ~u r n s ~u~ p~ r t of it , 
+t ~e ex c e s s a ir , is 
+no t i nvo l ved i n tho at t enda n t 
+c ~e ~ ic a l re a c t ions . 
+Pa rt of 
+t h i s exce s s a ir es cap e s t hr ough the e xhaust p or ts wit h the 
+co obus tion ? roducts a~ d par t 
+of i t , 
+Vre s -
+Vcp 
+( Ycp 
+rop-
+r o s ents cO Dbus t ion p r oducts i n 
+t ~e re s idual ga s ) , re na i n s 
+i n th o cyl inder a nd p ar t i ci pa t e s in the su b s eque n t 
+c y cle . 
+There f ore , the c ylinde r 
+charg e consist s of 
+t~ r e o parts : 
+t h e r etained por t ion of t he air de live ro d , 
+p~ rt of t h e 
+conbu st ion p roducts fro D th e 
+p rec ed in ~ c y cle , und part of 
+t h e excess a ir f ro n t h e prec edi ng cycle . 
+The scave n g i ng e ffici en cy is a De asur o of t h e success 
+i n cl earin g tho cylinder fro o 
+t ~e re Didual gases of t h e 
+pr e c edi nb cy cle , and i s define d a s 
+Tlsc 
+' re t
+,: 
+Vr et 
+' ch 
+Vr e t + 'res 
+(3 ) 
+Thi s ef fici enc y i s n n i ndicnt i on of the 
+c onta~ i~ati o n of 
+t h e a ir chn r ~ e
+. 
+Na tur a lly i t i n cre a s e s wh e n the r etainod 
+p or t ion of the nir ~ eli ve r y i ncr ea s es , or t he shor t -
+circu i ted po r t i on de creas e s , n nd a l so 
+~he n the re s i du a l 
+ga s de cr eas e s . 
+Th e met hod of 
+sc aveng i n~ will h a v e a p r cdom-
+i n~nt effe c t o n the sc n vengi n & e f f ici e nc y and the De ri t 
+of 
+~ACA Te c hnica l 
+~ote Jo . 838 
+t he vari ous 
+s c nv e n ~ i nG nrr~n ~e ments 
+flow ) 
+c~n well b c 
+jud ~ e ~ by i t . 
+(cross , loop , nnd 
+5 
+ulli -
+An o the r usoful concep t i s the utili zat i on fa c to r d e -
+fi~ ed as 
+nu t 
+Vret 
+, d el 
+iT r et 
+( 4 ) 
+iT re t + 'sho r t 
+~ ~ e u t ili ~ation f a c t or is a measur e of t he succ ess in 
+ut i l izine the dc live roO c. ;".ir wi thout 
+l!lUC~: Iva " tc . 
+The sDall-
+e r 
+~ he a mount of ni r sho r t - circu i te d t h e h i che r the u t ili z-
+at i on fa c t or . 
+I t i s 
+l ar ~ e l y cont r oll e d by t he s c ave n c i nG 
+l'..rr C.:!.-:;CL1c n t . 
+~iGh util izat i on f a c tor i s one way t o 
+i n c re~se t h e 
+a ir in t h e c ylinder, anothe r 
+w~y i s h i 5h 
+tot~ l de l i ve r y . 
+Deliver y r at i o i s d e f i ned ns 
+L 
+Velel 
+' (1.is!> 
+s:t ort 
+( 5) 
+V:lisp 
+Deliv e r y ratio i s p re doni nunt l y cont r olled by the cap aci ty 
+o f t he s c uv engi ng pu ~:p or bl OI·le r . 
+Th e t otal fr esh a ir av ai l ab l e for conbu st ion i s de -
+s cri b e el by t he te r-I:". 
+II c!'lur ging efficien cy : II 
+n cb ~ 
+, el i sp 
+( 6 ) 
+Char g i nG effici e ncy i n a t wo - st r oke -cy cl e e n Gin e is u 
+quant i ty which i s par nll e l to the voluoe tric eff i c i ency of 
+a fou r - st ro k e - c ycl e e n e i ne . 
+The enGi ne out put is appro x i -
+~ n te l y p ropo r t ional to i t . 
+The r e nr e de fi nit e a nd us eful r e l uti ons b et wee n thes e 
+i n d.ic es . 
+:;;'ron eo.ua t ions (2 ) , (3) , (4) , (5 ) , and (6) 
+nc h 
+n sc nvo l 
+nut L 
+( 7) 
+t h e s i cni f i canc e of w~ i ch will be ~ade cl eur l ate r . 
+~hen t ~ e s cav e nG i nc eff ic iency is 1 00 g e r ccnt , cqua-
+
+
+===== page 5 =====
+
+6 
+NA CA Technico.l Note ~o . 838 
+tion (1) expresses the relation between the bro.ke ~e~n ef-
+fective pressure o.nd the scavenging fa c to rs. 
+When the 
+sc~v e ngi~~ efficiency is less than 1 00 percent t he brake 
+neo.n effect i ve p r essure is naturall y less. 
+The corre-
+sponding fornulo. t 
+t~e derivation of which is given 
+in 
+appendix A, is 
+b::lCp 
+0 . 4 14 .5 
+---
+180 
+f 
+r th 
+1 + 
+n Se' 
+(A - I) n 
+nv ol 
+sc 
+(8 ) 
+1ihen equnt i on (7) 
+t en ('.lso as 
+is conSidered , this e quation can be writ -
+b~ep 
+18 0 0 . 4 14 . 5 
+f 
+rt h 
+1 
+_l_ +~ 
+nch 
+nV ol 
+(9 ) 
+Th i s r e lat i on is usefu l a s it pe r nit s the p rediction 
+of t he output of a two- stroke- cycle engi ne . 
+The naxinun 
+v a lue is obtai ned if 
+nch ~ 1 
+and 
+A ~ 1 . 
+Then , wi th 14 . 5 
+theoret ica l a ir- fu el r atio and 0 . 4 pound pe r brake ho rs e_ 
+p O\1e r spec ific fuel co n sunpt i on , the brake nean effective 
+p r essure = 180 pound s pe r square inch . 
+This re presents the 
+upper licit but a ny de cr ease in 
+n ch 
+and 
+nvol 
+or i n-
+cr ease in 
+A 
+will r e duce the attainable brake nean effe c -
+t ive p ressure . 
+It is o.lso evident that if 
+ns c = 1 , 
+as is approxi_ 
+cately t rue in f our - stroke - cy clo engi ne s , equation (8) 
+gives 
+bnep 
+180 0 . 4 14 . 5 n 
+f 
+~ rth vol 
+which is i dent ical wit h equat i on (1) and also gives 180 
+pounds per square inch f or top licit with 
+n
+Vol = 1 . 
+llEASUREHEHT OF SCAVEUGIITG EFFICIE lT CY 
+Tests for the cxper i ~en t al d e ter o i nation of tho scav-
+engi ng effiC iency have been eade on running engines , on 
+notor ed e n gi ne s , and on 20dels . 
+No one test netho d has 
+becone popul u r and, in l? r a c t~ cal engi ne developnent , the 
+EACA Technical Uo te No . 838 
+7 
+~ easuring ef the 
+scav eng i ~g effici ency has been ge~er~l l y 
+ignored . 
+The sanpling- valve netho d has been use d wore tha n any 
+ot he r , pe rhaps f ir st by Sulzer Brothers (reference 2) . 
+By 
+~ syn ch ro nize d Valve 
+th~ t ope ns every cycl e fo r a short 
+pe r iod between port closure and inje ct i on begi nning , san-
+pIes are wit h drawn froo the cylinder and analyzed fo r oxy-
+ge n or 
+COa 
+cont ent .
+· A sinilo.r test on 0. Dotor ed engine 
+wi th o.rt ificial 
+CO a 
+contaninatien wo.s nade by DeJuha sz 
+( r eference 3) . 
+S p eei~lY Dad~ scaveng i ng ~ac h in es were 
+used by Curt is (refe r ence 4 ) , and by Sulzer (reference 5) 
+and pe r fo r nc d useful ~ervice in the study of · the resul ts 
+obta i nablo wi th various scavenging ar r ange~e nt s . 
+The ch i ef ob je ction to tho sanpli ng- valvo ne thod i s 
+the difficulty of obtaini ng ~ r epre sentat ive sanple be-
+caus e th o conposi t ion of t he cyl inder char ge i s not uni -
+forn at different points of tho cylindor . 
+Another objec-
+t ion t o the oethod is that it is l aborious . 
+Tho n odel 
+t ests suff e r , i n addition, froD th e fa c t tha t the tenpo r a -
+tur e , the dens i ty , and the viscosity of the gases appreci-
+a bl y i nflue n c e their ~ otion and actual c ondi tions canno t 
+be reproduced in a cold n odol . 
+I n order t o ov e rcone these object i ons, List . (r e f e r ~ 
+ence 6) enp loyed a tw o- par t piston i n a specially built 
+test engine . 
+Whil e the engi ne was running , during a co n-
+p re ssion stroke , the cylinder content wa s pu she d in t o a 
+l a r ge cont a iner by ·suddenl y opening ~ valve in the cylin-
+de r head . 
+When t he pressur o was r eoov ed , t h e looso top 
+part of tho p iston stayed at to p de a d c enter , iso l a ting 
+the cylinder ch a r ge . 
+The 
+co ~p osi t i on of. the cylind-or c on-
+tent could then b e l e i surely anal y zed . 
+This ~etho d prob-
+ably gave de penda ble r esul ts but , because of its coopli -
+cation , cannot be expe ct ~d to . becone p opUla r . 
+Becaus e of th e lack of a sinple n othod , inforoation 
+on scavenging efficiency sODet i nes was obtained in a round-
+a b out way by p ower neasure Dents . 
+Equation (8) can be used 
+fo r this purpos e . 
+The excess- a ir facto r is close to 1 . 0 in gas a nd car-
+buretor engines . 
+I n those engi n e s. therefore, powe r neas-
+ure nent can be substituted for neasu r e~ent of s cavengi ng 
+effici enc y if the vo l ucetric efficiency is known or c an be 
+esticated . 
+
+
+===== page 6 =====
+
+8 
+NACA Technical Note no . 838 
+In a Di esel engi ne the excess- air factor nay vary fron 
+1.2 to 2 . 2 at full load and, i ts value being unknown, a 
+possibl e solution is to run the engine as a gas engine with 
+porting and ope r ating condi tions uncl~nged
+. 
+Then , on the 
+assu~ption t ha t 
+t~e scavenging effici ency i s sti ll t~e saee , 
+it can be ca lculated fro n e quat i on (8) . 
+Another pos~ible solution is to det e r c in e the excess-
+air facto r 
+~ 
+f ro n a four - str oke -cy cle engi ne , whic h is 
+si e ilar to the investigated two - st ro ke - cycl e engi ne in its 
+coe bustion charact eri st ics. 
+Fo r such an engine 
+~ 
+can 
+be deterci nsd froo oquation ClI o 
+By substitution of the 
+thu s-deterr.lined ~ in equation (8) , the scavenging effi -
+ci ency can be calculated fro~ power oeasure uent . 
+Uti li zation Fact or 
+The scavengi ng e ffici ency of a two - stroke - cycl e enai ne 
+nay be deter n i ned in an entire l y diffu rent way . 
+Fren equa-
+tion (7) 
+nu t 
+nsc 
+nvol 
+L 
+(10) 
+If nut , 
+L , and 
+nvol 
+are 
+~as i cr to deter;Jine than 
+nsc ' 
+the direct dete r n ination of 
+nsc 
+:Jay be disp ensed wi th . 
+An ot h or po i nt fav or s this course . 
+Scavenging effi-
+ci ency is tho te r e c ost widely used i n character i zi ng the 
+success or s cavenging ~ut
+, as ha s be en correctly p ointed 
+out in ref ~ r en c e 1,* the significant quantity 
+i o not th e 
+ac aven~ ing efficioncy but t ho char gi ng effici ency , 
+n C;l 
+nsc nvol 
+because the engi ne outpu t i s app r oxi nately propo r tional 
+t o 
+it . 
+The success , thorefore , of the scave nging and the rel -
+*In refe r en ce 1 th e tc r e "s cavenging effi cioncy " is used 
+in a l uo st the sa:Jo sense as the te rn "char ging effici ency" 
+i s used in this paper . 
+The autho rs defino scavenging effi-
+ci ency as the wei ght of a ir char go in the e yli nde r at the 
+t i De the inlot va l ve closos di v i ded by tho product of to -
+tal 
+cyl inde r VolUDe and inl ot density . 
+Except f or the use 
+of i nlot dens i ty in stead of the dens i ty ef nornal a t cos-
+phcr ie ai r and the usc of total cylinde r vo l uee instoa d of 
+disp l acoDent volu~c
+, that defini tio n aGr ee s 
+w i t~ th e de fi -
+n i t ion of equation (6) . 
+TIACA Technical note lio . 838 
+9 
+ativo neri t of · various scavenging arrangeeents can botter 
+be ovaluated by tho charGi ng efficiency, whic h happens t o 
+be the product of the convent ional scavenging efficioncy 
+and the conventional volueetric effici ency . 
+If charging 
+effici on cy i s the quantity i n which intore st io cente r ed , 
+the dete rnination of the voluce tric ' cfficicncy can be oei t -
+ted and the cha r gi nG efficiency can b e dete r :Jined ac cord-
+i nG to equat ion (7) 'as. 
+nch 
+nut L 
+The delivery ratio 
+L 
+can be very conv e ni~ntly detcr-
+c i n ed by ce nsuring the a ir flow wi th a Gas ce t e r or a stand-
+a r d i zed f lownete r nozzle on the int ake s i de of the engine 
+or on the intake side of th e scavenginG blower . 
+A conven-
+i ent detc r c i nat i on of 
+nut 
+will be describ ed . 
+The utilization factor 
+nut 
+a lone is a very si Gnifi-
+can t 
+in ~ cx a s it shows the ratio bet~een air retained and 
+a ir del iv e r e d and is , t he r efo r e , t h e bost possible index 
+of the ~e rit of the scavenGinG p r o~er
+. 
+The other facto r 
+L 
+is l a r e oly controll ed by t~e s cnvenGing blower and is 
+an index of the suc c es s i n su?plyi~ g a l a r ge a ir char ge . 
+The pro duct of tho t wo 
+nch 
+i s a c easure of the acount of 
+fres h air intro duced into the cylinde r and of tho p ower 
+attai nable f r oD it. 
+F or culn ( 4) 
+\<[Titten a s 
+nut 
+The Trace r Gas Hethod 
+fo r the u tilizat ion f actor can also be 
+Vdbl -
+V s hort 
+V del 
+Vshort 
+1 -
+V del 
+(ll ) 
+Acco rdingly , if iho ratio between the neount of a ir short -
+c i rcuit e(l a n el the totnl nir tleli ve red i s kn ov:n . 
+t~ e pro1i;. 
+lec is solved . 
+The relativo nnount of short - circuite d 
+a ir can be doter ni ned by a t r a cer ga s . 
+I f a 
+s~a ll aDount of a suitabl e t r a cer ga s Ls contin-
+uously fed i nt o and c ixe d wit h the inlet a ir of a running 
+two_ stroke - cycl e engi ne , the ~as will div i ~e in the sane 
+p roportion as the a ir delive r ed . 
+Part of it will be 
+short - circui ted ane part of it will be ro ta i nei in the 
+cylinder . 
+The t r apped portion of the tracer ga s is as su:Jed 
+J
+
+
+===== page 7 =====
+
+10 
+NACA. Teci:nic<"1.1 lTote He . 838 
+to burn in the cylinder duri~B coubustion . 
+The short-
+circuited ~ortion is assuned t o be present i~ the exhaust 
+gnses . 
+By measurement of the a mount of tracer gas pre se nt 
+in the exhaust , the utilization fnctor can ~ det ermined . 
+It is usual l y s i mpler to measur e the concentration of 
+a t r a cer g.'lS in the diluent than 
+it'S· absolute ctunntity . 
+If the volune of the exhaust aas is equal to the volume of 
+the inlet air (both volu~es beinG at ~or nal t omp oratur e-
+pressur e conditi ons) , if tho tra c er ens tha t is tr'P?c d in 
+the cylinder burns conpletely durin6 the cocbusti on, a nd 
+i f nono of the tracer Gas deconposes or oxi ~ izes during 
+the s cnv engi ng or the exh['.ust period, the r:ltio of t he con-
+cent r ation of the t r acer eas in t h o eAhaus t Gn s t o th e co n-
+centration of the tra c or Gas in the inlet air is equal t o 
+the ratio of tho anou&t of ~i r s~ort _ circui t ed to t he 
+amount of air del i ve r ed . 
+The utilizu t ion fncto r , may 
+therefore be expr essed as 
+nut 
+1 
+conc ent r ati on trncer gas in the exhaust C;:lS = 1 - a. 
+c oncent r ation t r :lc e r gas in the i nlet a ir 
+(12) 
+The D.ssu ~ptions montioned c ay not hold oxactly , but 
+tho util i zation fnctor nay ·still bo calculated on the 
+bas i s of equation (12) if tho assu~ptions hold approxi -
+mate l y er 
+i f appr opriate. correct i ons are ~aao
+. 
+Tho first pr oblen is the se l ection of n suitabl o 
+t r a c e r cas . 
+Tho 
+~ns should mo e t the f ol lowi ng requiro-
+nents : 
+1 . 
+It should be easy and safD to ~andle 
+2 . 
+It should be co nveniently deter~inable quantita-
+t i ve l y 
+3 . 
+I t 
+shoul d burn eonplotely when exposed to the cOJ:\-
+bustion in the cylinder 
+4 . 
+I t shoul d remain unchanGed i n the cylinder during 
+the sca vengin r.; peri,od and in t h e exhaust pipe 
+Experi nental work t :l deternine fueir suitabil i ty as 
+tracer gases has bee n done wi t h a Ullonia , carbon n onoAide , 
+carbureted wate r eas , c onoeethyl a e ine and di nethylBoine. 
+HACA Technical Note No . 838 
+11 
+Correction for Change in Voluee After Coobustion 
+Pet roleuo fuels used in internal- conbustion engine s 
+consist of hydro gen and carbon . 
+The carbon - hy Qro ~ en ratio 
+nay vary between 6 and 8 , the variation deponding on tho 
+sourco and tho processinG of the fue l. 
+One p ound of hy-
+drOGe n requiros 32/4 or 8 pounds of oxygen for its coeplete 
+coebustion and 1 pound .of carbon requi r eD 32/12 or 2 . 666 
+pounds of oxygen fo r its coep l eto coebu stion . 
+One pound 
+of at o osphe r i e air co ~ tains 0 . 2315 pound of oXYGen; 1 pound 
+of hydrogen will consequentl y requi re 8 ~ 0 . 23 1 5 
+or 34 . 5572 
+pounds of ai r and 1 pound of ca r bon will requi r e 2 . 667 + 
+0 . 2315 
+or 11 . 51 91 pounds of air fo r c oeplete conbustion . 
+A pound of fuel that contai ns 1 weight of hydr ogen 
+and 7 weights of carbon will requ i re 
+34 . 5572 + 7 x 11 . 5191 
+8 
+for i ts coeplete coobustion . 
+14 . 4 pounds of a ir 
+The quantit i es of cO!lbustion p r odu cts that \dl l re -
+sul t fron the .cooplete cO!lbustion ·o f this fuel \·,i l ·l be as 
+follows : 
+. 
+1 
+36 
+-
+x 
+8 
+4 
+1 . 125 pounds of 
+H2 0 
+7 
+-
+x 
+8 
+44 
+3 . 205 pounds 
+12 
+of 
+CO2 
+The aeount of n i trOGen reoains unchanged 
+14 . 4 x 76 . 85 c 11 . 1 pounds of 
+N 
+1 00 
+. 
+2 
+The vo l une of 14 . 4 pounds of air u~der noroal teope r a - 7 
+ture - ~ ressur e c onditions will occupy 1 78 . 6 cubic feet . 
+If 
+the fue l is liquid its vo l une ::lay be nCGlectod ~ 
+After eoo-
+bustion , at Doreal tenperature- p ressure conditions 
+1 . 125 p ounds H2 0 will occupy 
+22 . 42 cubic f e et 
+3 . 205 p ounds COa Idl1 occu py 
+26.12 cubic feet 
+11 . 1 
+pounds 
+IT a lo,i 11 occupy 142 . 2 
+cubic feet 
+Total 
+190.75 cubic feet 
+
+
+===== page 8 =====
+
+12 
+~~CA Te chnical Note No . 838 
+As co opare d with the ori:i nal voluee of 178 . 6 cubic 
+fe et , th is volur.e represents an increas e of 6 . 5 pe rce nt . 
+With the wat~r vapor condense d out, however , the total ex-
+haust gas v o lu~ e is 19 0 . 74 -
+22 . 42 = 168 . 32 cub i c feet , 
+which r epres ent s 
+~ d ecre a s e of 6 pe rc ent . 
+If the air- fuel ratio is g re at er than the stoich io -
+ne~r ic ratio , as is the case in Diesel engi nes , the change 
+i n vo l une afte r 
+c on bustioll wi ll be less . 
+F i Gure 2 shows 
+t he cbange in voluee due to c ocbustion of fue l 
+wi th a 
+c arbon - ~y~rogen ratio of 6 , 7 , 
+a~d 8 to 1 and at an ai r-
+fuel r atio fron 14 . 5 : 1 to 50 : 1 . 
+A typical Diesel fue l 
+wi th a c a r bo n- hydr oGen ratio of 7 : 1 
+bur~ed with nn air -
+fuel r a t io of 20 : 1 would c ause a l o ss of 4 percent in vol -
+u ce , i f the water - f r ee oxhau s t gas is coepare d wi t h t he 
+inlet air , b oth at no r nal tenpe r ature - pressure co~d i tions
+. 
+Th i s Quoun t is t ho co r rection that Dust be applied to the 
+r a t i o 0: tra c er - ga s c oncentrations in the inlet a ir and 
+i n the 
+ey~aust ga ses . 
+Prcli n i~nr y Tests 
+::est o f the p reli ~ina r y wo r ~ was do ne 
+w i t~ an~ onia 
+and wi th ne thyla ~ ines
+. 
+The 
+wor~ included be ~c h and enGine 
+t est s . 
+Cne bench te st was 
+na~e to d et e r u ine th e d econpo-
+sition of a~~onia at various tecpe r 1tures , othe r tests 
+were 
+~ade to che c k th e effectiveness of a~~on ia and ~eth ­
+y ln=in e absor pt ion by sul phuric- c cid solution . 
+Preli~i ­
+nary en~in e tests ~e r e co nducte d on various four - stroke-
+cycle engin e s . 
+~ four - stroka - c y cl e engine with no valv e 
+overlap =ust h ave a 
+utilizatio~ fa c tor of 100 pe rce nt ; the 
+acount of tracer sa s foun d i n the exhaust co u ld therefore 
+b e used as a 
+e h ec~ on the nethod . 
+Load , speed , 
+co~p res­
+sion r atio , int ake - a i r tonpernt\U'e , 
+C.::H'l. tra e er - .:;ns c on c en-
+trat i on were varie~ i n the tests . 
+The re sul ts 0: these pre li ~in ar y tests c an be 
+SU D~a ­
+r i ze d as follows : 
+1 . 
+A D~ oni n and ~on eDethy ln ~ i ne do not bur n or decon-
+po s e under to;:Jpe r :ltures e}:istinG in ':;h: exhaust of t'fO -
+stroke- c y c l e enei ne s . 
+2 . 
+Acn on i a ane its der ivates nr e reaeily anc COD -
+plete l y nbso r bec by aqueous sulphu ric- ~c id solut i on he l d 
+i n a Vae Slyke-Cul le= uren flas~ , whi c h 
+~a~es the i~ quae-
+tit~t iv e deter2i !:ntion ccnvenie~t
+, as 
+i ~ ~easu res, by a 
+gas Deter , 
+t~ e u=ou nt of ens necess~ry t o neut r alize the 
+r ACA 
+Tec~nical Dote No . 838 
+13 
+sulphuric- acid solution . 
+If a few drops of indicat or solu-
+t ion n r e auced to the sul pr-u~ ic - acid solution , the neut r a l -
+ization po i nt can be conveni ent ly dete cted by n sharp c ol or 
+c han::;e . 
+3 . 
+Honouethylanine was found to bur n 
+n l ~ ost co np l ete-
+l y in the cylin d e~ if t ~e enGin~ load wns 75 percent or 
+h i e her , i rrespective ot the engi n e spee d and the co~pre s ­
+s i on rat io . 
+A typi cal test pe rforne d on n f our- stroke-
+cycl e enci ne is r epresentee by fi {~ur e 3 . 
+4 . 
+The concentration of the Dononethylani n e had l it -
+t l e effect en its bur n i nc eff i c i ency nnd a concentration 
+of 0 . 5 to 1 percent was found DoSt snt i sfac tory as a 
+tracer gas . 
+5 . 
+No other cas was found to f i ll the requiro ne nts 
+of a t rac e r cas as sat i sfac tori l y as nononethylacine . 
+ALmoni a \vas foune. ':;0 bur n only i:J.co~lplete l y i n the e y l incl er 
+du r in G the a-"ailnble 
+s ~o rt - t i ne i:l':;erval . 
+Dir::ethylani ne 
+l1nrtl y 
+c'..e co::lJ)o se ,~ in the e x~aust pipe . 
+Ca r bon n onoxide , 
+h·yt'..ro een , nne'. n ethane ,,,oro founel to requir e labo r ious anal -
+ysis ~na t o e ive i nsu ff icient a ccuracy . 
+'l'he :.ieth;;la::.ine :lethod 
+The in l et n i~ a:J.d the e xha us t gas n r e analyzed for 
+t h e ir mo no methy l anine content by wit hdrnwing , under a 
+B li g~t va cuum , n s amp l e 
+thro u~h a Van Slyke - Cullen ure a 
+appar atus 
+( :i ~ . 4) co ntainin g a known quant ity of st andnrd-
+i:;e d sulphur ic - ncid solut i on , ':!hich retai ns the monometh-
+ylamine . 
+The um~ f r ee gas snmple the n continues on to a 
+flowm e ter . 
+A few drops of mixed i nd icator so lutioe n r c 
+added to the sulphuric- nci d soluti on as an indicat or . 
+When 
+the acid solution beeom os ~cut r ~ lized by tho mono~ethyl ­
+amine , th e c olor cha n~Ds from pur p l e to ~ r cen and at this 
+po int the qu c.nt i ty of M ono met~y ln a in e f r eD 
+S~s that pas s od 
+t~ rou sh the sul phurie - n cid solut~on and the flo umete r 
+i s ro-
+corded . 
+T~e .qu nntity of sulphuric- acid solution used bcinS 
+know~ , the per c entage ammonia i~ the gus mixt ur e can be 
+cal c·u.J.." t ec. . 
+If t~orc i s any suspicion thnt a g r anto r volume of 
+sas has pussed throu~ h the sulphur ic- a ci d solution thun is 
+necessary to neut r a li ze the n ci d , the actu Bl 
+quant i t y of 
+Bcid neut r alized c nn be dete rcined , by t itration , by add-
+in g n few mor e cubic cent i nete rs of sul~ hurie acid nnd 
+buck- t itrating with standardized linOH. -
+
+
+===== page 9 =====
+
+----. ------ t= 
+=-=: ::::»= r-:-
+c::I::: 
+14 
+IH,-CA Technical Note No _ 838 
+Correcting the Experi~ental Results 
+If the Dononethylanine burned completely in the cylin-
+der and none of it burned in the exhaust pipe and if the 
+voluce of the exhaust gases were equal to the volume of 
+the inle t a ir at nornal temperature-pressure conditions 
+then , accord i ng to equation (12), the utilizat ion factor 
+could be calculate d fron the ceasured a mine concentra-
+tions , as 
+nut 
+1 -
+ex. 
+\'1here 
+ex. 
+p orcent tracer gas in the exhaust gas 
+pe rc e nt tracer gas ill the inlet air 
+It is known , howeve r , that the volune of the water-
+free exhaust gas is 1 to 6 percent less than the volume of 
+inlet air , depending on the air -fuel ratio of the charge 
+and the carbon- hydrogen ratio of the fuel . 
+( See fi g . 2 . ) 
+It is also known that the combustion of the monomethyl-
+amine is not complete in the cylinder but varies between 
+95 and 1 00 percent , depending l a r gely on the combus t ion 
+tenperature . 
+As re gards the burning of monomethylamine in 
+the exhaust pipe , the evidence indicates that this condi-
+tion need not be cpnsidered because the amoun t burned is 
+either zero or negli gible . 
+If the volum e shrinkage of the wate r-fre e exhaust gas 
+rel at iv e to the inl e t air is denoted by 
+s 
+and the burn-
+ing officiency of the traeer gas bye , 
+it can be shown 
+that the true utiliza t ion factor is 
+1 -
+ex. 
+nut 
+~s 
+The derivation of this for nula is f ound in appendix B. 
+(13 ) 
+If the burning efficiency were 96 percent and the 
+volume shri nkage 5 perc ent ( rat her extreme cases) , with an 
+ex. 
+of 
+0 , 2 the uncorrec ted for nula would g ive 
+nut 
+1 -
+0 , 2 
+0 . 8 
+wh e reas the true ut ili zation factor would be 
+~---~ 
+lTACA TecrJlical iTote no. 838 
+15 
+nut 
+0 , 8 
+0,84< 
+0 , 96 
+( 0 . 2 x 0 .05 ) 
+The deternination ~ould therefore be in error by 4 percent. 
+The deterninatioh can, however, be inproved consider-
+ably by the use of equation (13). 
+It is easy to estinate 
+the ~o lu Do shrinkage f~on figure 2 . 
+For a typical Diesel 
+fuel wit h a carbon- hydrogen ratio of 7:1 and an a ir- f uel 
+r ~t io of 20 : 1 . the volune shrinkage is approxinatel y 4 per-
+ce nt . 
+It is also possible to estinate the burning effi-
+cie ncy of the nono De thylanine as about 97 percent , n oro or 
+loss , depending on the copbustion teoperature . 
+Applica-
+tion of tho correctio& fo!cula , 
+oq~ation (13), would Give 
+0 , 8 
+nut 
+0 . 97 
+(0 . 2 
+~ 0 . 04) 
+0 , 83 
+This ~count is likely to be eorrect within 1 percent . 
+Testing a Twa-Stroke-Cycle En gine 
+The n ethod d eveloped was censidered satisfaetory for 
+testing the scaven gi nG of B two - stroke - cycle e&sino , 
+The first probleD encounterod in adopting the nono -
+nethylauino cethod 
+~[ a s : 
+i','her e a lon g tho exhaust line 
+shall -the exhaust saLlple b e \-[i thdr(1\1n 7 
+\"Then tho exhaust 
+port just opens , exhaust ga ses issuo fron the exhaust 
+ports at a very h i gh velocitr. 
+After the blow- do wn peri -
+od, when scavengi ne t~kes p lace , the velocities through 
+th e 
+exh~ust p orts hav e 
+decre~sed consider a bly and later 
+the air that i s s h ort - circuited flo\-[s throuGh the exh~ust 
+p orts 11.t a relativ e l y slo\-[ rate unti l the exhaust ports 
+close. 
+lr~ n the tiee of exhaust - p ert clesing to the next 
+exhaust - p ort oponine . pressure and velocity escillations 
+cent i nu e £'_11 alone the e ::ch11.ust d"J.ct . 
+If a saople i s I'lit h-
+dr a lvn a few i nches fro::J the exhaust p ort, t !1e so consider -
+ati ens would indicate that the concentrat ion of tho trBcer 
+':;11. s at t!, i s p oint \-[ ould be h i Gher tl:an the t rue v~lu~
+, 
+whic~ woul d b e obt a i ned i f t h oroush c i x i nG had oceurred. 
+E:per inents on a 
+l oi ~ - b y 1 2- inch sin ~ le - c y lin de r, 
+two - st~okc -c ycle
+, 
+er ank c ase - sc11.ven~od Venn Seve rin Diesel 
+enc i ne (f i e . 5) hav e 
+~hown that the concentrat ion of non o-
+n othy l a~inc w! tht r awn 
+11.~ va riou s p oints a lonG the exhaust 
+
+
+===== page 10 =====
+
+16 
+NACA .Te ch nic nl lTo.te No . 83 8 
+line vnried , a s hac'_ b e en eX:!.Je_cted . 
+Ve r y hi Gh c on cont r a _ 
+t ions ,-rere f oun-d in san'ples withq.r nwn. 6 inches fron t he ex-
+h nust p ort . 
+The con c eut r ati on of nonouot hylnn i ne i n san-
+pIes wi t h drawn 3 feet fron the exhaust p orts wn s approc i -
+abl y loss t han the 
+c ouco n tr~t i on f ound 6 i nahes fr on t h e 
+exhaust v orts . 
+further nlong the exhau st line , th e e on c en-
+tratio~s incre n soQ a g a in n nd then f l uctuated sli ghtly nll 
+~_ l o n s t he exhaust l i ne :up t o 15 f e ot a ,-ray f ron tho exh nust 
+po r ts . 
+110 s ::l.n? l e.s 'tOT O vlithd r awn nt n c.is tnn c o c r,oater 
+tha n 1 5 f eet fro u ' the ongine . 
+I n or dor to get a r epr esent n t i vo con c ent r at ion of 
+n o no~ethy l an i ne i ~ the e xha u st gns , the exhaus ted p ro du c ts 
+of eo n bust ion an~ tho sh or t - circuit ed a ir and n on oDot hyl -
+~n i ne should b o c onpl e t el y n i x od . 
+This re sul t cou l d be 
+a ec on p li shed i f a nixing c ha n b e r werc i n t r odu e cd i n t o the 
+oxhau st li ne . 
+The acldi t ion o-f n chanbor , h O"lever , a f f ects 
+th e tuni n a of t h e exh aust n~ d t ho r esul ts obt a i ned would 
+no t b e r epr oscnt a tive of nor nnl ope r at i nG cond i tions . 
+Anot h er Il[!.nne r i n whieh a r el i a b l e s nnp l e nay be ob-
+tai ned woul d be t o ta ke an ave r ~G e of t h e conc e n t r at i on s 
+of th e nono rJe t h y l o.n i ne a ll Dolo n r; the e xhaust li ne . 
+Thi s 
+s a npl e c an b e t nken ver y ea sily wi t hout d i sturbi ng the 
+no r nnl 
+e n g i n e exhnu s t 
+sy sten . 
+Th e l enst nunbo r of so.n-
+pI i ng p o i n t s n e c e s s a ry t o obt a i n a rel i nbl e 
+s a ~p le hns not 
+been :J. sce r tn i ne cl . 
+Four l oent i vn s , hO",evo-r , cve nl y c1i s-
+t ri buted nlonG the exha u s t li ne n r c cons i de r ed to bc ade-
+quate to Gi ve a r eli a ble a ve r a ge concent r at i on , the f i rst 
+snup l e tUb e be ing 
+l o c a te ~ a t a di stanc e not less than thn t 
+dist a nco co r resp on d i n g t o an exhnu st - p ipe vo l une equa l to 
+1 . 5 t i n es p iston d i sp l a c enent . 
+I n t he f i nal 
+t es ts on the V ~ n n Seve ri n en gi ne , on o 
+i nlet nnd f our c xhaust snnp l o s w; r e wi t h dr awn i n cach test . 
+Two te sts werc nado wi t h cRch a i r d cli v ery o.n ~ t ho 
+a ir del i v e r y WA S v a r i ed by p lacin ~ a res t ri c t i n g orific o 
+in t h e i nle t - air euct next to the enGi ne . 
+The Va n Sl y ko-
+Cull e n ure a npparatus WR S use d fo r nb s or binG t h e u ononethyl _ 
+ani ne i n t h e i nl e t nnd oxhaust s nnples . 
+Fi aure 6 sh ow s 
+the a rr:J.naene n t use t 
+t o wi thdr aw a ~ i nl e t 
+s o.np l e through 
+t he Van Slyke - Cullen ap~n r at u s . 
+Al l f our exhnust sanpl e s 
+we r e wi thdr a wn s i gul t a ne ous l y . 
+The s nc?li nG tube anQ the 
+s t op eoc k a r .e sh o"rn i n f i GUr e 7 . 
+The ani ne- fre e s anple 
+i ssu i n G f r o~ en ch ne r at ion t ub c f lo wc d to a h e ado r fro n 
+,·,hich the 
+c owb in e (~ fJ on ouc t hyl :1.T:in e- fre e e xhaus t s aTlp l e s 
+flowed to R gas ne t e r wi th wh ich the vol une of t he c o~b in od 
+',fACA Toc ~ ni c ::'. l Hot e rio . 93 8 
+17 
+sn::lp l es ,·m.s (:'.e ter ni ne cl. 
+The s a Dl)le f l ow to each exhaust 
+s nnple ~ ernt io n tube wa s 
+stoppe~ , one a t 
+B tine, as t h e 
+as the color of th e so l uti on i n t he indiv i du a l tube s 
+c han ae~ fro e pu r ple to Gr e en . 
+The v ol u ne of the conbi ne d 
+saopl e 
+,·/o.S t h en c·orr e cte('. by ti trat ion . 
+All exhau s t-
+s nnple volune s were corr.e ct e d by t itra t i on be ca u se of 
+Doi s tur e t hat hall c onclensed out of the exhaust sanple and 
+h ad b een 
+d e~ o s ite d a long tho i nner wall s of the gl a ss tub-
+i n ~ thr OUGh which the 
+s a ~p l e f lo"le d be f or e en er c;inG in t h e 
+for n of bu bblcs 
+i n ~o the sulphuric- aci d s ol u t ion in t h e 
+aeration test tube . 
+Th i s co n donsat i on a b s orbs sone of t h e 
+n o n o ~ e t hyl aD ine i n thc exhaus t 
+s nnp l e and d oo s n ot t ako 
+a ny part in causinG t h e ini t i a l col or chanGe . 
+It is , 
+theref or e , i np ortant t hat t he a erat ion tubes be washe d Bnd 
+t he u i xture of t he or i Gi nal contents of t h e · t ubo and t h e 
+p ro duc t s o f t he wa sh i n g oporat io n b o titra te d to dete r nine 
+t he corr e ct qua n t i t y of n on oce t hylac ino containo d b~ the 
+ne a sur od saDplo . 
+T~e v alue of 
+~ was the n c alcu l a t e d by t h e u se of 
+t he inl e t a nd t he cO::lb i n ed exhau s t - snop l e v olune s nnd t he 
+quant i ty of 
+su l phu r ic a cid nou t r a li ze d by e a ch s aDple . 
+The p r oc e dur e i s des c r i bod i n t he ne x t 
+s e c t io n . 
+When a bur n i ng effici en cy of 
+e = 0 . 97 
+a nd a vo l u n e 
+shri nkaa o of 
+s = 0 . 04 was a ssuc ed 
+nut 
+wa s calcula te d 
+fro n oqu at io n (13) . 
+The t o s t r esul t s and t he ca l cula -
+t i on s a r e li s t e d i n t a bl e I . 
+Wi th n o thro t tli ng of the i ntake B ir~ t h e u tiliz a tio n 
+f a c t er was 84 perc ent; wi t h a 
+3 - i n c h~ d i a c e t e r orifi c e used 
+i n the inl et duct , t he uti li za t i on f a ct or was 8 2 perc ent 
+and , 
+w i t ~ a 2- i nch - di a met er orif i c e , 86 . 8 pe r~ent a cco r d i ng 
+to t h e te st s . 
+As a fur the r 
+s t ep , t he respe c t i v e c har bi n g effic i en-
+ci es were dete r ni ned acc or di ng t o equa ti on (7) . 
+F or this 
+e quat io n , the delivery ratio wust be ' known . 
+~his procedu r e 
+i nv ol ves the D easu r e~ent of ai r de liveri e s . 
+.A. flowneter noz zle of 
+3 . 14 5 - in~ ~ ia ne t e r was in sert-
+ed in t he i ntake side of a sur ge tank . 
+The p r essure drop 
+a cr os s t h e 
+no z~e was n e a sure d by a 
+n i cro Tlano ~ eter . 
+Th e 
+ni ero ::lan one te r 
+sh own on f i Gu r e 8 was develop e d by Profe ss or 
+F . C. Stewa rt of t he Pe nnsy l vani a State Co l le g e . 
+I t 
+c on-
+sists of t wo co nnec ted equal - d i a::l ete r tube s , on e 
+exp osed 
+to the atnosphere and 
+t ~e othe r c onn ec t e d to the p r e ssu r e 
+ho l e of the f lowcete r noz zl e . 
+The he i ght of t he wat e r 
+-i 
+
+
+===== page 11 =====
+
+18 
+:~ACA Technical ITote lTo . 838 
+level i n the open tube is ~ea8ured by a dial indicator to 
+which a sharp pointer is attached . 
+~rhen the p ointer 
+touches the water level , an electric circuit is closed 
+through a neon laI!lp and the neon Glows . 
+''Tith this instru-
+ment the difference in water levels can be conveniently 
+deter::lined Idth an accuracy of iO.002 inch ~nd the neces-
+sity of usinG sI!lali nozzles for accentuating the pressure 
+4rop disappears . 
+The ueasured air delivery waS 125 cubirr 
+f e et per ninu te at 381 r po or 0 . 328 cubic f ee t per cyclo . 
+This value gave a delivery ratio of 0 . 544 with no throt-
+t line; . 
+The charging efficiency is equal to the utilization 
+factor times the delivery ratio'. 
+The charging effici ency 
+I'Tas calculated as 46 perc-ent for no throttling , 41 percent 
+for the 3-inch- diamete r throttling orifice, and 38 per cent 
+for the 2- inch- diameter throttlinc; orifice . 
+The load was about full load in these tests , as evi-
+denced by a smoke dens i ty of about· 80 percent by the Penn 
+State smokemeter (refe r enc e 7) . 
+The power output was n ot 
+measured . 
+The values show that t~e utilization factor does not 
+always deter iorate when the de livery is increased . 
+' Vhen 
+n chanGe was made from a 3 - incb throttlins orifice to no 
+orifice , both the ai r delivery and the utilization factor 
+improved . 
+Of course, if the air delivery is consider ably 
+increased , as by suporcharGinG', the ut ilization f a ctor 
+must ne cessarily f alloff beeause the cylinde r cannot keep 
+all the extra air supplied . 
+The 
+lO ~l del i ve r y ratios and charGing efficiencies 00-
+tained i n these te'sts arc n ot typical of tho .engine but 
+a r c the result of an ina dequate ~rge - tank capac it y and a 
+short 2- inch- diametor tube inserted betwoon the tanks to 
+minicizo the pressure fluctuations , 
+This small tube r e-
+strictod. th'o a ir delivery- to below norLlal . 
+Subse.quent l y , 
+tho air - deliveri tests wore repeated with a larBer surgo 
+tank (about 27 times displacement V01ULlO), free of re-
+strictions and having two 20- inch- diameter rubber membr anes , 
+in addition , to minioizo pressure fluctu4 tions . 
+The air 
+delivery thus ceasured corrosponds to a delivory ratio of 
+0 . 72 . 
+tf tho utilization factor were the same (0 . 84) , 
+this set - up would 1;iv.o a norI!lal c hAr ginb officioncy of 60 
+porcent . 
+nAC_t,. Technical note 1'0 . 838 
+19 
+REC01,!llElTDED P!l.OCEDURE 
+For Deteroinina the CharGi~G Efficiency of 
+a Two-Stroko - Cyclo Diesol Encino with 
+Monooethylaeine as a Tracer Gas 
+Tost Equipeont 
+Material and equipDent : 
+1. Anhydrous oonoDothylaDino 
+2 . Concentratod sulphur ic-aCid solu t ion (9 lb) 
+3 . Standard ?UluDotric solution of U/IO sodiuD hydrox-
+ide (32 oz ) 
+The sodiuD- hydroxide solution Dust be kopt soalod 
+froe the air (as Duch as ~0ssible) to ~rovont 
+CO 2 in the 
+air froD being absorbod , thereby changing the noroality of 
+the solution. 
+4 . Mixod indi cator 
+Uixod indicator is a c ixture of 0 . 625 gr aD Dothyl rod 
+i ndicator and 0 . 413 craD oethyl blue indicat6r Dado up 
+with 50 0 cubic centiDeters of othyl alcohol , that is , tho 
+oixture of cethyl blue and Dothyl red Dust bo d iSSOLved in 
+500 cubic centiooters of ethyl alco ho l . 
+This indicator 
+oay be obtained , on roquest , froD a cheoical house , tho 
+propor specificati~ns being c ivon . 
+5 , Distill od water 
+All chouical equipeont DUSt be washod with distillod 
+water . 
+City tap water is not a satisfactory subst ituto . 
+6 . Van Slyke - Cullon urea apparatus (18 sots) 
+Each set consists of a Van Slyke test tubo and i nlct 
+bubblinG tube (nerati on tube) and ari outlet tu~o wi th a 
+tr<l.p to sop[\rate any entrainod liqui:d . 
+7 . Burettes (2 ) -
+One fo r sulphuric acid ~nd tho other 
+:or sodiun hy~ro xide
+. 
+Str~iGht stopcock 50 cc 
+
+
+===== page 12 =====
+
+-"--"----
+20 
+nAC}>' Technic::1 Hote lTo . 838 
+8. 3urette support (1) 
+9. Gas washine bottle (1000 cc) 
+10 . Beakers , Griffin low-forn , Pyrex (two 1 500 cc, two 
+1000 cc, one 600 cc, one 250 cc, and one 100 cc) 
+11. Autonatic pipette ( 25 cc capa city) 
+12 . AspirBtor, water ( to produce suction for "lithdr aHinG 
+sBuples) 
+13 . 
+S a r ~ent uet - t~st Gas oeter (precision) 
+14 . Thick- Hall tubinG (48 ft of 3/16-in. bore ; 48 ft 
+of 3/8-in . b ore) 
+15 . AnnoniB flow control (Wo del LY) 
+Sources of supply : 
+Itee I , 
+Rohe and Haas Co ., 22 W. Wa shin6ton Square , 
+Philadelphia , FennGylvania 
+Itec s 2 to 14 , 
+The Fisher Sci e nt ific Co ., Pitts-
+bur~h , 
+Pennsylv~nia 
+Iten 1 5 , 
+Hoke Inc ., 12 2 Fi fth Avenue , Yow York , N. Y. 
+Ac~essor y equipDent : 
+1 . l[orcur y unnoDeter for accur at e 
+deter~ination of 
+pressures at the h i eh si de of the ~onoDethyl aD ine ceter-
+ing orifice . 
+Wit~ a ne rcury Dano~e ter relatively soal l 
+pressure - fluctuat ions are easil~ · noti ced . 
+2 . Vacuu::: rec e iver vri th n eec.le-cont rol valve and 
+v a cuun-p ressur e gage . 
+Physical Propert i es of ~on onethy la D in e 
+Tenpe r ature 
+Vapor p ressure 
+Spe cific 
+Lat ent heat 
+( "F) 
+(D!sq in . ) 
+Gravity 
+(:atu/n) 
+50 
+29 . 8 
+0 . 6746 
+362 . 6 
+70 
+45 . 2 
+. 661 0 
+356 .5 
+90 
+66 . 1 
+. 6471 
+350 . 1 
+110 
+94 .1 
+. 6331 
+342 . 9 
+130 
+129 
+. 0188 
+339 
+150 
+174 
+. 6042 
+327 
+170 
+228 
+. 5892 
+317 
+190 
+293 
+. 5740 
+3 07 
+---- ----
+NACA Technical Note No . 838 
+21 
+FillinG Cylinder \',i th l!ononethylaDine 
+Extrelne care should be used in fillinG 'any type of 
+cylinder with any 'liquified Gas. 
+Unless care is use d , the 
+c ylinde r is likely tb be conpletely 'f illed , no provision 
+bcinG nade for the thernal expansion of the liquid caused 
+by sliGht t enperature changes. 
+I n such cases t he re is 
+no alternative for the eonfined liquid but to ruptur'e the 
+cylinder . 
+Ruptures of this kind ' ar e particular-ly danger-
+ous and severe personal injuri es Day be incuired . 
+The precautions to be observeci are sinple . 
+First the 
+weight of the enpty cylindcr oust be detc rnined . 
+Then t he 
+capacity , in volueo , nust bc known or cstinatea ; 
+Froo the 
+specific gravity of the li quid , which is given "in t~e pre-
+cedi nG table , the wei Ght of the ~oluDe of ~he Do no Dethyl -
+aDino (wh ich is eoual to tHo- thi rds of the total volune 
+of tho cylinder) ~ay be dctornined. 
+I~ other words , only 
+t wo- thirds of the total voluee cif the cylinder Dust be ~c ­
+cupied by the liquid nonoeethylanino . 
+If tho cylind.cr to be cl::.areed is at the 'saDe tenpera-
+ture as the supply cylinder , the li qu i d nonODothyl anine 
+will n'ot flo"1 from the supply cy,linder to the cylinde;r to 
+be charged '. 
+1'Then a small qu.ant i ty of monomethylamine 
+first enters the cylinder , -it vap orizes and establishes a 
+vapor pressure equal to that in the supply cylinder and 
+f lo w i mmediat el y ceases . 
+There are ~wo satisfactory means by which flow may be 
+accomp lished : 
+1 . Allo,', the ' l i quid to flo,", bOy means of gravity . 
+2 . Cool the cylinder to be 
+c~arg ed to a tempe r ature 
+below that of the supply cylinder . 
+Do not h ea t t he supply 
+cylinder. 
+Eonomethyl amine is very s olubl e in water . ' Tub e s 
+filled with monomethyl ami ne Dny therefore be bled by means 
+of bubbling the gas int6 a bucket of wate r . ' 
+I f the eyes 
+shou l ~ be come 
+ex~os od to monomethyl aDine , 
+very serious burns Day be r ece i ved . 
+GO~G l es Dust the r e-
+for e be worn as a safety ceasure when ~ononethy l aD ine i s 
+transferred f ron onc cylinde r to another . 
+
+
+===== page 13 =====
+
+22 
+TIACA 
+~e c hni c a1 Dote Do . 838 
+Test Set-Up 
+Figure 5 shows the arrange cent and the necessary 
+equipment for Eakin·.:; an engine scavenging-efficiency test. 
+A mercury manoceter is used to determine tho Donomethy1-
+anine metering pressuros so that the conocethy1acine flow 
+can be a ccurately controlled. 
+The sizo of the netering 
+orifico should be selected t o givo a tracer concentration 
+b o tween 0 . 3 and 0 . 6 percont by we ight -nononethy1acino i n 
+the inlot air . 
+Air Moasuremont 
+A nicromanometer (fig . 8) (an incl i ned manometer may 
+be used) is used to measure the pressure drop thr ough the 
+air - flow Deter . 
+It c onsi s t s of two cy linders thnt serve 
+as manometer legs , one of blass , open to t he atmosphere 
+and the other of bras~ , a ccurptely machined to the 
+Sa~e 
+diamete r as the g l ass manometer leg ; a c icronete r screw is 
+mounted above the dial indi cato r to control t he mot i on of 
+the fee10r p i n. 
+A neon 1aup is inser ted in an electrical 
+c i rcuit through the instrumont so that , whe n the feeler 
+pin pierces the water levol in tho open leg of the nanome -
+ter . the neon l amp glows . 
+Th e pre s suro drop i s twic e the 
+drop in water level in the open leg of the nanometer . 
+Sur(;e Volur::e 
+The size of thc surge volune no cessary for making a ir 
+measure ments depends upon the sneed of the engine and the 
+number of cyl inders i n tho engi ne under test . 
+Sat isfactory 
+results Day be obtained. by using the f ollo wine relation: 
+Sur ge volune 
+(40000) ( displaoement volume ) 
+(rpn) 
+(nu ~ b e r of cylinde rs in engine u nde r test) 
+When 
+cr an~case scaven~ed engi nes a r e tested. particu-
+l a r ca re should be 
+ta~en , when the surge system is in-
+stalled , to avoid res t rictions to a ir flow . 
+Onl y a few 
+inches of wa ter - p re Gsur e drop i n th e system wi ll adversely 
+affect the engi ne breathing and will invalidn~e the r esul t 
+of the test . 
+The ai r - flow ~eter should be th e 
+s~allest 
+restriction i n the system . 
+The orifice shoul d b e so se-
+lected that the pressure drop through it is no gre a ter 
+than 1 inch of water . 
+~~A CA Technical note No . 838 
+23 
+Load 
+lionomethylamine does not burn completely during the 
+combustion period regardless of the tracer concentration 
+used. 
+It is important that the monomethylamine fed t o the 
+engine burn almost completely if this method of determin-
+ing the scavenging efficiency of an engine is to be reli -
+able . 
+Figure 3 shows that monomethylamine burns much more 
+completely at high engine lo a d than it does at 1 0~1 engine 
+loa d . 
+Above three- quarter load the burning effici e n cy of 
+monomethyl amine doos not appre c iably incr0as e • 
+From the 
+point of v i ew of th e possib i lity of the occurrence of oxi-
+dati~n and de c ompos i tion of mqnomethylamine dur i ng the 
+scavenGing and exhaust period until the oxhaust sampl e is 
+w i thd. ra'~n , i t is desirablo to keop the ongine l~ad do'~n. 
+The engine mu st , the re fo r e , be opera ted betwe en three -
+~ uarteT and full load in order that between 95 and 98 per -
+cent of the monomethyl amine trapped in the combustion 
+chambe r will burn dur i ng the combustion period . 
+If the 
+exhaust temperature o f the engine is extraor dinari l y high , 
+the load shoul d be reduced so that the exhaust temperature 
+is below 800 0 F . 
+Withdrawine the Sample 
+The inlet a.nd exhaust sample s a r e ,·Ii t hdr awn through 
+the Sar gent wet - test gas flo vroete r . 
+It is desirable to 
+use a suc t ion receiver be caus e of the ease with which th e 
+sample flow may be regulated . 
+The r e ceiver Day be evacu-
+a t ed. by means of an aspirator , which op erates on either 
+air or water ; operatio n on wate r is p r efe rable bocause of 
+the increased evacuating capacit y tha t may be obtained . 
+A needle valve i s used to regulate the rate of samp le flow . 
+Caro of t h e Uon omethylamine Absorpti on Appar atus 
+All Van-Slyko test tube s and aeration tuDes mus t be 
+washed wi th d i st ill ed wate r Dofu re · the t ubes a r e filled or 
+refilled wit h sulphuric- ac id so lut i on . 
+The aeration tubes 
+mus t also be d.ried befor e being r e-used . 
+This dryinG nay 
+be accompl i shed by means of c ompresse d ai r . 
+Charging the Absorption Test Tubes 
+The inlet-sannle test tube is usually charged with 
+25 cub i c centinete~s of 0 . 1 N sulphuric-acid solution' 
+
+
+===== page 14 =====
+
+24 
+HACA 
+Tochnic~l rotc Ro . 83 8 
+by neans of an a u tomat ic pipette and 
+dist ill e~ wate r is 
+added until the t es t tube is hal f ful l; three drops of 
+mized indicato r are then added to the solution__ 
+"Then a 
+sample is being bubb l ed through the iolution , the sanple 
+bubbl es d_i splace the sulphur ic-acid solution and r a ise t:n.e 
+level of the s olution alnost to the t op of the tube. 
+If 25 cubic ce ntimeters of acid arc used in the inle t -
+sanp l e test tubes , 5 cubic centi~ete r s of acid should pref-
+erably be use d in each exhauot - sanule tube , so that when 
+testin-G- an enGi ne \"lit h a utiliza ':; ion f a ctor of a·oout 80 
+p ercent , 
+ap? roxicatel~ tho sane voluu e of s anple will be 
+used to neutralize the a cid in the exhaust- saopl e tes t 
+t ube as was no ce Bsary in the inl et - sa~pl e t CGt tub e . 
+If 
+an engine of 60 pe rce nt utilization facto r i s beine teste d , 
+25 cubic centi neter s should bo used in the i nlet - saopl e 
+test tube and 1 0 cubic ce~t i =ete r c in the exhaust - sanpl Q 
+test tube . 
+If the 
+sa~p li nc is p lanned i n this na~~cr
+, 
+b ot h t i me and DO D o cethyl~D ine will be cons e r ved . 
+Fr ee car -
+bon is a decolorizi ng nGe~t
+; the r efore , i".'itt: s n oky exhaust 
+six drops of n ixed ind icat or r.:uot be allded to th o exhaust -
+sanple tes t - tube 
+so lu ti~n . 
+I nl e t - Gas a~d Exhaust- Gas Anal y sis . 
+It nust be b or ne in =i nd that the re sults of tho anal -
+ysis of a gas s ar.:?le i re no Do r e aecurate t han th e s acple 
+_anal y ze d . 
+Th o 
+n o n o D e thy l a~ i n e should ~e adequ ate l y c ixe d 
+before wi thdrawing a n inlet sa~p lo . 
+This conditi on Day be 
+ac coDplish e d by 
+i nt r o ducin~ th e 
+cO~Dnethy l nr.: i~e in a r ela-
+t ivel y h i eh- velocity sect i on i n 
+t ~ e surgo t~nk . 
+(Sc e fiC o 
+5 . ) 
+All i nlet and exhaus t sacnles should bo wi thdrawn 
+fran the i nlet ana. exh~ust n:.:.cts tr.r ouGh sc.~l? linG tubes i n 
+order that the 
+s~np le obtained be representativo of the 
+ga s at that particular- l ocatio:l . 
+Fi GUre 7 
+S!~Oi-n; c.. type of 
+s BnplinG tube t hat Day be used . 
+At least four exh.:us t 
+sa:.lp l es Dust ·oe wi thclr al1!l , ea ch 
+at n d i fferent locnt i on ale!l.5 the exhc..ust line . 
+The first 
+s ~np le should be \"lithdra\"ln nt a 
+Cista~ c e equ~ l to a l eneth 
+of exhaust lino corre sp ondinG to abou t one and on e- half 
+ti:'lCS t he c1.is-:;:Jlace ne:1t voluDe of the anGi no 
+cyli nc~e r
+. 
+The 
+r enainin g sacplin g tubes shoult be evenl y t i stri buted alona 
+~he exhaust line i n about 11- foot interval s . 
+The ani ne -
+fre e exhaust saDples f r o:.J each sa:.J?l ! !l.G tube 
+s~ould feed 
+i nto a heade r 50 that one c as :.later ~ay be usod to :.loasur o 
+the total voluce of the exhaust sa:.lples . 
+NACA ~e e hn ic al No te No . 838 
+25 
+I t is n ot necessar y to take inlet and exhaust sanples 
+sinul taneou5 l y unless the enGine speed does not rewain: 
+const ant fo r the duration of one conplet e test ( the tiDe 
+necessary to 
+1"! i thd ra ,~ one- inlet and the fou r sinultaneous 
+e xhaust sa::Jples) . 
+I n that ca s e 
+ti~O Gas Deters will be 
+ne cessary _ 
+If th e engi ne under test will run at a constant speed 
+for t he dur ation of one test , one ga s Deter is suffici en t . 
+The inle t 
+s a~p le shoul d be withdraim first to dete r n i ne 
+th e c oncent r a tion of Doncnet hyl anine in the inle t air . 
+If 
+all the exhaust sallples a r e \-li thdrai~n si nul taneously and 
+t h e r at e of sanp l e flow through each tube is r ebUlated to 
+be r e latively tho san e . considerable t i ne will be saved . 
+Tho rat e of the c onbincd sacnle flow thr ough the ga s ee t er 
+should be about 0 . 4 cubic fo~t po r ninute . 
+As the col;r 
+of the sulphuri c - ac id solut i on i n each exhaust - sanpl i ng 
+test tube change s fro n a pur ple - to a li ght Green , the san-
+p l e flow of that test tubo shoul d be stopped . 
+This proco-
+dure Dust be repoate d until the aci d solution in all four 
+exhaust-sunple te st tubes have b een neutralized . 
+1'Ihen t he 
+flow through tho la st exhaust - sanple ae r c.t ien tube has been 
+stopped , the vol uDe of tho coDbined sacples that pas sed 
+through the eeter should be r e cor ded . 
+Corr e ction of th e Exhaust - Sanple V01UDC by Ti t r at i on. 
+\'Then the exhaust sanple (contnining nonoi:'.ethyl 3.!.li ne 
+and wa t er vapor)" pa sses through the aeration t ub e tr..at is 
+at r ooe teDpe r atur e , soDe of the \"later vapo r is conde nsed 
+out of the Be r a ti cn - tu~e wall . 
+The c ondensed w~ter vapor 
+is very effec t ive i n absorbi nG what e ve r conoDethyl aD i ne 
+c o~es i n c ontact with it . 
+The reco r ded vo l uee of the ex-
+haust sanples \"li thdra 1"!!l. is the r efo r e lar 6e r than the t rue 
+voluDe necessar y t o neut r a li ze 
+t~e s~lphur ic- aoid solution 
+and a correction should be uppl i ed . 
+The solutions in all four exhaust - saopline test tube s 
+should be collected in B 
+l ~ree benker Bnd ~ixed wi th the 
+solutions obtained by waR~ i ac the aeration tubes and the 
+test tubes \"li th distilled watcr. 
+This wnshinG p roce dure 
+Dus t be ca rri ed. out or the results obtained \"i l l not be 
+valid . 
+Add 5 cubic c ent i:.let ors of Bcid to the s olut ion i n 
+the beaker (the color should cha~~D fro e &r een to purp l o) 
+and tit r ate the contents with standardized n/lo sod i u~ ­
+hydro~ i de solution . 
+When the solution hc..s been tit r ated , 
+the opernto r should have the definite nUDber of cubic cen-
+--
+ 
+.. 
+- -----
+-~ 
+----
+
+
+===== page 15 =====
+
+26 
+HACA ~echnienl Note No . 83 8 
+timeters of 0 .1 N sulphuric- acid solution that were neu-
+tralized by the exhaust samples flo~ing through the var-
+ious aerat ion tubes. 
+Calculation 
+Accor ding t o appendix C, 
+~ i s determined as follows : 
+Vinl ~ 
+25 c c C.l IT 
+H 2S~ 
+X 
+~= 
+-
+Vexh ~ 
+X cc 0 . 1 N H2 S04 
+25 
+where t he nume r ato r is the numb er of cubic f eet of inlet 
+sample that neutr a lizes 25 cubic centimeters of appro x i -
+mately 0 .1 N acid solution and the denominator i s the num-
+be r of cubic feet of exhaust sample that neutralizes 
+X 
+cubic centime t e rs of t h e same a ci d s olut i on . 
+From equ a-
+t ion (13) 
+nu~ 
+1 -
+~ 
+e -
+~ s 
+where 
+e 
+i s the bur ning efficiency of the t r a cer gas , and 
+s 
+the volume shrinkage , which i s dependent upon the clR 
+r at io of the fue l and the air-fuel r atio. ' ( Se e fi g . 2 . ) 
+The 
+tion (7) 
+charging effici ency i s t hen obtained from equa-
+,·,her e 
+nch 
+nut L 
+L 
+Vdel 
+V di sp 
+I f the air delivery i s dete r mi ned by flowm e t e r meas-
+urement and a rounded nozzle is us e d , the quan t ity of air 
+fl owing through t h e nozzle p e r second is 
+,~h e r e 
+zl e , 
+cific 
+,.,hich 
+Q 
+CA j 2g ~ 
+A is t he cross- section a rea of t he flowmetef n ~ z -
+p 
+the pressur e drop acr oss the no:cle , 
+Y 
+the spe-
+weight of t he air , and 
+C 
+t he f ischar g e coefficient , 
+is a bout 0 . 98 i n case of a stand'ard flO"rmeter nozzle . 
+NACA. Technical ~:ote 110 . 838 
+27 
+If 
+P 
+is expressod in inches of wa ter , 
+Y 
+in pounds 
+per cubic faot, and A is i n , square inches , 
+Q 
+0 .98 1.:./2 x 385 x p/27 . 5 
+Y/1728 
+0 . 98 A 220 If 
+cubic inches 
+and tho delivery r at io i s 
+L 
+~ 
+n 
+2-
+1T D TT 
+S 
+•• 
+4 
+whe r e 
+n 
+is the engine revolutions pe r mi nut e , 
+D 
+cyl inder bo r e , 
+S 
+the st r oko , bo th in inches , and 
+nu nber of c ylinders in the engine . 
+the 
+N 
+the 
+C O~T CLUS! OIrS 
+1 . 
+The tracer - gas method of determini ng t h o charging 
+efficiency of two- stroke- cycle Di esql engine s , in which 
+approxi mat ely 0 . 5 pe r cent monomethylae i n e is used as a 
+tra c er ga s , is convenient a ~d sufficient l y accurate . 
+2 . 
+Th e test i s t o be p erforme d wi t h t h e 
+ating at between thr ee- qua rter and full load . 
+conditions , it m~y be assumed that b etween 95 
+c ent of the mononethyl amine , wh ich is trapped 
+de r , bur ns duri n g t h e combustion p er i od . 
+engine 
+Under 
+and 97 
+in the 
+oper-
+such 
+per -
+cyli n-
+3 . 
+Oxidation or deco ~~ osition of t he ~ono B ethyl anine 
+during the scavenging and exhaus t p e riod could not be de-
+t e cted ' a nd nay be neglected for all pra c t ical purp oses . 
+4 . 
+A si mple 
+~ rr e ction fo r ~ula for v ol u e e shrinka ge 
+and inconp l et e 
+c o~bustion of the n ono n ot hylalli ne sh ould be 
+ap~ l i eQ i n e valua t ing t h e test resul t s f or better accuracy . 
+W i t ~ such correct ion t he d ct e r ll i n~t ion of the char ging ef-
+f i ci e ncy i s expe cted t o b c accur a te wi th in ~ l porcent . 
+Scho ol of En gineeri ng , 
+The Penn sylv an i a Stat e Coll ege , 
+State Coll ege , Pa ., Movenbe r 1 5 , 1941 . 
+
+
+===== page 16 =====
+
+28 
+NAC~ Te chnica l · Note ~o . 838 
+APPEND IX A 
+RELAT ION BETWEEN SCA,VENGHi G EFFICIENCY AND 
+B~..AKE-HEAN-EFFECTIVE PRESSURE 
+The horsepower output of an engine is 
+hp 
+2n 
+Vdisp bmep c 
+~ 
+33000 
+(Al) 
+where 
+Vdisp 
+is the di splacement volume in cubic inches , 
+n 
+the revoluti ons per minu te , and 
+c 
+the number of 
+strokes per cycle . 
+Natur al ly , the horsepower is a l so equal t o the tot al 
+fuel consumption divided by the specific f uel consumption 
+hp 
+Fh 
+f 
+Vuure P 2n 60 
+-
+c 
+r f 1728 
+Vpure P 2n 60 
+c 
+rt h r-. f 1728 
+(A2 ) 
+where 
+Vpure 
+i s the volume of pur e a ir under norma l 
+temperature- pressure conditions i n the cylinde r before 
+combu sti on (see fig . 1) , 
+r 
+the actual , 
+rt h 
+tho the o-
+retic a l r atio , 
+A = r/rth 
+the excess- a ir factor , and 
+P 
+the we i ght of I cubic foot of air under normal tcmper a tur e-
+p ressu r e conditions. 
+From equations (AI) and (A2) 
+P 
+Vpur e 
+'omep 
+13 , 750 A f rt h V di sp 
+One cubic foot of dry ~ ir unde r norma l tempe r atur e- pressure 
+conditions we i ghs 0 . 0765 pound , therefore 
+bmep 
+1 050 
+Vpur e 
+r-. f r th Vdi s p 
+(A,3) 
+It should ~e reali~ed t ha t 
+Vpure 
+is more than that 
+NkCA Technic ~ l Note No . 838 
+29 
+uart of the a ir del ive red an d re taine d in the cylinder. 
+it includes some pure ~i r o~ ~~e res idua l gas re maininG in 
+the cylinder from the ?re v~ auc cycle . 
+If figure I i s re -
+ferred to , t he fol10wi~ G definio i ons and relat ions can be 
+written: 
+nsc 
+nv ol 
+r-. 
+Vpure 
+Vcp 
+Vres 
+V ret 
+Vret + Vres 
+Vret + Vres 
+Vdisp 
+V'Oure 
+r 
+Vth 
+rth 
+Vr et + Vres -
+Vcp 
+1T 'th 
+Vret 
+(A4 ) 
+U.5 ) 
+(A6) 
+(A7) 
+(A8) 
+In equations ( A4) to ek8) 
+t~e r e a re five u nk~owns
+: 
+Vpure ' Vret • Vres ' Vcp ' and Vth . 
+These equations can be 
+solved f e r 
+Vpure 
+to gi ve 
+nvol nsc 
+Vpurc 
+Vdisp 1 + (r-. -
+1 ) nsc 
+:Equations (A,3) ['.nd. (kg) r eGult in 
+bmep 
+1050 
+nvo l nsc 
+f rt h 1 + (r-. -
+1) 
+which can also b e 
+~ ritt c n as 
+0 . 4 1 4 . 5 
+" s c 
+bmep 
+1 80 --- ---- 1 + (r-. _ 1) 
+r th 
+nSc 
+nvo1 
+1"1 SC 
+(A 9 ) 
+(A10) 
+This expr ession i s i dent ica l wi th e~uation (8) ef the te~t
+, 
+
+
+===== page 17 =====
+
+------
+30 
+NACA Technical Hote ilo. 838 
+J.PPEiDIX :8 
+CORRECTIOl< FOR U~ILIZATIOU F.hCTDB. 
+If the am ount of unburned tracer gas in the cylinde r 
+i s zero an d the volune shr inkage due to combustion is also 
+zero , 
+t~e util i zat ion fa c tor 
+Tlut 
+Vret 
+(Bl) 
+Vret + Vshort 
+is equal to 
+(1 -
+~)
+, 
+where 
+~ is the ratio of trace r-
+gas concentrat ion i n 
+t~e ehhaust to the tracer - gas c oncen-
+trat ion i n the inlet an~ is deter~ined direct l y by a chem-
+ical method . 
+Be caus e the n ir r etained in the cylinder undergoes a 
+vo l ume 
+shrin~uge during combu st ion , v oluDe shrinkage may 
+be exp r ossed as 
+v 
+s = ret -
+Ve 
+(B2 ) 
+Vret 
+who r o 
+Ve 
+repre sents the volune uI!der noraal tenpe r at ure -
+pressure conditions of that porti on of the water- free 
+exhaust gas that wa s contributed by the cO!:1bu s t ion i n the 
+cylinder . 
+The t otal e}:h~ust is 
+Vexh 
+Ve + Vshcrt 
+(B3) 
+The nflxt thing to con s i de r is that a 
+sm~11 po rtion 
+f tho tracer Gas escapes cO!:1bustion in the cy li nde r . 
+This ga s can be accounted fo r in the burning efficiency 
+e 
+of the t r a cer sas : 
+e 
+t ret -
+t nb 
+tr et 
+(:84 ) 
+where 
+t ret 
+a nd 
+tnb 
+denote the r etained po r tion of the 
+t r ace r gas and the nonburned po r tion of t~e t r a cer gas , 
+r espect ive l y . 
+Finally , 
+~ is the ratio of the actually ~o a sure d 
+l ______ _ 
+NJ.CA 
+T~c;:nic~ :,ote 1:0 . 83 8 
+concentrations in the exhaust and inlet 
+texh 
+~ 
+~ Vdel texh 
+t del 
+Vexh t del 
+Vdel 
+J. f orcul a i s sought 
+Tlu t 
+f 
+( ~ , s , e) 
+that would give the utilizut ion factor in terns of the 
+correction f a ctor s . 
+Known relati ons ure : 
+V ret 
+V s h ort 
+Vdel 
+\~el 
+~ " 
+-
+eXll 
+Vex:-. 
+t ret 
+tshort 
+\' ret + 'shor t 
+t ret + tshort 
+tshort + tub 
+' e + "short 
+FroD equation s (Bl) anc (36) 
+1 
+nut 
+t 
+1 + 
+short 
+tret 
+Fror:; equatio n s (:87 ) , (B10 ) , n ne. (:36) 
+V ret + V sh ort 
+Ve + Vsllort 
+t 
+1 + ~o:rt 
+tr~ 
+V dol 
+'\' 
+, 
+ex.'l 
+--
+.-.---- --- ----_ ... _--
+Vo 
+1 r et 
+~ 
++ "'5hort 
+tr o t 
+-------~--
+31 
+(B5 ) 
+(:06) 
+(:87 ) 
+(B8) 
+(:29) 
+(:alO) 
+(311 ) 
+(:212) 
+
+
+===== page 18 =====
+
+L 
+32 
+NA CA 
+Tochnic~l ~o t o 30 . 838 
+]~t fron oquation (35) 
+Vdel 
+Voxh 
+t. 
+a. 
+(lo l 
+t--
+exh 
+Fron ~ co np~ ri s on of (312 ) ~nd (313) 
+t, 
+a. -..£:.£l 
+t 
+OX~l 
+1 + t s!l or t 
+tret 
+Vo 
+t ,," or" 
+__ + 
+_,,_ 
+v 
+Vrot 
+tr ot 
+On tho other c~nd , 
+fro~ oqunt ion (32) 
+y 
+-~ 
+l ' 'rot 
+~n d fron o~u~ti on (311) 
+tS!l.ort 
+trot 
+1 -
+s 
+1 
+_ 1 
+nut 
+(:313) 
+(314 ) 
+(B15) 
+(:915) 
+FroD oquntions (J 14) , ( 31 5) , and (316) , t c oro fo r o , i s do -
+rivot 
+Ci t r.ol 
+1 + _ 1 _ _ 1 
+ilut 
+1 
+tox.">J. 
+1 _ s + 
+1 
+-
+1 
+1 -
+s nut 
+nut 
+(:a l 7) 
+Di v i d i ng oqun~ion (J8) by oqunt ion (39) Gi vos 
+t
+, 
+t 
+tret + tsh ort 
+1 +~~ 
+t del 
+tret 
+texh 
+t nb + 
+t sh or t 
+tnb 
+tshort 
+-- + 
+(:318 ) 
+tret 
+tret 
+and if equ ati o ~ (316 ) is considered 
+t de l 
+teu 
+):r.;.C;" Technica l lTote No. 838 
+1 
+1 + -- -
+1 
+nut 
+1 
+1 _ e + _1 __ 1 
+1 -
+e nut 
+nut 
+33 
+(Dl9) 
+When equation (317) is conpared with equa t ien 
+(~19) 
+1 
+1 
+(320 ) 
+a. 
+1 -
+s nut 
+e nut 
+1 
+fron 1'lhich 
+nut 
+1 -
+a. 
+e -
+a.s 
+This equat ion i s i dent ical "lit h eO,uat ion ( 13 ) used in the 
+te xt . 
+1.PPElm I X C 
+DETERHI~,AT lOll OF 
+a. 
+Cheni ca l Re a ction between Nonenethyl anine and 
+S u l p~u ric-Aci d So l ution 
+A co nveci ent solution to use fo r reactio n wi th the 
+mono methyl amine in ·the absorption apparatus is an approx-
+i mately 0 . 1 N solution of 
+H2 S0 4 , 
+A no rmal solution is one that contai ns the gr a m 
+equivalent weight of a substance in 1 000 cubic centimoter s 
+of solution . 
+The equival ent we i ght of a substanc e is the 
+weight of i t whic h combines with , or replaces , 1 . 008 g r am s 
+of hydro gen . 
+Inasmuch as 
+H2 S0 4 
+contains two r eplaceable 
+hydrogen atoms , its equ i valent weight is tho molocular 
+weigh t div i ded by 2 (98/2 or 49 gr ams) , 
+Consequent l y , any 
+solution containing 49 grams of sulphuriC acid pe r liter 
+i s a no r nal solution of 
+E 2 S0 4 , 
+a nd any solution contain-
+i ng 4 . 9 gr a ms of 
+E 2 S0 4 
+p e r liter is a 0 . 1 N solution . 
+Con c ent r ated sulphur ic acid is 96 pe rc ent pur e a nd 
+has a specific gr avity of 1 . 84 . 
+One cubic centimeter of 
+co ncent r ated sul phuric acid therefore contains 1 . 77 grams 
+of 
+H2 S0 4 ; 
+or th e 
+v o lu~e of sulphuric a ci d that cont a ins 
+4 . 9 grams of 
+H2 S0 4 
+i s 
+
+
+===== page 19 =====
+
+34 
+~ 
+1. 77 
+• 
+E~Ck Technical Rote ~ o. 838 
+2 . 77 cubi c c entimeters c o nc ent r ate~ Hz S04 
+Then , by the addition of 2 . 77 cub ic centimeters of concen-
+trated sulphuric aci d to disti lled water to make a total 
+of 1 000-cubi c-centimeter solution , a 0 . 1 n solution 
+of sulphuri c acid will be obtained . 
+.Ii. solution of this k ind ~ay not b e exa c tly 0 . 1 II a nd , 
+therefore , the e xa c t normali ty may b e 
+deter~ined by t itra -
+tion wi th a standardized solution of 0 . 1 IT DaOH , which may 
+b e obtaine d from a chemical company . 
+The a ct ual conce ntratio n of Hz S04 used i n the tests 
+\'ras 0 . 121 ll . 
+Conc ent r ati on of :10nomethyl al!lin e i n Air 
+Whe n monomethylanin e r eacts wit h sulphuric a cid, mono-
+methyl ani ne sulphate i s for ce& as indica ted by the follow-
+ing r ea c t ion : 
+CH3HEz + rtz S04 ---+ CH3,;Rz 
+nZ S04 
+Since a 1 N aqu eou s solution of 3 Z S04 
+c ontains 49 gr am s 
+HzS0 4 per 1 000 cubic c ent i ~et e r s of total solution , 1 cubic 
+c e nti me ter of 1 
+~ 5 2 S04 solution co ntains 0 . 04 9 gr am of 
+H2 S0 4 , 
+Hence , 1 cub ic cen t i mete r of a ( N) no r malit y Hz S0 4 
+solut ion contains 0 . 04 9 ( li) gr an of H2 S0 4 • 
+According to 
+the fore go in g st oichiometric equation , the quant i ty of 
+monon ethylacine equiv a l ent to 1 cubic cent i ceter of (ll) 
+H2 S0 4 nay be ca lc u l a te t , as in d icated , by t~e f oll owing 
+methryd : 
+(0 . 049) ( K) 
+98 
+~; 
+31 
+whe r e 9 8 and 31 r epre sent the mo l ecular we i ghts of Hz S0 4 
+and CH3 NHa , r espective l y , a nd 
+w 
+the equivalent weight of 
+CH3NBa , which giv es 
+w 
+3~ (10- 3 ) 
+(~;) g C3 3 n:a 
+2 
+If 
+Xcc 
+is the vo luoe of (:: ) HaS04 so l ution used for the 
+sampl e test , the we i ght 
+W of CE3~H2 
+equivalent to i t 
+vrould be 
+1f 
+i;ACA Technieal Uote 110 . B3B 
+31 (10- 3) (ii) (X) g 
+2 
+(:31 ) (10-
+3
+) 
+(l.:)(X) l b 
+( 2)(454) 
+l'T 
+-"-
+"""\.F 
+x cc ( lr) !1 Z S0 4 
+The 
+~ syobol rep re sont s that the quant ities 
+the right and left side neut r a li ze each other . 
+35 
+on 
+u oe 
+This we i gh t of nonooethyl aoine is contained in a vol -
+V 
+of gas . 
+The c oncent r at ion is 
+Cence nt r at ion CB3 RH3 
+,:rhere 
+(3l)(1 0-~ ) ( li)(X ) 
+(2)(454 ) 
+v 
+( ll) 
+n or cality of a ci d solut ion ' 
+V 
+volu:le of nono:.1ethylaqi ne fr:ee saople =0 
+X c c 
+of 
+( I,) 
+no r oali ty naS 04 ' 
+If t he volune occu p ie d b y the ani ne i n the gas i s neg-
+lecte d , only the 
+fou rt~ deci qal will bc affected . 
+Ca lculat ion of t h e Crrncent r at ion Rat io of UonooethylaDine 
+i n 
+t~e ~x~aust ~n d I n l et S ~~p l cs 
+Th e 
+sy~b ol 
+~ (en ot ew the r.ti~ 
+~ 
+conce!lt r ation C~3E~a i n the exhaust 
+concent r at ion CH3 NH z in t ho 
+i n~ot 
+If substitution is ~ad o , t he re is obt o.inc t:' 
+~ 
+~ 
+3.414 X 10- 3 
+3 . 4 14 X 10- 3 
+i1LU 
+V 
+c ~:h 
+(:r) X 
+V 
+inl 
+(l~;' X 
+V 
+exh 
+~ 
+V 
+inl 
+
+
+===== page 20 =====
+
+l 
+36 
+K~ CA Techni cnl Hete No . 838 
+If the saDe solution of 
+~
+S 04 
+of about 0 . 1 IT is 
+use~ :or both t h e 
+i~let and t he 
+e~haust tosts and . if the 
+specific weights of the two DonODothylnoine free ga s saD-
+pIes a re equal 
+V inl 
+CL = Vexh 
+../"'-
+'-' 
+...r-..... 
+'-' 
+Xinl 
+(rr) HZS04 Xcxh 
+Xexh on Ez S04 Xinl 
+:a3FERElTC:SS 
+1 . 
+Taylor , C. Fayet te , and Tayl or , Edwnr d S.: 
+The Inter -
+nal Coobustion 3~gin e. 
+Internat i onal Textbook Co ., 
+193 8 , p . 248 . 
+2 . 
+nage l , A.: 
+The Di e sel Engi ne of 
+~ o- (lay . 
+Engli sh 
+tr anslat ion of Di esel - :iasch ine n , VDI-Ve rlag G. o . b . R. 
+(Derlin ; 1 923 , pp . 3- 35 . 
+3 . 
+DeJuh a sz ; K. J .: 
+lieasuring th e Scavenging Efficienc y 
+of ~wo - St r oke Diesel Engi nes . 
+Aut o, Ind ., vol . 73 , 
+n o . 26 , Dec . 28 , 1 935 . 
+4 . 
+CUrtis , C. : 
+Inprovenent s i n Scavengi ng and Super-
+char gi ng T wo - C~cle Dies e l Engi nes . 
+~iese l Power, 
+vo l . XI, no . 9 , Sept . 1 933 , pp . 545- 549 . 
+5 . 
+Anon .: 
+The Scavenging of Two- Cy cle E~g i nes
+, Sulzer 
+Te ch . Rev ., no . 4 . 1933 . 
+6 . 
+Lis t , E.: 
+Ve r suche an de r 
+Zwei takt ~ i es e l ~asch i ne
+, 
+D i es e l ~as c h in en VIr . 
+Z. V. D.I . , Sept , 1938 , pp . 2- 14 . 
+7 . 
+Schvcitzer , P . H., and Kli ngo , 3 . R.: 
+Oxys cn- Boost ing 
+of Di esel Engines for Take - Off . 
+Eng . Exp. Sta. 
+Bull . No . 54 , Penn . 
+Sta~e Col . Bul l ., vol. XXXV . 
+ne . 14 , April 1 , 1941 . 
+NACA Technical Note No . 838 
+37 
+T.lu31E I 
+DETERHH:ATION OF THE CHARGING EFFICIENCY OF J,. YEi:;N SEVZRIN 
+TWO- STROKE - CYCLE CRANKCASE SCAVENGED DIESEL ENGINE 
+(Rated 30 hp at 400 rpm; 10. 5- in . bore6 12-in. stroke; inlet port opens 
+1320 A.T.C.; exhaust ?ort opens 117 A.T.C.; inlet port closes 2280 
+A.T.C,; eYJlaust port closes 243 0 A.T.C.; barometer, 28 .85 in. Hg) 
+Test •. ..
+. . ••. 
+Engine speed, rpm • • • 
+Exhaust temperature, OF 
+. 
+Water-jacket temperature, OF 
+Mean cranlecase pressure, pounds per square inch 
+Ha.x1mum cylinder pressure, pounds per square 
+inch •••..•.
+. ..• • ...... • . 
+Inlet-air temperature, Dr •. . • . . . . . • 
+Rel ative smoke density obtained with Penn State 
+Slllokeme t er . . . . . . . . . • . . . . 
+", 
+Honomethylamine f eed, orifice 5. • • • • . • • 
+inches Hg pressure . • • 
+Inlet sample ~ 
+20 cc 0.09873 N H2 S04 , cubic 
+feet , ..•.•.• .. ... .....
+. • 
+' Sample through sample header ~ 
+16 cc 0 .09873 
+N H2S04 (4 cc 0. 09873 N HzS~ in each aer a-
+tion tube) four such tubes used - one "Ii th-
+drawing a sample 6 feet from exhaust port and 
+the others each withdra\vi ng samples at loca-
+tions 9 feet, 12 feet, and 15 feet from the 
+exhaust ports, re spectively , all leading to a 
+common header whi ch leads to a wet- test gas 
+meter , cubic feet . . . • . • • . . . . . • 
+Volume of sample passing through header cor-
+rected by ti t rati on 16 cc 0.09873 N HzS04 
+~ . percent tracer in exhaust 
+• • . . . . • . 
+percent t racer in inlet 
+Average 
+~ for each run 
+Size of thin-plate orifi ce placed in the 4. 5-
+inch- diameter inlet air duct at t he crank-
+case, inches ..... .
+. •.... . ... 
+Pressure drop through 3.145- inch- di ameter air-
+flow orifice (discharge coefficient 0. 98) , 
+inches water . . 
+. . • . . . . . . 
+Inlet-air specific wei~~t, pounds per cubic 
+foot . . . . . .. 
+., •...• .. 
+Air velocity through t he air- flovi orifice, 
+feet "per second 
+Air- delivery ratio • 
+nut · 
+nch ' ...••• ........ ....••. 
+1 
+2 
+378 
+378 
+580 
+575 
+158 '136 
+1 
+11. 
+1"8 
+8 
+575 
+575 
+93 
+94 
+. 82 
+, 76 
+5 
+5 
+30 . 30 
+. 202 . 202 
+. 852 .802 
+.761 . 761 
+.212 . 212 
+.2l2 
+31 
+31 
+. 284 . 272 
+I 
+. 0703 
+36.3a 
+·50 
+.32 
+.41 
+3 
+4 
+5 
+6 
+380 
+378 
+382 
+380 
+610 
+620 
+595 
+590 
+150 
+150 146 152 
+~ 
+~ 
+Ii-
+l~ 
+4 
+4 
+e 
+570 
+575 585 
+590 
+95 
+102 101 101 
+. 86 
+. 84 . 84 
+. 84 
+5 
+5 
+5 
+5 
+22 
+22 
+33 
+33 
+.200 
+.197 . 202 . 207 
+1.000 1.031 .898 ·911 
+. 970 
+. 996 .840 . 855 
+. 165 
+.158 .192 . 194 
+.162 
+.193 
+I 
+none Inane 
+2 
+2 used used 
+. 202 
+. 200 . 3241 . 316 
+.0686 
+. 0689 
+31 ·35 
+39.~ 
+. 433 
+· 5 
+.87 
+. 83 
+·38 
+. 4ti 
+
+
+===== page 21 =====
+
+... 
+~ 
+~ 
+\) 
+- . ~ 
+...::: 
+~ 
+.~ 
+~ 
+lij. I. 
+f)it1;rt1m s/Jowill; flYo-slroke e/lj'liJe fJrocess. 
+Ljthf shpdn51 - )Wl'e P I/", oepYjI sopd//y -.6uI'n/nf1 ,lJl'oc//./cfs. 
+~ 
+~ 
+~ 
+.... 
+II 
+SctlVmging KrIClWy:,.._ ~I • I?~. g 
+Vr~1 • Vr ... 
+Vo/(...,,~fni: ~fficimcy:"" 
+16. 
+JvoI 
+alSp 
+.... 
+() 
+II> 
+I-' 
+~ 
+Ultliza lion 
+factor: 
+o 
+<+ 
+V~I 
+.. 
+"JuI-
+I?~I ·~I -z: 
+Drlivrry ratio : 
+0> 
+v,.rl • Vshorl 
+~ 
+L 
+.~-:-:----
+VcJisp 
+Charging ~ffli:~ncy: 
+Vr~1 
+' ch: VcJ':sp 
+-
+Exc,ss-air fador: .>. • ~ 
+"lh~ 
+"'J 
+.... 
+OQ 
+I-' 
+• 
+
+
+===== page 22 =====
+
+--
+-.
+:) 
+.ACA Technic&l .ot e !o.638 
+Fig •• 2,3 
+1,/0 
+- - -
+USING 
+TOTAL 
+EXHAUST GAS 
+-- USING 
+WATER FREE EXHAUST GAS 
+1.0.5 
+. ~ ........ 
+~.:::-~ .... -t'- -
+--
+'" 
+~~ 
+\;; ~ 1.00 
+::; .... 
+~~ 
+~ ~ 0.9.5 
+::;~ 
+~ 
+T ~~~; 
+~. --
+r ;;-~~= 
+==::: 
+;;=;;;~= 
+CARBON- HYDROGEN RATIO' 6--./ 
+;----._.--
+1---/ 
+~ 
+~ 
+~ 
+CARBON-HYDROGEN RATIO.)$ 
+r--
+r 
+0.90
+'0 
+IS 
+20 
+ZS 
+JO 
+JS 
+40 
+'S 
+.so 
+.... 
+0.08 
+i~ 
+~ ~ 0.06 
+~~ 
+~! 
+ho~ 
+~ ~ 0.02 
+~~ 
+• 
+0 
+AIR - FUEL RATIO 
+FIG. 2 
+OiAME IN VOLUME 
+AFTER COMBUSTION. va.UMES 
+H4VE BEEN COMPUTED 
+AT N. T. P. CONDITIONS WITH AND 
+WITHOUT 
+WATER 
+VAPOR 
+• TEST CONDUCTED 
+) -ZI-41 
+0 
+I 
+. 
+" -Z2-41 
+x 
+x . . 
+4-2J-41 
+I 
+I 
+I 
+'" ~ 
+!ALL EXHAUST SAMPLES WITl-IDRAWN 
+/I IN. FROM EXHAUST VALVE 
+• 
+1 
+. i'-... 
+~ . 
+~ 
+I 
+Xx 
+~ 
+1 
+x o . 
+0 
+x 
+GARDNER f'OIA'I STROKE CYCLE DIESEL 
+\ 
+. 
+T 
+K£T I44L~ OPeNS I.5DEG. B . T.D.C. 
+<::) 1 
+x 
+£XHAUST WIlE CLOSES ISOEG.A.T.D.C. 
+590-620 RPM 
+g' 
+,.5,]-,76" BY 1fT. MONOMETHYLAMINE IV TfE INLET AIR ...J 
+I 
+I 
+"i 
+.l.S 
+4C 
+~ 
+SO 
+SS 
+60 
+6S 
+10 
+1S 
+ENGINE BMEP , L8 P€R SQ IN. 
+AG. 3.8:.RNING EFFICIENCY CF MOIVOMETHYLAMINE IN A 
+GARDNER DIESEL ENGINE. Van Slyke-Cullen Urea apparatus . 
+--'-
+----,
+
+
+===== page 23 =====
+
+FIG. 4. ~N SLYKE - CULEN 
+UREA 
+FLASK 
+SLYKE-CULLEN UR£A ~R4TVS 
+_ E'VDAII~T 
+11 
+FIG. 5. VENN SEVERIN ENGINE TEST SET-UP 
+SAMPLING TV;-:-
+:~~
+. 
+. 
+~ 
+FIG. 7. SAMPLING TUBE AND 
+STOP COCK 
+.. 
+~ 
+>-... 
+" 
+~ 
+o .. 
+t-' 
+'"' 
+~ 
+" '" 
+o 
+'" 
+.... 
+0> 
+.., 
+.;.; .. 
+... 
+U1 
+'" 
+
+
+===== page 24 =====
+
+• 
+Figure 6.-
+;:-~':;';'J~:~;~" ·t;:,~}·~~~~~~ 
+''\I' .' ;'l:". ~ '}t~'·'''.:'· 
+~ 
+Arrangement 
+.. r<l· -. .;". '. 
+'~~'~' i. 
+~\:~ 
+-,,~.,_ ~- . c~ _~ -,~.~.~IS!" 
+used to withdraw 
+.'''1 ,; .~", t-, ""'...0:' 1;" 
+\ '::f'~ t::·tl~;'i.' ,~~ ·~tt:l;;'~~ 
+1-3 
+e. sample thro'J,gh 
+:'ff"~ ~~,:~~~i~:<:l'~~ 
+I- I It;·, ;\ .!' ~; ~~~l~,;tc • 
+ft'," _~.,, \ .. -,,. .~ fro 
+~. 
+0 
+the Va:n. Slyke-
+"~,J:" 
+~): ~ " 
+-
+[ 
+Cullen urea 
+• 
+n L.~' J' ' ... ' I ~, 
+". ~t''' '-J~'l{! 
+t;~ _ '~\.i 
+H: 
+~ 
+apparatus. 
+.. '. "/;~ :.'h'. 
+~~1}.~~·~ 
+I, inlet-air duct 
+a 
+'t'~<;I,:~' .,' 
+Ii!I 
+'.0\- ... t 
+.... 
+J." J. !,r 
+' ,n I~'A.... , 
+{ 
+• < 
+' .. ' 
+" 
+,/- '\ 
+0 
+a, srunpl1nc;-tube 
+; ~l:, r:~. ' 
+.... 
+~t~,; ;:,~!~' 
+(I) 
+stopcock 
+,'1.,. 
+I;~."r .• 1 r: 
+~ 
+b, aeratio!l tube 
+,~;..", ':;.,: .-,' . 
+0 
+c, test tube containing 
+()l 
+sulphuric-acid 
+~\,,~, ,y.( il" ,Il!( t . . 
+:+' .. - .r,-~ 
+VI 
+.) 
+'.
+. ' ,. ~-: II I ' 
+~ •. 
+CJ) 
+solution 
+d, trap to separate a:n.y 
+entrained liquid 
+e. outlet tube to 
+gas-flow meter 
+~ 
+~ 
+Figure 8.-
+Microma:n.ometer. 
+a, micrometer screw 
+b, dial indicator 
+c. neon lamp 
+d. connection to 
+low pressure 
+side of air-flow 
+nozzle 
+\ 
+. ~", .. --;~~ 
+e, alternating-
+h;t ... 
+current power 
+_ 
+A .••• t;i' 
+l:- -
+.. 
+CJIj 
+_",~'j . <;~i.~~~ ';4<::~~-' 
+~ 
+source 
+0> 
+0> 
+j 
+---'J

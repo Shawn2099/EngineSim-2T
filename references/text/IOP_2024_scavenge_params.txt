@@ -1,0 +1,327 @@
+
+<<<PAGE 1>>>
+Journal of Physics:
+Conference Series
+     
+PAPER • OPEN ACCESS
+Analysis of the interactive effects of scavenge
+parameters on spark ignition two-stroke diesel
+engines
+To cite this article: Tingting Sun et al 2024 J. Phys.: Conf. Ser. 2760 012049
+ 
+View the article online for updates and enhancements.
+You may also like
+Multibody analysis of the opposed-piston
+aircraft engine vibrations
+K Pietrykowski and M Biay
+-
+Simulation of In-cylinder Mixture Formation
+in SIDI Diesel Engine
+Shangxue Wang, Changzhen Liu, Jinbing
+Chen et al.
+-
+Engine Sonic Load Prediction of Blended
+Wing Body Aircraft
+Yipeng Cen, Jiaxin Xu and Mingming
+Yang
+-
+This content was downloaded from IP address 202.88.229.92 on 28/10/2026 at 11:00
+
+<<<PAGE 2>>>
+Content from this work may be used under the terms of the Creative Commons Attribution 3.0 licence. Any further distribution
+of this work must maintain attribution to the author(s) and the title of the work, journal citation and DOI.
+Published under licence by IOP Publishing Ltd
+ICMTEM-2023
+Journal of Physics: Conference Series
+2760 (2024) 012049
+IOP Publishing
+doi:10.1088/1742-6596/2760/1/012049
+1
+Analysis of the interactive effects of scavenge parameters on
+spark ignition two-stroke diesel engines
+Tingting Sun1, Shangxue Wang1,3, Xuesong Zhang2, Chengwei Zhao1, Xiaoyan
+Zhang and Hongru Zhu1
+1 North China Engine Research Institute (Tianjin), Tianjin 300400, China
+2 Shanxi Diesel Engine Industry Co., Ltd, Datong, Shanxi, 037036, China
+3 Corresponding author’s e-mail: wsx173@163.com
+Abstract. The scavenging efficiency of a two-stroke diesel engine affects the formation of the
+mixture in the engine cylinder, which in turn affects the engine's performance. A
+one-dimensional simulation model of a two-stroke diesel engine is established using
+GT-POWER, and the model with original experimental data is calibrated as boundary
+conditions. Firstly, the influence of crankcase compression ratio on engine performance of the
+two-stroke engine was investigated to obtain an appropriate crankcase compression ratio; Then,
+based on the optimization index of scavenging efficiency, the optimal combination of engine
+air port structure and timing is obtained through orthogonal optimization calculation method.
+To achieve higher scavenging efficiency, when the phase of the air port remains unchanged, a
+scavenging port width ratio of 1.0 and an exhaust port width ratio of 0.8 can achieve a
+scavenging efficiency of 97.2%; When the air port size remains unchanged, the engine
+scavenging efficiency reaches 96.44% when the scavenging port timing is 123° CA and the
+exhaust port timing is 89° CA.
+1. Introduction
+Two-stroke engines have the advantages of simple structure, compactness, lightweight, high power
+output, and low cost, making them widely used in civil and military aviation power devices. However,
+there are also many structural defects, such as short ventilation time, short circuits during the
+scavenging process, and high carbon and hydrogen emissions, which make it difficult to meet the
+needs of engine power and economy [1-2]. Therefore, a large number of researchers have conducted
+extensive research on the matching of the ventilation system and the optimization of the airport
+structure in two-stroke engines. Bai Jingyuan et al. have optimized the envelope angle and elevation
+angle of the scavenging port in two-stroke engines, and have experimentally verified the calculation
+results [3]; Zhang Shuolu et al. investigated the effect of scavenging pressure on the scavenging
+efficiency of two-stroke engines [4]. The research results indicate that the performance of two-stroke
+engines is greatly affected by the valve timing effect. Therefore, this article focuses on the working
+characteristics of a spark ignition two-stroke diesel engine and uses GT power software to establish a
+one-dimensional simulation model of the two-stroke diesel engine. By studying the interactive effects
+of crankcase compression ratio, airport size, and intake and exhaust phase on the engine's air exchange
+effect, the scavenging process and efficiency are optimized to improve the overall performance of the
+engine.
+
+<<<PAGE 3>>>
+ICMTEM-2023
+Journal of Physics: Conference Series
+2760 (2024) 012049
+IOP Publishing
+doi:10.1088/1742-6596/2760/1/012049
+2
+2. Engine simulation model establishment and validation
+2.1 Model establishment
+The cylinder working process of a two-stroke engine includes the flow field movement of gas in the
+cylinder and the process of being compressed and ignited, which combines very complex physical and
+chemical changes. The performance calculation theory of two-stroke engines is based on the
+conservation of mass, momentum, energy, and composition. Using one-dimensional flow inside the
+tube and cylinder content product method, each discrete unit transfers and exchanges mass,
+momentum, and energy through connected boundaries [5-7].
+Aiming at the power requirements of diesel-electric hybrid power devices as the performance
+design goal, the performance simulation calculation of the entire engine is carried out. Through
+performance calculation, the overall performance parameters of the entire machine and the
+performance indicators of each system are determined, which serve as the input boundary for
+subsystem selection and matching design. A one-dimensional performance simulation model of a
+spark ignition two-stroke single-cylinder diesel engine was established based on the engine of a certain
+drone as a reference structure, as shown in Figure 1.
+Figure 1. One-dimensional performance simulation model of a spark ignition two-stroke diesel
+engine.
+According to the fluid flow process: air passes through the intake pipe and intake duct from the
+intake boundary, then enters the crankcase. With the movement of the piston, it enters the cylinder
+through the scavenging port, and high-temperature exhaust gas is discharged from the exhaust port
+after combustion in the cylinder [8-9]. The model is divided into four modules, namely the intake
+module, cylinder module, crankcase module, and exhaust module.
+2.2 Model validation
+The cylinder pressure curve of the original engine is obtained through experiments, and the
+one-dimensional simulation model of a two-stroke diesel engine established by GT-POWER software
+is calibrated. The comparison results between simulation values and experimental values are shown in
+Figure 2. After calibration, the simulation and experimental data values of the model in the
+compression and expansion stages are consistent. During the combustion process, there is a certain
+error due to the calculation error of the heat transfer process, but the maximum error is less than 5%.
+The simulation model can be used for the next step of simulation calculation.
+
+<<<PAGE 4>>>
+ICMTEM-2023
+Journal of Physics: Conference Series
+2760 (2024) 012049
+IOP Publishing
+doi:10.1088/1742-6596/2760/1/012049
+3
+Figure 2. Comparison of cylinder pressure simulation and test results.
+3. Two-stroke engine scavenging parameters
+The scavenging quality is an important parameter that affects the performance of two-stroke engines.
+The evaluation indicators for scavenging quality include gas efficiency, gas supply ratio, and capture
+rate [10].
+Scavenge efficiency ∅�is the ratio of �1 (the mass of fresh gas left in the cylinder after the air
+exchange process is completed), and �0(the total mass of gas in the cylinder).
+∅�= �1
+�0
+(1)
+As supply ratio ∅�
+is the ratio of ��
+(the mass of charge that typically flows through the
+scavenging port per cycle) and ��(the filling mass of the working volume of the cylinder under the
+condition of the scavenging state ( ��、��), also known as the excess scavenging coefficient [10],
+which is:
+∅�= ��
+��
+(2)
+The air supply ratio is determined by the quality of fresh air flowing through the scavenging port,
+mainly influenced by the difference in scavenging pressure and the duration of scavenging.
+The capture rate is determined by the proportion of the gas mass discharged from the cylinder at
+the exhaust port to the air mass used in the scavenging process, mainly influenced by the mixing speed
+and mixing time of fresh air and exhaust gas in the cylinder [11].
+The scavenging efficiency of a two-stroke diesel engine ∅�can be approximately defined as the
+excess scavenging coefficient ∅�and capture rate �0, the product is i.e.:
+∅�= ∅�·�0
+(3)
+The scavenging efficiency of a two-stroke diesel engine ∅�
+whose variation curve under the
+combined influence of gas supply ratio and trapping ratio is shown in Figure 3.
+Figure 3. Supply ratio, capture rate, and scavenging efficiency of a spark ignition diesel engine.
+
+<<<PAGE 5>>>
+ICMTEM-2023
+Journal of Physics: Conference Series
+2760 (2024) 012049
+IOP Publishing
+doi:10.1088/1742-6596/2760/1/012049
+4
+4. Research on the influence of crankcase compression ratio
+The two-stroke engine in this study adopts intake crankcase turbocharging, which affects the
+scavenging efficiency of the two-stroke engine by the compression ratio of the crankcase, thereby
+affecting the engine's power and economy. Therefore, exploring the influence of different crankcase
+compression ratios on the engine under all operating conditions provides a reference for further
+optimizing engine crankcase design. Considering the actual application range of the crankcase
+compression ratio, the exploration range here is 1.2 ~ 2.4
+The effect of crankcase compression ratio on scavenging under engine calibration conditions (5500
+r/min) is shown in Figure 4. As the compression ratio of the crankcase increases, the inflation
+efficiency in the engine cylinder also increases. However, because the scavenging efficiency is also
+affected by the capture rate in the engine cylinder, as the crankcase compression ratio increases, the
+scavenging efficiency of the engine first increases and then slightly decreases. When the compression
+ratio of the crankcase is 1.5, the scavenging efficiency reaches a maximum of 95.14%.
+Figure 4. Effect of crankcase compression ratio on scavenging.
+The effect of the crankcase compression ratio on the engine under all operating conditions is shown
+in Figures 5 - 6. As the compression ratio of the crankcase increases, the torque of the engine shows an
+increasing trend. When the compression ratio of the crankcase is 1.2, due to the poor scavenging effect
+of the engine, there is less fresh charge entering the cylinder, resulting in poor combustion of the
+engine. Therefore, the higher the speed, the greater the torque decrease. But when the crankcase
+compression ratio increases to 1.8, continuing to increase the crankcase compression ratio will result
+in a smaller change in engine torque, but it will lead to a rapid increase in engine fuel consumption.
+When the engine speed is low, the compression ratio of the engine's crankcase is relatively small,
+allowing more fresh charge to remain inside the cylinder for the same scavenging time, resulting in
+full combustion. Therefore, at low speeds, a smaller compression ratio of the crankcase will obtain
+greater torque and lower fuel consumption. Therefore, considering both power and economic factors, a
+crankcase compression ratio of 1.8 can achieve relatively good engine performance.
+Figure 5. Influence of crankcase compression
+ratio on torque.
+Figure 6. Impact of crankcase compression
+ratio on fuel consumption.
+
+<<<PAGE 6>>>
+ICMTEM-2023
+Journal of Physics: Conference Series
+2760 (2024) 012049
+IOP Publishing
+doi:10.1088/1742-6596/2760/1/012049
+5
+5. Research on the influence of airport width and timing
+5.1 Analysis of the interaction of airport width
+The scavenging efficiency of a two-stroke engine is also affected by the parameters of the engine
+airport. Based on the previous research to obtain a better engine crankcase compression ratio, further
+explore the impact of engine air port width on engine performance.
+The choice of airport width affects the face value of the airport during the scavenging stage,
+determining the completeness of the scavenging process, and thus has a significant impact on the
+performance of two-stroke engines. The positions of the engine's scavenging and exhaust ports are
+shown in Figure 7.
+A study was conducted on the interactive effects of sweeping and exhaust port width across the
+entire operating range of the engine. For the convenience of exploration, using the original airport size
+as a benchmark and keeping the height unchanged to ensure that the valve timing remains unchanged,
+the width of the airport is multiplied by a coefficient, which is manifested as the change in the area of
+the scavenging port, while keeping the position and size of the other airport unchanged. This method is
+used to explore the impact of airport width on engine performance. Considering the actual proportion
+of airport width on the circumference of the cylinder, the airport width ratio coefficient is set between
+0.8 and 1.2. The scavenging process of the engine is influenced by both the scavenging port and the
+exhaust port, but the joint influence of the two port sizes is not yet clear. Therefore, the interaction
+effect of airport width is explored.
+Figure 7. Schematic diagram of air outlet position.
+Figure 8 shows the comprehensive effect of scavenging and exhaust port height on the scavenging
+efficiency of a two-stroke diesel engine under a rated speed of 5500 r/min. There is a significant
+interaction effect between the width of the intake and exhaust ports on the scavenging efficiency. The
+larger the width coefficient of the airport, the larger the sweeping surface during the sweeping stage.
+When the width coefficient of the scavenging port is 1.0 and the width coefficient of the exhaust port
+is 0.8, the scavenging efficiency reaches the maximum value of 97.2%.
+Figure 8. Scavenge efficiency of different area ratios of sweeping and exhaust ports.
+
+<<<PAGE 7>>>
+ICMTEM-2023
+Journal of Physics: Conference Series
+2760 (2024) 012049
+IOP Publishing
+doi:10.1088/1742-6596/2760/1/012049
+6
+5.2 Analysis of the interaction effect of airport timing
+The scavenging and exhaust ports of a two-stroke diesel engine are arranged in a circular pattern on
+the cylinder liner, and the opening and closing timing of the diesel engine's airports is controlled by
+the movement of the piston. The position of the sweeping is moved and ports on the cylinder liner are
+exhausted, and the valve timing of the diesel engine will change accordingly. The optimal position is
+selected, which is the optimal valve timing, to achieve the best performance of the diesel engine.
+This article analyzes the variation of diesel engine scavenging efficiency with valve timing by
+changing the intake and exhaust phase, that is, changing the position of the scavenging port on the
+cylinder liner. The size of the valve timing angle directly determines the performance of a diesel
+engine. Each model has its optimal valve timing. Original machine gas distribution phase: the opening
+angle of the scavenging port is 124° CA, and the closing angle of the intake port is 236° CA; The
+opening angle of the exhaust port is 87° CA, and the closing angle of the exhaust port is 273° CA.
+Considering the actual position range of the airport on the cylinder, the timing deviation of the airport
+is set between ± 2° CA.
+The position of the scavenging port on the cylinder liner is moved and a set of scavenging opening
+angles / scavenging closing angles are calculated. The flow area is input at different opening, and
+closing times of the scavenging port are input into a one-dimensional simulation model, and the
+performance of the diesel engine is calculated under different intake phases through simulation.
+The timing of the airports affects the overlap angle of the engine's airports, which in turn affects the
+engine's scavenging process. However, the impact of the timing match between the two on scavenging
+is not yet clear. Analyze the interaction between different air port timing under the rated speed of 5500
+r/min for the original machine structure. Figure 9 shows the effect of the timing of the scavenging and
+exhaust ports on the scavenging efficiency. The exhaust port is delayed in opening, and the free
+exhaust stage is shortened. When the scavenging port is at 125° CA and the exhaust port is open at 89°
+CA, the scavenging efficiency reaches its maximum value of 96.4%.
+Figure 9. Scavenge efficiency at different opening times of the sweeping and exhaust ports.
+6. Conclusion
+A one-dimensional performance simulation model of a spark ignition two-stroke single-cylinder diesel
+engine was established using GT-POWER software, and the model was calibrated using the original
+cylinder pressure curve. Then, the engine performance was simulated using the model. The specific
+conclusions are as follows:
+(1)The scavenging efficiency of a two-stroke engine is influenced by both the feed ratio and the
+capture rate;
+(2)For a two-stroke engine with crankcase turbocharging, a larger crankcase compression ratio is
+not necessarily better, but rather a comprehensive consideration of the actual operating conditions of
+the engine. The compression ratio of the crankcase in this study is 1.8, which can improve the engine's
+
+<<<PAGE 8>>>
+ICMTEM-2023
+Journal of Physics: Conference Series
+2760 (2024) 012049
+IOP Publishing
+doi:10.1088/1742-6596/2760/1/012049
+7
+economy and power performance
+(3) The width of the intake and exhaust ports has a significant interactive effect on the scavenging
+efficiency. When the width coefficient of the scavenging port is 1.0 and the width coefficient of the
+exhaust port is 0.8, the scavenging efficiency reaches its maximum value of 97.2%;
+(4) The timing of the intake and exhaust ports has a significant interactive effect on the
+scavenging efficiency. When the scavenging port is at 125° CA and the exhaust port is open at 89° CA,
+the scavenging efficiency reaches its maximum value of 96.4%.
+References
+[1] Wu Dan. Research on the Air Exchange Process of Two-stroke Diesel Engines with Opposed
+Pistons [D]. Beijing Institute of Technology, 2015.
+[2] Li T, Jiao B, Ma X, et al. Optimization study of oil-feed parameters to improve the ring pack
+lubrication performance for a two-stroke marine diesel engine[J]. Engineering Failure
+Analysis, 2022, 137:106234-.DOI:10.1016/j.engfailanal. 2022. 106234.
+[3] Bai Jingyuan, Liu Bing, Zeng Ke. Multidimensional numerical simulation of the scavenging
+process and optimization design of the scavenging system for two-stroke gasoline engines [J].
+Internal
+Combustion
+Engine
+Engineering,
+2005,
+26
+(1):
+5.
+DOI:
+10.3969/j.issn.1000-0925.2005.01.009.
+[4] Zhang Shuolu, Zhao Changlu, Zhao Zhenfeng, et al. Design and optimization of direct current
+scavenging for hydraulic free piston engines [J]. Internal Combustion Engine Engineering,
+2016, 37 (6): 6. DOI: 10.13949/j.cnki. nrjgc. 2016.06.018.
+[5] Wei Mingrui, Liu Yongchang, Wen Hua, et al. Numerical simulation and experimental study of
+stratified intake system for two-stroke gasoline engines [J]. Journal of Internal Combustion
+Engine, 2003, 21 (6): 6. DOI: 10.3321/j. issn: 1000-0909.2003.06.003.
+[6] Kumar, Shiva, Dinesha, et al.Performance and emission characteristics of a bio-lubricated
+two-stroke gasoline engine[J]. Environmental Science & Pollution Research, 2018.
+[7] Milanese M, Iacobazzi F, Stark M, et al.Development of a common rail lube oil injector for large
+two-stroke marine diesel engines[J]. International Journal of Engine Research, 2022.
+DOI:10.1177/14680874211008005.
+[8] Zhang L, Su T, Feng Y, et al. Numerical Investigation of the Effects of Rate-Shaped Main Injection
+on Combustion and Emission in an OPOC Two-Stroke Diesel Engine[J]. Journal of Beijing
+Institute of Technology: English Edition, 2019, 28 (2): 8.
+[9] Mitianiec W. OPTIMIZATION OF THE RICH MIXTURE INJECTION SYSTEM IN
+TWO-STROKE ENGINES[J]. 2022.
+[10] Goldsborough S S, Blarigan P V. Optimizing the Scavenging System for a Two-Stroke Cycle,
+Free Piston Engine for High Efficiency and Low Emissions: A Computational Approach[J].
+Sae Paper, 2019. DOI:10.4271/2003-01-0001.
+[11] Overgaard H, Klit P, Vlund A. Investigation of different piston ring curvatures on lubricant
+transport along cylinder liner in large two-stroke marine diesel engines[J]. "Proceedings of
+the Institution of Mechanical Engineers, Part J: Journal of Engineering Tribology", 2018.
+DOI:10.1177/1350650117744100.

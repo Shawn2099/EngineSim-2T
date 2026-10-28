@@ -1,0 +1,1169 @@
+
+<<<PAGE 1>>>
+Investigation of the scavenging
+process in two-stroke uniﬂow
+scavenging marine engines by a
+real-time multi-stage model
+Dai Liu, Xiao Han, Long Liu* and Xiuzhen Ma
+College of Power and Energy Engineering, Harbin Engineering University, Harbin, China
+The increasing demand of digital twin marine engine requires real-time
+physical models for prediction. In two-stroke uniﬂow scavenging marine
+engines, a real-time physical model for the scavenging process is rarely
+found since it is difﬁcult to describe the complex in-cylinder air motion.
+Without an accurate prediction of the fresh air loss and residual burned gas
+in the cylinder, the precision of combustion and emission simulation cannot
+be guaranteed as well. In a marine engine digital twin system, the scavenging
+ratio and fresh air skip are the vital for the further simulation of combustion and
+emission. To predict them in real-time, a novel zero-dimensional (0D) multi-
+stage scavenging model is proposed in this article. In the cylinder zone, the
+complex gas motion is ideally divided to four stages: exhaust gas blowdown,
+perfect displacement, displacement-mixing, and perfect mixing. The duration
+of each stage is determined by the engine design and control parameters.
+Then, the thermodynamic conditions at each stage are simulated to obtain the
+mass of residual burned gas, fresh air inlet, and outlet. The results of the 0D
+model agree well with the results of the CFD simulation, and the mean relative
+errors of temperature, pressure, and total mass do not exceed 3%, 4%, and 2%,
+respectively, which indicates the potential for the two-stroke marine engine
+digital twin system. It could also be applied in a control-oriental engine model
+or engine diagnostics in the future.
+KEYWORDS
+uniﬂow
+scavenging
+process,
+zero-dimensional
+multi-stage
+model,
+real-time
+simulation, two-stroke marine engine, digital twin
+1 Introduction
+Large bore two-stroke engines are the main power units for vessels. With the critical
+challenges of emission and energy regulations, an efﬁcient combustion strategy and low/
+zero carbon fuels have become the main approaches to improve engine efﬁciency and
+reduce emissions. Deng et al. (2018) explored the possibility and limitations of lean burn
+from the aspect of exhaust emissions Liu et al. developed a ﬂexible spray model (Liu et al.
+2022) and optimized the stochastic combustion model (Liu et al. 2022) to cope with the
+emissions issues and optimize the combustion. Zheng et al. (2018) developed a
+OPEN ACCESS
+EDITED BY
+Lei Luo,
+Harbin Institute of Technology, China
+REVIEWED BY
+Banglin Deng,
+Shenzhen University, China
+Hongliang Luo,
+Hiroshima University, Japan
+Lei Shi,
+Shanghai Jiao Tong University, China
+Haifeng Liu,
+Tianjin University, China
+*CORRESPONDENCE
+Long Liu,
+liulong@hrbeu.edu.cn
+SPECIALTY SECTION
+This article was submitted to Advanced
+Clean Fuel Technologies,
+a section of the journal
+Frontiers in Energy Research
+RECEIVED 15 June 2022
+ACCEPTED 12 July 2022
+PUBLISHED 17 August 2022
+CITATION
+Liu D, Han X, Liu L and Ma X (2022),
+Investigation of the scavenging process
+in two-stroke uniﬂow scavenging
+marine engines by a real-time multi-
+stage model.
+Front. Energy Res. 10:969525.
+doi: 10.3389/fenrg.2022.969525
+COPYRIGHT
+© 2022 Liu, Han, Liu and Ma. This is an
+open-access article distributed under
+the terms of the Creative Commons
+Attribution License (CC BY). The use,
+distribution or reproduction in other
+forums is permitted, provided the
+original author(s) and the copyright
+owner(s) are credited and that the
+original publication in this journal is
+cited, in accordance with accepted
+academic practice. No use, distribution
+or reproduction is permitted which does
+not comply with these terms.
+Frontiers in Energy Research
+frontiersin.org
+01
+TYPE Original Research
+PUBLISHED 17 August 2022
+DOI 10.3389/fenrg.2022.969525
+
+<<<PAGE 2>>>
+thermodynamic model to analyze the effects of different
+turbocharging
+parameters
+on
+engine
+boost
+pressure
+and
+pumping loss qualitatively. Furthermore, with the signiﬁcant
+increase in engine complexity, simulation is increasingly
+becoming an important tool to support an engine’s full life
+cycle
+development.
+Luo
+et
+al.
+(2022)
+set
+up
+a
+three-
+dimensional (3D) model of a HPDI natural gas two-stroke
+marine engine, where the inﬂuence of geometry parameters
+on mixture ﬂow, combustion, and emissions were presented
+and discussed. Liu et al. (2019) investigated the effects of
+injection strategies of dual fuels on combustion characteristics
+and emissions by the CFD simulation. In the course of study, it is
+found that the scavenging process affects the global engine
+performance in a two-stroke engine (Tomislav et al., 2022),
+and it should be properly designed and controlled for
+different fuels. Recently, based on traditional modeling and
+simulation, the digital twin technology has become a high-
+level sublimation of modeling and simulation technology and
+will further boost the development of engines (Liu et al., 2021),
+including the scavenging process of marine engines. In the digital
+twin system, models with different dimensions would be
+established for a geometrical design (Zhou et al., 2021) or a
+real-time performance investigation (Bondarenko and Fukuda.,
+2020). In most of digital twin applications, such as power
+systems,
+real-time
+models
+play
+a
+vital
+role
+in
+engine
+optimization, control, and diagnostics (Jiang et al., 2022). To
+develop reliable real-time engine models, researchers investigated
+different approaches, such as the 0D/QD model (developed by
+simpliﬁed physical, semi-physical, or empirical equations) and
+the data-driven model (developed by a machine-learning
+algorithm).
+The data-driven
+model (Wang
+et al., 2020)
+requires a large amount of data for training and veriﬁcation,
+which has been widely applied in vehicle engines. However, the
+applications of the data-driven model in marine engine research
+are limited due to the lack of experimental data, especially for the
+large bore low-speed marine diesel engines. Therefore, the 0D/
+QD model (time is the only independent variable) is a good
+choice for the marine engine digital twin system in the current
+status.
+Many
+researchers
+developed
+a
+quasi-model
+for
+combustion in two-stroke marine engines (Ji et al., 2016;
+Liu et al., 2020). However, there are rare literature studies
+to describe the uniﬂow scavenging process in a marine two-
+stroke engine, due to its complex mixing of fresh air and
+exhaust gas in the cylinder. The control of fresh air escaping to
+the exhaust and residual exhaust gas in the cylinder is
+inﬂuenced by many design and control parameters, such as
+scavenge port geometry and exhaust valve lift. The complex
+gas motion would further affect the formation of the air/fuel
+mixture, ﬂame propagation, combustion quality, pollutant
+formation, exhaust temperature, and so on. Thus, it is
+important
+to
+develop
+a
+scavenging
+model
+with
+high
+accuracy and real-time performance for the forecast of
+combustion and emission in future digital twin systems.
+An ideal scavenging model includes perfect displacement,
+perfect mixing, and short-circuiting, but the real scavenging
+process is normally a combination of them in different stages
+and zones, which can be observed in many CFD (Andersen et al.,
+2014; Wang et al., 2016) and experimental research studies
+(Ma et al., 2021). Therefore, a 0D scavenging model could be a
+combination of these sub-processes, either by a multi-stage (the
+scavenging process is divided in different stages based on the
+engine events) or multi-zone (cylinder is divided in different zones
+during the scavenging process) approach. Each stage or zone can
+be assumed as a displacement, mixing, or short-circuiting process.
+Foteinos and Papazoglou (Foteinos et al., 2019) updated the three-
+zone scavenging model, originally presented in (Kyrtatos and
+Koumbarelis, 1988)
+and applicable to two-stroke
+uniﬂow
+scavenged marine diesel engines, proposed a semi-empirical
+zero-dimensional three-zone model for a two-stroke uniﬂow-
+scavenged
+diesel
+engine
+based
+on
+the
+results
+of
+CFD
+simulations: the pure air zone, mixing zone, and pure exhaust
+gas zone. However, the multi-zone model introduced many
+calibration parameters for each zone’s mass transformation.
+Since a 0D scavenging model is aiming to simulate the in-
+cylinder residual exhaust gas and fresh air to the exhaust pipe
+for further combustion and performance simulation, the detailed
+in-cylinder mass exchange process is not necessary. And the multi-
+stage model, which could simulate the thermodynamic conditions
+before combustion, is sufﬁcient for a real-time model application.
+To avoid the inaccuracy of thermal homogeneity of the incoming
+and exiting gases, Bajwa (Bajwa and Patterson, 2019) proposed a
+single-zone multi-stage model for a cross-scavenged engine, but its
+design and control parameters are different from those of the
+uniﬂow scavenging process.
+To develop a real-time model for the design and control of
+the uniﬂow-scavenging process in a two-stroke marine engine
+digital twin system, a zero-dimensional multi-stage scavenging
+model is proposed in this article. The stages are determined by
+the scavenging ports and the exhaust valve’s opening and
+closing
+timings.
+The
+mass
+of
+fresh
+air/burned
+gas,
+temperature, and pressure in the cylinder are simulated in
+each stage accurately, and can also be derived from the
+intake pressure and exhaust valve opening and closing
+timings on the impact of the scavenging process law. Based
+on the fresh air and burned gas-mixing process from the CFD
+simulation, a novel displacement–mixing (simultaneous) sub-
+stage was proposed to predict the mixing conditions and
+combined with other stages determined by the scavenging
+ports and exhaust valve’s opening and closing timings. The
+mass of fresh air/burned gas, temperature, and pressure in the
+cylinder are simulated in each stage accurately, which are the
+key inﬂuential factors for the spray and combustion in the two-
+stroke engine digital twin system.
+Frontiers in Energy Research
+frontiersin.org
+02
+Liu et al.
+10.3389/fenrg.2022.969525
+
+<<<PAGE 3>>>
+2 Methodology
+2.1 Zero-dimensional multi-stage (ZDMS)
+model
+In the novel multi-stage model, the four stages are assumed:
+blowdown, perfect-displacement (PD), displacement-mixing
+(DM), and perfect-mixing (PM) in Figure 1. The blowdown
+stage begins with the exhaust valves opening (EVO) (A) and ends
+with the scavenging ports opening (SPO) (B), and the cylinder is
+occupied by residual exhaust gas. The PD stage is from point B to
+point C and the DM stage is from point C to point D, where the
+point C is used to adjust the ratio of PD and DM, and the cylinder
+is occupied by air and residuals or mixture one. The PD stage
+begins with the scavenging port closing (SPC) (D) and ends with
+the exhaust valve closing (EVC) (E), and there is only ﬁnal
+mixture two in the cylinder at this stage. A summary of the key
+parameters of the ZDMS model is as shown in Table 1, where the
+orange indicates known quantities; the green indicates some key
+unknown quantities.
+2.1.1 Stage-I: Blowdown (A-B)
+When the exhaust valve is opened, the in-cylinder pressure is
+normally higher than pressure in the exhaust pipe, which leads to
+the residuals ﬂowing to the exhaust pipe as a blowdown process.
+Although the in-cylinder pressure might be lower than the
+pressure in the exhaust pipe, it is an unexpected situation in
+the scavenging process which would not be considered in the
+FIGURE 1
+Schematic diagram of the zero-dimensional multi-stage model.
+TABLE 1 Key parameters of the ZDMS model.
+Stage I–IV
+Stage I
+(A→B)
+Stage II
+(B→C)
+Stage III
+(C→D)
+Stage IV
+(D→E)
+Parameter
+Gas component
+A
+B
+C
+D
+E
+P
+Gas (total gas)
+P_A
+P_B = Pp
+P_C = Pp
+P_D = Pp
+P_E
+T
+Air
+Ta_B = Ta
+Ta_C = Ta
+Ta_D = Ta
+Residuals
+Tr_A
+Tr_B
+Tr_C
+Gas (total gas)
+T_A = Tr_A
+T_B = Tr_B
+T_C
+T_D
+T_E
+M
+Air
+ma_B = 0
+ma_C
+ma_D
+ma_E
+Residuals
+mr_A
+mr_B
+mr_C
+mr_D
+mr_E
+Gas (total gas)
+m_A = mr_A
+m_B = mr_B
+mm_C = m_C
+m_D
+mm_E = m_E
+P_A, P_B, P_C, P_D, P_E, cylinder pressure at times A, B, C, D, and E; Pp, the average pressure of the scavenge ports and the exhaust pipe; Ta, fresh air temperature; Ta_B, Ta_C, Ta_D,
+fresh air temperature at times B, C, D; Tr_A, Tr_B, Tr_C, residual exhaust gas temperature at times A, B, C; T_A, T_B, T_C, T_D, T_E, cylinder temperature at times A, B, C, D, and E;
+ma_B, ma_C, ma_D, ma_E, fresh air mass at times B, C, D, and E; mr_A, mr_B, mr_C, mr_D, mr_E, residual exhaust gas mass at times A, B, C, D, and E; m_A, m_B, m_C, m_D, m_E,
+cylinder total gas mass at time A, B, C, D, and E; mm_C, mm_E, mixture mass at time C, E.
+Frontiers in Energy Research
+frontiersin.org
+03
+Liu et al.
+10.3389/fenrg.2022.969525
+
+<<<PAGE 4>>>
+model. Therefore, the piston movement and loss of exhaust gas
+would lead to a sharp decrease in the pressure and temperature of
+the cylinder, where the pressure decreases from P_A to Pp, as
+shown in Figure 1. The discharge of exhaust gas during this
+process is regarded as an isentropic expansion process, the details
+are as follows.
+Tr B  Tr AP B
+P A
+K−1
+K
+(1)
+mr A  P A p V A
+R p T A
+(2)
+mr B  P B p V B
+R p T B
+(3)
+The following are assumed during this stage:
+• The isentropic index of all gases is constant.
+• The wall of the cylinder is adiabatic.
+• The gases in the cylinder are ideal, while gas constant is a
+constant value.
+2.1.2 Stage-II: Perfect-displacement (B-C)
+During this stage, the pressure of the residual exhaust gas and
+fresh air in the cylinder are assumed to be equal with an average
+manifold pressure, the temperature of the residual exhaust gas
+still remains from the results of the blowdown stage, and the
+temperature of the fresh air with _min is equal to that of the
+scavenge ports. For the entire cylinder, its overall temperature is
+the average temperature obtained by the ratio of residual exhaust
+gas and fresh air mass to the total mass. The formulas described
+in this stage are as follows:
+Tr C  Tr B
+(4)
+ma C  _min p (t C −t B)
+(5)
+mr C  mr B −Ta C
+Tr C p ma C
+(6)
+mm C  mr C + ma C
+(7)
+Tm C 
+mr C
+mr C + ma C p Tr C +
+ma C
+mr C + ma C p Ta C
+(8)
+The following are assumed during this stage:
+• The temperature and density of the fresh air in the cylinder
+are constant.
+• The temperature of the exhaust gas is constant.
+• The process occurs at a constant cylinder pressure.
+• The entering fresh air pushes out the exhaust gas by a
+perfect displacement mechanism.
+• There is no mass or heat that is allowed to cross the
+interface between the two gases.
+• The wall of the cylinder is adiabatic.
+2.1.3 Stage-III: Displacement-mixing (C-D)
+The pressure of the residual exhaust gas and fresh air in the
+cylinder are still equal to the average manifold pressure. The
+temperature of fresh air remains the same as the scavenge port
+temperature, and the temperature of mixture one during the DM
+stage is consistent with the overall temperature at the end of the
+PD stage. The mass of the fresh air at the end of stage-III is the
+sum of the charged fresh air during this stage and the air in
+mixture one. The mass of the mixture decreases because of
+discharging through the exhaust valves, and ﬁnal mass at this
+stage can be calculated by the following formulas.
+Tm D  Tm C
+(9)
+Ta D  Ta C
+(10)
+ma CD  _min p (t D −t C)
+(11)
+mm D 
+P D p V D −ma CD
+ρ D 
+R p Tm D
+(12)
+mm a D  ma C
+m C p mm D
+(13)
+ma D  ma CD + mm a D
+(14)
+m D  ma CD + mm D
+(15)
+Tma D  mm D
+m D p Tm D + ma CD
+m D p Ta D
+(16)
+where ma_CD represents the charging fresh air mass during the
+DM stage, and mm_a_D represents the mass of air in the mixture
+at time D.
+The following are assumed during this stage:
+• The temperature and density of the fresh air in the cylinder
+are constant.
+• The temperature of the exhaust gas is constant.
+• The process occurs at a constant cylinder pressure.
+• The exhaust gas and fresh air from the last stage are mixed
+ideally and form a homogeneous mixture one.
+• The ratio of fresh air and residual exhaust gas in mixture
+1 remains the same as the original mixing ratio for this
+stage.
+• The wall of the cylinder is adiabatic.
+2.1.4 Stage-IV: Perfect-mixing (D-E)
+With the piston movement, the fresh air and mixture one
+from the last stage mix perfectly and formed homogenous
+mixture two. With the piston moving upward, the cylinder
+volume decreases and mixture two is discharged with the
+exhaust valve opening, so the temperature and pressure may
+increase or increase depending on the valve lift subsequently.
+dm DE  _mout p (t E −t D)
+(17)
+mm E  m E  m D −dm DE
+(18)
+Frontiers in Energy Research
+frontiersin.org
+04
+Liu et al.
+10.3389/fenrg.2022.969525
+
+<<<PAGE 5>>>
+ma E  ma D
+m D p m E
+(19)
+mr−E  mr−D
+m−D p m−E
+(20)
+T E  ma E
+m E p Ta + mr E
+m E p Tr E
+(21)
+P E  m E p R p T E
+V E
+(22)
+The following are assumed during this stage:
+• Mixture one and fresh air from the last stage are mixed
+ideally and form a homogeneous mixture two.
+• The whole cylinder is occupied by mixture 2.
+• The wall of the cylinder is adiabatic.
+2.2 CFD model development and
+validation
+Two-stroke engine experiments are costly and cannot obtain
+detailed ﬂuid parameters of the scavenging process. Therefore,
+the corresponding CFD models validated by several cylinder
+pressure curves can be used to represent the engine and
+investigate
+the
+ﬂuid
+characteristics
+with
+more
+operating
+conditions.
+Consequently,
+the
+real-time
+zero-dimensional
+model can be derived and ﬁnally applied to two-stroke marine
+engine digital twin systems. In this article, to conﬁrm the
+accuracy
+of
+the
+ZDMS
+model,
+the
+corresponding
+CFD
+simulation model was carried out by CONVERGE. The
+simulation was based on a 6EX340EF marine low-speed diesel
+engine developed by China Shipbuilding Power Engineering
+Institute Co., Ltd. and the experimental data are also from the
+manufacturer. During the numerical simulation, the initial
+temperature and pressure of the scavenge port and exhaust
+pipe were obtained from experiments, while the cylinder
+mean temperature was derived from the measured cylinder
+pressure data. All the gases in the cylinder were marked as
+waste gas, the gases in the intake region were marked as fresh
+air, and the speciﬁc boundary conditions are described in
+Supplementary Appendix S1. Table 2 shows the engine
+speciﬁcations. Figure 2 shows the schematic diagram of the
+engine model structure.
+The CFD simulation adopts the RNG k-ε (renormalization
+group) turbulence model. Mesh quality will directly affect the
+computational results and computing time, so in this article, the
+mesh independence analysis was carried out. For the simulation
+of the scavenging process of the 6EX340EF diesel engine, the
+simulated base mesh was set as 4 cm, and the velocity and
+TABLE 2 6EX340EF two-stroke engine speciﬁcations.
+Parameter
+Value
+Bore
+340 mm
+Stroke
+1,600 mm
+Connecting Rod
+1,600 mm
+Compression Ratio
+20.5
+75% Load Power
+3,672 kW
+75% Load Speed
+142.5 rpm
+75% Load BSFC
+179.71 g/kWh
+SPO
+140°CA
+SPC
+220°CA
+75% Load EVO
+111°CA
+75% Load EVC
+270.6°CA
+FIGURE 2
+Schematic diagram of the 6EX340EF diesel engine model
+structure.
+TABLE 3 Mesh number and calculation time statistics.
+Reﬁnement strategy
+Mesh number
+Calculation time (h)
+AMR0 FIX1
+8207-27217
+1.9
+AMR1 FIX1
+8207-27217
+1.2
+AMR3 FIX1
+9216-449434
+5.2
+AMR4 FIX1
+9092-1001151
+26.9
+AMR3 FIX2
+31880-538353
+9.6
+AMR4 FIX2
+32066-1000866
+42.1
+AMR1 FIX3
+168701-1340090
+76.0
+AMR3 FIX3
+168701-1340090
+67.0
+AMR4 FIX3
+168698-1340090
+86.1
+Frontiers in Energy Research
+frontiersin.org
+05
+Liu et al.
+10.3389/fenrg.2022.969525
+
+<<<PAGE 6>>>
+temperature-adaptive mesh reﬁnement strategy (AMR) of
+3–4 levels was adopted in the cylinder, and the ﬁxed
+reﬁnement strategy (FIX) of 1–3 levels was adopted in the
+whole cylinder, scavenge port, and exhaust valve. Based on
+the simulation results, three reﬁnement strategies are added
+for a supplementary explanation. Table 3 below shows the
+number of meshes and computation time in the scavenging
+process
+under
+different
+reﬁnement
+strategies.
+The
+mesh
+reﬁnement strategy with a short computation time is selected
+under the condition of satisfying computation accuracy. Figure 3
+shows the parameter variation under different mesh reﬁnement
+strategies. In summary, it is most reasonable to select the
+reﬁnement strategy with a 4 cm base mesh, three levels of
+AMR strategy, and three levels of FIX strategy for this
+scavenging process simulation.
+The numerical simulation research ranges from 100°CA to
+360°CA and the cylinder mean pressure in different conditions
+was compared with the experiment in Figure 4. Table 4 shows the
+relative deviation of simulation and experimental cylinder
+pressure at compression top dead center (TDC), and all the
+relative deviations were less than 0.1%, which illustrates the
+accuracy and reality of this CFD model.
+FIGURE 3
+Variation of parameters such as (A) Cylinder mean pressure and mean temperature, (B) Cylinder gas and exchange air at scavenge port, (C)
+Residual exhaust gas and fresh air and (D) Residual exhaust gas and fresh air in exhaust pipe under different mesh reﬁnement strategies.
+FIGURE 4
+Comparison of the simulation and experimental cylinder
+pressures under different conditions.
+Frontiers in Energy Research
+frontiersin.org
+06
+Liu et al.
+10.3389/fenrg.2022.969525
+
+<<<PAGE 7>>>
+TABLE 4 Comparison of the simulation and experimental cylinder pressure relative deviations under different conditions.
+25% Load
+50% Load
+75% Load
+100% Load
+Simulated initial pressure (MPa)
+0.51
+0.8
+1.13
+1.37
+Experimental initial pressure (MPa)
+0.51
+0.8
+1.13
+1.37
+Relative error
+0
+0
+0
+0
+Simulated end pressure (MPa)
+6.23
+9.83
+14.12
+16.27
+Experimental end pressure (MPa)
+6.23
+9.82
+14.12
+16.28
+Relative error
+0
+0.1%
+0
+0.06%
+FIGURE 5
+Evolution of (A) temperature, (B) mass and (C) pressure of each stage as predicted by the ZDMS model and the CFD model for the 75% load.
+TABLE 5 Input parameter settings of the 6EX340EF engine under different loads.
+25% Load
+50% Load
+75% Load
+100% Load
+Speed (rpm)
+98.9
+124.6
+142.5
+157.0
+Intake pressure (MPa)
+0.1453
+0.2363
+0.3423
+0.4246
+Intake temperature (K)
+309.7
+301.0
+304.1
+307.6
+Initial cylinder pressure (MPa)
+0.446
+0.701
+0.99
+1.201
+Exhaust pressure (MPa)
+0.1343
+0.2173
+0.3183
+0.4046
+Exhaust valve opening and closing (°CA)
+111–261.6
+111–267.4
+111–270.6
+111–275.5
+Frontiers in Energy Research
+frontiersin.org
+07
+Liu et al.
+10.3389/fenrg.2022.969525
+
+<<<PAGE 8>>>
+3 Results and discussion
+3.1 Comparison of the ZDMS model
+against CFD results
+The novel ZDMS model was compared against the results
+from the CFD simulations. The predicted fresh air mass,
+residuals mass, total gas mass, temperature, and pressure
+using the ZDMS were compared to the results predicted by
+the CFD model. The comparison results under 75% load are
+presented in Figure 5, where CFD results are presented with a
+solid line and the results of the ZDMS model are presented with a
+circle scatter.
+As Figure 5 shows, at the beginning of the scavenging
+process (A), there is only high temperature and pressure
+residual exhaust gas in the cylinder. During the blowdown
+stage, the exhaust gas is discharged continuously, and the
+temperature and pressure in the cylinder gradually decrease,
+which is also represented well in the ZDMS model (A→B). As
+the inlet port is opened and the increasing fresh air enters the
+cylinder after point B, the pressure in the cylinder ﬂuctuates
+initially and becomes steady soon in the CFD model. This
+process is also represented in the ZDMS model from point B to
+C, where point C is used to adjust the ratio of the PD stage and
+the DM stage and it is found that a good calculation occurs
+FIGURE 6
+Comparison of the results of ZDMS model and CFD model for parameters such as (A) temperature, (B) mass and (C) pressure at 25% load, (D)
+temperature, (E) mass and (F) pressure at 50% load, and (G) temperature, (H) mass and (I) pressure at 100% load.
+TABLE 6 RTX-8 engine speciﬁcations.
+Parameter
+Value
+Bore
+520 mm
+Stroke
+2,658 mm
+Connecting Rod
+2,658 mm
+Compression Ratio
+21.8
+SPO
+146°CA
+SPC
+214°CA
+Frontiers in Energy Research
+frontiersin.org
+08
+Liu et al.
+10.3389/fenrg.2022.969525
+
+<<<PAGE 9>>>
+when C is close to B. Then, with fresh air entering, the cylinder
+temperature decreases and the gas mass increases, which is
+consistent with the ZDMS model (C→D). After that, the
+exhaust valve is remains open, and with the discharging of
+mixture two, the cylinder temperature and pressure tends to
+decrease, but increases quickly caused by the piston moving up,
+TABLE 7 Input parameter settings of the RTX-8 engine under different load conditions.
+25% Load
+50% Load
+75% Load
+100% Load
+Speed (rpm)
+65.3
+82.2
+94.0
+103.2
+Intake pressure (MPa)
+0.1576
+0.2790
+0.3970
+0.4960
+Intake temperature (K)
+300.19
+317.66
+329.18
+326.97
+Initial cylinder pressure (MPa)
+0.407
+0.513
+0.963
+1.095
+Exhaust pressure (MPa)
+0.1532
+0.2568
+0.3823
+0.4583
+Exhaust valve opening and closing (°CA)
+122.5–276.1
+122.5–271.4
+120.3–255.5
+120.7–252.5
+FIGURE 7
+Comparison of the results of ZDMS model and CFD model for parameters such as (A) temperature, (B) mass and (C) pressure at 25% load, (D)
+temperature, (E) mass and (F) pressure at 50% load, (G) temperature, (H) mass and (I) pressure at 75% load, and (J) temperature, (K) mass and (L)
+pressure at 100% load.
+Frontiers in Energy Research
+frontiersin.org
+09
+Liu et al.
+10.3389/fenrg.2022.969525
+
+<<<PAGE 10>>>
+here the ZDMS model is still in good agreement with the CFD
+results (D→E). It is worth proposing that the CFD simulation
+described the change process in detail, while the ZDMS model
+provided accurate stage conditions.
+Furthermore, the ZDMS model under different conditions is
+veriﬁed by the CFD model. Table 5 shows the model input
+parameters for different loads, and Figure 6 shows the
+comparison results between the CFD model and the ZDMS
+model at 25%, 50%, and 100% load conditions with good
+agreement.
+In
+addition,
+another
+two-stroke
+engine
+was
+additionally selected and the comparative veriﬁcation of the
+scavenging process was carried out. Table 6 and Table 7 show
+the engine speciﬁcations and parameters under different loads,
+respectively. As shown in Figure 7, the model still maintains a
+high agreement with the CFD results, which indicates the
+prediction ability in the scavenging process of the two-stroke
+uniﬂow scavenge engine.
+3.2 Inﬂuence of different factors on the
+scavenging process
+To further investigate the scavenging process with the 0D
+model, charging efﬁciency (CE) and residual exhaust coefﬁcient
+(REC), which are common evaluation indicators for the
+scavenging process, are proposed and calculated by the
+following formulas.
+CE  mass of delivered fresh charge retained in the cylinder
+reference mass
+
+ma
+Ps · VR · Ts
+(23)
+REC  mass of residual exhaust gas retained in the cylinder
+mass of delivered fresh charge retained in the cylinder
+ mr
+ma
+(24)
+TABLE 8 Relevant input parameters under 75% load.
+Parameters (unit)
+Value
+Intake pressure (MPa)
+0.3183, 0.3203, 0.3223, 0.3263, 0.3293, 0.3333,
+0.3373, 0.3423, 0.3483, 0.3543
+Exhaust valve opening and
+closing (°CA)
+91–250.6, 96–255.6, 101–260.6, 106–265.6,
+111–270.6, 116–275.6, 121–280.6, 126–285.6,
+131–290.6, 136–295.6
+FIGURE 8
+(A,B) Air mass, CE, residuals mass, REC, and (C) escaping air mass at 75% load with different intake pressures.
+Frontiers in Energy Research
+frontiersin.org
+10
+Liu et al.
+10.3389/fenrg.2022.969525
+
+<<<PAGE 11>>>
+In this article, the effect of different intake pressures and
+exhaust valve opening and closing timings on the in-cylinder
+mass, CE and REC at the end of the scavenging process were
+investigated in the 6EX340EF engine at 75% load. Table 8 shows
+the settings of the relevant input parameters.
+As shown in Figures 8A,B, the increase of the intake pressure
+results in the rise of the fresh air mass and CE with a decrease of
+residuals mass and REC. The change of them becomes negligible
+after the intake pressure increases to a certain value (around
+0.34 MPa in this stage). A higher intake pressure could increase
+the mass of the fresh air in and out. As the mass of escaping fresh
+air increases (as shown in Figure 8C) with the growing intake
+pressure, the increased fresh air inlet cannot compensate the loss
+of fresh air. Therefore, the trapped air mass is only determined by
+the pressure of the inlet air, which is indicated by the CFD model
+and the 0D model in Figure 8.
+For the two-stroke uniﬂow scavenging engine, its scavenging
+process can be adjusted by the VVA system (Zhang et al., 2013).
+In this research, the exhaust valve opening duration is ﬁxed
+at 159.6°, and the exhaust valve opening timing is gradually
+delayed from 91°CA to 136°CA. Figure 9 shows the normalized
+exhaust valve lift (EL) with different opening and closing
+timings.
+As Figure 10A shows, with the delay of the exhaust valve’s
+opening and closing timings, the air mass and CE decrease, due to the
+less residuals discharging during the blowdown stage which affects the
+FIGURE 9
+Opening proﬁle of exhaust valves.
+FIGURE 10
+(A,B) Air mass, CE, residuals mass, REC, and (C) escaping air mass at 75% load with different EVOs.
+Frontiers in Energy Research
+frontiersin.org
+11
+Liu et al.
+10.3389/fenrg.2022.969525
+
+<<<PAGE 12>>>
+ﬁnal air mass trapped in the cylinder. As the PM stage becomes
+longer, more mixture two ﬂows out of the cylinder, leading to the
+residual mass and REC decreases. Figure 10B shows that the predicted
+results of the ZDMS model are in good agreement with the CFD
+results. With the delay of the exhaust valve opening, the mass of the
+escaping air increases, which is shown in Figure 10C.
+4 Summary and conclusion
+In this article, a zero-dimensional multi-stage scavenging model
+is proposed to simulate the two-stroke engine’s uniﬂow scavenging
+process. The whole scavenging process is divided into four stages, in
+which the effects of different scavenging mechanisms are implicitly
+considered. In the model, the masses, temperature, and pressure of
+air and residual gas in different stages are predicted by a series of
+thermodynamic equations. Then, the results of the 0D model are
+compared with the CFD simulation results in two different engines,
+and a good agreement is found between the 0D and CFD models,
+which veriﬁes the accuracy of the proposed model. Finally, the
+effects of the intake pressure and exhaust valve opening/closing
+timing on the scavenging process in the cylinder are also
+investigated, which indicates the same trend and inﬂuence in the
+CFD models. Therefore, the model is an accurate, efﬁcient, and
+simple alternative to the complex CFD simulations if the details of
+the scavenging process are not considered. The model provides the
+initial conditions for subsequent combustion, which can be used as a
+scavenging process simulation module in the marine engine digital
+twin system.
+The key elements of a digital twin system include the physical
+entity, the twin model, the twin data, and the dynamic interaction
+between them. The focus of the problems solved by the digital twin
+system varies in different stages of the whole life cycle of a marine
+engine, among which an accurate performance prediction is an
+important goal in the development of a digital twin system for
+marine engines during the performance veriﬁcation part of the
+design phase and the test phase. The zero-dimensional multi-stage
+model proposed in this article better simulates the two-stroke
+engine scavenging process, and can be used as a part of the main
+mechanism model. By retaining data interfaces, the novel model
+can establish potential correlations with monitoring data such as
+environmental data, control data, and sensing data measured and
+processed from the marine engine entity to realize the dynamic
+interactions, and then coupling with other mechanism models to
+obtain a set of twin models closely related to the engine entity. As
+the core of the performance digital twin system, the twin model
+mainly focuses on the prediction of engine performance indexes
+such as power, economy, environment, etc.
+Data availability statement
+The original contributions presented in the study are
+included
+in
+the
+article/Supplementary
+Material;
+further
+inquiries can be directed to the corresponding author.
+Author contributions
+DL: Writing and providing overall ideas; XH: Writing, data
+processing, and analysis; LL: Guiding the manuscript writing;
+XM: Supervision and funding.
+Funding
+This research is funded by Research of Controllable
+Combustion
+Technology
+in
+Marine
+Diesel
+Engine
+from
+National Key R&D Program of China, Ministry of Science
+and Technology (Grant No. 2017YFE0116400) and Marine
+Low-Speed Engine Project Phase I (Grant No. CDGC01-
+KT0102-001).
+Conﬂict of interest
+The authors declare that the research was conducted in the
+absence of any commercial or ﬁnancial relationships that could
+be construed as a potential conﬂict of interest.
+Publisher’s note
+All claims expressed in this article are solely those of the
+authors and do not necessarily represent those of their
+afﬁliated organizations, or those of the publisher, the
+editors, and the reviewers. Any product that may be
+evaluated in this article, or claim that may be made by its
+manufacturer,
+is
+not
+guaranteed
+or
+endorsed
+by
+the
+publisher.
+Supplementary material
+The Supplementary Material for this article can be found
+online at: https://www.frontiersin.org/articles/10.3389/fenrg.2022.
+969525/full#supplementary-material
+Frontiers in Energy Research
+frontiersin.org
+12
+Liu et al.
+10.3389/fenrg.2022.969525
+
+<<<PAGE 13>>>
+References
+Andersen, F. H., Hult, J., Nogenmyr, K. J., and Mayer, S. (2014). CFD analysis of
+the scavenging process in marine two-stroke diesel engines. Proceeding of the
+ASME 2014 Internal Combustion Engine Division Fall Technical Conference.
+October 2014, Columbus, Indiana, USA, ICEF 1, 1–13. doi:10.1115/icef2014-5438
+Bajwa, A. U., and Patterson, M. (2019). A New single-zone multi-stage scavenging
+model for real-time emissions control in two-stroke engines. Proceeding of the
+ASME 2019 Internal Combustion Engine Division Fall Technical Conference.
+October 2019, Chicago, IL, USA, 20–23.
+Bondarenko, O., and Fukuda, T. (2020). Development of a diesel engine’s digital
+twin for predicting propulsion system dynamics. Energy 196, 117126. doi:10.1016/j.
+energy.2020.117126
+Deng, B. L., Li, Q., Chen, Y. Y., Li, M., Liu, A. D., Ran, J. Q., et al. (2018). The effect
+of air/fuel ratio on the CO and NOx emissions for a twin-spark motorcycle gasoline
+engine under wide range of operating. Energy 169, 1202–1213. doi:10.1016/j.energy.
+2018.12.113
+Foteinos, M., Papazoglou, A., Kyrtatos, N., Stamatelos, A., Zogou, O.,
+Stamatellou, A., et al. (2019). A three-zone scavenging model for large two-
+stroke uniﬂow marine engines using results from CFD scavenging simulations.
+Energies 12 (9), 1719. doi:10.3390/en12091719
+Ji, C. W., Yang, J. X., Liu, X. L., Zhang, B., Wang, S. F., Gao, B. B., et al. (2016). A
+quasi-dimensional model for combustion performance prediction of an SI
+hydrogen-enriched
+methanol
+engine.
+Int.
+J.
+Hydrogen
+Energy
+41
+(39),
+17676–17686. doi:10.1016/j.ijhydene.2016.07.146
+Jiang, J. J., Li, H., Mao, Z. W., Liu, F. C., Zhang, J. J., Jiang, Z. N., et al. (2022). A
+digital twin auxiliary approach based on adaptive sparse attention network for diesel
+engine fault diagnosis. Sci. Rep. 12 (1), 675. doi:10.1038/s41598-021-04545-5
+Kyrtatos, N. P., and Koumbarelis, I. (1988). A three-zone scavenging model for
+two-stroke uniﬂow engines. J. Eng. Gas. Turbine. Power 110 (3), 531–537. doi:10.
+1115/1.3240167
+Liu, H. F., Li, J. R., Wang, J. T., Wu, C. H., Liu, B., Dong, J. J., et al. (2019). Effects
+of injection strategies on low-speed marine engines using the dual fuel of high-
+pressure direct-injection natural gas and diesel. Energy Sci. Eng. 7, 1994–2010. June.
+doi:10.1002/ese3.406
+Liu, L., Peng, Y., Liu, D., Han, C. F., Zhao, N. B., Ma, X. Z., et al. (2020). A review
+of phenomenological spray penetration modeling for diesel engines with advanced
+injection strategy. Int. J. Spray Combust. Dyn. 12 (145), 175682772093406. doi:10.
+1177/1756827720934067
+Liu, Y. Q., Li, X., Ren, W. C., and Sui, Y. F. (2021). Digital twin boosting leap-
+forward development of aero engine. Aerosp. Power 2021 (02), 24–29. (in Chinese).
+Liu, L., Mei, Q. H., and Jia, W. N. (2022). A ﬂexible diesel spray model for
+advanced injection strategy. Fuel 314 (145), 122784. doi:10.1016/j.fuel.2021.122784
+Liu, L., Peng, Y., Huang, L., Han, C. F., and Ma, X. Z. (2022). Evaluation of
+impingement effects on high-power diesel engine mixing process with an optimized
+stochastic combustion model. Fuel 328 (145), 125239. doi:10.1016/j.fuel.2022.
+125239
+Luo, W. F., Liu, H. F., Liu, L., Liu, D., Wang, H., and Yao, M. F. (2022). Effects of
+scavenging port angle and combustion chamber geometry on combustion and
+emmission of a high-pressure direct-injection natural gas marine engine. Int.
+J. Green Energy 00 (00), 1–13. doi:10.1080/15435075.2022.2079380
+Ma, F. K., Yang, W., Wang, Y. F., Xu, J. F., and Li, Y. F. (2021). Experimental
+research on scavenging process of opposed-piston two-stroke gasoline engine based
+on tracer gas method. Int. J. Engine Res., 1–12. doi:10.1177/14680874211036613
+Tomislav, S., Vedran, M., Vedran, M. V., and Igor, W. (2022). CFD analysis of a
+large marine engine scavenging process. Processes 10 (1), 141. doi:10.3390/
+PR10010141
+Wang, X. Y., Ma, J., and Zhao, H. (2016). Evaluations of scavenge port designs for a
+boosted uniﬂow scavenged direct injection gasoline (BUSDIG) engine by 3D CFD
+simulations. SAE Technical Papers. doi:10.4271/2016-01-1049
+Wang, B. W., Zhang, G. B., Wang, H. Z., Xuan, J., and Jiao, K. (2020). Multi-
+physics-resolved digital twin of proton exchange membrane fuel cells with a
+data-driven surrogate model. Energy AI 1, 100004. doi:10.1016/j.egyai.2020.
+100004
+Zhang, Y., Zhao, H., Ojapah, M., and Cairns, A. (2013). CAI combustion of
+gasoline and its mixture with ethanol in a 2-stroke poppet valve DI gasoline engine.
+Fuel 109, 661–668. doi:10.1016/j.fuel.2013.03.002
+Zheng, Z. Q., Feng, H., Mao, B., Liu, H. F., and Yao, M. F. (2018). A theoretical
+and experimental study on the effects of parameters of two-stage turbocharging
+system on performance of a heavy-duty diesel engine. Appl. Therm. Eng. 129,
+822–832. doi:10.1016/j.applthermaleng.2017.10.044
+Zhou, Y., Xing, T., Song, Y., Li, Y. J., Zhu, X. F., Li, G., et al. (2021). Digital-
+twin-driven geometric optimization of centrifugal impeller with free-form blades
+for ﬁve-axis ﬂank milling. J. Manuf. Syst. 58, 22–35. doi:10.1016/j.jmsy.2020.
+06.019
+Frontiers in Energy Research
+frontiersin.org
+13
+Liu et al.
+10.3389/fenrg.2022.969525
+
+<<<PAGE 14>>>
+Nomenclature
+Abbreviations
+BDC bottom dead center
+BD blowdown
+BSFC brake speciﬁc fuel consumption
+CA crank angle
+CFD computational ﬂuid dynamics
+CE charging efﬁciency
+DM displacement-mixing
+EVO exhaust valve opening
+EVC exhaust valve closing
+EL exhaust valve lift
+PD perfect-displacement
+PM perfect-mixing
+REC residual exhaust coefﬁcient
+RNG renormalization group
+SE scavenging efﬁciency
+SPO scavenging port opening
+SPC scavenging port closing
+TDC top-dead center
+ZDMS zero-dimensional multi-stage
+Symbols
+AIA axis inclination angle
+K isentropic exponent
+Δm mass difference
+_min intake mass ﬂow
+_mout exhaust mass ﬂow
+m massmixture
+P pressure
+R ideal gas constant
+SOA swirl orientation angle
+T temperature
+V volume
+Subscripts
+a air
+ex exhaust
+m massmixture
+p pipe
+r residual
+s scavenged
+Greek Symbols
+ρ density
+Frontiers in Energy Research
+frontiersin.org
+14
+Liu et al.
+10.3389/fenrg.2022.969525

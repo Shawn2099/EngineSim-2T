@@ -1,0 +1,895 @@
+
+<<<PAGE 1>>>
+ 
+Article citation info:  
+Kravchenko S, Obodets D, Kuzmenko A. Improving the energy efficiency of a two-stroke engine with crankcase scavenging for UAVs 
+by implementing an electronic fuel injection system. Combustion Engines. 2026;204(1):72-80. https://doi.org/10.19206/CE-213457 
+72 
+ 
+COMBUSTION ENGINES, 2026;204(1) 
+Serhii KRAVCHENKO  
+Dmytro OBODETS 
+ 
+Anatolii KUZMENKO 
+ 
+ 
+Polish Scientific Society of Combustion Engines 
+ 
+ 
+Improving the energy efficiency of a two-stroke engine with crankcase scavenging 
+for UAVs by implementing an electronic fuel injection system 
+ 
+ARTICLE INFO 
+ The article considers the use of an electronic fuel injection system as a way to increase the energy efficiency of  
+a two-stroke piston engine with crank-chamber purge for UAVs. An analysis of publications reveals the ad-
+vantages of injection over carburetor power systems, particularly increased power, reduced fuel consumption, 
+and lower emissions of harmful substances. An electronic fuel injection system, based on a microcontroller 
+electronic control unit with sensors (MAP, TPS, ECT, IAT, CKP) and actuators, has been developed. EFI Studio 
+software has been implemented for system calibration and monitoring. The control algorithm is based on the 
+Alpha-N method taking into account dead time and injection phase shift. A hardware implementation is present-
+ed that provides dosing accuracy and flexible control of engine operating modes. The results confirm the 
+practical significance of the technology for increasing the efficiency and environmental friendliness of small 
+UAV engines.  
+Received: 19 August 2025 
+Revised: 30 September 2025 
+Accepted: 21 October 2025 
+Available online: 22 November 2025 
+Key words: UAV engine, two-stroke engine, electronic fuel injection, electronic control unit, energy efficiency 
+ 
+This is an open access article under the CC BY license (http://creativecommons.org/licenses/by/4.0/) 
+ 
+ 
+1. Introduction 
+Recently, unmanned aerial vehicle (UAV) technologies 
+have been rapidly advancing alongside the swift develop-
+ment of microelectronics and communication technologies. 
+Compared to manned aircraft, UAVs typically have signifi-
+cantly smaller dimensions, lower weight, and are less de-
+manding in terms of runway characteristics. They are also 
+characterized by relatively low production and operational 
+costs. As a result, UAVs are widely used in the military, 
+geographic services, satellite operations, navigation, medi-
+cine, and other fields [10]. 
+A key component of any UAV is its powerplant, which 
+provides propulsion and supplies energy to onboard sys-
+tems. Reciprocating engines are the most common type of 
+propulsion for UAVs. These engines have several types, 
+among which the two-stroke engines are the most common 
+ones [15]. 
+Two-stroke piston engines with crankcase-scavenged 
+loop charging and spark-ignition of the air-fuel mixture are 
+characterized by high specific power output and mechanical 
+simplicity. These features have contributed to their wide-
+spread adoption in small- and medium-sized unmanned 
+aerial vehicles (UAVs) [13, 15]. Numerous companies – 
+such as 3W, Gobler Hirth, and Limbach in Germany; 
+Wilksch in the United Kingdom; Zanzottera in Italy; and 
+XRDi and DeltaHawk in the United States, as well as DLA 
+in China – currently specialize in the production of this 
+class of engines [17]. 
+Flight endurance has increasingly been regarded as one 
+of the most important technical parameters in evaluating 
+UAV performance. Given the limited onboard fuel capacity 
+of UAVs, their endurance is directly influenced by the 
+thermodynamic efficiency of the propulsion system, i.e., the 
+fuel consumption of the aircraft engine. 
+Unlike conventional four-stroke engines, which are 
+equipped with complex valvetrain mechanisms, gas ex-
+change in two-stroke engines is typically achieved by the 
+movement of the piston itself. While this simplified scav-
+enging mechanism facilitates engine design and manufac-
+turing, it also results in lower volumetric efficiency and  
+a substantial loss of the fresh charge from the cylinder dur-
+ing the scavenging process [4, 9, 19, 20, 24]. 
+Thus, optimizing the working cycle of these engines 
+remains a relevant engineering challenge. Improving engine 
+performance necessitates the implementation of advanced 
+technologies that enable effective control of combustion 
+processes and, as a result, the realization of the engine’s full 
+potential. The integration of modern electronic fuel injec-
+tion systems offers a promising approach to enhancing the 
+operational characteristics of two-stroke engines. The re-
+placement of traditional carburetion systems with electronic 
+fuel injection (EFI) has become a focus of research for both 
+academic institutions and engineering firms. While carbure-
+tors offer certain advantages, detailed analyses of their 
+performance have revealed several limitations. These in-
+clude high sensitivity to ambient environmental conditions, 
+a tendency to flood, dependence on the physical properties 
+of gasoline, and the risk of carburetor icing. For example, 
+3W International offers engine models equipped with either 
+carburetor or EFI systems, emphasizing the advantages of 
+EFI [1]. These include reduced fuel consumption, improved 
+air-fuel mixture formation, enhanced power output, and 
+more stable performance across varying engine orientations 
+and environmental conditions. Moreover, EFI systems 
+significantly reduce the dependency on the physical and 
+chemical properties of gasoline (such as volatility), sensi-
+tivity to ambient conditions, and the risk of fuel condensa-
+tion or intake manifold icing. This marks a substantial im-
+provement over carbureted systems, which are more sus-
+ceptible to these limitations. 
+Fuel injection serves as an alternative to carburetion for 
+preparing the air-fuel mixture suitable for proper function-
+ing of spark-ignition (SI) engines. Injection systems operate 
+based on physical principles distinct from those of carbure-
+
+<<<PAGE 2>>>
+ 
+Improving the energy efficiency of a two-stroke engine with crankcase scavenging for UAVs… 
+COMBUSTION ENGINES, 2026;204(1) 
+73 
+tors, both in terms of fuel metering and atomization within 
+the air mass. Specifically, these systems meter fuel in pro-
+portion to the engine's air intake flow, relying not on the 
+intake vacuum generated by the engine but on increased 
+fuel pressure provided by a pump. Moreover, whereas in  
+a carburetor fuel atomization is driven by the higher veloci-
+ty of the intake air stream that entrains and breaks the fuel 
+into progressively finer droplets. In an injection system, 
+fuel is delivered at high velocity through a nozzle, produc-
+ing a fine spray via kinetic atomization.  
+2. Literature review 
+The efficiency of the engine combustion process can be 
+enhanced, and the flight endurance of UAVs can be extend-
+ed, through the implementation of optimal fuel delivery 
+control technologies. Consequently, an increasing number 
+of researchers and engineers have turned their attention to 
+the development and refinement of fuel supply systems for 
+UAV engines [3, 6, 7, 12, 21, 22]. 
+There is a general trend toward the adoption of electron-
+ic fuel injection (EFI) systems in two-stroke spark-ignition 
+engines [12, 22]. Although fuel injection into the intake 
+manifold of two-stroke engines does not eliminate fuel–air 
+mixture losses during scavenging, it can improve overall 
+engine performance due to more precise control of the air–
+fuel ratio. In general, EFI systems allow the engine to oper-
+ate with leaner mixtures compared to carbureted systems. 
+Another notable advantage is that fuel injection can provide 
+up to 20% higher output power relative to a carbureted 
+version. Moreover, hydrocarbon (HC) emissions are signif-
+icantly lower across the full throttle range when using injec-
+tion systems. For instance, in [12], which investigates the 
+application of such an injection system in a two-stroke 
+engine, an increase in power from 3.6 kW to 4.2 kW was 
+observed, accompanied by a reduction in HC emissions 
+from 2310 ppm to 1200 ppm. In [22], additional studies 
+were conducted to improve the efficiency of UAV power-
+plants by employing intake manifold fuel injection. A fuel 
+delivery strategy based on controlling the excess air coeffi-
+cient (λ) was proposed, and a control algorithm using a PID 
+regulator was implemented to mitigate deviations in λ under 
+all engine operating conditions. As a result, the thermal 
+efficiency of the cycle was improved by 5–25%. Other 
+reported benefits of such systems include improved cold 
+start behavior and enhanced engine controllability [3]. 
+One method of reducing fuel loss through the exhaust 
+ports is the use of resonant exhaust systems, as presented in 
+[18]. However, due to UAV design constraints, integrating 
+specific exhaust system geometries is not always feasible. 
+Therefore, one promising approach to reducing, or poten-
+tially eliminating fuel losses during scavenging and mini-
+mizing hydrocarbon emissions in the exhaust gases in-
+volves the use of direct fuel injection into the engine cylin-
+ders [4, 7, 11, 13]. Nonetheless, due to the unique operating 
+characteristics of two-stroke engines, implementing such a 
+system significantly complicates the lubrication system. 
+Perhaps the most representative contributions reflecting the 
+current state of the art are those presented in [11, 13]. These 
+studies employed high-pressure fuel injection systems simi-
+lar to those used in diesel engines. While peak engine pow-
+er was found to be nearly unaffected by the application of 
+direct injection, there was a notable reduction in brake-
+specific fuel consumption (BSFC), reaching 300 g/kWh, 
+compared to 370 g/kWh for the carbureted version. A simi-
+lar pattern was observed for emissions: hydrocarbon emis-
+sions were reduced by 53%, and carbon monoxide (CO) 
+emissions by 40% when using injection systems as com-
+pared to carburetors [13]. The effectiveness of direct fuel 
+injection was further confirmed in [11] with the use of 
+compressed natural gas, where the maximum brake thermal 
+efficiency was increased by 9.1%, while unburned HC 
+emissions were reduced by 79.3% and CO emissions by 
+94.5% compared to the carbureted engine. 
+The aim of this study is to implement measures aimed at 
+improving the energy efficiency of a two-stroke engine 
+with crankcase scavenging through the integration of an 
+electronic fuel injection system. 
+3. Principle of fuel quantity calculation 
+Spark-ignition engines operate by combusting a pre-
+mixed fuel–air charge. Accordingly, the primary function of 
+the fuel supply system is to meter the appropriate amount of 
+fuel required to achieve an optimal air–fuel ratio (AFR) in 
+accordance with the engine’s operating conditions. In prin-
+ciple, the optimal AFR for spark-ignition engines depends 
+to some extent on the specific operating conditions. That is, 
+it is defined as the ratio that ensures the required output 
+power with the lowest possible fuel consumption, while 
+maintaining uninterrupted and reliable engine operation. 
+Combustion of the fuel–air mixture in the cylinder of an 
+internal combustion engine with spark ignition occurs only 
+within a certain range of AFR, typically from 8.0 to 25.5. 
+The stoichiometric ratio is approximately 14.7. Lean mix-
+tures generally improve fuel economy, whereas rich mix-
+tures tend to increase engine torque output. Enrichment of 
+the air–fuel mixture can also be employed as a strategy to 
+reduce combustion temperatures and prevent thermal over-
+load during high-load operating modes (see Fig. 1). 
+ 
+Fig. 1. Influence of the air–fuel mixture composition on engine operating 
+modes 
+ 
+Therefore, depending on the specific operating condi-
+tions, it is necessary to find a compromise between compet-
+ing requirements by selecting the value of the air–fuel 
+equivalence ratio, λ, that yields the most favorable results. 
+This implies that, for each point within the engine’s operat-
+ing range, it is possible to define, based on different per-
+formance requirements, the most appropriate value of λ, 
+which the fuel supply system should aim to maintain. 
+
+<<<PAGE 3>>>
+ 
+Improving the energy efficiency of a two-stroke engine with crankcase scavenging for UAVs… 
+74 
+COMBUSTION ENGINES, 2026;204(1) 
+Moreover, λ is defined as the ratio of the actual amount 
+of air participating in the combustion process to the theoret-
+ical amount of air required for the complete combustion of 
+the given quantity of fuel. It can be expressed as follows: 
+ 
+λ =
+mair
+l0∙mfuel 
+(1) 
+where mair is the mass of air that participates in the combus-
+tion of mfuel kilograms of fuel. 
+The mass airflow rate in the intake manifold passing 
+through the throttle valve is given by: 
+ 
+mair =
+n⋅Vh⋅ρair⋅ηv
+60
+ 
+(2) 
+where ρair is the air density in the intake manifold, n is the 
+engine speed, Vh is the engine displacement volume, and ηv 
+is the volumetric efficiency. 
+Since air density can be expressed as ρair = Pair/(RTair), 
+where Pair and Tair represent the pressure and temperature of 
+the air in the intake manifold, and R is the specific gas 
+constant, the equation can also be written as: 
+ 
+mair =
+n⋅Vh⋅Pair⋅ηv
+60⋅R⋅Tair 
+(3) 
+When the injector opens, fuel is delivered under high 
+pressure, generating a fuel flow. The following equation 
+can describe the fuel flow rate: 
+ 
+mfuel = μSinj√2 ∙g ∙ρf(Pfuel −Pm) ∙PW 
+(4) 
+where ṁfuel denotes the mass flow rate of fuel during  
+a single injection event, μ is the injector discharge coeffi-
+cient, Sinj represents the total area of the injector orifices, ρf 
+is the fuel density, Pfuel is the fuel pressure, Pm is the intake 
+manifold pressure, and PW is the fuel injection pulse width 
+per engine cycle. 
+The following section considers the characteristics of 
+well-known algorithms used to calculate the required 
+amount of fuel based on input parameters received by the 
+engine control unit (ECU). 
+MAF  
+According to this algorithm, the amount of injected fuel 
+is calculated directly based on the input from the Mass Air 
+Flow (MAF) sensor and the desired air-fuel ratio. Fuel 
+injection systems employing this approach interpret the 
+MAF sensor output as a direct representation of the en-
+gine’s current air intake flow. This method enables  
+a straightforward and intuitive calculation of the required 
+fuel quantity and does not require specific calibration for 
+each engine or its sensors. In this case, the engine load 
+(volumetric efficiency) can be instantly determined as:  
+ 
+mair =
+MAF
+Vh ⋅ρair⋅n 
+(5) 
+The required fuel mass flow rate can be determined us-
+ing the following expression: 
+ 
+mfuel =
+mair
+AFRtarget 
+(6) 
+where AFRtarget is the desired air-fuel ratio. 
+ 
+Speed Density 
+An alternative to direct measurement of the intake air 
+flow is the estimation of air mass based on signals from 
+other sensors, such as those measuring intake manifold 
+pressure and air temperature. This fuel injection control 
+strategy is referred to as the Speed-Density method [14] 
+(Fig. 2). In this approach, the intake air flow rate is not 
+measured directly. Instead, the mass of air entering the 
+engine is calculated based on intake air temperature, mani-
+fold absolute pressure (MAP), and engine speed, using  
+a reference volumetric efficiency (VE) table. 
+The volumetric efficiency of the engine is a parameter 
+influenced by both operating conditions (such as crankshaft 
+rotational speed and manifold pressure) and engine design 
+characteristics (such as displacement volume, intake mani-
+fold geometry, and compression ratio). The primary VE 
+table is typically defined as a two-dimensional function of 
+manifold absolute pressure (MAP) and engine speed 
+(RPM). 
+Based on the selected VE value, along with the meas-
+ured MAP and intake air temperature, the engine control 
+unit calculates the air mass entering the engine. 
+For a warmed-up engine, the air mass per cylinder per 
+cycle ma is calculated using the following expression: 
+ 
+mair = ηv(N) ⋅ρair(T, P) ⋅Vh =
+ηv⋅Vh∙Pair
+R⋅Tair 
+(7) 
+After calculating the mass air flow entering the engine, 
+the corresponding fuel mass flow rate can be determined. 
+The primary limitation of this method lies in the necessity 
+to develop or calibrate the VE table individually for each 
+engine type. This requirement arises because the airflow 
+velocity may exhibit similar values under different engine 
+speeds and MAP sensor operating conditions. Therefore, it 
+becomes essential to determine the steady-state values of 
+the volumetric efficiency ην across all regions of the VE 
+table with sufficient accuracy.  
+Alpha-N 
+In the Alpha-N strategy, the air mass is calculated using 
+an empirical map and is defined as follows: 
+ 
+mair = VE(α, N) ∙Vh ∙ρa(T, p) 
+(8) 
+In other words, the injector opening duration is calculat-
+ed based on empirical correlations between the engine 
+crankshaft speed and the throttle valve opening angle (Fig. 
+3). To improve accuracy, ambient air pressure and tempera-
+ture are also taken into account. 
+For each of these primary algorithms, additional strate-
+gies for adjusting the injector opening duration may be 
+implemented depending on the engine’s operational model: 
+Percent Baro (Speed-Density + Atmospheric  
+Pressure) 
+This strategy adjusts the volumetric efficiency based on 
+an additional ambient atmospheric pressure sensor. Its ap-
+plication is particularly relevant for UAVs operating above 
+1000 meters, where air–fuel mixture correction becomes 
+necessary. 
+ 
+ 
+ 
+ 
+ 
+ 
+
+<<<PAGE 4>>>
+ 
+Improving the energy efficiency of a two-stroke engine with crankcase scavenging for UAVs… 
+COMBUSTION ENGINES, 2026;204(1) 
+75 
+ 
+Calculation of air 
+density, 
+ρ [kg/m3]
+Engine displacement, 
+Vh [м3]
+Intake manifold air 
+pressure, MAP [kPa]
+Engine speed, 
+n [rpm]
+Intake air temperature, 
+IAT [°C]
+Calculation of intake air 
+mass, mair [kg]
+Calculation of the required 
+fuel mass, mfuel [kg]
+Target air-to-fuel 
+mass ratio, AFR
+Volumetric efficiency, 
+ηv [%]
+Calculation of fuel injection 
+duration, tinj [ms]
+Injector flow rate, 
+Ging [g/min]
+ 
+Fig. 2. Speed Density algorithm for calculating the required fuel quantity 
+Throttle position 
+angle, TPS [%]
+Calculation of air density, 
+ρ [kg/m3]
+Engine 
+displacement, 
+Vh [м3]
+Engine speed, 
+n [rpm]
+Intake air temperature, 
+IAT [°C]
+Calculation of intake air 
+mass, mair [kg]
+Calculation of the required 
+fuel mass, mfuel [kg]
+Target air-to-
+fuel mass ratio, 
+AFR
+Volumetric 
+efficiency, ηv 
+[%]
+Calculation of fuel injection 
+duration, tinj [ms]
+Injector flow 
+rate, Ging [g/min]
+Calculation of intake manifold air 
+pressure, MAP [kPa]
+ 
+Fig. 3. Alpha-N algorithm for calculating the required fuel quantity 
+ 
+ 
+Lambda Feedback (Closed-Loop Control) 
+This method monitors the composition of the exhaust 
+gases to fine-tune fuel injection in real time, ensuring the 
+air–fuel ratio (AFR) remains close to the target value. 
+Transient Fuel Compensation 
+This adjustment controls fuel delivery during rapid 
+throttle changes. It includes fuel enrichment during acceler-
+ation and fuel cut-off during deceleration. 
+ 
+Cold Start Enrichment 
+This strategy compensates for poor fuel vaporization at 
+low temperatures by enriching the mixture during cold 
+engine starts.  
+4. Implementation of the fuel injection system for  
+a two-stroke UAV engine with crankcase  
+scavenging 
+The fuel injection system must be capable of detecting 
+changes in parameters that influence the optimal air–fuel 
+
+<<<PAGE 5>>>
+ 
+Improving the energy efficiency of a two-stroke engine with crankcase scavenging for UAVs… 
+76 
+COMBUSTION ENGINES, 2026;204(1) 
+ratio required by the engine and transmitting this infor-
+mation to the Electronic Control Unit (ECU). The ECU 
+integrates the individual signals received from sensors and 
+calculates the required amount of fuel mfuel to be injected 
+for a given engine operating mode. 
+Thus, in the fuel injection system, the primary control 
+parameters that must be continuously monitored for accu-
+rate dosing are: 
+ Intake air flow rate, which serves as the fundamental 
+input for calculating the mass of fuel to be injected 
+ Ambient air temperature and pressure, which influence 
+air density and mixture formation 
+ Crankshaft rotational speed, which determines the injec-
+tion frequency and the amount of fuel required per cycle 
+ Pressure differential Δp is maintained across the injector 
+nozzle, which affects fuel atomization and delivery 
+ Throttle valve position, representing the engine load 
+index which, in conjunction with crankshaft speed, al-
+lows the ECU to identify the appropriate value on pre-
+defined maps stored in memory 
+ Engine temperature is used for fuel delivery correction. 
+During cold starts, increased injection duration is re-
+quired. During engine warm-up, a temporary enrich-
+ment of the mixture is applied, depending on the engine 
+temperature. 
+The developed electronic fuel injection unit is a micro-
+controller-based system that reads sensor data from the 
+engine and generates an actuation signal for the injector, 
+which is installed in the engine’s intake manifold. The 
+required pulse width for injector opening duration is com-
+puted based on lookup tables and constants stored in the 
+microcontroller’s memory. 
+A block diagram of the fuel injection control unit is 
+shown in Fig. 4. Functionally, the system consists of a fuel 
+injection control unit, a set of sensors (including the throttle 
+position sensor (TPS), engine temperature sensor (CHT), 
+manifold absolute pressure (MAP) sensor, intake air tem-
+perature (IAT) sensor, and crankshaft position sensor), and 
+actuators (a fuel pump with a pressure regulator and injec-
+tors). 
+Figure 5 presents the schematic diagram of the fuel in-
+jection control unit. The control unit comprises the follow-
+ing components: an 8-bit microcontroller (ATmega328P) 
+with digital input/output ports and a 10-bit analog-to-digital 
+converter (ADC); an interface IC for actuator control 
+(MC33812); a CAN bus module for bidirectional data ex-
+change; and signal conditioning and input protection cir-
+cuitry for the microcontroller. 
+The design of the printed circuit board (Fig. 6) is based 
+on the use of the MC33812 integrated circuit [16], which 
+was specifically developed by NXP for control units in  
+2-stroke and 4-stroke engine applications. This chip inte-
+grates a voltage regulator and actuator drivers, and includes 
+diagnostic functionality to detect faults such as open or 
+short circuits in the actuators. 
+ 
+Fig. 4. Block diagram of the electronic fuel injection control system 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+<<<PAGE 6>>>
+ 
+Improving the energy efficiency of a two-stroke engine with crankcase scavenging for UAVs… 
+COMBUSTION ENGINES, 2026;204(1) 
+77 
+ 
+ 
+Fig. 5. Schematic diagram of the electronic fuel injection control unit 
+ 
+A platinum PT100 sensor is used as the engine cylinder 
+temperature sensor (CHT). Its characteristics enable high-
+accuracy temperature measurements across a wide operat-
+ing range from –50°C to +400°C. The MAX31865 [2] 
+resistance-to-digital converter is employed for signal condi-
+tioning. In addition to high-precision resistance measure-
+ments, this chip supports diagnostics for sensor disconnec-
+tion and short circuits. It includes a DRDY (Data Ready) 
+output to indicate the completion of conversion and readi-
+ness of data for reading. 
+The fuel injection control unit is equipped with a baro-
+metric pressure sensor for altitude-based correction of fuel 
+delivery. This sensor is implemented using the LPS331AP 
+integrated circuit. It interfaces with the main microcontrol-
+ler via SPI and includes a dedicated INT1 interrupt output 
+to signal data readiness. 
+Since the ATmega328P microcontroller does not in-
+clude a built-in CAN interface, this functionality is provid-
+ed by two external components: the MCP2515 CAN con-
+troller and the TJA1050T transceiver. By utilizing the SPI 
+interface and structuring data as 1–4 byte packets per varia-
+ble (including floating-point types), high data transfer 
+speeds are achieved, minimizing delays in the main pro-
+gram during data transmission or reception. 
+The microcontroller’s crankshaft position sensor (CKP) 
+input is galvanically isolated via an optocoupler and further 
+equipped with a Schmitt-trigger buffer to suppress electro-
+magnetic interference. 
+ 
+Fig. 6. External view of the developed printed circuit board design for the  
+ 
+fuel injection control unit 
+ 
+To configure the parameters of the fuel injection control 
+unit, the EFI Studio software was developed within the  
+LabVIEW environment. The software interface is shown in 
+Fig. 7. This software enables diagnostics of the control unit, 
+sensor calibration, real-time monitoring of parameters, and, 
+most importantly, modification of the settings of tables and 
+constants necessary for calculating the fuel injection dura-
+tion, including: 
+
+<<<PAGE 7>>>
+ 
+Improving the energy efficiency of a two-stroke engine with crankcase scavenging for UAVs… 
+78 
+COMBUSTION ENGINES, 2026;204(1) 
+– Engine displacement, cm³ 
+– Injector flow rate, g/min 
+– VE table (n, TPS) – volumetric efficiency coefficient 
+depending on engine speed and throttle position 
+–  AFR table (n, TPS) – required air-fuel ratio depending 
+on engine speed and throttle opening angle 
+–  Correction 
+coefficient 
+tables: 
+cor_IAT(IAT), 
+cor_CHT(CHT), cor_Baro(Baro) – correction factors 
+for intake air temperature, cylinder head temperature, 
+and barometric pressure, respectively 
+–  mult_start table (N_cycle) – enrichment coefficient 
+during cold start 
+–  DT = f(V_bat) table – injection duration correction map 
+accounting for power supply voltage drop. 
+The algorithm for calculating the engine crankshaft 
+speed utilizes the microcontroller’s hardware features. For 
+this purpose, the 16-bit timer/counter is configured in input 
+capture mode. The filtered signal is fed to the microcontrol-
+ler’s ICP1 (Input Capture Pin). When a rising edge is de-
+tected, the current timer value is latched and copied into the 
+ICR1 register, triggering an interrupt. During the first inter-
+rupt call, the ICR1 register value is stored; during the sec-
+ond call, the difference between the current and previous 
+timer values is calculated. Since the timer continues run-
+ning and is not reset, an overflow interrupt is used to count 
+the number of full timer cycles. This overflow count is 
+taken into account in the RPM calculation. 
+The primary advantage of this method is its high meas-
+urement accuracy, as signal capture occurs immediately 
+upon detection, independent of the main program's execu-
+tion. 
+The required fuel amount is calculated using the Alpha-
+N method described above. This method was selected based 
+on the operating characteristics of the UAV engine, which 
+runs mostly at throttle openings close to maximum during 
+flight. Therefore, the Alpha-N strategy offers an advantage 
+due to its simple implementation and good response to 
+acceleration and deceleration. 
+Upon powering the EFI control unit, the fuel pump is 
+briefly activated to pressurize the fuel rail. When the first 
+crankshaft position sensor (CKP) pulse is received, a prim-
+ing fuel injection occurs. The amount of fuel injected is 
+determined from a table based on the engine cylinder tem-
+perature. 
+To generate the injector control signal, two timers are 
+used. One timer controls the injection duration, while the 
+other manages the injection phase shift relative to the CKP 
+signal. 
+The core of the control program is a state machine, 
+which coordinates and manages the operating modes of the 
+electronic control unit. Its main task is to ensure a con-
+sistent transition between modes such as "normal opera-
+tion", "startup mode," and "programming/debugging 
+mode". 
+Figure 8 shows an oscilloscope trace of current and 
+voltage at the injector terminals. From this waveform, it can 
+be concluded that when controlling fuel injectors, it is nec-
+essary to consider the so-called dead time – the delay be-
+tween the application of the electrical pulse and the actual 
+start of fuel injection. This delay depends on supply voltage 
+and the physical characteristics of the injector, and it signif-
+icantly affects fuel metering accuracy. Neglecting this delay 
+can lead to enrichment or enleanment of the air-fuel mix-
+ture, especially in operating modes with short injection 
+durations. Since the dead time is independent of the injec-
+tion duration and is a function of the injector’s electrical 
+characteristics (under constant fuel pressure), it should be 
+treated as an additive constant, which is added on top of the 
+other multiplicative factors [23]. 
+5. Conclusions 
+1. The use of two-stroke engines as the powerplant for 
+UAVs is considered the most promising due to their simple 
+design and high specific power characteristics. 
+2. The efficiency of the engine combustion process can 
+be improved, and the UAV flight duration extended, 
+through the use of electronic fuel injection (EFI) systems. 
+ 
+Fig. 7. Interface of the developed EFI Studio software 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+<<<PAGE 8>>>
+ 
+Improving the energy efficiency of a two-stroke engine with crankcase scavenging for UAVs… 
+COMBUSTION ENGINES, 2026;204(1) 
+79 
+ 
+ 
+Fig. 8. Oscillogram of the injector control signal; AB – injector opening, 
+ BC – fully open nozzle, CD – injector closing, AC – EFI control pulse 
+ 
+3. One of the most effective methods for reducing or 
+even eliminating fuel losses through the exhaust port during 
+scavenging, as well as for decreasing hydrocarbon emis-
+sions in two-stroke engines, is the implementation of direct 
+fuel injection into the cylinders. However, given the operat-
+ing specifics of a two-stroke engine, such an approach sig-
+nificantly complicates the lubrication system. 
+4. Within the framework of this study, an electronic fuel 
+injection control unit was developed for a two-stroke en-
+gine with crankcase scavenging. The unit includes an 8-bit 
+ATmega328P microcontroller, an MC33812 interface IC 
+for actuator control, a CAN bus module for bidirectional 
+data exchange, signal conditioning circuits, and input pro-
+tection for the microcontroller. 
+5. Since the UAV engine operates mostly at wide open 
+throttle during flight, the Alpha-N algorithm was selected 
+for fuel quantity calculation. 
+6. Dedicated software called EFI Studio was developed 
+in the LabView environment to configure the parameters of 
+the EFI control unit. 
+7. A current and voltage oscilloscope trace at the injec-
+tor terminals was obtained for one of the operating modes, 
+confirming the functionality of the developed electronic 
+control unit. 
+8. The next stage of research will focus on testing the 
+developed injection system directly on a two-stroke internal 
+combustion engine, with an assessment of the efficiency 
+and environmental characteristics of the fuel-injected en-
+gine in comparison to the carbureted version. 
+Acknowledgements 
+The research was carried out with the grant support of 
+the National Research Foundation of Ukraine within the 
+framework of the project 2023.04/0124 "Improving the 
+tactical and technical characteristics of domestic UAVs by 
+developing an aircraft engine with promising specific pow-
+er indicators". 
+ 
+Nomenclature 
+AFR air-fuel ratio  
+BSFC brake-specific fuel consumption 
+CKP crankshaft position 
+CO  
+carbon monoxide 
+ECU  engine control unit 
+EFI 
+electronic fuel injection 
+HC  
+hydrocarbon 
+IAT 
+intake air temperature  
+MAF  mass Air Flow  
+MAP manifold absolute pressure 
+SI 
+spark ignition 
+TPS 
+throttle position sensor 
+UAV unmanned aerial vehicles 
+VE 
+volumetric efficiency 
+ 
+Bibliography 
+[1] 
+3W-International’s performance partner sky power releases 
+new injection and ignition system. UAS Weekly; 2018 Apr 6.  
+ 
+https://uasweekly.com/2018/04/06/3w-internationals-
+performance-partner-sky-power-release-new-injection-and-
+ignition-system/ (accessed on 2025.09.24) 
+[2] 
+Analog Devices. MAX31865 RTD-to-digital converter. Data 
+sheet.  
+ 
+https://www.analog.com/media/en/technical-
+documentation/data-sheets/max31865.pdf 
+[3] 
+Archer M, Bell G. Advanced electronic fuel injection sys-
+tems – an emissions solution for both 2- and 4-stroke small 
+vehicle engines. SAE Technical Paper 2001-26-0010. 2001. 
+https://doi.org/10.4271/2001-26-0010 
+[4] 
+Blair G. Design and simulation of two-stroke engines. SAE 
+International 1996:623. 
+[5] 
+Blyenburg & Co. UAS Yearbook: Unmanned aircraft systems 
+– the global perspective 2010/2011. Paris 2010:214.  
+ 
+http://www.dcabr.org.br/download/cursos-
+eventos/eventos/eventos-realizados/2010/seminario-vant-27-
+10-2010/cd-uvs-yearbook/ 
+[6] 
+Darwin RB, Purwoko AT, Sopiyan. Design and experiment of 
+a prototype electronic control unit direct injection fuel system 
+arduino-based for 2-stroke spark ignition engine. Automotive 
+Experiences. 2022;5(1):49-56.  
+ 
+https://doi.org/10.31603/ae.5472 
+[7] 
+Darzi M, Johnson D, Ulishney C, Clark N. Low pressure 
+direct injection strategies effect on a small SI natural gas two-
+stroke engine’s energy distribution and emissions. Appl Ener-
+gy. 2018;230:1585-1602.  
+ 
+https://doi.org/10.1016/j.apenergy.2018.09.091 
+[8] 
+Hassanalian M, Rice D, Abdelkef A. Evolution of space 
+drones for planetary exploration: a review. Prog Aerosp Sci. 
+2017;97:61-105.  
+ 
+https://doi.org/10.1016/j.paerosci.2018.01.003 
+[9] 
+Heywood JB. Internal combustion engine fundamentals. New 
+York: McGraw-Hill 1988.  
+[10] Kolisnyk K, Kartashov V, Tomashevskyi R, Kolisnyk V, 
+Koval S, Zamiatin P. The use of drones to improve the effi-
+ciency of using telemedicine systems in emergencies. 2022 
+IEEE 
+3rd 
+KhPI 
+Week 
+on 
+Advanced 
+Technology 
+(KhPIWeek); 2022 Kharkiv.  
+ 
+https://doi.org/10.1109/KhPIWeek57572.2022.9916362 
+[11] Kumarappa S, Prabhukumar GP. Improving the performance 
+of two stroke spark ignition engine by direct electronic CNG 
+
+<<<PAGE 9>>>
+ 
+Improving the energy efficiency of a two-stroke engine with crankcase scavenging for UAVs… 
+80 
+COMBUSTION ENGINES, 2026;204(1) 
+injection. Jordan Journal of Mechanical and Industrial Engi-
+neering. 2008;2:169-174. 
+[12] Loganathan M, Manivannan PV, Ramesh A. Investigations on 
+performance and emissions of a two-stroke SI engine fitted 
+with a manifold injection system. Indian Journal of Engineer-
+ing & Materials Sciences. 2006;13:95-102. 
+[13] Marouf M, Mursaleen M, Saad P. Investigations on two stroke 
+cycle spark ignition engine using gasoline direct injection. 
+Energy and Power. 2012;2(7):116-122. 
+[14] Meng L, Luo J, Yang X, Zeng C. Intake air mass observer 
+design based on extended Kalman filter for air-fuel ratio con-
+trol on SI engine. Energies. 2019; 12(18):3444.  
+ 
+https://doi.org/10.3390/en12183444 
+[15] Newcome LR. Unmanned aviation: a brief history of un-
+manned aerial vehicles. Reston (VA): AIAA 2004.  
+[16] NXP Semiconductors. Multifunctional ignition and injector 
+driver 33812. Data sheet.  
+ 
+https://www.nxp.com/docs/en/data-sheet/MC33812.pdf 
+[17] Obodets DK. Modern trends in the development of unmanned 
+aerial vehicle engines. Aviation and Space Technology. 
+2024;5(199):27-38. 
+[18] Obodeh O, Otunuya AD. Improving the performance of two-
+stroke motorcycle with tuned adjustable exhaust pipe. Re-
+search Journal of Applied Sciences. Engineering and Tech-
+nology. 2009;1(2):59-65. 
+[19] Sapate KD, Tikekar AN. Pollution aspects of emissions from 
+small two-stroke automobile engines. Nat Env Poll Tech. 
+2008;7(1):33-38. 
+[20] Volckens J, Olson DA, Hays MD. Carbonaceous species 
+emitted from handheld two-stroke engines. Atmos Environ. 
+2008;42(6);1239-1248. 
+[21] Wang Y, Shi Y, Cai M, Xu W, Zhang J, Zhong W. Optimiza-
+tion of fuel injection control system of two-stroke aeroengine 
+of UAV. Complexity. 2020;8921320.  
+ 
+https://doi.org/10.1155/2020/8921320 
+[22] Wang Y, Shi Y, Cai M, Xu W, Yu Q. Efficiency optimized 
+fuel supply strategy of aircraft engine based on air-fuel ratio 
+control. Chinese Journal of Aeronautics. 2019;32(2):489-498.  
+ 
+https://doi.org/10.1016/j.cja.2018.10.002 
+[23] Więcławski K, Mączak J, Szczurowski K. Electric current 
+characteristics of the injector generating fuel doses. Diagnos-
+tyka. 2018;19(4):59-64.  
+ 
+https://doi.org/10.29354/diag/97225 
+[24] Wróblewski P, Bratkowski P, Borcuch D, Kiszkowiak Ł. 
+Prototype station dedicated to aircraft engine propeller pro-
+files and advanced materials testing. Combustion Engines. 
+2025;201(2):165-175. https://doi.org/10.19206/CE-204319 
+ 
+Serhii Kravchenko, DEng. – Department of Engines 
+and Hybrid Power Plants, National Technical Uni-
+versity “Kharkiv Polytechnic Institute”, Kharkiv, 
+Ukraine. 
+e-mail: serhii.kravchenko@khpi.edu.ua 
+ 
+ 
+ 
+Dmytro Obodets, MEng. – Department of Engines 
+and Hybrid Power Plants, National Technical Uni-
+versity “Kharkiv Polytechnic Institute”, Kharkiv, 
+Ukraine. 
+e-mail: dmytro.obodets@ieee.khpi.edu.ua 
+ 
+ 
+ 
+Anatolii Kuzmenko, DEng. – Internal Combustion 
+Engine, Kharkiv National Automobile and Highway 
+University, Ukraine. 
+e-mail: kuzmatolja@gmail.com 
+ 
+ 
+ 
+ 
+ 
+ 

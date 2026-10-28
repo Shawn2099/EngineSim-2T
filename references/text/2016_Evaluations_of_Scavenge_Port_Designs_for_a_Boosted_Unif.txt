@@ -1,0 +1,1780 @@
+
+<<<PAGE 1>>>
+Page 1 of 13 
+ 
+ 
+2016-01-1049 
+Evaluations of Scavenge Port Designs for a Boosted Uniflow Scavenged Direct 
+Injection Gasoline (BUSDIG) Engine by 3D CFD Simulations 
+Author, co-author (Do NOT enter this information. It will be pulled from participant tab in 
+MyTechZone) 
+Affiliation (Do NOT enter this information. It will be pulled from participant tab in MyTechZone) 
+Copyright © 2016 SAE International
+Abstract 
+The 2-stroke engine has great potential for aggressive engine 
+downsizing due to its double firing frequency which allows lower 
+indicated mean effective pressure (IMEP) and peak in-cylinder 
+pressure with the same output toque compared to the 4-stroke engine. 
+With the aid of new engine technologies, e.g. direct injection, boost 
+and variable valve trains, the drawbacks of traditional 2-stroke 
+engine, e.g. low durability and high emissions, can be resolved in a 
+Boosted Uniflow Scavenged Direct Injection Gasoline (BUSDIG) 
+engine. Compared to the loop-flow or cross-flow engines, the 
+BUSDIG engine, where intake ports are integrated to the cylinder 
+liner and controlled by the movement of piston top while exhaust 
+valves are placed in the cylinder head, can achieve excellent 
+scavenging performance and be operated with high boost. 
+In order to fulfil the potential of the BUSDIG engine, various 
+scavenge ports were designed with different scavenge port number 
+(SPN), Axis Inclination Angle (AIA) and Swirl Orientation Angle 
+(SOA), and their effects were evaluated by three dimensional (3D) 
+computational fluid dynamics (CFD) under different intake pressures 
+and engine speeds. The scavenging process was analyzed by its 
+delivery ratio (DR), trapping efficiency (TE), scavenging efficiency 
+(SE) and charging efficiency (CE). In addition, the in-cylinder flow 
+motions, which play important roles in controlling the charge mixing 
+and combustion process, were studied for different scavenge port 
+designs. Finally, the vertical position of scavenge ports, which 
+determines the scavenge port opening (SPO) timing, the scavenge 
+port height (SPH), and the exhaust valve opening (EVO) timings 
+were varied to investigate their impacts on the scavenging 
+performance and in-cylinder flow motions. 
+Introduction 
+The stringent pollutant emission regulations and higher engine 
+efficiency requirements are driving the development of internal 
+combustion engine technologies. The engine down-sizing technology 
+has shown the great potential to reduce the vehicle fuel consumption. 
+However, the application of down-sizing to the four-stroke gasoline 
+engine is limited by the significantly increased peak cylinder pressure, 
+knocking combustion and associated thermal and mechanical load. 
+Compared to the 4-stroke engine, a 2-stroke engine doubles firing 
+frequency and thus allows lower IMEP and peak in-cylinder pressure 
+with the same output toque. In addition, the higher power-to-weight 
+ratio and more compact dimension make the 2-stroke engine 
+naturally suitable for aggressive engine down-sizing to increase the 
+power density and improve fuel economy. 
+However, the traditional design of the 2-stroke engine shows high 
+fuel consumption and pollutant emissions because of the charge 
+(air/fuel) short-circuiting. The application of direct injection and 
+advanced scavenging method would significantly improve the 
+performance of 2-stroke engines. The direct injection after exhaust 
+valve closing avoids the fuel short-circuiting, which in turn lowers 
+the fuel consumption and pollutant emissions dramatically. In 
+addition, the fuel consumption of the 2-stroke engine can be further 
+improved with lean/stratified charge achieved by direct injection [1-
+4] and advanced combustion concept [5-10], e.g. homogeneous 
+charge compression ignition (HCCI), controlled auto-ignition (CAI), 
+partially premixed combustion (PPC) and reactivity-controlled 
+compression ignition (RCCI). 
+The scavenging process is essential for a 2-stroke engine, as it 
+scavenges the burnt gases from the previous cycle out of the cylinder 
+and replaces with the fresh charge for the next cycle. Because of the 
+long overlapping period of intake and exhaust process in the 2-stroke 
+engine, one of the key issues is the short-circuiting phenomenon, in 
+which some of the intake fresh mixture can flow directly into the 
+exhaust port during the scavenging process [11]. The optical 
+measurement [12, 13] and computational fluid dynamic (CFD) 
+simulations [14-18] of the uniflow 2-stroke engine proved the 
+superior scavenging performance of uniflow. The intake ports in a 
+uniflow engine are integrated into the cylinder liner and controlled by 
+the movement of the piston top while exhaust valves are placed in the 
+cylinder head. This layout also enables the application of variable 
+valve timing (VVT) technology to adjust the exhaust valve timing 
+and control the hot residual gas and scavenging process under 
+different boost pressures at various engine speeds. The uniflow 
+engine can also minimize the bore distortion caused by uneven 
+thermal loading in the conventional ported 2-stroke engine with cold 
+intake port on one side and hot exhaust port on the other. 
+The 2-stroke uniflow engines have been widely used in large marine 
+diesel engines [13-15] and recently researched for potential 
+applications to passenger cars [3, 4, 7, 10, 16, 18-21]. In this project, 
+a novel 2-stroke Boosted Uniflow Scavenged Direct Injection 
+Gasoline (BUSDIG) engine was proposed to achieve aggressive 
+engine downsizing. In order to maximize the scavenge performance 
+and optimize the in-cylinder flow motion, the 3D CFD simulations 
+
+<<<PAGE 2>>>
+Page 2 of 13 
+ 
+were adopted in this study to evaluate different scavenge port designs 
+for the proposed BUSDIG engine. A 0.5 L single cylinder engine 
+with scavenge ports integrated to the cylinder liner was adopted in 
+this study. Several important design parameters, e.g. scavenge port 
+number (SPN), axis inclination angle (AIA), swirl orientation angle 
+(SOA), scavenge port opening (SPO) timing, scavenge port height 
+(SPH) were investigated in detail under different engine speeds and 
+intake pressures (Pi). The exhaust valve opening (EVO) timing was 
+also swept with SPO to obtain maximum scavenging performance. 
+Simulation setup 
+Baseline design of BUSDIG engine 
+In this study, an uniflow engine with flat cylinder head and piston top 
+was selected as the baseline design of a BUSDIG engine. Twelve 
+evenly distributed scavenge intake ports were integrated to the 
+cylinder block. The other engine specifications are shown in Table 1. 
+Table 1. Engine specifications. 
+Bore 
+80 mm 
+Stroke 
+100 mm 
+Connecting rod 
+180 mm 
+Displacement 
+0.5 L 
+Compression ratio 
+14:1 
+Cylinder head 
+Flat roof / 2 exhaust valves 
+Piston 
+Flat piston 
+ 
+In order to achieve optimal scavenge performance of the 2-stroke 
+BUSDIG engine, several design parameters of the scavenge ports, 
+including scavenge port number (SPN), axis inclination angle (AIA), 
+swirl orientation angle (SOA), scavenge port opening (SPO) timing 
+and scavenge port height (SPH), were studied and optimized in this 
+study. In addition, some other important operating conditions, e.g. 
+intake pressure (Pi), engine speed, exhaust valve opening (EVO) 
+timing, also show significant impact on scavenge process. The effects 
+of these operating parameters were also investigated in this study. 
+Fig. 1 schematically shows the definitions of AIA, SOA, SPO, SPH 
+and their baseline values. As seen in the figure, a bigger AIA and 
+smaller SOA would obtain a larger effective area. The location of the 
+intake ports in z axis (ZSP) would directly control the scavenge port 
+opening (SPO) timing. The width of each scavenge intake port was 
+fixed at 20⁰ and the interval between ports was fixed at 10⁰, as 
+indicated in Fig. 1. 
+In order to accommodate the scavenge ports for a multi-cylinder 
+engine, the scavenge port number (SPN) was gradually reduced to 6 
+by directly removing the scavenge port pairs from two sides while 
+retaining other scavenging ports, as shown in Fig. 2. 
+ 
+ 
+ 
+Figure 1. Definition of design parameters of scavenge ports and their baseline 
+values. 
+ 
+ 
+Figure 2. Layout of scavenge ports with SPN of 12, 8 and 6. 
+ 
+Numerical models 
+In this study, the commercial CFD software STAR-CD was adopted 
+to perform the simulations. Reynolds-Averaged Navier Stokes 
+(RANS) approach was applied with Re-Normalisation Group (RNG) 
+k-ε turbulence model in the simulations. Pressure-Implicit with 
+Splitting of Operators (PISO) algorithm was used to solve the 
+equations. The heat transfer was implemented through the general 
+form of the enthalpy conservation equation for the fluid mixture. The 
+Angelberger wall function was used for the simulation of the wall 
+heat transfer. The detailed description of these models can be found 
+in Ref. [22]. 
+Simulation conditions 
+The scavenging process of the designed 2-stroke BUSDIG engine 
+was evaluated with both cold and fired in-cylinder conditions. The 
+corresponding simulation conditions, including exhaust valve 
+parameters, initial and boundary conditions, are shown in Table 2. 
+The pressure boundary type was applied to the inlets of scavenge 
+ports and the outlets of exhaust ports. The arbitrary sliding interface 
+(ASI) was applied between the scavenge ports and the cylinder liner 
+to control the attachment and detachment with the piston movement. 
+ASI was also applied to control the connectivity between exhaust 
+domains and cylinder domain with the movement of exhaust valves. 
+One dimensional (1D) simulations were performed to obtain more 
+realistic fired in-cylinder conditions using WAVE [23]. In the cases 
+with fired conditions, the initial mixture components in the cylinder 
+are pure burned gas, i.e. CO2, H2O and N2. In the cases with cold 
+conditions, the initial mixture components are pure air, i.e. O2 and N2. 
+The same cold/fired simulation conditions, as shown in Table 2, were 
+applied to all the cold/fired CFD simulations in this study. The multi-
+cycle simulations were carried out for the cold flow simulations. The 
+fired CFD simulations were carried out from 100 ⁰CA after top dead 
+
+<<<PAGE 3>>>
+Page 3 of 13 
+ 
+center (ATDC) to 280 ⁰CA (i.e. 80 ⁰CA before TDC), including the 
+whole scavenging process. 
+ 
+Table 2. Simulation conditions. 
+Parameters 
+Cold condition 
+Fired  condition 
+Exhaust valve duration (ED) 
+126 °CA ATDC 
+126 °CA ATDC 
+Exhaust valve lift (EL)  
+8.64 mm 
+8.64 mm 
+Exhaust valve opening (EVO) 
+127 °CA ATDC 
+127 °CA ATDC 
+Initial conditions @ 100 ºCA ATDC 
+Cylinder temperature (T cylinder) 
+400 K 
+1665 K 
+Cylinder pressure (P cylinder) 
+2 bar 
+8.6 bar 
+Intake temperature (T intake) 
+300 K 
+350 K 
+Exhaust temperature (T exhaust) 
+350 K 
+800 K 
+Exhaust pressure (P exhaust) 
+1.01 bar 
+1.06 bar 
+Boundary conditions 
+Intake temperature (T intake) 
+300 K 
+350 K 
+Exhaust temperature (T exhaust) 
+350 K 
+800 K 
+Exhaust pressure (P exhaust) 
+1.01 bar 
+1.06 bar 
+Piston head temperature (Thead) 
+340 K 
+440 K 
+Piston top temperature (Tpiston) 
+360 K 
+522 K 
+Cylinder liner temperature (Tliner) 
+320 K 
+384 K 
+ 
+Mesh sensitivity study 
+The moving meshes were generated in ES-ICE software using the 
+mapping method. Three different meshes with average grid size of 2 
+mm, 1.6 mm and 1 mm were generated to examine the sensitivity of 
+simulation results to the mesh quality. Correspondingly, the total grid 
+number is 180,690, 326,092 and 921,810, respectively. The engine 
+mesh with average grid size of 1.6 mm at bottom dead center (BDC) 
+has been shown in Fig. 1. 
+The cold in-cylinder conditions were used to perform the mesh 
+sensitivity study. The engine speed and intake pressure were fixed at 
+2000 rpm and 2 bar, respectively. Fig. 3 compares the in-cylinder 
+average pressure and temperature profiles from different engine 
+meshes. As shown in Fig. 3, the in-cylinder pressure and temperature 
+shows little sensitivity to the adopted three mesh sizes. The profiles 
+overlap each other and only show slight differences at TDC.  
+The swirl ratio (SR), tumble ratio (TR) and cross tumble ratio (CTR), 
+as defined in Fig. 1, are used to characterize the in-cylinder flow 
+motion and calculated as following [24]:  
+𝑆𝑅(𝜃) =
+∑
+𝑣𝑖(𝜃)𝑟𝑖(𝜃)𝑉𝑖(𝜃)𝜌𝑖(𝜃)
+𝑚
+𝑖
+2𝜋𝑛
+60 ∑
+𝑟𝑖(𝜃)2𝑉𝑖(𝜃)𝜌𝑖(𝜃)
+𝑚
+𝑖
+  
+                                     (1) 
+where 𝑛 is engine speed, 𝜃 the crank angle, 𝑖 the cell number, 𝑉𝑖(𝜃)  
+the cell volume, 𝜌𝑖(𝜃) the cell density, 𝑣𝑖(𝜃) and 𝑟𝑖(𝜃) are the 
+tangential velocity and radius respectively in the cylindrical 
+coordinate with z axis as the swirl axis. With the same method, the 
+swirl axis along with the cylindrical coordinate system in Equation (1) 
+is then replaced as the tumble/cross tumble axis to evaluate TR/CTR. 
+The tumble and cross tumble axis are parallel to y- and x- axis 
+respectively and cross the central line of the cylinder and the central 
+point between maximum and minimum z value of the cylinder. 
+The in-cylinder flow motion calculated with different meshes also 
+shows little differences, as indicated by the overlapped profiles of 
+swirl and tumble ratios in Fig. 4. It can be also inferred that the in-
+cylinder flow enabled by the current scavenge ports design is 
+dominated by the swirl flow motion. In this study, a swirl ratio no 
+less than 3 is expected to enhance the mixing between the fuel 
+droplets and in-cylinder charge and meanwhile prevent the wall 
+wetting. The cross tumble ratio (CTR) is also very small, and for 
+simplicity it is not shown here. 
+120
+180
+240
+300
+360
+420
+480
+0
+20
+40
+60
+80
+Pressure [bar]
+Crank angle [CA]
+Cold conditions
+ Mesh1 (2.0 mm)
+ Mesh2 (1.6 mm)
+ Mesh3 (1.0 mm)
+0
+200
+400
+600
+800
+Temperature [K]
+ 
+ 
+Figure 3. Effect of grid size on in-cylinder average pressure and temperature 
+(2000 rpm, Pi=2 bar, cold condition). 
+60
+120
+180
+240
+300
+360
+-2
+0
+2
+4
+6
+8
+ Mesh 1 (2.0 mm)
+ Mesh 2 (1.6 mm)
+ Mesh 3 (1.0 mm)
+Swirl ratio (SR) [-]
+Crank angle [CA]
+-2
+0
+2
+4
+6
+8
+Tumble ratio (TR) [-]
+ 
+Figure 4. Effect of grid size on SR and TR (2000 rpm, Pi=2 bar, cold 
+condition). 
+Four scavenge parameters, i.e. delivery ratio (DR), trapping 
+efficiency (TE), scavenging efficiency (SE) and charging efficiency 
+(CE), are used to characterise the scavenging performance of the 
+BUSDIG engine. They are defined as following [23]: 
+𝐷𝑅=
+𝑑𝑒𝑙𝑖𝑣𝑒𝑟𝑒𝑑 𝑓𝑟𝑒𝑠ℎ 𝑐ℎ𝑎𝑟𝑔𝑒 𝑚𝑎𝑠𝑠
+𝑟𝑒𝑓𝑒𝑟𝑒𝑛𝑐𝑒 𝑚𝑎𝑠𝑠
+ 
+                                         (2) 
+𝑇𝐸=
+𝑚𝑎𝑠𝑠 𝑜𝑓 𝑑𝑒𝑙𝑖𝑣𝑒𝑟𝑒𝑑 𝑓𝑟𝑒𝑠ℎ 𝑐ℎ𝑎𝑟𝑔𝑒 𝑟𝑒𝑡𝑎𝑖𝑛𝑒𝑑 𝑖𝑛 𝑡ℎ𝑒 𝑐𝑦𝑙𝑖𝑛𝑑𝑒𝑟
+𝑡𝑜𝑡𝑎𝑙 𝑚𝑎𝑠𝑠 𝑜𝑓 𝑑𝑒𝑙𝑖𝑣𝑒𝑟𝑒𝑑 𝑓𝑟𝑒𝑠ℎ 𝑐ℎ𝑎𝑟𝑔𝑒
+=
+𝐶𝐸
+𝐷𝑅      (3) 
+
+<<<PAGE 4>>>
+Page 4 of 13 
+ 
+𝑆𝐸=
+𝑚𝑎𝑠𝑠 𝑜𝑓 𝑑𝑒𝑙𝑖𝑣𝑒𝑟𝑒𝑑 𝑓𝑟𝑒𝑠ℎ 𝑐ℎ𝑎𝑟𝑔𝑒 𝑟𝑒𝑡𝑎𝑖𝑛𝑒𝑑 𝑖𝑛 𝑡ℎ𝑒 𝑐𝑦𝑙𝑖𝑛𝑑𝑒𝑟
+𝑡𝑜𝑡𝑎𝑙 mass of 𝑡𝑟𝑎𝑝𝑝𝑒𝑑 𝑐𝑦𝑙𝑖𝑛𝑑𝑒𝑟 𝑐ℎ𝑎𝑟𝑔𝑒
+  
+         (4) 
+𝐶𝐸=
+𝑚𝑎𝑠𝑠 𝑜𝑓 𝑑𝑒𝑙𝑖𝑣𝑒𝑟𝑒𝑑 𝑓𝑟𝑒𝑠ℎ 𝑐ℎ𝑎𝑟𝑔𝑒 𝑟𝑒𝑡𝑎𝑖𝑛𝑒𝑑 𝑖𝑛 𝑡ℎ𝑒 𝑐𝑦𝑙𝑖𝑛𝑑𝑒𝑟
+𝑟𝑒𝑓𝑒𝑟𝑒𝑛𝑐𝑒 𝑚𝑎𝑠𝑠
+  
+         (5) 
+The reference mass in above equations is calculated by the displaced 
+volume multiplied by the ambient air density. 
+As can be seen in Fig. 5, the grid size actually shows only slight 
+impact on scavenge parameters. The biggest grid size (2 mm) leads to 
+slightly higher DR compared to the smallest grid size (1 mm). The 
+intermediate grid size (1.6 mm) shows nearly consistent values with 
+the smallest grid size. Therefore, the intermediate grid size of 1.6 mm 
+was adopted for the numerical simulations in the following studies. 
+DR
+TE
+SE
+CE
+0
+1
+2
+3
+4
+DR/TE/SE/CE [-]
+ Mesh 1  (2.0 mm)
+ Mesh 2  (1.6 mm)
+ Mesh 3  (1.0 mm)
+ 
+Figure 5. Effect of grid size on DR, TE, SE and CE (2000 rpm, Pi=2 bar, cold 
+condition). 
+Cycle convergence of simulations 
+The multi-cycle simulations were performed with the cold in-cylinder 
+conditions to examine the impact of initial conditions on the 
+simulation results. The engine speed and intake pressure were fixed 
+at 2000 rpm and 2 bar, respectively. 
+Fig. 6 and Fig. 7 compare the swirl ratios and scavenging parameters 
+respectively among different cycles. As can be seen in the figures, 
+both in-cylinder flow motion and scavenging parameters can obtain 
+good convergence at the second cycle. The swirl ratio and DR in the 
+first cycle are relatively higher than the converged results, while TE 
+is a little lower. SE and CE are similar between different cycles. 
+Therefore, the simulation results from the second cycle are 
+considered appropriate to represent the scavenging performance of a 
+specific design. Regarding the simulations with fired conditions, the 
+multi-cycle simulation is not possible via CFD without a validated 
+combustion model. As the combustion process is not included in this 
+study, the results from the first cycle are analyzed for those 
+simulations with fired conditions. 
+120
+150
+180
+210
+240
+270
+-2
+0
+2
+4
+6
+8
+10
+Swirl ratio (SR) [-]
+Crank angle [CA]
+Mesh 1
+ Cycle 1
+ Cycle 2
+ Cycle 3
+ 
+Figure 6. Evolution of swirl ratio (SR) among different cycles (2000 rpm, 
+Pi=2 bar, cold condition). 
+DR
+TE
+SE
+CE
+0
+1
+2
+3
+4
+DR/TE/SE/CE [-]
+ Cycle 1
+ Cycle 2
+ Cycle 3
+ 
+Figure 7. DR, TE, SE and CE among different cycles (2000 rpm, Pi=2 bar, 
+cold condition). 
+Results and discussion 
+Effect of scavenge port number (SPN) 
+Firstly, the effect of scavenge port number (SPN) is investigated with 
+cold in-cylinder condition under different engine speeds and intake 
+pressures. 
+Fig. 8 compares DR, TE, SE and CE under different engine speeds. 
+The intake pressure Pi is fixed at 2 bar. At low engine speed (i.e. 
+1000 rpm), the increase in the absolute scavenging duration leads to 
+significantly higher DR and complete scavenge (SE=100%). The TE 
+at lower engine speed is the lowest because of the significantly 
+increased DR. As the engine speed increases, the DR and SE 
+gradually reduce and TE increases. CE is comparable under different 
+engine speeds but it does show slightly higher value at engine speed 
+of 2000 rpm. Therefore, too long or too short scavenging duration is 
+not preferable to achieve high CE. At the low engine speed, the 
+increased scavenge duration would also cause the flow of in-cylinder 
+fresh air into the exhaust and scavenge ports when the in-cylinder 
+pressure exceeds the exhaust/intake pressure during the compression 
+stroke. At the high engine speed, the reduced scavenging duration 
+limits the delivery ratio, as well as the CE. 
+Regarding the effect of scavenge port number (SPN), it can be seen 
+in Fig. 8 that the scavenging performances are improved with more 
+
+<<<PAGE 5>>>
+Page 5 of 13 
+ 
+scavenge ports. Specifically, a larger SPN increases DR and CR but 
+shows no impact on TE and SE under low engine speeds. The impact 
+of SPN on the scavenging performance is more pronounced at higher 
+engine speeds as shown by the results of SPN=12 and SPN=6. 
+However, it is noted in Fig. 9 that the decrease of SPN enhances the 
+in-cylinder flow motion. The swirl ratio, which dominates the in-
+cylinder flow, gradually increases as the SPN is reduced. The tumble 
+flow is very weak in all cases and TR and CTR show little difference 
+between different SPN cases. 
+6.59
+0.23
+1
+1.55
+6.33
+0.23
+1
+1.45
+5.96
+0.23
+1
+1.38
+3.33
+0.48
+0.96
+1.6
+3.21
+0.47
+0.94
+1.51
+3.03
+0.47
+0.92
+1.41
+2.24
+0.67
+0.87
+1.5
+2.2
+0.65
+0.85
+1.42
+2.08
+0.63
+0.82
+1.32
+0
+2
+4
+6
+8
+1000 rpm
+DR/TE/SE/CE [-]
+ SPN12
+ SPN8
+ SPN6
+0
+1
+2
+3
+4
+2000 rpm
+DR/TE/SE/CE [-]
+ 
+DR
+TE
+SE
+CE
+0
+1
+2
+3
+4
+3000 rpm
+DR/TE/SE/CE [-]
+ 
+Figure 8. Effect of SPN on DR, TE, SE and CE under different engine speeds 
+(Pi=2 bar, cold condition). 
+ 
+0
+5
+10
+15
+20
+SR [-]
+ 
+ 1000 RPM
+ 2000 RPM
+ 3000 RPM
+-2
+-1
+0
+1
+2
+TR [-]
+SPN=6
+SPN=8
+SPN=12
+-2
+-1
+0
+1
+2
+CTR [-]
+ 
+Figure 9. Effect of SPN on SR, TR and CTR at 280 ⁰CA under different 
+engine speeds (Pi=2 bar, cold condition). 
+Fig. 10 compares DR, TE, SE and CE under different intake 
+pressures (Pi). As shown in the figure, DR increases more 
+significantly than CE with Pi increasing from 1.2 to 2 bar, leading to 
+higher SE but lower TE with Pi. As expected, the reduced SPN has 
+negative impact on all four scavenge parameters for all Pi. Regarding 
+the in-cylinder flow motion, the higher intake pressure leads to 
+stronger swirl motion and SR gradually decreases with SPN. 
+In order to examine the effect of SPN on the scavenging performance 
+under different operating engine speeds and intake pressures, the 
+percentage change (∆) of four scavenge parameters is calculated 
+using the results of SPN=12 and 6. For example, the percentage 
+change of DR under a given operating condition is calculated as 
+following: 
+∆𝐷𝑅= (1 −
+DRSPN=6
+DRSPN=12) × 100%                                                 (6) 
+The maximum percentage changes of DR, TE, SE and CE under 
+different operating conditions are 9.6%, 5.8%, 8.0% and 12%. 
+Therefore, the reduction of SPN shows more impact on CE and has 
+the least effect on TE. 
+The reduction of SPN would dramatically enhance the swirl motion 
+but have little impact on the tumble motion. But it should be noted 
+the swirl ratio is high enough to enhance the fuel/air mixing even 
+under high engine speed and low intake pressure, as shown in Fig. 9 
+and 11. 
+Considering both the overall effect of SPN on scavenging 
+performance discussed above and the future application to multi-
+cylinder engine, 8 unevenly distributed scavenge ports are used to 
+investigate the effect of remaining key design parameters on 
+scavenging performance. 
+1.37
+0.66
+0.88
+0.9
+1.36
+0.64
+0.86
+0.86
+1.26
+0.63
+0.81
+0.8
+2.44
+0.52
+0.95
+1.27
+2.4
+0.5
+0.93
+1.2
+2.28
+0.49
+0.9
+1.12
+3.33
+0.48
+0.96
+1.6
+3.21
+0.47
+0.94
+1.51
+3.03
+0.47
+0.92
+1.41
+0
+1
+2
+3
+4
+DR/TE/SE/CE [-]
+ SPN12
+ SPN8
+ SPN6
+Pi=1.2 bar
+0
+1
+2
+3
+4
+Pi=1.6 bar
+ 
+DR/TE/SE/CE [-]
+DR
+TE
+SE
+CE
+0
+1
+2
+3
+4
+Pi=2.0 bar
+DR/TE/SE/CE [-]
+ 
+Figure 10. Effect of SPN on DR, TE, SE and CE under different intake 
+pressures (2000 rpm, cold condition). 
+
+<<<PAGE 6>>>
+Page 6 of 13 
+ 
+0
+3
+6
+9
+12
+ 
+SR [-]
+ Pi=1.2 bar
+ Pi=1.6 bar
+ Pi=2.0 bar
+-1.0
+-0.5
+0.0
+0.5
+1.0
+TR [-]
+SPN=6
+SPN=8
+SPN=12
+-1.0
+-0.5
+0.0
+0.5
+1.0
+CTR [-]
+ 
+Figure 11. Effect of SPN on SR, TR and CTR at 280 ⁰CA under different 
+intake pressures (2000 rpm, cold condition). 
+Effect of AIA and SOA 
+Effects of the Axis Inclination Angle (AIA) and Swirl Orientation 
+Angle (SOA) are presented in this section. In addition to the cold 
+flow simulations, the simulations with fired in-cylinder condition 
+were also performed to explore the effect of AIA and SOA on the 
+scavenging process with a more realistic in-cylinder condition. The 
+engine speed and intake pressure are fixed at 2000 rpm and 2 bar, 
+respectively. 
+Fig. 12 shows the impact of AIA on scavenge parameters with SOA 
+of 31.5⁰ and cold in-cylinder condition. As shown in the figure, AIA 
+shows weak impact on scavenge parameters. CE and SE are 
+improved slightly with a bigger AIA because of the increased 
+effective flow area. The swirl flow motion is also increased with AIA 
+and peaks at 75º because of the increased tangential velocity 
+component, as shown in Fig. 13. Any further increase in AIA to 90⁰ 
+would deteriorate the swirl flow because of the enhanced interaction 
+of the intake flow jects with the rising piston. 
+Compared to the cold flow results, the scavenging process is more 
+restricted under the fired condition because of increased in-cylinder 
+pressure and temperature. As shown in Fig. 14, the DR and CE for 
+each AIA are significantly lower than the cold flow values. Although 
+the changing trend in DR and CE with AIA is similar under both cold 
+and fired conditions, their differences are more obvious under the 
+fired condition. DR gradually increases from 1.66 at AIA= 45⁰ to 
+1.96 at AIA=90⁰, and CE increases from 1.03 to 1.19. However, AIA 
+shows only slight impact on SE which increases from 0.92 at 
+AIA=45⁰ to 0.95 at AIA=90⁰. TE slightly decreases from 0.62 to 
+0.61. 
+Regarding the in-cylinder flow motion with hot burned gases, a 
+moderate AIA can produce a higher SR as shown in Fig 15, similar to 
+the cold flow results. The tumble flow motion is very weak and AIA 
+shows no impact on TR and CTR under both cold and fired 
+conditions. 
+45
+60
+75
+90
+0
+1
+2
+3
+4
+Trapping Efficiency (TE)
+Scavenging Efficiency (SE)
+Charge Efficiency (CE)
+DR/ TE/ SE/ CE [-]
+Axis inclination angle (AIA) []
+Delivery Ratio (DR)
+Cold condition
+ 
+Figure 12. Effect of AIA on DR, TE, SE and CE (SOA=31.5⁰, 2000 rpm, Pi=2 
+bar, cold condition). 
+45
+60
+75
+90
+-2
+0
+2
+4
+6
+8
+10
+Cold condition
+ SR
+ TR
+ CTR
+SR/ TR/ CTR [-]
+Axis inclination angle (AIA) []
+ 
+Figure 13. Effect of AIA on SR, TR and CTR at 280 ºCA (SOA=31.5⁰, 2000 
+rpm, Pi=2 bar, cold condition). 
+45
+60
+75
+90
+0.0
+0.5
+1.0
+1.5
+2.0
+2.5
+Fired condition
+DR/ TE/ SE/ CE [-]
+Axis inclination angle (AIA) []
+Delivery Ratio (DR)
+Charge Efficiency (CE)
+Scavenging Efficiency (SE)
+Trapping Efficiency (TE)
+ 
+Figure 14. Effect of AIA on DR, TE, SE and CE (SOA=31.5⁰, 2000 rpm, Pi=2 
+bar, fired condition). 
+
+<<<PAGE 7>>>
+Page 7 of 13 
+ 
+45
+60
+75
+90
+-4
+0
+4
+8
+12
+16
+Fired condition
+SR/ TR/ CTR [-]
+Axis inclination angle (AIA) []
+ SR
+ TR
+ CTR
+ 
+Figure 15. Effect of AIA on SR, TR and CTR at 280 ºCA (SOA=31.5⁰, 2000 
+rpm, Pi=2 bar, fired condition). 
+Fig. 16 shows the effect of SOA on scavenge parameters with AIA of 
+60⁰ under cold in-cylinder condition. DR gradually decreases with 
+SOA because the significantly increased swirl motion as shown in 
+Fig 17 would inhibit the gas flowing from scavenge ports to exhaust 
+ports. CE increases slightly with SOA decreasing from 45⁰ to 20⁰. 
+However, the further decrease of SOA leads to lower CE, indicating 
+increased short-circuiting of the fresh gas. Figure 18 shows that both 
+SE and CE are slightly affected by SOA and peak at SOA= 20⁰ under 
+fired condition. 
+Fig. 19 compares the residual gas fraction (RGF) profiles in the 
+cylinder and exhaust ports. The scavenge process begins from top 
+right where RGF in the cylinder and exhaust ports is 1. Then RGF in 
+the cylinder gradually decreases with the scavenging process. The 
+decrease of RGF in the exhaust ports indicates the occurrence of 
+short-circuiting. Compared to SOA=20⁰, the short-circuiting takes 
+place at the very beginning of scavenging process and gradually 
+increases when SOA=0⁰ is adopted. The RGF distribution at 170 
+⁰CA indicates fresh charge coming from scavenge ports with SOA of 
+0⁰ would concentrate in the cylinder center and directly flow out of 
+the exhaust valves along with the cylinder axis, leading to earlier and 
+stronger short-circuiting. 
+0
+10
+20
+31.5
+45
+0
+1
+2
+3
+4
+Cold condition
+DR/ TE/ SE/ CE [-]
+Swirl orientation angle (SOA) []
+Delivery Ratio (DR)
+Charge Efficiency (CE)
+Scavenging Efficiency (SE)
+Trapping Efficiency (TE)
+ 
+Figure 16. Effect of SOA on DR, TE, SE and CE (AIA=60⁰, 2000 rpm, Pi=2 
+bar, cold condition). 
+0
+10
+20
+31.5
+45
+-2
+0
+2
+4
+6
+8
+10
+12
+14
+Cold condition
+ SR
+ TR
+ CTR
+SR/ TR/ CTR [-]
+Swirl orientation angle (SOA) []
+ 
+Figure 17. Effect of SOA on SR, TR and CTR at 280 ºCA (AIA=60⁰, 2000 
+rpm, Pi=2 bar, cold condition). 
+0
+10
+20
+31.5
+45
+0.0
+0.5
+1.0
+1.5
+2.0
+2.5
+DR/ TE/ SE/ CE [-]
+Swirl orientation angle (SOA) []
+Delivery Ratio (DR)
+Charge Efficiency (CE)
+Scavenging Efficiency (SE)
+Trapping Efficiency (TE)
+Fired condition
+ 
+Figure 18. Effect of SOA on DR, TE, SE and CE (AIA=60⁰, 2000 rpm, Pi=2 
+bar, fired condition). 
+The SR shows strong correlations with SOA under both cold and 
+fired conditions, as shown in Fig. 17 and 20. SOA shows little impact 
+on the tumble flow motion. 
+In general, the effects of AIA and SOA on the scavenging process are 
+similar for cold and fired conditions. But the impact is more 
+pronounced under the fired condition. The DR and CE become lower 
+but the TE is increased in the presence of hot burned gases. SE is 
+similar under both conditions. 
+As indicated by the above results, a larger AIA shows higher DR, SE 
+and CE, while a moderate SOA can produce higher values of DR, SE 
+and CE. Meanwhile, the swirl motion is stronger enough to enhance 
+the in-cylinder mixing of air and directly injected fuel in all cases. In 
+order to maximize the scavenging performance, the combination of 
+AIA=90⁰ and SOA=20⁰ was then evaluated under different operating 
+conditions and compared to the baseline design (AIA=60⁰, 
+SOA=31.5⁰). The results are included in Appendix. Compared to the 
+baseline design, the scavenge port design with AIA=90⁰ and 
+SOA=20⁰ shows higher CE. SE is also improved at higher engine 
+speeds. The dominant swirl flow motion generated with this new 
+design is still rather high under different engine speeds and intake 
+
+<<<PAGE 8>>>
+Page 8 of 13 
+ 
+pressures. Therefore, the optimal design with AIA=90⁰ and SOA=20⁰ 
+was used in the following study. 
+0.0
+0.2
+0.4
+0.6
+0.8
+1.0
+0.0
+0.2
+0.4
+0.6
+0.8
+1.0
+End of scavenging
+RGF @ exhaust ports [-]
+RGF @ cylinder [-]
+ SOA=0
+ SOA=20
+Start of scavenging
+RGF
+@ 170 CA
+0.9
+1
+ 
+Figure 19. Comparison of RGF profiles in the cylinder and exhaust ports, and 
+the RGF distributions at 170 ⁰CA (AIA=60⁰, 2000 rpm, Pi=2 bar, fired 
+condition). 
+0
+10
+20
+31.5
+45
+-4
+0
+4
+8
+12
+16
+20
+Fired condition
+SR/ TR/ CTR [-]
+Swirl orientation angle (SOA) []
+ SR
+ TR
+ CTR
+ 
+Figure 20. Effect of SOA on SR, TR and CTR at 280 ºCA (AIA=60⁰, 2000 
+rpm, Pi=2 bar, fired condition). 
+Effect of scavenge port opening (SPO) timing 
+The location of scavenge intake ports would directly control the 
+scavenge port opening (SPO) timing. The EVO is also adjusted to 
+evaluate the optimal matching between intake and exhaust process to 
+achieve the best scavenging performance. Three SPOs and EVOs 
+were tested in this study. The schematic diagram of the normalized 
+scavenging area and exhaust valve profiles are shown in Fig 21. The 
+exhaust duration (ED) is fixed as 126 ⁰CA. The engine speed and 
+intake pressure are fixed at 2000 rpm and 2 bar, respectively. For 
+brevity, only the simulation results with fired condition are presented. 
+0
+3
+6
+9
+12
+15
+ EVO=127 CA
+ EVO=117 CA
+ EVO=107 CA
+Exhaust Valve Lift [mm]
+ED=126 CA
+90
+120
+150
+180
+210
+240
+270
+0.0
+0.5
+1.0
+1.5
+2.0
+ SPO=116 CA
+ SPO=122 CA
+ SPO=128 CA
+Normalized scavenging area [-]
+Crank angle [CA]
+ 
+Figure 21. Schematic diagram of the normalized scavenging area and exhaust 
+valve profiles. 
+The SPO and EVO have significant impact on DR, TE, SE and CE, 
+as shown in Fig. 22. The earlier EVO leads to higher DR, SE and CE, 
+which is less significant with early SPO (116 ⁰CA) but more 
+significant with late SPO (128 ⁰CA). Therefore, a later SPO with an 
+earlier EVO produce higher DR, SE and CE. The reason can be 
+attributed to the increased blow-down duration which is defined as 
+the duration between EVO and SPO. The longer blow-down duration 
+leads to more residual gas blowing out of the cylinder, which avoids 
+over-mixing between fresh air and residual gas and facilitates the 
+scavenging process. However, the scavenging performance with a 
+later SPO is deteriorated dramatically as the EVO is delayed, leading 
+to lower DR, SE and CE. On the contrary, an early SPO (i.e. 116 ⁰CA) 
+can lead to slightly higher DR, SE and CE than a later SPO when a 
+late EVO is adopted. The reason can be attributed to the increased 
+scavenging duration which is defined as the duration when both 
+scavenge ports and exhaust valves are opened simultaneously. 
+Therefore, the scavenging performance is less affected by the 
+changing of EVO when an early SPO is adopted, but shows much 
+higher sensitivity to EVO when a later SPO is adopted, as seen in Fig. 
+22. 
+As shown in Fig. 23, an earlier EVO leads to a higher SR with a fixed 
+SPO timing because of a more complete blow-down process. When 
+the SPO is delayed to as late as 128 ⁰CA, the shortened scavenging 
+duration leads to only slight differences of SR among EVOs. For a 
+fixed EVO, the delaying of SPO timing leads to lower SR because of 
+the shortened scavenging duration. However, it is found the SR is 
+slightly lower for SPO=116 ⁰CA compared to 122 ⁰CA when the 
+EVO is fixed at 107 ⁰CA. The reason can be attributed to more 
+dramatically deteriorated flow motion after BDC with SPO=116 ⁰CA 
+because some fresh charge would be pushed back into scavenge ports 
+again by the piston. This also explains the gradually reduced CE from 
+SPO of 128 to 116 ⁰CA when EVO of 107 ⁰CA is adopted, as shown 
+in Fig. 22. However, it should be noted the swirl motions with 
+different combinations of SPO and EVO are still strong enough to 
+enhance the mixing between fresh air and direct injected fuel 
+although SPO and EVO show obvious impact on SR. 
+
+<<<PAGE 9>>>
+Page 9 of 13 
+ 
+2.38
+0.6
+0.97
+1.42
+2.28
+0.63
+0.96
+1.43
+2.28
+0.59
+0.96
+1.35
+2.51
+0.59
+0.97
+1.47
+2.33
+0.61
+0.96
+1.43
+2.39
+0.51
+0.96
+1.23
+2.69
+0.58
+0.98
+1.56
+2.34
+0.57
+0.97
+1.34
+1.87
+0.56
+0.95
+1.05
+0
+1
+2
+3
+SPO=116 CA
+DR/TE/SE/CE
+ EVO=107 CA
+ EVO=117 CA
+ EVO=127 CA
+0
+1
+2
+3
+SPO=122 CA
+DR/TE/SE/CE
+DR
+TE
+SE
+CE
+0
+1
+2
+3
+SPO=128 CA
+DR/TE/SE/CE
+ 
+Figure 22. Effect of SPO and EVO on DR, TE, SE and CE (SPH=14 mm, 
+2000 rpm, Pi=2 bar, fired condition). 
+107
+117
+127
+0
+3
+6
+9
+12
+SR [-]
+EVO [CA]
+ SPO=116 CA
+ SPO=122 CA
+ SPO=128 CA
+ 
+Figure 23. Effect of SPO and EVO on SR at 280 ⁰CA (SPH=14 mm, 2000 
+rpm, Pi=2 bar, fired condition). 
+Another key issue relating to the SPO and EVO is the effective 
+compression ratios (ECR) and effective expansion ratios (EER). The 
+compression ratio would directly control the in-cylinder thermal 
+conditions at TDC and the combustion performance, especially for 
+the advanced combustion concept, e.g. controlled auto-ignition 
+combustion (CAI). The expansion ratio directly affects the power 
+stroke and thermal efficiency. A larger expansion ratio is expected to 
+achieve a longer power stroke and higher thermal efficiency. In this 
+study, the effective compression ratio and expansion ratio were 
+calculated respectively to consider the intake and exhaust valve 
+events. Fig. 24 compares the values of ECR and EER with different 
+SPOs and EVOs. When the EVO is fixed at 117 ⁰CA, the exhaust 
+valve profile is asymmetric to BDC, leading to same ECR and EER 
+around 11. Apart from this, the ECR and EER are determined by 
+EVC/SPC and EVO/SPO and show a trade-off between each other. 
+The lower limit of ECR and EER is around 10.22, which is 
+determined by the EVC and EVO respectively. However, compared 
+to the SPO of 116 ⁰CA, a later SPO of 128 ⁰CA can extend the higher 
+limit of ECR or EEC to 11.98. 
+9
+10
+11
+12
+13
+SPO=116 CA
+ECR/EER [-]
+ ECR
+ EER
+9
+10
+11
+12
+13
+SPO=128 CA
+SPO=122 CA
+ECR/EER [-]
+ 
+107
+117
+127
+9
+10
+11
+12
+13
+ECR/EER [-]
+EVO [CA]
+ 
+Figure 24. Effective compression ratios (ECR) and expansion ratios (EER) 
+with different SPOs and EVOs. 
+Effect of scavenge port height (SPH) 
+In this section, the scavenge port height (SPH) was increased from 
+original 14 mm to 18 mm to evaluate the effect of SPH on the 
+scavenging performance. The SPO and EVO were also adjusted to 
+evaluate its optimal matching to achieve the best scavenging 
+performance. Fig. 25 shows the effect of SPO and EVO on DR, TE, 
+SE and CE with SPH of 18 mm. It should be noted that a later SPO of 
+128 ⁰CA was not investigated because the lower part of scavenge 
+ports with SPH of 18 mm will extend beyond the BDC location and 
+cannot be fully opened. Compared to the SPH of 14 mm (Fig. 22), 
+higher scavenge ports show only slight improvement on DR and CE 
+when earlier EVOs (i.e. 107 and 117 ⁰CA) are adopted. When the 
+EVO is delayed to 127 ⁰CA, the increase in SPH even leads to slight 
+decrease of CE because the enlarged scavenging area enhances the 
+flow of in-cylinder fresh charge into exhaust ports and scavenge ports 
+at the end of scavenging process. In general, the SE is similar 
+although it is improved slightly when SPO is fixed at 122 ⁰CA. It is 
+noted the swirl motion is deteriorated with the increased SPH by 
+comparing Fig. 23 and 26 because of the enlarged scavenging area. 
+2.51
+0.57
+0.97
+1.44
+2.37
+0.6
+0.96
+1.43
+2.33
+0.58
+0.96
+1.34
+2.64
+0.56
+0.98
+1.48
+2.44
+0.59
+0.97
+1.43
+2.13
+0.57
+0.96
+1.21
+0
+1
+2
+3
+ EVO=107 CA
+ EVO=117 CA
+ EVO=127 CA
+SPH=18 mm
+SPO=116 CA
+DR/TE/SE/CE [-]
+DR
+TE
+SE
+CE
+0
+1
+2
+3
+SPH=18 mm
+SPO=122 CA
+DR/TE/SE/CE [-]
+ 
+Figure 25. Effect of SPO and EVO on DR, TE, SE and CE (SPH=18mm, 
+2000 rpm, Pi=2 bar, fired condition). 
+
+<<<PAGE 10>>>
+Page 10 of 13 
+ 
+107
+117
+127
+0
+3
+6
+9
+12
+SPH=18 mm
+SR [-]
+EVO [CA]
+ SPO=116 CA
+ SPO=122 CA
+ 
+Figure 26. Effect of SPO and EVO on DR, TE, SE and CE (SPH=18mm, 
+2000 rpm, Pi=2 bar, fired condition). 
+Conclusions 
+In this study, 3D CFD simulations were adopted to evaluate different 
+scavenge port designs for a boosted uniflow scavenged direct 
+injection gasoline (BUSDIG) engine. Several important design 
+parameters, e.g. scavenge port number (SPN), axis inclination angle 
+(AIA), swirl orientation angle (SOA), scavenge port opening (SPO) 
+timing, scavenge port height (SPH), were investigated in detail under 
+different engine speeds and intake pressures (Pi). The exhaust valve 
+opening (EVO) timing was adjusted to match with scavenge port 
+opening timing to obtain maximum scavenging performance. In order 
+to obtain more realistic scavenging process, both cold and fired in-
+cylinder conditions were used to perform the CFD simulations. The 
+study of grid sensitivity and cycle convergence was carried out to 
+ensure the accuracy of the simulations. The findings are summarized 
+as follows: 
+1. The increase in the absolute scavenging duration at low engine 
+speeds leads to significantly higher DR and SE. As the engine speed 
+increases, the DR and SE gradually reduce. The CE is similar under 
+different engine speeds but shows a slightly higher value at the 
+engine speed of 2000 rpm. 
+2. As the scavenge port number (SPN) is increased from 6 to 12, the 
+overall scavenging performance is increased. The maximum 
+percentage changes of DR, TE, SE and CE under different engine 
+speed and intake pressures are 9.6%, 5.8%, 8.0% and 12%. But the 
+increased SPN causes significant reduction in the swirl motion but 
+has little impact on the tumble motion. 
+3. The CE and SE are improved with a bigger AIA because of the 
+increased effective flow area. The swirl flow motion peaks at AIA 
+around 75º because of the increased tangential velocity component 
+and less interaction of the intake flow jets with piston. 
+4. The CE increases with the SOA decreasing from 45⁰ to 20⁰ 
+because of the increased DR. The further decrease in the SOA leads 
+to lower CE because of the increased short-circuiting of the fresh gas. 
+As a result, the SE also peaks at SOA= 20⁰. The SR shows strong 
+correlations with SOA under both cold and fired conditions. 
+5. Compared to the baseline design, the scavenge port design with 
+AIA=90⁰ and SOA=20⁰ shows higher CE and SE under both cold 
+and fired conditions.  
+6. The early EVO leads to higher DR, SE and CE, which is less 
+significant with early SPO (116 ⁰CA) but more significant with late 
+SPO (128 ⁰CA). The SR shows a decreasing trend with the delayed 
+EVO and SPO. 
+7. The same effective compression ratio (ECR) and expansion ratio 
+(EER) can be obtained around 11 when the EVO is fixed at 117 ⁰CA 
+ATDC. The lower limit of ECR and EER is around 10.22, which is 
+determined by the EVC and EVO respectively. A later SPO of 128 
+⁰CA can extend the higher limit of ECR or EEC to 11.98 compared 
+to the SPO of 116 ⁰CA. 
+8. Compared to the SPH of 14 mm, SPH of 18 mm causes only slight 
+improvement in DR and CE with early EVOs. When EVO delays to 
+127 ⁰CA, the increase in the SPH leads to slight decrease of CE. With 
+SPH of 18 mm, the SE remains similar and is improved slightly when 
+SPO is set at 122 ⁰CA. The swirl motion is deteriorated with the 
+increased SPH because of the enlarged flow area. 
+References 
+1.  Mattarelli E. and Rinaldini C. A. "Two-Stroke Gasoline Engines 
+for Small-Medium Passenger Cars". SAE Technical Paper 2015-
+01-1284. 
+2.  Zhang Y., Nora M. D. and Zhao H. "Comparison of Performance, 
+Efficiency and Emissions between Gasoline and E85 in a Two-
+Stroke Poppet Valve Engine with Lean Boost CAI Operation". 
+SAE Technical Paper 2015-01-0827. 
+3.  Nishida K., Sakuyama H. and Kimijima T. "Improvement of 
+Fuel Economy Using a New Concept of Two-Stroke Gasoline 
+Engine 
+Applying 
+Stratified-Charge 
+Auto-Ignition". 
+SAE 
+Technical Paper 2009-28-0009. 
+4.  Johnson J. and Den Braven K. R. "Comparison of Homogeneous, 
+Stratified and High-Squish Stratified Combustion in a Direct-
+Injected Two-Stroke Engine". SAE Technical Paper 2008-32-
+0030. 
+5.  Osborne R. J., Stokes J. and Lake T. H. et al. "Development of a 
+Two-Stroke/Four-Stroke Switching Gasoline Engine - The 
+2/4SIGHT Concept". SAE Technical Paper 2005-01-1137. 
+6.  Zhang Y., Zhao H. and Ojapah M. et al. "2-Stroke CAI 
+Operation on a Poppet Valve DI Engine Fuelled with Gasoline 
+and its Blends with Ethanol". SAE Technical Paper 2013-01-
+1674. 
+7.  Benajes J., Martin J. and Novella R. et al. "Analysis of the Load 
+Effect on the Partially Premixed Combustion Concept in a 2-
+Stroke HSDI Diesel Engine Fueled with Conventional Gasoline". 
+SAE Technical Paper 2014-01-1291. 
+8.  Andwari A. M., Aziz A. A. and Said M. F. M. et al. 
+Experimental investigation of the influence of internal and 
+external EGR on the combustion characteristics of a controlled 
+auto-ignition two-stroke cycle engine. Applied Energy 2014; 
+134(0): 1 - 10. 
+9.  Rocchi S., Rossi R. and Musu E. et al. Computational study of a 
+two-stroke direct-injection reactivity-controlled compression 
+
+<<<PAGE 11>>>
+Page 11 of 13 
+ 
+ignition engine. Proceedings of the Institution of Mechanical 
+Engineers, Part D: Journal of Automobile Engineering 2014; 
+229(8): 980–991. 
+10.  Benajes J., Novella R. and De Lima D. et al. Investigation on 
+Multiple Injection Strategies for Gasoline PPC Operation in a 
+Newly Designed 2-Stroke HSDI Compression Ignition Engine. 
+SAE Int. J. Engines 2015; 8(2): 758-774. 
+11.  Zhang Y. and Zhao H. Measurement of short-circuiting and its 
+effect on the controlled autoignition or homogeneous charge 
+compression ignition combustion in a two-stroke poppet valve 
+engine. Proceedings of the Institution of Mechanical Engineers, 
+Part D: Journal of Automobile Engineering 2012; 226(8): 1110-
+1118. 
+12.  Hult J., Matlok S. and Mayer S. "Particle Image Velocimetry 
+Measurements of Swirl and Scavenging in a Large Marine Two-
+Stroke Diesel Engine". SAE Technical Paper 2014-01-1173. 
+13.  Ingvorsen K. M., Meyer K. E. and Walther J. H. et al. Turbulent 
+swirling flow in a dynamic model of a uniflow-scavenged two-
+stroke engine. Experiments in Fluids 2014; 55(6):1-18. 
+14. Sigurdsson E., Ingvorsen K. M. and Jensen M. V. et al. 
+Numerical analysis of the scavenge flow and convective heat 
+transfer in large two-stroke marine diesel engines. Applied 
+Energy 2014; 123(0): 37 - 46. 
+15.  Andersen F. H., Hult J. and Nogenmyr K. et al. "CFD Analysis 
+of the Scavenging Process in Marine Two-Stroke Diesel 
+Engines". Proceedings of the ASME 2014 Internal Combustion 
+Engine Division Fall Technical Conference, October 19-22, 
+2014, Columbus, IN, USA. 
+16.  Mattarelli E., Rinaldini C. A. and Baldini P. "Modeling and 
+Experimental Investigation of a 2-Stroke GDI Engine for Range 
+Extender Applications". SAE Technical Paper 2014-01-1672. 
+17.  Hori H. "Scavenging Flow Optimization of Two-Stroke Diesel 
+Engine by Use of CFD". SAE Technical Paper 2000-01-0903. 
+18.  Laget O., Ternel C. and Thiriot J. et al. Preliminary Design of a 
+Two-Stroke Uniflow Diesel Engine for Passenger Car. SAE Int. 
+J. Engines 2013; 6(1): 596-613. 
+19. Knoll R. "AVL Two-Stroke Diesel Engine". SAE Technical 
+Paper 981038. 
+20.  Abthoff J., Duvinage F. and Hardt T. et al. "The 2-Stroke DI-
+Diesel Engine with Common Rail Injection for Passenger Car 
+Application". SAE Technical Paper 981032. 
+21.  Cantore G. and Mattarelli E. "A New Concept for Ultra-
+Compact Automotive HSDI Diesel Engines". SAE Technical 
+Paper 2007-01-1253. 
+22.  Cd-adapco. "Methodology, STAR-CD VERSION 4.14, 2010". 
+23.  Ma J., Zhao H. and Freeland P. et al. "Numerical Analysis of a 
+Downsized 2-Stroke Uniflow Engine". SAE Technical Paper 
+2014-01-9051. 
+24. Wang X., Xie H. and Zhao H. Computational study of the 
+influence of in-cylinder flow on spark ignition–controlled auto-
+ignition hybrid combustion in a gasoline engine. International 
+Journal of Engine Research 2015; 16(5): 795-809. 
+Contact Information 
+Dr. Xinyan Wang 
+xinyan.wang@brunel.ac.uk 
+Centre for Advanced Powertrain and Fuel Research 
+Brunel University London, UK 
+UB8 3PH 
+Acknowledgments 
+The authors gratefully acknowledge financial support by the 
+Engineering and Physical Sciences Research Council (EPSRC).  
+Definitions/Abbreviations 
+3D  
+three-dimensional  
+AIA 
+axis inclination angle 
+ASI 
+arbitrary sliding interface 
+BUSDIG 
+boosted uniflow scavenged direct injection 
+gasoline 
+CE 
+charging efficiency 
+CFD 
+computational fluid dynamics 
+CTR 
+cross tumble ratio 
+DR 
+delivery ratio 
+ECR 
+effective compression ratio 
+ED 
+exhaust duration 
+EER 
+effective expansion ratio 
+EVC 
+exhaust valve close 
+EVO 
+exhaust valve open 
+IMEP 
+indicated mean effective pressure 
+Pi 
+intake pressure 
+RGF 
+residual gas fraction 
+RNG 
+re-normalisation group 
+SE 
+scavenging efficiency 
+SOA 
+swirl orientation angle 
+SPC 
+scavenge port closing 
+SPH 
+scavenge port height 
+SPN 
+scavenge port number 
+SPO 
+scavenge port opening 
+SR 
+swirl ratio 
+TDC 
+top dead center 
+TE 
+trapping efficiency 
+TR 
+tumble ratio 
+VVT 
+variable valve timing 
+
+<<<PAGE 12>>>
+Page 12 of 13 
+ 
+Appendix 
+6.36
+0.24
+1
+1.51
+6.33
+0.23
+1
+1.46
+3.27
+0.48
+0.97
+1.58
+3.22
+0.47
+0.94
+1.51
+2.2
+0.68
+0.89
+1.5
+2.2
+0.65
+0.85
+1.42
+0
+2
+4
+6
+8
+Cold condition
+1000 rpm
+DR/TE/SE/CE [-]
+0
+1
+2
+3
+4
+DR/TE/SE/CE [-]
+ 
+DR
+TE
+SE
+CE
+0
+1
+2
+3
+4
+3000 rpm
+2000 rpm
+ AIA=90SOA=20
+ AIA=60SOA=31.5
+DR/TE/SE/CE [-]
+ 
+Figure A1. Comparison of DR, TE, SE and CE with different scavenge port 
+designs and engine speeds (Pi=2 bar, cold condition). 
+ 
+1.33
+0.67
+0.89
+0.89
+1.34
+0.64
+0.86
+0.86
+2.4
+0.52
+0.96
+1.25
+2.4
+0.5
+0.93
+1.2
+3.27
+0.48
+0.97
+1.58
+3.22
+0.47
+0.94
+1.51
+0
+1
+2
+3
+4
+ AIA=90SOA=20
+ AIA=60SOA=31.5
+Pi=1.2 bar
+DR/TE/SE/CE [-]
+0
+1
+2
+3
+4
+Cold condition
+Pi=1.6 bar
+DR/TE/SE/CE [-]
+ 
+DR
+TE
+SE
+CE
+0
+1
+2
+3
+4
+Pi=2.0 bar
+DR/TE/SE/CE [-]
+ 
+Figure A2. Comparison of DR, TE, SE and CE with different scavenge port 
+designs and intake pressures (2000 rpm, cold condition). 
+5.16
+0.25
+1
+1.28
+4.94
+0.25
+1
+1.25
+2.39
+0.51
+0.96
+1.23
+1.87
+0.61
+0.94
+1.14
+0.94
+0.84
+0.77
+0.78
+0.78
+0.87
+0.72
+0.67
+0
+2
+4
+6
+Fired condition
+1000 rpm
+ AIA=90SOA=20
+ AIA=60SOA=31.5
+DR/TE/SE/CE [-]
+0
+1
+2
+3
+2000 rpm
+DR/TE/SE/CE [-]
+ 
+DR
+TE
+SE
+CE
+0
+1
+2
+3
+3000 rpm
+DR/TE/SE/CE [-]
+ 
+Figure A3. Comparison of DR, TE, SE and CE with different scavenge port 
+designs and engine speeds (Pi=2 bar, fired condition). 
+0.91
+0.8
+0.82
+0.72
+0.86
+0.79
+0.81
+0.68
+2.39
+0.51
+0.96
+1.23
+1.87
+0.61
+0.94
+1.14
+0
+1
+2
+3
+Fired condition
+Pi=1.6 bar
+DR/TE/SE/CE [-]
+ AIA=90SOA=20
+ AIA=60SOA=31.5
+DR
+TE
+SE
+CE
+0
+1
+2
+3
+Pi=2.0 bar
+DR/TE/SE/CE [-]
+ 
+Figure A4. Comparison of DR, TE, SE and CE with different scavenge port 
+designs and intake pressures (2000 rpm, fired condition). The results with 
+Pi=1.2 bar are extremely low (DR, SE and CE < 0.1) and not shown in this 
+figure. 
+Pi =1.2 bar
+Pi =1.6 bar
+Pi = 2 bar
+0
+5
+10
+15
+20
+SR [-]
+ AIA=90SOA=20
+ AIA=60SOA=31.5
+1000 rpm
+2000 rpm
+3000 rpm
+0
+5
+10
+15
+20
+Cold condition
+SR [-]
+ 
+Figure A5. Comparison of SR at 280 ⁰CA with different scavenge port 
+designs, intake pressures and engine speeds (cold condition). 
+
+<<<PAGE 13>>>
+Page 13 of 13 
+ 
+Pi =1.2 bar
+Pi =1.6 bar
+Pi = 2 bar
+0
+5
+10
+15
+20
+Fired condition
+SR [-]
+ AIA=90SOA=20
+ AIA=60SOA=31.5
+1000 rpm
+2000 rpm
+3000 rpm
+0
+5
+10
+15
+20
+DR/TE/SE/CE [-]
+ 
+Figure A6. Comparison of SR at 280 ⁰CA with different scavenge port 
+designs, intake pressures and engine speeds (fired condition). 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

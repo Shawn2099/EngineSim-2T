@@ -1,0 +1,839 @@
+TITLE: Scavenging Characteristics of a Two-Stroke-Cycle Engine as Determined by Skip-Cycle Operation (NBS Research Paper 2721)
+YEAR: 1956
+FILE: 1956_Ku_Trimble_Scavenging_Characteristics_Skip_Cycle.pdf
+PAGES: 7
+EXTRACTED_WITH: PyMuPDF PyMuPDF 1.28.2
+
+
+===== page 1 =====
+
+Journal of Research of the National Bureau of Standards 
+Vol. 57, No. 6, December 1956 
+Research Paper 2721 
+Scavenging Characteristics of a Two-Stroke-Cycle 
+Engine as Determined by Skip-Cycle Operation 
+P. M. Ku and T. F. Trimble 
+A method for determining the mass fraction of fresh charge in the cylinder of the two-
+stroke-cycle engine, from measurements of engine power under normal operation and with 
+engine fired only once in several cycles of operation is described. 
+The results obtained from 
+a crankcase-scavenged engine are presented. 
+1. Introduction 
+The two-stroke cycle engine, in order to develop 
+one power cycle for every revolution of the crank-
+shaft, must rely on the action of an auxiliary device, 
+known as the scavenging pump, to expel the combus-
+tion products from the cylinder and to fill the cyl-
+inder with fresh charge. 
+The scavenging pump may 
+be and frequently is physically separate from the 
+engine cylinder proper. 
+In the crankcase-scavenged 
+engine, the cylinder-crankcase-piston combination 
+serves as the scavenging pump. 
+The ideal objective of the scavenging process is, of 
+course, to replace completely the combustion prod-
+ucts in the engine cylinder with fresh charge delivered 
+through the inlet ports, without meantime losing any 
+of the fresh charge through the exhaust ports. 
+In 
+this manner, maximum power is derived from the 
+cylinder with the least expenditure of scavenging-
+pump power. 
+In practice, such an objective is never 
+attainable, hence the excellence of the scavenging 
+process must be judged by the mass of fresh charge 
+retained in the engine cylinder per unit time, in 
+relation to the mass of fresh charge supplied per unit 
+time by the scavenging pump. 
+It follows from the above that two mass rates per 
+unit time, viz., that supplied by the scavenging pump 
+and that retained in the engine cylinder, are required 
+to define the scavenging characteristics of an engine. 
+Of these two quantities, the mass supplied by the 
+scavenging pump per unit time can be directly 
+measured by the use of a flowmeter placed in the 
+inlet system. 
+The mass retained in the engine cyl-
+inder per unit time is not, however, subject to a 
+direct measurement. 
+For its determination, a num-
+ber of indirect methods have been devised and 
+studied tl.,2].1 
+In general, such methods are either 
+extremely laborious, or liable to considerable errors. 
+This paper describes a rather simple method for the 
+determination of an important related quantity, the 
+mass fraction of fresh charge in the engine cylinder 
+after port closure. 
+On the basis of tests performed 
+on a crankcase-scavenged engine, this method ap-
+peared to be quite practical and reliable. 
+1 Figures in brackets indicate the literature references at the end of this paper. 
+2. Nomenclature 
+For analytical purposes, it is convenient to reduce 
+the two mass rates mentioned above to nondimen-
+sional quantities. 
+In this connection, several dif-
+ferent systems of nondimensionalization [1,3] have 
+been proposed. 
+Each proposed system has certain 
+attractive features, thus the particular choice is, at 
+least to some extent, a matter of personal preference. 
+A system rather similar to that employed by 
+Taylor and Rogowski [1] is used. 
+To nondimen-
+sionalize the mass of fresh charge supplied by the 
+scavenging pump per unit time, the term "scaveng-
+ing ratio", Rs, as defined below, is introduced, 
+s
+ 
+PsVdN 
+(1) 
+To nondimensionalize the mass of fresh charge re-
+tained in the engine cylinder per unit time, the term 
+"scavenging efficiency", es, is introduced, 
+es=-
+Mr 
+nVdN 
+(2) 
+where 
+M g=mass of fresh charge supplied by the 
+scavenging pump per unit time, 
+M r=mass of fresh charge retained in the engine 
+cylinder after port closure, per unit of 
+time, 
+ps = density of fresh charge computed on the 
+basis of inlet temperature and exhaust 
+pressure, 
+Va= displacement volume, 
+N= engine speed, revolutions per unit time. 
+In the above expressions, displacement volume 
+Vd is used basically as a matter of convenience, for 
+this is the volume used in defining the mean effective 
+pressure of the engine. 
+The introduction of exhaust 
+pressure into density term ps is especially convenient 
+for engines with late exhaust closing, in which the 
+exhaust pressure rather than the inlet pressure 
+exercises controlling influence on the density of the 
+cylinder contents at the time of port closure. 
+408063—56 
+2 
+325 
+
+
+===== page 2 =====
+
+For the purpose of the present paper, it is helpful 
+to note that the quantity MT is related to the cylinder 
+volume at the instant of port closure, as follows: 
+Mr=ePxVzN, 
+(3) 
+where 
+e=mass fraction of fresh charge in the engine 
+cylinder after port closure, 
+Px= average density of the cylinder contents at 
+the instant of port closure, 
+Vx=cylinder 
+volume at the instant of port 
+closure. 
+Combining eq (2) and (3), the scavenging efficiency 
+may then be written 
+e.=e(Px/Pa)(Vx/Vd). 
+(4) 
+This paper deals with a method for the determina-
+tion of the quantity e, and eq (4) shows the relation 
+between this quantity and scavenging efficiency. 
+The ratio Vx/Vd is obviously determined by port 
+timing. 
+No attempt has been made to determine 
+the ratio px/ps in the present investigation. 
+How-
+ever, some qualitative remarks may be in order here. 
+The ratio px/ps is, in general, influenced by heat 
+transfer between the fresh charge and the engine 
+parts, flow resistance at the inlet and exhaust ports, 
+and the dynamics of flow in the scavenging system. 
+For engines with late exhaust closing, if the heat 
+transfer, flow resistance, and flow dynamics effects 
+were negligible, then the ratio px/ps obviously would 
+become unity. 
+Thus, px/ps provides a measure of 
+the combined effect of heat transfer, flow resistance 
+and flow dynamics in this instance. 
+For engines with late inlet closing, the relation 
+may best be examined by writing 
+Px/ps= (Px/pi) (pi/ps) = (px/pi) 
+(Pi/Pe), 
+where 
+Pt=density 
+of fresh charge at inlet temperature 
+and inlet pressure, 
+^ f=inlet pressure, absolute, 
+2>e=exhaust pressure, absolute. 
+Applying this expression to eq (4), 
+es=e(px/pi) (pjpe) (Vx/Vd). 
+(5) 
+Here the ratio pt/pe 
+accounts for the static effect of 
+inlet pressure, as against the exhaust pressure used 
+in the definition 
+of scavenging efficiency. 
+For 
+engines with late inlet closing, the ratio px/pt provides 
+a measure of the combined effect of heat transfer, 
+flow resistance, and flow dynamics. 
+In the ideal 
+case where these effects are negligible, the ratio 
+Pxlpt reduces to unity. 
+3. Principle of Skip-Cycle Method 
+In the normal operation of a two-stroke cycle 
+engine, when the engine fires every cycle, the 
+cylinder is full of combustion products at the begin- I 
+326 
+ning of the scavenging process. 
+At the end of the 
+scavenging process, only a fraction of the combustion 
+products remains in the cylinder. 
+Now, consider 
+the case when the engine is allowed to fire for one 
+cycle and then skip, or run without firing, for several 
+cycles. 
+Obviously, any combustion products that 
+remain in the cylinder must come from the firing 
+cycle. Accordingly, the progressive scavenging ac-
+tion of the skipped cycles results in progressively less 
+combustion products, or progressively more fresh 
+charge, in the cylinder after each skipped cycle. 
+The above condition can be rather satisfactorily 
+represented by a simple mathematical relationship. 
+Let / denote the mass fraction of residual gas re-
+tained in the cylinder during normal operation. 
+The mass fraction of fresh charge during normal 
+operation is then 
+e = W . 
+(6) 
+Let it be assumed that the conditions of heat trans-
+fer, flow resistance and flow dynamics are not signifi-
+cantly influenced by skip cycling—an assumption 
+which appears to be justified by the experimental 
+results reported herein. 
+In that case, the total 
+mass of retained cylinder contents would remain 
+substantially 
+constant, 
+and 
+likewise 
+the 
+mass 
+fraction of cylinder contents to be passed from one 
+cycle to the next. 
+Consequently, if the engine is 
+allowed to fire only once in n cycles of operation, 
+then for each of the firing cycles, the mass fraction 
+of combustion products remaining in the cylinder 
+would be/ w, and the mass fraction of fresh charge 
+in the cylinder after port closure would be 
+en=l-fn. 
+(7) 
+Figure 1 gives a plot of (1—jn)l(l—/) 
+versus /, 
+for several values of n. 
+The curve for n= <» 
+represents the limiting case where the cylinder con-
+tains nothing but fresh charge. 
+FIGURE 1. Plot of (1 —fn)/(l — /) versus /. 
+
+
+===== page 3 =====
+
+The skip-cycle method for the determination of 
+c is based on the premise that at constant fuel-air 
+ratio and best-power ignition timing, the indicated 
+thermal efficiency of a given internal combustion 
+engine is very nearly constant over a wide range of 
+operating conditions. 
+The indicated mean effective 
+pressure of a two-stroke cycle engine supplied with 
+a premixed fuel-air charge, and operating normally, 
+can be expressed, in terms of scavenging efficiency 
+defined previously, as follows, 
+imep^JesPsFEcTji, 
+(8) 
+where 
+imep=indicated 
+mean effective pressure (nor-
+mal operation), 
+F= fuel-air ratio, 
+Eccheating 
+value of the fuel, 
+77 i=indicated 
+thermal efficiency based on 
+fuel quantity retained in the cylinder, 
+J= mechanical equivalent of heat. 
+Applying eq (4) to this expression, 
+imep=JePx(Vx/Vd)FEc71i. 
+(9) 
+Under skip-cycle operation, eq (9) can be modified 
+to read 
+imepn=Jenpx(Vx/Vd)FEerii, 
+(10) 
+where imepn is the imep of the firing cycle with firing 
+occurring once every n cycles of operation. 
+The 
+quantities px, F, and rjf are constant, under the as-
+sumptions made previously. 
+Combining eq (9) and (10), and introducing the 
+values for e and en as given by eq (6) and (7), 
+imepn=== e=l—fn
+i 
+_ 
+imep 
+€„ 
+1—/ 
+It is seen that as n approaches infinity, en approaches 
+unity for any value off less than unity, in which case 
+e=imep /imep m 
+as 
+a 
+limit. 
+This 
+relationship, 
+though simple, is unfortunately difficult to apply in 
+practical determination of e, because it is difficult to 
+extrapolate with any reasonable accuracy for the 
+value of imepm from readings taken with the neces-
+sarily limited values of n in any practical experiment. 
+Experience indicates that it is far more satisfactory 
+to solve for the value of / from the ratio of imepn/ 
+imep for finite values of n, and then obtain e=l— /. 
+Figure 1 can conveniently be used for this operation. 
+4. Experimental Equipment 
+A small single-cylinder, 
+air-cooled, 
+crankcase-
+scavenged engine was used for the experimental 
+investigation. 
+The principal dimensions of 
+this 
+engine are as follows: 
+Bore 
+2. 500 in. 
+Stroke 
+2. 000 in. 
+Displacement volume 
+9. 818 in.3 
+Cylinder compression ratio 
+7. 05 
+Crankcase compression ratio 
+1. 44 
+The engine employs conventional loop scavenging. 
+The total transfer port area at the crankcase is 
+1.27 in.2, the total inlet port area is 1.41 in.2, and 
+the total exhaust port area is 0.89 in.2 
+The rotary 
+valve has a maximum opening of 1.32 in.2 
+The 
+port timing of the engine is shown in figure 2. 
+The engine was connected to a small electric dy-
+namometer. 
+The engine speed was measured by an 
+electric tachometer, accurate speed control being ac-
+complished with the aid of a stroboscope directed 
+upon a striped flywheel. An MIT hydraulic scale 
+[4] was used for dynamometer torque measurement. 
+Figure 3 is a schematic diagram of the experimental 
+set-up. 
+As indicated, air was supplied by a centrif-
+ugal blower, through appropriate controlling and 
+measuring devices, to the engine rotary valve inlet 
+(herein defined as the engine inlet). 
+Fuel (a 20:1 
+gasoline-oil mixture) was supplied under pressure, 
+through appropriate controlling and measuring de-
+vices, to the inlet surge tank, where it was mixed 
+FIGURE 2. 
+Port timing of the engine used in the 
+experiment. 
+Exhaust 
+Blower 
+FIGURE 3. 
+Schematic diagram of the engine 
+setup. 
+327 
+
+
+===== page 4 =====
+
+with the inlet air. 
+The air rate was measured by 
+calibrated sharp-edged orifices of the ASME flange 
+taps design [5]. Two orifices were used to cover the 
+range of the experiment. 
+Calibrated float-type flow-
+meters were used for fuel rate measurement. 
+Again, 
+two instruments were used to cover the entire ex-
+perimental range. 
+The engine was enclosed in a duct, and was cooled 
+by air supplied by a blower. 
+The stations for the 
+measurement of pressures and temperatures are indi-
+cated in the figure. All temperatures were measured 
+by means of thermocouples. 
+The pressures were 
+measured by mercury and water manometers. 
+Figure 4 shows the ignition circuit used in the ex-
+periment. 
+The circuit was designed basically to 
+operate as a conventional automotive ignition sys-
+tem. 
+There were four sets of breakers: the main 
+breaker, a, operating at crankshaft speed, and the 
+auxiliary breakers, b, c, and d, operating at reduced 
+speeds. The reduced speeds were obtained by mount-
+ing the camshafts, b, c, and d, in a gearbox giving 
+speeds in the progression of 1, K, and %. The whole 
+assembly was then driven through chain and sproc-
+kets by the crankshaft. 
+The sprockets could be 
+changed to furnish a speed ratio of either 2 or 3 
+between the crankshaft and shaft b. 
+In this fashion, 
+the auxiliary breakers could operate at either }{, }{, 
+and y$ of crankshaft speed, or %, %, and %2 of crank-
+shaft speed. 
+The main breaker was used to control the spark 
+advance at all times. 
+The spark advance was read 
+by an automotive timing light. 
+To obtain normal 
+operation (n=l), 
+switch A should be closed, in which 
+case a spark would be produced every time the main 
+breaker was opened. 
+For skip-cycle operation, the 
+switch giving the desired value of n should be closed 
+and all other switches opened. 
+In that case, the 
+primary circuit would be completed only for the 
+cycle for which ignition was desired. For that cycle, 
+a spark would be produced at the instant the main 
+breaker was opened. 
+The indicated mean effective pressure, imep, was 
+computed from dynamometer readings taken with 
+engine firing and motoring, by the familiar relation 
+imep = 
+C(Pb+Pf), 
+rt 
+Spark 
+Plug <P 
+Timing 
+Light 
+Reduction 
+Gear Ratio 
+1 
+2x 
+4x 
+Normal 
+Position 
+close 
+open 
+open 
+open 
+pd 
+pd 
+I 
+I I I 
+FIGURE 4. 
+Circuit diagram of the ignition system. 
+where 
+£7= a constant, 
+Pb=dynamometer 
+reading taken with engine 
+firing, 
+Pf= dynamometer reading taken With engine 
+motoring. 
+Under skip-cycle operation, the indicated mean effec-
+tive pressure of the firing cycle, imepn, was computed 
+from the dynamometer readings as follows 
+imepn=n 
+C(Pb+Pf), 
+where n, as defined earlier, is the number of cycles 
+of operation per firing cycle. 
+5. Results and Discussion 
+Three series of runs were made, with the engine 
+speed, inlet pressure and exhaust pressure varied in-
+dependently. 
+With the exception of the variable 
+whose effect was being measured, all operating vari-
+ables were maintained constant at values shown 
+below: 
+N, engine speed 
+rpm__ 1,800 
+Pi, inlet pressure (inches of mercury, 
+absolute) 
+"Hga__ 
+29.92 ±0.01 
+pe, exhaust pressure 
+"Hga__ 
+29.92 ±0.03 
+Ti, inlet temperature 
+°F_. 
+100 ± 1 
+Ta, cooling air outlet 
+temperature 
+°F__ 
+130 ± 3 
+F, fuel-air ratio 
+0.080 ±0.001 
+The highest engine speed used in this experiment 
+was 3,000 rpm. 
+Limitation of the dynamometer, as 
+well as vibrations of the installation, did not permit 
+operation at higher speeds. 
+Figure 5 shows the variation of imep, ihp, and air-
+flow rate, Mg, of the engine, under best-power spark-
+advance conditions, over a fairly wide range of en-
+gine speed, inlet pressure, and exhaust pressure. 
+Figure 6 shows the variation of imepn versus spark 
+advance under skip-cycle conditions, at 1,800 rpm. 
+Note the progressive decrease in best-power spark 
+advance, and the progressive increase in imepn, as 
+the value of n was increased.2 An indication of the 
+degree of reproducibility of the experiment can be 
+had by noting that results of three sets of runs, made 
+on three different occasions, have been included in 
+this figure. 
+From data presented in the form of figure 6, the 
+values of best-power spark advance and imepn under 
+best-power spark-advance conditions, could be de-
+rived for each set of operating conditions. 
+In this 
+manner, figures 7 and 8 were constructed. 
+Note 
+how the imepn curves with varied exhaust pressure 
+cross each other, and cross the curves with varied 
+inlet pressure (fig. 8). This behavior clearly shows 
+that a variation of exhaust pressure affected not 
+only e, but also px, in eq (9). 
+The imepjimep 
+curves shown in figures 9 and 10 
+were derived from the imepn data presented in figures 
+2 The variation of the best-power spark advance reflects the effect of e on flame 
+speed. The variation of imepn is expected on the basis of eq (11). 
+328 
+
+
+===== page 5 =====
+
+5 
+60 
+50 
+40 
+30 
+20 
+i 1 
+6 80 
+70 
+5 60 
+50 
+4 40 
+30 
+3 20 
+10 
+2 0 
+10 I 
+0 0 
+I 
+I 
+I 
+- — 8 
+_l 
+I 
+L 
+J 
+I 
+I 
+I 
+I 
+L_ 
+500 
+1000 
+1500 
+2000 
+2500 
+3000 
+N, rpm 
+27 
+28 
+29 
+29.92 
+29.92 
+Pj , Hgo 
+Pe . Hgo 
+FIGURE 5. 
+Performance 
+characteristics 
+of the engine. 
+Operating conditions (unless otherwise specified): 1,800 rpm,fpt=pe=29.92"_Hga,,j7\=100° F, fuel-air ratio=0.080. best-power spark advance. 
+K) 
+20 
+30 
+40 
+50 
+10 
+20 
+30 
+40 
+50 
+0 
+10 
+20 
+SPARK ADVANCE, DEGREES 
+30 
+40 
+50 
+FIGURE 6. 
+Imepn 
+versus spark advance, for varying degrees of 
+skip 
+cycling. 
+Operating conditions: 1,800 rpm, pt=pe=29.92" Hga, T»=100o F, fuel-air ratio= 
+0.080. The three different symbols denote results of three runs under identical 
+conditions, made on three different occasions. 
+10 
+II 
+12 
+FIGURE 7. 
+Best-power 
+spark advance and imepn 
+at best-power 
+spark advance as affected by skip cycling, 
+at several 
+engine 
+speeds. 
+Operating conditions: p»=;p«=29.92" Hga, T t= 100° F, fuel-air ratio=0.080. 
+329 
+
+
+===== page 6 =====
+
+Pi/Pe 
+.0.92 
+^ - _ _ - - - - ~ - % - 0 . 9 6 
+£ - 1 . 0 0 
+-.^0.975 
+^ 0 . 9 2 5 
+o. 60 
+Symbol P,, "Hga Pe,"Hga 
+o 
+29.92 
+29.92 
+o — 
+Varied' 
+29.92 
+-o 
+29.92 
+Varied 
+FIGURE 8. 
+Best-power spark advance and imepn at best-power 
+spark advance as affected by skip cycling, at several inlet and 
+exhaust 
+pressures. 
+Operating conditions: 1,800 rpm, 7\=100° F, fuel-air ratio=0.080. 
+Pj/Pe 
+1 
+1 
+1 
+T 
+™| 
+\ -i—1~*— 
+X 
+1 
+* 
+i 
+1 
+1 
+i 
+i 
+i 
+1 
+X 
+1 
+1 
+1 
+A 
+L_ 
+1 
+J + 
+? 
+X 
+1 
+_J 
+3000 
+, 
+2400 
+i 1800 
+1200 
+FIGURE 
+9. 
+Mass fraction 
+of fresh charge in the cylinder, 
+at 
+several engine 
+speeds. 
+Operating conditions: see figure 7. 
+W 
+1 0.975 
+$ 0.96 
+• -O 0.92 
+I 
+2 
+3 
+4 
+5 
+6 
+7 
+8 
+9 
+10 
+II 
+12 
+n 
+FIGURE 10. 
+Mass fraction 
+of fresh charge in the cylinder, 
+at 
+several values of Pi/pe. 
+Operating conditions: see figure 8. 
+0.7 
+0.6 
+W 
+0.3 
+0.2 
+0.1 
+1 
+1— 
+^ 
+[ 
+r 
+r 
+r 
+1 
+i 
+i 
+- I 
+1 
+1 
+1 — 
+Symbol 
+O 
+O 
+-O 
+X 
+1 
+T" 
+rpm 
+1800 
+1800 
+1800 
+Varied 
+~T 
+1 
+X 
+/ 
+Pj,"Hga 
+29.92 
+Varied 
+29.92 
+29.92 
+" 1 
+I 
+-o 
+Pe,"Hga 
+29.92 
+29.92 
+Varied 
+29.92 
+1 
+1 
+r— 
+\ 
+\ 
+\ 
+' 
+_ 
+-
+-
+0.1 
+0.2 
+0.3 
+0.4 
+0.5 
+0.6 
+0.7 
+0.8 
+FIGURE 11. 
+Mass fraction 
+of fresh charge in the cylinder 
+as 
+a function 
+of scavenging 
+ratio, for range of engine 
+speed, 
+inlet pressure and exhaust pressure 
+investigated. 
+Operating conditions: 7\=100° F, fuel-air ratio=0.080. 
+330 
+
+
+===== page 7 =====
+
+7 and 8. 
+Note that because the variable px was 
+eliminated in this method of presentation, the 
+imepj 
+imep curves in figure 10 appeared in a systematic 
+order with respect to the ratio pi\pe. 
+Figures 9 and 10 also present the values of e, as 
+derived from the imepjimep 
+data given in the same 
+figures, by the method outlined in section 3. 
+Note 
+that the value of e for each case remained substan-
+tially constant over the range of n investigated. 
+This constancy of the value of e is gratifying, in view 
+of the complexity of the scavenging process and the 
+simplifying assumptions made. 
+By averaging the 
+results obtained at several values of n, a rather 
+reliable value for e may thus be derived. 
+The results presented in figures 9 and 10 are sum-
+marized in figure 11. It is interesting to note that 
+the mass fraction of fresh charge in the cylinder was, 
+within experimental accuracy, a function of scaveng-
+ing ratio only, regardless of the individual values of 
+engine speed, inlet pressure, or exhaust pressure, 
+within the range of the variables investigated. 
+The assistance provided by Edward Bryant in 
+setting up the experimental equipment and in oper-
+ating the engine is gratefully acknowledged. 
+6. References 
+[1] C. F. Taylor and A. R. Rogowski, Scavenging the two-
+stroke engine, SAE Trans. 62, 486 (1954). 
+[2] P. H. Schweitzer, Scavenging of two-stroke cycle diesel 
+engines, ch. 16 (The Macmillan Co., New York, N. Y., 
+1949). 
+[3] P. H. Schweitzer, Scavenging of two-stroke cycle diesel 
+engines, ch. 3 (The Macmillan Co., New York, N. Y., 
+1949). 
+[4] Hydraulic scale for measurement of engine dynamometer 
+forces, Laboratory Equipment Bulletin No. 6, Diesel 
+Engine Manufacturers Association (January 3, 1949). 
+[5] Fluid meters—their theory and application, Report of 
+ASME Special Research Committee on Fluid Meters, 
+pt I (1937). 
+WASHINGTON, April 5, 1956. 
+331 

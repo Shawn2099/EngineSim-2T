@@ -1,0 +1,259 @@
+﻿diff --git "a/port\\blair_full.bas" "b/port\\blair_clean.bas"
+index 7b60831..d4016c8 100644
+--- "a/port\\blair_full.bas"
++++ "b/port\\blair_clean.bas"
+@@ -21,18 +21,60 @@ REM      631 632 633 634 635 639 911). They are unique in this file.
+ REM    * Labels INSIDE a SUB...END SUB block (FPORT, STAB, SETS, AREA, PIPE,
+ REM      SHOK, PORT, NINT, OUTFLOW, INFLOW, BOX, PISTPOS, PAREA, CYLINDER) are
+-REM      local to that SUB under QBasic STATIC semantics. CYLINDER's 20 30 50
+-REM      60 70 80 90 and PIPE's 23 33 44 55 and SHOK's 26 56 and BOX's 103 do
+-REM      NOT collide with the main module. A translator that flattens all
+-REM      labels into one namespace MUST rename the SUB-local ones first.
++REM      local to that SUB under QBasic STATIC semantics. As printed,
++REM      CYLINDER's 20 30 50 60 70 80 90, PIPE's 23 33 44 55 and SHOK's 26 56
++REM      do NOT collide with the main module, but CYLINDER's 20 and 50 do once
++REM      the label space is flattened - they are renamed below [FIX2].
+ REM
+-REM  ALL SUBs ARE STATIC. Every variable a SUB uses that is not in its parameter
+-REM  list and not in its SHARED list is LOCAL and starts at 0 on every call.
+-REM  Two of Blair's routines depend on that: CYLINDER's HT1 (see [D15]) and
+-REM  NINT's KI (see [D7]). Do not "helpfully" make them global.
++REM  SUB-LOCAL LABELS ARE RENAMED FOR A FLAT NAMESPACE [FIX2]
++REM    CYLINDER's 20 and 50 collide with the main module's 20 (TRPIPDAT) and
++REM    50 (main data menu). They are renamed C20 and C50, together with their
++REM    three references. CYLINDER's 30 60 70 80 90, PIPE's 23 33 44 55 and
++REM    SHOK's 26 56 are unique across the whole file and are left as printed.
+ REM
+-REM  BLOCKERS: none in the code. The only external artefact is the data file
+-REM  "UFLO" (21 rows x 41 columns, ASCII, comma separated) opened below at
+-REM  .bas line 70 / transcript line 23. It is not printed in either book, but
+-REM  port/uflo.csv is the regenerated table - install it as "UFLO" (no
++REM ==========================================================================
++REM  STATIC - THE FROZEN DECISION [FIX4]  ***read this before translating***
++REM
++REM    DECISION: every SUB in this file is STATIC, and STATIC IS HONOURED.
++REM    A SUB's local variables PERSIST BETWEEN CALLS. They are zeroed once,
++REM    at program start, and are NOT re-zeroed on entry. They are still
++REM    private to the SUB: a SUB local never aliases a main-module variable of
++REM    the same name.
++REM
++REM    WHY THIS HAD TO BE FROZEN: the file as assembled contradicted itself -
++REM    the header (blair_full.bas 28-31) claimed locals "start at 0 on every
++REM    call", i.e. automatic, while all 14 SUB statements end in STATIC. The
++REM    printed keyword wins, because three of Blair's results depend on it:
++REM
++REM      * CYLINDER HT1 (read 1475, written 1495): with STATIC, HT1 holds the
++REM        PREVIOUS call's HT2, so QHT=DC*(HT1+HT2)/2 is the TRAPEZOIDAL rule.
++REM        With automatic locals it would be a rectangle rule (HT1=0). This
++REM        changes total heat release by roughly a factor of two, hence PEAK
++REM        PRESSURE, PEAK TEMPERATURE and IMEP. See [D15].
++REM      * CYLINDER HT2: it is assigned only on the combustion path (1469,
++REM        1472, 1474). On the two GOTO 90 paths it keeps the value from the
++REM        previous call. Only STATIC makes that well defined.
++REM      * CYLINDER S1 S2 S3 IGN BURNEND TAILDEG PEAK QMAX HEAT MAIR: for a
++REM        call with DEGC>EPC+5 they are read without being re-assigned in
++REM        that call, so they are the previous call's values.
++REM      * CYLINDER DELTAP DPMAX: DELTAP is only written when P2>P1 (1487),
++REM        then compared with the persistent DPMAX (1491).
++REM      * NINT's KI is a local, so the caller's mesh count is incremented
++REM        exactly once at 1331. With KI made global, CALL NINT(KI,...) for
++REM        the inlet duct would alias it and increment it twice. See [D7].
++REM
++REM    A port MUST therefore carry HT1 HT2 DPMAX DELTAP and the combustion
++REM    block as per-SUB persistent state, initialised to 0 once per run, and
++REM    must NOT lift them to the main-module namespace: the main module
++REM    already uses HT1 as the transfer-port enthalpy (written at 1005/1006,
++REM    consumed by BOX at 265). Aliasing those two is [D15]'s failure mode.
++REM ==========================================================================
++REM
++REM  BLOCKERS: this file applies the five fixes listed in port/CLEAN_LOG.md
++REM  (title block, the two colliding CYLINDER labels, the pressure-ratio order,
++REM  the STATIC decision, the PRINTOUT replay). The other 25 non-blocking
++REM  defects of VERIFY_STRUCTURE.md are deliberately left as printed.
++REM  The external artefact is the data file "UFLO" (21 rows x 41 columns,
++REM  ASCII, comma separated) opened below. It is not printed in either book,
++REM  but port/uflo.csv is the regenerated table - install it as "UFLO" (no
+ REM  extension) in the working directory. See BUILD_MANIFEST.md sec.8.
+ REM ==========================================================================
+@@ -43,7 +85,5 @@ REM  MAIN PROGRAM  -  PROG.5.1
+ REM  book source 26032-26424 | transcription lines 4-232
+ REM ==========================================================================
+-COMPUTER PROGRAM PROG.5.1
+-PROGRAM NAME "ENGINE MODEL NO.1"
+-ProgList.5.1
++REM [FIX1] deleted: the book's listing title block (blair_full.bas 45-47)
+ REM PROGRAM Prog.5.1
+ REM ProgList.5.1
+@@ -186,5 +226,34 @@ CYCLE=1
+ CYCLESTOP=7
+ CYCLEP=CYCLESTOP+10
+-FOR KK=1 TO 20000
++REM ==========================================================================
++REM  [FIX5] THE PRINTOUT REPLAY - EXPLICIT MODE FLAG, NO FOR/NEXT IMBALANCE
++REM ------------------------------------------------------------------------
++REM  As printed in blair_full.bas this was a coroutine: the FOR KK loop at 188
++REM  was left by GOTO 500 (line 206), re-entered at label 430 by PRINTOUT
++REM  (340), left again by GOTO 431 (205), and its FOR frame was finally popped
++REM  by NEXT KK (286) only if the user asked for a printout. NEXT without FOR
++REM  on the second P, and no TRANSLATABLE return path out of PRINTOUT at all.
++REM
++REM  Replaced by:
++REM    * PRINTMODE, an explicit flag. 0 = normal run, 1 = printer replay.
++REM    * an explicit step counter KK, incremented at the bottom of the body,
++REM      with the loop entered at ONE point, label CYCLELOOP (the old 188).
++REM    * PRINTOUT now RETURNS to its caller: it prints the tables, opens the
++REM      printer, sets PRINTMODE=1 and unwinds. The replay itself is started
++REM      from the 500 menu by the flag test, and it ends at label 431, which
++REM      closes the printer, clears the flag and returns to the 500 menu.
++REM
++REM  Behaviour preserved: P still prints the data tables, still computes one
++REM  further revolution (CYCLE=17=CYCLEP) with the plots going to the printer,
++REM  and still returns to the menu. What changes is only where that revolution
++REM  is entered - at the loop head instead of in the middle of the body, which
++REM  costs one extra DC of crank angle in the printed plot and nothing else.
++REM  That revolution's results are discarded (JJ is not advanced into the
++REM  history) exactly as before.
++REM ==========================================================================
++PRINTMODE=0
++KK=0
++CYCLELOOP:
++KK=KK+1
+ DZ=1
+ NN=NN+1
+@@ -202,7 +271,7 @@ DEG=DEG+DC
+ ANGD=ANGD+DC
+ IF ANGD>360+EPO THEN CYCLE=CYCLE+1
+-IF CYCLE=CYCLEP THEN GOTO 430
+-IF CYCLE=CYCLEP+1 THEN GOTO 431
+-IF CYCLE=CYCLESTOP THEN GOTO 500
++IF PRINTMODE=1 AND CYCLE=CYCLEP THEN GOTO 430
++IF PRINTMODE=1 AND CYCLE=CYCLEP+1 THEN GOTO 431
++IF PRINTMODE=0 AND CYCLE=CYCLESTOP THEN GOTO 500
+ 430 IF ANGD>360+EPO THEN ANGD=ANGD-360
+ IF DEG>540 THEN GOSUB RESETBDC
+@@ -235,4 +304,17 @@ IF AT(KT)>=BT(KT) THEN AK=.9
+ IF AT(KT)<BT(KT) THEN AK=.75
+ CALL PORT(BT(KT),AT(KT),PCC1,AK)
++REM [FIX3] PEX PIR PTR PTRO PEXP PEXT moved here from 273-278, i.e. from
++REM  AFTER the boundary calls that consume them to immediately BEFORE them.
++REM  They must be evaluated after the PIPE and PORT calls above (those rewrite
++REM  AE(1), BE(1), AI(1), BI(1), AT(1), BT(1)) and before the port open/shut
++REM  routines, which test them at 961/962 (PEX), 999/1003 (PTR) and 1032/1041
++REM  (PIR). As printed in blair_full.bas, step 1 of every run decided the
++REM  inlet boundary from PIR=0 and every later step used one-step-stale values.
++PEX=((AE(1)+BE(1))/2)^7
++PIR=((AI(1)+BI(1))/2)^7
++PTR=((AT(1)+BT(1))/2)^7
++PTRO=((AT(KT)+BT(KT))/2)^7
++PEXP=((AE(KE1)+BE(KE1))/2)^7
++PEXT=((AET(1)+BET(1))/2)^7
+ IF HTDC<=HEOT THEN GOSUB EXPORTSHUT
+ IF HTDC>HEOT THEN GOSUB EXPORTOPEN
+@@ -271,10 +353,6 @@ CYMEP=CYMEP+CYWORK/SV
+ PCCR=PCC2/PA
+ PBR=PB2/PA
+-PEX=((AE(1)+BE(1))/2)^7
+-PIR=((AI(1)+BI(1))/2)^7
+-PTR=((AT(1)+BT(1))/2)^7
+-PTRO=((AT(KT)+BT(KT))/2)^7
+-PEXP=((AE(KE1)+BE(KE1))/2)^7
+-PEXT=((AET(1)+BET(1))/2)^7
++REM [FIX3] PEX PIR PTR PTRO PEXP PEXT now computed above, at the head of the
++REM  boundary section, where they are first used (blair_full.bas 273-278).
+ IF ANGD>EPC THEN GOTO 310
+ IF ANGD>EPO THEN GOTO 305 ELSE GOTO 307
+@@ -284,5 +362,11 @@ IF ANGD>EPO THEN GOTO 305 ELSE GOTO 307
+ 405 IF ANGD<=EPC+DC THEN GOSUB SPLOT3
+ 407 IF ANGD>EPC THEN GOSUB SPLOT4
+-NEXT KK
++REM [FIX5] NEXT KK replaced by an explicit counter test. The run-exit tests
++REM  (CYCLE=CYCLESTOP and the replay's CYCLE=CYCLEP+1) are still taken at the
++REM  head of the body, where blair_full.bas 204-206 put them, so the number of
++REM  steps computed is unchanged; only the loop machinery is explicit. KK is
++REM  incremented once per pass, at CYCLELOOP.
++IF KK>=20000 THEN GOTO 500
++GOTO CYCLELOOP
+ 500 INPUT "RESPONSE FOR RECALCULATION IS 'R', PRINTING IS 'P', FILING DATA IS 'F', OR QUITTING IS 'Q'";D$
+ IF D$="R" THEN GOTO 50
+@@ -290,4 +374,7 @@ IF D$="F" THEN GOSUB FILING
+ IF D$="Q" THEN GOTO 501
+ IF D$="P" THEN GOSUB PRINTOUT
++REM [FIX5] PRINTOUT has returned. If it opened the printer it also set
++REM  PRINTMODE=1; run the replay revolution and come back here at 431.
++IF PRINTMODE=1 THEN GOTO CYCLELOOP
+ GOTO 500
+ 501 END
+@@ -323,5 +410,7 @@ RETURN
+ REM ==========================================================================
+ REM  PRINTOUT  book source: inside PROG.5.1 | transcription lines 254-268
+-REM  Called by the main loop (GOSUB). Re-enters the main loop at label 430.
++REM  [FIX5] Called by the 500 menu (GOSUB). PRINTS and then RETURNS: it no
++REM  longer jumps into the middle of the main loop. The replay of one engine
++REM  revolution to the printer is now driven by the caller through PRINTMODE.
+ REM ==========================================================================
+ PRINTOUT:
+@@ -338,8 +427,18 @@ REM <UNRESOLVED #3: "OPEN'LPTl :PROMPT" FOR OUTPUT AS#2> - the stray token
+ REM  between the device name and FOR has no BASIC meaning. [D22] Deleted.
+ WINDOW OUTPUT#2
+-GOTO 430
+-431 CLOSE #2
++REM [FIX5] arm the replay and return to the menu, which starts it. The wrap
++REM  that the old "GOTO 430" performed is done here, so that the first replay
++REM  pass does not immediately re-cross 360+EPO and bump CYCLE to CYCLEP+1.
++PRINTMODE=1
++KK=1
++IF ANGD>360+EPO THEN ANGD=ANGD-360
+ RETURN
+ 
++REM [FIX5] End of the replay: the loop reaches here when CYCLE=CYCLEP+1.
++REM  This is the only way out of print mode, and it returns to the 500 menu.
++431 CLOSE #2
++PRINTMODE=0
++GOTO 500
++
+ 
+ REM ==========================================================================
+@@ -576,5 +675,6 @@ GYS=(Y0-YZ)/GPS
+ YEF=(Y0-YZ)/GSS
+ YTT=(Y0-YZ)/GTS
+-IF D$="P" THEN GOTO 439
++REM [FIX5] D$ was being used as an implicit mode flag here. Use the explicit one.
++IF PRINTMODE=1 THEN GOTO 439
+ CLS
+ 439 LOCATE 19,4
+@@ -1430,7 +1530,11 @@ REM ==========================================================================
+ REM  SUB CYLINDER  book source 28136-28192 | transcription lines 515-568
+ REM  Closed-cycle model, called only while HTDC<=HEOT (exhaust port shut).
+-REM  SUB-local labels 20 30 50 60 70 80 90 - see [D23], they do not collide
+-REM  with the main module's 20 and 50.
++REM  SUB-local labels 20 30 50 60 70 80 90. [FIX2] 20 and 50 are renamed C20
++REM  and C50 here and at their three references, because they collide with the
++REM  main module's 20 (TRPIPDAT) and 50 (main data menu). 30 60 70 80 90 are
++REM  unique across the whole file and are kept as printed.
+ REM  [D15] HT1 is deliberately NOT added to SHARED. [D16] same for DPMAX.
++REM  Both, and HT2 DELTAP S1 S2 S3 IGN BURNEND TAILDEG PEAK QMAX HEAT MAIR,
++REM  persist between calls - see the STATIC decision at the head of this file.
+ REM ==========================================================================
+ SUB CYLINDER(P1,P2,T1,T2,V1,V2,MC,WORK)STATIC
+@@ -1461,10 +1565,10 @@ REM  DEGC and IGN is illegible. [D25] Read as DEGC<IGN, which is dead code
+ REM  (label 30 above already branched on DEGC<=IGN) and is therefore
+ REM  behaviour-neutral under any reading.
+-IF DEGC<IGN THEN GOTO 20
+-IF DEGC<=BURNEND THEN GOTO 20
++IF DEGC<IGN THEN GOTO C20
++IF DEGC<=BURNEND THEN GOTO C20
+ 90 P2=P1*(V1/V2)^POLYINDEX
+ T2=P2*V2/(MC*GK)
+-GOTO 50
+-20 IF DEGC>PEAK THEN GOTO 60
++GOTO C50
++C20: IF DEGC>PEAK THEN GOTO 60
+ HT2=S1*(DEGC-IGN)
+ GOTO 80
+@@ -1484,5 +1588,5 @@ TRM1=V2/(GE-1)
+ P2=(QHT/TRM1)+P1*VRN
+ T2=P2*V2/(MC*GK)
+-50 WORK=(P1+P2)*(V2-V1)/2
++C50: WORK=(P1+P2)*(V2-V1)/2
+ IF P2>P1 THEN DELTAP=(P2-P1)/(100000!*DC)
+ IF P2>P1 THEN PMAX=P2/100000!

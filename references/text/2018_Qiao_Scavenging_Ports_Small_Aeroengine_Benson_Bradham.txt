@@ -1,0 +1,1920 @@
+TITLE: Scavenging Ports' Optimal Design of a Two-Stroke Small Aeroengine Based on the Benson/Bradham Model
+YEAR: 2018
+FILE: 2018_Qiao_Scavenging_Ports_Small_Aeroengine_Benson_Bradham.pdf
+PAGES: 26
+EXTRACTED_WITH: PyMuPDF PyMuPDF 1.28.2
+
+
+===== page 1 =====
+
+energies
+Article
+Scavenging Ports’ Optimal Design of a Two-Stroke
+Small Aeroengine Based on the
+Benson/Bradham Model
+Yuan Qiao, Xucheng Duan, Kaisheng Huang *
+, Yizhou Song and Jianan Qian
+State Key Laboratory of Automotive Safety and Energy, Department of Automotive Engineering, Tsinghua
+University, Beijing 100084, China; qiao-y17@mails.tsinghua.edu.cn (Y.Q.); daekeylab@gmail.com (X.D.);
+songyz17@mails.tsinghua.edu.cn (Y.S.); qjn366369@tsinghua.edu.cn (J.Q.)
+* Correspondence: huangks@tsinghua.edu.cn; Tel.: +86-138-0123-7852
+Received: 27 September 2018; Accepted: 11 October 2018; Published: 12 October 2018
+
+
+Abstract: The two-stroke engine is a common power source for small and medium-sized unmanned
+aerial vehicles (UAV), which has wide civil and military applications. To improve the engine
+performance, we chose a prototype two-stroke small areoengine, and optimized the geometric
+parameters of the scavenging ports by performing one-dimensional (1D) and three-dimensional
+(3D) computational ﬂuid dynamics (CFD) coupling simulations. The prototype engine is tested on a
+dynamometer to measure in-cylinder pressure curves, as a reference for subsequent simulations. A GT
+Power simulation model is established and validated against experimental data to provide initial
+conditions and boundary conditions for the subsequent AVL FIRE simulations. Four parameters
+are considered as optimal design factors in this research: Tilt angle of the central scavenging port,
+tilt angle of lateral scavenging ports, slip angle of lateral scavenging ports, and width ratio of the
+central scavenging port. An evaluation objective function based on the Benson/Bradham model
+is selected as the optimization goal. Two different operating conditions, including the take-off and
+cruise of the UAV are considered. The results include: (1) Orthogonal experiments are analyzed,
+and the signiﬁcance of parameters are discussed; (2) the best factors combination is concluded,
+followed by simulation veriﬁcation; (3) results before and after optimization are compared in details,
+including speciﬁc scavenging indexes (delivery ratio, trapping efﬁciency, scavenging efﬁciency, etc.),
+conventional performance indicators, and the sectional views of gas composition distribution inside
+the cylinder.
+Keywords: two-stroke engine; scavenging ports; optimal design; Benson/Bradham model
+1. Introduction
+In the context of the information age of the 21st century, unmanned aerial vehicle (UAV)
+technology has gradually matured with the rapid development of microelectronics technology and
+communication technology. Compared with manned aircrafts, UAVs are small in size, light in weight,
+undemanding in runway requirements, low in manufacturing and use cost, and can also reduce
+casualties on the battleﬁeld. Therefore, UAVs are widespread in both military and civilian applications.
+Besides, small and medium-sized UAVs (maximum take-off weights of 10 to 1000 kg) are particularly
+popular because of good overall performance and usage convenience [1]. Pressured by increasingly
+stringent emission regulations, crankcase scavenged two-stroke engines are scarcely applied in the
+automotive industry [2]. However, beneﬁtting from its signiﬁcant advantages in simple structure,
+few accessories, and high power density, the two-stroke engine is universally selected as the power
+source of small and medium-sized UAVs. In Europe and the United States, several companies specialize
+Energies 2018, 11, 2739; doi:10.3390/en11102739
+www.mdpi.com/journal/energies
+
+
+===== page 2 =====
+
+Energies 2018, 11, 2739
+2 of 26
+in producing two-stroke light-duty engines for small and medium-sized UAVs, such as 3 W, Gobler
+Hirth, and Limbach in Germany, Wilksch in the UK, Zanzottera in Italy, and XRDi and DeltaHawk in
+the US [3].
+Different from conventional four-stroke engines equipped with sophisticated valve timing
+systems, two-stroke engines generally employ the opening and closing of piston-motion-controlled
+scavenging ports as the way of pumping and exhausting. The comparatively simple scavenging system
+shows its superiority in engine design and manufacturing, but signiﬁcant drawbacks also emerge in
+volumetric efﬁciency and in-cylinder gas ﬂow control [4,5]. The potential of two-stroke engines has
+become more and more subject to increasing research work trying to optimize the gas motion during
+the scavenging process. The gas motion is notably dependent on the speciﬁc design of scavenging
+ports. Therefore, the latter is consequently selected as the research focus of this paper.
+A major problem in constructing the two-stroke engine model is to describe the corresponding
+scavenging process. Since the ﬁrst two-stroke engine at the end of 19th century by Sir Dugald Clerk,
+various different scavenging systems have been designed and pertinent scavenging models have been
+successively developed and optimized by tracking studies to draw conclusions about the quality of
+scavenging process. Merker and Gerstle summarized a tremendous number of scavenging models
+and proposed a comprehensive evaluation of existing models [6]. They classiﬁed existing models
+into three categories. Precision, mathematical expenditure, the structure of the formula, and the
+difﬁculty of empirical parameter calibration were all taken into account to obtain the assessment results.
+Ma et al. applied a relatively simple perfect displacement model and perfect mixing model in the
+simulation modeling method and experimental investigation on the uniﬂow scavenging system of an
+opposed-piston folded-cranktrain diesel engine [7]. Based on the single-zone Benson model, Brynych
+et al. proposed a way of generalizing the scavenging curves to lower the time cost of three-dimensional
+(3D) computational ﬂuid dynamics (CFD) simulations and accelerated the procedure of engine
+optimization substantially [8]. Mattarelli et al. chose main scavenging coefﬁcients (charging efﬁciency,
+scavenging efﬁciency, trapping efﬁciency, delivery ratio, etc.) as port design criteria for two-stroke loop
+scavenged engines and performed a series of multi-cycle 3D CFD simulations to validate the optimum
+conﬁguration obtained from the previous parametric analysis [9]. The ﬁnal results demonstrated the
+excellent efﬁciency of the scavenging process. Similarly, to fulﬁll the potential of boosted uniﬂow
+scavenged direct injection gasoline (BUSDIG), disparate layout schemes of scavenging ports were
+designed and corresponding parameters were varied to investigate their impacts on the scavenging
+performance and the in-cylinder gas motion [10–12].
+In the current studies, burgeoning one-dimensional (1D)/3D simulation technologies conspire to
+play an important role in providing researchers with essential and powerful tools for rapid prototyping,
+massive data processing, and visualization analysis [13]. Regarding the optimization of the scavenging
+systems of two-stroke engines, simulation techniques also show promising potential and have
+yielded many fruitful research achievements [14–16]. Cui et al. conducted a detailed CFD analysis
+of the scavenging process in a steady-state scavenging ﬂow test and adopted the proper orthogonal
+decomposition (POD) method in search of the cause of precession phenomenon found in the high
+swirl model [17]. Xie et al. performed the numerical simulation of an Opposed-Piston 2-Stroke Diesel
+Engine (OP2S) and compared the results of in-cylinder gas motion with those of a uniﬂow-scavenged
+two-stroke engine using CFD engine models [18]. Zang et al. investigated the scavenging process of
+Linear Internal Combustion Engine-Linear Generator Integrated System (LICELGIS) and implemented
+a steady-state veriﬁcation test to further explore the motion characteristics of LICELGIS [19].
+Mattarelli et al. reported a CFD study on a two-stroke Opposed Piston High Speed Direct Injection
+Diesel Engine (OPHSDI) and analyzed the inﬂuence of the offset between the crankshafts by performing
+3D CFD simulations [20]. Li et al. investigated the inﬂuences of intake ports and pent-roof structures on
+the ﬂow characteristics of a poppet-valved two-stroke gasoline engine to minimize the short-circuiting
+of the intake charge [21]. He et al. emphasized the signiﬁcant effects of exhaust back pressure,
+porting timing, and intake port layout on the scavenging quality and trapped air mass in cylinder
+
+
+===== page 3 =====
+
+Energies 2018, 11, 2739
+3 of 26
+by transient CFD simulation, including blow-down and scavenging [22]. Zhou et al. performed the
+thermodynamic simulation of a self-balanced opposed-piston folded-cranktrain two-stroke engine
+for UAVs to improve engine performance indicators, including power density, fuel compatibility,
+fuel economy, and durability in a harsh environment [23].
+The scavenging process is the key for in-cylinder gas motion and the mixing of fresh air
+and injected fuel, which has remarkable inﬂuence on the in-cylinder combustion process and,
+eventually, on the engine performance. However, relevant two-stroke engine scavenging system
+optimization schemes proposed in previous studies were scarcely targeted from the perspective of
+scavenging models. Instead of considering comparatively sophisticated scavenging models, such as
+the Dang/Wallace model and Benson/Bradham model, previous researchers usually employed
+conventional scavenging evaluation indexes (charging efﬁciency, scavenging efﬁciency, trapping
+efﬁciency, deliver ratio, etc.) as the evaluation criteria of scavenging ports’ optimal design [6]. For the
+deeper investigation of the scavenging process, a two-stroke small aeroengine is selected as the
+prototype. Afterwards, the geometric structure of the prototype engine is parameterized. An objective
+function based on the more comprehensive Benson/Bradham model is established in this paper.
+To guarantee the consistency and compatibility between 1D and 3D boundary conditions, a 1D/3D
+coupling numerical simulation architecture is set up and validated against the prototype experimental
+data. Commonly, 3D CFD simulation is a time-consuming process on the condition that all the possible
+combinations of geometric parameters need to be traversed. By varying the parameters, the number
+of investigated cases amounted to 1352 along with dramatically increasing the time expenditure [9].
+To minimize the time cost of determining the most effective geometric parameters configuration,
+the orthogonal experimental design (OED) method is employed to reduce the 3D CFD simulation
+amount. Additionally, optimization results are validated by performing dedicated 3D CFD simulations.
+The objective function value, scavenging indexes (delivery ratio, trapping efficiency, scavenging efficiency,
+etc.), conventional performance indexes, including the indicated mean effective pressure (IMEP) and
+indicated specific fuel consumption (ISFC), and the sectional views of gas composition distribution inside
+the cylinder are all taken into consideration when comparing results before and after the optimization.
+2. Scavenging System Modeling
+2.1. Scavenging Model Selection
+Quantitative evaluation indexes are needed to describe the quality of the scavenging process of a
+two-stroke engine. Corresponding mathematical models abstracted from an actual scavenging process
+can serve for this purpose and reﬂect how much fresh charge can be delivered and trapped in the
+cylinder through speciﬁc model parameters [24,25]. To establish the scavenging model, several mass
+parameters are deﬁned as follows: mi is the mass of delivered fresh charge through all scavenging
+ports; m f C is the mass of delivered fresh charge retained in the cylinder; mleak is the mass of delivered
+fresh charge leaking out of the cylinder (i.e., mi is the sum of the m f C and mleak, the latter is the
+so-called ”short circuit loss part”); mbg is the mass of residual burned gas retained in the cylinder;
+mall is the mass of all trapped cylinder charge (i.e., mall is the sum of the m f C and mbg); and m0 is equal
+to the product of the cylinder volume and ambient density and is the so-called “reference mass” [26].
+Based on these deﬁnitions, some conventional scavenging indexes can be introduced:
+The delivery ratio:
+λS = mi
+m0
+= mass of delivered fresh charge through all scavenging ports
+cylinder volume × ambient density
+(1)
+The scavenging efﬁciency:
+ηS =
+m f C
+mall
+=
+m f C
+m f C + mbg
+= mass of delivered fresh charge retained in cylinder
+mass of all trapped cylinder charge
+(2)
+
+
+===== page 4 =====
+
+Energies 2018, 11, 2739
+4 of 26
+The trapping efﬁciency:
+ηT =
+m f C
+mi
+=
+mass of delivered fresh charge retained in cylinder
+mass of delivered fresh charge through all scavenging ports
+(3)
+The charging efﬁciency:
+ηC =
+m f C
+m0
+= mass of delivered fresh charge retained in cylinder
+cylinder volume × ambient density
+(4)
+Considering that throttle opening of a small areoengine is relatively wide under medium and
+high load operation conditions, the intake pressure is approximately equal to the ambient pressure,
+which makes mall nearly the same as m0. Coincidentally, the “reference mass” in simulation analysis is
+normally deﬁned as the mass of all trapped cylinder charge (i.e., mall), which makes ηS equal to ηC.
+Consequently, we make no distinction between the scavenging efﬁciency and the charging efﬁciency
+in the following content in case of over parameterization [27]:
+ηS ≈ηC = λS × ηT
+(5)
+Scavenging efﬁciency, ηS, is of vital importance toward the gas exchange quality of the scavenging
+process because ηS indicates to what extent the residual burned gases in the cylinder have been
+replaced with fresh mixture after the end of the scavenging process [28]. The higher the ηS value,
+the more sufﬁcient the fresh charge intake and the greater the improvements of power performance
+enhancement. In addition, the trapping efﬁciency, ηT, plays a pivotal role in reﬂecting what fraction
+of the fresh charge supplied to the cylinder is retained in the cylinder. This attribute is important
+especially for a port fuel injection (PFI) engine, because the short circuit loss of fresh mixture can lead
+to a signiﬁcant deterioration in fuel economy and emission characteristics. In terms of the relationship
+between these scavenging evaluation indexes, the higher the delivery ratio, λS, the more mass ﬂow
+entering the cylinder, which means both m f C and mleak increase. Under that circumstance, the decrease
+of ηT and the increase of ηS will happen simultaneously. The trade-off relationship between ηT and ηS
+makes trouble for balancing power performance and fuel consumption in the optimization process of
+the two-stroke engine scavenging system. That is precisely the reason why appropriate scavenging
+models are needed for integrative optimal design.
+The application of the simplest single-zone single-phase model is the most extensive among
+previous studies [29]. The single-zone concept denotes that the cylinder volume is occupied by only
+one zone throughout the scavenging process while the single-phase concept means the scavenging
+process is not divided into distinct phases. This category is classiﬁed into two ideal models: Perfect
+mixing model and perfect displacement model. The former is based on the assumption that fresh
+charge introduced into the cylinder per unit time is instantly mixed with residuals. On the contrary,
+the latter is based on assumptions, including no mixing between fresh charge and burned gas and
+no direct loss of fresh charge into the exhaust port [6]. Figure 1 presents an illustration of these
+two concepts.
+ 
+(a) 
+(b) 
+Figure 1. (a) Perfect mixing model; (b) perfect displacement model.
+
+
+===== page 5 =====
+
+Energies 2018, 11, 2739
+5 of 26
+Corresponding equations are given as follows [30]:
+ηS = 1 −e−λS
+for the perfect mixing model
+(6)
+ηS =
+(
+λS
+for λS ≤1
+1
+for λS > 1
+for the perfect displacement model
+(7)
+Because these two ideal models are inherently deﬁcient in accurate prediction about the trend
+behavior of two-stroke engines, detailed investigations of the scavenging process are improbable [31].
+For further improvements, the single-zone Benson model was proposed and regarded as a combination
+of the above-mentioned two ideal models [32]. By integrating them, the single-zone Benson model
+assumes that the whole scavenging process can be divided into two phases: The perfect displacement
+model acts in the ﬁrst phase and the perfect mixing model acts in the second phase [6]. A critical
+variable, the “displacement ratio”, is deﬁned as follows:
+x =
+Vbg
+Vall
+(8)
+where Vbg is the instant burned gas volume in the cylinder, and Vall is the whole cylinder volume.
+After some rearrangements of the above-mentioned models, scavenging parameters can be given [31]:
+ηS =
+(
+λS
+for λS ≤x
+1 −(1 −x)ex−λS
+for λS > x
+(9)
+β =
+(
+0
+for λS ≤x
+1 −(1 −x)ex−λS
+for λS > x
+(10)
+where β is the mass fraction of fresh charge in exhaust gas and represents the exhaust gas purity.
+The lower the β value, the less fresh charge leaking out of the cylinder.
+It can be concluded that x is the two-phase demarcation point. The larger the x value, the closer
+the scavenging process is to the perfect displacement model, and vice versa, the closer to the perfect
+mixing model. Therefore, the larger the x value, the better the scavenging consequence. In practical
+applications, x needs to be determined by experimental data ﬁtting.
+Based on the existing single-zone Benson model, the Benson/Bradham model considers the
+short circuit loss of fresh charge and broadens into a multi-zone multi-phase scavenging model.
+The phase/zone concept of the Benson/Bradham model is shown in Figure 2. By additionally
+introducing a key parameter, the short-circuiting fraction, y, while following the pre-established
+two-phase assumption, the Benson/Bradham model signiﬁcantly reduces the insufﬁciency of
+the scavenging models above. The explicit functional relation of scavenging parameters can be
+determined by:
+ηS =
+(
+(1 −y)λS
+for λS ≤
+x
+1−y
+1 −(1 −x)ex−(1−y)λS
+for λS >
+x
+1−y
+(11)
+β =
+(
+y
+for λS ≤
+x
+1−y
+1 −(1 −x)(1 −y)ex−(1−y)λS
+for λS >
+x
+1−y
+(12)
+It can be derived that the Benson/Bradham model will be reduced to a single-zone Benson model
+when y is 0. With an appropriate parameter variation of the displacement ratio, x, and short-circuiting
+fraction, y, every scavenging system can be approximated [32]. The closer x is to 1 and the closer
+y is to 0, the better the quality of the whole scavenging process, and eventually the better working
+performance of the two-stroke engine. Figure 3 displays a set of different parameter conﬁguration
+variation curves as a demonstration of the Benson/Bradham model equations.
+
+
+===== page 6 =====
+
+Energies 2018, 11, 2739
+6 of 26
+Compared with general scavenging process indicators, the Benson/Bradham model provides a
+more comprehensive method for the scavenging process and subsequent scavenging system optimal
+design. However, little attention has been paid to this signiﬁcant aspect concerning the application
+of a more precise Benson/Bradham model in the optimizing process. Therefore, the key parameters,
+x and y, of the Benson/Bradham model are employed to construct an objective function and serve as a
+port optimal design criteria for the scavenging system of the two-stroke small areoengine.
+ 
+(a) 
+ 
+(b) 
+Figure 2. Phase/zone concept of the Benson/Bradham model: (a) Phase I; (b) Phase II.
+Figure 3. Scavenging efﬁciency-delivery ratio relationship of the Benson/Bradham model.
+2.2. 1D GT Power Simulation Model
+Appropriate boundary conditions and initial conditions are indispensable prerequisites for 3D
+CFD simulation. Some physical quantities within them (e.g., initial ﬂuid state in different regions inside
+the engine) are difﬁcult to be directly measured by experiment. To acquire the needed parameters,
+a 1D simulation model of the prototype engine is established with GT Power.
+Figure 4 displays the speciﬁc architecture of the 1D GT Power simulation model. A two-stroke
+small areoengine for UAVs is selected as the research focus in this paper. This spark-ignition
+prototype engine is a single point injection (SPI) gasoline engine and employs a two-cylinder
+horizontally-opposed arrangement (i.e., the boxer) scheme. Moreover, it is a crankcase scavenged
+engine and the gas ﬂow admitted to the crankcase is controlled by reed valves. Two percent synthetic
+oil with 93 octane petrol is used as engine fuel. It is important to mention that exhaust emissions is
+not selected as the research focus in this paper because military UAVs equipped with this prototype
+engine generally have no stringent requirements on pollution emissions. Relatively simple straight
+
+
+===== page 7 =====
+
+Energies 2018, 11, 2739
+7 of 26
+exhaust pipes are employed on the test bed and corresponding parts are constructed in the GT Power
+simulation model for the sake of simplicity. Therefore, the workload during the modelling process
+can be reduced while the obtained simulation results will not be signiﬁcantly affected. The prototype
+engine speciﬁcations are listed in Table 1.
+Figure 4. GT Power simulation model architecture.
+Table 1. Prototype engine speciﬁcations.
+Parameters
+Value
+Unit
+Total displacement
+498
+cm3
+Bore
+75
+mm
+Stroke
+56
+mm
+Connecting rod
+110
+mm
+Compress ratio
+10.6
+-
+Rated power
+32
+kW
+Rated speed
+6500
+r/min
+Rated torque
+47
+N·m
+Number of scavenging ports
+3
+-
+Number of exhaust ports
+1
+-
+Scavenging port opening
+110
+◦CA
+Exhaust port opening
+94
+◦CA
+Scavenging port closing
+250
+◦CA
+Exhaust port closing
+266
+◦CA
+Ignition timing (high/partial load)
+347/352
+◦CA
+Ambient temperature
+298
+K
+Ambient pressure
+1.013
+bar
+Intake pressure
+1.105
+bar
+Exhaust back pressure
+1.013
+bar
+Assumed air fuel ratio
+13.24
+-
+Equivalence ratio
+1.11
+-
+To guarantee the accuracy, corresponding conﬁguration parameters of the GT Power simulation
+model are precisely calibrated. In-cylinder pressure is an important working performance index and its
+variation curve can be accurately measured on the test bed. Therefore, in-cylinder pressure is selected
+as the calibration target and thus we adjust the parameter settings accordingly to make sure that the
+simulation curve matches well with the measured curve. As described below, the most quintessential
+operating conditions of the UAV equipped with the prototype engine are the high load take-off (speed
+6000 r/min, throttle opening 100%), and the partial load cruise (speed 4500 r/min, throttle opening
+40%). As a consequence, we carry out the prototype test under these two operating conditions and
+measure the in-cylinder curves on the test bed. Based on the measured in-cylinder curves, the pressure
+diagrams can be obtained and applied for GT Power model calibration. As shown in Figure 5, the GT
+Power simulation model is validated against experimental data in terms of the in-cylinder pressure
+during the complete engine cycle and the comparative results display a perfect matching. Based on
+the GT Power simulation model, tremendous characteristic parameters (e.g., the back pressure of the
+exhaust ports, the intake pressure of the scavenging ports, the mass ﬂow into and out of the crankcase,
+
+
+===== page 8 =====
+
+Energies 2018, 11, 2739
+8 of 26
+and the initial temperatures of the cylinder, the exhaust duct, and the combustion chamber wall) can
+be exported for subsequent 3D CFD simulations.
+ 
+(a) 
+(b) 
+Figure 5. Comparison of in-cylinder pressure curves between the experiment and GT Power simulation.
+(a) High load operating condition; (b) partial load operating condition.
+2.3. 3D AVL FIRE Simulation Model
+Important engine parts of the scavenging system (e.g., piston, cylinder, and cylinder head) are
+3D-scanned to build the fundamental computer aided design (CAD) model. On the basis of massive
+point cloud data, corresponding CAD models are reconstructed. Figure 6 shows an example of the
+comparison of the engine cylinder between the reconstruction CAD result and the actual part.
+ 
+(a) 
+ 
+(b) 
+Figure 6. Comparison of the engine cylinder. (a) Reconstruction computer aided design (CAD) result;
+(b) actual part.
+By parameterizing the main design considerations of the scavenging system, the whole ﬂuid
+domain model is established in a CATIA environment. It has to be mentioned that some geometric
+characteristics are simpliﬁed for the sake of the perfect compatibility of the whole model with 3D mesh
+generation. Subsequently, the meshing process is implemented using AVL FIRE software. The whole
+model is divided into the static (scavenging ports, exhaust ports) and the moving part (the combustion
+chamber, crankcase). Fame Hexa Meshing (FEM) and Fame Engine Plus (FEP) methods are respectively
+applied to generate the static and the transient meshes. Before assembling these two meshes, special
+“arbitrary interface” needs to be deﬁned to realize the precise connectivity between them.
+
+
+===== page 9 =====
+
+Energies 2018, 11, 2739
+9 of 26
+Figure 7 shows the simpliﬁed ﬂuid domain model of the scavenging system in a CATIA
+environment and the corresponding CFD calculation model in an AVL FIRE environment, where part
+A is the central scavenging port, part B1 and B2 are the lateral scavenging ports, part C is the crankcase,
+part D is the combustion chamber, and part E is the exhaust port.
+ 
+(a) 
+(b) 
+Figure 7. Scavenging system model. (a) CAD model; (b) CFD calculation model.
+Accurate boundary conditions and initial conditions are fundamental prerequisites for 3D CFD
+simulation and these can be provided by 1D GT Power simulation results. Main speciﬁcations and
+condition parameters are listed in Table 2. It is crucial that the relevant parameter conﬁguration in AVL
+FIRE should match with that in the GT Power model to guarantee the reliability of results obtained
+from the simulation. For example, the ambient conditions set in AVL FIRE are exactly the same as
+those in GT Power for consistency.
+Table 2. Main speciﬁcations and condition parameters in AVL FIRE.
+Condition Parameters
+High Load
+Partial Load
+Engine speed (rpm)
+6000
+4500
+Fuel
+2% synthetic oil with 93 octane petrol
+Assumed air fuel ratio
+13.24
+Equivalence ratio
+1.11
+Ambient temperature (K)
+298
+Ambient pressure (bar)
+1.013
+Intake pressure (bar)
+1.105
+Exhaust back pressure (bar)
+1.013
+Ignition timing (◦CA)
+347
+352
+Boundary temperature of the combustion chamber wall (K)
+528
+497
+Boundary temperature of the crankcase (K)
+330
+312
+Boundary temperature of the cylinder (K)
+504
+480
+Boundary temperature of the exhaust duct (K)
+476
+460
+Initial temperature of the crankcase (K)
+364
+358
+Initial pressure of the crankcase (bar)
+1.105
+0.984
+Initial temperature of the cylinder (K)
+1719
+1476
+Initial pressure of the cylinder (bar)
+4.922
+3.017
+Initial temperature of the exhaust duct (bar)
+1.013
+1.013
+Initial pressure of the exhaust duct (K)
+734
+582
+Regarding the solver settings in AVL FIRE, the species transport module and combustion module
+are activated. The standard transport model (STM) and extended coherent ﬂame model (ECFM) are
+
+
+===== page 10 =====
+
+Energies 2018, 11, 2739
+10 of 26
+selected. Both the boundary conditions and initial conditions are derived from the 1D GT Power
+simulation results. Fluid properties are given by experimental measurements. The extrapolate method
+is used for the calculation of boundary values and the least squared ﬁt method is employed to
+calculate derivatives. Several variable limits (e.g., maximum/minimum temperature, minimum
+density, minimum turbulence kinetic energy (TKE), and maximum velocity magnitude) are set to
+eliminate abnormal results. Because the cell number of the full-scale CFD model amounts to 710,519 at
+the top dead center (TDC) and 914,533 at the bottom dead center (BDC), a cell quality check and cell
+face adjustment function is applied for mesh smoothing and ﬁne tuning during the simulation process.
+The hybrid wall treatment (HWT) option is used for wall treatment and the standard wall function
+(SWF) is selected as the heat transfer wall model. Momentum, continuity, and energy equations are
+all considered. Besides, the k-ζ-f model is applied to capture turbulence. The semi-implicit method
+for pressure linked equations (SIMPLE) algorithm is adopted with a two-stage pressure correction.
+Differencing schemes of continuity, energy, and momentum equations are central differencing, upwind
+differencing, and MINMOD relaxed, respectively.
+Corresponding under-relaxation factors and
+convergence criteria of these equations are also determined. The gradient stabilized biconjugate
+(GSTB) method is selected as the linear solver type for the solution of main equations.
+The time before exhaust port opening is selected as the start of simulation calculation, because
+the combustion process has ended by that time and the temperature and composition distribution
+in the cylinder remain relatively stable. It can be seen from Table 1 that the exhaust port opening is
+94 ◦CA. Therefore, the simulation calculation ranges from 90 ◦CA to 450 ◦CA to complete a two-stroke
+engine cycle. Model conﬁgurations of the AVL FIRE simulation are similarly adjusted to match
+well with corresponding measured data. Figure 8 presents the comparison of in-cylinder pressure
+curves between the experiment and AVL FIRE simulation. As shown in Figure 8, the reliability of the
+3D AVL FIRE simulation model has been veriﬁed, which lays a solid foundation for the follow-up
+optimal design.
+ 
+(a) 
+ 
+(b) 
+Figure 8. Comparison of in-cylinder pressure curves between the experiment and AVL FIRE simulation.
+(a) High load operating condition; (b) partial load operating condition.
+3. Orthogonal Experiment Design
+3.1. Optimal Design Determinants
+The essence of scavenging system optimization is the ports’ optimal design. It is mainly composed
+of three aspects: The shapes and size of ports affect the resistance loss; the position of ports determines
+the opening and closing time (i.e., the timing phase of scavenging process); the orientation of ports
+determines the ﬂowing direction of fresh charge and eventually has signiﬁcant impacts on the
+in-cylinder ﬂow ﬁeld. From the literature review, the ﬁrst two have been thoroughly studied using
+1D simulation platforms, such as GT Power and AVL Boost [8,16]. To make full use of the powerful
+
+
+===== page 11 =====
+
+Energies 2018, 11, 2739
+11 of 26
+visualization tools provided by AVL FIRE, the orientation of ports is parameterized and selected as the
+main research object.
+The prototype engine scavenging system consists of three scavenging ports and one exhaust port
+as shown in Figure 9. For one thing, the central scavenging port has a clear tilt angle. Consequently,
+fresh charge through the central scavenging port is led to the upper part of the cylinder to sweep out
+the burned gas. For another, the combination of two lateral scavenging ports displays mirror symmetry.
+Each of the two has a slip angle and is biased toward the central scavenging port. Besides, the lateral
+scavenging ports also have a tilt angle. On account of these angles mentioned above, swirl and tumble
+are generated in the gas exchange process. Afterwards, they are broken into small-scale turbulence,
+which contributes signiﬁcantly to air-fuel mixing and ﬂame propagation. Moreover, the underside of
+the exhaust port is speciﬁcally designed to be tilted for clearing the burned gas out of the cylinder.
+Figure 9. Ports’ arrangement of the prototype engine scavenging system.
+Four parameters are considered and are optimal design determinants: Tilt angle of the central
+scavenging port, αC; tilt angle of the lateral scavenging ports, αl; slip angle of the lateral scavenging
+ports, βl; and the width ratio of the central scavenging port, γC. The ﬁrst three parameters are deﬁned
+as shown in Figure 10. The width ratio of the central scavenging port, γC, describes the proportion of
+the mass ﬂow entering the cylinder through the central scavenging port and is given by the following
+equation [28]:
+γC =
+LC
+LC + 2Ll
+(13)
+where LC is the width of the central scavenging port, and Ll is the width of the single lateral scavenging
+port. Based on the geometric parameters of the prototype engine scavenging system, an appropriate
+geometric parameter table with four factors and ﬁve levels is given in Table 3:
+Table 3. Geometric parameter conﬁguration.
+Level
+αC (◦)
+αl (◦)
+βl (◦)
+γC
+LC (mm)
+Ll (mm)
+1
+45
+−10
+10
+14.29%
+12
+36
+2
+50
+0
+20
+19.05%
+16
+34
+3
+55
+10
+30
+23.81%
+20
+32
+4
+60
+20
+40
+28.57%
+24
+30
+5
+65
+30
+50
+33.33%
+28
+28
+
+
+===== page 12 =====
+
+Energies 2018, 11, 2739
+12 of 26
+Figure 10. Deﬁnitions of important geometric parameters.
+3.2. Evaluation Objective Function
+Because each investigated factor of the four has ﬁve levels, 54 or 625 CFD simulation cases
+are required for traversing all the possible combinations of geometric parameters. Considering the
+enormous time expenditure, the OED method is adopted to reduce the number of cases to accelerate
+the whole simulation procedure. Regardless of the interaction effect between these investigated
+factors, the L25 (56) orthogonal table is employed and four parameters mentioned-above are taken as
+independent variables. As a result, a remarkable reduction takes place in the total number of simulation
+cases, and only 25 cases need to be executed as shown in Table 4, which means the corresponding time
+cost is acceptable. In the well-designed orthogonal table, the frequency of occurrences of each level of
+each factor is the same for the sake of balance. On the basis of the OED results, the estimated mean
+values of investigated factors can be used to select the optimal combination of independent variables.
+To evaluate the inﬂuence of each independent variable upon the dependent variable, the signiﬁcance
+level of each factor can be derived from the range analysis and variance analysis.
+For the subsequent results analysis,
+an evaluation objective function based on the
+Benson/Bradham scavenging model is selected as the dependent variable for the designed orthogonal
+table as well as the optimization goal. As shown above, the crucial ηS −λS relationship of the
+Benson/Bradham scavenging model satisﬁes Equation (11) and it can be derived that the closer x is to
+1 and the closer y is to 0, the better the scavenging quality. By the AVL FIRE simulation, the desired
+ηS −λS relation curve of each case can be obtained and the corresponding coefﬁcients, x and y, can be
+ascertained by curve ﬁtting. Therefore, the sum of squares of the deviations of x and y from ideal
+values is employed to construct the elementary evaluation objective function:
+ηBB = (1 −x)2 + y2
+(14)
+
+
+===== page 13 =====
+
+Energies 2018, 11, 2739
+13 of 26
+Additionally, the scavenging quality under different operating conditions will also be different.
+To establish the integrated objective function, the most quintessential operating conditions of the
+UAV equipped with the prototype engine, including the high load take-off (speed 6000 r/min,
+throttle opening 100%) and the partial load cruise (speed 4500 r/min, throttle opening 40%),
+are considered simultaneously:
+ηBB,c = ηBB,h + ηBB,p
+(15)
+where ηBB,h is the evaluation objective function for the high load take-off, ηBB,p is the evaluation
+objective function for the partial load cruise, and ηBB,c is the combination of the two above. Besides,
+conventional performance indicators, IMEP and ISFC, are employed as constraint conditions to exclude
+those cases failing to meet the basic power performance and fuel economy requirements.
+s.t :
+(
+IMEP ≥5.3 bar
+for the high load
+IMEP ≥3.0 bar
+for the partial load
+(16)
+s.t :
+(
+ISFC ≤260 g/(kW·h)
+for the high load
+ISFC ≤310 g/(kW·h)
+for the partial load
+(17)
+Table 4. Designed orthogonal table.
+No.
+αC (◦)
+αl (◦)
+βl (◦)
+γC
+1
+45
+−10
+10
+14.29%
+2
+45
+0
+20
+19.05%
+3
+45
+10
+30
+23.81%
+4
+45
+20
+40
+28.57%
+5
+45
+30
+50
+33.33%
+6
+50
+−10
+20
+23.81%
+7
+50
+0
+30
+28.57%
+8
+50
+10
+40
+33.33%
+9
+50
+20
+50
+14.29%
+10
+50
+30
+10
+19.05%
+11
+55
+−10
+30
+33.33%
+12
+55
+0
+40
+14.29%
+13
+55
+10
+50
+19.05%
+14
+55
+20
+10
+23.81%
+15
+55
+30
+20
+28.57%
+16
+60
+−10
+40
+19.05%
+17
+60
+0
+50
+23.81%
+18
+60
+10
+10
+28.57%
+19
+60
+20
+20
+33.33%
+20
+60
+30
+30
+14.29%
+21
+65
+−10
+50
+28.57%
+22
+65
+0
+10
+33.33%
+23
+65
+10
+20
+14.29%
+24
+65
+20
+30
+19.05%
+25
+65
+30
+40
+23.81%
+4. Simulation Results Analysis
+4.1. OED Results Analysis
+A total of 25 simulation cases are sequentially implemented by AVL FIRE. Table 5 displays the
+overall simulation results; subscripts h and p refer to parameters for the high load and the partial
+load, respectively.
+
+
+===== page 14 =====
+
+Energies 2018, 11, 2739
+14 of 26
+Table 5. Overall simulation results.
+No.
+λS,h
+ηT,h
+ηS,h
+xh
+yh
+ηBB,h
+λS,p
+ηT,p
+ηS,p
+xp
+yp
+ηBB,p
+ηBB,c
+1
+1.028
+0.770
+0.791
+0.764
+0.103
+0.066
+0.776
+0.861
+0.668
+0.658
+0.046
+0.119
+0.185
+2
+0.995
+0.805
+0.801
+0.777
+0.089
+0.058
+0.769
+0.886
+0.682
+0.673
+0.036
+0.108
+0.166
+3
+0.917
+0.856
+0.785
+0.767
+0.063
+0.058
+0.764
+0.895
+0.684
+0.670
+0.025
+0.110
+0.168
+4
+0.830
+0.912
+0.757
+0.752
+0.047
+0.064
+0.731
+0.924
+0.675
+0.675
+0.019
+0.106
+0.170
+5
+0.783
+0.922
+0.722
+0.718
+0.027
+0.080
+0.699
+0.929
+0.650
+0.657
+0.012
+0.118
+0.198
+6
+0.882
+0.877
+0.773
+0.781
+0.089
+0.056
+0.731
+0.898
+0.657
+0.671
+0.037
+0.110
+0.165
+7
+0.861
+0.894
+0.769
+0.771
+0.070
+0.057
+0.758
+0.894
+0.678
+0.668
+0.028
+0.111
+0.168
+8
+0.754
+0.942
+0.711
+0.756
+0.047
+0.062
+0.651
+0.957
+0.623
+0.676
+0.020
+0.105
+0.167
+9
+0.767
+0.941
+0.722
+0.740
+0.041
+0.069
+0.734
+0.907
+0.666
+0.668
+0.021
+0.111
+0.180
+10
+1.207
+0.657
+0.793
+0.743
+0.073
+0.071
+0.845
+0.833
+0.704
+0.663
+0.020
+0.114
+0.185
+11
+0.834
+0.901
+0.752
+0.771
+0.076
+0.058
+0.699
+0.919
+0.643
+0.656
+0.032
+0.119
+0.178
+12
+0.884
+0.874
+0.773
+0.769
+0.078
+0.059
+0.681
+0.923
+0.628
+0.671
+0.037
+0.110
+0.169
+13
+0.743
+0.953
+0.708
+0.742
+0.044
+0.069
+0.664
+0.945
+0.628
+0.663
+0.026
+0.114
+0.183
+14
+1.082
+0.743
+0.804
+0.760
+0.075
+0.063
+0.830
+0.856
+0.710
+0.674
+0.020
+0.107
+0.170
+15
+0.996
+0.796
+0.793
+0.759
+0.052
+0.061
+0.791
+0.890
+0.704
+0.676
+0.015
+0.105
+0.166
+16
+0.783
+0.936
+0.733
+0.792
+0.081
+0.050
+0.651
+0.938
+0.611
+0.664
+0.038
+0.114
+0.164
+17
+0.727
+0.963
+0.700
+0.738
+0.085
+0.076
+0.634
+0.954
+0.605
+0.656
+0.026
+0.119
+0.195
+18
+1.015
+0.796
+0.809
+0.780
+0.077
+0.054
+0.813
+0.866
+0.703
+0.663
+0.023
+0.114
+0.168
+19
+0.992
+0.809
+0.802
+0.771
+0.057
+0.056
+0.807
+0.905
+0.731
+0.691
+0.019
+0.096
+0.152
+20
+0.914
+0.845
+0.773
+0.760
+0.075
+0.063
+0.852
+0.850
+0.724
+0.685
+0.022
+0.100
+0.163
+21
+0.719
+0.953
+0.685
+0.720
+0.056
+0.082
+0.641
+0.959
+0.615
+0.656
+0.028
+0.119
+0.201
+22
+0.958
+0.829
+0.794
+0.779
+0.082
+0.056
+0.788
+0.871
+0.687
+0.650
+0.028
+0.123
+0.179
+23
+1.032
+0.785
+0.811
+0.783
+0.082
+0.054
+0.833
+0.848
+0.706
+0.669
+0.030
+0.110
+0.164
+24
+0.949
+0.836
+0.794
+0.775
+0.058
+0.054
+0.794
+0.891
+0.708
+0.680
+0.022
+0.103
+0.157
+25
+0.869
+0.896
+0.778
+0.761
+0.035
+0.058
+0.751
+0.934
+0.702
+0.698
+0.016
+0.091
+0.151
+Take the high load take-off operating condition as an example, the scatterplots of 25 cases are
+shown in Figure 11. With respect to the delivery ratio, λS,h, and scavenging efﬁciency, ηS,h, Figure 11a
+shows that a positive correlation exists between λS,h and ηS,h, which is in accordance with previously
+discussed analysis. In terms of teh delivery ratio, λS,h, and trapping efﬁciency, ηT,h, Figure 11b shows
+that a linearly drop can be observed in ηT,h with the increasing λS,h. Intuitively, we can corroborate
+that the trade-off relationship between the fuel economy indicator, ηT, and the power performance
+indicator, λS, indeed exists for the prototype engine scavenging system, which makes it difﬁcult to
+improve power performance while keeping fuel consumption low.
+ 
+(a) 
+(b) 
+Figure 11. The high load results. (a) Scavenging efﬁciency; (b) trapping efﬁciency.
+Take the high load take-off operating condition as an example, the scatterplots of 25 cases are
+shown in Figure 11. With respect to the delivery ratio, λS,h, and scavenging efﬁciency, ηS,h, Figure 11a
+
+
+===== page 15 =====
+
+Energies 2018, 11, 2739
+15 of 26
+shows that a positive correlation exists between λS,h and ηS,h, which is in accordance with previously
+discussed analysis. In terms of teh delivery ratio, λS,h, and trapping efﬁciency, ηT,h, Figure 11b shows
+that a linearly drop can be observed in ηT,h with the increasing λS,h. Intuitively, we can corroborate
+that the trade-off relationship between the fuel economy indicator, ηT, and the power performance
+indicator, λS, indeed exists for the prototype engine scavenging system, which makes it difﬁcult to
+improve power performance while keeping fuel consumption low.
+Figure 12 presents the detailed comparison results between the high load and the partial load.
+As shown in Figure 12a–c, all the scavenging indexes, ηS, ηT, and λS, generally exhibit a positive
+correlation when comparing the two operating conditions. For instance, the higher ηT,h, the higher ηT,p.
+However, the linearity is not high, which indicates the same geometric parameter conﬁguration will
+vary in scavenging performance under different operating conditions. With regards to the evaluation
+objective function, Figure 12d shows that there exists no obvious relationship between ηBB,h and ηBB,p.
+Therefore, it is indeed necessary to consider multiple operating conditions to establish comprehensive
+optimal design criteria.
+ 
+(a) 
+(b) 
+ 
+(c) 
+(d) 
+Figure 12. Comparison between the high load results and the partial load results. (a) Scavenging
+efﬁciency; (b) trapping efﬁciency; (c) delivery ratio; (d) evaluation objective function.
+The desired ηS,h −λS,h relation curve of one of the 25 cases is shown in Figure 13a. The root-mean-
+square error of the corresponding curve ﬁtting is in the order of 10−4, indicating that the ﬁtting curve
+matches well with the simulation result. In addition, the satisfying ﬁtting result proves that the
+whole scavenging process of the prototype engine can be precisely described by the Benson/Bradham
+scavenging model. As for the coefﬁcients, xh and yh, Figure 13b shows that there exists no clear
+relationship in the scatterplot, which means these two key parameters change independently. It is
+
+
+===== page 16 =====
+
+Energies 2018, 11, 2739
+16 of 26
+worthy of special mention that the partial load condition is very similar, thus related discussions are
+not repeated.
+ 
+(a) 
+(b) 
+Figure 13. The high load results. (a) Comparison between the simulation result and the ﬁtting curve;
+(b) scatterplot of coefﬁcients, xh and yh.
+As mentioned above, ηBB,c is determined as the dependent variable for the designed orthogonal
+table as well as the optimization goal. To make the indicating coefﬁcients, x and y, approach as close
+as possible to the ideal values, respectively, ηBB,c needs to be minimized:
+Min (ηBB,c) = f (αC, αl, βl, γC)
+(18)
+Based on the above OED results, the mean values of the different levels of each factor are
+calculated as shown in Table 6. It can be concluded that the effect order of the various levels of the four
+investigated factors on ηBB,c is: A1 > A2 = A3 > A5 > A4, B1 > B 2> B5 > B3 > B4, C5 > C1 > C3 > C4 > C2,
+D4 = D5 > D1 > D2 > D3. Therefore, the best factors combination is determined as A4B4C2D3, namely
+αC = 60◦, αl = 20◦, βl = 20◦, and γC = 23.81%.
+Table 6. Mean values calculation results.
+Level
+A (αC)
+B (αl)
+C (βl)
+D (γC)
+1
+0.1774
+0.1787
+0.1776
+0.1723
+2
+0.1733
+0.1754
+0.1626
+0.1710
+3
+0.1733
+0.1701
+0.1667
+0.1696
+4
+0.1684
+0.1656
+0.1640
+0.1746
+5
+0.1701
+0.1724
+0.1913
+0.1746
+Range analysis is conducted with the results shown in Table 7. The effect order of the investigated
+factors on ηBB,c is: βl > αl > αC > γC; obviously the slip angle of the lateral scavenging ports, βl, is the
+most signiﬁcant factor among the four.
+Table 7. Range analysis results.
+Factors
+Range
+αC
+0.0090
+αl
+0.0131
+βl
+0.0287
+γC
+0.0050
+
+
+===== page 17 =====
+
+Energies 2018, 11, 2739
+17 of 26
+Table 8 displays the variance analysis results. The effect order of the investigated factors on ηBB,c
+is: βl > αl > αC > γC; which is exactly the same as the range analysis. The signiﬁcance level for the
+variance analysis is set as α = 0.05. It can be observed from Table 8 that the p-value of βl is 0.00131
+< 0.01, which means βl has the most signiﬁcant inﬂuence on ηBB,c; the p-value of αl is 0.0485 < 0.05,
+which means αl has a comparatively signiﬁcant inﬂuence on ηBB,c; neither αC and γC are statistically
+signiﬁcant in terms of their inﬂuence on ηBB,c.
+Table 8. Variance analysis results.
+Factors
+Type III Sum of Squares
+DOF
+Mean Square
+F
+P
+A (αC)
+0.00236
+4
+0.000059
+1.079
+0.32755
+B (αl)
+0.00050
+4
+0.000125
+6.287
+0.04845
+C (βl)
+0.00291
+4
+0.000727
+13.303
+0.00131
+D (γC)
+0.00010
+4
+0.000025
+0.454
+0.76752
+Error
+0.00044
+8
+0.000055
+-
+-
+Total
+0.00418
+24
+-
+-
+-
+Generally, multi-objective programming can be described as follows [33]:
+Min f (n) =
+ f1(n), f2(n), . . . , fp(n)
+T
+s.t :
+(
+gi(n) ≥0,
+i ∈I
+hj(n) = 0,
+j ∈E
+(19)
+Considering all possible solutions, if solution n1 is no worse than n2 in all objectives and solution
+n1 is strictly better than n2 in at least one objective, then n1 dominates n2. Given a set of solutions,
+the non-dominated solution set is a set of all the solutions that are not dominated by any member of the
+solution set. The non-dominated set of the entire feasible decision space is the so-called Pareto-optimal
+set. The boundary deﬁned by the set of all points mapped from the Pareto-optimal set is called the
+Pareto front. A Pareto front is more intuitive to display the simulation results of a multi-objective
+optimization engineering problem [33]. Based on the simulation results given by Table 5, the set of
+non-dominated solutions can be obtained and corresponding 3D Pareto front diagrams are generated.
+Both operating conditions are taken into consideration. In Figures 14 and 15 the trapping efﬁciency,
+delivery ratio, and scavenging efﬁciency are selected as three objectives. In Figures 16 and 17,
+the short-circuiting fraction, displacement ratio, and evaluation objective function are considered
+as three objectives. These present ﬁndings can provide more comprehensive guidance for the designers
+of the next generation of UAVs.
+Figure 14. 3D Pareto front results of the high load operating condition.
+
+
+===== page 18 =====
+
+Energies 2018, 11, 2739
+18 of 26
+ 
+Figure 15. 3D Pareto front results of the partial load operating condition.
+ 
+Figure 16. 3D Pareto front results of the high load operating condition.
+ 
+Figure 17. 3D Pareto front results of the partial load operating condition.
+4.2. Veriﬁcation of the Best Factors Combination
+Based on the OED results analysis, A4B4C2D3 is selected as the optimal parameter conﬁguration.
+The expected value of ηBB,c is 0.149 with a 95% conﬁdence interval (0.1456, 0.1524). For verifying the
+best factors combination, the corresponding 3D CFD model is established and AVL FIRE simulation is
+performed. The comparison results between the prototype engine and optimal design are presented in
+
+
+===== page 19 =====
+
+Energies 2018, 11, 2739
+19 of 26
+Table 9. Apart from the scavenging parameters and evaluation objective functions discussed before,
+the conventional power performance and fuel economy indicators, IMEP and ISFC, are taken into
+consideration as well. Because mechanical loss (pumping loss, throttling loss, friction loss, etc.) is not
+involved in AVL FIRE simulation, indicated indexes are analyzed rather than effective indexes.
+Table 9. Comparison results between the prototype engine and optimal design.
+Parameter
+Prototype Engine
+Optimal Design
+High Load
+Partial Load
+High Load
+Partial Load
+λS
+0.889
+0.730
+0.979
+0.785
+ηT
+0.882
+0.931
+0.861
+0.917
+ηS
+0.784
+0.680
+0.843
+0.720
+x
+0.778
+0.671
+0.782
+0.686
+y
+0.071
+0.030
+0.057
+0.018
+ηBB
+0.054
+0.109
+0.051
+0.099
+ηBB,c
+0.163
+0.150
+IMEP (bar)
+5.641
+3.310
+5.840
+3.463
+ISFC [g/(kW·h)]
+251.4
+306.7
+253.2
+310.4
+Compared with the prototype engine, both λS and ηS in the optimal design results are improved,
+yet ηT declines to some extent. With regard to the ﬁtting coefﬁcients, x and y, of the Benson/Bradham
+model, both of the two are closer to ideal values, respectively (i.e., x is closer to 1 and y is closer to 0
+after optimization). As a consequence, the combined evaluation objective function, ηBB,c, descends
+with an increasing x and a decreasing y. The whole scavenging process approaches more closely to
+the ideal perfect displacement model after optimization, which means the expected reﬁnement has
+been received. For one thing, the comparatively notable increase of ηS, with the slight decrease of ηT,
+indicates that the scavenging quality of the optimal design is superior to that of the prototype engine.
+For another, the evaluation objective function, ηBB,c, based on the Benson/Bradham model is proven
+to reﬂect the scavenging quality.
+As for conventional performance indexes, there are also improvements in IMEP, with a 3.4%
+increase under the high load and a 4.6% increase under the partial load, respectively. Additionally,
+ISFC shows a 0.7% increase under the high load and a 1.2% increase under the partial load. Because
+λS and ηS go up while ηT declines slightly after optimization, more fresh charge is delivered into the
+cylinder and retained there after the end of the scavenging process, and the short circuit loss also
+grows accordingly. Therefore, the enhancement of IMEP caused by more fresh charge trapped in the
+cylinder and the improvement of ISFC due to more fresh charge leaking out of the cylinder takes place
+simultaneously. Taken together, the optimal design shows superior progress in the power performance
+while marginally deteriorating the fuel economy, which makes it still acceptable overall.
+However, targeted improvement in the power performance and fuel economy cannot be achieved
+with ηBB,c as the optimization goal since there is no direct relationship between the coefﬁcients of
+the Benson/Bradham model and engine performance indexes. In addition, when ηBB,c is selected
+as the evaluation objective function, different operating conditions are considered simultaneously,
+but the weights of the concerned operating conditions are not easy to identify (we make no distinction
+between the high load and partial load in this paper), which also brings some deﬁciency into this
+optimizing method.
+4.3. 3D Flow Field Visualization
+With the powerful visualization tools provided by AVL FIRE simulation, various sectional views
+of the gas composition distribution inside the cylinder are accessible. As shown in Figure 18a, the X
+section passes through the cylinder axis and is exactly the symmetry plane of the cylinder. As shown
+in Figure 18b, the Z section is normal to the cylinder axis and passes through the center of four ports
+located on the cylinder wall.
+
+
+===== page 20 =====
+
+Energies 2018, 11, 2739
+20 of 26
+(a) 
+(b) 
+Figure 18. (a) X section; (b) Z section.
+150◦CA, 180◦CA, and 210◦CA are selected as the representative crank angles of the whole
+scavenging process. X cross-sectional views and Z cross-sectional views of both the prototype engine
+and the optimal design under two different operating conditions are presented. The color in these
+ﬁgures indicates the proportion of fresh charge. The value of 1 indicates all fresh charge while 0
+indicates all burned gas. The 3D ﬂow ﬁeld visualization results show that:
+(1)
+As shown in Figures 19–22, when comparing the scavenging process of the prototype engine
+under two operating conditions, it is not difﬁcult to ﬁnd that the fresh intake charge under
+the high load is less than that of the partial load in the initial stage of the scavenging process
+(150 ◦CA). The in-cylinder pressure under the high load is higher than that of the partial load and
+the exhaust process takes a longer time, thus the in-cylinder pressure is still at a high level after
+the scavenging port opening. As a result, the pressure of the fresh charge is not enough to enter
+the cylinder in the early scavenging phase. Contrastingly, the fresh charge intake under the high
+load is notably more than that of the partial load at 180 ◦CA and 210 ◦CA. Because the throttle is
+wide open under the high load, the crankcase pressure is higher and the piston motion is faster
+and the crankcase scavenged process is more effective, thus more fresh charge is delivered into
+the cylinder. This signiﬁcant difference can be perceived based on the λS simulation data as well.
+(2)
+As shown in Figures 19 and 20, when comparing the simulation results of the prototype engine
+and optimal design under the partial load, it can be found that at 150 ◦CA, the fresh charge intake
+of the prototype engine case is more than that of the optimal design case, especially around
+the lateral scavenging ports; at 180 ◦CA, the situation is similar to the high load simulation
+results, fresh charge distribution is biased toward the upper part of the cylinder with a larger
+“coverage area” after the optimal design; at 210 ◦CA, the optimal design results still show
+advantages over the prototype engine results in the scavenging quality. For the latter case,
+fresh charge is concentrated on the side of the central scavenging port as shown in the relevant Z
+cross-sectional views. Both lateral scavenging ports are inclined toward the central scavenging
+port. In consequence, corresponding gas motion due to the arrangement of the lateral scavenging
+ports hinders the fresh charge from entering the cylinder through the central scavenging port,
+and eventually gives rise to airﬂow obstruction and reduces the scavenging quality.
+(3)
+As shown in Figures 21 and 22, when comparing the simulation results of the prototype
+engine and optimal design under the high load, it can be concluded that their gas composition
+
+
+===== page 21 =====
+
+Energies 2018, 11, 2739
+21 of 26
+distributions in the cylinder at 150 ◦CA are similar; at 180 ◦CA, fresh charge inside the cylinder
+is more biased toward the upper part in the optimal design results; at 210 ◦CA, fresh charge
+has reached more than 75% of the area of the entire cylinder after optimization. By contrast,
+the proportion of fresh charge in the combustion area is relatively low in the prototype engine
+case, which means the burned gas has not been cleared out of the cylinder even in the ﬁnal
+scavenging phase.
+Investigated factor values before and after optimization are displayed in Table 10. Taken together,
+the optimal design has a larger αC and αl, which yields better scavenging effects especially for the
+upper part of the cylinder, while a smaller βS alleviates the conﬂict impact resulted from the gas motion
+of fresh charge entering the cylinder through the central scavenging port and the lateral scavenging
+ports. The combination of these two points contributes to the optimal design results with a higher
+scavenging efﬁciency.
+Table 10. Investigated factor values before and after optimization.
+Factors
+Prototype Engine
+Optimal Design
+αC (◦)
+55
+60
+αl (◦)
+0
+20
+βl (◦)
+30
+20
+γC
+23.81%
+23.81%
+ 
+Figure 19. X cross-sectional views of the prototype engine simulation case and optimal design
+simulation case under the partial load operating condition.
+
+
+===== page 22 =====
+
+Energies 2018, 11, 2739
+22 of 26
+ 
+Figure 20. Z cross-sectional views of the prototype engine simulation case and optimal design
+simulation case under the partial load operating condition.
+ 
+Figure 21. X cross-sectional views of the prototype engine simulation case and optimal design
+simulation case under the high load operating condition.
+
+
+===== page 23 =====
+
+Energies 2018, 11, 2739
+23 of 26
+Figure 22. Z cross-sectional views of the prototype engine simulation case and optimal design
+simulation case under the high load operating condition.
+5. Discussion and Conclusions
+As a common power source for widely applied small and medium-sized UAVs, the two-stroke
+small areoengine was selected as the research focus in this paper. Because of the particular scavenging
+system structure, the scavenging process features prominently in the engine power performance
+and fuel economy. Scavenging models are also proposed to describe the corresponding scavenging
+process. However, few previous researchers have paid enough attention to these more accurate
+and sophisticated scavenging models when optimizing the design of original ports’ arrangement.
+To illuminate this uncharted area, we selected the comprehensive evaluation objective function
+based on the Benson/Bradham model as the optimization goal and performed the 1D/3D coupling
+simulation to verify the optimal design results. Although demonstrated by preliminary simulation
+results, this optimization method suffers from some limitations due to the lack of a practical bench
+test of the redesigned two-stroke small areoengine. Despite that inadequacy, the present research
+ﬁndings provide the requisite criteria necessary for the appropriate design of a crankcase scavenging
+system, which plays a vital role in engine performance improvement. Detailed analysis leads to the
+following conclusions:
+(1)
+With respect to the investigated prototype engine scavenging system, there exists an obvious
+trade-off relationship between the scavenging efﬁciency, ηS, and trapping efﬁciency, ηT,
+which makes it difﬁcult to balance the power performance and fuel economy during the
+optimization process.
+(2)
+Characteristics of the actual gas exchange process can be indicated by the key parameters, x and
+y, and the evaluation objective function, ηBB,c, based on the Benson/Bradham model was proven
+to reﬂect the scavenging quality precisely.
+(3)
+From the OED results analysis, it is clear that the slip angle of lateral scavenging ports, βl,
+has the most signiﬁcant inﬂuence on ηBB,c, followed by the tilt angle of lateral scavenging ports,
+αl, while the tilt angle of the central scavenging port, αC, and the width ratio of the central
+
+
+===== page 24 =====
+
+Energies 2018, 11, 2739
+24 of 26
+scavenging port, γC, are not statistically signiﬁcant in terms of their inﬂuence on ηBB,c. The best
+factors combination is αC = 60◦, αl = 20◦, βl = 20◦, and γC = 23.81%.
+(4)
+Compared with the prototype engine, both λS and ηS in the optimal design results are improved,
+yet ηT declines to some extent. Taken together, the optimal design results show superior progress
+in power performance (IMEP) while marginally deteriorations in the fuel economy (ISFC), which
+makes it still acceptable overall.
+(5)
+Powerful visualization tools provided by AVL FIRE software can be employed to analyze the gas
+composition distribution inside the cylinder during the whole scavenging process.
+Author Contributions: Conceptualization, K.H. and Y.Q.; Methodology, J.Q. and K.H.; Software, J.Q. and
+Y.S.; Formal Analysis, Y.Q. and X.D.; Data Curation, Y.Q. and J.Q.; Writing-Original Draft Preparation, Y.Q.;
+Writing-Review & Editing, K.H. and Y.Q.
+Funding: This research was funded by Beijing Municipal Science & Technology Commission grant number
+D17111000490000.
+Acknowledgments: The authors gratefully acknowledge the administrative and technical support from the AVL
+Shanghai Technology Center Co., Ltd. and IDAJ Beijing Co., Ltd.
+Conﬂicts of Interest: The authors declare no conﬂict of interest.
+Nomenclatures
+Abbreviations
+UAV
+unmanned aerial vehicle
+1D
+one-dimensional
+3D
+three-dimensional
+CFD
+Computational Fluid Dynamics
+BUSDIG
+Boosted Uniﬂow Scavenged Direct Injection Gasoline
+POD
+Proper Orthogonal Decomposition
+OP2S
+Opposed-Piston 2-Stroke Diesel Engine
+LICELGIS
+Linear Internal Combustion Engine-Linear Generator Integrated System
+OPHSDI
+Opposed Piston High Speed Direct Injection Diesel Engine
+OED
+Orthogonal Experimental Design
+IMEP
+indicated mean effective pressure
+ISFC
+indicated speciﬁc fuel consumption
+SPI
+single point injection
+CAD
+Computer Aided Design
+FEM
+Fame Hexa Meshing
+FEP
+Fame Engine Plus
+STM
+Standard Transport Model
+ECFM
+Extended Coherent Flame Model
+TKE
+turbulence kinetic energy
+TDC
+top dead center
+BDC
+bottom dead center
+SIMPLE
+Semi-Implicit Method for Pressure Linked Equations
+HWT
+Hybrid Wall Treatment
+SWF
+Standard Wall Function
+GSTB
+Gradient Stabilized Biconjugate
+Symbols
+mi
+mass of delivered fresh charge through all scavenging ports
+m f C
+mass of delivered fresh charge retained in cylinder
+mleak
+mass of delivered fresh charge leaking out of the cylinder
+mbg
+mass of residual burned gas retained in cylinder
+mall
+mass of all trapped cylinder charge
+m0
+reference mass
+λS
+delivery ratio
+ηS
+scavenging efﬁciency
+
+
+===== page 25 =====
+
+Energies 2018, 11, 2739
+25 of 26
+ηT
+trapping efﬁciency
+ηC
+charging efﬁciency
+Vbg
+instant burned gas volume in the cylinder
+Vall
+the whole cylinder volume
+x
+displacement ratio
+y
+short-circuiting fraction
+αC
+tilt angle of the central scavenging port
+αl
+tilt angle of lateral scavenging ports
+βl
+slip angle of lateral scavenging ports
+γC
+width ratio of the central scavenging port
+LC
+width of the central scavenging port
+Ll
+width of single lateral scavenging port
+ηBB
+elementary evaluation objective function
+ηBB,h
+evaluation objective function for the high load
+ηBB,p
+evaluation objective function for the partial load
+ηBB,c
+combined evaluation objective function
+α
+signiﬁcance level for the variance analysis
+References
+1.
+Ma, S.; Ma, L.; Xiao, B.; Yuan, Z. In Analysis of medium-sized unmanned aerial vehicle (UAV) maintenance
+and support organization.
+In Proceedings of the 2014 Prognostics and System Health Management
+Conference, Zhangjiajie, China, 24–27 August 2014; pp. 583–588.
+2.
+Groff, E.G. Automotive Two-Stroke-Cycle Engine Development in the 1980–1990’s; Technical Paper for SAE
+International: Detroit, MI, USA, 2016.
+3.
+Feng, G.; Zhou, M. Assessment of heavy fuel aircraft piston engine types. Tsinghua Sci. Technol. 2016, 56,
+1114–1121.
+4.
+Mavinahally, N.S. An Historical Overview of Stratiﬁed Scavenged Two-Stroke Engines-1901 through 2003; Technical
+Paper for SAE International: Detroit, MI, USA, 2004.
+5.
+Hori, H. Scavenging Flow Optimization of Two-Stroke Diesel Engine by Use of CFD; Technical Paper for SAE
+International: Detroit, MI, USA, 2000.
+6.
+Merker, G.P.; Gerstle, M. Evaluation on Two Stroke Engines Scavenging Models; Technical Paper for SAE
+International: Detroit, MI, USA, 1997.
+7.
+Ma, F.; Zhao, Z.; Zhang, Y.; Wang, J.; Feng, Y.; Su, T.; Zhang, Y.; Liu, Y. Simulation Modeling Method and
+Experimental Investigation on the Uniﬂow Scavenging System of an Opposed-Piston Folded-Cranktrain
+Diesel Engine. Energies 2017, 10, 727. [CrossRef]
+8.
+Brynych, P.; Macek, J.; Novella, R.; Thein, K. Representation of Two-Stroke Engine Scavenging in 1D Models
+Using 3D Simulations; Technical Paper for SAE International: Detroit, MI, USA, 2018.
+9.
+Mattarelli, E.; Rinaldini, C.A.; Savioli, T. Port Design Criteria for 2-Stroke Loop Scavenged Engines; Technical
+Paper for SAE International: Detroit, MI, USA, 2016.
+10.
+Wang, X.; Ma, J.; Zhao, H. Evaluations of Scavenge Port Designs for a Boosted Uniﬂow Scavenged Direct Injection
+Gasoline (BUSDIG) Engine by 3D CFD Simulations; Technical Paper for SAE International: Detroit, MI,
+USA, 2016.
+11.
+Ma, J.; Zhao, H. The Modeling and Design of a Boosted Uniﬂow Scavenged Direct Injection Gasoline (BUSDIG)
+Engine; Technical Paper for SAE International: Detroit, MI, USA, 2015.
+12.
+Wang, X.; Ma, J.; Zhao, H. Analysis of the Effect of Intake Plenum Design on the Scavenging Process in a 2-Stroke
+Boosted Uniﬂow Scavenged Direct Injection Gasoline (BUSDIG) Engine; Technical Paper for SAE International:
+Detroit, MI, USA, 2017.
+13.
+Khoury, R.R.E.; Errera, M.; Khoury, K.E.; Nemer, M. Efﬁciency of coupling schemes for the treatment of
+steady state ﬂuid-structure thermal interactions. Int. J. Therm. Sci. 2017, 115, 225–235. [CrossRef]
+14.
+Rinaldini, C.A.; Mattarelli, E.; Golovitchev, V. CFD Analyses on 2-Stroke High Speed Diesel Engines. SAE Int.
+J. Engines 2011, 7, 2240–2256. [CrossRef]
+
+
+===== page 26 =====
+
+Energies 2018, 11, 2739
+26 of 26
+15.
+Zirngibl, S.; Held, S.; Prager, M.; Wachtmeister, G. Experimental and Simulative Approaches for the Determination
+of Discharge Coefﬁcients for Inlet and Exhaust Valves and Ports in Internal Combustion Engines; Technical Paper
+for SAE International: Detroit, MI, USA, 2017.
+16.
+Nuccio, P.; Denno, D.D.; Magno, A. Development through Simulation of a Turbocharged 2-Stroke G.D.I. Engine
+Focused on a Range-Extender Application; Technical Paper for SAE International: Detroit, MI, USA, 2017.
+17.
+Cui, L.; Wang, T.; Sun, K.; Lu, Z.; Che, Z.; Sun, Y. Numerical Analysis of the Steady-State Scavenging Flow
+Characteristics of a Two-Stroke Marine Engine; Technical Paper for SAE International: Detroit, MI, USA, 2017.
+18.
+Xie, Z.; Zhao, Z.; Zhang, Z. Numerical Simulation of an Opposed-Piston Two-Stroke Diesel Engine; Technical
+Paper for SAE International: Detroit, MI, USA, 2015.
+19.
+Zang, P.; Wang, Z.; Fu, Y.; Sun, C. Investigation of Scavenging Process for Steady-State Operation of a Linear
+Internal Combustion Engine-Linear Generator Integrated System; Technical Paper for SAE International: Detroit,
+MI, USA, 2017.
+20.
+Mattarelli, E.; Rinaldini, C.A.; Savioli, T.; Cantore, G.; Warey, A.; Potter, M.; Gopalakrishnan, V.; Balestrino, S.
+Scavenge Ports Optimization of a 2-Stroke Opposed Piston Diesel Engine; Technical Paper for SAE International:
+Detroit, MI, USA, 2017.
+21.
+Li, Z.; He, B.-q.; Zhao, H. Inﬂuences of intake ports and pent-roof structures on the ﬂow characteristics of a
+poppet-valved two-stroke gasoline engine. Int. J. Engine Res. 2016, 17, 1077–1091. [CrossRef]
+22.
+He, C.; Xu, S. Transient Gas Exchange Simulation and Uniﬂow Scavenging Analysis for a Unique Opposed Piston
+Diesel Engine; Technical Paper for SAE International: Detroit, MI, USA, 2016.
+23.
+Zhou, L.; Zhang, H.; Zhao, Z.; Zhang, F. Research on Opposed Piston Two-Stroke Engine for Unmanned Aerial
+Vehicle by Thermodynamic Simulation; Technical Paper for SAE International: Detroit, MI, USA, 2017.
+24.
+Zhao, F. Simulation Analysis and Optimization on the Scavenging Process for the Uniﬂow-Scavenge Diesel
+Engine. Master’s Thesis, Dalian University of Technology, Dalian, China, 6 July 2010.
+25.
+Grljuši´c, M.; Tolj, I.; Radica, G.; Sciubba, E. An Investigation of the Composition of the Flow in and out of a
+Two-Stroke Diesel Engine and Air Consumption Ratio. Energies 2017, 10, 1. [CrossRef]
+26.
+Taylor, C.F. The Internal-Combustion Engine in Theory and Practice: Thermodynamics, Fluid Flow, Performance,
+2nd ed.; MIT Press: Cambridge, UK, 1985.
+27.
+Γ Technologies, Engine Performance Application Manual, GT-Power Version 7.1. Available online: http:
+//www.gtisoft.com/ (accessed on 19 July 2018).
+28.
+Ma, F.K.; Wang, J.; Feng, Y.N.; Zhang, Y.G.; Su, T.X.; Zhang, Y.; Liu, Y.H. Parameter Optimization on the
+Uniﬂow Scavenging System of an OP2S-GDI Engine Based on Indicated Mean Effective Pressure (IMEP).
+Energies 2017, 10, 368. [CrossRef]
+29.
+Dong, X.F.; Zhao, C.L.; Zhang, F.J.; Zhao, Z.F.; Xie, Z.Y. Experiment on the Scavenging Process of Opposed-Piston
+Two-Stroke Diesel Engine. Trans. CSICE 2015, 33, 362–369.
+30.
+Sher, E.; Harari, R. A simple and realistic model for the scavenging process in a crankcase-scavenged
+two-stroke cycle engine. Proc. Inst. Mech. Eng. Part A J. Power Energy 1991, 205, 129–137. [CrossRef]
+31.
+Wu, J. Similar design method used on the port size on the two-stroke diesel engine. Trans. Eng. Thermophys.
+1981, 2, 145–153.
+32.
+Dang, D.; Wallace, F.J. Some single zone scavenging models for two-stroke engines. Int. J. Mech. Sci. 1992, 34,
+595–604. [CrossRef]
+33.
+Kim, I.Y.; DeWeck, O.L. Adaptive weighted sum method for multi-objective optimization: A new method
+for Pareto front generation. Struct. Multidiscip. Optim. 2006, 31, 105–116. [CrossRef]
+© 2018 by the authors. Licensee MDPI, Basel, Switzerland. This article is an open access
+article distributed under the terms and conditions of the Creative Commons Attribution
+(CC BY) license (http://creativecommons.org/licenses/by/4.0/).

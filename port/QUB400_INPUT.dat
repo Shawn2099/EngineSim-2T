@@ -1,0 +1,42 @@
+85.0 ! BO ! mm ! 9597
+70.0 ! ST ! mm ! 9598
+125.0 ! CRL ! mm ! 9599
+3000 ! RPM ! rev/min ! 9600
+6.7 ! TCR ! - ! 9602
+1.45 ! CCR ! - ! 9603
+400 ! TEXC ! degC ! 9601
+96 ! EPO ! deg ATDC ! 9604
+180 ! EPFO ! deg ATDC ! 9605
+1 ! NEP ! count ! 9606
+54.8 ! WEP ! mm ! 9607
+12 ! RTE ! mm ! 9608
+12 ! RBE ! mm ! 9609
+118 ! TPO ! deg ATDC ! 9610
+180 ! TPFO ! deg ATDC ! 9611
+6 ! NTP ! count ! 9612
+15.3 ! WTP ! mm ! 9613
+3 ! RTT ! mm ! 9614
+3 ! RBT ! mm ! 9615
+SCRE ! SCAV$ ! - ! 9616
+60 ! IPO ! deg BTDC ! 9617
+0 ! IPFO ! deg ATDC ! 9618
+1 ! NIP ! count ! 9619
+45.0 ! WIP ! mm ! 9620
+6 ! RTI ! mm ! 9621
+6 ! RBI ! mm ! 9622
+200 ! LEP1 ! mm ! 9758
+38 ! DEP1 ! mm ! 9759
+200 ! LEP2 ! mm ! 9760
+38 ! DEP2 ! mm ! 9761
+10000 ! VBOX ! cm3 ! 9762
+N ! SIL$ (answer N = PLAIN BOX) ! - ! 26451
+90.0 ! LTP ! mm ! 9623
+1.35 ! TRAR ! - ! 9624
+200.0 ! LIP ! mm ! 9625
+34.0 ! DIP ! mm ! 9627
+1.0 ! THAR (run A; run B = 0.25) ! - ! 9626
+1.25 ! NC ! - ! 9631
+1.35 ! NE ! - ! 9632
+0.85 ! BEFF ! - ! 9628
+60.0 ! BDEG ! deg ! 9629
+13 ! TAF ! - ! 9630

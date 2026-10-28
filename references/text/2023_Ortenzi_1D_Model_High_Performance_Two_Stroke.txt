@@ -1,0 +1,1762 @@
+TITLE: A One-Dimensional Numerical Model for High-Performance Two-Stroke Engines
+YEAR: 2023
+FILE: 2023_Ortenzi_1D_Model_High_Performance_Two_Stroke.pdf
+PAGES: 24
+EXTRACTED_WITH: PyMuPDF PyMuPDF 1.28.2
+
+
+===== page 1 =====
+
+Citation: Ortenzi, F.; Bossaglia, A. A
+One-Dimensional Numerical Model
+for High-Performance Two-Stroke
+Engines. Energies 2023, 16, 4947.
+https://doi.org/10.3390/en16134947
+Academic Editors: Georgios
+Mavropoulos, E.C. Andritsakis
+and Roussos G. Papagiannakis
+Received: 8 April 2023
+Revised: 25 May 2023
+Accepted: 28 May 2023
+Published: 26 June 2023
+Copyright:
+© 2023 by the authors.
+Licensee MDPI, Basel, Switzerland.
+This article is an open access article
+distributed
+under
+the
+terms
+and
+conditions of the Creative Commons
+Attribution (CC BY) license (https://
+creativecommons.org/licenses/by/
+4.0/).
+energies
+Article
+A One-Dimensional Numerical Model for High-Performance
+Two-Stroke Engines
+Fernando Ortenzi 1,*
+and Andrea Bossaglia 2
+1
+ENEA—Italian Agency for New Technologies, Energy and Sustainable Economic Development,
+00123 Rome, Italy
+2
+IAME Karting, 24040 Zingonia di Verdellino, Italy; a.bossaglia@iamekarting.com
+*
+Correspondence: fernando.ortenzi@enea.it
+Abstract: Computer software that simulates the thermodynamic and gas dynamic properties of
+internal combustion engines can play a signiﬁcant role in the design and optimization of internal
+combustion engines. In the present work, a quasi-dimensional numerical model for two-stroke
+engines is presented. Particular attention was paid to reporting in-cylinder models, combustion
+(turbulent with ﬂame development and ﬂame–wall interaction), and turbulence (K-k-ϵ model), with
+the addition of tumble- and squish-generated turbulence that is quite common in such engines. The
+aim was to reduce the role of the calibration constants, which are fundamental for correlating the
+models with the experiments, and relations for calculating the tumble ratio and turbulent scales were
+reported. A one-dimensional model for manifolds is also presented (solving the Euler equations),
+using the second-order Roe Riemann solver with some improvements, paying particular attention to
+the source terms, such as area variation. Additionally, a new approach to the end-pipe boundaries,
+which would reduce the mass conservation error, is reported. The engines tested were two kart
+two-stroke engines, used for racing purposes: the IAME X30 engine and the IAME Screamer III
+KZ engine. A comparison between the model results and the experimental data was made, and good
+accordance was observed, with a root mean square error of about 0.5 kW and providing good accuracy
+in evaluating changes, such as the combustion chamber squish area and the exhaust pipe length.
+Keywords: two-stroke engines; combustion; turbulence; 1D gas dynamic model; Riemann solvers
+1. Introduction
+Computer software is widely used in the design and development process of internal
+combustion engines; time and cost are the advantages of using such software. Based
+on the level of detail required, different approaches can be taken. Three-dimensional
+models offer very highly detailed information on turbulence, combustion, injection, and
+emissions [1,2]. With recent advancements in computing power and CFD algorithms, 2D
+and 3D simulations of internal combustion engines are now possible, although they do
+require a higher computational cost than 1D simulations require. Evidence of this advance-
+ment can be found in the references, such as [1,2]. Additionally, recent developments in
+high-performance computing (HPC) and machine learning (ML) technology have led to the
+development of ML-accelerated CFD simulations and data-driven surrogates of engines,
+accelerating the time to achieve solution and design, as seen in references such as [3].
+Furthermore, 1D models are a useful tool for quick analysis and performance modeling
+and have signiﬁcant advantages in terms of computational time, as seen when they are
+applied for multi-cylindrical engines with more complex intake ducting, together with
+turbo-compressor devices. As an example, a one-dimensional model requires about 360 s
+to run a simulation (for the IAME X30 engine used in the present paper) of 30 iterations
+for each rpm from 6000 rpm to 16,000 rpm, with a step of 500 rpm. Furthermore, multi-
+variable optimization algorithms can be applied, which provide very useful results when
+Energies 2023, 16, 4947. https://doi.org/10.3390/en16134947
+https://www.mdpi.com/journal/energies
+
+
+===== page 2 =====
+
+Energies 2023, 16, 4947
+2 of 24
+the purpose is to ﬁnd the optimal values of engine parameters, such as power and torque.
+A great deal of the literature addresses the development of such models, mainly for four-
+stroke engines, from one-zone combustion models to more complex multizone turbulent
+models [4]; meanwhile, in the work of [5], a very important assessment for the solution
+of the one-dimensional hyperbolic system of the equations for manifolds can be found.
+Additionally, some of the literature addresses this with regard to two-stroke engines [6,7],
+and the works of Blair are among them [7]. There is a signiﬁcant contribution in tuning,
+designing, and simulating two-stroke and four-stroke engines, and also a large amount of
+experimental data for end-pipe discharge coefﬁcients, scavenging empirical models, engine
+friction, etc., in [7,8], also used in the present work. However, some limitations have been
+observed in the GPB model [7]; for example, it is a ﬁrst-order not “shock capturing” scheme
+which needs iterative cycles in order to resolve the equations for tapered or convergent
+ducts, which does not allow for supersonic ﬂow in the shock tube, and which does not
+remove the hypothesis of ideal gases.
+Motorsport is one of the sectors in which computer-aided design software can play an
+important role. Development and calibration tests can be improved, due to the software’s
+considerable advantage in testing engine architecture, with signiﬁcant reductions in time
+and cost compared to those of engine test bed experimentation or on-track tests. However,
+empiricism continues to play a signiﬁcant role in design and optimization, especially in
+two-stroke engines. There are still segments of motorsport that continue to use two-stroke
+engines; their low cost, simplicity, and high speciﬁc power ratio make this technology
+attractive. One of them is professional karting [9], in which karts are mainly powered
+by these engines, with the exception of rental karts, which may be electric or powered
+by four-stroke engines. However, they have limits, such as emissions and, importantly,
+unburnt hydrocarbons. Those emissions, if required, can be controlled with commercial
+devices, such as automotive catalysts that can reduce them. Moreover, the carbon footprint
+impact can be reduced by using low-carbon fuels or biofuels, as in four-stroke engines.
+In this work, a numerical code was developed, improving that which was presented
+in [10,11]; in [10], it was applied to four-stroke engines, thus developing an improved mul-
+tipipe junction model [10]. Additionally, in [11], it was applied to evaluate the mechanical
+and thermal efﬁciency of a co-generator. In the present work, this numerical code was
+applied and tuned in order to simulate the performance of two-stroke engines. This study
+is focused on the in-cylinder process; in particular, the combustion and turbulent model,
+and the one-dimensional manifold model, which requires a particular treatment compared
+to four-stroke engines. The combustion process, as shown in [12], has been modeled in
+three parts: the ﬁrst—the early part—is governed by the laminar combustion speed, which
+grows to become turbulent; the second represents the fully turbulent speed; the last is
+the end combustion, where the interaction among the head, piston, and cylinder walls
+reduces the combustion speed and causes it to become laminar [13]. The K-k-ϵ turbulence
+model [14], which accounts for tumble and squish, has been applied to two-stroke engines;
+it has been reﬁned, using the momentum equation, to calculate the intake energy ﬂowing
+into the cylinder, with the advantage of reducing the inﬂuence of calibration constants, as
+applied in [14]. A tumble coefﬁcient has also been calculated to be used for two-stroke
+loop-scavenged engines. Such a calculation reduces, but does not nullify, the need for
+experimental data and allows the modeling of such engines to take place with a good
+accuracy. The model has also introduced a reﬁned version of the Riemann solver of ROE,
+applied to one-dimensional manifolds [15–17], which modiﬁes the source term treatment
+and, in particular, the area variation term, which is quite common in racing engines, and
+especially in two-stroke ones. With the improvements developed, such a model is also
+able to treat abrupt area variations. The pipe end boundaries, when calculated using the
+method of characteristics, are sources of inaccuracies, especially in mass conservation
+during backﬂow.
+The IAME X30 125 cc is the low-cost mono-brand engine used for IAME X30 senior and
+junior karting classes. The latter differs only for the insertion of a restrictor at the exhaust to
+
+
+===== page 3 =====
+
+Energies 2023, 16, 4947
+3 of 24
+decrease the maximum power from about 22 kW to 15 kW. It is a highly successful class with
+hundreds of drivers in the national championships due to its low cost and maintenance. It
+has a direct drive (no gearbox), an electric start, and it is derived from 1990s 100 cc kart
+engines, having three transfer ports, an intake reed valve, and the exhaust silencer inside
+the exhaust manifold. The KZ 125 cc class represents the maximum expression of karting
+performances, with a six-speed gearbox and with a maximum power of approximately
+37 kW. It has a maximum allowed carburetor diameter limited to 30 mm by regulations,
+with an intake reed valve, ﬁve transfer ports, and three exhaust ports. It also has a limitation
+in terms of its maximum compression ratio of about 12.3, which limits its maximum power.
+This paper is organized as follows: After the present introduction, Section 2 reports the
+information of the developed model. Section 2.1 analyzes the combustion model in detail,
+considering early laminar-like combustion, the main combustion process, and the late part
+inﬂuenced by the ﬂame/cylinder walls interaction. The turbulence model is described in
+Section 2.2: it is a K-k-ϵ that accounts for mean ﬂow, tumble ﬂow, squish, turbulence, and
+its dissipation along with the turbulence scales. Section 2.3 presents the one-dimensional
+model developed for manifolds, utilizing the ROE model that considers all source terms in
+the calculation of ﬂuxes and provides an increased accuracy if strong area variations are
+present. A technique to improve the accuracy on the end pipes modeling is reported in
+Section 2.4: the method of characteristics, commonly used in boundaries, is a ﬁrst-order
+model and can lead to inaccuracies in the presence of surface discontinuities. The results
+are shown in Section 3, where the results of the model are compared with the experimental
+data. Finally, the conclusions are outlined in Section 4.
+2. Methodology
+Two-stroke engines, especially loop-scavenged ones, offer several advantages such as
+simplicity, compactness, and high specific power. They also lack auxiliaries like valvetrains,
+so they do not have strong limitations in terms of maximum crankshaft rpm (revolution per
+minute). Therefore, it is not uncommon for these engines to run at speeds of 16,000 rpm
+or more. Additionally, the design of the intake and exhaust systems play a crucial role
+in optimizing engine performance, with the exhaust system featuring a particular shape
+to maximize the volumetric efficiency. Consequently, it is quite common to find exhaust
+manifolds with a big variation area optimized for the application where the engine is designed.
+In order to develop a model capable of simulating the behavior of such engines, the
+above characteristics, which are quite different with respect to 4-stroke engines, have to
+be considered. All the geometries and processes must be reproduced by numerical code
+and, even if a two-stroke engine seems quite simple, there are numerous phenomena to
+take into account. The geometry of the intake, transfer, and exhaust ports connected to the
+cylinder [7] have been represented with a trapezoidal shape smoothed at the angles, so
+both the intake ports and the exhaust with auxiliary ports can be reproduced realistically.
+Such ports, during an engine cycle, are totally or partially covered by the piston skirt, and
+for each piston position, the uncovered area must be calculated.
+The geometry and dynamics of the reed valves and stop plates [7,12,18,19] have been
+simulated as cantilever beams taking into account its interaction with the stop plates. When
+the pressure at the intake port is higher than the crankcase pressure, the reed valve receives
+a force that deﬂects it and then opens the port. The dynamics are modeled using the modal
+analysis, simulating the ﬁrst two modes of vibration, and the integration method is the
+Runge–Kutta 4th order.
+When the ﬂow enters in a duct, or passes through the transfer port, reed valve,
+throttle, etc., the three-dimensional nature of the ﬂow is not taken into account within the
+one-dimensional model; the effective area of the port is not its geometrical area. Such a
+problem can be overcome using discharge coefﬁcients unique for each type of boundary
+device. These coefﬁcients are functions of the area ratio of the port, reed, or throttle, but are
+functions also of the pressure ratio across the device. Such coefﬁcients are then stored in
+three-dimensional matrixes, and for each area ratio and pressure ratio, they return as an
+
+
+===== page 4 =====
+
+Energies 2023, 16, 4947
+4 of 24
+output the discharge coefﬁcient. All the data and the procedure to interpolate the tabulated
+data are taken from [8,18–20].
+When the intake and exhaust ports are open (the scavenge process), a model must be
+developed to calculate the short circuit fraction (the intake mixture, composed by air, fuel,
+and oil that ﬂows directly to the exhaust), the mixing, and the perfect displacement zones.
+The scavenge process was modeled following the approach outlined in references [7,19],
+with two thermodynamic zones (fresh mixture ﬂowing to the cylinder and exhaust gas of
+the previous combustion), where the volumetric scavenging efﬁciency (SEv) is a function
+of the volumetric delivery ratio (DRv) as follows [7]:
+SEv = 1 −ek0+k1·DRv+k2·DR2
+(1)
+where the coefﬁcients k0, k1, k2 are empirical and are calibrated with experimental data.
+The zero-dimensional objects, such as the plenums, crankcases, and the cylinders,
+are solved using mass, energy conservation, and a real gas equation to calculate all the
+thermodynamic parameters. A single thermodynamic zone was used where the above
+equations are solved [4]:
+m·cv·dT
+dt = dhin
+dt −dhout
+dt
+−dQht
+dt
+−P·dV
+dt −u·dm
+dt
+(2)
+dm
+dt = dmin
+dt
+−dmout
+dt
+(3)
+P·V = m·R·T
+(4)
+The cylinder, during combustion and scavenge, is solved using a two-zones thermody-
+namic model, the fresh mixture, and the exhaust gas. Further details can be found in [4].
+The energy equation during combustion for the fresh mixture is:
+mm · dhm
+dt
+= Vm · dP
+dt −dQm
+dt
++ (hm −hcr) · dmmcr
+dt
+(5)
+While for the burned gas, it is:
+mb · dhb
+dt = Vb · dP
+dt −dQb
+dt + (hm −hb) · dmmcr
+dt
+−(hcr −hb) · dmbcr
+dt
+(6)
+dmcr
+dt
+=
+Vcr
+Rcr · Tp
+· dP
+dt
+(7)
+The term mmcr is the mass present in the crevices of the combustion chamber, and its
+derivative represents the ﬂowrate from the cylinder to the crevices and vice versa.
+The next three topics will be discussed in detail in the following sections:
+•
+The combustion process: a turbulent combustion model has been developed, taking into
+account the combustion chamber geometry, turbulence level, and fuel characteristics.
+•
+Turbulence: a K-k-ϵ model has been developed to be connected with the combustion
+model and in-cylinder heat transfer. It takes into account the mean ﬂow, tumble ﬂow,
+squish, turbulence, and its dissipation together with the turbulence scales.
+•
+One-dimensional gas dynamic ﬂow: in this work, we used a one-dimensional Riemann
+solver called the Roe model, with some modiﬁcations, to take into account the source
+terms (heat transfer, friction, and pipe area variation) and to enforce the area variation
+to minimize the mass conservation error.
+One of the objectives of the present paper is also to develop combustion and turbu-
+lence models that are less dependent on the calibration coefﬁcients, which are not always
+available, so even though they are present, are set to 1 and the models are tested without
+the help of the calibration with experimental data.
+
+
+===== page 5 =====
+
+Energies 2023, 16, 4947
+5 of 24
+2.1. Engine Combustion
+This section will report all the sub-models developed to model the in-cylinder pro-
+cesses needed to simulate the two-stroke engines, which is the object of is paper.
+The gas within the cylinder is treated with a zero-dimensional phenomenological
+model considering all the processes [4,21].
+Once the scavenge phase is completed and the exhaust ports are closed, the compres-
+sion phase begins. This phase is modeled as a zero-dimensional thermodynamic single
+zone composed of fresh mixture and a part of the exhaust gases of the previous cycle. The
+ﬂow (main and turbulent) is also zero-dimensional, incorporating rotating (tumble) ﬂow,
+squish ﬂow, non-rotating, and turbulent ﬂow. The heat transfer is modeled by taking into
+account the ﬂow information calculated by the thermodynamic and ﬂow model.
+After the spark plug ignition, the cylinder is modeled using a quasi-dimensional two-
+zones thermodynamic model, the mixture, and the burned zone, with the specification of the
+flame front and the burning rate with the interaction of the turbulence and the cylinder walls.
+After the combustion is completed, the expansion phase and finally scavenge will occur.
+In the present work, the details of the combustion model and turbulence are reported,
+while the other sub-models will be reported in the reference section.
+The combustion model adopted is a quasi-dimensional two-zone combustion model
+and is divided in three parts: the ﬁrst, immediately after the ignition, where the combustion
+is almost laminar, then a fully turbulent combustion, and ﬁnally a part where the interaction
+between the ﬂame front and cylinder walls inﬂuences the burning rate.
+The assumption is that the ﬂame front has a spherical shape as is also assumed
+by [4,22,23], the combustion chamber is spherical with Squish, and, for each piston position
+and ﬂame front radius, the ﬂame area and the wetted cylinder walls are calculated.
+The ﬁrst phase of the combustion, starting with a speed nearly laminar and growing
+towards turbulent conditions, has been studied and reported by many authors, and an
+overview is reported in [12,21]. Between them, the ﬂame development factor (FDF) chosen
+from the present work is reported in Equation (8) [12,24,25]:
+FDF =
+
+1 −e−CFDF·0.28·( t
+τ )0.750.5
+(8)
+where:
+τ = lT
+u′ : characteristic time;
+lT: integral scale of the turbulence m;
+u′: turbulent speed m/s.
+where CFDF is a calibration coefﬁcient and t is the time in seconds from spark ig-
+nition. There is a large bibliography about turbulent combustion models, composed by
+Damkohler [26], to fractal-based models [13] and eddy entrainment models [14]; the one
+used in the present work is that from Gulder [26] (Equation (9)).
+ST = vlam + CS·0.62·
+ u′·vlam
+0.5·ReT0.25
+(9)
+where:
+CS is a calibration coefﬁcient;
+vlam is the laminar speed m/s;
+ReT is the turbulent Reynolds number.
+When the ﬂame front interacts with the combustion chamber walls, another modiﬁca-
+tion of the burning rate must be introduced to take into account this phenomenon.
+The correlation used is [13] (Equation (10)).
+wwall = Ab
+lat
+Atot
+lat
+·
+ mb
+mtot
+10·Cwall
+(10)
+where:
+
+
+===== page 6 =====
+
+Energies 2023, 16, 4947
+6 of 24
+Ab
+lat is the cylinder wall area wetted by the burned zone;
+Atot
+lat is the total cylinder walls area;
+mb is the burned mass;
+mtot is the total mass in the cylinder;
+Cwall is the calibration coefﬁcient.
+The ﬁnal formula for the combustion speed is:
+uT = vlam + CS·(1 −wwall)·FDF·0.62·
+ u′·vlam
+0.5·ReT0.25
+(11)
+while the combustion rate is:
+dmb
+dt
+= ρm·uT·A f
+(12)
+where:
+ρm: mixture density;
+A f : ﬂame front surface area.
+In the present work, the default values of the calibration constant, in the absence of
+more detailed measured data (for example, the measure of the indicated cycle) or 3D CFD
+data, are all set to 1, as reported in Table 1.
+Table 1. Default value for the calibration coefﬁcients used in the present work.
+Coefﬁcient
+Default Value
+CFDF
+1
+CS
+1
+Cwall
+1
+Figure 1 demonstrates the mass burned fraction during the combustion varying the
+values of the three coefﬁcients, CFDF CS Cwall, inﬂuencing the start, the main process, and
+the end of the combustion.
+ 
+ 
+ 
+Figure 1. Inﬂuence of the calibration constants (CFDF, Cs, and Cwall) on combustion (Rpm = 11,500).
+The flame surface area, needed to calculate the burning rate, was calculated assuming
+that the combustion chamber is spherical with a squish band with the spark plug in the center
+of the chamber, so for each value of the burned mass and volume, the flame radius, the flame
+area, and the cylinder walls wetted by each zone (burned and mixture) are calculated.
+2.2. In-Cylinder Turbulence
+The combustion model reported in the previous section requires some information
+about ﬂow, speciﬁcally the turbulence speed u′ and the integral scale of turbulence lT.
+Such parameters can be calculated using a turbulence model within the cylinder in all
+the phases (compression, combustion, expansion, and exhaust/scavenge). The model used,
+a K-k-ϵ model, has the capability to reproduce the mean ﬂow, the turbulent ﬂow, and its
+dissipation. The mean ﬂow is divided into two parts: the rotating ﬂow (tumble) and the
+non-rotating ﬂow. The model is well explained in [14,27,28] for four-stroke engines, and in
+the present work will be extended for two-stroke ones.
+
+
+===== page 7 =====
+
+Energies 2023, 16, 4947
+7 of 24
+The tumble ﬂow is deﬁned as the rotating ﬂow in the cylinder and is calculated using
+the momentum conservation equation:
+dL
+dt = ∑CTumble·dmin
+dt ·velin·rTumble −L·dmex
+dt
+−τf
+(13)
+where L is deﬁned as:
+L = m·velTumble·rTumble
+(14)
+m is the mass of the gas present in the cylinder;
+velTumble is the isentropic speed at the port throat;
+The Tumble radius rTumble is deﬁned in [29].
+rTumble = 1
+2·min(Bore, H)
+(15)
+CT is the tumble coefﬁcient that represents the fraction of energy that ﬂows into the
+cylinder imparted to the tumble macro vortex. Generally, in four-stroke engines with
+poppet valves they are a function of the valve lift, and further details can be found in [14].
+During the scavenge phase, in loop-scavenged engines, theoretically, the flow is uniform
+and occupies half the cylinder area, and when it reaches the cylinder head, it starts to rotate with
+a diameter equal to the cylinder bore. In this condition, the tumble coefficient, corresponding to
+the fraction of the energy associated with the tumble flow, is calculated as follows:
+CTumble = CT0·
+R bore/2
+0
+A(r)·dr
+bore/2·APiston/2 = CT0·
+R bore/2
+0
+2·
+ bore2/4 −r20.5·r·dr
+bore/2·APiston/2
+= 0.4244·CT0
+(16)
+CT0 is a calibration constant of the order of unity to be adjusted with experimental
+data or CFD analysis.
+The wall shear torque τf is calculated using the following relation [29]:
+τf = 0.055·ρ
+2·vel2
+Tumble·Re−0.2·ALat
+(17)
+where:
+ρ is the gas density;
+Re is the Reynolds number Re = ρ·velTumble·Bore
+µ
+;
+µ is the gas viscosity.
+Finally, the production of the turbulent energy due to the tumble ﬂow is:
+PTumble = 1
+2·ωTumble·τf
+(18)
+where ωTumble = velTumble
+rTumble .
+The kinetic energy of the mean ﬂow, non-rotating, is deﬁned as:
+dK
+dt = (1 −αin)·Ein −K·dmex
+dt
++ 2
+3·K·
+.ρ
+ρ −PShear
+(19)
+where:
+K = 1
+2·m·vel2
+mean is the mean ﬂow kinetic energy;
+velmean is the mean ﬂow speed m/s;
+αin is the fraction of incoming energy that enters as turbulent energy, set to 0.1 as
+suggested in [14]. In [27], instead, the hypothesis has been made that there is no turbulence
+in the incoming ﬂow.
+
+
+===== page 8 =====
+
+Energies 2023, 16, 4947
+8 of 24
+The incoming kinetic energy Ein from the intake manifold (or backﬂow from the
+exhaust) is:
+Ein = Cin·∑
+
+(1 −CTumble)·dmin
+dt ·vel2
+*
+
+(20)
+where Cin is a calibration constant of the order of unity.
+The speed value, used to the calculation of the intake speed, vel∗, is not the isentropic
+speed velin at the transfer port (or the valve in the 4-stroke engines), but is calculated using
+the momentum conservation equation:
+vel2
+∗=
+ρin·vel2
+in·Ain −
+
+Pcyl −Pin
+
+·A∗
+piston
+ρin·A∗
+piston
+(21)
+where:
+A∗
+piston =
+(
+Apiston →f or 4 Stroke engines
+Apiston
+2
+→f or Loop Scavenged 2 Stroke engines
+(22)
+The parameters with the sufﬁx “in” are referred at the intake port and with “cyl” to
+the gas in the cylinder. If the term
+
+Pcyl −Pin
+
+·A∗
+piston is neglected, the term vel2
+∗reduces
+to
+Ain
+A∗
+piston ·vel2
+in, and, for four-stroke engines, is in accordance with the ratio 0.18 reported
+in [14]. A compressibility term ( 2
+3·K·
+.ρ
+ρ) has also been added in the energy equation that
+increases it following the work of [30], that correlated the mean ﬂow model better with
+high-speed engines, and the term K· dmex
+dt
+is the energy ﬂowing out from the cylinder.
+The shear stress term is instead [14]:
+PShear = Cβ·4·0.38·νt· K
+L2g
+(23)
+where νt = 0.09· k2
+ϵ is the turbulent viscosity.
+The geometric length scale Lg is assumed to be a function of the maximum port lift,
+the cylinder bore, and the instantaneous height of the cylinder as follows:
+Lg = CLg·
+HmaxLi f t
+Bore
+min(0.5·Bore, H)
+(24)
+With CLg, which is a calibration coefﬁcient of the order of unity for two-stroke engines.
+The turbulent kinetic energy, deﬁned as k = 3
+2·m·u′2, has its equation:
+dk
+dt = αin·Ein + Pk −k·dmex
+dt
+−ε
+(25)
+The production term is the sum of shear stress, the squish, the tumble, and the
+compressibility terms:
+Pk = PShear + Psq + PTumble + 2
+3·k·
+.ρ
+ρ −2
+3·νt·m·
+ .ρ
+ρ
+2
+(26)
+The squish term can be calculated using the following relation [7]:
+Psq = 1
+2·
+.msq·vel2
+sq
+(27)
+The rate of the dissipation term of the turbulent kinetic energy is:
+dϵ
+dt = αin·Ein·
+√
+k/m
+Lg
++Pϵ −ϵ·dmex
+dt
+−1.92·ϵ2
+k
+(28)
+
+
+===== page 9 =====
+
+Energies 2023, 16, 4947
+9 of 24
+Its production term is:
+Pϵ = 1.44·ϵ
+k ·
+
+PShear + PSquish + PTumble
+
++ ϵ
+k ·
+ 
+2·k·
+.ρ
+ρ −2.64
+3 ·νt·m·
+ .ρ
+ρ
+2!
+The integral scale of turbulence is then:
+lT = 0.09
+3
+4 ·(k/m)
+3
+2
+  ϵ
+m
+
+Table 2 reports the default values of the calibration coefficients used for all the simulations.
+Table 2. Calibration coefﬁcients default values used in the present work.
+Coefﬁcient
+Value
+Cin
+1
+CT0
+1
+Cβ
+1
+CLg
+1
+The results of the turbulent model can be shown in Figure 2.
+ 
+Figure 2. Mean kinetic, tumble, and turbulent energy with the turbulent integral scale during an
+engine cycle.
+2.3. 1D Unsteady Gas Dynamic Model
+The performances of two-stroke engines, in terms of torque and power, are much
+more inﬂuenced by the geometry of intake and exhaust manifolds. In racing engines, the
+optimization of such objects has a very large impact on the performance. The exhaust
+expansion chamber is one of the examples, with a large area variation, which emphasize
+the phenomenon of the gas wave actions. Moreover, in the racing application, with high
+maximum pressure in the cylinders and the exhaust, shocks may be present.
+In the present work, a mono-dimensional model was developed and used, with partic-
+ularly the source terms and the area variation being the most important. The continuity,
+
+
+===== page 10 =====
+
+Energies 2023, 16, 4947
+10 of 24
+momentum, and energy equations that represent the one-dimensional Euler problem are
+expressed in the following form:
+d(A·W)
+dt
++ d(A·F)
+dx
++ A·B + C = 0
+(29)
+where the vectors are expressed below:
+W =
+
+
+ρ
+ρ·u
+ρ·E
+ρ·Xair
+ρ·Xf uel
+
+
+F =
+
+
+ρ·u
+ ρ·u2 + P
+
+ρ·u·
+
+E + P
+ρ
+
+ρ·u·Xair
+ρ·u·Xf uel
+
+
+B =
+
+
+0
+ρ·G
+−ρ·Q
+0
+0
+
+
+C =
+
+
+0
+P· dA
+dx
+0
+0
+0
+
+
+(30)
+Such set of differential equations are solved:
+Wt+dt
+i
+= Wt
+i −dt
+Ai
+·(F·A)*
+i+0.5 −(F·A)*
+i−0.5
+dx
+−dt
+Ai
+·S*
+i+0.5 + S*
+i−0.5
+2
+(31)
+With S*
+i+0.5 = Ai+0.5·Bt
+i+0.5 + Ct
+i+0.5.
+The source terms are expressed in the form where all the values were known at time t
+and node i:
+Bt
+i+0.5 =
+Bt
+i·A0.5
+i
++ Bt
+i+1·A0.5
+i+1
+A0.5
+i
++ A0.5
+i+1
+and
+Ct
+i+0.5 =
+
+
+0
+Pi+0.5· Ai+1−Ai
+dx
+0
+0
+0
+
+
+=
+
+
+0
+(P·A)i+1−(P·A)i
+dx
+−Ai+0.5· Pi+1−Pi
+dx
+0
+0
+0
+
+
+The closure of the system is made with the assumption of perfect gases, assuming that
+the internal energy is a polynomial function of the temperature:
+E = e(T) + u2
+2
+P = ρ·r·T
+The Riemann solver used to calculate the intercell ﬂuxes is that of ROE. The original
+ROE Riemann solver did not take into account the source terms in the calculation of
+the ﬂuxes, so that method was not “Well balanced”. The addition of such terms [15–17]
+improved the accuracy, and in this work, has been modiﬁed to enforce the area conservation
+to be more accurate in the mass ﬂow conservation. The new method is now:
+(F·A)*
+i+0.5 = 0.5·
+ 
+Ft
+i ·Ai + Ft
+i+1·Ai+1 −
+n
+∑
+1
+αk·|λk|·ek
+!
+Its second-order extension is instead:
+(F·A)*
+i+0.5 = 0.5·
+ 
+Ft
+i ·Ai + Ft
+i+1·Ai+1 −
+n
+∑
+1
+αk·|λk|·ek·(1 −ϕ(r)·(1 −νk))
+!
+where:
+νk =
+
+∼
+λk
+· dt
+dx, is the local Courant number;
+with r =
+αkupwind
+αklocal .
+
+
+===== page 11 =====
+
+Energies 2023, 16, 4947
+11 of 24
+Additionally, ϕ(r) is a ﬂux limiter. Among the large number of ﬂux limiters, in the
+present work, we used the minmod for r ≤1 and the average values between minmod
+and superbee limiters when r > 1 (Figure 3). This model prevents some oscillations when
+r ≤1 and reduces diffusion for r > 1, with the possibility of the Courant–Friedrichs–Lewy
+number being 0.95.
+
+
+
+
+
+ϕ(r) = 0 →r ≤0
+ϕ(r) = r →r ≤1
+ϕ(r) = min
+
+1+r
+2 , 1.5·r
+
+→r > 1
+ 
+Figure 3. Flux limiter used in the present work.
+Setting for the ﬁrst and the last nodes ϕ = 1.
+As shown in [31,32], the determination of the average state is crucial to calculate
+the parameters for the Roe model. In the present work, the area conserved average state
+is reported to improve the accuracy of the model. The relation used to calculate all the
+parameters is:
+d(ρ·u·A) = ρ·A·du + u·d(ρ·A)
+d
+
+ρ·u2·A
+
+= ρ·A·2·u·du + u2·d(ρ·A)
+Following the work of [31], these relations reach:
+∼u =
+p
+ρi·Ai·ui +
+p
+ρi+1·Ai+1·ui+1
+p
+ρi·Ai +
+p
+ρi+1·Ai+1
+And:
+∼
+ρ·A =
+q
+ρi·Ai·ρi+1·Ai+1
+The value of the density is not known; only its product with an “equivalent area” is
+known. Neglecting the other calculations for the enthalpy, well reported in [31], all the
+needed parameters are shown below:
+With the deﬁnition of σ =
+q
+ρi+1·Ai+1
+ρi·Ai
+.
+
+
+===== page 12 =====
+
+Energies 2023, 16, 4947
+12 of 24
+The values of speed, enthalpy, air fraction, and fuel fraction are:
+∼u = ui + σ·ui+1
+1 + σ
+;
+∼
+H = Hi + σ·Hi+1
+1 + σ
+;
+∼
+xair = xairi + σ·xairi+1
+1 + σ
+;
+∼
+x f uel =
+x f ueli + σ·x f ueli+1
+1 + σ
+(32)
+The last value to deﬁne is the sound speed. In this work, once the enthalpy is known,
+which is function of the temperature and the gas composition (calculated by Equation (32)),
+the temperature can be found and then so can the sound speed:
+∼a =
+q
+∼γ·
+∼r·
+∼
+T
+with
+∼γ,
+∼r calculated once T is known from
+∼
+H. This is the most accurate way to calculate it.
+The values of the speed of the characteristics are:
+∼
+λ =
+
+
+∼u −
+∼a
+∼u
+∼u +
+∼a
+∼u
+∼u
+
+
+(33)
+This method, as known, violated the entropy condition during transonic expan-
+sion [32]. The same author shows a method to avoid this violation with the following
+relations for left expansion and right expansion:
+λ1i < 0 and λ1i+1 > 0 →
+=
+λ1 = λ1i· λ1i+1 −
+∼
+λ1
+λ1i+1 −λ1i
+(34)
+λ3i < 0 and λ3i+1 > 0 →
+=
+λ3 = λ3i+1·
+∼
+λ3 −λ3i
+λ3i+1 −λ3i
+The α vector is rearranged in the following form, taking into account the source terms
+like the area variation, friction, and heat transfer:
+αk = α0k +
+ αareak + αGk + αQk
+·dx
+λk
+(35)
+Each single term is evaluated below:
+α0 =
+
+
+
+Ai+0.5·dP−
+∼
+ρ·A·
+∼a·du
+
+2·
+∼a
+2
+Ai+0.5·
+∼a
+2·dρ−dP
+∼a
+2
+
+Ai+0.5·dP−
+∼
+ρ·A·
+∼a·du
+
+2·
+∼a
+2
+∼
+ρ·A·dxair
+∼
+ρ·A·dx f uel
+
+
+(36)
+The average density value is not known, so the area variation term is in the form:
+αarea =
+∼u·
+∼ρ·dA
+dx ·
+
+
+1/2
+0
+1/2
+0
+0
+
+
+=
+∼u·
+d(ρ·A)
+dx
+−Ai+0.5· dρ
+dx
+
+·
+
+
+1/2
+0
+1/2
+0
+0
+
+
+(37)
+
+
+===== page 13 =====
+
+Energies 2023, 16, 4947
+13 of 24
+Meanwhile, the heat transfer and friction terms are in Equations (38) and (39).
+αHeat =
+∼
+ρ·A·
+∼
+Q·
+
+
+−
+1
+2·
+∼a
+2 ·
+∼γ −1
+
+1
+∼a
+2 ·
+∼γ −1
+
+−
+1
+2·
+∼a
+2 ·
+∼γ −1
+
+0
+0
+
+
+with
+∼
+Q = Qi + σ·Qi+1
+1 + σ
+(38)
+αFriction =
+∼
+ρ·A·
+∼
+G·
+
+
+−
+1
+2·
+∼a
+2 ·
+h
+(γ −1)·
+∼u +
+∼a
+i
+1
+∼a
+2 ·
+∼γ −1
+
+·
+∼u
+−
+1
+2·
+∼a
+2 ·
+h
+(γ −1)·
+∼u −
+∼a
+i
+0
+0
+
+
+with
+∼
+G = Gi + σ·Gi+1
+1 + σ
+(39)
+The right eigenvector matrix is:
+e =
+
+
+1
+1
+1
+0
+0
+∼u −
+∼a
+∼u
+∼u +
+∼a
+0
+0
+∼
+H −
+∼u·
+∼a
+∼
+H −
+∼a
+2
+γ−1
+∼
+H +
+∼u·
+∼a
+0
+0
+∼
+xair
+∼
+xair
+∼
+xair
+1
+0
+∼
+x f uel
+∼
+x f uel
+∼
+x f uel
+0
+1
+
+
+(40)
+Figure 4 reports the mass ﬂowrate of two tests of the model which has been developed;
+the ﬁrst is a sudden area variation and the second is a shock tube. The ﬁrst, with a manifold
+of the length of 1 m and a diameter of 0.05 m at the left (with a pressure at the end of
+1.8 bar) and 0.1 m at the right (with a pressure at the end of 1 bar), shows the results of the
+simulation of 2 ducts connected at boundaries with the method of the characteristics [4,33]
+through the sudden area variation model taken as a reference. The results, with the original
+Roe method (not balanced), the balanced version [15,16], and the present method, are also
+reported. When comparing the different results, complete correspondence between the present
+method and that taken as a reference is highlighted; meanwhile, the other two methods show
+unrealistic values for the central part of the manifold. The right part of Figure 4 shows the
+shock tube test where, instead, having lower area variation results means that there is better
+correspondence between the present method and the balanced version.
+2.4. End Pipe Boundaries
+The model exposed in the previous section can simulate the wave actions within the
+pipe in a satisfactory manner, but it is not able to solve the problems at the ﬁrst and last node
+of any duct. In such nodes, the method of characteristics is used, while in [15,16], all the
+pipe ends are modeled. Unfortunately, this is a ﬁrst-order method, and the accuracy is lower
+than the second-order method used in the other nodes of the manifold. Additionally, in the
+case of backﬂow, when there can be temperature and density discontinuity, the accuracy
+is even lower. The linear interpolation method, used in the method of characteristics,
+fails when discontinuity is present. An interesting solution to overcome this inaccuracy is
+reported in [34] where at the end of the manifolds, an extra-node of half-length was added
+and applied to the “Two Step Lax-Wendroff” model.
+
+
+===== page 14 =====
+
+Energies 2023, 16, 4947
+14 of 24
+ 
+Figure 4. Comparison between the original Roe method, with its balanced version and the present
+work, for a duct with a sudden enlargement (left) and shock tube (right) of the mass ﬂowrate.
+Below, a solution is proposed for the worst condition that may occur during backﬂow,
+such as at the opening of the transfer port for two-stroke engines, but also at the opening
+of the intake valves in four-stroke engines. When the gas enters the manifold, with a
+density which is generally different from that present in the duct, a path line will be used,
+calculating the distance from the end of the duct:
+dx∗
+t+dt = dx∗
+t + dx∗
+t
+dx ·veli−1
+t
++
+
+1 −dx∗
+t
+dx
+
+·veli
+t
+(41)
+a value of density at the intermedial node can be calculated:
+ρi−0.5
+t
+=
+
+1 −dx∗
+t
+dx
+
+·ρi
+t + dx∗
+t
+dx ·ρi−1
+t
+An “average density” value of the volume between the node i −1 and i is:
+ρavg
+t
+= 1
+3·ρi
+t + 1
+3·ρi−0.5
+t
++ 1
+3·ρi−1
+t
+(42)
+Now the ρi
+t
+∗can be recalculated using the linear interpolation (Figure 5):
+ρi−0.5
+t
++ ρi
+t
+∗
+2
+= ρavg
+t
+and then:
+ρi
+t
+∗= 2·ρavg
+t
+−ρi−0.5
+t
+(43)
+This “corrected” value of density can be used to calculate the interpolated values of the
+sound speed a and the entropy level Aa. To evaluate the beneﬁts of adopting this technique,
+the error between the inﬂowing and outﬂowing mass ﬂowrate has been calculated:
+Err% =
+360
+∑
+0
+.min −
+.mout
+.min
+·100
+The results of this end pipe correction can be observed in Figure 6, where the ﬂowrate
+errors of the main transfer manifold of the IAME X30 engine are reported. Such errors can
+also be of about 2%, and the worst results can be observed at lower and higher rpms, while
+with the proposed method, the maximum error is about 0.5%.
+
+
+===== page 15 =====
+
+Energies 2023, 16, 4947
+15 of 24
+ 
+Figure 5. Discontinuity encountered during backﬂow at the end of a manifold. Linear interpolation
+and linear interpolation recalculated to reduce the mass error.
+ 
+Figure 6. Comparison between the mass conservation error % for the classical linear interpolation
+and the interpolation corrected for a simulation from 6500 to 16,000 rpm with the IAME X30 engine.
+3. Results—Engine Simulations
+Internal combustion engine models are nowadays an important tool in the design and
+development phase of engines, from the optimization of intake and exhaust systems [35]
+
+
+===== page 16 =====
+
+Energies 2023, 16, 4947
+16 of 24
+to the evaluation of the effects of the combustion chamber [22] and also to alternative and
+blended fuels [36,37].
+In this section, the results of the developed numerical code are compared with the
+experimental results. Such results consist of the measurement on an engine test bed of the
+power curve, which is the main output of a racing engine. Two engines are tested: the
+direct drive mono-brand IAME X30 engine and a gearbox engine for the KZ category (IAME
+Screamer III); both have karting applications, where two-stroke engines continue to exist.
+3.1. Engine 1: IAME X30 Series Kart Engine
+The X30 series is a mono-brand class 125 cc reed valve, with a ﬁxed regulation, with
+limited modiﬁcations allowed to the tuners. With more than 190 national events taking
+place under the IAME series ﬂag, there are over 45 international events that IAME attends
+as a factory and over 135 international events where we participate as partners, making
+IAME’s event calendar one of the most crowded. Together with the strong and widespread
+participation of motorsport enthusiasts, IAME boasts unparalleled visibility.
+The engine has a direct drive transmission and, with a ﬁxed transmission ratio, the
+range in terms of rpm usage is quite large, from 6500 up to 16,000, limited with an electronic
+ECU. This has an inﬂuence on engine timing, on the design of the exhaust system, and
+on the combustion chamber design, with a particularly high squish area, higher than the
+engine with the gearboxes. Another characteristic of this engine is that it has only three
+transfer ports (Figure 7). The homologation form of the engine, with its speciﬁcation, is
+reported in [38], while a picture of the engine is shown in Figure 8.
+Figure 7. Cylinder development of the IAME X30 engine [38].
+Figure 9 reports the carburetor and the exhaust system. The carburetor is a Tillotson
+HW27A that allows the fuel flow to be changed in real-time by the driver with just two
+screws. During the simulations, the l value was set to 0.85 and the ignition timing was set to
+22 crank angle degrees before the top dead center. With the same engine, two configurations
+are possible, one for the “senior” class, and the other, with a restrictor from 39 mm to 22.7 mm
+in the exhaust manifold to reduce the power, for the “junior” class. As shown in the above
+figure, in the tapered part of the exhaust manifold, the diameter does not vary linearly with
+the length but rather its behavior is more than linear, which is quite common in modern
+two-stroke engines; during pipe discretization, this must be taken into consideration.
+The comparison of the measured and simulated power curve for the senior and junior
+class is reported in Figure 10. There is quite a good correlation with the experimental data
+in both of the engines, with a root mean square error of about 0.5 kW.
+
+
+===== page 17 =====
+
+Energies 2023, 16, 4947
+17 of 24
+Figure 8. The IAME X30 engine and its speciﬁcation [38].
+The calculated burning durations, 0–10%, 10–90%, and 90–100%, are reported in
+Figure 11, together with the delivery ratio by volume and mass. The ability to evaluate
+the inﬂuences in terms of the performances of the engine parameters has been tested with
+two selected parameters: the ﬁrst is the squish area ratio, that can appreciate the accuracy
+of the turbulence and combustion model, while the second is the variation in the exhaust
+length, which is very important when designing and tuning the exhaust system of a racing
+two-stroke engine.
+ 
+Figure 9. Geometry of the carburetor (left) and the exhaust system (right) of the IAME X30 Engine [38].
+3.1.1. Squish Area Variation
+The combustion chamber of a two-stroke engine is generally quite simple; it has a
+hemispheric shape with a squish band. The squish band is very often used to improve
+the turbulence of the mixture, with beneﬁts in terms of combustion speed, which is much
+appreciated, especially at high engine speeds. The simulations reported here are made
+by ﬁxing the compression ratio (and then the combustion chamber volume) and varying
+the squish area band. Two main effects can be observed: by increasing the squish effect,
+
+
+===== page 18 =====
+
+Energies 2023, 16, 4947
+18 of 24
+the turbulence level is increased proportionally to the engine rpm, so, consequently, the
+combustion duration is lower, but there is a lower bowl in the cylinder head to contain the
+same volume, meaning that the height of the combustion chamber is higher. The maximum
+distance from the spark plug to the end of the combustion chamber is then higher with a
+greater distance to travel for the combustion ﬂame to complete combustion, which means
+that there is a higher combustion duration. In addition, an increased value of the squish
+area increases the wall surface and then the heat transfer with a loss of efﬁciency. The sum
+of these effects is shown in Figure 12.
+At lower rpm, the squish has a lower effect, so when increasing the squish area band,
+the combustion duration (from 10% of the fresh air burned to 90) increases up to 4–5 degrees
+from a 0% to 65% area. This difference is reduced by increasing the rpm, and at about 13,500,
+is null (comparing 0% squish with 65%). At the highest rpm, the combustion chamber with
+higher squish has a lower combustion duration. This suggests that higher values of the
+squish area are a beneﬁt for engines that run at a high rpm. There is also a lower variation
+in terms of the combustion duration from a low to high rpm that allows the optimal ignition
+value to advance for a higher rpm range.
+ 
+Figure 10. Comparison between measured results of X30 engines (senior and junior class) with the
+model results.
+ 
+ 
+Figure 11. Burning duration and delivery ratio in function of Rpm for the IAME X30 engine.
+
+
+===== page 19 =====
+
+Energies 2023, 16, 4947
+19 of 24
+ 
+ 
+Figure 12. Combustion duration in crank angle degrees (10–90%) for different values of the squish
+area for the IAME X30 engine (left) and the engine head drawing (right) [38].
+3.1.2. Exhaust Length
+The exhaust system of a two-stroke engine plays a fundamental role in its performance,
+where also variations of some millimeters can induce large modiﬁcations to the power
+curve. The IAME X30 series is a stock class with a limited possibility to tune the engine, but
+one of them is to change the length of the exhaust system by adding or eliminating some
+gaskets immediately after the cylinder block (Figure 13). Generally, the exhaust system is
+optimized to produce a backward expansion pressure wave that improves the scavenging
+process and a backward compression wave that improves the volumetric efﬁciency at the
+end of the scavenging phase. The expansion wave is produced by the tapered cone at
+the center of the exhaust manifold, while the compression wave is produced by the end
+cone (that in the present engine is inside the silencer). The length and diameter of each
+part of the manifold are perfectly optimized, and each variation provides non-negligible
+differences in terms of performance. For example, longer exhaust systems are suited for
+engines that run at low rpm and vice versa.
+Figure 13. Details of the exhaust system taken into consideration in the present simulations [38].
+The result (Figure 14) expected is that there would be a shift in the power curve in
+terms of the function of the length. For a longer header, peak power is located at lower rpm
+and vice versa; this is the result which was obtained by the simulations.
+
+
+===== page 20 =====
+
+Energies 2023, 16, 4947
+20 of 24
+ 
+Figure 14. Comparison of the power curve for three different lengths of the exhaust header length.
+3.2. Engine 2: IAME KZ Engine
+The IAME Screamer III is a racing engine used for the national and world champi-
+onship of the 125cc KZ class; it has a gearbox with six speeds, 54 mm bore, 54.4 mm stroke,
+and an intake reed valve. It is different from the X30 engine which has ﬁve transfer ports,
+port timing, and a combustion chamber, which are all quite different. The homologation
+form is in demonstrated in [39]. All the data not reported in the homologation form together
+with the power curve are conﬁdential and are reported as normalized values. An image of
+the engine and its speciﬁcations is shown in Figure 15.
+Figure 15. The IAME Screamer III engine and its speciﬁcations [39].
+Figure 16 reports a comparison between the measured power curve and the model
+results. Also, in this case, this is in good accordance with all the curves, and the root mean
+square error is about 0.5 kW.
+
+
+===== page 21 =====
+
+Energies 2023, 16, 4947
+21 of 24
+ 
+Figure 16. Comparison of measured results of IAME Screamer III with the model results in normalized form.
+4. Conclusions
+In this work, an engine simulation code was developed and applied to two-stroke
+engines. The focus was set on the turbulent combustion process, the K-k-ϵ turbulence model,
+and on the one-dimensional model which is able to take into account the area variation
+to minimize the mass conservation error and to reduce the role of the experimental data
+needed to calibrate the models; these data are not always available, especially in motorsport
+applications, as there are many small companies without big budgets.
+The combustion process was modeled in three parts: the ﬁrst, the early part, is
+governed by the laminar combustion speed and growth to be turbulent, the second, the
+fully turbulent speed, and the last, the end combustion where the interaction to the head
+piston and cylinder walls reduces the combustion speed to be laminar.
+The turbulence model [14] was applied to two-stroke engines:
+•
+It was reﬁned using the momentum equation to calculate the intake energy with the
+advantage of reducing the inﬂuence of calibration constants, as applied in [14].
+•
+The added term + 2
+3·K·
+.ρ
+ρ in the mean ﬂow model, as reported in [30], increases the
+kinetic energy during compression and provides more accuracy when modeling high-
+speed engines.
+•
+A Tumble coefﬁcient was calculated to be used for two-stroke loop-scavenged engines.
+Such calculation a reduces, though it does not nullify, the need for experimental data
+and allows the modeling of such engines with a good accuracy.
+•
+The calculation of the geometric length scale was refined and directly correlated with the
+reduction in the transfer port height; experimental data were also important in this case.
+The Riemann solver of ROE, applied to one-dimensional Euler equations, was reﬁned
+by modifying the source terms treatment and, in particular, the area variation, which
+is quite common in racing engines, especially in two-stroke ones. With the developed
+improvements, such a model is also able to treat abrupt area variations. The pipe end
+boundaries, calculated using the method of characteristics, are a source of inaccuracies,
+especially in mass conservation during backﬂow. Such a model was reﬁned by modifying
+the hypothesis of linear interpolation between the last (or the ﬁrst) two nodes, reducing the
+mass conservation error always below 0.5%.
+This code was assessed by comparing its result with the experimental data of two
+racing two-stroke engines with different characteristics: one direct drive mono-brand
+engine, the IAME X30, both for senior and junior class, and a gearbox 125 cc engine, the
+IAME Screamer III. There is good accordance between the model and measurement, and
+the root mean square error for both engines is about 0.5 kW.
+
+
+===== page 22 =====
+
+Energies 2023, 16, 4947
+22 of 24
+However, the need of calibration data, without which the results cannot be accurate,
+is still the main limitation of this study. By using quasi-dimensional codes for in-cylinder
+processes and one-dimensional codes for manifolds, the discharge coefﬁcients and the
+scavenging process contain coefﬁcients that need to be determine experimentally. In the
+present work, such data were found in [7,8,19], where a large number of data are reported.
+Also, the turbulence and the combustion models contain some coefﬁcients and, even if
+ﬁrst approximation values were provided, a calibration with the experimental data of a 3D
+model would improve their accuracies.
+Author Contributions: Conceptualization, F.O. and A.B.; methodology, F.O.; software, F.O.; validation,
+A.B.; resources, F.O.; data curation, F.O.; writing—original draft preparation, F.O.; writing—review and
+editing, A.B. All authors have read and agreed to the published version of the manuscript.
+Funding: This research received no external funding.
+Data Availability Statement: Data are unavailable due to restrictions.
+Conﬂicts of Interest: The authors declare no conﬂict of interest.
+Nomenclature
+Ab
+lat
+Cylinder wall area wetted by the burned zone; m2.
+A f
+Flame front surface area m2.
+Atot
+lat
+Total cylinder walls area m2.
+APiston
+Piston area m2.
+CLg
+Calibration coefﬁcient for geometric length scale m.
+CS
+Calibration coefﬁcient for turbulent combustion speed.
+CT0
+Calibration coefﬁcient for Tumble ratio.
+CTumble
+Tumble ratio.
+cv
+Speciﬁc heat at constant volume J/Kg × K.
+Cwall
+Calibration coefﬁcient.
+Ein
+Incoming kinetic energy rate J/s.
+E
+Internal Energy J/kg.
+FDF
+Flame development factor.
+G
+Friction term.
+h
+Enthalpy J/kg.
+H
+Instantaneous height of the cylinder m.
+HmaxLi f t
+Maximum intake port lift m.
+K = 1
+2·m·vel2
+mean
+Mean ﬂow kinetic energy J.
+k
+Turbulent kinetic energy J.
+L
+Momentum kgm/s.
+Lg
+Geometric length scale m.
+lT
+Integral scale of the turbulence m.
+m
+Mass kg.
+mb
+Burned mass kg.
+mmcr
+Crevices mass.
+mex
+Exhaust mass ﬂowrate kg/s.
+.msq
+Squish mass ﬂow kg.
+mtot
+Total mass in the cylinder kg.
+Pin
+Pressure at the intake port Pa.
+Pcyl
+Cylinder Pressure Pa.
+PShear
+Turbulent energy production by the mean ﬂow J/s.
+Psq
+Turbulent energy production by the squish ﬂow J/s.
+PTumble
+Turbulent kinetic energy due to the tumble; J/s.
+Pϵ
+Production term of rate of dissipation of turbulent kinetic energy J/s2.
+Q
+Heat Transfer term.
+R
+Gas constant.
+Re
+Reynolds number.
+ReT
+Turbulent Reynolds number.
+
+
+===== page 23 =====
+
+Energies 2023, 16, 4947
+23 of 24
+Rpm
+Revolutions per minute.
+rTumble
+Tumble radius m.
+ST
+Turbulent combustion speed m/s.
+T
+Temperature K.
+u
+Internal energy j/kg.
+u′
+Turbulent intensity m/s.
+uT
+Combustion speed m/s.
+V
+Volume m3.
+vlam
+Laminar speed m/s.
+velmean
+Mean ﬂow speed m/s.
+velsq
+Squish speed.
+velTumble
+Tumble Speed m/s.
+wwall
+Wall effect during the end of the combustion.
+Xair
+Air Mass fraction.
+Xf uel
+Fuel Mass fraction.
+ϵ
+Rate of dissipation of turbulent kinetic energy J/s.
+τ = lT
+u′
+Characteristic time s.
+τf
+Tumble friction rate Nm/s2.
+ωTumble
+Tumble angular speed rad/s.
+ρ
+Gas density kg/m3.
+ρin
+Density at the intake port kg/m3.
+νt
+Turbulent viscosity.
+λk
+Eigenvalues, characteristic speeds m/s.
+νk
+Local Courant number.
+References
+1.
+Krishna, A.S.; Mallikarjuna, J.M.; Kumar, D. Effect of engine parameters on in-cylinder ﬂows in a two-stroke gasoline direct
+injection engine. Appl. Energy 2016, 176, 282–294. [CrossRef]
+2.
+Torelli, R.; Som, S.; Pei, Y.; Zhang, Y.; Traver, M. Inﬂuence of fuel properties on internal nozzle ﬂow development in a multi-hole
+diesel injector. Fuel 2017, 204, 171–184. [CrossRef]
+3.
+Mondal, S.; Torelli, R.; Lusch, B.; Milan, P.J.; Magnotti, G.M. Accelerating the Generation of Static Coupling Injection Maps Using
+a Data-Driven Emulator. SAE Int. J. Adv. Curr. Prac. Mobil. 2021, 3, 1408–1424. [CrossRef]
+4.
+Ramos, J.J. Internal Combustion Engine Modeling; Hemisphere Publishing Corporation: London, UK, 1989; ISBN 0-89116-157.
+5.
+Winterbone, D.E.; Pearson, R.J. Theory of Engine Manifold Design: Wave Action Methods for Ic Engines; Professional Engineering
+Publication: Pittsburg, KS, USA, 2000.
+6.
+van Leersum, J. A numerical model of a high performance two-stroke engine. Appl. Numer. Math. 1998, 27, 83–108. [CrossRef]
+7.
+Blair, G.P. Design and Simulation of Two Stroke Engines, R161, 1996-02-01; Product Code of R-161; SAE International: Pittsburgh, PA,
+USA, 1996; 656p, ISBN 978-1-56091-685-7. [CrossRef]
+8.
+Blair, G.P. Design and Simulation of Four Stroke Engines, R-186, 1999-08-15; Product Code of R-186; SAE International: Pittsburgh,
+PA, USA, 1999; ISBN 978-0-7680-0440-3. [CrossRef]
+9.
+Available online: https://www.ﬁakarting.com/page/ﬁa-karting-categories (accessed on 27 May 2023).
+10.
+Ortenzi, F.; Vesco, E. An Improved Multi-Pipe Junction Model for Engine Thermodynamic and Gas Dynamic Simulations; SAE Technical
+Paper 2013-24-0069; SAE International: Pittsburgh, PA, USA, 2013. [CrossRef]
+11.
+Ortenzi, F. Modello del Sistema di Ricarica Elettrica e Termica al Capolinea e Progettazione e Sperimentazione al Banco del Sistema di
+Accumulo Inerziale e di Bordo; Report RdS/PTR2020/LA2.30; SAE International: Pittsburgh, PA, USA, 2020.
+12.
+Verhelst, S.; Sheppard, C. Multi-zone thermodynamic modelling of spark-ignition engine combustion—An overview. Energy
+Convers. Manag. 2009, 50, 1326–1335. [CrossRef]
+13.
+De Bellis, V.; Bozza, F.; Tufano, D. A Comparison between Two Phenomenological Combustion Models Applied to Different SI Engines;
+SAE Technical Paper 2017-01-2184; SAE International: Pittsburgh, PA, USA, 2017. [CrossRef]
+14.
+Fogla, N.; Bybee, M.; Mirzaeian, M.; Millo, F.; Wahiduzzaman, S. Development of a K-k-∈Phenomenological Model to Predict
+In-Cylinder Turbulence. SAE Int. J. Engines 2017, 10, 562–575. [CrossRef]
+15.
+Mohanraj, R.; Neumeier, Y.; Zinn, B.T. Characteristic-Based Treatment of Source Terms in Euler Equations for Roe Scheme. AIAA J.
+1999, 37, 417–424. [CrossRef]
+16.
+Mohanraj, R.; Neumeier, Y.; Zinn, B. Modiﬁcation of Roe’s Riemann Solver for the Euler Equations with Source Terms. In Pro-
+ceedings of the 34th Aerospace Sciences Meeting and Exhibit, Reno, NV, USA, 15–18 January 1996. [CrossRef]
+17.
+Roe, P.L. Characteristic-Based Schemes for the Euler Equations. Annu. Rev. Fluid Mech. 1986, 18, 337–365. [CrossRef]
+
+
+===== page 24 =====
+
+Energies 2023, 16, 4947
+24 of 24
+18.
+Fleck, R.; Cartwright, A.; Thornhill, D. Mathematical Modelling of Reed Valve Behaviour in High Speed Two-Stroke Engines; SAE
+Technical Paper 972738; SAE International: Pittsburgh, PA, USA, 1997. [CrossRef]
+19.
+Fleck, B.J.; Fleck, R.; Kee, R.J.; Chatﬁeld, G.F.; O Mackey, D. Validation of a Computer Simulation of a High Performance Two-Stroke
+Motorcycle Racing Engine; SAE Technical Paper 2004-01-3561; SAE International: Pittsburgh, PA, USA, 2004. [CrossRef]
+20.
+Dave, A.; Siddiqui, A.; Probst, D.; Hampson, G.J. Development of a Reed Valve Model for Engine Simulations for Two-Stroke Engines;
+SAE Technical Paper 2004-01-1455; SAE International: Pittsburgh, PA, USA, 2004. [CrossRef]
+21.
+Caton, J. An Introduction to Thermodynamic Cycle Simulations for Internal Combustion Engines; John Wiley & Sons: Chichester, UK,
+2015; ISBN 9781119037569.
+22.
+Poulos, S.G.; Heywood, J.B. The Effect of Chamber Geometry on Spark-Ignition Engine Combustion; SAE Technical Paper 830334; SAE
+Transactions: New York, NY, USA, 1983. [CrossRef]
+23.
+Vancoillie, J.; Sileghem, L.; Verhelst, S. Development and validation of a quasi-dimensional model for methanol and ethanol
+fueled SI engines. Appl. Energy 2014, 132, 412–425. [CrossRef]
+24.
+Liu, K.; Burluka, A.; Sheppard, C. Turbulent ﬂame and mass burning rate in a spark ignition engine. Fuel 2013, 107, 202–208.
+[CrossRef]
+25.
+Abdel-Gayed, R.G.; Bradley, D.; Lawes, M. Turbulent burning velocities: A general correlation in terms of straining rates. Proc. R.
+Soc. Lond. A Math. Phys. Sci. 1987, 414, 389–413. [CrossRef]
+26.
+Burke, E.M.; Güthe, F.; Monaghan, R.F.D. A Comparison of Turbulent Flame Speed Correlations for Hydrocarbon Fuels at
+Elevated Pressures. In Proceedings of the ASME Turbo Expo 2016: Turbomachinery Technical Conference and Exposition, Volume
+4B: Combustion, Fuels and Emissions, Seoul, Republic of Korea, 13–17 June 2016; ASME: Reston, VA, USA, 2016. [CrossRef]
+27.
+Bozza, F.; Teodosio, L.; De Bellis, V.; Fontanesi, S.; Iorio, A. A Reﬁned 0D Turbulence Model to Predict Tumble and Turbulence in
+SI Engines. SAE Int. J. Engines 2019, 12, 15–30. [CrossRef] [PubMed]
+28.
+Kim, M.; Kim, Y.; Kim, J.; Song, H.H. Development of quasi-dimensional turbulence model for spark-ignition engine with
+physical analysis of tumble: Energy-based tumble model focusing on energy intake and turbulence production. Appl. Energy
+2019, 252, 113455. [CrossRef]
+29.
+Dai, W.; Newman, C.E.; Davis, G.C. Predictions of In-Cylinder Tumble Flow and Combustion in SI Engines with a Quasi-Dimensional
+Model; SAE Technical Paper 961962; SAE International: Pittsburgh, PA, USA, 1996. [CrossRef]
+30.
+Dulbecco, A.; Richard, S.; Laget, O.; Aubret, P. Development of a Quasi-Dimensional K-k Turbulence Model for Direct Injection Spark
+Ignition (DISI) Engines Based on the Formal Reduction of a 3D CFD Approach; SAE Technical Paper 2016-01-2229; SAE International:
+Pittsburgh, PA, USA, 2016. [CrossRef]
+31.
+Glaister, P. An approximate linearised riemann solver for the three-dimensional euler equations for real gases using operator
+splitting. J. Comput. Phys. 1988, 77, 361–383. [CrossRef]
+32.
+Toro, E.F. Riemann Solvers and Numerical Methods for Fluid Dynamics—A Practical Introduction; Springer: Berlin/Heidelberg,
+Germany, 2009; ISBN 978-3-540-25202-3. [CrossRef]
+33.
+Benson, R.S. The Thermodynamics and Gas Dynamics of Internal-Combustion Engines; Clarendon Press: Oxford, UK, 1982; Volume 1–2.
+34.
+Serrano, J.R.; Arnau, F.; Piqueras, P.; Belmonte, M.A.R. Assessment of a methodology to mesh the spatial domain in the proximity
+of the boundary conditions for one-dimensional gas dynamic calculation. Math. Comput. Model. 2010, 54, 1747–1752. [CrossRef]
+35.
+Mackey, D.O.; Crandall, J.G.; Chatﬁeld, G.F.; Ashe, M.C. Optimization of Exhaust-Pipe Tuning on a 4-Stroke Engine Using Simulation;
+SAE Technical Paper 2002-01-0002; SAE Transactions: New York, NY, USA, 2002. [CrossRef]
+36.
+Sun, X.; Liu, H.; Duan, X.; Guo, H.; Li, Y.; Qiao, J.; Liu, Q.; Liu, J. Effect of hydrogen enrichment on the ﬂame propagation,
+emissions formation and energy balance of the natural gas spark ignition engine. Fuel 2022, 307, 121843. [CrossRef]
+37.
+Duan, X.; Liu, Y.; Liu, J.; Lai, M.-C.; Jansons, M.; Guo, G.; Zhang, S.; Tang, Q. Experimental and numerical investigation of
+the effects of low-pressure, high-pressure and internal EGR conﬁgurations on the performance, combustion and emission
+characteristics in a hydrogen-enriched heavy-duty lean-burn natural gas SI engine. Energy Convers. Manag. 2019, 195, 1319–1333.
+[CrossRef]
+38.
+IAME X30 Homologation Form. Available online: https://x30promotion.com/regolamento/ (accessed on 27 May 2023).
+39.
+Iame Screamer III KZ Homologation Form. Available online: https://www.iamekarting.com/homologations/ (accessed on
+27 May 2023).
+Disclaimer/Publisher’s Note: The statements, opinions and data contained in all publications are solely those of the individual
+author(s) and contributor(s) and not of MDPI and/or the editor(s). MDPI and/or the editor(s) disclaim responsibility for any injury to
+people or property resulting from any ideas, methods, instructions or products referred to in the content.

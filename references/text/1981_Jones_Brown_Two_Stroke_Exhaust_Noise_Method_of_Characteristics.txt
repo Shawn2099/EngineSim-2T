@@ -1,0 +1,1901 @@
+TITLE: Determination of Two-Stroke Engine Exhaust Noise by the Method of Characteristics (NASA TM-84061)
+YEAR: 1981
+FILE: 1981_Jones_Brown_Two_Stroke_Exhaust_Noise_Method_of_Characteristics.pdf
+PAGES: 50
+EXTRACTED_WITH: PyMuPDF PyMuPDF 1.28.2
+
+
+===== page 1 =====
+
+ 
+ 
+ 
+ 
+N O T I C E 
+ 
+THIS DOCUMENT HAS BEEN REPRODUCED FROM 
+MICROFICHE. ALTHOUGH IT IS RECOGNIZED THAT 
+CERTAIN PORTIONS ARE ILLEGIBLE, IT IS BEING RELEASED 
+IN THE INTEREST OF MAKING AVAILABLE AS MUCH 
+INFORMATION AS POSSIBLE 
+
+
+===== page 2 =====
+
+'NASA -T.M-84061) DET'E.RMINATION OF TWO-STROKE 
+N62-13827
+ENGINE EXHAUST NOISE BY THE METHOD OF
+CHAVACTBRISTICS (NASA) 48 p HC A03/MI' A01
+CSC.L 20A 
+Unclas
+G3/71 02627
+DETERMINATION OF TWO-STROKE ENGINE EXHAUST NOISE
+BY THE METHOD OF CHARACTERISTICS
+A. D. Jones and G. L. Brown
+♦I
+e
+Nalson Industri es, Inc,
+1981 Acoustical Paper A-ar^gram
+Stoughton, Wisconsin
+n,nlf r^^^ 
+r
+'JAN 5 IyW
+LAND 
+4" .1 Giav I CR
+,RARY, NASA
+HAMPTON, VIR91NIA
+June 1981
+
+
+===== page 3 =====
+
+f
+a
+j 
+eA
+DZTERMINATION OF TWO-STROKE ENGINE EXHAUST NOISE
+BY THE METHOD OF CHARACTERISTICS
+A. O. Jones* and G. L. Brownt
+University of Adelaide, Adelaide, South Australia
+ABSTRACT
+A computational technique was developed for the method of characteristics
+solution of a one-dimensional flow in a duct as applied to the wave action
+in an engine exhaust system. By using the method it was possible to compute.
+the detailed unsteady flow in both straight pipe and tuned expansion chamber
+exhaust systems as matched to the flow from the cylinder of a small two-stroke
+engine. The radiated exhaust noise was then determined by asstming monopole
+radiation from the tailpipe outlet. Very good agreement with experiment on
+an operating engine has been achieved in the calculation of both the third-
+octuve radiated noise and the associated pressure cycles at several locations
+in the different exhaust systems. Of particular interest is the significance
+of nonlinear behavior which results in wave steepening and shock wave forma-
+tion. The calculation method developed differs from those of others, princi-
+pally that of Blair and that of Karnopp, Dwyer and Margolis. The method
+computes the precise paths on the x-t plane of a finite number of C+ , f' -
+and P characteristics, thereby obtaining high accuracy in determining the
+tailpipe outlet velocity and hence radiated noise.
+*Presently NRC Research Associate at NASA Langley Research Center, Hampton,
+Virginia. On leave from Hills Industries, Clarence Gardens, South Australia.
+tPresently at California Institute of Technology, Pasadena, California.
+
+
+===== page 4 =====
+
+I
+,
+1, INTRODUCTION
+Until fairly recently, acoustical studies of engine exhaust system ele-
+ments and the design of muffling devices for internal combustion engines were
+usually performed using simple linearized acoustic methods based on electrical
+analogues. Perhaps the most often referenced work in the field is that of
+Davis et al l in which experiments were perforated which justified the relatively
+simplistic approach for the design of a variety of acoustic filters for
+conditions of zero mean flow and low sound pressure levels, Svbsequently,
+the work of Alfredson and Da viev 2,3 advanced the linearized analysis to the
+stage where a mean gas flow through a variety of muffling devices was con-
+sidered in the calculation with no loss of accuracy. More recently, Young
+and Crocker 4 '' devised a calculation technique in which the linear acoustic
+transmission loss of mufflers with complex shapes was found using a finite
+element analysis. In their analysis they described the transmission charac-
+teristics of muffler elements in terms of four-pole matrices and thus modeled
+complete mufflers by the cascade connection of the various matrices in
+analogous transmission lines.
+There are, however, serious limitations in the applicability of linear
+theories, such as the above, as the exhaust noise is a result of wave action
+in the muffler following the rapid release of gas from an engine cylinder.
+This wave action results in large amplitude pressure waves, particularly in
+the upstream regions of the muffler system. A linear theory cannot account
+for the wave steepening that occurs in large amplitude waves nor can it
+include the nonlinear behavior of various exhaust system elements, for example,
+resistances. A further difficulty in application of linear theories is the
+requirement that the engine exhaust be specified as an acoustic source of some
+2
+
+
+===== page 5 =====
+
+strength and impedance. Since in a two-stroke engine, for example, the
+engine will vary from practically a current source as the exhaust port begins
+to open to almost a voltage source with the port fully open,there can be no
+simple chai,acterization of its impedance. In addition, linear theory can take
+no accoi,;nt of variable entropy along the duct, due for example to imperfect
+scavenging or to standing shocks of varying strength at the exhaust port.
+This additional complexity is simply handled within a nonlinear model.
+To overcome these well-known problems with linear theory and more ade-
+quately describe the gas dynamics, the method of characteristics has been
+applied by glair and others 6,7 ' S to study the generation and nature of exhaust noise
+for several simple exhaust systems for (usually) small two-stroke engines.
+The use of the method of characteristics to study the wave action in
+engine exhaust systems is by no means new and the method of characteristics
+has been so used for about 30 years. However, such work has been mainly
+concerned with engine operation and efficiency and not with radiated exhaust
+noise. Of this work, perhaps the most well known is that of Benson and his
+colleagues. Using a particular numerical approach 9 , Benson and co-workers
+have developed codes to calculate various aspects of engine operation for a
+great many engine and exhaust systems, for example reference 10, but they
+have not been concerned with radiated noise.
+Blair subsequently, used Benson's same method to study, initially,
+performance aspects lland, later, radiated engine exhaust noise 7,8 mainly for
+motorcycle engines. Benson's method, however, is shown below in section 2.8
+to be inherently inferior to the method described below, for exhaust noise
+studies. In essence this is due to the fact that Benson uses a "mesh"
+method to compute the x - t diagram for the exhaust system, with a limited
+3
+
+
+===== page 6 =====
+
+k 
+,
+number of fixed mesh points along the duct, whereas, the present method com-
+putes the precise paths on the x - t plane of a finite number of C+ , C_ and R
+characteristics. With a sufficient number of mesh points Benson's method may
+well give adequate accuracy but the present results suggest that following the
+characteristics directly ensures that " ,points are placed where they are
+needed." This approach seems preferable, particularly if the result is an
+input to an acoustic calculation. This is discussed further in section 2.8.
+In other recent studies l2,13,14 finite difference methods have been
+used to compute the one-dimensional wave motion in single cylinder engine
+exhaust systems. The works of Lakshminarayanan et al 13 and Walter and
+Chapman 14 were concerned with aspects of engine operation and performance,
+however, 0 rnopp, Dwyer and Margolis 12 have used their analysis to compute
+radiated exhaust noise. As their method considers fixed pints along a one-
+dimensional duct system (like Benson's) and fixed time intervals, it is
+expectod to be similarly less accurate than the method described below in
+the prediction of noise, though in this case no direct comparison has been
+made.
+When this present work was commenced it was decided to devise a calcu-
+lation technique by which the actual wave diagram would be calculated rather
+than to use an existing calculation method. The approach and the results of
+the study are described below along with comparisons with experiment and
+with other numerical approaches.
+2. METHOD OF SOLUTION
+In essence the problem, firstly, is to match at the engine exhaust port
+an unsteady one-dimensional gas-dynamics calculation of the flow in the
+4
+t
+
+
+===== page 7 =====
+
+5
+which may be rewritten in characteristic form (Whitham 15 ) as
+t
+y
+i;J
+exhaust duct to the flow out of the cylinder, and then to match an acoustic
+calculation for the far-field noise to the flow at the outlet of the exhaust
+duct, The application of the method of characteristics to unsteady, one-
+dimensional gas-dynamics problems is well -known (for example, Rudingerls
+and Whitham15)but the boundary conditions in this problem are no* straight
+forward. Also the computational procedures usually employed (i.e,, graphical)
+are not convenient and new procedures are necessary for the convenient and
+accurate determination of, specifically, the radiated noise.
+A brief discussion of the essential aspects of the method of charac-
+teristics as applied in this problem is given in section 2.1 and the specific
+boundary conditions and computatirnal procedures follow in sections 2.2,
+2.3 and 2.4.
+2.1 Plethod of Characteristics
+In this model of the duct flow, wall friction and heat conduction to the
+wall are neglected. This initial simplifying assumption may be corrected
+subsequently within the framework of the method of characteristics (e.g.,
+Rudinger15 ),however, this has not been considered necessary within the
+analysis so far.
+For a duct of slowly varying area A, the conservation equations in
+this case are
+A
+Pt + u P  + P ux  -
+ Pu A
+put+puux+px-0.
+s t +u s x = 0
+(1)
+(2)
+(3)
+
+
+===== page 8 =====
+
+(5)
+and 
+ds = 0
+on P: 
+dx= u.
+^t
+k
+0
+i
+d^ 
+aua
+s t :^ t _ - —A--on C,^ , C_ : U—t
+(4)
+The entropy is then constant on particle paths (P characteristics). In
+this numerical solution it is acsumed that the P characteristics mark entropy
+discontinuities so that the entropy is constant between P characteristics.
+Within such a region it follows that, for a perfect gas, dt = (—
+,!T) pa da .
+For a region where A x = 0 it then follows from equation (4) that the
+Riemann variable
+P 1 - lYTY o 
+o 
+(6)
+is constant on C+ in any region between P characteristics (a o is
+reference speed of sound) and similarly
+Q = ( 
+a_ - u 
+(7)
+1 
+Y-^ ao To—
+is constant on C_ in this region. For Ax ^ 0 then, if a C + (or C_) charac-
+teristic is advanced in x by Le. = (u ,• a)dt (or (u- a)ot), we see from
+equations (4) and (6) that, for s constant,
+auAx
+AP l (or AQ l ) _ 
+a A At.
+0
+Thus, in general, the problem of finding the flow in the duct is reduced
+to plotting the paths of C+ , C_ and P characteristics on an x-t diagram,
+keeping track of the Riemann variable on C+ or C and the entropy on P
+characteristics. The Riemann variable will change due to changes in area as
+in equation (8) or due to intersections of the C+ or C_ with P characteristics
+6
+(8)
+
+
+===== page 9 =====
+
+t
+at which points there may be discontinuous changes in entropy. The change in
+P 1 or Q l at such are intersection is obtained in the usual way using the fact
+that the final pressures and velocities on either sidle of the entropy discon-
+tinuity rliust be the same. In addition to the intersection of C + or C_ with P
+characteristics, the other events in the x-t diagram that need to be calculated
+are the intersection of C + with C_ and the arrival of C+ , C_ or P character-
+isties at either the engine exhaust port or the open exhaust outlet (i.e.,
+the end of the tailpipe). It is these latter boundary conditions which
+require more detailed consideration.
+We note in passing that while nonlinearity is expected to play a crucial
+role in describing tho exhaust wave system it was expected that any propagating
+shocks that did form would not be large enough to produce changes in entropy
+comparable with the other sources of entropy vf-riation (combustion temperature,
+incomplete scavenging, standing shocks). The overtaking of a C + (or C-)
+characteristic may therefore be treated sim;
+, l,y as the formation of a weak
+shock producing no entropy change but with the resultant shock having a
+velocity which is the mean of the dt for the two intersecting characteristics.
+(These are the well-known, asymptotic properties of weak :hocks.) For
+simplicity, however, when the x-t diagr-m was computed, the velocity of the
+weak shock was approximated to the velocity of the faster characteristic.
+This approximation had little effect on the calculations described in
+section 3 as the overtaking of C+ (or C_) characteristics was found to be
+extremely uncommon. (It occurred only twice throughout all these calculations).
+Some further approximations for convenience and the way in which the x-t
+diagram was computed are described in section 2.4.
+7
+t
+F
+y^
+
+
+===== page 10 =====
+
+2.2 Bounda U Conditions
+The only boundary conditions considered in the analysis are;
+1, open exhaust port
+2.
+closed exhaust port
+3.
+open tailpipe
+In the x-t diagram, whenever a C+ or C. characteristic reaches one of
+these types of boundaries, a characteristic of opposite type is reflected. If
+the resultant flow is into the duct through the boundary, a P characteristic
+is also added.
+Case 2 is relatively simple and is described in Rudinger 15 . Case 3
+can be considered with various levels of approximation. In this calculation
+the approximation made is that for outflow the pressure at the plane of the
+exhaust is Pao (the atmospheric pressure) and constant, while for inflow
+(when it exists) it is assumed that the isentropic, compressible Bernoulli
+equation holds (i.e., quasi-steady flow is assumed from p ao into the tail
+pipe) and the pressure at the tailpipe is therefore less than Pao. The flow
+at the open exhaust port (case 1) is much more complex, however, as it
+matches the cylinder conditions to the gas flow in the exhaust pipe. The open
+exhaust port is clearly the most important boundary in the x-t diagram.
+2.2.1 Open exhaust port
+When a C - characteristic reaches the open exhaust port, the resultant
+flow is either inflow or outflow from the cylirder, which is either choked
+or unchoked at the port. As mentioned above, there will be a reflection and,
+if there is outflow, a P characteristic is added. Figure 1 shows a section
+of an x-t diagram describing the occurrence of outflow in the region near to
+8
+?f
+;t
+
+
+===== page 11 =====
+
+a2
+Ql " t Y-1 
+ao
+_ a2 _ 1 Y^) a3 _ a3
+o 
+0 
+0
+9
+(14)
+s
+the exhaust port. A ,pictorial representation of the engine and exhaust duct
+is also shown, with the relative size of the latter exaggerated, It is clear
+how the P characteristic marks the entropy discontinuity.
+It is worth considering this case in some detail as it characterizes the
+way in which the whole problem has been approached. The code stores for each
+characteristic its current location, the value of the speed of sound, the
+fluid velocity, the entropy and the current value of the Riemann variable.
+Thus, in figure 1 at the time at which the C_ arrives at the exhaust port Ql,
+sd , u4 wnd a2 are know. By keeping track of previous mass flux through the
+exhaust port and from the crankcase into the cylinder (section 2.3) the
+conditions in the engine cylinder at this time t are also known (i.e.,
+Pc (t), ac (t) and from the equation of state s c (t)). This information, along
+with the current value of the exhaust port area, AM, is suffici ent to
+decide whether there is inflow or outflow from the cylinder and whether this
+flow is choked or not. This is considered later in section 2,2,2. Assuming
+outflow, for the present, when a C_ reaches the port, in addition to a reflected
+C+ a R characteristic is required to satisfy these boundary conditions. The
+unknowns are then s 4 , u3 , a4 , pd , a 3 . (p l for the C+ is found from u3
+and a3 using equation (6).) These variables are found from the following
+equations. Quasi-steady, adiabatic flow through the exhaust pomi is assumed
+so that
+a
+4 + (Y-1)
+r u3 
+ac (t) 
+(g)
+From the Riemann variable for C we have
+i
+t
+
+
+===== page 12 =====
+
+R
+I
+f
+(Note: For a slowly varying area duct, the values of u 2 and a2 held in the
+code will refer to the previous time the C_ hied its Riemann variable changed,
+and so will not relate to the updated value Q 1 , however, this will not at all
+affect the application of equation (10) as u 3 and a3 rrill so relate to Q1
+in any case.)
+Assuming the exhaust is a perfect gas whose entropy is given by
+2Y
+s
+Ro = 1n 
+Y7 .o
+0
+where Po t s o , ao = reference conditions, then since pd = p3 we have
+a 4
+a l yY ^(sq`sd) 
+(12)
+63
+Similarly, the conditions in the cylinder and those in region 4 are related
+by
+s4-sc(t) 
+a4 _ YT . pc(t)
+----^-----
+I n ac t 
+pd -- 
+(13 )
+and the mass flux through the port can be expressed in the form
+C(t) ac(t) a c( t ) A(t) - A4Adu3
+or
+CM pc(t)A(t) - pd Ad u3 
+(14)
+ac t 
+---2--
+4
+fhe five equations (9), (10), (12), (13), (14) and an additional equation for
+the flow parameter C(t) are sufficient to solve for the five unknowns above.
+For choked flow the mass flux depends only on the stagnation conditions
+in the cylinder and C(t) in equation (14) is given by the familiar result for
+sentropic flow up to a sonic throat
+10
+
+
+===== page 13 =====
+
+I
+Y*1
+C(t) ^^^-) 
+Y" 
+(15)
+For subsonic flow, isentropic flow is assumed up to the minimum area. The
+pressure at this point can now be assumed to be uniform across the w nlP duct
+area and this pressure relat
+small port area the pressure
+is appriximately pd and C(t)
+2 `1/2 pc(t)
+C(t) 
+Y-) 
+pd
+ad to p d by the conservation of momentV- 
+"cP a
+recovery is negligible, the pressure at the port
+is found to be
+1/2
+Y+1 
+Y^,;,,,1
+Y 
+pc(t) ! Y 
+^l 
+(16)
+Pd
+This is an adequate approximation in the present context so that all the
+quantities required for the continuation of the x-t diagram ma y now be found=
+A similar approach is followed for inflow from the duct to the cylinder,
+where choked flow is also a conceivable possibility.
+2.2.2 Type of exhaust ,Rort flow
+Continuing from the above analysis, the criterion for the existence of
+either inflow or outflow from the cylinder may easily be found. To determine
+this, the equations (9), (10;, (12), (13) and (14) may be applied to outflow
+from the cylinder for which u 3 + 0. From equation (9), it follows that
+a 4 = a c (t), for this flow. Also, equation (10) becomes
+Q1 _ \y-7 a30
+Hence, a 3 = ao(Y—r
+-1) Q
+l . For zero flow p c (t) must equal pd , hence, from
+equation (13) as a4 = ac (t) we see that s 4 = s c (t). Then, by substituting
+11
+
+
+===== page 14 =====
+
+for a 3 , a 4 and $4 in equation (12) and by then substituting for a c (t) in
+terms of p c (t), s c (t) and the reference conditions, using a form of equation
+(11), it follows that for the final flow velocity to be zero after a C.
+reachesthe port, the value of the Riemann variable Q l for the C- is
+2 l pc (t) 1 z1' 
+(
+ry ^^ (sd-so)
+Ql
+(Y-T) 
+pn 
+a 
+(17)
+If the value of the Riemann variable of the incident C_ is greater than
+that given by equation (17), inflow to the cylinder will occur (because this
+corresponds with a higher pressure in the duct than in the cylinder) and if
+less, outflow.
+The existence of either choked or subsonic flow may similarly be deter-
+mined by a test on the value of the Riemann variable Q 1 for the incident C-.
+For outflow, again equations (9), (10), (12), (13), (14) are used. In
+this case, a flow which is barely sonic in the exhaust port is considered,
+as discussed below.
+For sonic flow in the exhaust port, as the flow is isentropic from the
+cylinder,there is a fixed relation between the reservoir pressure pc(t)
+and the throat static pressure. Then, for a subsonic flow which is barely
+sonic in the port, as the throat static pressure is assumed equal to pd,
+as mentioned above, it follows that
+Y
+p (t)^ 2)
+''d ` c 
+Y+l
+By now substituting for p d using equation (18) and for C(t) for choked
+flow from equation (15) in equation (14) we get
+(18)
+1.2
+
+
+===== page 15 =====
+
+Ad u
+for barely sonic outflow aCtt 
+• (Y—F 1/2 A °^-.-3- 
+(19)
+4
+The conditions to cause barely sonic outflow may now be obtained simply
+from equations (9) and (19) as these have only u 3 and a4 as unknowns. Hence,
+the value of the RievNnn variable Q 1 for a C_ which results in outflow from
+the cylinder which is ctvoked in the exhaust port is
+a t) 
+1/2 
+Y)(sd-sc(t)r
+for choked outflow Q 1 < ^ -
+ I ) a
+o 
+(ly+
+`^') 
+e
+ (
+• 
+_ ac(t) 
+.r(—
+,(! 
+2 
+1 1 
+Ad 2 1/2
+a 
+ ^` + (Y+T) ` 
+A(t Y)
+t
+1/2
+ac(t) 
+2 
+2 
+Ad 
+2 
+r2nl
++ a 
+0 
+^ - (:7!T)
+  1q
+The expression for choked in , " , 'w is similarly found.
+2.3 Cylinder and Crankcase Conditions
+In the process of computing the x-t diagram, the cylinder and crankcase
+conditions are updated every time a C characteristic reaches the open exhaust
+port. It is assumed that a steady flow has existed since the previous C
+characteristic reached the port. First, the mass exchange between the cylinder
+and exhaust pipe, over the whole time period involved, is considered separately.
+New cylinder conditions are obtained. Then, using these cylinder conditions
+together t-;ith the unchanged crankcase conditions, the mass exchange between
+the two volumes is determined and new conditions in each are obtained. (For
+simplicity the transfer port length is taken as zero). Immediately after the
+13
+
+
+===== page 16 =====
+
+new ^ylindar and crankcase conditions are determined, the calculations for the
+reflection of the current C - characteristic are p!?.rformed,
+lhu mass transfer calculations are noteworthy as they are performed in
+terms of a variable X(t) which represents the reciprocal of a characteristic
+time to exhaust the cylinder. In this way the values of pressure, temperature,
+atc, of the mass remaining in the cylinder are obtained as a function of the
+rate of port opening. This is explained briefly below.
+The mass flow rate out of the cylinder may be expressed in terms of the.
+cylinder conditions, the exhaust port throat area and the flow parameter C(t),
+The parameter C(t) is constant for choked flow and for subsonic flow is
+related to the pressure ratio between the reservoir (cylinder) and the throat
+static pressure (equal to static pressure just downstream of the port, as
+explained in section 2,2,1).
+Thus, 
+61(t) x C(t) pc (t)a c (t)A(t) 
+(21)
+whey-e 111(t) - mass flow rate as a function of time.
+C(t)a (t)A(t)
+If 
+^,(t) ^
+VC (t)
+V 
+where Vc (t) z volume of cylinder, then
+m(t) I. X(t) Mc (t) 
+(23)
+where Mc (t) - total mnss in cylinder. It may then be shown that
+_
+ fto a {t) d ( t)
+m(t) w a(t) Mc (a) e 
+(24)
+where t = Q at the time of E.P.O. (exhaust port opening).
+14
+
+
+===== page 17 =====
+
+4
+This is the required caeneral solution for the mass flow rate m(t). The
+properties of the gas in the cylinder may now also be expressed in terms of
+X(t) and various initial conditions. For example, the pressure may be expressed
+as
+v ( 0) Y 
+-yf t X(t)dt -(Y-l)(sc(o)-sc(t))/R
+Pc(t) 4 pc(0) 17JUI 
+e 
+° 
+e 
+(25)
+Therefore, to obtain the cylinder conditions, the integral of a(t) is
+progressively obtained numerically-. As well as t'ne X(t) integral for the
+cylinder, there is a separate similar integrating calculation performed for
+the crankcase in terms of a variable, A cr (t). In the case of flow between the
+crankcase and cylinder there is, of course, an entropy change in the lower
+pressure volume. It is found, for example, that the entropy change in the
+cylinder, as a result of a flow from the crankcase, is given in terms of
+X(t) and the pressures and temperatures in both volumes,
+2,4 Computation Method
+Essentially, the computation method used numerically plots the precise
+paths of a finite number of C + , C_ and p characteristics on an x-t diagram.
+The means of doing this has been arranged to suit the kind of output informa-
+tion that has been required. Specifically, the pressure cycle at certain
+points in the exhaust pipe and the velocity cycle at the tailpipe outlet
+were required.
+The calculation for the x-t diagram starts with an even distribution of
+C+ and C - characteristics in the duct at time t = 0. Typically a total of 60
+C+ and C - characteristics is often used. The initial particle velocity
+throughout the pipe is zero, the pressure being atmospheric and the entropy
+15
+
+
+===== page 18 =====
+
+" -
+value throughout the duct is usually set equal to that in the cylinder when
+the exhaust port opens. This is done as this entropy value turns out to be a
+rough average of the resultant entropy levels of the exhaust gas 'in the duct.
+The initial cylinder conditions are based on actual measured pressure values
+at exhaust port opening, and estimated temperature value, ,,,. The initial crank-
+case conditions are based on the assumption of atmospheric pressure and
+temperature in the crankcase at the time of the inlet port closing.
+At regular small intervals of time Qt, typically 10 `6 seconds, the
+characteristics are moved to new positions along the duct. When events such
+as characteristics crossing or a characteristic reaching a duct boundary
+occur, the correct final flow situation is put in the characteristic diagram.
+When a C + characteristic reaches the open tailpipe, the new calculated value
+of outlet velocity is stored in an array together with the value of time after
+E.P.O. This obviously very fine resolution of the tailpipe outlet velocity
+is significant in the accurate calculation of the radiated sound pressure
+cycle, as shown in section 2.6 below.
+When the pressure values at any point in the duct are calculated they are
+obtained from the x-t diagram at regular large intervals, typically 100 At
+or 10-4 seconds. They are, in fact, obtained by interpolating between the
+values behind the nearest characteristics. This resolution of the pressure
+is, rf course, not as fine as that of the velocity, but greater resolution
+has not been necessary.
+Several approximations are made whici, assist in the computation without
+significantly affecting the accuracy.
+First, whenever a C+ (or C_) characteristic meets a P characteristic,
+t
+although the final C+ (or C_) and P characteristics are correctly described
+c 
+16
+r
+t
+
+
+===== page 19 =====
+
+a
+in the calculation, the. C_ (or C+ ) characteristic reflection is not added to
+the x-t diagram. It may be simply shown that this is a correct procedure as
+none of the C+ and C_ characteristics in the whole x-t diagram is given an
+incorrect Riemann invariant as a result. The second approximation is concerned 
+a
+i
+with a subroihtine which is used to limit the number of total P characteristics 
+g
+present by periodically merging together some adjacent P characteristics
+which have no intermediate C + or C_ characteristics. It may be shown that
+If this is done so that mass is conserved, then momentum and energy are also
+conserved and there is a slight increase in entropy. Clearly, these approxi-
+mations both involve a negligible lss of accuracy. This was checked by
+performing test calculations for which there are known sot utions for simple
+finite waves.
+Further approximations are made in regard to the analysis of a duct
+with slowly varying area. Firstly, the Riemann variable for a C + (or C_)
+characteristic is updated to allow for changes in cross section only just
+before the C+ (or C - ) is about to meet either another characteristic or a
+duct boundary. Also, in application of equation (8) it is assumed that the
+flow values, a and u, associated with a particular C+ (or C_) have not
+changed since the previous event in the x-t diagram the characteristic was
+involved in. Therefore, these values of a and u are used to determine AP1
+(or AQ 1 ) together with the elapsed time between events At and a value of Ax/A
+obtained from the known geometry.
+Calculations of a conical segment of a spherical implosion for which there
+is an exact solution, discussed in section 2.7, and the calculations for a
+tuned expansion chamber, discussed in section 3.3 show that these above-
+mentioned approximations are entirely adequate. In the calculations for a
+17
+
+
+===== page 20 =====
+
+V
+tuned expansion chamber, with 60 initial C + and C - characteristics, occasion-
+ally the characteristics became sparsely separated in some of the five diffe-
+rent segments of the exhaust system, however, the computation method functioned
+adequately with as few as three characteristics in a segment with a 20 times
+area change.
+As well as the above-mentioned simplifications, the omission from the 
+1
+x
+analysis, so far, of heat loss through the duct walls and also viscous losses
+is quite reasonable, as shown by the good agreement +-,ith experiment detailed
+in section 3.
+2.5 Sample Calculations for Straight Exhaust Pipes 
+•
+It is useful to now consider sample calculations made using the method
+described in the preceding sections. Firstly, a computed x-t diagram will
+be studied. This makes the method of computation clearer and shows several
+interesting features.
+2.5.1 Computed x - t diagram
+Figure 2 shows a typical computed x-t diag-ram which simulates about two-
+thirds of one cycle in a straight pipe exhaust on a single cylinder two-stroke
+engine. The operating conditions assumed for the calculation are an engine
+speed of 5000 rpm and a pressure in the cylinder at E.P.O. of 700 kPa absolute.
+Of course, these values are a considerable exaggeration and were used purely
+lake the various events stand out. For simplicity, only 12 initial C+
+C_ characteristics were used and this small number made it possible to
+,e in the x-t diagram all the P characteristics added at the exhaust port,
+lough for clarity, the paths of only two are shown.
+18
+
+
+===== page 21 =====
+
+It is clear how the calculation commences with the C + and C_ charac-
+teristics describing a flow in the duct with uniform entropy and zero velocity.
+When the first C „ reaches the open exhaust port it is clear that there is a
+reflected C+ and an introduced P characteristic. This reflected C+t of
+course, represents the initial wave-front on the exhaust pulse. The first few
+reflected C+ characteristics are seen to describe the high pressure exhaust
+pulse as it is clear that they accelerate the gas downstream as shown by the
+way the C_ characteristics are slowed down by them and by the way they accel-
+erate the first P characteristic. Further, it is clear that the initial
+exhaust pulse is reflected from the open tailpipe end as an expansion wave
+of low pressure, as expected. This is shown in the way the converging C+
+characteristics are reflected at the boundary as diverging C_ characteristics,
+forming an expansion fan and in the way these C_ characteristics accelerate
+the gas particles, represented by the P characteristics, downstream.
+The leading P characteristic represents the path of the contact surface
+between the gas initially at rest in the exhaust pipe and the hot exhaust
+gas flowing out of the engine cylinder. This obviously marks a largr
+discontinuity in temperature levels and hence, values of sonic velocity. The
+C+ and C_ characteristics would then be expected to slow down and speed up,
+respectively, on crossing it. This is quite clearly shown on figure 2. The
+subsequent P characteristics of course will not mark such large differences
+in entropy but they will properly account for the entropy variations caused
+by, for example, the varying strength of a standing shock at the exhaust port.
+Additionally, it is most interesting in the way that the two P characteristics
+mark the particle paths and hence illustrate the wave action described by the
+C+ and C_ characteristics.
+19
+
+
+===== page 22 =====
+
+2.5.2 Initial exhaust pulse
+It appears front this discussion that the computation is correctly plot-
+ting the x-t diagram and it is interesting now to study an example of the
+more specific kind of information that may be obtained. In particular,
+figure 3 shows the typical computed pressure wave development in a straight
+pipe exhaust system for part of the first engine cycle. Here are shown the
+pressure values behind every C + and C_ characteristic in the duct at succes-
+sive instants of time from E.P.O. to 5.5 milliseconds afterwards. As this
+calculation required considerably more precision than the previous test
+case, about 60 C+ and C_ characteristics were included so that the shape of
+the pressure waves would be well defined.
+The calc:alated results are remarkably clear in showing certain phenomena.
+it may easily be seen how the initial wavefront steepens and very nearly
+forms a shock near the tailpipe outlet. This corresponds with the C+
+characteristics crowding together on the x-t diagram as in figure 2 and has
+considerable significance in the determination of radiated sound, as shown
+in the next section.
+As the initial positive pulse reaches the tailpipe outlet it is
+reflected, as expected, as a negative pressure wave. Then, as this reflec-
+tion moves back upstream, it becomes markedly less steep. This clearly
+corresponds with the reflected C_ characteristics separating from each
+other in the expansion wave as, again, shown in figure 2. When the reflected
+wave reaches the exhaust port, the pressure near the port will be well below
+the atmospheric value. Such a low pressure wave may be used to improve the
+tf
+scavenging of the combustion products from the cylinder and improve the engine
+performance. This, then, is part of the exhaust tuning phenomena.
+20
+
+
+===== page 23 =====
+
+2.6 Radiated Sound
+The radiated sound from an engine exhaust system is directly dependent
+on the velocity values at the tailpipe outlet. These velocity values are
+obtained from the calculation of the unsteady flow in the pipe by assuming
+that atmospheric pressure is a boundary condition at the tailpipe end, as
+explained in section 2.2.
+If the tailpipe outlet velocity u(t) is slowly varying, by which is
+meant that du 
+« Au max 
+c (i.e., w • c «1), where d is the
+max
+tailpipe diameter and c is the speed of sound, then the determination of the
+far field radiated sound pressure reduces to the consideration of a volume
+source. It may be shown (for example, Landau and Lifshitz 17 section 73)
+that the far-field radiated sound pressure for such a simple source in
+close proximity to the ground is
+p A 
+duro
+P(t) = 27rr 0 
+(
+at t _C)
+where
+A = area of tailpipe outlet
+ro distance from source
+p, c = atmospheric conditions
+In terms of the x-t diagram shown in figure 2, a value of tailpipe
+outlet velocity is determined each time a C+ reaches the tailpipe outlet.
+This velocity value together with the time of the event is stored in an array
+by the program and at the completion of each computed engine revolution
+the radiated sound pressure cycle at a particular distance r o is calculated
+from the stored values using equation (26).
+(26)
+21
+
+
+===== page 24 =====
+
+T
+It is obvious from equation (26) that a rapidly rising pressure wave,
+caused by C+ characteristics crowding together, will result in greater
+radiated noise than would a pressure wave of similar amplitude but less
+steepness. Hence the importance of pressure wave steepening which occurs
+in engine exhaust systems, as shown in section 3.
+2.7 Slowly Varying Area 
+Comparison with Known Solution
+Ducts of slowly varying area are accommodated in the one-dimensional
+analysis as shown in section 2.1, and the method used to compute the x-t
+diagram for a varying area section of a duct is explained in section 2.4.
+However, as the computation method used several approximations it was
+considered necessary to check the method by computing a varying area duct
+problem for which there was a known solution. The case considered was
+that of an initially weak shock traveling down a duct of decreasing area,
+for very large changes in duct cross sectional area.
+Figure 4 shows the calculated shock Mach number obtained plotted
+against the diameter of the duct. The theoretically predicted curve in
+figure 4 was derived from Whitham's theory 16 in which the shock strength is
+related to the area. This particular theory was found by Whitham to give
+extremely accurate predictions of the shock strength for the imploding
+spherical shock (the Gu:ierley problem) for which an exact solution exists.
+Clearly the calculation method follows very closely the result of Whitham
+up to a shock Mach number of near l y 2. The reason for the slight discrepancy
+appearing at Mach 2 is obviously the fact that the computer program approxi-
+mates all shocks at being weak,as explained in section 2.1. The calculation
+A 
+method is clearly adequate to study engine exhaust systems as shocks in
+such systems will never have Mach numbers as high as 2.
+' 
+22
+
+
+===== page 25 =====
+
+2.8 Method of Benson
+The method of Benson, which is the same method used by Blair, was not
+4
+adopted for this study as it was believed that it would not be as accurate as
+the method described above in computing the radiated exhaust noise from an
+engine, especially when rapidly rising exhaust pulses are present in the
+exhaust system. Such a rapidly rising exhaust pulse is shown from the
+measurement presented in section 3 to sometimes result in a pulse of radiated
+sound pressure of only 10 "4 seconds duration. Consequently, to adequately
+follow the associated rapid changes in tailpipe velocity, the use of a basic
+time step in the calculation of at least less than 10-y seconds is desirable.
+Now in the case of the method described above in which the paths of C. , , C -
+and P characteristics are followed, the necessary small time interval is
+provided when C^ characteristics crowd together and chang€ thti particle
+velocity at the tailpipe outlet at very short intervals. Elsewhere in the
+same calculation, in regions in which the flow is slowly varying, the
+characteristics will be further apart and less computing effort will be
+expended, however, this will not at all affect the precision of the radiated
+exhaust noise calculation as this is determined by the rate of change of the
+tailpipe velocity (section 2.6). On the other hand, a calculation method,
+such as that of Benson, which computes the flow at fixed mesh points in the
+duct, will need quite a large number more mesh points than 60 to resolve the
+radiated sound pressure cycle as well as the method described above.
+(Typically 60 C+ and C - characteristics were used in the above method.)
+To verify the assumption that the method of Benson was not wholly
+desirable for exhaust noise studies, a comparison was made between a calcu-
+lation obtained using the program described above, and a similar calculation
+23
+
+
+===== page 26 =====
+
+R
+24
+performed at Manchester using a standard program based on the analysis of
+Benson 10, The calculations were performed to simulate the first exhaust
+cycle for an engine with a straight pipe exhaust for which steepening of the
+initial pulse was to be expected. Figure 5 shows the values calculated by
+the two methods for the pressure at a point in the pipe near the outlet end.
+Clearly the method of Benson has not adequately described the event although
+admittedly, only 8 mesh points were used to describe the exhaust system. As
+ment 4 oned in the introduction, the inclusion of progressively more mesh
+points in the Benson calculation will improve the pressure trace shown in
+figure 5, but it is quite reasonable to assume that the method described
+above will be superior in determining radiated sound pressure.
+The accurate way in which other events may be described by the above
+analysis is shown in the next section.
+3. COMPARISON WITH EXPERIMENT
+3.1 Experiments
+'ro determine how well the calculation method modeled the events occurring
+in exhaust systems on operating engines, measurements were taken of various
+phenomena for three different exhaust systems. These measurements are
+shown below compared with calculations performed to simulate the same systems.
+The three exhaust systems tested are shown in figure 6, and include a short
+straight pipe, a much longer straight pipe and a tuned expansion chamber.
+The different length straight pipes were used to show the occurrence of
+pulse steepening in the longer one and the consequently greater radiated sound,
+whereas, the tuned expansion chamber was used to test the varying area
+analysis.
+
+
+===== page 27 =====
+
+The experiments were all performed using a high performance, single
+cylinder, 125 cc two -stroke motorcycle engiria, specifications of which are
+in Appendix 1. A generator was used to provide constant known loads.
+Measurements were taken simultaneously of the cylinder pressure cycle (to
+supply the initial cylinder conditions for the calculation) and the exhaust
+duct pressure cycle at each of the positions indicated in figure 6 for
+the three exhaust systems. Then, using the same operating conditions, the
+far field radiated sound pressure cycle for each system was measured in
+a free field close to the ground plane. Following section 2.6 the radiation
+was assumed to be hemispherical.
+Both the cylinder and exhaust pipe pressure measurements were obtained
+using quartz pressure transducers: Kistler type 7031 for the exhaust pipe and
+type 6005 for the engine cylinder. Each of the transducers was in a water-
+cooled housing. The resonant frequencies for the transducers in their housings
+were 10 kHz for type 7031 and 4 kHz for type 6005 (obtained from shock tube
+measurements), which proved adequate. The radiated sound pressure was
+measured by a microphone situated 5 m from the exhaust outlet and, considering
+the distance from the ground plane, destructive interference would have first
+occurred near 1 kHz. (Ground reflection was considered beyond the scope
+of the analysis.) Microphones used were a B and K 1/4-inch-type 4136 for
+the 1.3 m pipe and a 1/2-inch-type 4133 for the others.
+For consistency, all pressure measurements taken inside each of the
+three exhaust systems, and the radiated sound from both the short pipe and the
+tuned expansion chamber were obtained with the L .-ogine operating at'4000 rpm
+under the saute high load. Due to experimental difficulties, the radiated
+25
+
+
+===== page 28 =====
+
+t
+26
+sound measurement for the 1.3 m pipe was taken with the engine running at
+6000 rpm ^vith a low load. Of course, the correct calculation was made
+for each case,
+3.2 Straight exhaust Pipes
+3.2 ,1 Short . pipe
+pipe
+Measurements and calculations for the 0.4 m pipe are shown in figures
+7 and 8. The calculations were obtained by running the computer program to
+simulate several (2) successive engine revolutions, after which a steady
+state situation was found to be approached. The results shcrn are then for
+the second engine revolution.
+The computed pressure traces (a) and (c) of figure 7 both show reason-
+abl y good agreement; particularly in magnitude., with the measurements. A s
+would then be expected, the computed one-third-octave spectrum, which is
+simply derived from a Fourier analysis of the trace (c) of figure 7 fairly
+closely predicts the measured values in figure 8. This measured spectrum was
+simply obtained by analyzing the recorded sound on a loop of tape using a one-
+third-octave band filter. Possibly in view of the much closer detailed agree-
+ment found for the 1.3 in pipe an For the varying area pipe (discussed below),
+a main reason for the discrepancies shown in traces (a) and (c) of figure 7
+is the fact that the initial region (i.e., in which the flow is far from
+one-dimensional), which is of the order of two to three diameters from
+the exhaust port, is a significant fraction (20 - 30 percent) of the
+0.4 in pipe length.
+Figure 7 shows how the radiated sound pressure cycle is obviously
+dominated by the large magnitude peak, caused by the initial exhaust pulse.
+
+
+===== page 29 =====
+
+This is clear from both the measured and calculated cycles (c), Of course,
+the computed cycle (c) is simply the derivative of the computed tailpipe
+velocity cycle (b).
+3, 2.2 Long i e
+f Measurements and calculations for the 1.3 m pipe exhaust are shown in
+figures 9, 10 and 11. In this case, the calculations shown were obtained
+after three successive engine cycles.
+Figure 9 shows that very good agreement is shown for the timing of
+both the initial and reflected exhaust pulses at all three positions along
+the pipe, with the magnitudes of these pulses very accurately calculated
+at the first two positions. On looking at these three measured and calcu-
+lated traces, the progress of the initial poise and the subsequent reflec-
+tions, along the pipe, is quite clear.. The initial positive pulse is seen
+reflected as a negative wave, A, as would be expected, and this is in
+turn reflected from the then closed exhaust port as another negative wave,
+ms. ,, ked C.
+As similarly indicated previously in figure 3, the calculated pressure
+cycles at the three positions in figure 9 show the steepening of the initial
+exhaust pulse as it travels along the pipe. This, of course, corresponds
+with the C + characteristics on the x-t diagram crowding together as in
+figure 2. This wave steepening is shown more clearly in figure 10 in
+which the computed information of figur,^ 9 is plotted with a more convenient
+scale and compared with other measured pressure traces obtained with greater
+instrument gain. The computed traces in figure 10 show the initial pulse
+steepening significantly on passing down the pipe and although not identical,
+27
+
+
+===== page 30 =====
+
+the measured traces also show the steepening of the initial exhaust pulse.
+In fact, the measurem,int shows that 1.12 m from the port, a shock wave of
+low strength has formed.
+From the discussion of section 2.6 above, it then follows that the
+sound pressure radiated by the initial exhaust pulse would be greater for
+the long pipe than for the short pipe due to the pulse steepening. Results
+in figures 7 and 11 show this to be the case. Figure 11 shows measured and
+calculated radiated sound pressure for most of one cycle for a higher
+engine speed of 6000 rpm, with a lower load. Although the initial pulse
+in this case would be a little different it is believed that the conclusion
+is still valid. Therefore, the reason for the much greater peak value is
+clearly the effect of pulse steepening.
+3.3 Tuned Expansion Chamber
+The set of results obtained for the tuned expansion chamber, which all
+related to the same speed and load, are shown in figures 12, 13 and 14. The
+calculated results were again obtained for the third engine cycle.
+In this case, the agreement shown at the measuring positions along the
+duct, in figure 12, is excellent. Because of the complicated wave reflections
+it is no longer possible to follow the development of the wave pattern, how-
+ever,it is clear from traces (3), in particular, that wave steepening does
+not occur to the same degree as in the case of the long straight pipe.
+This results as the initial pulse is partly reflected at the increasing area
+section and so is diminished in strength. As a consequence of this, the
+radiated sound pressure peak resulting from the initial pulse, as shown in
+figure 13, is now of much lower amplitude than in the case of the long pipe.
+28
+
+
+===== page 31 =====
+
+A
+Figure 13, in fact, shows clearly that the calculated radiated sound pressure
+peak closely simulates the measured peak in both magnitude and duration, even
+though its duration is barely 10 -4 seconds.
+The computed and measured one-third-octave spectra also show very good
+agreement in figure la, as would be expected from the agreement of figure 13.
+There is a noticeable error only in a region near 1 kHz. This, in fact, is
+the region where the first occurrence of destructive interference from
+ground reflection would be expected (see section 3.1 above).
+3.4 Discussion
+The very good rtsults shown for the case or the tuned expansion chamber
+above indicate that the modoling of slowly varying area ducts is as accurate
+as the basic method that describes straight pipes. In fact, the correspondence
+of some of the values, in particul p r, the pressure cycles at positions (1),
+(2) and (3) in figure 12, and the radiated noise spectrum of` figure 14, is
+remarkable, Again, as for the straight pipes, the precise prediction of the
+magnitude and duration of the very short peak in the radiated sound pressure
+cycle shows the benefit of computing the x-t diagram in the manner described
+above, Once more, the val,ae of a small time interval and close determination
+of the velocity values at the tailpipe outlet is clear. It is then expected
+that any straight or gradually varying area duct may be studied with the
+same accuracy.
+By following the development of the initial pulse along both the long
+straight pipe and the tuned expansion chamber in figures 10 and 12, it is
+clear that the effects of wave steepening and pulse reflection will result in
+a large variation in the radiated sound pressure peaks for the long pipe,
+29
+
+
+===== page 32 =====
+
+30
+the shorter pipe and the tuned expansion chamber. This is clear from
+figures 7, 11 and 13, where the measured radiated peak values are 12 Pa
+for the short pipe, 22 Pa for the long pipe and 6 Pa for the tuned expansion
+chamber. For each case, it is clear that the radiated sound pressure cycle
+is dominated by this large magnitude peak caused by the initial pulse. This
+large peak obviously affects the peak sound pressure level, whereas, the lower
+magnitude fluctuations will significantly affect the ms level.
+Finally, some comment needs to be made of the poorer agreement obtained
+for the pressure cycles nearest the end of the two long exhaust systems.
+These are trace (c) in figure 9 for the 1.3 m straight pipe and trace (4)
+in figure 12 for the tuned expansion chamber. It appears most likely that
+the omission from the analysis of neat loss to the pipe walls is the
+largest source of error, as the exhaust gas temperature does decrease
+slightly along an exhaust system of about 1.3 m length used on a small
+engine. The errors caused by this omission are clearly not significant in
+the general calculation of the wave phenomena as shown by the otherwise very
+good results. However, it should be realized that the duct wall pressure
+near the open tailpipe end is formed by the summation of an incident pulse
+and its reflection of opposite sign arriving a very short time later. There
+is then an accentuated error in this pressure trace which does not imply
+that large errors exist in the general calculation.
+4. CONCLUSIONS
+The use of the method of characteristics, by computing the x-t diagram
+in the way described, has been shown to be a highly satisfactory means for
+studying radiated noise for two-stroke engine exhaust systems. The method
+
+
+===== page 33 =====
+
+is obviously suitable for four-stroke engines, The method has successfully
+been used to accurately model both the development of the initial exhaust
+pulse in an exhaust system and the spectrum of the sound radiated. Of
+particular merit is the way the method closely follows both wave steepening
+and the resultant rapid changes in velocity at the tailpipe outlet. Straight
+pipes of different length and slowly varying area ducts have both been
+considered.
+It is expected that the method could be readily extended to include
+many exhaust system elements, such as a step change in cross section ar.d a
+simple constriction, for ►^:hich the one-dimensional approximation is still
+applicable. In such cases an account of entropy increases in the flow at
+discontinuities may be included and hence the backpressure of these devices
+may be known. The method could conceivably be extended to branched systems
+and hence many muffler systems, such as side branch filters could be
+analyzed and multi-cylinder engines could be studied,
+This method of full nonlinear variable entropy analysis clearly has
+advantages over the simple lumped element theory and is an improvement
+on the distributed impedance model for two reasons. Firstly, wave steepening
+is correctly allowed for and, secondly, the precise sound source impedance
+is included. Consideration has also been given to the similar previous
+uses of the method of characteristics and to studies made using finite dif-
+ference methods which have been regarded as less suitable for radiated noise
+studies. The method described was developed to provide the necessary fine
+resolution of events at the tailpipe outlet to accurately determine
+radiated exhaust noise.
+31
+ty
+j _
+
+
+===== page 34 =====
+
+APPENDIX 1
+Motorcycle Engine Specifications
+The engine used is from a Suzuki TS 125 model motorcycle. The engine
+is a single cylinder air-cooled two-stroke type, is crankcase scavenged
+and has piston operated ports.
+Basic Dimensions
+compression ratio
+bore X stroke
+swept volume
+crankcase compression ratio
+maximum power
+maximum torque
+ignition tinting
+Port Timing,
+inlet 
+open 70° BTDC
+exhaust 
+open 98 0 ATDC
+transfer 
+open 116 0 ATDC
+Total Area of Fully Open Ports
+exhaust,
+transfer
+6.7:1
+56x50mni (2.20x1.97 in)
+123 cc (7.5 in3)
+1.3:1
+9.7 kW (13 hp) at 7000 rpm
+13.3 N•m (9.8 lbf-ft) at 6500 rpm
+21 - 23 0 BTDC
+close 70" ATDC
+close 98 6 BTDC
+close 116 0 BTDC
+4,032 x 10-4 1112
+6.16 x 10-4 m2
+f
+'f
+*f
+32 
+y
+i
+
+
+===== page 35 =====
+
+REFERENCES
+1.
+Davis, D. D.; Stokes, G. M.; Moore, D.; and Stevens, G, L.:
+Theoretical and Experimental Investigation of Mufflers with Comments
+on Engine-Exhaust Muffler Design. NACA Report 1192, 1954.
+2.
+Alfredson, R. J.; and Davies, P. 0. A. L.: The Radiation of Sound
+from an Engine Exhaust. J. Sound and Vibration 13 (4), 1970
+0 pp. 389-408.
+3.
+Alfredson, R. J.; and Davies, P. 0. A. L.: Performance of Exhaust
+Silencer Components. J. Sound and Vibration 15(2), 1971, pp. 175-196,
+4 
+Young, C.-IJ.; and Crocker, M. J.: Acoustical Analysis, Testing, and
+Design of Flow-Reversing Muffler Chambers. J. Acoustical Society of
+America 60(5), 1976, pp. 1111-1118.
+5.
+Young, C.-IJ.; and Crocker, M, J.: Finite Element Acoustical Analysis
+of Complex Muffler Systems With and Without Wall Vibrations, Noise
+Control Engineering 9(2), 1977, pp. 86-93.
+6.
+Jones, A. D.: Noise Characteristics and Exhaust Process Gas Dynamics
+of a Small 2-Stroke Engine. PhD Thesis. U. of Adelaide. 1978.
+7.
+Coates, S. W.; and Blair, G. P.: Further Studies of Noise Characteristics
+of Internal Combustion Engine Exhaust Systems. SAE Paper 740713, 1974.
+8.
+Blair, G. P.: Computer-Aided Design of Small Two-Stroke Engines for Both
+Performance Characteristics and Noise Levels. C120/78, I. Mech. E.
+Conference Publications 1978-5, 1978.
+9.
+Benson, R. S.; Garg, R. D.; and Woollatt, D.: A Numerical Solution of
+Unsteady Flow Problems. Int. J. Mech. Sci. 6, 1964, pp. 117-144.
+33
+
+
+===== page 36 =====
+
+F
+10.
+Anon.: Computer Program to Simulate a Crankcase Compression Spark
+Ignition Engine. Users Manual for Data Preparation. Mark II (with
+receivers) Vols. 1 and 2. 
+The U. of Manchester Institute of Science
+and Technology. 1977.
+11.
+Blair, G. P.; and Johnston, M. B.: Unsteady Flow Effects in Exhaust
+Systems of Naturally Aspirated, Crankcase Compression Two-Cycle
+Internal Combustion Engines. SAE Paper 680594, 1968.
+12.
+Karnopp, D. C.; Dwyer, H. A.; and Margolis, D. L.: Computer Prediction
+of Power and Noise for 2-Stroke Engines with Power Tuned, Silenced
+Exhausts. SAE Paper 750708, 1975.
+13.
+Lakshminarayanan, P. A.; Janakiraman, P. A.; Gajendra Babu, M. K.; and
+Murthy, B. S.: Prediction of Gas Exchange Processes in a Single
+Cylinder Internal Combustion Engine. SAE Paper 790359, 1979.
+14.
+Walter, G. A.; and Chapman, M.: Numerical Simulation of the Exhaust
+Flow From a Single Cylinder of a Two-Cycle Engine. SAE Paper 790243,
+1979.
+15.
+Rudinger, G.: Wave Diagrams for Non-Steady Flow in Ducts.. (D. Van
+Nostrand), 1955.
+16.
+Whitham, G. B.: Linear and Non-Linear Waves. (J. Wiley), 1974.
+17.
+Landau, L. D.; and Lifshitx, E. M.: Fluid Mechanics. (Pergamon), 1959.
+
+
+===== page 37 =====
+
+Cylindej
+PC (t)
+ac (t)
+sc(t)
+Y
+t
+P
+S  
+Sri
+t
+Cylinder 
+1 
+_._0,
+I 
+x
+Transfer 
+PC(t) 
+Aci
+port 
+ac(t) 
+S4 
+sci
+s c (t) 
+^(t^
+-----^ 
+u 3 
+Pd 
+P 
+U3
+Q 
+a4 
+a3
+Piston
+.C^liaust port
+Outflow from cylinder in regions @103
+O
+Crank ase
+Figure 1.— C char4cteristic causing; outflow from cylinder.
+
+
+===== page 38 =====
+
+Engine speed,
+6000 rpm
+Pressure in cylinder
+a  B. P.O.
+700 kPa abs
+Entropy of gas
+initially in pipe equal
+to entropy of gas in
+eylincler at E.P.O.
+ExhaLISL
+part open
+7
+6
+1
+2
+t
+0-,
+a^
+0
+0
+c^
+0
+a^
+a^
+H
+5
+4
+3
+0 
+0.1 
+0.2 
+0.3
+7^K<
+ 0.4 
+0.5 
+0.6 
+0.7
+k
+Distance from exhaust port (m)
+x
+I:
+Figure 2. Computed x-t diagram for engine with 0.7m straight pipe exhaust.
+z.^ arnw'.; 
+.!J "a4.v r 
+k+.a w^..^.f,..w 
+:.^... 
+vt'.t
+
+
+===== page 39 =====
+
+c
+^
+w
+o
+to
+F;
+In
+104
+to
+asrs,
+04
+M
+cl
+in
+cq
+H
+U)
+V
+^N 
+r.,
+Q
+\
+r4
+O
+-^--
+to
+ai
+`
+o
+y
+r4
+N
+^^
+1'ti
+W
+0
+ri
+Q
+Ct
+IOrJ
+^ U)
+U
+C^ J
+-C^
+O
+,^.4
+W
+.^,
+^'
+ca
+rr
+o
+Q)
+s^.
+U x
+°0,
+o
+°^
+U
+CM
+bjD
+^
+O
+^
+'^- 
+`
+a
+c"•
+n
+.^
+w
+P4
+a
+o
+A
+r I 
+r-i 
+N'i
+(srL z cIN) a•z2lssa.^^
+.^ 
+a xaa^.• :+^.=,f.,t;.:.+ ,.--.....e...ti... -
+za..
+.,^.s. ^„
+,«..,...........r,.. 
+o,..,.a-.c.-.--... ^:x ^-..+....,,.,may«,,.,. =.t
+
+
+===== page 40 =====
+
+t
+a.^ 
+M 
+tD 
+'Sty 
+GV
+V--( 
+r4 
+r-1
+-OU 113t AI 1100[is
+MOp
+to
+o
+c^
+tN
+on
+tM
+p
+U
+O
+b
+O
+^
+U
+w
+O
+'C3
+t^
+bA
+O
+N
+ti
+,o
+A
+^n
+s^
+0
+r-,a
+UO
+i
+d^
+U
+f1
+^n
+W
+O
+V-4
+_ 
+x
+
+
+===== page 41 =====
+
+120
+Ti0
+110
+0
+;A
+4-4
+100
+W 90
+PA
+130
+140
+80
+I
+Engine speed 4000 rpin
+Pressure in evIindev aL E.P.O.
+620 It'Pa abs
+, in cythider at U. P.O.
+132 111/8
+'ibod
+ISM
+0 
+1 
+2 
+3 
+4 
+5
+after exhaust: part: open (ills)
+Figure 5.- Coniputod pressure waves in 1.3 ill straight pipe ox:liaust.
+
+
+===== page 42 =====
+
+i
+^
+ 111
+Ell g hl e 
+-- ---^--
+cylinder 
+_____Wr
+H0.10 111
+Short p1pe
+I^ i 
+1.3 0
+(n 
+(b) 
+(c)
+0.10
+111
+0.84 111
+^.. ^.2 111 
+^
+Long pipe
+1.4 
+ 
+—1.38 m
+1 
+G)
+(D
+0. 10
+111
+0.022 111
+0.10 ul
+0.34 1l1
+Q.87 in 
+---^
+{ 
+1.1 7 111 
+-----
+Tuned expansion chamber
+Short pipe, long pipe, .first section of tuned expansion chamber
+all of diameter 0.04 111.
+k
+f
+Figure 0._ Experimental exhaust systems showily; measuring positions.
+
+
+===== page 43 =====
+
+x
+a
+Computed 
+1)e(0) 290 kPa abs
+--^-- Experiment 
+a.e(0) =- 630 Iii%s
+Engine speed 4000 rpm
+High load
+120 
+(a) Pressure in pipr ".1 ni
+Cli 
+from port
+5 110
+a^
+1.00
+00
+r4
+100
+A
+0
+m
+(u) Velocity at outlet of
+pipe to at mosphere
+One revolution 
+----bi
+.1-.
+P4 
+1
+P4 
+0
+a^
+a^
+N
+1"1 
+0
+(c) Radiated sound pressure
+at 5 ni
+1a 
+10
+Tinie after exhaust port open (Ins)
+Figure 7. Calculations and n-leasurenients for 0.4 ni straight pipe exhaust.
+
+
+===== page 44 =====
+
+c^N
+a^
+0
+Nz 
+90
+a ►
+s^
+80
+0
+v^
+vaH
+Distance to
+sou reo 5nl
+1
+A
+7
+100
+""ts' ConipuLed
+0-•--0 1:;xperI nloilt
+Ell f;lilo spend
+4000 ,-mill
+ICS
+70
+63 
+125 
+260 
+500 
+f lc 
+21c,
+Canter frequency of 1/3 rd octave band (11z)
+Figure 8.- Third-octave, radiaLod noise from 0.4 Ill straight pipe exhaust.
+
+
+===== page 45 =====
+
+f}
+P^
+a
+'If
+i
+CollipuLed 
+pC(0) - 350 icPa, abs
+----- Experiment 
+.1 1, 
+015 nibs
+E ntide speed 4000 rpm
+high lotus
+120
+(a) 0.10 i» from port
+110
+100 
+`••'
+90 
+1 
+,
+A
+ci 120 
+(b) 0.84 m from port
+110 
+100
+Aa 
+90 
+A
+t--- 
+One revolut ion -----°+
+110 
+r, ((c ) 1.12 111 from port
+' 
+•
+100
+^i 
+♦^I
+w 
+^
+90 
+A 
+C
+0 
+10
+Time ,..Cter exhaust port open (ails)
+Figure 9.- Pressure vawes in 1.3 m straight pipe wdmaust,
+
+
+===== page 46 =====
+
+110
+edP 105
+100
+V)
+95
+r
+Computed 
+pC(0) = 350 1cPa abs
+-- Experiment 
+n.e(0) = 615 m/s
+Engine speed 4000 rpm
+high load
+II ^', 
+(a) 0.10 in from poet
+110 
+i 
+r
+i
+105
+r 
+i
+r 
+r
+100
+95
+ 
+(b) 0.34 in ,fl•otll Dort
+(c) 1.12 in from port
+105
+100
+95
+0 
+1 
+2 
+3 
+4
+Time after exhaust port open (nis)
+Figure 10. Initial pulse steepening; in 1.3 m straig lA pipe exhaust.
+
+
+===== page 47 =====
+
+s
+i
+J
+^,
+0
+lk
+2 01
+10
+01
+a
+w
+t~
+^n
+a^
+0
+a^
+(3olllt)llL('((
+------ I-,'x cr'LliwnL
+Engine spend 6000 ri)nl
+light load
+Distance Lo source a 111
+I
+,^ 
+n
+r ; 
+1 
+r 11 
+^'1 
+r
+^ 
+, 
+r
+0 
+5
+`.l,iule after passage of initial inil8e (1118)
+Figure ll.- Sound pressure radiated fro,. , 1.3 111 sLraihllt p1pe exhaust„
+
+
+===== page 48 =====
+
+:n
+ax,
+WN
+:.j
+Ln
+V)
+a
+Time alter. exhaust port open (nis)
+gure 12.- Pressure waves in tuned expansion chamber.
+ii
+i
+^t
+0 
+10
+110
+100
+90
+110
+100
+90
+110
+100
+90
+110
+100
+90
+Computed 
+1)e(0) : 300 kPa abs
+Experiment 
+a`(0) 600 m/s
+Engine speed 4000 rpni
+high load
+(D 0.10 in ,iron., port
+
+
+===== page 49 =====
+
+t 
+11
+Ce 1111)Uied
+Engine
+Experiment
+ speed 4000 rpm
+high lead
+Distance to source 5 m
+^ 
+^ 
+r
+r
+w
+M
+M
+`I 
+d^
+1 
+it 
+11 ^
+too I
+(I
+8
+G
+P,
+4
+V) 
+2
+0r
+0
+0
+U)
+CIS
+cz 
+2
+0
+0 
+10
+Time after passage of initial pulse (111s)
+Figure 13.- Sound pressure cycle radiated from lured expansion chamber.
+
+
+===== page 50 =====
+
+t 
+'^
+CompuLect
+0—O Experiment
+90 
+Engine speed 4000 rpm
+cu5
+80
+a^
+Q4
+-d 70
+0
+I 
+e
+60
+63 
+125 
+250 
+500 
+1!c 
+21c
+Center frequency of 1/3 rd ocl ,Itve band (Iiz)
+Figure 14.- Third-octave radiated Eloise from wiled expansion chamber.
+O
+v
+0

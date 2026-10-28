@@ -1,0 +1,3365 @@
+TITLE: Scavenging a Piston-ported Two-stroke Cylinder (NACA TN-674)
+YEAR: 1938
+FILE: 1938_Rogowski_Scavenging_Piston_Ported_Two_Stroke_Cylinder.pdf
+PAGES: 44
+EXTRACTED_WITH: PyMuPDF PyMuPDF 1.28.2
+
+
+===== page 1 =====
+
+CASE FILE 
+COF!:t 
+TECiL'TICAL NOTE S 
+KATIOKAL ADV I SORY COMM I TTEE FOR AERO'AUTICS 
+SCAV==:CIYG A 
+PIS'i.'O~J-?ORT.r:;J 'i.'f"O-SC'ROKE CYLI:mZR 
+By A. R. Ro~ow ~i and J . 
+~
+. 
+30uc~ard 
+~ : a::;;12.c:lu3ett3 I nstit ute o f Technology 
+----....... -. .. 
+-::-". co~, i ·1. -; ton 
+:; 0 ve ~ "'J E' r 
+1 9:<: 8 
+
+
+===== page 2 =====
+
+• 
+rATIorAL ADVI SOIY 
+CO~~IT1ZE FO~ AERONAUTICS 
+T ECli~ICAL NOTE NO . 674 
+SCAVEIJGHTG A PISTOI~ - POrtTED TO- STROKE C--r,HTDER 
+By A . R. Rogowsk i and C. L. Bouchn d 
+An i nvestigation Was made with a special l y desi bned 
+eng i ne to determine t_le sc.:<.v on. inG characteristics of a 
+l a rge number of inl et - ~ort shaDos and arr~n~emell ts and the 
+optimu ~ port arran€e ~en t nnd tining for t~iB particula r 
+type of en ~ ine
+. 
+A special cylinder construction pe r Mi tted 
+wide variations in timing as well as in 
+sh~pc and arrange-
+nen t of both the inlet and exhaust ports . 
+~he study of the effect of ~ort s~ape combinations 
+and timings on eng i ne ~erfo r rnance ~~B Dade us in ~ illumi -
+na tin g gas as a fuel . 
+Throua h var i ations in i nlet - po rt 
+ar ran Genent and port timin~s
+, 
+t~e v~lue of the s caveng i ng 
+eff i c i ency was increased fro .. an ori "inal 44 pe rcen t to 
+approximately 67 pe rc ent ~ith a corresponding increase in 
+poue r . 
+it~ t~e opt i ~um po rt arr~ngemen t a~d tim i ng deter-
+mined , n larg e nunber of pe r fo r ~ance runs were made unde r 
+b oth 
+~pa rk- iGnition an 
+compression- i eniti on operation . 
+I[TRODUCT 101; 
+ith a view toward increasing the specif ic output and 
+simplifyin~ the engi~e construction , 
+~uc: attenti on and 
+wo r k is being devoted to t~e develop~e~t of suitable two -
+atro~e en~ines for aircraft use . 
+Since the output of a 
+trio - s t roke eng in e is pr i mo.rily delJendent upon the scaveng-
+ing e ff iciency of its cyl i _ ders , the p roblem of success-
+fully developing an engi ne of this typ e i s mainl y one of 
+obtaining the no. t complete scaveng ing possible without 
+the use of a co mplicated mechanism o r of excessively 
+~ i gh 
+scaveng i ng p ress res . 
+There are two gene r al cethods of Beave n i ng the cyl i n -
+de r of the two - stroke enG i ne , :1aDely, the 
+II th rough" scav-
+ong i ng ii.1 '.Th ich inlet and exhaust porte are at opposito 
+end.s of the cylin cl..e r and 
+t~le Ill oop ll 
+sc~ve:J.ging whe r e i n l e t 
+,~~--~------- ---------~---=--------~~---- ------------- . 
+
+
+===== page 3 =====
+
+2 
+N. A . C. A . Techn ical No t e No . 674 
+and exhaust ports a re at th e same end of the cylinde r. 
+The 
+s cav e ng i ng patte r ns of any tw o- s tro ke engine may be clas-
+s i fied unde r one of these catago ri es . 
+The t hrough - scavenge d engine necessitates the use of 
+v a l ve g e a r or doubl e p isto ns . 
+This method , h owever, per-
+mi ts u n idire c t ional flow of the c ombust io n p roducts and of 
+the scaveng in g ai r th r ough t he cylinder . 
+The loop - s cav-
+enged eng i ne , on the contrary, requ i reo neither valve g ear 
+no r do ubl e pistons . 
+It i s necessary to scavenge th i s type 
+of c y linder by ci r culating the air in the fo r m of a l o op 
+an d , consequen t l y, the s cavenging a ir is much more likely 
+to mix with the burned gase s , mak i ng it more difficult to 
+secure high s caven g i ng ef f i ciency . 
+Although the spec i f i c output of the l oop- scavenged 
+eng i ne may nevo r equa l that of the through- scavenged en-
+g i ne , i ts i nhe r ent s i mpl i c i ty may outweigh this co ns ider-
+ation in c e rtain app l ications , p rovi ded that its scaveng-
+i ng efficiency can be made sufficiently hi gh . 
+The p ist on-
+po r ted enGine lends itself particularly well to diesel op-
+e r ation because it s lack of valve gear pe r mits extreme 
+flexibil i ty i n 
+cyl i nder - be~d and combustion- chambe r design ; 
+i mportant fa c tors i n successful diesel operation . 
+Th e purpos e of th i s i nvestigation was to determine 
+the p rac t ical l i mits of s cavenging eff i c i en cy of a loop-
+scavenged cylinder, in o r der that its op ti mum pe r fo r mance 
+might be co mpared and i ts advan tag es p r ope rl y weighed. and 
+balan c e d aga i nst the p e r fo r mance and advantages of othe r 
+en i nc types . 
+It is al so the pur pose of this inve s t i gation to fu r -
+nish design data as to t he arrangement and timing of the 
+po rts that g i ve be s t pe r fo r mance in the l oop- s cave n ged 
+cy linder . 
+DESCRIPTION OF APPARA TUS 
+Eng ine 
+The eng i ne used for this investi gat i on was a specially 
+desi gned s i ngle - cyl inde r, water- c oo led, piston- po rt ed , two -
+stroke eng i ne hav i ng a 4i- inch bo re and a 6- inch stroke . 
+It was mounted on a universal crankcase and rras directly 
+connected t o an electri c cradle dynamometer . 
+The eng i ne 
+i n c o r po rates three basic ideas, namely, variab l e inlet- p ort 
+t 
+
+
+===== page 4 =====
+
+~
+. A
+. C
+. A
+. 
+Tewhnic~l Note No . 674 
+3 
+and exhaust - ~o rt timings , vnriable po rt shapes, and varia-
+ble compre ss ion ratio . 
+The 
+inlet - ~ort ti min 
+nay be var-
+ied duri ng operation from 45° to 65 0 f r on bottom center 
+and the exhaust fron 55 0 to 80° fron botton center . 
+The 
+port shape i s va ri ed by fasten i ng ins e rts into t~e ports . 
+These in se rts nay be na de to defle c t the enter ing air or 
+char ge at various angles towar~ the cylinder head . 
+The 
+compression ratio may be chanGed by d i splacing the head 
+axially in the cylinder cleeve . 
+Figure 1 is an assembly drawing of the eng i ne without 
+it s crankcase . 
+Fi gure 2 shous photographs of the actual 
+parts assenbled . 
+The cylinder sleeve that contains the 
+po rts i s split lon g i tudinally into two sections . 
+One of 
+the sect i ons contains e i gh t inlet ? orts and the othe r, 
+four exhaust po r ts . 
+?i~ure 3 shows an insi de and outside 
+view of the sleeves . 
+One pair of ~Oo inserts nay be seen 
+i n pos i tion in the inlet sleeve . 
+Sleeves were i ndepend-
+ently water-c ooled . 
+F i gure 4 shows vari ous sections through the sleeves 
+and ports . 
+Section D- D is taken th r ou~h the inlet and ex-
+haust po rts. 
+It will be noted that the eig~t inlet ports 
+arc arranged so t at thei r conter lines int e r se ct slightly 
+off the cylinder axis . 
+This po rt arranGement appeared , 
+f r on a study of the literature , 
+~o be the mos t pronising 
+design . 
+Figure 5(a) shows aections throug 
+the 0 0 , 30 0 , 45 0 , 
+60 0 , and 70 0 inserts . 
+Figure 5(b) is a photog raph of the 
+actual i nserts . 
+A pair of inserts for one po rt c ons ists 
+of an upper and a lowe r part . 
+Each par t is he ld in place 
+by a 
+~achine screw . 
+Two types 0: alu~inum p istons were used , one having 
+a flat head and the othe r a sl i ght ly r ounded head . 
+Fig-
+ure 6 is a arawing and fi~ure 7 is a 
+photog r~ph of both 
+pistons . 
+The flat -t op ' p ist on was used a large part of 
+the time uhile runnin, on illuninating gas . 
+The roun d-
+top piston was also used with ~lluDinating gas to invest i -
+gate the effect of a chango in piston shape on scavenging . 
+A cast-iron hea 
+was used fo r 
+spark - i~nition opera-
+tion . 
+This hea~ ~as sl ightly concave , as may be seen f r om 
+the drawing in figure 8 . 
+An 
+alum i n~m - alloy head , together 
+with the r ound- top piston , was used for co pre sion-
+i gn i tion operation . 
+(Seo fig . 9 . ) 
+F i gure 10(a) is a 
+photograph of the cylinde r head uith its pear- shaped com-
+
+
+===== page 5 =====
+
+4 
+N. A . C. A . Techn ica l Note No . " 674 
+bust ion 
+poce . 
+A co mbustion chamber of th i s shape was 
+cho s on i n an attempt to obtain good sp ray distr ibut ion 
+v it h a min i mu m n f obstruction t o the flow of scaven g ing 
+a ir . 
+AUXiliary Apparatus 
+F i gure 11 i s a schemat ic l ay- out of the e ngine and it s 
+acce s sor i e s as set up fo r spa r k - i gn i tion operation on il-
+luminat i ng gas . 
+F i gure 12 shows t~o photo g rap hs of the en-
+g i ne set up fo r d i e s el opetation . 
+The fuel Fump with its 
+contro l s and the i nje cti on - nozz l e holQe r are plainl y vis -
+ible . 
+Air was suppli ed t o the en g i ne by a 
+se~arately driven 
+co~pressor
+. 
+The quantity of a ir was rneasfir ed by a cali-
+b r a t ed orifice box on the suction side of the pump . 
+Illu-
+mi nat ing gas f r om the ci ty mains was compressed to intake 
+p r e ~ su r e by a separately dr iven Roo ts blower . 
+Gas flow 
+was measur ed both by a l a r g e industrial gas meter and a 
+p i t ot - stati c flowmete r . 
+The p i tot - static flow ~ eter was 
+used to obtain i nstantaneous readings of the Gas .flow and 
+the i ndust rial gas met er was used to calibrate the p itot 
+tube . 
+Fo r c omFress i on - ign i ti on ope r ation a standard Bosch 
+h i e h - speed fuel - i njection pump was used . 
+The sp r ay nozzle, 
+wh ich was locate d at the auex of the h eart - sha Ded combus -
+tion chambe r (see f i g . 
+10(~»
+, was a sp ec i a l 
+B~sch nozzle 
+hav i ng three 
+o ri f i ce~ each 0 . 4 mi lli meter 
+in d i ameter, 
+located in a h ori zontal p l ane , and s paced 30 0 apart . 
+Resonance was el i minated i n the inlet and exhaust 
+systems by conn e cting the surg e t anks to the en ine with 
+sort le ngths of lar e di amet e r p i p e . 
+An M. I . T . balanced- p re e sur e type indicator wa s used 
+to obta i n pre s sure- t i me d i agrams . 
+Leakage of the en t e ri ng mix ture down t he p ist on to 
+the crankcase during tha t po r t i on of t h o cydle in wh ich 
+the p i ston cove r ed the inlet p orts , was eliminated by 
+k e ep i ng the crankcase at s cavengin g Fre s suro . 
+Leakage from 
+the scaled crankcase was negl i
+~ i ble
+. 
+
+
+===== page 6 =====
+
+• 
+N.A. C.A. Techn i c a l Note No . 674 . 
+5 
+Test Proc edur e 
+A sunmary of the var i ous st eps t ake n in the t es t p r o-
+c edure for the spa rk-i gn i t ion engine using i lluminat i ng 
+gas is li ste d below: 
+1 . 
+With several i nle t - port shapes, runs were made 
+cov e r i n~ the enti re ran ge of 
+i nlet - port an d 
+exhaust - ~o rt 
+ti min gs . 
+It was concluded f r om the re sults of thes e runs 
+tha t inlet - po rt shape had l i ttle effect on the opti mum 
+i nl e t 
+t i ming and e ven le ss e ffe ct on the op ti mum exhaust 
+timin g ~ 
+2 . 
+Th e results havin g 
+sho~n that the opti mum exhaust -
+po rt ti ming ITas no t apprec i a bl y af:ected by changes i n the 
+inl e t-nart ar rang ements, the scavenging characteristics of 
+a l a r ge ~umber of inlot - por t ar r angements ITere i n v est i ga t ed 
+at a fixod exhaust - po rt ti mi ng of 65 0 B. B. C. and at th r ee 
+i nlet- 90 rt t i mi ngs . 
+3 . 
+~he r esult s f rom (2) confirme a the obse rvati ons 
+of (1) : 
+that the opt i mum inl et - po r t timing was unaffe cted 
+by variations in inl et -~o rt arr~n aments . 
+Consequent ly, 
+a n 
+addition ~ l numb e r of inlet - no rt a r ra_ gernonts voro test -
+ed unde r fixAa i nlot - port ~nd ~xhaust -20 r t tiDings of 47° 
+and 65 0 , 
+re s~e ctiv ely . 
+4 . 
+A complete set of i nlet - po rt and exhnus t - po r t 
+t i min g runs was made using the opt i mum inlet-po rt ar range -
+ment as' determined f r om (1), (2) , and (3) . 
+5. 
+With the c onditions of opt i mum po rt a rran gemen t 
+and timing established , runs ITere made to dete r mi ne 
+b r a~e 
+mean 
+ef~ect i ve pressure and 
+3 c~v enge pressur e against en-
+g i ne speed at a constant scavenge rati o , constant scavenge 
+pre~sure
+, and wi th the 
+s cav on~e p~essure var~ing as the 
+square of tne engine speed . 
+Runs Do r e also ~ade o v e r a 
+r ange of scavenge ratios . 
+Since most 
+o~ these ru~s were 
+made pre vi ous to those of (4) , an inlet- po r t t imi ils of 47 0 , 
+based on the data of (1), (2), anL (3) was used i nstead of 
+52 0 whi ch appea r s to be the opt i mum 
+ti ~ i ng fo r po rt nr r ange -
+ment, 
+D. 
+6 . 
+With the opt i mum i nlet - po rt ar rangemen t as p r evi-
+ously determined , runs ITere made cove r ing the i n let - port 
+and exhaust - po rt t i mi ng r an~es t o determ i ne the op ti mum 
+t i mi ngs undor co mpress i on- i s n itio n ope r at i on . 
+
+
+===== page 7 =====
+
+6 
+N .A . C. A . Te chn ical No t e No·. 674 
+7 . 
+With t h e opt i mu m inl e t - port arra nge~en t and ti m-
+i ng , r uns wer e ma de un de r 
+c omp r ess~ o n - i gn iti o n operation 
+t o dete r min e brake me a n effe c t ive p r essure and spec i f ic 
+fue l 
+c onsu mpti on aga i n st f u e l rat e o v e r a r ange of s ca v-
+e n ge r at i o s a t con s t an t eng i ne speed . 
+8. 
+An inve sti gati on s i mila r t o t ha t u n de r (7) was 
+mad e o v e r a r ang e of en g ine speed s a t a c on s t an t 
+s c a v-
+enge ra t io . 
+The eng i n e condi t i ons tha t we r e he ld c ons tan t fo r 
+mos t of t h e wo rk , a r e as fo l lo~s
+: 
+En f?; i ne spee d 
+1 , 800 r . :p . m. 
+Compress ion rati o .. . 7 ( spark i n iti on) and 15 
+(c omp r ession i gn i tion) 
+Air- fue l rat io . 
+4 . 4 ( i llu mi natin g gns , best p owe r ) 
+I gniti on tir!'ling 
+1 6 0 
+B. T . C. 
+Sc a v e n e ratio .. 
+1 . 4 
+Fue l ........... . 
+illum i nat i ng gas ( spn r k i gn i -
+t i on ) 
+fuel oil (compress i on i gn i t ion) 
+The blowe r mean effe c t ive p r es s u r e was cal cula t ed as 
+fo ll ows , assu mi ng a d i abatic compress i on and a blowe r eff i -
+c i e nc y of 70 pe rc en t 
+(Bee f i g . 13) : 
+Bloue r ho r se:powe r 
+= 
+_ . ---- -----_.-_._--- ----- -----
+0 . 70 X 03000 
+Bl 07er mean effoc t ive p r essu r e 
+Q::l 
+n 
+T · Ie 
+~~ ') 
+1 L 
+:p 1 
+-
+1 1 
+J 
+= - ------ ------ ._----------
+0 . 7 
+:;:, A N 
+• 
+
+
+===== page 8 =====
+
+i n \'1h ich : 
+N • A • C • .A. 
+Tee h n i c :.11 }; 0 t e rIo . 
+6 74 
+m, 
+pound3 of a ir por minu t e . 
+J, 
+778 foo t pounds pe r B. t . u . 
+Cp ' 
+specific hea t of ai r a t c onc tant p re sEur e , 
+0 . 235 B. t . li . pe r pound . 
+m 
+.L i ' 
+blowo r inl et a ir te mpe r a ture , 
+P2 ' 
+blower de~ive r y p re ssure . 
+n
+, 
+blower inlet presEure . 
+-
+1 
+n , 
+1 . 4 1 . 
+L, 
+st r oke, fae t , of eng i ne p i nton . 
+A, 
+eng in e p i cton a r ea , s qua ro 
+in c ~es
+. 
+N , 
+r . p . m. of engine . 
+DI SCUSSI03 A ~D RESULTS 
+Spark I gnition -
+I llum i na ti n~ Gas 
+7 
+The term IIscavenge ratio ll as used i n t::" i s wo rk is the 
+r atio of the vol ume o f 
+char~ e (mixture of ai r and illum i-
+nat i ng gas under spark - i ~n i tion c ond i tions) o r of air (un-
+d e r co mpression- ignition c onditions) t:at passes th r ough 
+the en~ine cyl i nder pe r 
+st ro ~e
+, 
+to the displa c ed volume of 
+the cylinder . 
+The 
+v o l u~c of the ente ri ng 
+ch ~ r ge is me as -
+ured under at~ospho r i c (laboratory) condit i ons of tempe r a -
+tur e and pressure . 
+The term II s caveng i ng efficiency:' is def in ed in this 
+r epo rt as the r at i e of the weight of fresh cha r ge in th e 
+c ~ r 1 in de rat tho c los 0 
+0 f the e:x: 11 """l 
+.... t po r t s , tot hop rod u c t 
+of t ho cyli n der v olume and 
+t ~e inl et dens ity . 
+Illuminat in g gas was chosen as a fue l because it wa s 
+poss i bl e t o mi x it thoroughly with the accompany i ng air . 
+Tho r ou~h ~ i x i ng of t he ~uc l and air is absolute l y ne ce s -
+sary when 
+t~e relat ive scavenging e ff ici en cy i s to b e d e -
+t e r mi n e d from changes i n b r ake mean 
+e ~fe ct iv e p re r, sure due 
+
+
+===== page 9 =====
+
+8 
+.A. C.A. Techn ical No t e 
+o . 674 
+to corre sp ondin g changes in 
+i nlet - ~ort arrangemen t . 
+Poo r 
+mi x i ng of th e f u e l and a ir, as 70uld be l i kely with a 
+liquid fue l, would affe ct the combustion process and hen c e 
+the ther mal 
+ef~ i ci en c y and pow~r . 
+Under these 
+c ir cu~ ­
+s t an c es , changes in the moan effective p re ssure wi th port 
+ar r a n gement c ould no t be taken as an indication of rela-
+t ive s ca ven g i ng ef~ic i ency . 
+All runs under spa r k - i gn ition ope r at inn were made 
+us i n g illumi nat i n 
+gas as a fue l. 
+Since the p ower obtained 
+from a bes t powe r nixture of i l lumi natin 
+gas and ai r was 
+found f r om a c t u a l tests on a four - stroke C. F . R. eng i ne to 
+be 85 percen t of tlat of a best pow e r mi xture of gasoline 
+and a ir, it i s r easonable to believe that an increase of 
+1 5 percent in pover would be p o ssi~le in t he t wo - stroke 
+eng i ne by su bst i tut i ng gasol i ne fo r illuminating 
+g ~s
+. 
+Al though t he me thod of dete r min i ng the r elat ive s cav-
+eng i ng abili t i es of va rious inlet - p o r t ar r angements by 
+means of changes in th e b r aKe mean effect ive p re ssure i s 
+st r aightforward and simple , it i s a nuch more d i fficult 
+p robl em to dete r mi ne the absolute s caveng i ng eff i ciency 
+under anyone inl et- po rt a rrang ement. 
+The value of an ab-
+so l ute measure of s caveng i ng e f f ici en cy r es i des i n the 
+fa ct that a theo ret ical li mit of t h e s ca v eng i ng eff ici e ncy 
+may be dete r mined . 
+I f it is found that the ~x i sting op-
+t i mum po rt ar ran gemen t y i elds a s c a v en u ing eff i ciency al -
+most equal to this liDit , furt he r rese a rch may be unnec e s-
+sa ry . 
+The method emp l oyed i n det e rmining the eff i ciency 
+OD the scav eng i ng p r o c ess under the optimum p or t arrange -
+men t and ti ming conditions wil l be b r i efly out lined . 
+As pre vi ousl y defined, the scaven g i ng eff i ciency i s 
+t h e r at i o of th e 
+re i ght of fresh charge in the cy linde r 
+at t he ti me the por t s close to t he p r odu ct of t he t ot al 
+cylinde r vo l ume and inle t dens it y . 
+The inlet dens ity con-
+d i t io ns ~ e re a r b i trar il y 
+ta~ en as 75 0 
+F . and 29 . 92 i n ches 
+of me r cur y . 
+De t ermi nati on of th e deno n i nator of this r a -
+ti o is qu i te simple 
+i ~asmuch as t 2 e total cylinder vo l ume 
+an d i n l et density c on d i ti ons are k ~o wn
+. 
+The nume ra to r of 
+the r at i o , the actual wei ght o f 
+~r e s h char g e i n t he cy l in-
+de r at the close of tho p o r t s , mny be determined if the 
+ind i cated output an d the s pec ific air consumpt i on (pounds 
+o f a ir pe r indicate d ho r sepowe r per hour) a r e known . 
+In o r de r to determ i ne t he value of t~e spec i f ic a ir 
+con s ump tion whe n r unning on illumi nat i ng gas and air , and 
+a t a c ompress i on rati o of 
+7 , run s were 
+~ ade at best p OTIe r 
+
+
+===== page 10 =====
+
+H. A . C. A . Technical Note No •. 674 
+9 
+fuel - a ir ratio and ignition timing on ~ four - stroke C. F . R. 
+engine at several engine speeds . 
+The foregoing conditions 
+were made to reproduce as closely as poss ibl e those of the 
+optimum two-stroke ope r ation , in orde r that the ind icated 
+thermal, efficiellcy fo r the two 
+c~ses would be as near l y 
+the same as possible . 
+The calculations relative to the 
+foregoing discussion are included . 
+Actual indicated horsepower of the two - stroke engi ne : 
+48 . 8 . 
+The specif ic ai r consvmption as. determined fr om the 
+C. F . R . eng i ne operating on illuminating gas : 
+5 . 85 pounds 
+of ai r ge r indicated horsepower pe r hour . 
+The air actually consumed in th e two - stroke engine 
+pe r stroke : 
+1~~~_~_~~~~ = 0 . 00264 pound . 
+1800 X 60 
+Eng i ne speed : 
+1 . 800 r . p . m. 
+The number of pounds of air in a full cylinder volume 
+containing the best power mixture of illuminating gas and 
+a ir at 75 0 F . and 29 . 92 inches of me rcury : 
+lll~~ x 0 . 0742 x 1~ = 
+1728 
+5 . 8 
+0 . 00396 pound . 
+Total cylinder volume in cubic inches : 
+111 . 3. 
+I nlet density (75 0 F . and 29 . 92 in . Hg) : 0 . 0742 . 
+h12 
+5 . 8 
+Scaveneing eff ici ency ~ Q~QQg64 x 1 00 = 
+0 . 0 0396 
+66 . 7 percent . 
+On the basis of th i s definition of s cavenging effi-
+ciency, it is evident that e ven though t~e cylinder were 
+completely purged of its burned products and it contained 
+only fresh charge under ~he previously specified condi -
+tions of i nlet density , the c jargin g efficiency would not 
+be equal to 
+10 ~ pe rcent . 
+~he port ion of the piston dis-
+placement included between the bott om- centci and t he po rt-
+closing pos itions is lost . 
+It is possible to make an estimate , f the maximum 
+
+
+===== page 11 =====
+
+1 0 
+N. A . D. A . Techn ic a l Note N,o . . 674 
+p r a ctical scavenging efficiency attainable i n th i s pa r t ic-
+ular en g i ne . 
+This max i mum value of the s ca v eng i ng eff i-
+c i ency wil l be r ea ched 
+hen the exhaust ga ses ~ r e comp l e te-
+l y expelled and when t he c yli nder , at th o ti me of po r t 
+clos i n g , conta i ns onl y f re s h cha r ge at atmosphe ric density . 
+Max i mum a ttainaa l e 
+. 
+f~
+" 
+89 . 4 x 
+s c a vengJ.n g e l J. cJ.ency = --- - -
+111 . 3 
+roo = 80 . 3 pe rc en t . 
+Total c yli nder volume i n cubic i nches l ess the lost 
+cylinder vo l ume (i. e . : po rti on of cylin cle r volume c onta ined 
+bet ween the aottom center and port c los i ng pos i tion of th e 
+p ist on) = 8 9 . 4 . 
+Total 
+cyli n de r vo l ume i n cub ic inches : 111. 3 . 
+g~ taE~~!_?:~!~~!_~~~!~~~~~~ __ 
+~! .:f~~~~~~~_~~!~~E: ~~ = 
+Max i mum at tai nab le s caveng i ng eff ici en cy 
+83 pe rc en t . 
+.Q~f:§'2 x 1 00 = 
+0 . 803 
+An indepen dent check on th i s rati o of the actual opti -
+mu m t o the max i mum a t t a i nable sca v en g i ng eff i c i ency was 
+made . 
+Th is ch e c k was aased upon the assumptio n that the 
+r a t io of actual to uoss i ble i ndi cated mean eff ective ure s -
+sures i s equal to t~e ratio of actual ' t o poss ible 
+s c a~eng ­
+i ng efficiencies . 
+The i ndi cated mean effect i ve p re ssure 
+obta in e d under · the actual opt i mum s caveng i ng eff i c i en cy 
+condi t ions i s known . 
+The denom i nato r of the ratio, th e in-
+d i cated mean effect ive pressu re that would be obta i ned i f 
+a ll the burn ed gas we re expelled and only f r esh char g e re-
+mained i n the c yli nde r, i s the unknown quantity . 
+Th i s 
+~uant ity was dete r mi ned f ro m r uns made on a fou r - stroke , 
+s i ng l e - cyl i nder eng i ne and unde r the same test c ondit i ons 
+a s those of the 
+t~ o - st r oke eng i ne in o r de r tQ keep the in-
+d i cat ed the r mal eff i c i en cies of both eng i nes as near l y 
+equa l as poss i ble . 
+The p robl em of determinin g f rom a four- st roke eng i ne 
+t h e max i mum i nd ica ted mean effect i ve p r es su r e tha t 
+c ould 
+be obtainod f r om the tw o- stroke eng i ne i s mainl y one of 
+cha r g in g the disp l a ce ment v ol ume of the f our- stroke engine 
+wi th a f r esh mi xtur e of the same density as in the two -
+stroke eng i ne . 
+In o r de r t o make the dens i ty cond i tions 
+equal , i t is n ecessary to know the tempe r ature and t h e 
+pr e ssure of the charge i n ea ch engine at , fo r example , the 
+s tart of c ompresq i on . 
+As a f i r st approximation , it was 
+
+
+===== page 12 =====
+
+N.A. C.A. Technical ?ote No . 674 
+11 
+assumed that the 
+tGmper~ture of charge i n both engines at 
+the start of compression was equal . 
+The compression ratio 
+of the two engines was the 
+sa~e
+, and the compression pres-
+sures of both engines were made equal by sl i ht l y throt -
+tling the four - stroke engino . 
+Unde r thoSG conditions the 
+cha rge density and indicated thermal efficiency of tho two 
+eng i nes would be equal and the mean ef~ectivo pressure 
+that the compressed charge was capable of deliverin 
+would 
+bo constant whether in the combustion space of the two -
+stroke o r tho four - stroke engine . 
+Since tho clearaLce 
+volume of the four - stroke engine was not scavenged , it i s 
+nGcessary t o multip ly its indicated me~n effective pres-
+sure by tho ratio of total cylinder v olume to displaced 
+volume . 
+Tho value thus obta i ned ~ ill be tho two-stroke 
+maximum attainable indicated ~ean effective ~ressure
+. 
+The 
+rati o of the best actual indicated mean effective pres-
+sure obtained fro~ the two - stroke engine to the maximum 
+attainable mean effective p r essure uill be the same as the 
+ratio of best actual to the maximum attainable scavenging 
+eff ici ency . 
+This ratio bf the best actual to the maximum attain-
+able scavenging eff ici onci as calculated on the forego i ng 
+basis is equal to 87 percent as compared with a similar 
+ratio of 85 pe rc ent on "!;he 
+[2.. ;~!:.::_s_~_~2..<~~ engine . 
+Since the 
+ratios are almost equal for both engines , the proportion 
+of bur ned products re main i n 
+in the cylinder of each en-
+g ine ~ust be nearly the same . 
+T~is being the case, the 
+increase in terr.porature of the fresh charge due to mi x i ng 
+wi th the burned products must be npproxirr:utely equal in 
+both engines and therefore tho validity o f the original 
+assumption of equal charge temperatures in both eng i nes 
+at the start of compression is established . 
+The calculation of the probable maximum attainable 
+ind i cated mean effective pressure of t h e two - stroke e~gine 
+as determinGd froTI 
+t~e four - stroke en i~e is as follows : 
+The 
+in~icated mean effective pressur e obtained from 
+the four- stroke engine ru_ning on illuminating gas with the 
+charge denyity und compressioil ratio equal to tnat of the 
+two - stroke engine : 110 pounds per square inch . 
+tivv 
+ume : 
+The proba~le maximum two - stroke indicated mean effec-
+pressure : 
+110 x ~ = 19§~1 pounds per square inch . 
+Rat i o of total cylinder volume to 
+t~e displaced vol-
+7 
+6 
+in both engines . 
+., 
+
+
+===== page 13 =====
+
+, 
+1 2 
+}: . A . C • • • Te chn i c a l 
+No t e No . 6 74 
+Pro oa ble ma xi mum t wo - s tr oke brake ~ean eff e c t i ve p r es-
+sur e : 
+1 28 -
+1 4 = 114 . 
+Tw o- s troke f r i cti on mean effe c t i ve uressu r e (moto r-
+i ng) : 
+1 4: . 
+The 
+h i ~ h es t a c t u a l 
+t wo- st r oke i n dica ted mean effec-
+t i v e pressur e obt a i n ed whe n r unn i ng on i l l um i nati ng 
+as 
+and with t he op t i mu m 
+(E ) 
+i n l et- po rt ar r angemen t : 
+J.1 2 . 1 
+poun ds pe r squa r e inc h . 
+--!!~~~~_~!_§:l:~!~9:! __ ~~~'!~ !:~~E.iL~!!~~~~~~l __ 
+ax i mu m at t a inab l e s ca v e n g i n a eff i c i en cy 
+1 00 = 8 7 . 3 pe rc ent . 
+11g-.!-1 
+128 . 4 
+x 
+A c ompar i so n of tho va l uo s of the rat io of tho a c tual 
+to t ho max i mum scavon g i ng off i ci enc i e s as de t e r mi nod f r om 
+b o th me th od s shows t h a t they a g r ee r easonabl y wel l , t he 
+f ir s t met h od g iving a va l ue of 83 pe r c en t and the se c ond 
+87 pe r c en t . 
+It may t he r efo r e be b ri efly resta t ed tha t the 
+bes t a c t u a l 
+s caveng i n g effici en cy obta i ned under spar k -
+i n i t ion ope r a tion a t 1 , 800 r . p . m. uas about 66 . 7 pe r cen t 
+or app r ox i mately 85 pe rc ent of perfect s ca veng i ng fo r th is 
+e n g i ne . 
+~ e t ~'!:!Ql.Q§.1l.QILQf_.1h~ ___ Q.:Q._t.l.)'Q 1J:IL.iQ l~ .t.=:9Q.!:.~_~ .!:.!:~!lg~)'Q~!l.1 . -
+Wi t h a l l 
+t he e n g i ne condi ti ons held constan t , t he effe c t s 
+of more than 30 i nlet - po rt ar r angemen t s on the rela tiv e 
+scav e n g i ng eff i c i en cy TIo r e in v est i ga t ed . 
+F i ~ur e 1 4 i s a 
+p lo t of b r a<e mean effec t i v e p r essur e and s cavengi ng p r es-
+sur e again s t 
+i nl et - po r t t i mi ng fo r f ive typ i cal po r t a r -
+r a n gements . 
+Th e po si t i n s o f t ho cu rves wit _l respe ct t o 
+on e an othe r may b e take n as an i ndi cat i on of t he r e lative 
+s cav eng i n g ab i l i ties of each po r t a rrangeme n t . 
+A nu moe r i ng 
+~ ystem was found t o oe t he mo st c on ve n -
+ient method of des i gnat i n~ the 
+inlet - ~or t ar r angemen t s . 
+I n f i gu re 15 
+s how ! n~ a se c t i on 
+t ~ rou ; h the po r t s , t he num-
+b e r s a r e loca t e d i n ea ch of t he eight i n l et po rt s . 
+Ea ch 
+one of t he symme trical l y oppo si te pa i rs of in l et po rt s 
+bea r s the same numb e r . 
+As 
+a~ example , ae sune t hat the 
+numbe r 4 po rt s a r e f i t t ed wi th 60 0 in e rt s , the nu mbe r 3 
+po rt s wi t h 45 0 in se r t s , and the number 2 and I sets of 
+po rt s wi th 0° i nse r t s . 
+Th i s po r t a rrangement would then be 
+de scr i bed by t he fol l ow i ng g r ou p of numbe r s : 
+0- 0- 45 - 60-
+60- 45 - 0- 0 . 
+The nu mbers represent the i nse rt angl es and 
+t h e i r p o s i t i on s co rrespond to port pos i t i ons . 
+
+
+===== page 14 =====
+
+N . A . C. A . Techn ical No t e 
+Jo • . 674 
+13 
+In f i gure 1 4 the · capital letters o~po~ it e each of the 
+f i v e curve s represent tho foll o ~ in g in l et - port arr ango -
+men t [; • 
+I\-------------~:::-::::-:::-::::-------------------
+(f) 
+1:-1 
+:z. 
+r>:l 
+~ 
+i 
+0 
+;z; 
+I ; 
+I 
+I 
+1:-1 
+i 
+p:; 
+, 
+0 
+I 
+p.. 
+~ 
+H 
+I 
+z 
+I 
+H 
+! 
+! 
+! 
+1 
+2 
+3 
+4 
+4 
+3 
+2 
+1 
+A 
+45 
+45 
+45 
+45 
+45 
+45 
+45 
+B 
+o 
+o 
+o 
+o 
+o 
+o 
+o 
+o 
+C 
+o 
+30 
+45 
+60 
+60 
+45 
+o 
+o 
+o 
+o 
+60 
+60 
+o 
+o 
+o 
+o 
+o 
+o 
+60 
+60 
+o 
+o 
+o 
+1 The top section a wore loft out of the ~umbe r 1 and 
+2 pairs of inserts . 
+2T ~ e top section 
+we ro left out of the numbe r 1 , 2 , 
+and 3 pairs of inserts , and tLe lOiTer sections of 
+the same i nserts \Te re cut down 1/8 in h to i ncrease 
+t:lO air-flow area . 
+Th i s cond i tion broubht the l OiTc r 
+port surface flush iT i th the t op of the piston at bot-
+tom doad center and bes~ ~nlet timing . 
+The A inlet - port arrangc~ent of figure 14 represents 
+the lowest brcke ~ean effe ctive nrossure . 
+T~ i s lOll value 
+r csults from the poor scavenging obtained on ac count of 
+the d irection of the entire entering cha r ge '.:hich ie at an 
+an gle of 45 0 toward the cyli nder head . 
+Curve B 
+in dicates 
+th ~ t th e 0 0 inserts are muc~ nore e fc .tive in scavcng i n~ 
+the cylinder than are the 45 0 
+ins ~ rts . 
+I n ordar further to incr ea e tho scavensing eff i c i en-
+cy, and hence the output, i t uas found no cc . 8ary to use 
+mixed port arrangoments . 
+T~o most successful of the many 
+mi xed po rts inve stigated ~erc the C, D, and E arrangcmen t s . 
+J
+
+
+===== page 15 =====
+
+14 
+N.A . C. A . 'I'echn ical -ote rIo . 674 
+The C and D ar r angemen t s show up v e r y well on the bas i s of 
+ne t and gr o ss b r ake mean effecti ve pressure . 
+I n tho D a r -
+rangement the tops we r e removed from the number 1 and 2 
+pa i r s of i nserts , wh i ch allowed these two pa i rs of po r ts a 
+3 0 open i n g l ead and so gave the charge en t er i n ~ these po rt s 
+a s t a rt o ve r the othe r po r ts . 
+The E port a rrangemen t was tr i ed at a late p eriod dur-
+in 
+the i n vest i gati on ; i n fact , only af t e r the various 
+speed and scaveng i ng rat i o runs were completed with the D 
+por t a rra n gement . 
+The E a rrangement was the optimum , on 
+the bas i s of sca veng i ng eff i c i ency and powe r output of al l 
+the 30 odd a r rangements i nvest i gated . 
+lany modificat i ons 
+of the E a r rangement were t r i ed and sevo r a l of these r e -
+sul t ed in mean effect i v e pressu r es very near l y as h i e h as 
+those obtained wit h the E a r range ment . 
+Although the l i mi t of i mpro v e ment in scaven g in g e ff i -
+ciency with inlet - po r t ar r an g ement in thi s en g ine a ppears 
+to have been reached , i t 
+i s bel i eved that a study of the 
+fl o w cond i t i ons as v i ewed th r ough the transparent cyl i nde r 
+of a flow mode l exa ctly s i mila r to the actua l en b ine cyl -
+inder i n s i ze and shap e may read i ly revoal tho poss i b i lity 
+of a furthe r i ncrease in scaveng i ng eff i ciency over the 
+best values obta i ned thus fa r . 
+IQ1~i2QQri_~Q~_~~~~~£i2QQ~i_ii~ i~~
+. - It is usually 
+assumed that the exhaust port should ope n suff i ciently 
+ahead of the i nlet port s o that th e cylinder pre s Gure wil l 
+drop t o the scavenge pre s sure or lower before the inlet 
+opens . 
+Considering the i nl e t ti mi ng to be fixed , it is no t 
+surp ri s i ng to f i nd that an exhaust opening wh i ch g ives scav-
+enge pressure i n the 
+c~l i nder at the time of inlet opening , 
+g ives less powe r than on e with a sli ghtly later ex haust 
+openi ng . 
+The later exhaust open i n g resu l ts in both a h i ghe r 
+expansion rat i o and a smalle r loss of fresh charge into the 
+exhaust . 
+I f a constant scaven e air quantity is supplied 
+to the cylinder , in the case of late exhaus t ope n ing , the 
+sl i ght addit i onal losses due to hi r her scavenge p ressure 
+and to sl i ght ly g reate r mi xing of the ex haust gases and the 
+fresh charg e wil l not equal the gain from the decreased 
+blow - down loss until the cylinder pre s sure at th e time of 
+in l et op e n i ng is somewhat la r ge r than the scavenge p r essur e . 
+It is su r pris i ng to note (fi g . 1 6 ) how g reat a n excess 
+o f cylinde r pressure ove r scaven g e pressure exists with the 
+be st power t i mi ng . 
+Unde r these conditions , c onsidera ble 
+exhaust must enter the inlet system an d later be blown back 
+
+
+===== page 16 =====
+
+N
+. A
+. C
+. ~. Technical No t e 
+Jo . 
+6 74 
+15 
+i nto the cylinder wi th the fresh cha r ge . 
+Tests showed 
+tha t 
+d i ese l operation r equir ed an earl i e r exhaust opening 
+for best powe r. 
+Fi gure 17 i s an i n dicator diagram for 
+di eso l op e ration at the aest powe r timi ng . 
+Th e offect o f i nlet- p ort and exhaust - po rt timin g on 
+brake mean effe ctive pressure and scavenge preRsur e may be 
+seen fro m f i gures 1 8 and 19 , r espect ive ly . 
+Although the 
+g ro ss brake mean effective pressure i nc r eases uniformly 
+~ith a l ate exhaus t - p ort open i ng , the scavenge pre s sure 
+also i ncreases in ordor to ma i n t a in a constant sca v enge 
+r at io of 1.4 . 
+Consequently, the net brake mean effective 
+p re ssur e shows c onside rably less change wit h exhaus t tim-
+i ng . 
+The curves of brake mean effective p re ssure aeainst 
+i n l e t - po rt t i mi ng ( f ig . 1 8 ) peak at an i nlet open i ng of 
+approx i mately 52 0 before bott om center , wh ich is the op-
+ti mum i nlet-por t timing . 
+In the determ i nat ion of the op -
+ti mum exhaust - po r t timing , consideration Dust be given to 
+the s cavenge p r essure as well as t o the brake mean effec-
+tive p r ossure. 
+It be i ng desirable to keep the scaveng e pressure as 
+low as poss i ble, an exhaust openi ng of 65 0 B. B. C. waS 
+chosen as optimum . 
+]r.Q,k.Lm5i~!!'_5iff.? Q t. iYQ _:2.'!:Q~ :g, '!:Q __ Q,g~i!!..21_5i!!.g i!!'Q_'£I?5iQ.Q • -
+A f i r st glan ce at the cur ve s in f i gure 20 woul d l ead one 
+to suspect that r esonan c e in the inlet or exhaus t systems 
+was the cause of the peaks in t he mean- effective- pressure 
+cu rves . 
+The scavenge ratio ~as he l d con s tant t h r oughout 
+the r ange of speed i nvest i gated , howe ve r, and the pres-
+en c e of peak s in the mean - effect i 7e - pressur e curve s t he r e-
+fore cannot be attributed to resonan ce,. 
+I t i s quit e p ossible that at the eng i ne speeds corre-
+sponding t o pea~ s in the curves of mean effect ive p re s -
+sure , the ti me - open i ng cha racterist ic of the inl et po rts 
+may be such as to p r omote a mo r e eff icient scaveng i ng 
+pr ocess . 
+F i gure 21 shows t he effe ct of eng i ne speed on the 
+g ross and net brake mean effe c t i ve pressures with t he s cav-
+enge pressure held co ns tan~ at 11 . 8 i nches of me rcury . 
+The s ca venge ratio decreases steadily wi th i ncreas ing en-
+g i ne speed, but the cur ve i s quit e smo oth and shows no in-
+dica ~i on whatsoe~er of re sonance . 
+
+
+===== page 17 =====
+
+16 
+N.A. C.A. Techn ic a l 
+No t e No . 674 
+F i gure 22 i s another set of speed runs in which the 
+increase i n scavenge pressur e was made proportional to 
+the square of th e eng i ne speed . 
+It is notable that a l -
+thoug h t he scave n g i ng r a tio decreases f r om 1 , 2 00 t o 1, 900 
+r . p . m., the g ross mean effect ive p ressur e increases , show -
+ing ati i mprovement in scaveng i ng . 
+This result i s undoub t -
+edly du e t o the fa ct tha t the port t i ming and arrangemen t 
+we r e se l e ct e d fo r 1 , 800 r . p . m. 
+A differen t po rt ti mi ng 
+and pe rhaps a d i ffe r ent ar r angement would be necessa ry to 
+g iv e the be st mean effe ctive pressur e at , say , 1, 2 00 r . p . m. 
+Tho lack of wi de flu c tuations in the mean effective pre s -
+su r e and the s cavenge-rat i o cur ves conf i rms the forego i ng 
+conclusion tha t the se t - up i s so made that resonance e f fects 
+are sm.::tll. 
+~l:§:~~_!!!~§:Q_~ff~.Qi i:.:'?:~_:Q'£~~~:1:l:'!:Sl._§:Q~_~.Q§:.:'?:~~gSl. __ :2.!:~_~~:1:l:£~ 
+§:g§lnEi_E~§~Q~gQ_~§:ilQ.-
+F i gure 2 3 shows the effoct of an 
+increase in scaven g e ratio on t he b rake mean effect ive and 
+s cavenge p r e ssu r es . 
+T_B increase in the mean effe c t ive 
+prossur e wit h scavenge r a tio i s due princ i pally to an im-
+pro v ement i n s caven g i ng . 
+At rel at i ve l y hi g h values of 
+sca v en g e ratio , th e effec t of sup ercharg i ng , that is, of 
+i ncreased p re s sure at the t i c e of exhaust closing , becomes 
+s i gn i f icant . 
+The p revi ously deter mi n ed limit to the brake 
+mean effe cti ve p r essur e obtained wi th max i mum attainable 
+s ca v en g i ng e f f ici e ncy was 1 28 -
+14 = 114 p ounds per squ.::tre 
+i nc h . 
+The brake mean effe c t ive pressure of a n actual 
+e n -
+g ine mi gh t b e expe ct ed to app r oach this va l ue as the 
+scaven ge ratio i s i ndef i n i te l y i ncreased . 
+Refer ence to 
+figure 23 shows that 114 poun ds pe r squa r e inch a ppears 
+to be a r easonab l e va lue fo r an a symptote of the g ro s s 
+mean - effe ctive - p r essur e cur ve . 
+lhQ_QffQ.Qi_Qf_.QQl!:!:h:QEiiQ n =~Qi1!!!:hQ£ __ §n9:_Q1E.iQ!l::::hQQQ, 
+EhQQQ_Qn_E.Q§:YQn~lng .-
+I n o r de r t o i nvest i gate t he effect 
+of 
+c o mbustion- chamber shap e on t h e sca ve ng i n g pr ocess, 
+seve r al run s were made wit h i lluminating gas using the 
+compre s si on-i gn i t i on cylinde r h ead ( f i g . 1 0 ) . 
+Under con -
+stant operat i ng c ond i t i ons , power re~dings were taken wi th 
+the c y linde r head l oca ted i n i ts norma l po s ition and then 
+turne d 90 0 and 1 80 0 f r om its no r mal pos i t i on . 
+Rotation of 
+the head i n th i s man n e r placed the p ear - sha ped combustion 
+space at various a n g l es t o the flow of sca ven g i ng char ge . 
+The me a n e f fe c t ive pre s sure , a nd hence th e scaven g i ng , 
+was unaf f ected by t hese chang es . 
+The effect on scav eng i n g of a p i ston h av i n g a sli ght -
+ly rounde d head (figs . 6 and 7) wa s a lso i n vesti ga t ed . 
+.. 
+
+
+===== page 18 =====
+
+N.A. C.A. Technical Note 
+o . 
+6 74 
+17 
+The round- top piston showed a slight i mp rovement in scav-
+enging and mean effective p re c s lre over .the flat - top 
+p i ston . 
+The increase in brak e me an effective pressure 
+amounted to app roximately 3 or 4 
+p~rcent
+. 
+Comp re s sion Ign ition 
+Tho E inlet-port arran gD~G nt was uso d throughout tho 
+i nvest i gation of cO llpression- i gn ition p e r f o r mance on the 
+a ssumption tha t the inlet - port a rra~gernent g i v i ng the most 
+satisfactory scaveng i ng under .spa rk- igni t ion condi t ions 
+would still b e the op timu m arrangeme~t un der compro s sion-
+i g~ itio n ope r at i on . 
+Fi nur e 24 is a set of curvos of brake mean effective 
+pressure aga i~st fue l rat e at v~rious scavenge ratios . 
+It is int e r est in g to note that the brake mean- effective-
+pre s sure curves li o clos e ly to one anothe r in the r eg ion 
+of low pOITer, whe re thero is an excess of air in the cyl -
+inder at all scavenge ratios . 
+As the fuel rate is i n -
+cr ease d , however , tho cu rves divergo as is to be expocted 
+since , at h i gh pe rc entagec 0 
+a ir , s caveng ing i s more com-
+plete and hence more oxygon i s 
+~va ilable fo r combustion . 
+Th e fa ct that the mi n i mun po i n ts o~ the fuel - consump-
+tion curves occur nt li ~~t lo ads 
+i ndi c~ tec that t~ere is 
+opportunity for c ons ide ra b l e i mp r ovoment i n c om ustion-
+chambe r des i gn . 
+Rore asain the values of mini mum fuel 
+c onsumption d i ffe r only very slightlJ from one anot e r for 
+t e vari ous s cavenging ratios . 
+At inqreas ing loads t he 
+low scavenging ratios s how a higher cpecific fue l 
+c onsump -
+tion owing to le s s complete combustion ~s a r esult of poor-
+er cylin de r scavenging or fuel - a ir n ixin g . 
+Fi gure 25 i s a similar.set of curves in which fuel -
+r ~ te runs we re made at va rio us 
+s~eeds
+. 
+In th i s caso the 
+scavenge rati o wao he ld cons tant at 1 . 4 . 
+Th ese curves 
+i ~ ­
+dicate that t ho max i mu m s ro ss Woean effective pressuro i s 
+c onstant wit h re spec t 
+t o 
+en ~ i ne s?eed , be ing approximately 
+72 pounds pe r square inch . 
+This fac t 
+le~ds t o the con-
+clusion that the max imum quan it y of fresh air available 
+pe r stroke for combustio n must be con s ta n t uith respe ct to 
+en.s i ne s.peed and therefore that the scavenging efficiency 
+nus~ also be constant . 
+It is ev i den t f r om 
+t~e curves that, 
+~t h i gh speeds, a la r g e quant it y o f fuel pe r stroke is 
+necessary to consume all the a ir . 
+Th i s c on d i t ion results , 
+~osi i b ly
+. from the shorter pe riod of ti me available for 
+mixin g of the fuel and the air at h i gh speeds . 
+
+
+===== page 19 =====
+
+18 
+N . A
+. ~ . A
+. Technicil Note No . 674 
+~§.ii m.§:.:t~ _ _ 
+Q.f_J2Q.§.§iJ215Lm~!. i m:-g:l!LQ:1!.112:Q..1 __ Q!L~QB12K~.§..§iQg ,.. 
+ig~ ~.il.2.~ .. 
+_.2.E~! .~.il (m .... Fi gure 26 is a 1 i gh t- spring pre s sure-
+crank- an . Ie i ndicato r diao,> r am tnken under firing c oncl i-
+t i ons for the pu r pose of determ i n i ng the pressure i n the 
+cylinder at the i nstant the exhaust po rts close . 
+A knowl -
+edge of the magn i tude of the p re ssure and the te mpe r atur e 
+at this Do int allows a calculation to be Lade of the actu-
+a l quant;ty of cha r ge (burned p roducts plus fresh charge) 
+contained i n the cylinder . 
+Mult i pl ication of this total 
+quant ity by scavenging and c om usti on eff ici en cy factors 
+g ives a net quant i t y of air available fo r c mbustion . 
+The fue l 
+r ate ne ce ssary to consume t h is ava i lable a ir at 
+the c hem icall y c or r e ct fuel - a ir rat io i s then easi l y cal -
+culated ; and a value of the est i mate d powe r may be 
+b-
+tain ed f ro m th i s fue l 
+r a t e , the heat i ng va l ue of the f uel, 
+and the cycl i c thermal eff ici en cy . 
+A ca lculation of this 
+est i mated powe r follows . 
+F r 
+rn the card of f i gure 26 comnression of the ai r be -
+g i ns at atmosphe ric pressur e and approx i mate l y 3 0 befo r e 
+the closing of t he exhaus t po rt s . 
+The cylinder volume at 
+3 0 befo r e 
+~xhaus t closing i s : 
+95 . 5 x 4 . 1 5 + 5 . 5 = 71 . 5 cu . i n . 
+6 . 00 
+Pist on d i splac emen t i n cubic inches : 
+95 . 5 . 
+Total st r oke less that po rti on of the stroke included 
+between the bottom center pos iti on of the p i ston and that 
+pos i t ion of the p i st on a t the beginn i ng of co mp r ession 
+f ro m a t mosph e ri c p r essur e : 
+4 . 1 5 inches . 
+Cl earance ~ o lu m e i n c u bic inches : 
+5 . 5. 
+Actua l 
+~e i ght of fresh a ir in the cylinde r at stand-
+a rd c on ditions 
+(760 mm Hg and 32 0 F . ) : 
+71. 5 
+492 
+1728 x 650 x 0 . 0809 x 0 . 85 = 0 . 002 1 5 pound . 
+32 0 F . = 492 0 Rankine . 
+Assumed charge tempe r atur e at clo se of exhaus t ports 
+deg r ees Rankine : 
+650 . 
+Spe cific De i ght of a ir at standa r d c onditi ons : 
+0 . 0809 . 
+-.-~ --------------
+
+
+===== page 20 =====
+
+N. A . C.A. Technical Note No . 674 
+19 
+Assumed r at i o of actua l to max i mum scaven g i ng eff i -
+ci ency : 
+0 . 8S . 
+Wei ght of fuel pe r stroke necessary to consume all 
+t he f resh· air : 
+0 . 067 x 0 . 002 1S = 0 . 000144 pounel .. 
+Ratio of fue l to air by weight fo r complete combus -
+t i on : 
+0 . 06 7 . 
+Probable maximum horse po wer = 0 . 0001 44 x 1 , 800 x 60 x 
+1 
+0 . 85 x 0 . 40 x 18 , SO? x 2S45 = 38 . 5 horsepower . 
+Engin e speed : 
+1 , 800 r . p . m. 
+Ratio of maximum useful to the chemical l y correct 
+fuel - air ratio : 
+0 . 85 . 
+In d ica ted the r mal eff ici ency : 
+0 . 40 . 
+B . t . u . pe r pound 0: fuel : 
+1 8 , 500 . 
+B . t . u . pe r horsepowe r pe r hour : 
+2 , 545 . 
+The maximum h o r sepowe r obtained under d ie se l ope r a -
+tion was 31 . 
+It is bel i eved that with improvement i n co m-
+bust i on- chambe r design the output ma y be i ncreased to ap-
+p r ox i mate l y 40 h orse powe r . 
+F i gure 2 7 is a light - spr i ng indicator d ~ agram taken 
+under exactly si milar eng i ne c ond i t ions as 
+he card o f 
+figure 26 except fo r eAhaust port t i mi ng . 
+The c a rd of 
+figure 26, c orrespond i ng to an exhaust - po rt closing at 76 0 
+A . B . C., shows no appreciabl e supe r charg i ng at the cl o se of 
+th e ports . 
+With the exhaust - Do rt closing occurri ng sone -
+what earli e r, as was the case -w ith tho card of figu r e 27 
+( exhaust closed at 70 0 A . B. C. ), the effect of sligh t supe r -
+charg i ng i s evident , amounting to approx i mately 2 pounds 
+pe r square i n ch. 
+A s was pre viously po inted out , although 
+th i s exhaust - p rt timing re sulted in ~ l i ttle supe rcharging , 
+the g r oss power Oltput was less than ~h il e runni ng at 76 0 
+A . B . C. exhaust cl sing . 
+
+
+===== page 21 =====
+
+r 
+20 
+N . A . C. A. Techn i cal Note No . 674 
+CONCLUSIOlS 
+Spa r k - I gnition Operation 
+1 . 
+Inlet - Po r t Ar r angements : 
+In b ene r a l , i t was found that the most successful 
+i nlet - port a r rangements from considerations of n i g h sca v-
+eng i ng eff i c i en cy and powe r 
+~utput were those hav i ng low 
+air- entry angles in the numbe r 1 , 2 , and 3 ports and h i gh 
+air- entry an l es i n the numbe r 4 ports . 
+(See f i g . 15 . ) 
+The best po rt a rrangement t ri ed was one having 0 0 in se rts 
+with the top se c tions r emoved in the number 1 , 2 , and 3 
+po r ts and 60 0 
+i nse r ts i n the numbe r 4 po rts (E arranGement) . 
+I n vi ew of the fact that modificati ons ' of the E inlet -
+port arrangement showed no i mp r ovement i n s caveng i ng , i t 
+was felt that fu rt he r i mprrvement would be possible on l y 
+th r oug h a vi sua l study of the flow c on dit i ons i n a spec i a l 
+flow chambe r . 
+2 . 
+I nlet and Exhaus t Port Ti mi ngs : 
+Al though the r e was on ly a sl i ght change i n e ithe r the 
+g r oss or the net output with var i ations i n the inlet port 
+t i mi n g between 45 0 and 65 0 f r om bott om cente r, the opt i mum 
+i nlet - po rt timing fo r po r t ar r angement D, was found to be 
+a pp rox i ma t e l y 
+~2° f rom bottom center . 
+Vary i n 
+the exhaust - p o r t timin r, from 74 0 to 60 0 f r om 
+bottom cente r resulted in an i ncrea se in b th the gross 
+brake mean e f fect i ve and the scavenge p ressures , causing 
+the net b r ake mean effe c t i ve p re ssure t o increase sl i ghtly . 
+. 
+3 . 
+The Effect of Combustion- Chambe r and of Piston - Head-
+Shapo on the Scaveng i ng Efficiency : 
+With i n the lim i ts i nvest i gat ed , the . combust i on chambe r 
+shape had n o effect on the s caven i ng eff i ciency . 
+An imp r ovement i n the scaveng i ng eff i c i ency of approxi -
+mate l y 
+~ pe r cent was r eal i zed by substitut i ng the r ound- top 
+for 
+t~e flat - top piston . 
+
+
+===== page 22 =====
+
+N
+. A~ C
+. A . Te chnic a l Note No . G74 
+2 1 
+4 . 
+En g i ne Spced : 
+Wi th t he s cavenge r a ti o he l d constant , the mean effe c-
+tive p r ossure , and ~ence t he s ca veng in g offi c i ency , va ri e d 
+irr egula rly with e n g in e spee d . 
+.Th is result i s probab l y 
+due to 'ch a nges i n the scaven g in g f l ow patt e rn wit h e n g i ne 
+speed . 
+5 . 
+Pe r fo r mance : 
+The r esul ts sho rr t hat Wlen ope r a ti ng on i l l um i na ti ng 
+ga s as a fue l, a ne t b r ake moan effe c t ive p r essu r e of at 
+l east 80 pounds pe r square i n ch at 1 2 i n c hes of Hg and at 
+1 , 800 r. p . m. can be expe ct c d rr i th t h i s type of eng i ne . 
+Th i s val ue i s equiva l en t to 95 pounds pe r squa r e i nch mean 
+effe c t i ve ~ressuro uhen ope r t i ng on gaso li ne . 
+Comp r ess i on - I gn i tion Ope r atio n 
+1 . 
+The gross ~ r ake mean effect iv e pressures at h i gh 
+l oads i ncreases with the quant i ty 
+f scaveng i ng a ir . 
+How 
+much of th i s in crease i n output is due to more eff i c i ent 
+s c aveng i ng and how much to bet t er mi x i ng nf the fue l and 
+a ir i s 
+ot ce r ta i n . 
+T~e fact that the min i mum po i n t s of 
+the spec i fi c fue l - c onsumpt i on cur Tes 0 cur at ve r y low 
+fue l-air ratios i nd i cates , however , that the r e i s relat ive -
+. l y poo r mi xing n f the fue l and the a ir . 
+There is , the r e -
+fo r e , oppo r tun i ty fo r c ons i de r able i mprovement in sp r ay 
+dist ri bution o r combustion- 9hambe r shape . 
+In spite of 
+th i s fact , however , it was usually possible to obta i n a 
+b r ake spec i fic fuel consu~ption of less than 0 . 5 at 60 pe r -
+c en t of max i mum powe r . 
+2 . 
+The maximum 
+ross ' rake mean effecti v e pressur e 
+r ema i ned constant ov e r a r a ge of speeds from 1 , 200 to 
+2 , 000 r . p . m. at a constant scavenge rat i 
+of 1 . 4 . 
+The 
+fue l - air ratio necessar v to oetai n 
+t~e max i mum moan effe c-
+t ive pressure increased"with eng i ne sp ee d . 
+These two 
+fa c ts rrould seem to ind i cate a nearly constant quant i ty 
+of f r esh a i r po r st r oke but poorer mi x i ng of fuel and a ir 
+at the h i gher speeds . 
+3 • . The exhaus t ope ning fo r bes t p6we r was ea rli e r 
+( 11 0 ) than fo r Qpa r k-i gn i t i on ope r ation . 
+Massachusetts I nst i tute of Te chnology , 
+Cam b r i dge , Ma s s ., May 1938 . 
+
+
+===== page 23 =====
+
+22 
+N. A . C. A . Techn i cal Not e Fa . 674 
+Jalb e rt , J .: 
+Hol m, Otto : 
+List , Hans : 
+Gei ss e , J . H.: 
+II 
+Gastcrstadt, Dr . 
+C a un t e r, C. F .: 
+Tay l or, E . S . , 
+and 
+Williams , G. L.: 
+BI BL IOGRAPHY 
+Two - Stroke-Cycle Eng i nes fo r Airplanes . 
+T •. .1. No . 34 7, N. A • C . A ., 1 9 2 6 • 
+Crank Case Scaven g ing of a 
+Two - Stroke ~ 
+Cycle Eng i ne . 
+T . M. No . 446 , N. A . C . A . , 
+1 928 . 
+Crank Case Scavenging of Tw o- St r oke - Cycle 
+Eng i nes . 
+T. M. No . 5 16 , N.A. C. A . , 
+1929 . 
+Low Cost i s Principal Advantage of Tw o-
+Cy cle En g ine s fo r Smal l Planes . 
+Auto . 
+Indus . , vol . 64 , no . 12 , Ap ril 25 , 
+1931, pp . 65 1-654 . 
+De vel opment of the Junke r s - Di ese l Air-
+craf t Eng i ne . 
+T . M. No . 565 , N.A. C. A . , 
+1 930 . 
+The Two - Cycle En g i ne . 
+Sir Isaac Pit man 
+& Sons , Ltd. , (London) , 1 932 . 
+Furth e r 
+Invest i s ation of Fu e l Inj e ction 
+in an En g i ne Havin . Spa rk I gn i tion . 
+S . A . E . Jour . , vol . 30 , no . 1, Jan . 
+1 932 , pp . 24- 29 . 
+Curtis , Chas . G.: Impr o ve me nt i n Scaven g i ng and Supe rcharg-
+i ng Two - Cycle Di esel En g i nes . 
+Di ese l 
+Powe r, vol. 11, no . 9 , Sept . 1 933 , 
+pp . 545 - 549 . 
+Leonhardt , Rene : 
+Sca vengin g Air Fl ow i n Two - Cycle Di ese ls . 
+Di esel Pow e r , vol . 11 , no . 7, July 
+19 Q 3 , pp . 442 - 444 . 
+Anon . 
+The Scaven g i ng of T~o - Cycle Eng i nes . 
+Su lz e r Te ch . Rov i ew , no . 4 , 1933 . 
+Venedi ge r, He r be rt J .: 
+EV8 1uation of Scaven g i ng i n Two -
+Stroke - Cycl e Engines . 
+T. M. No . 732 , 
+N. A. C.A., 1934 . 
+
+
+===== page 24 =====
+
+• 
+f 
+l'l . A . C. A . Tocim ical Noto No . 674 
+23 
+Venodiger, Herbert J. : 
+A Discuss ion of the Several Types 
+of Two - Stroka - Cycle Eng i nes . 
+T • ;r . No . 776, r . A • C .A " 
+1935 . 
+De Juhasz , K. J .: 
+e nsuring the Scaven~ing Eff ici en-
+Earle , Sherod L . , 
+and 
+Dut ee , Francis J .: 
+c y of Two - Stroke Di esel Eng i nes . 
+Auto . 
+I ndus ., vol . 73 , no . 26 , 
+Dec . 28 , 
+19~ 5
+, pp . 858 - 86 1 . 
+Effe c t of Air-En try An Ie on Per-
+fo r man c e of a 2- Stroke- Cycl e 
+Compression-I gn i tion Eng jne . 
+T . N. No . 610 , lILA . C.A., 1937 . 
+
+
+===== page 25 =====
+
+.. .. 
+i 
+• 
+0 
+~1 
+.. 
+o 
+o .. 
+The 8.~ion_ shown are 
+taken at Tarioua &Q&l •• 
+thru oenter 11.. of oyl-
+inder . 
+rigure 1.- EDgin. a88elll:>l, 4.~a1la . 
+Seo. ~ 
+4-4 
+~ 
+Seo. 
+B-1! 
+5 
+Sec. 4 
+0-0 
+:\ 
+L
+' 
+~J~ 
+8.0. 
+&-1 
+S.o. 
+r.r 
+~ 
+~ 
+rieur_ a.- O,lla4.r-he&d details (Oo.pr.e.ion-ignition). 
+4.480" D1& 
+aeoUon I-I 
+.. 
+t-o 
+~ .. s K 
+o 
+~ 
+&' .. • r 
+III :. 
+;1 , 
+... 
+<0 
+
+
+===== page 26 =====
+
+V.A.C.A. Technical Note No. 674 
+J'ig. 2 
+
+
+===== page 27 =====
+
+N.A.C.A. Technical Note No. 674 
+Fig. 3 
+~1gure 3.- C7l1nder aleevea. 
+
+
+===== page 28 =====
+
+III 
+'i 
+o 
+" 
+o .. .. 
+o ., 
+CD 
+~ 
+g 
+... .. 
+o ., 
+CD 
+1 
+Et:~~~a i 
+• 
+
+
+===== page 29 =====
+
+------~--~--------------~--------
+N.A.C.A. Technical Note No . 674 
+J
+'\~ 
+L 
+\
+\ 
+-'] 
+~ r I 
+1 
+L~ ___ 
+L~1 
+o o 
+t') 
+o o 
+Fig . 5(n.) 
+ 
+.. J 
+
+
+===== page 30 =====
+
+N.A.C.A. Technical Note No. 674 
+Figa. 5(b). 7 
+Jigure 7.- ConnectiDg rod and pistona. 
+Jlgure 5(b).- Inlet ports. 
+
+
+===== page 31 =====
+
+• ••• 0 ••• Tecbn10al 'o~e 10. 61. 
+• 
+of :I cycle 
+D1e.el p1a~on • 
+~·.Pb . R. 
+4. 475· D1n 
+'1gure 8.- Oyl1nder-head de~11. (8park-lga1~1oa). 
+'1p.8,S 
+~ 
+8eoUOIl ~ 
+
+
+===== page 32 =====
+
+N.A. C.A. Technical Note .0. 674 
+1 
+(a) 
+f 
+t 
+(b) 
++ 
+Figure 10.- Cylinder-heade (a. compression 
+ignition. b. spark ignition). 
+Pig. 10 
+
+
+===== page 33 =====
+
+Ill] Manometer 
+I L::J 
+\ \ 
+Manometer 
+: 
+U 
+- > 
+; Orifice 
+I 
+I 
+,~ox-
+A
+. 
+I 
+lr 
+~-
+\ 
+<7 
+v¥e::.......--
+~ 
+Two- cycl e 
+.'" 
+/ 
+I Compr essor' 
+engine 
+"'1--_/ 
+,
+i 
+,I 
+( 
+El ectric 
+D;ynamorne t er 
+:B'igu r e 11. -
+Schema t i c 
+l ayout a s s e t 
+up f or 
+s pa rk-i ~n i t i o n 
+ope rat i on on i l l umi nat i ng 
+£"as . 
+L _ 
+\ 
+I ~ ~ I __ J 
+~\~ F-I <L~~ __ 
+Exhaust 
+/I 
+I 
+I 
+Gas 
+I 
+Me t er, 
+I 
+I 
+I, 
+Clec t rid 
+U
+r 
+-~ 
+~Fo tor I 
+11 
+Ga s Ma l n 
+El ec tric 
+Motor 
+z 
+:» 
+o 
+:» 
+'-'3 
+(]) 
+() 
+CY' 
+l::1 
+1-'. 
+() 
+Pl 
+~ 
+z 
+o 
+c+ 
+(]) 
+tz: 
+o 
+J> 
+--.l 
+,.j>. 
+b;j 
+1-'. 
+iJti 
+t-' 
+t-' 
+
+
+===== page 34 =====
+
+N.A.C.A. Technical Note No. 674 
+J'ie;. 12 
+Figure 12.- Engine eet-up for Diesel operation. 
+
+
+===== page 35 =====
+
+18 
+16 
+14 
+~ 
+0' .. 
+"-
+12 
+~ 
+.... . 
+• 
+~ 
+OJ 
+10 
+.. .. 
+"" .. .. ... .. 
+0 ., 
+B 
+... ... .. 
+; .. a .. 
+6 
+.. 
+~ 
+0 .... 
+'" 
+-'f 
+z 
+_J~ b' ---
+§=F-- - -.- --.: -
+- -
+i,.<. 
+~~ --=' FF;;" -::' ~ 
+-~- --
+JF--
+- .I ~
+~==-
+~"" 
+='r 
+-
+1'0'--
+E 
+t= 
+-:-==;§ 
+--~ -'~ -
+--
+V 
+EE-= 
+__ 1=_ 
+g 
+.~F-= --
+---
+v _ __ __ 
+gF- -
+--
+~t'-'=:-FF 
+/ 
+~f~_ 
+---E-
+---
+f-
+I_",,-'=-"§ ~_:.- t-
+V 
+_ _ 
+F- _L_' Ec:.r-
+__ _ 
+_ _ 1;1 
+~_ 
+t=-I~ g _ ___ 
+) 
+I@
+~" -
+b:= 
+-'" 
+-,=---_ _ _ 
+g f=: _-';:§ I'7- ---
+r"'Ft.'=: 
+17' 
+=- 1=-
+-.-
+-
+- 1= -
+1"7 
+I==F-
+• 
+§:..~ :== 
+p: 
+--- -
+§ - E' 
+1=".-- =~F~ = 
+:_ ==~ ~ ___ ~F-:_";' ~ 
+-
+~ ----
+~-
+.~' --
+-
+-:.1:. -
+=-
+r-= = ""-:;§ =r 
+--
+~--" _0:. 
+~ 
+--'-: 
+-"= --:1-
+-
+-- I-:=~ ;l --
+r-==; 
+__ 
+_7.. ~ 
+, - t== --
+-
+- - r-=, 
+= ~ -_ 
+EF __ 7
+1-='1-
+::~o:. 1.£ "-:: 
+_- j-=.-: 
+=c 
+~I:=.: -'--"'X 
+-j =:'=-, 
+~-
+-
+Ii·_. __ 
+C::: A -
+_ 
+== - r-
+-:. .:o? - -= _ _ 
+I '~ 
+-f;. l7f=+ =E 
+I~ - -
+-E'§ ,:=; 
+-I=" 
+I;:: 
+-. Il~ - ""-I=t:= 
+F~ 
+) I=L::: __ 
+. -
+-
+:=:~,. 
+1=-
+_= -
+--
+J 
+~F- :' ~ 
+I~F ---- - ------"'. __ . F _ ---
+~E II _F 
+---
+I-=F.-_ 
+f.,:.--
+__ -= I~ -
+, 
+E ft _ 
+~ ~ 
+0-
+I- t=' _ 
+-
+~
+-
+b 
+IL -
+Scavenge pressure, in. llg. 
+--
+o 
+2 
+4-
+6 
+B 
+10 
+12 
+14 
+16 
+IA 
+2() 
+?? 
+?L 
+Figure 13. - Blower mean effective pressure against 
+scavenge pressure, scavenge ratio, 1.4. 
+~ 
+c-
+" 
+"-
+~ 
+"-
+" e 
+..; 
+" " 
+o 
+~ 
+1:=i#iJ'-i.! 
+[~ 
+1 
+g: 
+l'i 
+~.-
+--
+F.i;: 
+-- f l -' 
+romnr
+l!" 
+¥6E£itiF 
+1-:--
+I~ 
+__ C-;;--
+--
+_ ..... 
+. 
+-~' -:f. 
+--
+1:I.;rrl rM"kJJ;t;:fo~ltl E ~ 
+..... '-... ~- -' 
+". -, 
+--. --
+----
+:~---:. 
+_c- -.,- ;:-:.:.. 
+: - 1---.: 
+i "1"11111 !'HIEI ftm 
+r-. 
+r-h 
+~1:"-
+1-' I" 
+i rol 1 1 1 II 1 1 1 1 Efit _ 
+~±tl± II ± II I I I I 
+~ 
+. ill 1 II I 1 1 1 1 ,I :pf-l.j.; 1 1 1 1 
+lA 
+~ 6°1 " II±J 
+. 
+.. 
+'" 
+r----, 
+c::t::::bl:I _J 'I _ J'-
+"-'1 II 
+t ~ .r r r I f 
+1.-' 
+___ :I~ 
+-I 
+.9 
+14 
+I 
+," ; "- ~ _:~ i:~_-' _::_".~ 
+£ 
+~rC" 
+C', 
+j 
+~ 12 
+II 
+., 
+.., 
+" 
+~" 
+.. 
+---
+: 
+10 
+___ , _ 
+"_ 
+-'rl= :"_ 
+~ 
+-
+,,-"-
+~ 
+u 
+III 
+1-: 
+Inlet-port open1ng , deg. B.B.C. 
+so 
+55 
+60 
+-h, 
+~ 
+6S 
+45 
+Figure 14. - Effect of inlet-port timing on scavenge 
+pressure and brake mean effective pressure. 
+Exhaust opens 650 B.B.C., eng1ne speed, 1,800 
+r.p.m.; scavenge ratiO, 1.4; spark-ignition; 
+1l1umtnatlng gas_ 
+III .. 
+o 
+~ .. • 
+o [ 
+() 
+~ 
+III 
+o 
+c+ .. 
+III 
+o 
+0> 
+..a .. 
+.. ... 
+IJIl • 
+.... 
+c,o 
+.... .. 
+
+
+===== page 36 =====
+
+N.A.C.A. Techni cal J ote No, 674 
+Fig . 15 
+I 
+Figure 15 .- I nl et- por t 
+nllillbe r i ~g scheme . 
+
+
+===== page 37 =====
+
+• 
+Scales: 
+1 inch == 112 Ib./sq.in. 
+i inch == 11.2 0 
+E.O., 65° B.B.C. 
+1.0., 52° B.B.C. 
+, . .. -" ............. : .. 
+. ~. . , 
+4 ':- ' 
+.~ ;." " 
+",.,1 
+. , 
+.. :t'· 
+•.. .:. 
+.. 
+:
+. ~ ":" 
+f~::~ " ';f~: 
+7:'~ ~ .;;. 
+.lA·· '\ 
+',I:,. 
+J 
+.;.. 
+.: 
+·k:·... . 
+::~ 
+)t;.~·: 
+\. 
+~.:-
+='> 
+~;~1.::" 
+\ 
+}r .. 
+'./:~" 
+~:~ 
+: " ~~ 
+,:~,: ~ 
+·~f:·;· 
+'. ? ~ Ii 
+, .. 
+::-
+, 
+,',. 
+~ . 
+'; . 
+{: 
+':\ 
+~ \', 
+.' 
+.;~ 
+\ 
+'~.~ 
+'j. .... , 
+:.:. ... 
+\.: . 
+.':...,."'... 
+Ej.o. 
+......... , . :..... 
+It·O. 
+'. 
+. ••.. ~. 
+. 
+.. 
+...... .: ... , ... . 
+SIS 
+• »> • 
+(') 
+• .. 
+• 
+~ [ 
+C) 
+III .... 
+~ .. 
+CD 
+gs 
+• 
+.~ 
+~ 
+Figure 16. - Indicator diagram for best power under spark- ignition conditions. ~ 
+~ 
+~ 
+
+
+===== page 38 =====
+
+,. 
+Scales: 
+1 inch =11~ l b.!sq.in. 
+t inch = 11. 2. 0 
+E.O., 76g B.B.C. 
+r.o., 52 
+B.B.C. 
+. . . . . . 
+,': 
+I 
+1 
+, 
+f 
+" 
+i 
+" 
+r 
+? 
+) 
+~: 
+:' 
+~ 
+:.,: 
+',. 
+f 
+.~~ 
+~, .. 
+~ 
+:; 
+:.t. 
+.;, ,'r 
+'. 
+.:~. 
+; 
+',,' 
+" 
+" 
+-;; : 
+::.:: 
+.. ; 
+' .. 
+:'::-
+; .:.. 
+:.~. 
+\, 
+~S ~·. 
+\~ 
+.i,: 
+"f ... 
+"'} ', 
+:·r· 
+<.:~\ 
+": ... 
+' I 
+-\< ':., '; ", ,E\' o. 
+· " i" ;., , . , r .o. 
+," , I 
+",:. . 
+.... ., .... 
+. . . 
+' ,
+-
+.' :. ... ~ .. -.. 
+J1gure 11.- Indicator diagram for be.t power UDder compre •• lon-1gnltlon con-
+d1tion •• 
+:r-r 
+o • 
+~ 
+• 
+tj 
+U 
+.... 
+() • 
+~ 
+~ 
+~ 
+CD 
+gs 
+• 
+(7) 
+~ 
+:! 
+~ 
+• 
+~ 
+~ 
+
+
+===== page 39 =====
+
+~ 
+C' .. 
+"-
+J> 
+.... 
+P-
+I> 
+~ 
+J> ., 
+" 
+o .. 
+'" 
+.; 
+/00 )1- u 
+I- ~ 
+r-- l '~ 
+I- ~ 
+<: 
+'I- ~ 
+90 
+Q 
+1- ..... 
+VI 
+1-" " 
+t-- ~ 
+, 
+lU 
+60 
+... 
+9 ) 
+0' .. 
+"-
+J> 
+.... 
+'" .. 
+B 
+J> ., ., 
+'" 
+~ 
+~ 
+; .. 
+::I .. 
+" • .. 
+'" ; 
+I> > .. 
+u 
+Ul 
+80 
+) 
+7, ) 
+.. -
+z' ) 
+:" 
+.. 
+.. 
+0 ...... 
+~ 
+Or-
+, .. 
+'0 ,.,.. 
+To ,.-:: 
+........ 
+,I 
+~u . 
+IS 
+0 
+''It-
+4S 
+Figure 16. 
+t--
+!--'-
+r--t-- ' 
+~ 
+t---
+r-
+l'-
+t-r-
+t-t--
+1 
+--
+r"- ""- :--. 
+--
+::-i- ...... 
+-. ...... t--. 
+r-
+--
+--
+i' 
+1'-
+.... ~ 
+r-
+_ I::: ~ 
+._-
+P-
+. r-
+r-
+Inlet-por t opening, deg. B.B. C. 
+50 
+55 
+60 
+65 
+- The effect of inlet-port opening on 
+scavenge pre ssure and brake mean effec-
+tive pressure. 
+Port arrangement , OJ engine 
+speed, 1,800 r.p.m.j scavenge ratIo, 1 .1; 
+spark-ignition; illuminating gas. 
+I· 
+L. ~ 
+1 ·1·' 
+" ' 1' 1, 
+I· 
+,."='" h . 
+. '-1' JH ,:I T 
+I · 
+" 
+t-t-t- u ".::- :.;,!.J T!;' . 
+:. 
+H--t--: "! I~~~h -": :" _ ,: _ . 
+~ 100 f-f-t--, ~ " oils.~ :
+' 
+.. : .... :.1 I 
+~ 
+'-r-r-.? 
+F::::~ 
+~.: :. 
+I-f-t-
+~ c t.r 
+;:::;: ~i;;::!I 
+~ 
+& . 
+1"-
+I"'~ 
+~ 90 I-f-t- 't 
+..... ~ 
+...,~ 
+~ 
+r-r-I- i: 
+r-
+~ 
+: 
+-
+~ ~ 
+~ 
+1--..1 .1 
+.1 J 
+(; 80 
+I, 
+1 : 
+.; 
+I" 
+--. 
+~ 90 
+C' .. 
+"-
+ISl·tt-
+.0 
+j 
+I.: 
+.... 
+J~~"
+,:J 'r--'I-'~ """" 
+.J -' 1=1 
+vH
+" 
+~'" -l"r" 
+H 
+" 
+80 '" 
+""
+, 
+, 
+~ 
+, 
+\i!,"" .. 
+-
+, 
+, '~ 
+L 
+' 
+""" i" , " 
+" 
+"'L 
+~ 
+""Ii' ,," '", 
+, ,: ' 
+,l " '~~IT 
+., TO ,," , .. , " 
+,j
+' .:f" '" 
+"
+..l
+' 
+LE"',,,,, 
+: 
+'" " . '"'\" ','t', ' , ,," h, !c' ,,, ." 
+" 
+' ~,,,,,, 
+~ 
+.s 
+QJ .. 
+~ ., 
+" .. 
+0. 
+; 
+" 
+to .. 
+" 
+Ul 
+12 
+8 
+Ilf ~j:!i~,~;~:E:;~,~ , 
+.• ' ,It, ". ,~. "'" 
+~4"~ 
+";Jc'!;:i!f'¥' ""';''''">'''',£1" "'" 
+ill!: 
+Exhaust-port· 
+dee. 
+60 
+6.5 
+70 
+75 
+Figure 19. - The effect of exhaust-part opening on 
+scavenge pressure and brake mean effc-
+tlve pressure. 
+Port arrangement, Dj engine 
+Speed, 1,800 r.p.m.; scavenge ratio, l.~; 
+spark i gnltion; illuminating gas. 
+• .. 
+a 
+~ .. 
+II 
+o 
+[ 
+o e. • 
+~ 
+II 
+l;' · 
+CA .., .. 
+.-.. .. 
+~ · 
+.... 
+00 
+.... 
+III 
+
+
+===== page 40 =====
+
+" 
+.... 
+C1' 
+Ul 
+"-
+~ 
+0. .. 
+a 
+.0 
+... 
+:Il 
+.; 
+.... 
+.. " 
+~ 
+Ul 
+Ul ., a 
+~ 
+.. 
+> .. 
+" 
+CI) 
+; 
+r--
+.. 
+I
+"i~ 
+1·:J,i, 
+~ 
+j"~'.
+r 
+.• ·; t-2 
+.l~:;J.:' ''' 
+e 
+l.;;_ 
+E 
+· 1 . 
+::~ -en1
+o-:: 
+f·f;~~:;r.:f~ 
+.cr-
+.j r 
+,1 
+:H:~1£YJ 
+~ 
+I '~: I" 
+U
+·s.'!:~~ 
+...;:.:.. 
+:.:~ ,:- - •. 'l 
+j. _ ~ 
+;:,,' .. ;. h!Ll :J:l-:· 
+Li 
+.:rE·" -'8..:;-f.q:~..:: ' 
+I::.:.dH·lLtf:'b'Lt[~G 
+1001 f
+13!:r~'lt: ftfa1f;1 ~~h 
+.!. 
+-,' 
+~:~ .~: ~ ... -!::-:+~ ':r~: ~._ .... _. 
+I;.:' 
+I
+·.:: ~ 
+j ti'b 
++'" 
+I 
+;~: t~;:! 
+90 
+~ 
+Hijf~rl" 
+rc 
+_rt::-t::. 
+· t :f L 
+p 
+~~4~f~ttlT?:G¥r~ml f t rtf III 
+~ 
+80 j.;ikIF 
+I~l ~ 
+~ 
+. 
+~ 
+. 
+'f-j 
+·· 1= 
+I=-'P-,=,~, 
+J 
+'.1; "~-F- .. '-E:;O-: -.7' 
+: .. 
+:. 
+I":':" 
+! I I I I 
+I 11i=-8' 
+. F· .;=~ .. ~ =- '.' 
+,~: 
+_ 
+70
+~,::.: ::~~l"?::;S~"::i" 
+:i' ::'-:--.. ,. :i:, 
+. 
+,.I r I J 
+I 8r:iLW . 
+j.. "":ztp': .r;~ "'':':::' 
+.;.:; 
+=:;: 
+. , i
+i ' 
+1
+: .i.~ ~~,::::~;~~:r~::~',:~ 
+~-=J:L;; 
+c: ti : Wi' ltF ' . 
+G5 "=-
+-
+___;~ 
+~f" 
+g 
+r;:r~rPTrl~ 1'1'.liE GS"'Ji'i 
+tfu@.' 
+·j..'·ih 
+h'~ 
+.!T J9:" 
+F 
+ZOl ;h1;~!~ j··lliJI·I. V'I,·1·ttt±?;-
+16K. 
+:,+~ ';'~ !Ji~;tJ7fWJmmtf?e~j 
+12. L"5t: :;;, ~;1 ::~ .:.: _.:_ .. 
+8 :~~~ ; .... ,. ~t~~~:~~~ ~ 0 ~r._:~ ... n ~"., ',,: ::.c~~'.~;-' 
+4 :~i ' .. ~ :., " ,'l± ~ 
+• ~ :';~~. :~ ;~. ~ 
+i;~~; ~'. ":; c::; 
+;;:~ ,~, . 
+o .< ~;~;;~~i~ ;:~ ~~~.~~~~l~· ~;<:: . j~~~. ':;c' 
+,~2,.; 
+=:::'jj' 
+~~" 1$ :.;~;~?~-~ ""p-
+,!.~=; 
+t· '-:':' 
+, .. ! , 
+'" .: '0 .• .:'.:' En&lne speed, r.p.m. 
+'-F:
+;~d
+. ~
+._+-I--I--I-+-I-+"+'-l 
+1 ZOO 
+1400 
+1600 
+(1100 
+2000 
+2Z00 
+Figure 20 .- The effect of engine speed on ecavenge pressure 
+and brake msan effective pressure. Port arrange-
+ment, D; inlet-port opening,470 B. B.C .; exhaust-port open-
+ing,65° B.B.C .; scavenge ratio, 1.4: spark-ignition; i11umi-
+inating gas. 
+.'Oi 
+C1' 
+Ul 
+"-
+~ 
+0. ., 
+a 
+,<J 
+0 
+.... 
+..., .. .. ., 
+bO " .. 
+> .. 
+" 
+CI) 
+l-j r;· 
+Lf';· 
+'1':[; 
+I!H ,':1
+· 1:.:' ~.:. I. :. 
+'I,:, 
+I"" 
+\ .' 
+L.: 
+~h;
+I',r 
+n:1 :: 
+"... 
+TGro3S 
+"", 
+t:...~
+, 
+j<..... 
+k::l t r t ! j 
+I t I I r--.. 
+90.t:lf11itti
+ttflm Illlllll 
+.. -
+~ 
+I-::=E . 
+~'~D= I r4#1-~ kill I I 
+~~·~r£ft~~ ~ ,~;I
+.~ .,1"-. 
+70 
+·tm!J,· l '·f==fT:fn~~. 
+• 
+•• 
+" 
+••••.. 
+-
+-
+• 
+""., 
+0'" 
+•• __ 
+._ 
+j ~ 
+t:~l +"t'-='l'J,:t=h: LL 1 L.U .... . . 
+I ·: 
+~_0,rr-&
+1 k~lil,H! lll 
+.. ~""'~: 1 ~;;,~;;;.~:,:b0j<:;:;};' ~ 
+~ 
+I ;;-;,.rr...;.;:· 
+-'.', 
+2A 
+1i1l.;II'~~ 
+,,,,,, ~~IJ.~ 
+~ 
+... 
+~, 
+'tc' ,. ~ 
+•.• '.;-."1' 
+-.. 
+-,. 
+F 
+1.60~ 
+.' .-. 
+' 
+1-1 
+to. 
+.. r! 
+.. 
+1.40 
+R 
+E, 
+'B'1';: 
+120 
+IZ(1O 
+1400 
+1600 
+1800 
+Figure 21.- The effect of engine epeed on acavenge ratio 
+and brake mean effective pressure. Port ·arrange-
+ment, D; inlet-port opening,47° B.B.C . ; exhaust-port open-
+ing,650 B.B.C.; scavenge pressure, 11.8 inchel Eg.; spark-
+ignition; i lluminating gas. 
+:.: 
+10> 
+0 
+>-
+>-i 
+Ql 
+0 
+IJ' 
+I:!-
+0 
+PI ... 
+IzI 
+0 .. 
+Ql 
+to: 
+0 
+Ol 
+~ 
+.... 
+"'l .. 
+':i 
+~ ., ... 
+
+
+===== page 41 =====
+
+~ 
+0-., 
+....... 
+.c 
+..... 
+.,. 
+., 
+a 
+p 
+-::: 
+.1 
+Gross 
+""" 
+1'--
+1--1 
+eH~~ 
+I I IIII 
+9°b3&i:/:0iF I I I , I I I I 
+/:'. 
+80MI . bt:k 
+, t:::::b" I' 
+§. 
+c" l ~ . l ' , 1~ L.:i±I "= .. 
+.r.;=' 
+70 ~ 
+,~I=-+ 1=1.'=1' 
+A-:i: 
+--.;.; 
+~I :rl:;-'I't:'I .'-I·, 
+::..:~ .,,: I ;; 
+~
+::.;l : ,. 
+... 1
+. 
+01:'.1 4~ ~. ~ 
+Pli;'" 
+, 'il.·: 1 ." 
+~ !Sot 1 " I 1 1 1 1 I' I, 1 1 1 1 1 1 1 I ! 1 1 1 
+1 1 1 
+" I :~"rtrt 11111#H!4tH#B II FI 
+!if 
+20 1::" I:' 1 I 1 '1 ·1 1 I 1 1 
+. 
+1 1 1 1 1 I 1 I I I I I I I I 1 
+.'i 
+~ ., 
+Ul .. .. 
+'" .. 
+:1 .. 
+" .. 
+() 
+C/l 
+16 '1tl ... 
+12 ffiT:;f 
+. ~~ ~;'; 
+~ 
+lLtSLL 
+8 ~ 
+I" 
+l ' 
+~I ... 
+~ tj .:-:.:l":'rL;., . 
+~~ 
+S~ 
+";·"1#! 
+~ 
+t--r-
+~ 
+"~ 
+11,00 
+1.00 
+1600 
+18 00 
+Z OOO 
+2f!OO 
+r1gure 22.- The effect of engine speed on scavenge preesure, 
+brake mean effect1ve preesure and scavenge rat10. 
+Port arrangemen~, D; 1nlet-port open1ng,47° B.B.O.; exhaust-
+~rt open1ng,65 B.B.O., scayenge pressure proportional to 
+(r.p.m.)2; epark-ignition; illuminating gas. 
+c .... 
+0' 
+'" 
+"-
+.c 
+..... 
+'" .. e 
+..0 
+~ 
+~ 
+; .. " 
+., 
+'" " .. 
+'" " .. 
+c 
+" 
+> .. 
+o 
+II) 
+lIo l ~~ l ::. 
+.. 
+'-
+¥' 
+I ~ 
+1-" 
+I" 
+i:"I ";I!¥±tt~:~~~;Fr4 1 I· 1 I I i I 
+I ; 
+1,·1'-
+I" l';=.J:;:~ I ~! ' . ~ -
+.. 
+"'\:; 19~ 1 =,15?= 
+ie"; 
+I ;" ~ :-'t 
+I -
+70t'''l$1::'tttt'rJi- r:I~:ctJdll': ' I,', , 11 I I ·f I I I 
+1.01'1 14#. 1®itH=1 ~ ,-, 
+f .. · 
+601 f: ll
+,:~n: ~ ·~~tff t ·t¥~ I 1'1 I j LLIJ I "I 
+5°1 I I ~n.kbr=f:M LlJlfll'l lllJ ,. bl~~1 
+4°1 IH:~1tS1J~l fl~r Id'll I.l
+e 1·1 I· 
+r J
+I" ~I , l~ 1 
+:~M:rlil -[Jlllllllll ~cl 
+L.. 
+0 1 .1: 
+',-::, 
+'''10 1 
+1 ;. 
+t :44: I ·~~l . t, 
+I j ':'" ,,,:, 
+::',. 
+.' .• :0 
+:',= 
+;;;; ~': .• !. 
+ji!" :J
+;'=; 
+' .1- . d 
+!" 
+~tJi~I .~ 
+.~ .. ,;; .;,; .:!: l~~ t' .;.. 
+L:: 
+: .... :. 
+20 
+;C' 
+~' :: f.;;. ;';;"~ :,';, ':~:~~ ~~ ~~~:; :co: =~: ~::S 
+~~_ ~~~= 
+J~ :;,;-;:~~; :>I!I 
+~~~ "
+. 
+~ 
+/2f.:;~ .~~::~ ''''::, =r~~;~~~ 
+8 1~ ~~ ~:::.~~;~ ~~; .:; s~ 
+':""="T:~ ~ 
+. 1=''Wil ' .,;, <8 
+o 
+.2 
+: I ~ i.~ ~~i ~~: It.} ~~J}~ ~~~;ange ratio ~j 
+,4 
+.6 
+.8 
+1 0 
+1.2 
+/.4 
+1.6 
+F"-:J-:· 
+t "·f::·· 
+,-== 
+/.8 
+2.0 
+Figure 23. - The effect of scavenge ratio on scavenge 
+pr e!sure and brake mean effective pressure. 
+Port arransement, D; inlet- port 8penlng, 41" 
+B.B.C.; exhaust-port opening, 65 B.B.C.; 
+engine speed, 1,eoO r.p.m.; spark-igni tion; 
+illuminating gas. 
+t=~- I '~ 
+~I ~ 
+!Z; 
+~ 
+a 
+~ 
+~ 
+<II 
+() g 
+() 
+~ 
+!Z; o .. 
+<II 
+tz: 
+o 
+m ... 
+of> 
+'oJ ... 
+OIl 
+III 
+t.l 
+til 
+til 
+c.o 
+
+
+===== page 42 =====
+
+d 
+... 
+a-.. 
+~ 
+.0 
+.... 
+C. 
+01 
+~ 
+.a .. ., 
+0 ... ... 
+f 
+c. 
+.c: 
+~ 
+.0 
+.... 
+.; 
+o ... ., 
+c. 
+~ 
+" 
+c: o 
+" 
+..., 
+Z 
+" 
+... .. 
+... 
+" .. 
+c. 
+'" 
+~ 
+... 
+'" 
+~ 1 .~ , . 
+". ·I" :h 'J "":I':'''f·J!r 'h 
+.... f':V 4::: 
+... .. ;·:=I;:: /:-.'i.···· 
+,~ ~ ,,.; t: :'· I -' 'I""I'=:' 
+·· ·' ITE
+.· . •... 
+.- ~ 
+·':· I ~ r~ 
+:Scave nge f?atio 
+L.h%£I~ . 
+uo· 
+:C. 
+/.60 --
+(1f1% I I I-I I 
+1.20 
+80 
+70 
+~;k"T :.!H-
+·~-''M '' r--=t'f 
+60 
+~ 
+,:-dB'~1 I· J 1 I 1 
+k:t:: 
+'L 
+»LIL 
+N·v 
+50 
+Ir.· 
+.~ 
+1M rl 
+40 
+rJL 
+I.!J 
+301 I I I (II I I I I I I I I I r=1 I I I I I I I I I I 
+201 I I 1 1 1 1 1 I 1 1 I 1 1 1 1 I 1 1 I 1 1 1 171 1 1 
+91 I I I I 1,1 I I I I I I I II I I :W1 1 ~ 
+I I 
+:ITIIIIII j IJlIIflf 
+·:Htl t1t1~ilr~~) ~b. l tjell p~r ~Y~le!~ 
+4 
+.6 
+.8 
+1.0 
+/.Z 
+1.4 
+/.6 
+/.8 
+Z.o 
+2 .2 
+2.4 
+Z.6 x 10'· 
+Figure 24. - The effect of fuel rat. on bra~e specific 
+fuel consumpt1on and braKe mean effective 
+pressure. 
+gort arrangement, Ej inlet-port 
+opening, 55 B.B.C.; exhaust-port opening, 
+760 B.B.C.; engine speed, 1,800 r.p.m.; 
+compress1on-ignition. 
+ti 
+..... 
+'" 
+., 
+"-
+.0 ... 
+c. 
+.; 
+,; 
+.0 
+'" '" 
+0 
+" 
+'" 
+11 , 
+c. 
+.c: 
+~ 
+.0 
+..., 
+r; 
+o 
+~ i 
+r:t o " 
+..., 
+II> e 
+" 
+.... ... 
+.... 
+" '" 
+~ 
+II> 
+~ 
+... 
+'" 
+80 1 1 1 1 1 1 ·'1 1 I' I 1 1· I 1 1 I 1 1 1 I 1 
+I I 1 I 1 
+70 
+60 HllllllmffMlllllll1 
+..L 
+lLJL,·. v 
+SO 
+.ILJLILJ/ 
+lLlLVV 
+r.LLL 
+40 
+11 1#1.1" 
+J 
+if 
+:JlJ. 
+301 I tV I I 1 1·1 1 I I .I I I I I I I I I I I I I I I 
+r 
+.91 ·1 I 1 1 1. 1 ! I" 1·1 I· 1 I I 1 1 I I I L JL 1 I 
+. 7 " ;~! 
+' "';,d '-::; I' 
+.BI
+·I ~fl+ tYllll H 
+1
+1··~1[ Ilrl
+'~ I 
+.61--'" ~ 
+.S~ 
+~-- -.....&-.·
+I--
+--I ·-1 
+l ~i V 
+':2:2" 0 
+~ 
+:-;. 1.!: . ~ ~. 
+1: 
+:- :
+. 
+'. .:~. 4 
+··I·I-rrJ r;~~~~~t 
+.3 :'/1~jj ~ "tGe~ rat;~ 
+rUel per cycle 
+.6 
+.8 
+1.0 
+1.2. 
+1.4 
+/.6 
+1.& 
+z.o 
+1!.2 
+2.4 
+2.6 
+Figure 25. - The effect of fuel rate on bra~e specific 
+fuel consumption and brake mean effect1ve 
+pressure. 
+Port arrangement, E; 
+1nl~t-port 
+op~ning, 550 B.B.C.; exhaust-port opening 
+76 B.B.C.; scavenge ratiO, 1.4; com-
+pression·ignition. 
+.1.-'-
+2.8./0 .... 
+III 
+~ 
+a 
+~ 
+... 
+<II o 
+I:J' 
+~ 
+o 
+eo 
+III 
+o .. 
+<II 
+III 
+o 
+en 
+~ 
+II" 
+... .. 
+~ 
+"" 
+,II" 
+OJ 
+01 
+
+
+===== page 43 =====
+
+• 
+. :-:. ' .~ . 
+"' :-:'~'.~ 
+." 
+'. 
+.. 
+.' 
+~ " ':~' ~~:'" 
+.' .'~:::.: 
+. ! _.:. 
+.-
+.: ~ . 
+Scales: 
+'. 
+'.:. 
+;:" 
+1 inch =11.2 lb./sq.ln. 
+i inch =11.2.° 
+flO . . ?; 
+~ .. , . 
+.... 
+-.. 
+"~:( 
+:Ble. 
+~.: ' 
+" ~ 
+:.\' 
+:i ro 
+':~I . , 
+'~l 
+":;~ 
+.:; 
+f~ 
+I.e. 
+. ~~ ! .. : ... , :: +~;'.: . :' ··.<:-·: '~ : :: ·(:;'<>·'···':. I ' :::'~: .:.: . 
+·T~~.~ 
+. :.~?~~ .~ 
+~. 
+'.~ 
+f.e. 
+f.;t 
+-;p;'~~ ' 
+. r:Y-:"· " 
+:" 
+.~ . 
+.~ 
+26.- L1gh, apr1ng ind1cator d1agram tor exbauat-port opening ot 760 B.B.C: 
+and inlet-port opening of 520 B.B. C. Compreel lon- 1gn1tloD; 8Dg1ne 
+apeed, 1.800 r.p.m. 
+, . 
+.~ 
+. 
+~ 
+, : 
+::' 
+.', 
+" 
+~.~ : 
+,. 
+.. ., 
+!ill 
+• 
+~ 
+• 
+0 • ... 
+• 
+til • 
+n 
+go ... 
+~ 
+.... 
+tIS 
+0 .... 
+II 
+~ 
+• 
+(J) 
+~ 
+~ 
+~ 
+• 
+N 
+(J) 
+" 
+
+
+===== page 44 =====
+
+,,"" ... . 
+- ' 
+:" )",' 
+:.:'.: 
+." 
+,:': . 
+, , :, . 
+..... :; 
+\' ''.:' ' . 
+';' "~ :. 
+.... 
+.... , 
+Scales: 
+1 inch =ll.clb./sq.in. 
+t inch =ll.Zo 
+• 
+.•. 1." 
+. 1~< · 
+;. ~:~ ~ 
+':':.::' 
+,-;::::,' 
+. , ~~. 
+f .IO. 
+'! 
+B~ . 
+;'<.: 
+\; 
+flO. '} 
+I.e. 
+~ ' : 
+"<', 
+'.~:! 
+".:. ~~. 
+.' .. <.;:.~.~ .. ; . .: : . ;~'" :r: , .~\::'-i:~)· ':f ::··. 
+'-\~:~ " .. 
+:-~~, ... 
+E.C. 
+:..!''' 
+.:~.~.~ 
+:," 
+.:'.' 
+:~~tt 
+A.... ., 
+:~ 
+~. 
+... 
+f. 
+! ' . 
+::: 
+.! 
+;~ 
+.f 
+~.: . 
+,!:; 
+)! 
+.,\: 
+.. ~ 
+~: ' 
+,': , 
+,;. 
+~ . 
+.;: 
+J1~ 27.- Light spring indicator diagram tor exhaust-port of ?Co B.B.e. and 
+inlet-port opening of 520 B.B.C. Compression-ignition; engine apeed, 1.800 r.p.~ 
+" 
+~ 
+• 
+• 
+III> • 
+(') • 1-
+l [ e 
+f .. 
+CD 
+f • 
+en 
+~ 
+.. ... 
+CJIra • 
+N 
+~ 

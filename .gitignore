@@ -1,0 +1,21 @@
+# --- Large scans and photos: the searchable text lives in references/text/ ---
+*.pdf
+*.jpg
+*.jpeg
+**/manuals/
+rx135_5s_vs_4s_difference_manual_screenshots/
+real pics/
+
+# --- Generated / transient ---
+*.asv
+*.mat
+*.slx
+*.slxc
+sim/blair/plots/
+sim/audit/checkpoints/
+sim/experiments/
+
+# --- OS ---
+Thumbs.db
+desktop.ini
+desktop.ini

@@ -1,0 +1,1305 @@
+TITLE: Correlations for Wiebe function parameters for combustion simulation in two-stroke small engines
+YEAR: 2011
+FILE: 2011_Galindo_Wiebe_Correlations_Two_Stroke.pdf
+PAGES: 34
+EXTRACTED_WITH: PyMuPDF 1.28.2
+
+
+===== page 1 =====
+HAL Id: hal-00723971
+https://hal.science/hal-00723971v1
+Submitted on 16 Aug 2012
+HAL is a multi-disciplinary open access archive
+for the deposit and dissemination of scientific re-
+search documents, whether they are published or not.
+The documents may come from teaching and research
+institutions in France or abroad, or from public or pri-
+vate research centers.
+L’archive ouverte pluridisciplinaire HAL, est des-
+tinée au dépôt et à la diffusion de documents scien-
+tifiques de niveau recherche, publiés ou non, émanant
+des établissements d’enseignement et de recherche
+français ou étrangers, des laboratoires publics ou
+privés.
+HAL Authorization
+Correlations for wiebe function parameters for combustion
+simulation in two-stroke small engines
+J. Galindo, H. Climent, B. Plá, V.D. Jiménez
+To cite this version:
+J. Galindo, H. Climent, B. Plá, V.D. Jiménez.
+Correlations for wiebe function parameters for combus-
+tion simulation in two-stroke small engines.
+Applied Thermal Engineering, 2011, 31 (6-7), pp.1190.
+⟨10.1016/j.applthermaleng.2010.12.020⟩. ⟨hal-00723971⟩
+
+===== page 2 =====
+Accepted Manuscript
+Title: Correlations for wiebe function parameters for combustion simulation in two-
+stroke small engines
+Authors: J. Galindo, H. Climent, B. Plá, V.D. Jiménez
+PII:
+S1359-4311(10)00536-3
+DOI:
+10.1016/j.applthermaleng.2010.12.020
+Reference:
+ATE 3344
+To appear in:
+Applied Thermal Engineering
+Received Date: 3 March 2010
+Revised Date:
+3 December 2010
+Accepted Date: 11 December 2010
+Please cite this article as: J. Galindo, H. Climent, B. Plá, V.D. Jiménez. Correlations for wiebe function
+parameters for combustion simulation in two-stroke small engines, Applied Thermal Engineering (2010),
+doi: 10.1016/j.applthermaleng.2010.12.020
+This is a PDF file of an unedited manuscript that has been accepted for publication. As a service to
+our customers we are providing this early version of the manuscript. The manuscript will undergo
+copyediting, typesetting, and review of the resulting proof before it is published in its final form. Please
+note that during the production process errors may be discovered which could affect the content, and all
+legal disclaimers that apply to the journal pertain.
+
+===== page 3 =====
+ 
+ 
+1 
+CORRELATIONS 
+FOR 
+WIEBE 
+FUNCTION 
+PARAMETERS 
+FOR 
+COMBUSTION SIMULATION IN TWO-STROKE SMALL ENGINES 
+J. Galindo, H. Climent, B. Plá, V.D. Jiménez 
+CMT – Motores Térmicos, Universidad Politécnica de Valencia, Spain  
+Camino de Vera s/n, E 46022, Valencia, Spain. 
+ 
+ABSTRACT 
+Combustion simulation in two-stroke engines becomes necessary not only for engine 
+performance prediction but also for scavenge evaluation, since in-cylinder pressure and 
+temperature are highly influenced by combustion process evolution. Combustion simulation by 
+using a Wiebe function is appropriate to be included in a 1D engine code for providing design 
+criteria with fast and accurate calculations; the main drawback is the determination of the four 
+Wiebe parameters needed to build up the in-cylinder heat release. 
+This paper deals with a detailed methodology for heat release determination in two-stroke 
+engines under wide range of running conditions; obtained empirical data will serve for building 
+ad-hoc Wiebe functions, whose four parameters will be finally correlated with engine related 
+parameters derived from 1D simulations. Two different engines, with three exhaust systems 
+each, varying engine speed and spark ignition timing were used to obtain correlations far from 
+particular situations. 
+A multiple regression analysis stated that charge density, residual gas fraction, spark timing and 
+mean piston speed were the significant engine parameters that influence on Wiebe parameters. 
+Finally, two scenarios were considered regarding Wiebe parameters: a) specific correlations 
+different for each engine gave coefficient of multiple determination values higher than 98% 
+when predicting indicated mean effective pressure, b) a global correlation used for both engines 
+provided R2 values of 93% in the 50 cc and 91% in the 125 cc engine. 
+Key words: Two-stroke engine; phenomenological combustion model; Wiebe’s function; HRR 
+correlation 
+1. INTRODUCCION 
+Small two-stroke engines, which are widely used in mobile machinery, will have to accomplish 
+strict anti-pollution standards in imminent years. Active and passive solutions applied to two-
+
+===== page 4 =====
+ 
+ 
+2 
+stroke engines design have arisen in the last decades. Conforming active solutions, exhaust 
+emissions reduction technologies have been investigated [1-3], and on the other hand, within 
+passive solutions, current engine systems with different technologies (carburettor, direct 
+injection, catalyst) are being improved and evaluated in terms of emission control [4]. The use of 
+computer simulations to aid engine systems design process has been largely applied and has 
+become a popular tool because of combination of accurate results and reduced costs. 
+Combustion simulation in two-stroke engines becomes necessary not only for engine 
+performance prediction but also for scavenge evaluation, since in-cylinder pressure and 
+temperature are highly influenced by combustion process evolution. The cylinder blow-down, 
+which is originated when the exhaust port opens and configures the exhaust port instantaneous 
+pressure due to wave propagation phenomena inside the exhaust system, depends highly on 
+in-cylinder conditions at exhaust port opening. Several approaches may be considered for 
+combustion modelling.  Enumerating in time consuming order one may find: computational fluid 
+dynamics codes and quasi-dimensional combustion models on one side, and combustion 
+empirical models on the other side. The former techniques allow a physical approach but 
+provide large computational time and effort. Although their predictive capabilities, they are 
+beyond the scope of this paper since they are not suitable for fast computer simulations within a 
+wave action model scenerario. On the other hand, combustion simulation by using a Wiebe 
+function [5] lacks of physical representation but is appropriate to be included in a 1D engine 
+code. Although this second method is traditionally the most widely employed, the main 
+drawback is the determination of the four Wiebe parameters needed to build up the in-cylinder 
+of heat release rate (HRR). 
+HRR determination in four stroke engines is obtained solving the first law of Thermodynamics in 
+the cylinder closed cycle with the aid of experimental information; mainly the instantaneous in-
+cylinder pressure [6]. More elaborated models integrate simulation of the open cycle to better 
+capture the in-cylinder trapped mass [7]. In two stroke engines the open cycle  is even more 
+critical, since wave propagation phenomena inside the exhaust system influence greatly in the 
+in-cylinder trapped mass [8] and transfer ports configuration plays an important role on the 
+scavenge loop features and short-circuit phenomenon. Therefore, for HRR finding in two-stroke 
+
+===== page 5 =====
+ 
+ 
+3 
+engines it is compulsory to solve both the closed and the open cycle if consistent results are 
+desired. 
+Besides the HRR determination issue, which can be coped with empirical assistance and 
+convenient use of theoretical models, Wiebe function parameters selection for simulations at 
+different engine running conditions still remains unclear. Literature survey did not help on finding 
+out ready-to-use correlations for these parameters in the frame of small two-stroke engines. 
+Empirical functions [9, 10] were developed for the 0-90 per cent mass fraction burned angle and 
+the factor form for a 1600cc four-stroke spark-ignition engine. Direct application of previously 
+published functions provides Fig.1, where comparisons of burn angles and form factors are 
+presented. Results show that both, burn angle and form factor, obtained with existing functions 
+[10] do not correlate with enough accuracy with data obtained in this work. Therefore, it is 
+necessary to develop new functions for small two-stroke engines, whose characteristics differ 
+greatly from conventional four-stroke automotive engines mainly due to differences in engine 
+speed and in-cylinder conditions during the combustion process. 
+Performance prediction models in two-stroke engines need this information for providing 
+accurate and reliable results. In summary, this paper deals with a detailed methodology for HRR 
+determination in two 2S engines under wide range of running conditions; obtained empirical 
+data will serve for building ad-hoc Wiebe functions, whose parameters will be finally correlated 
+with engine related parameters derived from 1D simulations. 
+The paper is structured as follows. Section 2 is devoted to the description of the experimental 
+facility used to gather empirical data. Section 3 contains the detailed methodology for HRR 
+determination including a combustion diagnosis model and a 1D engine model. Results for the 
+empirical correlations to be used for Wiebe parameters are given in Section 4. Analysis of the 
+influence of relevant engine parameters to the correlations is also performed in this section. 
+Finally, main conclusions of the present study are presented in Section 5. 
+2. EXPERIMENTAL SETUP 
+Two two-stroke engines, whose main features are shown in Table 1, were employed in the 
+present study. Both units are spark-ignited, crankcase-scavenged type, single-cylinder engines. 
+A test bench, shown schematically in Fig. 2, was fully instrumented to carry out performance 
+
+===== page 6 =====
+ 
+ 
+4 
+and emissions measurements. Main measurement devices consisted of an eddy-current electric 
+brake (up to 6 kW power when testing the 50 cc and 175 kW for the 125 cc engine), a hot wire 
+anemometer to measure the air mass flow entering the engine, a gravimetric balance to register 
+the fuel consumption and a Horiba Mexa 1300 exhaust gas analyzer to collect HC, NO and CO 
+emissions. Firing tests were carried out at different load and engine speed conditions, since an 
+electronic module controlled the brake as well as the throttle position. Both engines have liquid 
+cooled cylinders, so a second cooling system was designed and built in order to control the 
+engine coolant temperature. 
+Fluid flow properties are also relevant in checking the accuracy of the model, which will be 
+described in detail in Section 3.2. Therefore, mean temperature and pressure were measured at 
+the intake and exhaust pipes with thermocouples and manometers. Moreover, pressure 
+transducers were placed in the cylinder, crankcase, and exhaust port in order to measure the 
+instantaneous evolution (every 0.5 crank angle degree). 
+Since the main objective of this work is to obtain Wiebe parameters correlations for combustion 
+simulation, a representative sample of two-stroke engine running conditions is required. 
+Performing measurements in two different engines at wide range of rotating speeds is one way 
+to accomplish this. Another simple technique to greatly modify the behaviour of a two-stroke 
+engine consists in changing the exhaust system. Therefore, three exhaust systems were 
+employed for the 50 cc engine, and also three units designed for the 125 cc engine. 
+Schematic layouts of the exhaust systems are represented in Fig. 3 where basic geometrical 
+data are detailed. Exhaust system modification in 125 cc engine is achieved by adding a duct 
+between the cylinder block and the exhaust pipe. Three configurations were attained: without 
+duct, and with 65 mm and 100 mm length duct. Geometrical data of the exhaust systems for the 
+50 cc engine are also shown in Fig. 3. All of them share the same geometry, however: exhaust 
+system #1 has a catalytic converter at the end of the tapered pipe, unit #2 includes also a 
+catalytic covering inside the divergent tapered pipe while the third exhaust system does not 
+include any catalytic device. Fig. 4 shows the air mass flow through the engine in both engines, 
+where large differences are detected when changing exhaust systems. Moreover, it was 
+possible to modify the spark-ignition timing in the 50 cc engine. So combining engine speed, 
+
+===== page 7 =====
+ 
+ 
+5 
+exhaust system and spark-ignition timing gives 33 and 14 running conditions for the 50 cc and 
+125 cc engines respectively. 
+3. METHODOLOGY 
+In this section the applied methodology to acquire the heat release rate of two-stroke engine 
+operation is detailed. Well known cycle-to-cycle variation [11] is the first issue that has to be 
+solved. The post-processing tasks that will lead to the HRR determination are later described. 
+These tasks consist of two models that are solved iteratively until convergence is achieved: the 
+combustion diagnostic model and the engine model. The combustion diagnostic model uses 
+empirical information in order to obtain in-cylinder heat release rate, which is needed by the 
+engine model. At the same time, the engine model provides in-cylinder trapped mass and 
+residual gas fraction to the combustion diagnostic model. When the iterative process finishes, 
+validation of measured and predicted results from the engine model is performed. 
+3.1 Average cycle determination 
+Dealing with cycle-to-cycle variation is beyond the scope of the present study. Instead, an 
+average engine cycle will be considered as repetitive and characteristic of a specific engine 
+running conditions. Fig. 5 presents the instantaneous pressure traces in the cylinder, in the 
+crank-case and in the exhaust pipe, measured in the 50 cc engine. Although these 
+measurements are shown for the maximum power engine operation, variations in consecutive 
+cylinder cycles are significant. Other engine running conditions reveal stronger effects due to 
+the presence of high residual gases levels in the cylinder when the exhaust system is not tuned. 
+Fortunately for 1D engine modelling purposes, as shown in Fig. 5, the cycle-to-cycle variations 
+appear only in the cylinder pressure and are not translated to crank-case or exhaust pipe 
+traces. 
+The procedure for the election of the average cycle is simple. In the engine test bench 100 
+consecutive cycles are registered. The indicated mean effective pressure (imep) is calculated 
+for all of them. The cycle whose imep is closer to the average from those 100 cycles is the 
+selected one. Measuring 100 cycles is not arbitrary. Fig. 6 shows the histograms for the 50 cc 
+engine at different engine speeds. It is observed that all of them behave like a normal 
+distribution so 100 cycles is a representative sample to extract the average cycle. 
+
+===== page 8 =====
+ 
+ 
+6 
+3.2 Combustion diagnostic model description 
+The in-cylinder pressure is measured with a piezoelectric transducer and sampled with constant 
+angular frequency. The first law is applied between exhaust port closing and opening, 
+considering the combustion chamber as a closed system since blow-by is neglected. It uses the 
+ideal gas equation of state to calculate the mean gas temperature in the chamber. Along with 
+the two basic equations, two submodels to calculate instantaneous volume and heat transfer 
+are used. The main result is HRR. 
+The hypotheses of the combustion diagnosis model are: a) the pressure is uniform in the 
+combustion chamber, which is valid when the fluid and flame propagation velocities are much 
+smaller than sound speed [6]; b) the fluid in the chamber is considered a mixture of three gases: 
+air, gasoline and burned gases; c) perfect gas behaviour is assumed for the gas mixture; d) 
+correlations based on the temperature are used to calculate sensible internal energy of the gas 
+mixture; e) the internal energy is calculated considering the mean gas temperature, which is the 
+hardest hypothesis since burned products are hotter than mean temperature at the start of 
+combustion, even though later they become closer; f) Annand’s equation is used to calculate 
+the heat transfer coefficient. 
+The instantaneous volume is the sum of the combustion chamber volume and the volume 
+displaced by the piston (depending on crank angle), which is calculated by means of 
+( )
+( )
+(
+)
+2
+2
+2
+2
+2
+1
+1
+·
+1
+cos
+sin
+8
+c
+cc
+d s
+V
+V
+e
+e
+π
+α
+α
+λ
+λ
+
+
+
+
+
+
+=
++
++
+−
+−
+−
+−
+−
+
+
+
+
+
+
+
+
+ 
+(1) 
+where 
+1
+d
+cc
+V
+V
+CR
+=
+−
+ 
+(2) 
+being CR the geometric engine compression ratio. 
+Concerning heat transfer estimation, the most extended approach considers convection and 
+Annand [12] recommends the following expression to relate Reynolds and Nusselt numbers: 
+0.7
+a Re
+Nu =
+ 
+(3) 
+where the constant  a is set to 0.26 for a two-stroke engine. The Reynolds number is calculated 
+with the gas density and viscosity, the cylinder bore and the mean piston velocity: 
+
+===== page 9 =====
+ 
+ 
+7 
+Re
+m
+c
+c d
+ρ
+µ
+=
+ 
+(4) 
+The convection heat transfer coefficient is extracted now from the Nusselt number, and knowing 
+gas conductivity, using: 
+c
+k Nu
+h
+d
+=
+ 
+(5) 
+The instantaneous in-cylinder heat transfer can be calculated as 
+(
+)
+(
+)
+(
+)
+,
+,
+,
+w
+c
+w liner
+liner
+c
+w piston
+piston
+c
+w cyl head
+cyl head
+Q
+h
+T
+T
+A
+T
+T
+A
+T
+T
+A
+dt
+δ
+−
+−
+
+
+=
+−
++
+−
++
+−
+
+ 
+(6) 
+where surface areas consist of the liner, the piston and the cylinder head, and wall 
+temperatures are calculated by means of empirical correlations [13]. 
+Finally, the first law of thermodynamics for a closed system can be reordered as follows: 
+w
+c
+c
+HRR
+pdV
+Q
+m du
+δ
+= −
+−
+−
+ 
+(7) 
+It is relevant to note that in-cylinder trapped mass, mc, is an input to combustion diagnosis 
+model and comes from calculations performed in an overall engine model, which is described in 
+the following section. 
+The Wiebe function [10, 14] is a very convenient method to simulate fuel burning in internal 
+combustion spark-ignition engines. The Wiebe function for the mass fraction burned is given by: 
+0
+1
+n
+a
+b
+X
+e
+α α
+α
+−
+
+
+−
+
+∆
+
+
+= −
+ 
+(8) 
+where α, α0 and ∆α are the instantaneous crank angle, the start of combustion crank angle, and 
+the combustion angle, respectively. In this expression, a and m are tuning parameters. Since 
+the a coefficient represent the combustion efficiency, in the present work it has been fixed to 
+6.9, so that, 99.9% of the fuel is burnt when the combustion has finished. The derivative of 
+Equation (8) should equal the HRR determined in Equation (7), so: 
+(
+)
+0
+1
+0
+1
+n
+n
+a
+a m
+HRR
+e
+α α
+α
+α
+α
+α
+α
+−
+−
+
+
+−
+
+∆
+
+
++
+−
+
+
+=
+
+
+∆
+∆
+
+
+ 
+(9) 
+Lastly, final step leads to select convenient Wiebe parameters to provide a match with 
+experimental information.  
+
+===== page 10 =====
+ 
+ 
+8 
+In an SI engine with a limited compression ratio, the mixture temperature may not rise to a 
+sufficient level to generate auto-ignition, at the end of the compression stroke [15]. Ignition delay 
+was chosen to be half the spark ignition advance. Fig. 7 shows an example of the HRR 
+obtained with the presented methodology and the modelled Wiebe function. Results correspond 
+to the 50 cc engine at 6000 rpm open throttle. 
+3.3 Engine model description 
+Wave propagation phenomena during gas exchange processes inside internal combustion 
+engines are assumed to be one-dimensional. In the case under consideration, a wave action 
+model, which solves the unsteady, non-linear and one-dimensional flow equations using a finite 
+difference scheme [16], was used to model both two-stroke engines. 
+These engines are composed basically of three kinds of elements: ducts, volumes and 
+junctions. Volumes (such as cylinder, crank-case, airbox and atmosphere) are calculated using 
+a zero dimensional approach, by solving mass and energy conservation equations. In-cylinder 
+HRR, via Wiebe function, is an input to this model since information coming from the 
+combustion diagnosis model is provided. Effective area of connections (such as exhaust and 
+transfer ports, rotating disk or reed valves) between ducts and volumes are solved by means of 
+a discharge coefficient, which has to be previously obtained in a steady flow bench.  Boundary 
+conditions are solved using the method of characteristics and then coupled with the finite 
+difference calculation in the ducts [17, 18]. Exhaust systems, silencer and airbox were 
+characterized in an impulse test rig [19]; subsequently they were simulated individually with the 
+1D code, for later construction of the complete geometry. 
+The governing equations that describe the one-dimensional non-homentropic gas flow, with the 
+consideration of area change, friction and heat transfer in a pipe, form a non-homogenous 
+hyperbolic system, and are represented in vector notation as [20]: 
+∂
+∂
++
++
++
+=
+∂
+∂
+1
+2
+0
+t
+x
+W
+F
+C
+C
+ 
+(10) 
+This conservation law system, comprising the continuity, momentum and energy equations, is 
+complemented by the equation of state or the real gas properties [21]. In Equation (10), W is the 
+desired state vector of the solution, F is the flux vector and C the source term separating the 
+
+===== page 11 =====
+ 
+ 
+9 
+effect of the area changes from the effect of friction and heat transfer. The one-dimensional gas 
+flow governing equations was traditionally arranged in the vector form shown in Equation (11): 
+(
+)
+(
+)
+(
+)
+ρ
+ρ
+ρ
+ρ
+γ
+ρ
+ρ
+γ
+γ
+ρ
+ρ
+ρ
+γ
+ρ
+ρ
+γ
+
+
+
+
+
+
+
+
++
+
+
+
+
+=
+= 
+
+
+
+
+
++
++
+
+
+
+
+
+
+−
+−
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+=
+= 
+
+
+
+
+
+
+
++
+−
+
+
+
+
+
+
+−
+
+
+
+
+
+
+2
+2
+2
+2
+1
+2
+2
+,
+(
+)
+2
+1
+2
+1
+0
+1
+,
+2
+1
+u
+u
+p
+u
+x t
+u
+p
+u
+p
+u
+u
+u
+dS
+x
+g
+S dx
+u
+p
+u
+q
+W
+F W
+C
+W
+C
+W
+ 
+(11) 
+This set of equations is solved by using the two-step Lax-Wendroff method [22], which is 
+programmed in the computer code together with the boundary conditions. Scavenging process 
+is an important issue in two-stroke engines [23]. A well-known model [13] to account for short-
+circuit phenomenon was used in the present study. 
+4. RESULTS AND DISCUSSION 
+Application of the methodology presented in previous section to 47 engine running conditions 
+(depending on engine size, exhaust system, engine speed and spark-ignition timing) results in a 
+database where every sample consists of the following fields: (i) the four Wiebe parameters 
+(tuned to match experimental HRR), (ii) mean piston speed and spark-ignition timing (fixed 
+during engine tests) and, (iii) charge density at spark timing and residual gas fraction (obtained 
+from engine simulations). Moreover, instantaneous pressure traces can be compared in every 
+running condition to check model capabilities. 
+Comparison between measured and calculated results is shown in Fig. 8 at 50 cc engine full 
+load and 6000 rpm. Predicted instantaneous pressure in the exhaust port presents good 
+agreement. Therefore, it can be assumed that the wave action model calculates with accuracy 
+the fluid dynamics inside tapered pipes with unsteady and high temperature flow conditions. 
+Crankcase pressure is also well captured, although measurements show high frequency 
+content due to the additional length of the duct that was necessary to insert when placing the 
+pressure transducer in the engine. Predicted in-cylinder pressure is very similar to measured 
+one since ad-hoc parameters are used in the Wiebe function for HRR estimation. 
+
+===== page 12 =====
+ 
+ 
+10 
+Application of a multiple regression analysis between Wiebe’s function parameters (combustion 
+angle and form factor) and engine related parameters such as mean piston speed, charge 
+density and trapped residual gas fraction gives the following results. If correlations are obtained 
+taking into account that the selected engines operation differ from one to another then two sets 
+of correlations arise. Equation (12) provides a correlation for combustion angle and form factor 
+for the 50 cc engine: 
+(
+)
+0.34
+0.85
+2
+0.46
+0.25
+0.53
+1
+0.8
+1
+110
+1
+(0.00032
+0.026
+1)
+1 1.98
+1
+1
+1.37
+1
+4.94
+1
+ST
+ST
+ST
+r
+m
+r
+m
+ST
+x
+c
+n
+x
+c
+α
+α
+α
+ρ
+α
+−
+
+
+
+
+
+
+∆
+=
+−
+−
++
+
+
+
+
+
+
+
+
+−
+
+
+
+
+
+
+
+
+
+
+=
++
+
+
+
+
+
+
+
+
++
+
+
+
+
+ 
+(12) 
+Similarly, equation (13) corresponds to the 125 cc high performance engine: 
+(
+)
+0.34
+0.85
+2
+0.46
+0.25
+0.45
+1
+0.8
+1
+85
+1
+(0.00051
+0.02
+1)
+1 2.14
+1
+1
+1.37
+1 6.9
+1
+ST
+ST
+ST
+r
+m
+r
+m
+ST
+x
+c
+n
+x
+c
+α
+α
+α
+ρ
+α
+−
+
+
+
+
+
+
+∆
+=
+−
+−
++
+
+
+
+
+
+
+
+
+−
+
+
+
+
+
+
+
+
+
+
+=
++
+
+
+
+
+
+
+
+
++
+
+
+
+
+ 
+(13) 
+Previous equations consist of a dimensional constant and a set of functions which are assumed 
+to have an independent effect on each Wiebe parameter. Constants on equations are given 
+when charge density is in kg/m3, mean piston speed in m/s, residual gas fraction is 
+dimensionless, and spark timing is in crank-angle degrees before TDC. 
+One-dimensional computer simulations using previous correlations were performed. Fig. 9 
+shows the comparison between calculated and measured indicated mean effective pressure for 
+the 50 cc (top plot) and 125 cc (bottom plot). Results include the simulation of the exhaust 
+systems at wide engine speed ranges mentioned in Section 2. For the 50 cc engine, different 
+spark ignition timing simulations are also included. The coefficient of multiple determination (R2) 
+is higher than 98% for both engines. 
+Global correlations for combustion angle and form factor are obtained at this point. The main 
+aim is to check the lack of accuracy when predicting engine performance if no ad-hoc 
+correlations are available for a specific engine. If the multiple regression analysis is performed 
+using both engines data, the correlations are represented in Equation (14). 
+
+===== page 13 =====
+ 
+ 
+11 
+(
+)
+0.34
+0.85
+2
+0.46
+0.25
+0.48
+1
+0.8
+1
+97
+1
+(0.0004
+0.024
+1)
+1 2.06
+1
+1
+1.37
+1 6.3
+1
+ST
+ST
+ST
+r
+m
+r
+m
+ST
+x
+c
+n
+x
+c
+α
+α
+α
+ρ
+α
+−
+
+
+
+
+
+
+∆
+=
+−
+−
++
+
+
+
+
+
+
+
+
+−
+
+
+
+
+
+
+
+
+
+
+=
++
+
+
+
+
+
+
+
+
++
+
+
+
+
+ 
+(14) 
+Finally, calculated and measured indicated mean effective pressure are compared in Fig. 10 (50 
+cc engine in top and 125 cc in bottom plot). When global correlations are applied, the coefficient 
+of multiple determination (R2) reduces to 93% for the 50 cc and to 91% for the 125 cc engine. 
+Same information as in Fig. 9 and Fig. 10 are given in Fig. 11 but presented in a different way. 
+Measured and predicted engine performance is compared in a set of plots. Left and middle plots 
+correspond to the 50 cc engine results while right plots are for the 125 cc. The difference 
+between left and middle plots is the engine spark timing. The difference between upper, middle 
+and lower plots is the exhaust system used in the engine tests. As observed in the plots, when 
+the exhaust system is changed, wave propagation phenomena produce optimum engine 
+performance at different engine speeds. Therefore it is a convenient way to increase the 
+number of cases for a larger database. 
+If specific combustion angle and form factor correlations are used for each engine (Eq. (12) for 
+the 50 cc and Eq. (13) for the 125 cc engine), errors at imep predictions are lower than 5% for 
+all the simulations. If the global correlation (Eq. (14)) is used for both engines simulations, errors 
+in most of model predictions do not exceed 5% and the rest are lower than 10%. 
+An important issue when working with correlations is, not only a high coefficient of multiple 
+determination, but also their capability to represent physical phenomena in order to extend their 
+use to similar engines or to other engine modifications. Correlations obtained in previous 
+equations (12), (13) and (14) show multiplicative terms for the independent variables. Fig. 12 
+shows the four functions that influence on combustion angle correlation found in Eq. (14). 
+Charge density function is consistent with reported results [10], where lower combustion angles 
+are attained when increasing charge density at spark timing. A wide range of charge density 
+values are achieved during engine testing which provides good samples for the database 
+population. Since combustion angle is represented in terms of crank angle degrees, it is obvious 
+that higher mean piston speeds conduct to an increase of combustion angle due to the fact that 
+
+===== page 14 =====
+ 
+ 
+12 
+combustion timing is not heavily affected by engine speed. This effect is also shown in Fig. 12 
+and, again, a wide range of mean piston speeds were tested so as to obtain a large population. 
+Spark timing on the 50 cc could be easily changed. However, in the 125 cc unit, spark timing 
+variation was not possible and it was conveniently chosen by the ECU. Nevertheless, large 
+variations in the spark timing were acquired in order to take it to the limits avoiding piston 
+seizure. At high values of spark timing, although in-cylinder pressure and temperature are 
+lower, the main part of the combustion process takes place near the TDC, which produces 
+higher pressure and temperature evolutions and reduces combustion angle, as depicted in Fig. 
+12. Finally, it is well established that high trapped burn gas fraction leads to a slower 
+combustion process and hence, to high values of combustion angle as residual gas fraction 
+function represents in Fig. 12. 
+5. CONCLUSIONS 
+One-dimensional computer simulations require information concerning the combustion process, 
+i.e. the heat release rate, which is usually represented in gasoline engines with a Wiebe 
+function. A methodology that includes experimental and modelling tasks was proposed to 
+acquire the HRR in two-stroke small engines. The methodology was applied to a 50 cc and a 
+125 cc engines for generalization purposes. Among other engine related parameters, in-cylinder 
+pressure was measured and used in a combustion diagnostic model. Since the in-cylinder 
+trapped mass is employed by this model, a 1D model was developed in order to capture wave 
+propagation phenomena in exhaust and intake systems, and reproduce the scavenge process. 
+Comparison of instantaneous pressure traces in the exhaust port, in the crank-case and in the 
+cylinder while the scavenge process takes place proves that trapped mass was correctly 
+predicted. 
+HRR were obtained under an extensive range of engines operation by modifying the exhaust 
+system, engine speed and spark timing. The four parameters that build up the Wiebe function 
+were tuned to capture each HRR resulting in a database together with engine related values. 
+Some engine information was obtained directly from engine testing (such as engine speed or 
+spark timing) while other was acquired by using the 1D engine model (such as charge density 
+and residual gas fraction). A multiple regression analysis stated that charge density, residual 
+
+===== page 15 =====
+ 
+ 
+13 
+gas fraction, mean piston speed and spark timing were the significant engine parameters that 
+influence on Wiebe parameters. 
+Moreover, all the obtained correlations present a physical meaning related to the terms of the 
+independent variables for the variation of both, combustion angle and form factor. Increasing 
+charge density or spark timing (with reference to TDC) reduce combustion angle. High mean 
+piston speed or gas residual fraction leads to higher combustion angle. 
+Finally, two scenarios were considered regarding the combustion angle and form factor: a) 
+specific correlations for these parameters different for each engine, Eq. (12) for the 50 cc and 
+Eq. (13) for the 125 cc engine, gave coefficient of multiple determination (R2) values higher than 
+97% when predicting indicated mean effective pressure, b) a global correlation used for both 
+engines, Eq. (14), provided R2 values of 93% in the 50 cc and 91% in the 125 cc engine. 
+REFERENCES 
+[1]. P. Duret, A. Ecomard, M. Audinet, A new two-stroke engine with compressed air assisted 
+fuel injection system for high efficiency low emissions applications, SAE Paper 880176, 
+1988. 
+[2]. M. Nuti, R. Pardini, D. Caponi, Fast injection system: PIAGGIO solution for ULEV 2T SI 
+engines, SAE Paper 970362, 1997. 
+[3]. F. Payri, J. Galindo, H. Climent, J.M. Pastor, C. Gaia, Optimisation of the scavenging and 
+injection processes of an air-assisted direct fuel injection 50cc 2-stroke S.I. engine by 
+means of modelling, SAE Paper 2001−01−1814, 2001. 
+[4]. J. Czerwinski, P. Compte, F. Reutimann, A. Mayer, Influencing (nano)Particle Emissions 
+of 2-Stroke Scooters, International Journal of Automotive Technology  7(N3) (2006) 237-
+244. 
+[5]. I. Wiebe, Halbempirische Formel für die Verbrennung-Geschwindigkeit, Verlag de 
+Akademic der Wissenschaften der VdSSR 1956. 
+[6]. M. Lapuerta, O. Armas, J.J. Hernandez, Diagnosis of DI Diesel combustion from in-
+cylinder pressure signal by estimation of mean thermodynamic properties of the gas, 
+Applied Thermal Engineering 19 (1999) 513−529. 
+[7]. F. Payri, S. Molina, J. Martín, O. Armas, Influence of measurement errors and estimated 
+parameters on combustion diagnosis, Applied Thermal Engineering 26 (2006) 226−236. 
+
+===== page 16 =====
+ 
+ 
+14 
+[8]. J. Galindo, J.R. Serrano, H. Climent, A. Tiseira, Analysis of gas-dynamic effects in 
+compact exhaust systems of small two-stroke engines, International Journal of 
+Automotive Technology 8(N4) (2007) 403−411. 
+[9]. F. Lindström, H. Angstrom, G. Kalghati, C. Moller, An empirical SI combustion model 
+using laminar burnig velocity correlations, SAE Paper 2005-01-2106, 2005. 
+[10]. F. Bonatesta, B. Waters, P. J. Shayler, Burn angles and form factors for Wiebe function 
+fits to mass fraction burned curves of a spark ignition engine with variable valve timing, 
+International Journal of Engine Research 11(2) (2010) 177-186.  
+[11]. N. Ozdor, M. Dulger, E. Sher, Cyclic Variability in Spark Ignition Engines A Literature 
+Survey, SAE Paper 940987, 1994. 
+[12]. W.J.D. Annand, T.H. Ma, Instantaneous Heat Transfer Rates to the Cylinder Heat 
+Surface of a Small Compression Ignition Engine, Proc. IMech.E. 185 (1970–71) 976–987. 
+[13]. G.P. Blair, Design and simulation of two-stroke engines, R-161 Society of Automotive 
+Engineers, Inc. Warrendale, PA. 1995. 
+[14]. J.R. Serrano, H. Climent, C. Guardiola, P. Piqueras, Methodology for characterisation 
+and simulation of turbocharged diesel engines combustion during transient operation. Part 
+2: Phenomenological combustion simulation, Applied Thermal Engineering 29 (2009) 
+150−158. 
+[15]. J. Wijesinghe, G. Hong, Study of the autoignition combustion operating region of a small 
+two-stroke engine, Proc. IMech.E. Part D: Journal of Automobile Engineering 223 (2009) 
+651-659. 
+[16]. F. Payri, J. Benajes, M.D. Chust, Programme pour étude assistée par ordinateur de 
+systèmes d’admission et d’échappement de moteurs, Entropie 162 (1991) 17−23. 
+[17]. J.S. Chiou, M.S. Chiang, C.K. Chen, Numerical simulation method applied to the multi-
+expansion exhaust system of a two-stroke engine, Proc. IMech.E. Part D: Journal of 
+Automobile Engineering 208 (1994) 281-288. 
+[18]. F. Payri, J.M. Desantes, A.J. Torregrosa, Acoustic boundary condition for unsteady one-
+dimensional flow calculations, Journal of Sound and Vibration 188(N1) (1995) 85−110. 
+
+===== page 17 =====
+ 
+ 
+15 
+[19]. F. Payri, J.M. Desantes, A. Broatch, Modified impulse method for the measurement of 
+the frequency response of acoustic filters to weakly non-linear transient excitations, 
+Journal of the Acoustical Society of America 107(N2) (2000) 731−738. 
+[20]. H. Daneshyar, One-Dimensional Compressible Flow, Pergamon Press (1976) ISBN 
+0080204139. 
+[21]. D.E. Winterbone, R.J. Pearson, A Solution of the Wave Equations Using Real Gases, 
+International Journal of Mechanical Sciences 34(N12) (1992)  917−932. 
+[22]. R.D. Richtmayer K.W. Morton, Difference Methods for Initial-Value Problems, 
+Interscience, 1967. 
+[23]. M. Čudina, Model testing the two-phase scavenging system in a two-stroke petrol 
+engine, Proc. IMechE Part D: Journal of Automobile Engineering 218 (2004) 1307-1316. 
+
+===== page 18 =====
+ 
+ 
+16 
+TABLES CAPTION 
+Table 1. Engines main characteristics. 
+
+===== page 19 =====
+ 
+ 
+17 
+FIGURES CAPTION 
+Fig 1. Comparison between published [10] and proposed combustion angle and form factor. 
+Fig 2. Schematic engine test bench layout. 
+Fig 3. Schematic layout of the 50cc and 125cc engines exhaust systems. 
+Fig 4. Measured air mass flow (50cc engine: top; 125 cc engine: bottom). 
+Fig 5. Cycle-to-cycle demonstration (50cc engine open throttle 6000 rpm; in-cylinder: top, 
+crankcase: middle, exhaust port: bottom). 
+Fig 6. The frequency of distribution of imep in 50 cc engine (5000 rpm: top left, 6000 rpm: top 
+right, 7000 rpm: bottom left, 8000 rpm: bottom right). 
+Fig 7. Measured burned mass fraction and matched Wiebe’s function. 
+Fig 8. Measured and calculated instantaneous pressure results (50cc engine open throttle 6000 
+rpm; in-cylinder: top, crankcase: middle, exhaust port: bottom). 
+Fig 9. Measured and calculated imep (50cc engine with correlations in Eq. (12): top, 125cc 
+engine with correlations in Eq. (13): bottom). 
+Fig 10. Measured and calculated imep with correlations in Eq. (14) (50cc engine: top, 125cc 
+engine: bottom). 
+Fig 11. Engines performance: measured and calculated imep with correlations in Eq. (12), Eq. 
+(13) and Eq. (14) (50cc engine: left and middle, 125cc engine: right; using different exhaust 
+systems and spark timings). 
+Fig 12. Functions for charge density, mean piston speed, spark timing, and residual gas 
+fraction, used to predict combustion angle. 
+
+===== page 20 =====
+ 
+ 
+18 
+NOTATION LIST 
+cm:mean piston speed 
+cp:specific heat at constant pressure (J/kg K) 
+CR :compression ratio (-) 
+d :diameter (m) 
+e:eccentricity (m) 
+k:gas conductivity (W/m K) 
+Hc:heat of combustion (J/kg) 
+Nu:Nusselt number (-) 
+p:pressure (bar) 
+u:velocity (m/s) 
+R:ideal gas constant (J/kg K) 
+Re:Reynolds number (-) 
+s:stroke (m) 
+T:temperature (K) 
+V:volume (m3) 
+xr: residual gas fraction (-) 
+ 
+ 
+ACRONYMS 
+2S:two stroke 
+imep:Indicated Mean Effective Pressure 
+HRR:Heat Release Rate 
+GREEK SYMBOLS 
+α:crank angle degree (º) 
+λ:crank and connecting rod length ratio (-) 
+ρ:gas density (kg/m3) 
+µ:gas viscosity (kg/ms) 
+SUBSCRIPTS 
+c:cylinder 
+
+===== page 21 =====
+ 
+ 
+19 
+cc:combustion chamber 
+d:displacement 
+ST:spark timing 
+w:wall 
+
+===== page 22 =====
+ 
+Engine displacemen
+50cm3
+125cm3
+Cylinders
+1
+1
+Bore
+39.88mm
+54 mm
+Stroke
+40
+54.5 mm
+Transfer ports
+5
+5
+Exhaust ports
+1 (+2)
+1 (+2)
+Transfer ports opening
+120 ºATDC
+113 ºATDC
+Exhaust ports opening
+94 ºATDC
+83 ºATDC
+Crankcase inlet control
+Reed valve
+Rotating disk
+Fuel supply system
+Carburettor
+Carburettor
+ Engines main characteristics
+
+===== page 23 =====
+ 
+ 
+
+===== page 24 =====
+ 
+ 
+
+===== page 25 =====
+ 
+ 
+
+===== page 26 =====
+ 
+ 
+
+===== page 27 =====
+ 
+ 
+
+===== page 28 =====
+ 
+ 
+
+===== page 29 =====
+ 
+ 
+
+===== page 30 =====
+ 
+ 
+
+===== page 31 =====
+ 
+ 
+
+===== page 32 =====
+ 
+ 
+
+===== page 33 =====
+ 
+ 
+
+===== page 34 =====
+ 
+ 

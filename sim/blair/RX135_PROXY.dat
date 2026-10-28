@@ -1,0 +1,88 @@
+! =====================================================================
+! RX135 (4TL10 5-speed cylinder / 4-speed induction + exhaust / 4-speed box)
+! Prog.5.1 "ENGINE MODEL No.1" input deck - PROMPT ORDER (not Fig.5.3 order)
+! 42 entries: BO ST CRL RPM TCR CCR TEXC / EPO EPFO NEP WEP RTE RBE /
+!             TPO TPFO NTP WTP RTT RBT SCAV$ / IPO IPFO NIP WIP RTI RBI /
+!             LEP1 DEP1 LEP2 DEP2 VBOX SIL$ / LTP TRAR LIP DIP THAR /
+!             NC NE BEFF BDEG TAF
+! Layout: value ! TAG ! units ! provenance.  Loader: sim/blair/load_case.m
+! Provenance keys:  md = sim/RX135_5S_VERIFIED_PARAMETERS.md (section no.)
+!                   ps = sim/PROJECT_STATUS.md (section no.)
+!                   MEASURED = off the engine, a measured drawing, or a factory dimension
+!                   DERIVED  = arithmetic on measured values, worked in RX135_CASE_NOTES.md
+!                   CAL      = calibration constant the model needs, adopted from Blair
+!                   ASSUMED  = no measurement exists; value carries a stated assumption
+!                   NOT AVAILABLE = no defensible value; see RX135_CASE_NOTES.md s5
+!
+! THIS DECK IS NOT DIRECTLY RUNNABLE.  7 entries are NOT AVAILABLE and are
+! marked as such rather than filled with an invented number.  The inlet block
+! (IPO IPFO WIP RTI RBI) has no physical counterpart on a reed-valve engine and
+! Prog.5.1 contains no reed model; LTP and LIP were never measured.  Loading the
+! deck stops at the first of them with "is not a number" - that is the correct
+! response, not a defect.
+!
+! A substitute PROXY BLOCK that makes the deck run is at the END of this file,
+! commented out, and documented in RX135_CASE_NOTES.md s8.
+! =====================================================================
+58.0    ! BO   ! mm        ! MEASURED  md3 [F] factory 58.0 x 50.0, datum of the port map
+50.0    ! ST   ! mm        ! MEASURED  md3 [F] factory
+98.0    ! CRL  ! mm        ! ASSUMED   md3 [X] community consensus only, in no manual, never measured
+7500    ! RPM  ! rev/min   ! MEASURED  md11 [F] rated-power speed; run point, not a build dimension
+5.91    ! TCR  ! -         ! DERIVED   (14.517 + 26.42cm2 x 27.0mm) / 14.517; Vc = 14.52 cc from CR 10.1
+1.343   ! CCR  ! -         ! ASSUMED   1 + 132.10 / 385 cc; Vcc never measured (ps7 #6, md12 [A])
+470     ! TEXC ! degC      ! CAL       ps9 (530 -> 470 C); md8 [A]; book 400-650; 6.3 bar guide in VERIFICATION 2.4
+87.17   ! EPO  ! deg ATDC  ! DERIVED   exhaust top 27.0 mm below TDC -> opens 92.83 BBDC, 185.66 deg
+180     ! EPFO ! deg ATDC  ! DERIVED   exhaust floor on BDC (port map) -> fully open at BDC
+1       ! NEP  ! count     ! MEASURED  md5.1 single exhaust port, map confirmed on the barrel (ps5)
+39.0    ! WEP  ! mm        ! MEASURED  md5.1 map width 39.0; flow is wall-normal so cos = 1.000
+8.0     ! RTE  ! mm        ! ASSUMED   md5.4 corner radius NOT dimensioned; 8 mm back-solved to 842 mm2
+8.0     ! RBE  ! mm        ! ASSUMED   md5.4 same, not an independent measurement
+114.37  ! TPO  ! deg ATDC  ! DERIVED   transfer tops 38.0 mm below TDC -> open 65.63 BBDC, 131.25 deg
+180     ! TPFO ! deg ATDC  ! DERIVED   all five floors at BDC except the boost port (never fully open)
+5       ! NTP  ! count     ! MEASURED  md5.1 five windows 25/19/25/19/25, map confirmed (ps5)
+19.9    ! WTP  ! mm        ! DERIVED   sum(W.cos U)/5, Blair s3.5.4 upsweep bands; NOT the 22.6 arc mean
+4.0     ! RTT  ! mm        ! ASSUMED   md5.4 corner radius NOT dimensioned; 4 mm back-solved to 1362 mm2
+4.0     ! RBT  ! mm        ! ASSUMED   md5.4 same, not an independent measurement
+SCRE    ! SCAV$ ! -        ! CAL       selector, not a measurement: loop + boost port, see notes s6
+60.0    ! IPO  ! deg BTDC ! PROXY  QUB400 inlet timing; NO reed model in Prog.5.1
+0.0     ! IPFO ! deg ATDC ! PROXY  fully open at TDC, as QUB400
+1       ! NIP  ! count     ! ASSUMED   lumped single equivalent aperture for the 600 mm2 reed seat
+40.2    ! WIP  ! mm        ! PROXY  600 mm2 assumed reed seat / 14.92 mm effective height
+0.0     ! RTI  ! mm        ! PROXY  rectangular cage aperture assumed
+0.0     ! RBI  ! mm        ! PROXY  rectangular cage aperture assumed
+390     ! LEP1 ! mm        ! MEASURED  ps4 header 390 mm long, 46 mm ID (4-speed stock pipe)
+46.0    ! DEP1 ! mm        ! MEASURED  ps4 header 46 mm ID (50 mm OD)
+420     ! LEP2 ! mm        ! MEASURED  ps4 perforated core 35 mm x 420 mm, used as the 5.1 outlet pipe
+31.7    ! DEP2 ! mm        ! DERIVED   equivalent diameter of 787 mm2 (35 mm bore minus a 5 mm bridge)
+5332    ! VBOX ! cm3       ! DERIVED   5980 total measured - 648 header = cone 989 + can 4343 cm3
+ABSORPTION ! SIL$ ! -     ! MEASURED  ps4 perforated core, packed annulus, five baffle chambers
+46.0    ! LTP  ! mm        ! PROXY  90.8 mm reference depth - 44.8 mm window centre
+1.35    ! TRAR ! -         ! CAL       md5.1.2 book range 1.2-1.5; QUB 400 reference 1.35
+90.0    ! LIP  ! mm        ! PROXY  cage ~40 + manifold ~50 mm, unmeasured
+22.0    ! DIP  ! mm        ! MEASURED  md6 [F] VM22 venturi (this build uses the 4-speed carb, ps2)
+1.0     ! THAR ! -         ! CAL       load control: full throttle (book 1.0 full / 0.25 quarter)
+1.25    ! NC   ! -         ! CAL       Blair s4.3.1 recommendation, identical for all four engines
+1.35    ! NE   ! -         ! CAL       Blair s4.3.1 recommendation, identical for all four engines
+0.85    ! BEFF ! -         ! CAL       QUB 400 value - the only box-silencer fit in the book
+60.0    ! BDEG ! deg       ! CAL       QUB 400 value (book range 50-60); 60 deg at 7500 rpm = 1.33 ms
+12.5    ! TAF  ! -         ! CAL       md9 [A] AFR target ~12.5 at WOT, never measured on this build
+!
+! =====================================================================
+! PROXY BLOCK - substitute these seven lines for the NOT AVAILABLE entries ONLY
+! to obtain a runnable deck.  Every one is a placeholder, not data: the inlet
+! timing is the book's own QUB 400 piston-port timing used as the nearest
+! documented stand-in for a reed's open period, its width is scaled to the
+! 600 mm2 reed seat assumed in ps3, LTP is the factory drawing's 90.8 mm
+! reference depth minus the 44.8 mm window centre, and LIP is a bare estimate
+! of cage + manifold.  Documented in RX135_CASE_NOTES.md s8.
+! To activate: delete the leading "! " and the current NOT AVAILABLE line.
+! ---------------------------------------------------------------------
+! 60.0  ! IPO  ! deg BTDC  ! PROXY  QUB 400 inlet timing, no reed model in 5.1
+! 0.0   ! IPFO ! deg ATDC  ! PROXY  fully open at TDC, as QUB 400
+! 40.2  ! WIP  ! mm        ! PROXY  600 mm2 seat / 14.92 mm effective height
+! 0.0   ! RTI  ! mm        ! PROXY  rectangular cage aperture assumed
+! 0.0   ! RBI  ! mm        ! PROXY  rectangular cage aperture assumed
+! 46.0  ! LTP  ! mm        ! PROXY  90.8 mm reference depth - 44.8 mm window centre
+! 90.0  ! LIP  ! mm        ! PROXY  cage ~40 + manifold ~50, roughly 90 mm, unmeasured
+! =====================================================================
+

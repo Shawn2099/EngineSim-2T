@@ -1,0 +1,7 @@
+param,base,low,high,dPower_low_pct,dPower_high_pct
+exhaust_open_deg,190,170,210,-0.966183574879243,-0.0644122383252941
+transfer_open_deg,125,110,140,2.60869565217387,-2.60869565217393
+compression_ratio,10.1,9,11.5,-2.03703703703706,2.59259259259259
+squish_vol_cc,NaN,1,6,0,0
+main_jet,135,125,145,-1.57480314960631,1.62601626016257
+ignition_timing_deg,NaN,12,22,0,0

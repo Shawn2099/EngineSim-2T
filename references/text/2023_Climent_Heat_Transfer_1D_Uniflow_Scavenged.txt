@@ -1,0 +1,1306 @@
+TITLE: In-Cylinder Heat Transfer Model Proposal Compatible with 1D Simulations in Uniflow Scavenged Engines
+YEAR: 2023
+FILE: 2023_Climent_Heat_Transfer_1D_Uniflow_Scavenged.pdf
+PAGES: 20
+EXTRACTED_WITH: PyMuPDF PyMuPDF 1.28.2
+
+
+===== page 1 =====
+
+Citation: Climent, H.; Tiseira, A.;
+Gomez-Soriano, J.; Darbhamalla, A.
+In-Cylinder Heat Transfer Model
+Proposal Compatible with 1D
+Simulations in Uniﬂow Scavenged
+Engines. Appl. Sci. 2023, 13, 3996.
+https://doi.org/10.3390/
+app13063996
+Academic Editor: Adrian Irimescu
+Received: 7 March 2023
+Revised: 16 March 2023
+Accepted: 17 March 2023
+Published: 21 March 2023
+Copyright:
+© 2023 by the authors.
+Licensee MDPI, Basel, Switzerland.
+This article is an open access article
+distributed
+under
+the
+terms
+and
+conditions of the Creative Commons
+Attribution (CC BY) license (https://
+creativecommons.org/licenses/by/
+4.0/).
+applied  
+sciences
+Article
+In-Cylinder Heat Transfer Model Proposal Compatible with 1D
+Simulations in Uniﬂow Scavenged Engines
+Héctor Climent
+, Andrés Tiseira, Josep Gomez-Soriano
+and Aditya Darbhamalla *
+CMT Motores Térmicos, Universitat Politècnica de València, Camino de Vera s/n, 46022 Valencia, Spain
+* Correspondence: adarbha@mot.upv.es; Tel.: +34-96-387-76-50
+Abstract: Advanced two-stroke engines are considered as powertrains for range extenders in hybrid
+electric vehicles due to size, simplicity, cost, and power density advantages. In-cylinder heat transfer
+is a phenomenon that affects the temperature of burnt gases and fresh air in an internal combustion
+engine. Compared to four-stroke units, this inﬂuence is more critical in two-stroke engines during
+the scavenging process since the gases velocity ﬁeld inside the cylinder evolves rapidly in space
+and time. This study proposes a new convective heat transfer coefﬁcient model beyond those based
+on Reynolds number calculation with the mean piston velocity. The model uses semi-empirical
+equations with non-dimensional numbers since it has to be integrated within the frame of a physical
+engine model, where thermo- and ﬂuid dynamic properties of the gases inside the engine are solved
+using 0D or 1D approaches. In this particular application, the temperature deviation led to a poor
+prediction of trapped mass in the cylinder. The proposed convective heat transfer coefﬁcient is
+calculated using a pseudo-velocity of the gases inside the cylinder based on the mass ﬂow rates in
+the intake and exhaust ports during scavenging. The experimental results validate the 1D engine
+physical model, which is then used as initial conditions for CFD simulations. These CFD results are
+used to deduce the necessary conclusions for enhanced temperature predictability during scavenging,
+where deviations of less than 2% can be observed and an impact of up to 12% on the in-cylinder
+trapped mass can be seen.
+Keywords: heat transfer; two-stroke powertrains; range extender; scavenging
+1. Introduction
+Automotive engineering is moving towards sustainable mobility to reduce the emis-
+sion of greenhouse gases. This change in emissions regulation has led to the development
+of new engine designs and concepts. Extensive research is being conducted in two-stroke
+and four-stroke engines for improvements to produce electricity and for sustainable mo-
+bility. The working ﬂuid used in these novel engines is either diesel, gasoline, advanced
+fuels, or a combination of fuels, as depicted by García-Oliver et al. [1]. One such engine
+is assessed for novel piston movement, like a rocker arm, called a crank rocker engine,
+where the combustion chamber and piston have a curvature as depicted in [2] and produce
+the necessary high power density output. Serrano et al. [3] assessed a rodless concept of
+a two-stroke engine to meet future emission standards requirements. Mikalsen et al. [4]
+have presented a new type of turbocharged free-piston engine with diesel as the working
+fuel and, and results have shown a reduction in the production of nitrogen oxides. A
+comparative study on free-piston engines performed with both two-stroke and four-stroke
+engines is presented in [5], showing results on the advantages and disadvantages of the per-
+formance of the engine type. Mikalsen et al. [6] have reviewed different types of free-piston
+engines and their applications and evaluated the potential of the free piston for its most
+promising design. Mikalsen et al. [7] performed CFD analysis on free-piston engines and
+compared the results with conventional engines, revealing the free-piston engine’s potential.
+Herold et al. [8] presented a three-cylinder opposed-piston conﬁguration in two-stroke
+Appl. Sci. 2023, 13, 3996. https://doi.org/10.3390/app13063996
+https://www.mdpi.com/journal/applsci
+
+
+===== page 2 =====
+
+Appl. Sci. 2023, 13, 3996
+2 of 20
+and four-stroke setups and compared the results with a heavy-duty engine. Results show
+that the two-stroke engine conﬁguration leads to approximately 9% lower brake-speciﬁc
+fuel consumption. Furthermore, electric vehicles are being extensively studied for battery
+thermal management. Buidin et al. [9] studied the effect of a higher heat transfer coefﬁcient
+for accurate prediction of battery performance.
+The primary research focus of the two-stroke engine is to attain higher scavenging and
+improve the engine’s performance. To attain higher scavenging, Wang et al. [9] optimized
+several parameters such as bore-stroke ratio, intake scavenging ports, and intake design,
+and have proven improved brake thermal efﬁciency using CFD analysis. A hybrid air
+operation assessment was performed for the same engine conﬁguration to attain higher
+scavenging efﬁciency [10]. Once the engine parameters were optimized, the same research
+group assessed the engine with a turbocharger and presented results with enhanced brake
+power and torque [11]. The same scientist has also evaluated the effect of piston-shape
+design for enhanced scavenging and lower fuel consumption [12]. Benson et al. [13]
+have quantitively assessed a mixing displacement method to improve scavenging, thereby
+improving charging efﬁciency in a two-stroke engine. Research is not only limited to down-
+sized engines; marine engines are also tested for higher performance. Sakellaridis et al. [14]
+analyzed a marine two-stroke engine with a turbocharger and presented improved engine
+performance. Other researchers have also studied the effect of ignition timing for higher
+performance and lower emission in an SI two-stroke engine [15]. A three-phase scavenging
+model in a marine engine was studied using 2D CFD, and results are presented in [16].
+Zhu et al. [17] studied different air control methods to assess a marine two-stroke engine
+for enhancement in scavenging. Kim et al. [18] studied a marine engine’s spray angle and
+injection position for optimum engine performance for low emissions.
+Although the determination of improved scavenging is measured in terms of enhanced
+engine performance, only a few researchers have studied how to estimate the trapped mass
+inside the cylinder. This estimation technique uses in-cylinder pressure traces to determine
+the trapped mass, as depicted by Bares et al. [19]. Carlucci et al. [20] have presented an
+inexpensive way to predict trapped mass by considering the molar concentration of CO2
+and oxygen in the tailpipe. Leo et al. [21] proposed a technique in which experimental
+in-cylinder traces were used to calculate the trapped mass; their predictive methodology
+also depicts the air-to-fuel ratio. Using air mass ﬂow and lambda sensors, Arsie et al. [22]
+predicted the trapped mass and air-to-fuel ratio and compared the results with the in-
+cylinder pressure method, and stated a high accuracy of predictability.
+Advanced two-stroke engines are being studied for their potential to lower emissions
+for sustainable mobility. This can be attributed to the compactness of the engine, which
+can be heavily downsized, and have fewer emissions due to their design and operating
+range. Extensive literature is available with results for the initialization of the free piston
+to control pollutants. These assessments mainly focus on simulation, where the engine
+models are calibrated using the respective engine prototype’s experimental results. For the
+control of a free piston, a fast response dynamic model is presented by Jia et al. [23]. The
+above simpliﬁed model has shown advantages in extensive studies as it could be coupled
+to any computing software and real-time hardware in the loop. The same research group
+in [24] presented sub-models for the process of starting a free-piston engine generator
+along with steady-state operation, considering heat transfer correlations and air leaks,
+and used the model to study various starting motor forces and combustion processes.
+Jia et al. [25] have presented results with resonance-based actuation of free-piston engines
+and have shown improved model prediction of experimental results while comparing
+the results with dynamic modeling. Cha et al. [26] have studied the effect of in-cylinder
+thermodynamics due to combustion and presented critical observations for isentropic
+expansion and kinetic energy recovery. Jia et al. [27] proposed a new cascade model
+to control the free piston and have shown improved peak prediction and settling time.
+Li et al. [28] have assessed a feedforward controller for tracking performance and compared
+the results with experimental data to demonstrate the effectiveness of the feedforward
+
+
+===== page 3 =====
+
+Appl. Sci. 2023, 13, 3996
+3 of 20
+control. Feng et al. [29] have implemented a switching strategy between motor/generator
+power to start the free-piston engine to a steady state. Dizo et al. [30] studied a prototype
+engine with rotating cylinders powered by compressed air and depicted the disadvantages
+of such engines over conventional combustion engines. Kim et al. [31] have assessed
+the combustion effect on a free-piston engine for high performance. Kim et al. [31] and
+Mikalsen et al. have implemented precision piston control using PID [32] and PDF [33]
+(Pseudo Derivative Feedback) controllers, respectively, to control the engine speed and
+studied the cycle-to-cycle variation in the combustion process. Studies on the effect of
+varying engine stroke length and compression ratio found fewer advantages in free-piston
+engine performance [34].
+Another aspect of engine model improvement could be the effect of the heat transfer
+coefﬁcient, although, arguably, the existing heat transfer correlations are the only viable
+solution for automotive four-stroke engines, but not for the upcoming two-stroke engine.
+Dabbaghi et al. [2] studied the effect of different heat transfer correlations to predict the
+in-cylinder pressure and temperature. They concluded that Anand and Hohenberg’s heat
+transfer correlation has better predictions than Woschni and Sitkei’s heat transfer correction
+in their engine conﬁguration. A new heat transfer model accounting for tumble motion
+was predicted in a two-stroke HSDI diesel engine and the results were compared with
+the Woschni model to conﬁrm improvements of up to 70% in RMSE, as depicted in [35].
+Hou et al. [36] have studied the effect of heat transfer on the ideal air standard cycle by
+considering the heat loss during the cycle of a real engine and have shown improved
+engine performance over a diesel engine. In the engine simulation, a highly accurate heat
+transfer coefﬁcient must be used in the exhaust system to predict engine performance. This
+led to a proposal of a new heat model by considering the turbulence decay and velocity
+ﬂuctuations, and results on enhanced predictions in engine performance are presented
+in [37]. A two-zone combustion model for an SI engine’s heat transfer correlations is
+evaluated by Lounici et al. [38], considering heat loss to the chamber and heat exchange
+during knocking for better predictability. A multi-zone thermodynamic model for SI
+engine model prediction is assessed by considering ﬂame wrinkling, ﬂame development,
+geometry, and heat transfer for accurately modeling the engine combustion process [39].
+The same has been reassessed by Illán et al. [40], who have shown CFD comparisons for
+high accuracy. Descieux et al. [41] have performed studies for thermodynamic performance
+improvement of a diesel engine, considering heat transfer and friction loss, and showed
+power and efﬁciency improvement. Using heat release of combustion data, a calibrated
+heat transfer correlation has been assessed by Guezennec et al. [42] for enhanced model
+prediction. The effects of heat transfer are studied not only on combustion engines, but
+also on sustainable mobilities such as battery electric vehicles. A numerical review of
+lithium-ion batteries is presented in [43], studying the effects of heat transfer for thermal
+runaway. The effect of heat transfer in a Stirling engine is studied for waste heat energy
+recovery by Catapano et al. [44]. Reliable conjugate heat transfer methodology to reduce
+the effect of engine heat losses is depicted in [45]. To reduce the heat transfer losses and
+increase thermal efﬁciency, an in-cylinder thermal barrier coating technique is studied by
+Yan et al. [46].
+The novelty of this work lies in evaluating the effect of the heat transfer coefﬁcient
+during scavenging to predict the in-cylinder temperature and trapped mass in an advanced
+two-stroke powertrain. This evaluation assesses state-of-the-art heat transfer correlations
+and a proposed heat transfer coefﬁcient. The proposed heat transfer correlation uses
+mass ﬂow in the intake and exhaust ports to calculate the necessary convective coefﬁcient
+during scavenging, and eliminates the usage of the mean piston velocity for calculating
+the convective heat transfer coefﬁcient. The methodology followed in developing the
+proposed heat transfer model is yet to considered in any previous state-of-the-art heat
+transfer correlations. All the convective models are developed in a 1D engine model,
+and results for the evaluation are compared with CFD simulation results. Firstly, taking
+advantage of the experimental campaign, the 1D model is validated for ﬂuid-dynamic
+
+
+===== page 4 =====
+
+Appl. Sci. 2023, 13, 3996
+4 of 20
+performance. Results from the validated 1D model are then used as initial and boundary
+conditions for CFD simulation. Finally, the proposed heat transfer correlation results are
+evaluated for potential impact during scavenging. A detailed description of the procedure
+followed to capture the experimental results is provided in Section 2 of this manuscript.
+The same section shows the information on the model developed in 1D mode, validation
+of the 1D model, and CFD setup. Section 3 presents the method followed in developing
+the state-of-the-art and proposed heat transfer models. Results comparing different heat
+transfer models are presented and discussed in Section 4. Finally, the conclusions showing
+the primary outcomes of this study are outlined.
+2. Materials
+2.1. Experimental Setup
+A prototype two-stroke advanced engine is used in this study. This engine has a
+notably different intake port mechanism, as depicted in Figure 1. As can be observed from
+Figure 1, the fresh intake charge takes place from a reed valve into an air pump and through
+the intake ports placed on the rod. The intake ports are a series of slots opening into the
+combustion chamber. Furthermore, the exhaust ports open perpendicular to the intake
+ports, making the ﬂuid ﬂow as an opposed scavenging engine. Both air pump displacement
+and port opening are a function of the piston position. A detailed description of the control
+of the engine is described in the 1D modeling subsection.
+ 
+Figure 1. Schematic layout of the engine and working principle.
+Several sensors capture the necessary data to assess the ﬂow properties inside the
+engine. This information includes instantaneous pressure readings in the air pump, com-
+bustion chamber, and exhaust manifold. Instantaneous volume readings in the air pump,
+combustion chamber, and piston position are also captured. Moreover, cycled average
+intake air mass ﬂow rate readings, injected fuel, throttle position, and engine speed are
+also captured. Other information, such as torque, power, oil temperatures, and parameters
+used to assess the engine performance, is also gathered. Engine tests are conducted at 2000,
+2250, and 2500 rpm at full load, and partial load only at 2000 rpm. These tests also include
+different exhaust systems, as shown in Table 1.
+
+
+===== page 5 =====
+
+Appl. Sci. 2023, 13, 3996
+5 of 20
+Table 1. Exhaust manifold conﬁguration at different speeds and load conditions.
+Exhaust Layout
+Pipe Details (mm)
+Speed (rpm)
+Load
+Conﬁg 1
+1.
+Exhaust manifold with tapered tailpipe
+2.
+Long Pipe−1 (380 × 33.5)
+3.
+Silencer (180 × 35)
+4.
+Long Pipe−2 (650 × 33.5)
+2500
+Full Load
+2250
+Full Load
+Conﬁg 2
+1.
+Exhaust manifold with tapered tailpipe
+2.
+Long Pipe−1 (274.5 × 35)
+3.
+Silencer (280 × 109)−2 units
+4.
+“U” Pipe (213 × 35)
+5.
+Long Pipe−2 (385 × 35)
+2000
+Full Load
+Partial Load
+2.2. 1D Modelling
+The model used for the application is developed using Virtual Engine Model (VE-
+MOD) [47], internal software developed at CMT-Motores Térmicos, for visualizing the
+engine performance. The software groups elements as 0D or 1D elements depending on the
+spatial dimensions. In 0D elements, all the properties inside the element are constant, while
+in 1D elements, thermoﬂuid dynamic properties vary with the length of the element. These
+1D elements are used as intake and exhaust lines, and when the length-to-diameter ratio is
+high enough, the ﬂow inside the element is fully developed. So, the most important axis for
+the ﬂow movement is the X-axis—signiﬁcantly reducing the calculation time, as the Y and
+Z axes are not relevant. This led to the proposal of a hyperbolic system of partial differential
+equations of simpliﬁed 1D Euler equations for unsteady compressible non-homentropic
+ﬂow [47]. The software is assessed for several engine models, and results are compared
+with experimental data to validate the model. The results for its accurate prediction can
+be observed in [48]. The engine model, in addition to the pipes, also includes connections,
+valves, cylinders, and plenums. These elements are used for modeling the novel engine
+with a 0D–1D approach. The developed model uses design data for its geometry and
+experimental results to validate engine performance, as will be described in the model
+validation sub-section.
+Figure 1 gives information on the major details of the engine. The major parts are the
+reed valve, air pump, exhaust, intake ports, and main engine block consisting of a piston
+and combustion chamber. The engine block developed in the model assessment uses an
+opposed two-stroke engine, whose cylinder is considered as a 0D element. The piston
+position is set by comparing the volume of the combustion chamber with experimental
+results. Each major element is controlled by a sub-model considering the piston position.
+These include the air pump volume, and the opening and closing of intake and exhaust
+ports. Several sensors capture necessary information on mass ﬂow rate, volume, pressure,
+and temperature inside the cylinder and pipes. The information gathered is then used to
+develop the sub-systems for control of piston position, air pump volume, port openings
+and closings, and reed valve petal opening. The modeling details of the sub-systems are
+as follows. A discharge coefﬁcient is used for the intake and exhaust port openings and
+closings, and is a function of the piston position. The discharge coefﬁcient of the ports is
+calibrated to attain the instantaneous mass ﬂow rates obtained in the CFD simulations.
+From Figure 1, it can be seen that the volume of the air pump changes with the piston
+position. For this reason, the air pump is modeled as a variable volume. The reed valve
+petal is assumed to be a punctual mass concentrated in the petal tip. The lift follows the
+classical mass-spring-damper model, where the external force depends on the pressure
+difference upstream and downstream of the valve. The force balance equation is used to
+deduce the tip lift given by:
+F = m
+..x −b
+.x −kx,
+(1)
+
+
+===== page 6 =====
+
+Appl. Sci. 2023, 13, 3996
+6 of 20
+where x is the petal tip lift, k is the spring constant, m is the petal mass, b is the damper
+coefﬁcient, and F is the external force calculated with:
+F = (pair pump −pupreed).APetal,
+(2)
+where APetal is the area of the petal, pair pump is the pressure downstream of the reed valve,
+and pupreed is the pressure upstream of the reed valve. Once the petal lift is obtained, a
+discharge coefﬁcient is calculated and used in the next simulation time.
+2.3. Model Validation
+Figure 2 depicts the information related to the 1D modeling results compared to
+experimental data. In Figure 2, the plot’s title gives the information on the engine speed
+in rpm, load condition—Full Load (FL)/Partial Load (PL)—and the last digit 1 or 2 is
+the exhaust conﬁguration, which is either conﬁg-1 or conﬁg-2, respectively. The results
+plotted in Figure 2A–D are the instantaneous pressure traces in the exhaust manifold, while
+Figure 2E–H depict pressure traces inside the cylinder during the scavenging process. The
+results only illustrate the information while the exhaust ports are open because the gas
+exchange occurs during this process and deﬁnes the trapped mass in the cylinder for the
+next engine cycle.
+ 
+Figure 2. Comparison between experimental and 1D modeling results: CAD vs. (A–D) Exhaust
+pressure; (E–H) In-cylinder pressure.
+Firstly, from Figure 2E–H, it can be observed that the exhaust port opening occurs at
+130 CAD. The results depicted before the exhaust port opening is the expansion process,
+where it can be observed that the modeling results follow experimental results closely.
+Also, it can be observed that the port closing occurs approximately at 255 CAD and the
+process after this CAD is the compression stroke. During this process, it can be seen
+that the 1D model accurately predicts the compression stroke’s pressure compared to
+experimental results. The process between CAD 130 and 255 is the scavenging process,
+where the modeling pressure traces follow the experimental measurements with an absolute
+
+
+===== page 7 =====
+
+Appl. Sci. 2023, 13, 3996
+7 of 20
+maximum deviation of less than 2%. Observing the results, it can be justiﬁed that modeling
+strategies employed in developing this novel engine provide accurate results during the
+expansion, scavenging, and compression strokes in the combustion chamber.
+Secondly, as mentioned earlier, during the experimental campaign, different exhaust
+manifolds were employed and tested at both full load and partial load conditions; this has also
+been accounted for during the modeling stage. To achieve coherence between experimental
+results and the 1D model predictions, heat transfer and friction multipliers in the exhaust
+manifold were calibrated. Once a peak deviation of less than 2% was accomplished, these
+multipliers were held constant, and simulations were analyzed with different engine speeds
+and load conditions. Figure 2A–D shows that the model is calibrated to predict experimental
+peaks and trends accurately. Figure 2 justifies that the model provides fluid dynamically
+stable results to a satisfactory level and can be used for further perspective analysis, and that
+the results can be used as initial and boundary conditions for CFD.
+2.4. 3D CFD Model
+A commercial Computational Fluid Dynamics (CFD) code, CONVERGE v.2.4.33 [49],
+was used to implement the numerical model of the cylinder. A summary of the main
+features of the numerical model is shown in Table 2. The most relevant physical models,
+numerical schemes, and mesh details are presented here. The basis of the model has been
+widely described in previous investigations [50].
+Table 2. CFD model setup.
+Mesh Details
+Base size
+4 mm
+Cell size intake/exhaust ports
+2 mm
+Combustion chamber size
+1 mm
+Walls reﬁnement
+0.5 mm
+Minimum cell size by AMR
+0.25 mm
+Numerical schemes
+Spatial discretization
+The second-order central difference scheme
+Temporal discretization
+The ﬁrst-order central difference scheme
+Momentum equation correction
+PISO algorithm [51]
+Physical models
+Turbulence
+URANS RNG k-e [52]
+Heat transfer
+O’Rourke and Amsden [53]
+The computational domain obtained from the sketch of Figure 1 was meshed using
+a modiﬁed cut-cell Cartesian method directly in runtime. The base grid mesh (4 mm)
+was reduced in those regions where ﬂow features have higher complexity. For instance,
+intake/exhaust ports were reﬁned to 2 mm in cell size. Moreover, an adaptive mesh
+reﬁnement (AMR) strategy was considered to increase the grid resolution in those regions
+where the sub-grid ﬁeld is more prominent. The AMR cell size decreases to 0.25 mm when
+the sub-grid scale of velocity exceeds 1 m/s. A second-order central difference scheme
+was considered for spatial discretization, and a ﬁrst-order scheme was considered for
+temporal discretization. The pressure-velocity coupling was solved by a modiﬁed Pressure
+Implicit with a Splitting of Operators (PISO) algorithm [54]. The in-cylinder turbulence
+was modeled in the frame of unsteady Reynolds-averaged Navier–Stokes (URANS) with
+the eddy-viscosity-based two-equation turbulence model (RNG k-ε model), used widely in
+ICE applications [53].
+Regarding the boundary conditions, the piston, liner, and cylinder head wall tempera-
+tures were estimated from the experiments by a lumped thermal model. All instantaneous
+
+
+===== page 8 =====
+
+Appl. Sci. 2023, 13, 3996
+8 of 20
+signals at the intake/exhaust manifolds were obtained from the 1D model described in
+the previous section and provided as inﬂow/outﬂow boundary conditions. The wall heat
+transfer was estimated by the O’Rourke and Amsden model [55]. This approach is suitable
+for those simulations in which the turbulent boundary layer resolution is insufﬁcient (i.e., in
+ICE simulations where the viscous sub-layer is not strictly resolved). The model calculates
+the wall heat-transfer from
+K ∂T
+∂xi
+=
+µmcpF
+
+Tf −Tw
+
+Prmy
+ni,
+(3)
+F =
+
+
+
+
+
+1.0 y′ < 11.05
+
+y′Prm
+Prt
+
+1
+k ln(y′)+B+11.05
+
+Prm
+Prt −1
+ y′ > 11.05,
+(4)
+y′ = ρuτy
+µm
+,
+(5)
+where k is the molecular conductivity, Prm is the molecular Prandtl number, Prt is the
+turbulent Prandtl number, Tf is the ﬂuid temperature, Tw is the temperature of the wall, uτ
+is the shear speed, k is the Von Karman constant (0.4187), and B is a constant that depends
+on the turbulence model.
+The convective heat transfer in ﬂuid during scavenging is calculated using the above
+model to predict the heat transfer coefﬁcient. This heat transfer coefﬁcient will be used in
+subsequent studies.
+3. Methods
+Of the total energy produced, heat transfer represents a major energy loss that is
+passed to the engine coolant. Of the total heat transfer energy, more than 50% comes from
+in-cylinder and the rest mostly from exhaust ports. Two types of heat transfer occur in the
+conventional SI and CI engine: one due to convection and the other due to radiation. Most
+heat transfer in SI engines depends on convection, while the heat transfer due to radiation
+is limited to a maximum of 20%. On the contrary, in CI engines, most heat transfer is due to
+radiation; studies have shown that the radiative heat transfer for CI engines can reach up to
+40% [49]. A most general heat transfer correlation considering the convective heat transfer
+correlation is given in Equation (6), where hg is the convective heat transfer coefﬁcient, A is
+the area exposed, which is the combustion chamber surface, and Tg and TW are the gas and
+wall temperature, respectively:
+.
+Q = hgA
+ Tg −Tw
+
+.
+(6)
+Nevertheless, over the years, as mentioned earlier, several researchers have investigated
+different heat transfer correlations. The correlations investigated used the mean piston
+velocity to calculate the instantaneous heat transfer coefficient for CI engines and were also
+usable for SI engines. Convection models used for this assessment are described below.
+3.1. Woschni Correlation
+Woschni correlation is the most commonly applied heat transfer relation for both
+diesel and SI engines, and the expression is given in Equation (7) [56]:
+hg = aC0B−0.2p0.8w0.8T−0.53,
+(7)
+where B demotes the cylinder bore, p and T are the instantaneous pressure and temperature
+in the cylinder, respectively, and a is the correction multiplier. The constant C0 is in the
+range of 110–130. From Equation (7), it can be deduced that the heat transfer coefﬁcient
+
+
+===== page 9 =====
+
+Appl. Sci. 2023, 13, 3996
+9 of 20
+will behave similarly to the in-cylinder pressure evolution, with some adjustments given
+by the other parameters. Furthermore, w is the Woschni correlation given by Equation (8):
+w(θ) = C1Up + C2
+VdTr
+prVr (p(θ) −pm),
+(8)
+where Up is the mean piston velocity, Vr is the reference volume, and pr and Tr are the
+reference pressure and temperature. The pressure, temperature, and volume can be con-
+sidered at the start of combustion or when the inlet valve closing occurs. Finally, p is the
+instantaneous pressure inside the cylinder with respect to the crank angle (θ), and pm is a
+function of reference pressure and instantaneous in-cylinder volume given by:
+pm=pr
+Vr
+V
+n
+.
+(9)
+The constants C1 and C2 depend on the piston phase, and Table 3 provides information
+on the calibrated values for these constants.
+Table 3. Woschni correlation constants.
+Phase
+C1[-]
+C2[ m
+sK]
+Intake
+6.18
+0
+Compression
+2.28
+0
+Combustion
+2.28
+3.24 × 10−3
+Expansion
+2.28
+3.24 × 10−3
+Exhaust
+6.18
+0
+3.2. Hohenberg’s Correlation
+Woschni correlation provides a higher averaged heat transfer coefﬁcient during the
+cycle due to his approximation. Hohenberg found ﬂaws in the results from the Woschni
+correlation, and created a new correlation for calculating instantaneous heat transfer by
+using Equation (10):
+hg = C1Vc−0.06p0.8T−0.4 C2 + Up
+
+,
+(10)
+where Vc is the cylinder volume, and p and T are the respective pressure and temperature
+in the combustion chamber. The constants for C1 and C2 obtained by Hohenberg were
+precisely measured for diesel engines by heat balance, heat flux, and combustion chamber
+temperatures. The values are kept constant at 130 and 1.4, respectively. He has demonstrated
+that his correlation could predict temperatures with an accuracy of 10% marginal error [57].
+3.3. Anand Correlation
+Anand predicted the instantaneous heat transfer coefﬁcient using Nusselt and Reynolds
+non-dimensional numbers [58]. His correlation considers both convection and radiative
+heat transfer coefﬁcients. As for this engine application, radiative heat transfer is not used.
+Therefore, the correlation only considers the convective heat transfer coefﬁcient and is
+given in Equation (11):
+hg = dkgasRe0.7
+B
+,
+(11)
+where Re is the Reynolds number, B is the bore diameter, and kgas is the thermal conductivity
+of the gas, which can be deduced from experimental polynomial curve ﬁtting using the
+working temperature of the ﬂuid. The coefﬁcient d is the correction coefﬁcient given by
+Anand using Sieder-Tate given in Equation (12) [59]:
+d = 0.023Pr0.4,
+(12)
+
+
+===== page 10 =====
+
+Appl. Sci. 2023, 13, 3996
+10 of 20
+where Pr is the Prandtl number. Furthermore, the ﬂow velocity used in the Reynolds
+number calculation is the mean piston velocity.
+The correlations mentioned above are established based on four-stroke diesel engine
+experiments. Due to the differences in the combustion principles between SI and CI engines,
+practically, these models cannot provide a viable solution but can be considered for SI
+engines as well. As mentioned earlier, several researchers have theoretically and practically
+shown that, with minor adjustments, the above correlations can also be used for SI engines.
+3.4. Proposed Heat Transfer Correlation
+The proposed model uses the velocity of the air mass ﬂow calculated using instan-
+taneous mass ﬂows during the intake and exhaust port openings and closings, which
+has yet to be accounted for in any heat transfer model described previously. An average
+pseudo-mass ﬂow rate inside the cylinder is expressed in Equation (13):
+.
+m∗=
+
+.min +
+.mout
+2
+,
+(13)
+where
+.min and
+.mout are the intake and exhaust mass ﬂow rates, respectively. Furthermore,
+by using Equation (14), the pseudo-velocity variable is deﬁned, which is an approximation
+for the averaged velocity ﬁeld inside the cylinder (c∗), which is calculated as:
+c∗=
+.m∗
+A ρ,
+(14)
+In which A is the area of the piston and ρ is the density of the gases calculated using
+the instantaneous pressure and temperature in the cylinder. Using the velocity, the non-
+dimensional Reynolds number (Re) is calculated with:
+Re = Dc∗ρ
+µ
+,
+(15)
+where D is the diameter of the combustion chamber and µ is the ﬂuid’s dynamic viscosity.
+Using the correlation between the Reynolds and Nusselt numbers (Nu), Nu is calculated
+using Equation (16):
+Nu = bRe0.7,
+(16)
+where b is the correction coefﬁcient. It is also known that Nu is a function of the convective
+heat transfer coefﬁcient (hins), a spatial dimension; in this case, the diameter of the com-
+bustion chamber (D) is used, and the thermal gases conductivity (k). The appropriate heat
+transfer coefﬁcient is calculated using this correlation in Equation (17):
+hins = Nu k
+D
+.
+(17)
+Figure 3 depicts information on the convective heat transfer coefﬁcient calculations
+adapted for this engine during scavenging in conjunction with the Woschni heat transfer
+coefﬁcient calculated during combustion. The results plotted in Figure 3A depict mass
+ﬂow rates in the intake and the exhaust ports. Figure 3B depicts the average mass ﬂow
+rate calculated using Equation (13). Using Equations (14)–(17), the convective heat transfer
+coefﬁcient results during scavenging are calculated and plotted using a solid red line,
+as depicted in Figure 3C. In contrast, a solid blue line depicting Woschni’s heat transfer
+coefﬁcient calculated using Equation (7) is plotted in Figure 3C. The actual convective heat
+transfer coefﬁcient actuated in the cylinder is plotted in Figure 3D. A min/max control
+objective is used to actuate the switch between the Woschni heat transfer coefﬁcient during
+combustion and the proposed transfer model during scavenging. From Figure 3C,D, it
+can be observed that the blue investigation window marked as ‘a’ during scavenging is
+initiated at the moment when the exhaust port opens and lasts until the exhaust ports
+
+
+===== page 11 =====
+
+Appl. Sci. 2023, 13, 3996
+11 of 20
+close. In contrast, the Woschni convective coefﬁcients are actuated during the compression,
+combustion, and expansion strokes.
+ 
+Figure 3. (A): Mass ﬂow rate at intake and exhaust pipes, (B): Average mass ﬂow rate, (C): Convective
+heat transfer for proposed and Woschni models, (D): Actual convective heat transfer of overall cycle.
+4. Results and Discussion
+In this study, the simulations are analyzed under three conditions. Firstly, a reliability
+study is performed where heat transfer models are subject to identical initial conditions to CFD
+simulations. By doing such an operation, the robustness of the proposed heat transfer model
+is shown to capture in-cylinder temperature and trapped mass. Secondly, only Woschni and
+the proposed heat transfer models are studied to evaluate the impact on engine performance,
+in which combustion and heat transfer settings are restrained. Finally, a sensitivity analysis
+depicting the impact of the correction coefficients of the correlations is studied.
+4.1. Reliability Assessment of Heat Transfer Models
+As mentioned earlier, the effect of different heat transfer correlations is studied, in-
+cluding Anand, Hohenberg, Woschni, and the proposed heat transfer model developed
+for uniﬂow scavenged two-stroke engines. This study uses the information from the
+experimentally validated model at 2250 rpm with a Conﬁg-1 exhaust manifold. All the
+heat transfer correlations are validated for the same initial conditions at the exhaust port
+opening, as depicted in Figure 4.
+The information in Figure 4 shows that the ﬂuid behavior for all heat transfer correla-
+tions, compared to CFD, is similar. These include the peaks and trends in the intake mass
+ﬂow rate-Figure 4A, exhaust mass ﬂow rate-Figure 4B, pressure in the cylinder-Figure 4C,
+and pressure in the exhaust manifold-Figure 4D during the scavenging process. At the
+same time, comparing results with the 1D model, Figure 4C not only shows the information
+of the 1D model to CFD comparison but also provides the information with experimental
+in-cylinder pressure traces. This validates the 1D model compared to experimental results
+and the CFD simulation predictability of experimental results.
+The study focuses on the effect due to heat transfer in predicting the in-cylinder
+temperature. For such studies, not only are the ﬂuid parameters, such as pressure and
+mass ﬂows in the intake and exhaust, needed for validation, but also the thermal parameter
+needs to be equal. For this reason, the temperature values at the exhaust port opening need
+to be identical to those observed in CFD simulations. This was achieved by calibrating
+the correction coefﬁcient of each correlation. Maintaining identical initial conditions in
+in-cylinder pressure and temperature ensured that the trapped mass at the exhaust port
+opening would be constant. The information on similar thermal boundary conditions and
+trapped mass is provided in Figure 5.
+
+
+===== page 12 =====
+
+Appl. Sci. 2023, 13, 3996
+12 of 20
+ 
+Figure 4. 1D model to CFD comparison for different heat transfer coefﬁcients. (A): Intake mass ﬂow
+rate, (B): Exhaust mass ﬂow rate, (C): In-cylinder pressure during scavenging process, (D): Exhaust
+manifold pressure.
+ 
+Figure 5. 1D model vs. CFD comparison of (A): Heat transfer coefﬁcient (B): Temperature, (C): In-
+cylinder trapped mass, (D): Experimental vs. 1D simulation results comparison for logarithm pressure
+vs. Volume evolution.
+
+
+===== page 13 =====
+
+Appl. Sci. 2023, 13, 3996
+13 of 20
+Figure 5A provides information on the heat transfer coefﬁcient used in this study
+during the scavenging process. A solid black line depicting the instantaneous heat transfer
+coefﬁcient from CFD simulation is depicted in Figure 5A. It can be seen from Figure 5A that
+the methodology followed in developing the proposed heat transfer provides similar peaks
+and follows trends as in CFD simulations during scavenging. On the other hand, the state-
+of-the-art heat transfer correlations fail to provide the necessary heat transfer coefﬁcient
+during the same process. Figure 5B provides the information with temperature traces
+achieved due to the adjusted heat transfer coefﬁcient. Figure 5C depicts the information on
+the trapped mass inside the cylinder during scavenging. Figure 5B,C show CFD results
+plotted with a solid black line, showing the temperature and trapped mass, respectively,
+which are the same as in the 1D model at the opening of the exhaust ports. Figure 5D
+provides information (in logarithmic scales) related to evolution inside the combustion
+chamber for the 1D model and experimental data. Figure 5D results justify that the
+combustion settings used in the modeling stage provide accurate results. Observing the
+trends and patterns from Figures 4 and 5, it can be justiﬁed that comparing different heat
+transfer models is viable as all models have similar behavior.
+On observing the instantaneous temperature traces in the zoomed area ‘a’ in Figure 5B,
+it can be seen that the classical heat transfer correlations based on the Reynolds number
+calculated with the mean piston speed predict higher temperature during scavenging com-
+pared with CFD results. Due to the lack of temperature predictability during scavenging,
+the state-of-the-art correlations also fail to reproduce the trapped mass in the cylinder while
+comparing results with CFD, as shown in Figure 5C when the exhaust ports close (around
+255 CAD). On the other hand, the proposed heat transfer model developed considering the
+pseudo-velocity inside the cylinder accurately captures the temperature and trapped mass
+calculated by CFD. To quantify the results for trapped mass and temperature, readings for
+the same are captured at specific moments and presented in Table 4. The four instances are: at
+the exhaust port opening (130 CAD), intermediate positions (170 and 210 CAD), and finally, at
+the exhaust port closing (255 CAD). Moreover, since Anand, Hohenberg, and Woschni’s heat
+transfer coefficients provide similar outputs, only results from Woschni are used for further
+comparisons. Using Equations (18) and (19), differences in CFD and 1D modeling results are
+provided in Table 4 for in-cylinder trapped mass and temperature, respectively.
+Error(%) =
+CFD −Model
+CFD
+
+× 100,
+(18)
+Error(°C) = CFD −Model.
+(19)
+Table 4. Comparison of CFD vs. 1D modeling results of different correlations at 130, 170, 210, and
+255 CAD for in-cylinder mass and temperature.
+Crank
+Angle [◦]
+Trapped Mass
+[g]
+Temperature
+[◦C]
+CFD
+Proposed
+(Error %)
+Woschni
+(Error %)
+CFD
+Proposed
+(Error ◦C)
+Woschni
+(Error ◦C)
+130
+0.39
+0.39
+(0)
+0.39
+(0)
+1015
+1024
+(−9)
+1000
+(15)
+170
+0.37
+0.38
+(−2.7)
+0.36
+(2.7)
+519
+511
+(7)
+564
+(−46)
+210
+0.65
+0.65
+(0)
+0.60
+(7.69)
+246
+255
+(−9)
+319
+(−73)
+255
+0.48
+0.47
+(2.08)
+0.42
+(12.5)
+201
+226
+(−25)
+285
+(−84)
+
+
+===== page 14 =====
+
+Appl. Sci. 2023, 13, 3996
+14 of 20
+Since the initial conditions at the exhaust port opening for CFD and heat transfer
+models are very similar, no signiﬁcant differences are found in either trapped mass or
+temperature. At 170 CAD, the proposed and Woschni heat transfer correlations show a
+trapped mass of 0.38 and 0.36 g, respectively. These results are almost the same, as CFD
+simulations depict a trapped mass of 0.37 g. Contrarily, the temperature predictions using
+the Woschni correlation show an absolute deviation of 46 ◦C. This deviation in temperature
+is due to the lower convective heat transfer coefﬁcient, which according to the calculation,
+provides 230
+W
+m2K.
+On the other hand, the proposed heat transfer correlation calculation provides a
+convective coefﬁcient of approximately 800
+W
+m2K. This coefﬁcient value leads to a lower
+temperature prediction of 511.8 ◦C, which is 7 ◦C lower than the CFD result of 519 ◦C. The
+lack of higher convective coefﬁcients using the Woschni heat transfer correlation led to
+lower heat dissipation and increased ﬂuid temperature inside the cylinder. These deviations
+in temperature prediction using the Woschni heat transfer coefﬁcient are even higher at 210
+and 255 CAD, where a deviation of 72.3 ◦C and 84.4 ◦C, respectively, can be observed. Due
+to higher temperature predictions, lower trapped mass can be observed for Woschni heat
+transfer calculations. About 7% lower trapped mass can be observed at 210 CAD, while a
+12.5% lower trapped mass can be seen at 255 CAD. All these deviations are attributed to a
+lack of proper heat transfer coefﬁcients.
+On the other hand, the temperature and trapped mass errors are lower using the
+proposed heat transfer model, which accounts for the high ﬂow velocity inside the cylinder
+during the scavenging process and better approaches the CFD results. Due to this, the
+ﬂuid inside the cylinder is adequately cooled, and lower ﬂuid temperatures are seen. The
+proposed heat transfer model predicts about 64 ◦C lower temperature while comparing
+results with Woschni (at 210 CAD). This led to an accurate prediction of trapped mass
+at 210 CAD, although, at 255 CAD, CFD results depict about 201 ◦C, and the proposed
+model provides a 25 ◦C higher temperature but accurately predicts the trapped mass.
+Finally, observing trends in Figure 5B,C and Table 4, it can be said that the proposed heat
+transfer model accurately predicts the temperature and trapped mass by employing a
+higher convective coefﬁcient compared with state-of-the-art models.
+4.2. Performance Assessment of Heat Transfer Models
+In this study, the heat transfer correlations (Woschni and proposed) are assessed under
+similar combustion settings to evaluate the potential of the proposed heat transfer model.
+To meet the objectives of the current study, the combustion duration is set to 45 CAD, and
+the start of combustion at 11 CAD before TDC, while maintaining a constant air-to-fuel ratio
+of 14.7. Along with the combustion parameters, the peak of the heat transfer coefﬁcient
+during combustion (Woschni and proposed) and scavenging in the proposed heat transfer
+model is set to the value of 2100 W/m2k, as depicted in Figure 6A. This has been done
+by calibrating the coefﬁcient b in Equation (16). Moreover, the engine speed and exhaust
+conﬁguration are the same as in the previous study.
+As from the previous study, it is well established that a higher heat transfer coefﬁcient
+leads to a lower in-cylinder ﬂuid temperature. Similar results on lower ﬂuid temperature
+using the proposed heat transfer coefﬁcient over the Woschni correlation can be observed
+from Figure 6B. This led to higher trapped mass using the proposed heat transfer model, as
+depicted in Figure 6C. Two quantiﬁable results can be seen in this evaluation: one during
+scavenging, i.e., temperature proﬁles and their impact on the trapped mass; the other is
+the effect on the combustion pressure due to higher trapped mass, which can be seen in
+Figure 6D. Quantifying results during scavenging, the results on the instantaneous heat
+transfer coefﬁcient during scavenging show that the Woschni heat transfer coefﬁcient is
+as low as 200 W/m2k (data captured at 210 CAD). While for the same piston position, the
+proposed heat transfer model provides a peak coefﬁcient of 2100 W/m2k, leading to 80 ◦C
+lower temperature, as depicted in the zoom area ‘a’ in Figure 6B. Due to this lower ﬂuid
+temperature, a peak trapped mass of 0.68 g can be seen using the proposed heat transfer
+
+
+===== page 15 =====
+
+Appl. Sci. 2023, 13, 3996
+15 of 20
+correlation. On the other hand, the Woschni correlation depicts a peak trapped mass of
+0.62 g, which is approximately 9% lower in trapped mass.
+ 
+Figure 6. Results comparing Woschni and proposed heat transfer model for (A): Heat transfer
+coefﬁcient-1D model (B): In-cylinder temperature evolution during scavenging, (C): In-cylinder
+trapped mass, (D): logarithm pressure vs. Volume evolution.
+Due to the above phenomena, the trapped mass at the exhaust port closing is higher in
+the proposed model. A trapped mass of 0.48 g using the proposed model can be seen, while
+the state-of-the-art model depicts 0.42 g. Due to this additional trapped mass, and under
+similar AFR ratio and combustion settings, an increased pressure during combustion can
+be observed. To quantify the enhanced performance of the proposed model, the Indicated
+Mean Effect Pressure (IMEP) is used, given by:
+IMEP =
+1
+Vdisp
+Z
+p dV,
+(20)
+where Vdisp is the displacement volume of the cylinder, p is the pressure, and V is the
+volume of the cylinder. Using Equation (20), an IMEP of 3.49 and 3.92 bar can be observed
+for Woschni and the proposed heat transfer model, respectively. In other words, approxi-
+mately a 12% difference in engine performance can be detected when using different heat
+transfer models.
+4.3. Sensitivity Analysis
+As mentioned earlier, the proposed heat transfer model uses a combination of Woschni
+heat transfer correlation during combustion and the proposed heat transfer during scav-
+enging calculated, using Equation (7) and Equation (16), respectively. Two constants are
+used to adjust the correlation coefﬁcients, one to adjust the combustion (coefﬁcient a in the
+Woschni equation) and the other for the proposed heat transfer coefﬁcient (coefﬁcient b). A
+
+
+===== page 16 =====
+
+Appl. Sci. 2023, 13, 3996
+16 of 20
+sensitivity analysis is performed by varying the two coefﬁcients to assess the impact on
+the trapped mass at the end of the scavenging process. Furthermore, in this analysis, the
+engine settings are maintained as in Section 4.2.
+In this analysis, 35 points are studied, with values for coefﬁcient b ranging from 2–6
+and coefﬁcient a ranging from 40–100. Figure 7A provides the information on the effect on
+trapped mass in absolute terms, while Figure 7B, depicts the information on the differences
+in trapped mass with variations in percentage in coefﬁcients a and b from the mean values.
+For this calculation, Equation (21) is used:
+ci =
+vi
+v −1
+
+100,
+(21)
+where vi is the respective value of coefﬁcient a, b or trapped mass and v is the mean value
+for coefﬁcient a is 4, while the mean value for coefﬁcient b is 70 and the mean value of
+trapped mass is approximately 0.455 g. From Figure 7, it can be observed that the effect of
+coefﬁcient b has a higher impact on trapped mass than coefﬁcient a.
+ 
+Figure 7. (A): Effect on trapped mass varying coefﬁcients a and b and (B): Difference in trapped
+mass (%) varying differences in coefﬁcients a and b (%).
+For instance, from Figure 7A, considering a horizontal line at coefﬁcient a of 60 (blue
+dotted line) and observing the trapped mass at coefﬁcient b of 4 yields a value of 0.46 g,
+while for the same value of coefﬁcient a and a coefﬁcient b of 6, it can be seen from Figure 7A
+that the trapped mass has changed to 0.49 g. This change in trapped mass is about 6.5%,
+as observed in Figure 7B. On the other hand, from Figure 7A, for a constant value of
+coefﬁcient b of 3 (red dotted line) and changing the coefﬁcient a from 70 to 90 results in a
+trapped mass of 0.44 and 0.45 g, respectively. In other words, a change of 2% in trapped
+mass can be observed from Figure 7B. This analysis shows that the results for trapped
+mass are affected by the chosen value of coefﬁcient b, so special care has to be taken when
+calibrating the model correlation.
+5. Conclusions
+This article assessed a model-based calibration of the heat transfer coefﬁcient during
+scavenging for a uniﬂow scavenged two-stroke engine. A 1D model, ﬂuid-dynamically
+validated against experimental data, was used for this assessment. The experimental tests
+consisted of three engine speeds (2000, 2250, and 2500 rpm), with two different exhaust
+system conﬁgurations at full and partial loads conducted only at 2000 rpm. On observing
+satisfactory outputs for the 1D model, these results were used as initial and boundary
+conditions in CFD simulations to validate the scavenging process. CFD simulation results
+showed that the state-of-the-art heat transfer models embedded in a 1D engine model failed
+
+
+===== page 17 =====
+
+Appl. Sci. 2023, 13, 3996
+17 of 20
+to predict the in-cylinder temperature during scavenging. The temperature deviations also
+led to an error in predicting the trapped mass. A new heat transfer model was proposed,
+considering a pseudo-velocity that accounts for the ﬂow motion inside the cylinder to
+calculate the Reynolds number. This calculation was based on the instantaneous mass
+ﬂows in the exhaust and intake ports. The thermo-ﬂuid dynamically validated 1D model
+was used for perspective analysis to showcase the potential of the heat transfer model for
+its robustness and performance, as follows:
+•
+Under identical initial conditions for all the heat transfer correlations, it was observed
+that the state of art correlations, which include Anand, Hohenberg, and Woschni heat
+transfer correlations, provide similar results during scavenging. The heat transfer
+coefﬁcient during scavenging can be as low as 200
+W
+m2K, leading to a peak deviation
+of 85 ◦C in temperature predictions and up to 12% in deviation for trapped mass
+predictions. On the other hand, the proposed heat transfer model calculates a peak
+coefﬁcient of 800
+W
+m2K during scavenging, leading to a peak temperature deviation of
+25 ◦C along with almost negligible error in trapped mass predictions.
+•
+Under identical combustion settings and a similar peak heat transfer coefﬁcient, a
+difference in trapped mass of up to 6% at the exhaust port closing was observed using
+the proposed heat transfer model. The gases inside the cylinder were cooled a further
+85 ◦C, leading to a higher trapped mass. This translated to differences of up to 12% in
+the IMEP of the engine.
+•
+A sensitivity analysis was performed to evaluate the impact of the model constants
+on the engine operation. These constants included both Woschni and the proposed
+heat transfer correlation during scavenging. In this analysis, coefﬁcient b (correction
+coefﬁcient of proposed heat transfer correlation) was changed by ±50% from the mean
+value, and coefﬁcient a (correction coefﬁcient of Woschni heat transfer correlation) was
+changed by ±42%. Results depicted that coefﬁcient b had a more signiﬁcant impact on
+trapped mass. A sweep along varying coefﬁcient b and at constant coefﬁcient a can
+lead to a 15% change in trapped mass. Conversely, a sweep along varying coefﬁcient a
+and at constant coefﬁcient b can lead to a maximum difference of 5% in trapped mass.
+Author Contributions: H.C.: Resources, Supervision, Project administration, Conceptualization,
+Writing—original draft, Writing—review & editing. A.T.: Resources, Formal analysis, Writing—
+original draft, Writing—review & editing. J.G.-S.: Writing—review & editing, Methodology. A.D.:
+Conceptualization, Methodology, Software, Validation, Formal analysis, Investigation, Writing—
+original draft, Writing—review & editing. All authors have read and agreed to the published version
+of the manuscript.
+Funding: This research received no external funding.
+Institutional Review Board Statement: Not applicable.
+Informed Consent Statement: Not applicable.Informed Consent StatementNot applicable.
+Data Availability Statement: The data that supports the ﬁndings of this study are available from the
+corresponding author upon reasonable request.
+Conﬂicts of Interest: The authors declare no conﬂict of interest.
+
+
+===== page 18 =====
+
+Appl. Sci. 2023, 13, 3996
+18 of 20
+Abbreviations
+Symbols
+Nomenclature
+Units
+a
+Correction coefﬁcient of Woschni correlation
+N/a
+A
+Area
+m2
+b
+Correction coefﬁcient of proposed correlation
+N/a
+b
+Damper coefﬁcient
+Ns
+m
+B
+Bore
+m
+CAD, θ
+Crank angle
+degrees
+C0,C1,C2
+Correction coefﬁcients
+N/a
+c*
+Pseudo velocity
+m
+s
+D
+Diameter
+m
+F
+Force
+Pascal
+h
+Convective heat transfer coefﬁcient
+W
+m2K
+IMEP
+Indicative mean effective pressure
+bar
+k
+Spring constant
+N
+m
+Kgas
+Thermal conductivity
+W
+mK
+m
+Mass
+g
+.m
+Mass ﬂow rate
+kg
+s
+Nu
+Nusselt number
+N/a
+p
+Pressure
+Pascal
+Pr
+Prandtl number
+N/a
+.
+Q
+Rate of heat transfer
+J
+s
+Re
+Reynold number
+N/a
+T
+Temperature
+K
+Up
+Mean piston velocity
+m
+s
+V
+Volume
+m3
+x
+Displacement
+m
+.x
+Velocity
+m
+s
+..x
+Acceleration
+m
+s2
+ρ
+Density
+kg
+m3
+µ
+Dynamic Viscosity
+kg
+ms
+References
+1.
+García-Oliver, J.M.; Novella, R.; Micó, C.; Bin-Khalid, U. A numerical investigation of the performance of oxymethylene ethers
+blended with fossil diesel to reduce soot emissions in compression ignition engines. Fuel 2022, 324, 124768. [CrossRef]
+2.
+Dabbaghi, M.; Baharom, M.; Karim, Z.A.; Aziz, A.R.A.; Mohammed, S.E. Comparative evaluation of different heat transfer
+correlations on a single curved-cylinder spark ignition crank-rocker engine. Alex. Eng. J. 2021, 60, 2963–2978. [CrossRef]
+3.
+Serrano, J.; Arnau, F.; Bares, P.; Gomez-Vilanova, A.; Garrido-Requena, J.; Luna-Blanca, M.; Contreras-Anguita, F. Analysis of a
+novel concept of 2-stroke rod-less opposed pistons engine (2S-ROPE): Testing, modelling, and forward potential. Appl. Energy
+2021, 282, 116135. [CrossRef]
+4.
+Mikalsen, R.; Roskilly, A. A computational study of free-piston diesel engine combustion. Appl. Energy 2009, 86, 1136–1143.
+[CrossRef]
+5.
+Jia, B.; Smallbone, A.; Zuo, Z.; Feng, H.; Roskilly, A.P. Design and simulation of a two- or four-stroke free-piston engine generator
+for range extender applications. Energy Convers. Manag. 2016, 111, 289–298. [CrossRef]
+6.
+Mikalsen, R.; Roskilly, A. A review of free-piston engine history and applications. Appl. Therm. Eng. 2007, 27, 2339–2352.
+[CrossRef]
+7.
+Mikalsen, R.; Roskilly, A. Performance simulation of a spark ignited free-piston engine generator. Appl. Therm. Eng. 2008,
+28, 1726–1733. [CrossRef]
+8.
+Herold, R.; Wahl, M.; Regner, G.; Lemke, J.; Foster, D.E. Thermodynamic Beneﬁts of Opposed-Piston Two-Stroke Engines; SAE Technical
+Paper 2011-01-2216; SAE International: Pittsburgh, PA, USA, 2011. [CrossRef]
+9.
+Buidin, T.; Mariasiu, F. Modeling Approach of an Air-Based Battery Thermal Management System for an Electric Vehicle. Appl.
+Sci. 2021, 11, 7089. [CrossRef]
+10.
+Wang, X.; Zhao, H. A High-Efﬁciency Two-Stroke Engine Concept: The Boosted Uniﬂow Scavenged Direct-Injection Gasoline
+(BUSDIG) Engine with Air Hybrid Operation. Engineering 2019, 5, 535–547. [CrossRef]
+11.
+Wang, X.; Zhao, H. Analysis of the Boost System for a High Performance 2-Stroke Boosted Uniﬂow Scavenged Direct Injection Gasoline
+(BUSDIG) Engine; SAE Technical Paper; SAE International: Atlanta, GA, USA, 2020. [CrossRef]
+12.
+Wang, X.; Zhao, H. Effect of piston shape design on the scavenging performance and mixture preparation in a two-stroke boosted
+uniﬂow scavenged direct injection gasoline engine. Int. J. Engine Res. 2020, 22, 1484–1499. [CrossRef]
+
+
+===== page 19 =====
+
+Appl. Sci. 2023, 13, 3996
+19 of 20
+13.
+Benson, R.S.; Brandham, P.T. A method for obtaining a quantitative assessment of the inﬂuence of charging efﬁciency on
+two-stroke engine performance. Int. J. Mech. Sci. 1969, 11, 303–312. [CrossRef]
+14.
+Sakellaridis, N.F.; Raptotasios, S.I.; Antonopoulos, A.K.; Mavropoulos, G.C.; Hountalas, D.T. Development and validation of a
+new turbocharger simulation methodology for marine two stroke diesel engine modelling and diagnostic applications. Energy
+2015, 91, 952–966. [CrossRef]
+15.
+Zareei, J.; Kakaee, A.H. Study and the effects of ignition timing on gasoline engine performance and emissions. Eur. Transp. Res.
+Rev. 2013, 5, 109–116. [CrossRef]
+16.
+Foteinos, M.I.; Papazoglou, A.; Kyrtatos, N.P.; Stamatelos, A.; Zogou, O.; Stamatellou, A.-M. A Three-Zone Scavenging Model for
+Large Two-Stroke Uniﬂow Marine Engines Using Results from CFD Scavenging Simulations. Energies 2019, 12, 1719. [CrossRef]
+17.
+Zhu, S.; Gu, Y.; Yuan, H.; Ma, Z.; Deng, K. Thermodynamic analysis of the turbocharged marine two-stroke engine cycle with
+different scavenging air control technologies. Energy 2019, 191, 116533. [CrossRef]
+18.
+Kim, J.-S.; Lee, W.-J.; Pham, V.C.; Choi, J.-H. A Numerical Study on Fuel Injection Optimization for a ME-GI Dual-Fuel Marine
+Engine Based on CFD Analysis. Appl. Sci. 2022, 12, 3614. [CrossRef]
+19.
+Moreno, P.B. In-Cylinder Pressure Resonance Analysis for Trapped Mass Estimation in Automotive Engines. Ph.D. Thesis,
+Universitat Politècnica de València, Valencia, Spain, June 2017. [CrossRef]
+20.
+Carlucci, A.P.; Ficarella, A.; Laforgia, D.; Longo, M. An Easy and Inexpensive Way to Estimate the Trapping Efﬁciency of a two
+Stroke Engine. Energy Procedia 2015, 82, 17–22. [CrossRef]
+21.
+Di Leo, R. Methodologies for Air-Fuel ratio and trapped mass estimation in Diesel engines using the in-cylinder pressure
+measurement. Energy Procedia 2015, 82, 957–964. [CrossRef]
+22.
+Arsie, I.; Di Leo, R.; Pianese, C.; De Cesare, M. Estimation of in-cylinder mass and AFR by cylinder pressure measurement in
+automotive Diesel Engines. 2014, 47, 11836–11841. Diesel Engines 2014, 47, 11836–11841. [CrossRef]
+23.
+Jia, B.; Smallbone, A.; Feng, H.; Tian, G.; Zuo, Z.; Roskilly, A. A fast response free-piston engine generator numerical model for
+control applications. Appl. Energy 2016, 162, 321–329. [CrossRef]
+24.
+Jia, B.; Zuo, Z.; Tian, G.; Feng, H.; Roskilly, A. Development and validation of a free-piston engine generator numerical model.
+Energy Convers. Manag. 2015, 91, 333–341. [CrossRef]
+25.
+Jia, B.; Zuo, Z.; Feng, H.; Tian, G.; Smallbone, A.; Roskilly, A. Effect of closed-loop controlled resonance based mechanism to start
+free piston engine generator: Simulation and test results. Appl. Energy 2016, 164, 532–539. [CrossRef]
+26.
+Chan, S.H.; Zhu, J. Modelling of engine in-cylinder thermodynamics under high values of ignition retard. Int. J. Therm. Sci. 2001,
+40, 94–103. [CrossRef]
+27.
+Jia, B.; Mikalsen, R.; Smallbone, A.; Zuo, Z.; Feng, H.; Roskilly, A.P. Piston motion control of a free-piston engine generator: A
+new approach using cascade control. Appl. Energy 2016, 179, 1166–1175. [CrossRef]
+28.
+Li, K.; Zhang, C.; Sun, Z. Precise piston trajectory control for a free piston engine. Control. Eng. Pract. 2015, 34, 30–38. [CrossRef]
+29.
+Feng, H.; Guo, C.; Jia, B.; Zuo, Z.; Guo, Y.; Roskilly, T. Research on the intermediate process of a free-piston linear generator
+from cold start-up to stable operation: Numerical model and experimental results. Energy Convers. Manag. 2016, 122, 153–164.
+[CrossRef]
+30.
+Dižo, J.; Blatnický, M.; Sága, M.; Št’astniak, P. A Numerical Study of a Compressed Air Engine with Rotating Cylinders. Appl. Sci.
+2021, 11, 7504. [CrossRef]
+31.
+Kim, J.; Bae, C.; Kim, G. Simulation on the effect of the combustion parameters on the piston dynamics and engine performance
+using the Wiebe function in a free piston engine. Appl. Energy 2013, 107, 446–455. [CrossRef]
+32.
+Mikalsen, R.; Roskilly, A. The control of a free-piston engine generator. Part 1: Fundamental analyses. Appl. Energy 2010,
+87, 1273–1280. [CrossRef]
+33.
+Mikalsen, R.; Roskilly, A. The control of a free-piston engine generator. Part 2: Engine dynamics and piston motion control. Appl.
+Energy 2010, 87, 1281–1287. [CrossRef]
+34.
+Mikalsen, R.; Roskilly, A. The design and simulation of a two-stroke free-piston compression ignition engine for electrical power
+generation. Appl. Therm. Eng. 2008, 28, 589–600. [CrossRef]
+35.
+Olmeda, P.; Martín, J.; Novella, R.; Carreño, R. An adapted heat transfer model for engines with tumble motion. Appl. Energy
+2015, 158, 190–202. [CrossRef]
+36.
+Hou, S.-S. Heat transfer effects on the performance of an air standard Dual cycle. Energy Convers. Manag. 2004, 45, 3003–3015.
+[CrossRef]
+37.
+Luján, J.M.; Climent, H.; Olmeda, P.; Jiménez, V.D. Heat transfer modeling in exhaust systems of high-performance two-stroke
+engines. Appl. Therm. Eng. 2014, 69, 96–104. [CrossRef]
+38.
+Lounici, M.S.; Loubar, K.; Balistrou, M.; Tazerout, M. Investigation on heat transfer evaluation for a more efﬁcient two-zone
+combustion model in the case of natural gas SI engines. Appl. Therm. Eng. 2011, 31, 319–328. [CrossRef]
+39.
+Verhelst, S.; Sheppard, C. Multi-zone thermodynamic modelling of spark-ignition engine combustion – An overview. Energy
+Convers. Manag. 2009, 50, 1326–1335. [CrossRef]
+40.
+Illán, F.; Alarcón, M. Numerical analysis of combustion and transient heat transfer processes in a two-stroke SI engine. Appl.
+Therm. Eng. 2010, 30, 2469–2475. [CrossRef]
+41.
+Descieux, D.; Feidt, M. One zone thermodynamic model simulation of an ignition compression engine. Appl. Therm. Eng. 2007,
+27, 1457–1466. [CrossRef]
+
+
+===== page 20 =====
+
+Appl. Sci. 2023, 13, 3996
+20 of 20
+42.
+Guezennec, Y.G.; Hamama, W. Two-Zone Heat Release Analysis of Combustion Data and Calibration of Heat Transfer Correlation in an I.
+C. Engine; SAE International: Pittsburgh, PA, USA, 1999. [CrossRef]
+43.
+Ghiji, M.; Edmonds, S.; Moinuddin, K. A Review of Experimental and Numerical Studies of Lithium Ion Battery Fires. Appl. Sci.
+2021, 11, 1247. [CrossRef]
+44.
+Catapano, F.; Perozziello, C.; Vaglieco, B.M. Heat transfer of a Stirling engine for waste heat recovery application from internal
+combustion engines. Appl. Therm. Eng. 2021, 198, 117492. [CrossRef]
+45.
+Margot, X.; Quintero, P.; Gomez-Soriano, J.; Escalona, J. Implementation of 1D–3D integrated model for thermal prediction in
+internal combustion engines. Appl. Therm. Eng. 2021, 194, 117034. [CrossRef]
+46.
+Yan, Z.; Gainey, B.; Lawler, B. A parametric modeling study of thermal barrier coatings in low-temperature combustion engines.
+Appl. Therm. Eng. 2021, 200, 117687. [CrossRef]
+47.
+Galindo, J.; Serrano, J.R.; Arnau, F.J.; Piqueras, P. Description of a Semi-Independent Time Discretization Methodology for a
+One-Dimensional Gas Dynamics Model. J. Eng. Gas Turbines Power 2009, 131, 034504. [CrossRef]
+48.
+Martin, J.; Arnau, F.; Piqueras, P.; Auñon, A. Development of an Integrated Virtual Engine Model to Simulate New Standard Testing
+Cycles; SAE International: Pittsburgh, PA, USA, 2018. [CrossRef]
+49.
+Richards, K.J.; Senecal, P.K.; Pomraning, E. CONVERGE 2.4; Convergent Science: Madison, WI, USA, 2023.
+50.
+Broatch, A.; Novella, R.; García-Tíscar, J.; Gomez-Soriano, J. Potential of dual spray injectors for optimising the noise emission of
+gasoline partially premixed combustion in a 2-stroke HSDI CI engine. Appl. Therm. Eng. 2018, 134, 369–378. [CrossRef]
+51.
+Broatch, A.; Novella, R.; García-Tíscar, J.; Gomez-Soriano, J.; Pal, P. Analysis of combustion acoustic phenomena in compression–
+ignition engines using large eddy simulation. Phys. Fluids 2020, 32, 085101. [CrossRef]
+52.
+Issa, R. Solution of the implicitly discretised ﬂuid ﬂow equations by operator-splitting. J. Comput. Phys. 1986, 62, 40–65. [CrossRef]
+53.
+Yakhot, V.; Orszag, S.A. Renormalization group analysis of turbulence. I. Basic theory. J. Sci. Comput. 1986, 1, 3–51. [CrossRef]
+54.
+Amsden, A.A.; Findley, M. KIVA-3V: A Block-Structured KIVA Program for Engines with Vertical or Canted Valves; Los Alamos
+National Laboratory: Los Alamos, NM, USA, 1997. [CrossRef]
+55.
+Torregrosa, A.J.; Olmeda, P.; Degraeuwe, B.; Reyes, M. A concise wall temperature model for DI Diesel engines. Appl. Therm. Eng.
+2006, 26, 1320–1327. [CrossRef]
+56.
+Woschni, G. A Universally Applicable Equation for the Instantaneous Heat Transfer Coefﬁcient in the Internal Combustion Engine; SAE
+Technical Paper; SAE International: Warrendale, PA, USA, 1967. [CrossRef]
+57.
+Hohenberg, G.F. Advanced Approaches for Heat Transfer Calculations; SAE International: Warrendale, PA, USA, 1979; Available
+online: http://www.jstor.org/stable/44699090 (accessed on 12 November 2022).
+58.
+Annand, W.J.D.; Thermodynamics and Fluid Mechanics Group. Heat Transfer in the Cylinders of Reciprocating Internal
+Combustion Engines. Proc. Inst. Mech. Eng. 1963, 177, 973–996. [CrossRef]
+59.
+Blair, G.P. Design and Simulation of Four-Stroke Engines; SAE International: Warrendale, PA, USA, 1999.
+Disclaimer/Publisher’s Note: The statements, opinions and data contained in all publications are solely those of the individual
+author(s) and contributor(s) and not of MDPI and/or the editor(s). MDPI and/or the editor(s) disclaim responsibility for any injury to
+people or property resulting from any ideas, methods, instructions or products referred to in the content.
